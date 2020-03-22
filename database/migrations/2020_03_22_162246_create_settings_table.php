@@ -18,7 +18,7 @@ class CreateSettingsTable extends Migration {
 			$table->string('key');
 			$table->text('value', 65535);
 			$table->timestamps();
-			$table->integer('type_id')->index('type_ibfk_1');
+			$table->integer('type_id')->index('type_ibfk_1')->unsigned();
 			$table->integer('order');
 		});
 	}

@@ -19,7 +19,7 @@ class CreateOperatorsTable extends Migration {
 			$table->string('operator_image');
 			$table->timestamps();
 			$table->integer('code')->nullable();
-			$table->integer('country_id')->nullable()->index('country_id');
+			$table->integer('country_id')->nullable()->index('country_id')->unsigned();
 		});
 	}
 

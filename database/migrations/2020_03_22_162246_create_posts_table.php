@@ -15,8 +15,8 @@ class CreatePostsTable extends Migration {
 		Schema::create('posts', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('operator_id')->index('operator_id');
-			$table->integer('video_id')->index('video_id');
+			$table->integer('operator_id')->index('operator_id')->unsigned();
+			$table->integer('video_id')->index('video_id')->unsigned();
 			$table->date('show_date')->default('0000-00-00');
 			$table->boolean('active');
 			$table->timestamps();

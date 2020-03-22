@@ -15,7 +15,7 @@ class CreateServicesTable extends Migration {
 		Schema::create('services', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('provider_id')->index('provider_id');
+			$table->integer('provider_id')->index('provider_id')->unsigned();
 			$table->string('title');
 			$table->string('image');
 			$table->timestamps();

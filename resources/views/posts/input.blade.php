@@ -5,7 +5,7 @@
 <div class="form-group">
     <label for="textfield5" class="col-sm-3 col-lg-2 control-label">Select Operator <span class="text-danger">*</span></label>
     <div class="col-sm-9 col-lg-10 controls">
-    <select data-placeholder="Select operator" class="form-control chosen" multiple="multiple" tabindex="6" name="operator_id[]" required>
+    <select data-placeholder="Select operator" class="form-control chosen" @if(!$post) multiple="multiple" @endif tabindex="6" name="operator_id[]" required>
             <option value=""></option>
             @foreach ($operators as $value)
             <option value="{{ $value->id }}" @if($post && $post->operator_id==$value->id) selected @endif>

@@ -98,7 +98,6 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-
         $validator = Validator::make($request->all(), [
             'video_id' => 'required',
             'operator_id' => 'required',
@@ -108,9 +107,10 @@ class PostsController extends Controller
             return back()->withErrors($validator)->withInput();
         }
         for ($i = 0; $i < count($request['operator_id']); $i++) {
-            $post = new Post($request->all());
-            $post['operator_id'] = $request['operator_id'][$i];
-            $post['show_date'] = \Carbon\Carbon::createFromFormat('d/m/Y', $request->show_date)->format('Y-m-d');
+            $post = new Post();
+            $post->video_id = $request->video_id;
+            $post->operator_id = $request['operator_id'][$i];
+            $post->show_date = \Carbon\Carbon::createFromFormat('d/m/Y', $request->show_date)->format('Y-m-d');
             $post->save();
         }
         if (isset($request->video))
@@ -157,7 +157,6 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $validator = Validator::make($request->all(), [
             'operator_id' => 'required',
             'show_date' => 'required'
@@ -165,14 +164,10 @@ class PostsController extends Controller
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
         }
-        $newPost = $request->all();
         $post = Post::findOrFail($id);
-        for ($i = 0; $i < count($request['operator_id']); $i++) {
-            $post->update([$i]);
-            $post['operator_id'] = $request['operator_id'][$i];
-            $post['show_date'] = \Carbon\Carbon::createFromFormat('d/m/Y', $request->show_date)->format('Y-m-d');
-            $post->save();
-        }
+        $post->operator_id = $request['operator_id'][0];
+        $post->show_date = \Carbon\Carbon::createFromFormat('d/m/Y', $request->show_date)->format('Y-m-d');
+        $post->save();
         \Session::flash('success', 'Post Updated successfully');
         if (isset($request->video))
             return redirect("videos/$request->video_id/posts");

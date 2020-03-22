@@ -15,7 +15,7 @@ class CreateContentsTable extends Migration {
 		Schema::create('contents', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('service_id')->index('service_id');
+			$table->integer('service_id')->index('service_id')->unsigned();
 			$table->string('title');
 			$table->timestamps();
 			$table->string('video', 191)->nullable();

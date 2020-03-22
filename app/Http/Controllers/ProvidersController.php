@@ -158,7 +158,8 @@ class ProvidersController extends Controller {
 
         $services = \App\Service::where('provider_id', $id)->get();
         $provider = $id ;
-        return view('services.index', compact('services','provider'));
+        $languages = Language::all();
+        return view('services.index', compact('services','provider','languages'));
     }
 
     public function audios($id) {

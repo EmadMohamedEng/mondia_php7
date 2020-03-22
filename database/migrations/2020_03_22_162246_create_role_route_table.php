@@ -16,7 +16,7 @@ class CreateRoleRouteTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('role_id')->unsigned()->index('role_id_2');
-			$table->integer('route_id')->index('route_id_2');
+			$table->integer('route_id')->index('route_id_2')->unsigned();
 			$table->timestamps();
 		});
 	}
