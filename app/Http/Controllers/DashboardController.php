@@ -27,6 +27,7 @@ class DashboardController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
+
         $users = count(User::all());
         return view('dashboard.index', compact('users'));
     }
