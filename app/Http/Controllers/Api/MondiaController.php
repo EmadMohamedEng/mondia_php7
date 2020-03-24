@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\File;
 class MondiaController extends Controller
 {
 
+    public function index(){
+        return view('mondia_landing.landing');
+    }
+
     public function log_action($actionName, $Url, $parameters_arr)
     {
         date_default_timezone_set("Africa/Cairo");
@@ -82,8 +86,10 @@ class MondiaController extends Controller
         $result = curl_exec($ch);
         curl_close($ch);
         $result = json_decode($result);
+        // dd(urlencode(url('/')));
         $token = $result->accessToken;
-        $Url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . urlencode(url('/')) . "";
+
+        $Url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . url('api/test_mondia_login');
         // make log
         $actionName = "Redirect";
         $parameters_arr = array(
@@ -94,8 +100,18 @@ class MondiaController extends Controller
         return redirect($Url);
     }
 
-    public function check_status()
+    public function testMondiaLogin(Request $request){
+        
+        return $this->check_status($request);
+
+    }
+
+    public function check_status($request)
     {
+        $userToken = $request->userToken;
+        $refreshToken = $request->refreshToken;
+        $expiresIn = $request->expiresIn;
+        $status = $request->status;
 
         $curl = curl_init();
 
@@ -109,8 +125,8 @@ class MondiaController extends Controller
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => array(
                 "accept: application/json",
-                "authorization: Bearer U182e26ce-15e1-4966-b1ca-9efebd35d7e3",
-                "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8"
+                "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
+                "Authorization: Bearer ".$userToken
             ),
         ));
 
@@ -132,12 +148,19 @@ class MondiaController extends Controller
         if ($err) {
             return $err;
         } else {
-            return $response;
+            $response = json_decode($response);
+            if(empty($response)){
+                return $this->pin_code($userToken);
+            }else{
+                session('userToken', $userToken);
+                session('status', 'active');
+                return session()->all();
+            }
         }
     }
 
 
-    public function pin_code (Request $request)
+    public function pin_code ($userToken)
     {
         $curl = curl_init();
 
@@ -151,10 +174,10 @@ class MondiaController extends Controller
             CURLOPT_CUSTOMREQUEST => "POST",
             CURLOPT_POSTFIELDS => "{\r\n  \"subscriptionTypeId\": 59160008,\r\n  \"userAgent\": \"IVAS\",\r\n  \"agency\": \"IVAS\"\r\n}",
             CURLOPT_HTTPHEADER => array(
+                "Content-Type: application/json",
                 "accept: application/json",
-                "authorization: Bearer U182e26ce-15e1-4966-b1ca-9efebd35d7e3",
-                "content-type: application/json",
-                "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8"
+                "X-MM-GATEWAY-KEY: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
+                "Authorization: Bearer ".$userToken
             ),
         ));
 
@@ -172,25 +195,17 @@ class MondiaController extends Controller
         if ($err) {
             return $err;
         } else {
-            return $response;
-        }
+            $response = json_decode($response);
 
+            return view('mondia_landing.pincode', compact('userToken', 'response'));
+        }
+        
     }
 
 
-    public function verify_pin()
+    public function verify_pin(Request $request)
     {
-
-        $URL = url('/')."/api/pin_code";
-        $ch = curl_init($URL);
-        curl_setopt($ch, CURLOPT_HEADER, false);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-type: application/json"));
-        $result = curl_exec($ch);
-        curl_close($ch);
-        $result = json_decode($result);
-        $requestId = $result->custRequestId;
-
+        $requestId = $request->custRequestId;
 
         $curl = curl_init();
 
@@ -204,15 +219,16 @@ class MondiaController extends Controller
             CURLOPT_CUSTOMREQUEST => "POST",
             CURLOPT_POSTFIELDS => "{\r\n  \"requestId\": $requestId,\r\n  \"pin\": \"3952\",\r\n  \"refererLink\": \"http://omantelmyworld.com\",\r\n  \"subscriptionTypeId\": 59160008\r\n}",
             CURLOPT_HTTPHEADER => array(
-                "accept: application/json",
-                "authorization: Bearer U182e26ce-15e1-4966-b1ca-9efebd35d7e3",
                 "content-type: application/json",
-                "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8"
+                "accept: application/json",
+                "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
+                "Authorization: Bearer ".$request->userToken
             ),
         ));
 
         $response = curl_exec($curl);
         $err = curl_error($curl);
+        $response = json_decode($response);
 
         curl_close($curl);
         // make log
@@ -226,26 +242,18 @@ class MondiaController extends Controller
         if ($err) {
             return $err;
         } else {
-            return $response;
+            if($response->responseCode == 400){
+                session('userToken', $userToken);
+                session('status', 'active');
+                return $response->description;
+            }else{
+                return $response->description;
+            }
         }
-
     }
 
     public function delete_subscription()
     {
-
-
-        $URL = url('/')."/api/check_status";
-        $ch = curl_init($URL);
-        curl_setopt($ch, CURLOPT_HEADER, false);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-type: application/json"));
-        $result = curl_exec($ch);
-        curl_close($ch);
-        $result = json_decode($result);
-        /*$requestId = $result->id;*/  /*lzm hna ykon fe data fe check_status 3l4an arg3 be id ht4t5l fe check b phone number s7 "id": 168683679,*/
-        $requestId = "168683679";
-
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
