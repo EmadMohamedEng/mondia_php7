@@ -32,7 +32,7 @@ function provider_service($id)
     return $services;
 }
 
-function provide_menu()
+function provider_menu()
 {
     if (isset($_REQUEST['OpID'])) {
         $opID = $_REQUEST['OpID'];
@@ -49,7 +49,7 @@ function provide_menu()
                 $provide_menu = Provider::where('id', $service->provider_id)->get();
             }
         } else {
-            return view("errors.404");
+            $provide_menu = [];
         }
     } else {
         $provide_menu = get_providers();
@@ -59,9 +59,8 @@ function provide_menu()
 
 function get_pageLength(){
     $length = 5;
-    $result=  Setting::where('key','pageLength')->first();
-    if($result)
-        $length =$result->value;
+    if(get_setting('pageLength'))
+        $length = get_setting('pageLength');
     return $length;
 }
 
