@@ -2,8 +2,12 @@ html {
   height: 100%;
 }
 
+@font-face {
+  font-family: en_regular;
+  src: url(../images/ar_regular.ttf);
+}
 body {
-  font-family: DuCoHeadline, Arial, sans-serif;
+  font-family: ar_regular;
   direction: ltr;
   width: 100%;
   height: 100%;
@@ -219,6 +223,10 @@ a:hover, a:focus, a:active {
   color: #000;
 }
 .main_container .list_page .content_carousel_head .link_title h6 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.main_container .list_page .item {
   margin-bottom: 1rem;
 }
 .main_container .list_page .item .card {
@@ -697,27 +705,43 @@ a:hover, a:focus, a:active {
 
   .main_container .header .header_logo,
 .main_container .header .header_icon {
-    text-align: right;
+    float: right;
+  }
+  .main_container .header .header_logo .arrow_back,
+.main_container .header .header_icon .arrow_back {
+    padding-right: 4rem;
   }
   .main_container .nav_nav {
     background-color: transparent;
-    width: 75%;
+    width: 0;
     padding: 0;
     margin: 0;
     position: absolute;
-    top: -3.25rem;
+    top: -8.25rem;
     border: 0;
   }
   .main_container .nav_nav button {
     outline: 0;
+    position: absolute;
+    font-size: 1.4rem;
+    top: 7.25rem;
+    left: 1.75rem;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
   }
   .main_container .nav_nav button .icon_before {
     color: #FFF;
   }
+  .main_container .nav_nav .navbar-collapse {
+    z-index: 9999999;
+  }
   .main_container .nav_nav .navbar_ul {
     background-color: #FFF;
-    height: 100vh;
-    margin-top: -3.5rem;
+    height: 150vh;
+    width: 15rem;
     padding: 1.25rem 0;
   }
   .main_container .nav_nav .navbar_ul .nav-item {
@@ -733,6 +757,19 @@ a:hover, a:focus, a:active {
   }
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
+    color: #00a9ce;
+    font-size: 1.5rem;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -829,19 +866,22 @@ a:hover, a:focus, a:active {
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
     height: 3.5rem;
+    direction: rtl;
   }
   .main_container .salah_time_page .time_btn .input_span {
     padding: 0 !important;
   }
   .main_container .salah_time_page .time_btn .h4_time {
-    float: left;
-    padding-left: 8px;
-    line-height: 3rem;
-  }
-  .main_container .salah_time_page .time_btn .h4_time_2 {
     float: right;
     padding-right: 8px;
     line-height: 3rem;
+    font-size: 1.25rem;
+  }
+  .main_container .salah_time_page .time_btn .h4_time_2 {
+    float: left;
+    padding-left: 8px;
+    line-height: 3rem;
+    font-size: 1.25rem;
   }
   .main_container .subscribe_page {
     width: 100%;

@@ -18,7 +18,7 @@ Settings
                 </div>
                 <div class="box-content">
 
-                    <form action="{{url('setting/'.$setting->id.'/update')}}" method="post"
+                    <form action="{{url('setting/'.$setting->id)}}" method="post"
                         class="form-horizontal form-bordered form-row-stripped" enctype="multipart/form-data">
                         {!! csrf_field() !!}
                         <div class="form-group">

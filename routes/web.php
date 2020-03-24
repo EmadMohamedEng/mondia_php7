@@ -22,6 +22,7 @@ get_dynamic_routes();
 Route::get('/','FrontController_v2@index')->name('front.index');
 Route::get('list_services/{id}','FrontController_v2@services')->name('front.service');
 Route::get('list_contents','FrontController_v2@contents')->name('front.list');
+Route::get('loadcontent','FrontController_v2@load_contents')->name('front.load');
 Route::get('view_content/{id}','FrontController_v2@view_content')->name('front.inner');
 Route::get('sebha','FrontController@sebha')->name('front.sebha');
 Route::get('zakah','FrontController@zakah')->name('front.zakah');

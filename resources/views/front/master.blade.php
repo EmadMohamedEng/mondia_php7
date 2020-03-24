@@ -18,10 +18,10 @@
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-xl-6 col-8">
                     <div class="header_logo">
-                        <a href="index.php">
+                        <a href="{{route('front.index')}}">
 
                             <h6 class="h5">
-                                <a class="arrow_back back" href="{{route('front.index')}}">
+                                <a class="arrow_back back" href="#">
                                     <i class="fas fa-angle-left fa-lg"></i>
                                 </a> {{get_setting('title_page')}}</h6>
                         </a>
@@ -46,6 +46,22 @@
 
                     <div class="collapse navbar-collapse" id="basicExampleNav">
                         <ul class="navbar_ul navbar-nav mr-auto">
+                            <li class="nav-item nav_item_logo d-block d-sm-none d-md-none d-lg-none d-xl-none">
+                                <div class="row m-0">
+                                  <div class="col-12 p-0">
+                                    <a class="arrow_back back" href="#0">
+                                      <i class="fas fa-angle-left fa-lg"></i>
+                                    </a>
+                                  </div>
+
+                                  <div class="col-12 p-0">
+                                    <a class="link_href" href="{{route('front.index')}}">
+                                      <img src="{{asset('front/images/du_logo.png')}}" alt="Logo">
+                                    </a>
+                                  </div>
+                                </div>
+                              </li>
+
                             <li class="nav-item">
                                 <div class="row m-0">
                                     <div class="col-6 p-0">
@@ -64,8 +80,8 @@
 
                             <div class="border-bottom"></div>
 
-                            <li class="nav-item active">
-                                <a class="nav-link text-capitalize" href="{{route('front.index')}}"><i class="icon_before fas fa-home fa-lg"></i> Home
+                            <li class="nav-item">
+                                <a class="nav-link text-capitalize link_href" href="{{route('front.index')}}"><i class="icon_before fas fa-home fa-lg"></i> Home
                                     <span class="sr-only">(current)</span>
                                 </a>
                             </li>
@@ -74,7 +90,7 @@
                                 <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon_before fas fa-futbol fa-lg"></i> {{$provider->getTranslation('title',getCode())}}</a>
                                 <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
                                     @foreach($provider->services as $value)
-                                    <a class="dropdown-item text-capitalize" href="{{route('front.list',['service_id' => $value->id])}}">{{$value->getTranslation('title',getCode())}}</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{route('front.list',['service_id' => $value->id])}}">{{$value->getTranslation('title',getCode())}}</a>
                                     @endforeach
                                 </div>
                             </li>
@@ -82,18 +98,19 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon_before fas fa-futbol fa-lg"></i> دليل مسلم</a>
                                 <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
-                                    <a class="dropdown-item text-capitalize" href="{{url('sebha')}}">السبحة الإلكترونية</a>
-                                    <a class="dropdown-item text-capitalize" href="{{url('zakah')}}">حساب الزكاة</a>
-                                    <a class="dropdown-item text-capitalize" href="{{url('merath')}}">حساب المواريث</a>
-                                    <a class="dropdown-item text-capitalize" href="{{url('salah_time')}}">مواقيت الصلاة</a>
-                                    <a class="dropdown-item text-capitalize" href="{{url('mosque')}}">اقرب مسجد</a>
-                                    <a class="dropdown-item text-capitalize" href="{{url('azan')}}">اذان</a>
-                                    <a class="dropdown-item text-capitalize" href="{{url('rbts')}}">كول تون</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">السبحة الإلكترونية</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">حساب الزكاة</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">حساب المواريث</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">مواقيت الصلاة</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('mosque')}}">اقرب مسجد</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('azan')}}">اذان</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('rbts')}}">كول تون</a>
                                 </div>
                             </<a>
 
-                            <div class="border-bottom"></div>
                             @if(session()->has('msisdn'))
+                            <div class="border-bottom"></div>
+
                             <li class="nav-item ">
                                 <a class="nav-link text-capitalize" href="#0"><i class="icon_before fas fa-sign-in-alt fa-lg"></i> Login</a>
                             </li>
@@ -109,10 +126,33 @@
     <script src="{{asset('front/js/jquery-3.3.1.min.js')}}"></script>
     <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
     <script src="{{asset('front/js/script.js')}}"></script>
+    <script>
+            op_id = {{isset($_REQUEST['OpID']) ? 1 : 0}}
+            if (op_id) {
+                var operator_id = {{isset($_REQUEST['OpID']) ? $_REQUEST['OpID'] : ''}}
+                $('.link_href').each(function() {
+                    var $this = $(this);
+                    var _href = $this.attr("href");
+                    if (_href.includes('?')) {
+                        $this.attr("href", _href + '&OpID=' + operator_id);
+                    } else {
+                        $this.attr("href", _href + '?OpID=' + operator_id);
+                    }
+                });
+            }
+
+            $(function() {
+                url = window.location.href,
+                $('.navbar_ul li a').each(function() {
+                    if (url.includes(this.href)) {
+                        $(this).addClass('active');
+                        $(this).parent('li').addClass('active');
+                    }
+                });
+            });
+
+    </script>
     @yield('script')
 </body>
 

@@ -27,7 +27,7 @@ class FrontController_v2 extends Controller
         ->join('services', 'services.id', '=', 'contents.service_id');
         if (request()->has('OpID') && request()->get('OpID') != '')
         {
-            $latest = $latest->join('posts', 'posts.content_id', '=', 'contents.id')
+            $latest = $latest->join('posts', 'posts.video_id', '=', 'contents.id')
             ->where('posts.operator_id', request()->get('OpID'))
             ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
             ->orderBy('posts.show_date', 'desc');
@@ -37,79 +37,77 @@ class FrontController_v2 extends Controller
         return view('front.home',compact('latest'));
     }
 
-    public function index_mobile()
-    {
-        return view('front.index_');
-    }
-
-    public function home(Request $request)
-    {
-
-        if ($request->has('OpID')) {
-            $opID = $request->OpID;
-            $main_video = Post::join('contents', 'contents.id', '=', 'posts.video_id')
-                ->where('posts.operator_id', $opID)
-                ->where('posts.show_date', '<=', date('y-m-d'))
-                ->where('contents.type', 1)
-                ->orderBy('contents.created_at', 'Desc')->first();
-        } else {
-            $main_video = Video::where('type', 1)
-                ->where(function ($query) {
-                    return $query->where('created_at', 'like', date('Y-m-d') . '%')
-                        ->orWhere('created_at', '<=', date('Y-m-d'));
-                })->orderBy('created_at', 'Desc')->first();
-        }
-
-        $providers = get_providers();
-        $generalService = general_service();
-        // dd($generalService);
-        $topics = Service::orderByRaw("RAND()")->get();
-        $hjrri_date = $this->hjrri_date_cal();
-        $prayer_times = $this->prayTimesCal();
-        $new_pt = array();
-        $en = ['am', 'pm'];
-        $ar = ['صباحا', 'مساء'];
-        foreach ($prayer_times as $key => $value) {
-            array_push($new_pt, str_replace($en, $ar, $value));
-        }
-
-        return view('front.home', compact('main_video', 'providers', 'generalService', 'topics', 'prayer_times', 'hjrri_date', 'new_pt'));
-    }
-
-
     public function services($id)
     {
 
-        $provider = Provider::FindOrFail($id);
-        return view('front.services', compact('provider'));
+        $services = Service::query();
+        if(request()->has('OpID') && request()->get('OpID') != ''){
+            $services = $services->whereHas('videos', function($q){
+                $q->join('posts','posts.video_id' , '=' , 'contents.id')
+                ->where('posts.operator_id', request()->get('OpID'))
+                ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+            });
+        }
+        $services = $services->where('provider_id',$id)->get();
+        $provider = Provider::whereId($id)->first();
+        return view('front.service', compact('services','provider'));
     }
 
     public function contents(Request $request)
     {
-        $service = Service::FindOrFail($id);
-        $title = $service->title;
-        if ($request->has('OpID')) {
-            $opID = $request->OpID;
-            $contents = Post::join('contents', 'contents.id', '=', 'posts.video_id')
-            ->where('service_id', $id)
-            ->where('posts.operator_id', $opID)
-            ->where('posts.show_date', '<=', date('y-m-d'))
-            ->get();
-        } else {
-            $enable_test = \DB::table('settings')->where('key', 'like', 'enable_testing')->first()->value;
-            if ($enable_test == 1) {
-                $contents = Video::where('service_id', $id)->get();
-            } else {
-                return view('errors.404');
-            }
-        }
-        if ($service->type == 1) {
-            return view('front.videos', compact('contents', 'title'));
-        } elseif ($service->type == 2) {
-            return view('front.audios', compact('contents', 'title'));
-        } elseif ($service->type == 3) {
-            return view('front.images_service', compact('contents', 'title'));
-        }
+      $service = '';
+      $contents = Video::select('*', 'contents.id as content_id', 'contents.title as content_title')
+          ->join('services', 'services.id', '=', 'contents.service_id');
+      if($request->has('service_id') && $request->service_id != '')
+      {
+        $contents = $contents->where('service_id', $request->service_id);
+        $service = Service::find($request->service_id);
+      }
+      if(request()->has('OpID') && request()->get('OpID') != '')
+      {
+        $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
+        ->where('posts.operator_id', request()->get('OpID'))
+        ->where('posts.show_date', '<=', Carbon::now()->toDateString())
+        ->orderBy('posts.show_date','desc');
+      }
+      if($request->has('search') && $request->search != '')
+      {
+        $contents = $contents->where('contents.title', 'like', '%' . $request->search . '%');
+      }
+
+      $contents = $contents->limit(get_pageLength())->get();
+
+      if(!request()->has('OpID') && !get_setting('enable_testing')){
+        return view('error.404');
+      }
+
+      return view('front.list_content', compact('contents','service'));
+    }
+
+    public function load_contents(Request $request)
+    {
+      $contents = Video::select('*', 'contents.id as content_id', 'contents.title as content_title')
+          ->join('services', 'services.id', '=', 'contents.service_id');
+      if($request->has('service_id') && $request->service_id != '')
+      {
+        $contents = $contents->where('service_id', $request->service_id);
+      }
+      if(request()->has('OpID') && request()->get('OpID') != '')
+      {
+        $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
+        ->where('posts.operator_id', request()->get('OpID'))
+        ->where('posts.show_date', '<=', Carbon::now()->format('Y-m-d'))
+        ->orderBy('posts.show_date','desc');
+      }
+      if($request->has('search') && $request->search != '')
+      {
+        $contents = $contents->where('contents.title', 'like', '%' . $request->search . '%');
+      }
+
+      $contents = $contents->offset($request->start)->limit(get_pageLength())->get();
+
+      $view = view('front.load_content', compact('contents'))->render();
+      return Response(array('html' => $view));
     }
 
     public function view_content($id,Request $request)

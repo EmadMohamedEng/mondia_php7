@@ -210,7 +210,3 @@ function dynamic_routes($route_model,$found_roles)
     }
  }
 
-function getCode(){
-    $code = session()->get('applocale');
-    return $code;
-}

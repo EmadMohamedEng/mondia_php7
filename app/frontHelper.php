@@ -49,7 +49,7 @@ function provider_menu()
                 $provide_menu = Provider::where('id', $service->provider_id)->get();
             }
         } else {
-            $provide_menu = [];
+            $provide_menu = Provider::where('id',0)->get();
         }
     } else {
         $provide_menu = get_providers();
@@ -72,4 +72,9 @@ function general_service()
         $generalService = Service::where('provider_id', $generalProvider->id)->get();
     }
     return $generalService;
+}
+
+function getCode(){
+    $code = session()->get('applocale');
+    return $code;
 }
