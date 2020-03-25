@@ -8,11 +8,8 @@
 </head>
 <body>
 
-    <form action="<?php echo e(url('api/verify_pin')); ?>" method="POST">
-        <input name="userToken" type="text" value="<?php echo e($userToken); ?>" hidden>
-        <input name="msisdn" type="text" value="<?php echo e($response->msisdn); ?>" hidden>
-        <input name="customerId" type="text" value="<?php echo e($response->customerId); ?>" hidden>
-        <input name="custRequestId" type="text" value="<?php echo e($response->custRequestId); ?>" hidden>
+    <form action="<?php echo e(url('verify_pin')); ?>" method="POST">
+        <?php echo csrf_field(); ?>
         <input name="pincode" type="text">
         <input type="submit" value="send">
     </form>

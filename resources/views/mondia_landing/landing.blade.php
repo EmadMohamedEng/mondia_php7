@@ -8,8 +8,9 @@
 </head>
 <body>
 
-    <a href="{{url('api/redirect')}}">Login</a>
-    <a href="{{url('api/delete_subscription')}}">unsubscribe</a>
+    <a href="{{url('redirect')}}">Login</a>
+    <br>
+    <a href="{{url('delete_subscription')}}">unsubscribe</a>
 
 </body>
 </html>

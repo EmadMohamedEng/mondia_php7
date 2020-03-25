@@ -8,8 +8,9 @@
 </head>
 <body>
 
-    <a href="<?php echo e(url('api/redirect')); ?>">Login</a>
-    <a href="<?php echo e(url('api/delete_subscription')); ?>">unsubscribe</a>
+    <a href="<?php echo e(url('redirect')); ?>">Login</a>
+    <br>
+    <a href="<?php echo e(url('delete_subscription')); ?>">unsubscribe</a>
 
 </body>
 </html><?php /**PATH C:\xampp\htdocs\mondia_php7\resources\views/mondia_landing/landing.blade.php ENDPATH**/ ?>

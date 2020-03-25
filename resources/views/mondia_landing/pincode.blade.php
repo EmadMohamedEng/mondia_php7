@@ -8,11 +8,8 @@
 </head>
 <body>
 
-    <form action="{{url('api/verify_pin')}}" method="POST">
-        <input name="userToken" type="text" value="{{$userToken}}" hidden>
-        <input name="msisdn" type="text" value="{{$response->msisdn}}" hidden>
-        <input name="customerId" type="text" value="{{$response->customerId}}" hidden>
-        <input name="custRequestId" type="text" value="{{$response->custRequestId}}" hidden>
+    <form action="{{url('verify_pin')}}" method="POST">
+        @csrf
         <input name="pincode" type="text">
         <input type="submit" value="send">
     </form>
