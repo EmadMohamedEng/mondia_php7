@@ -1,0 +1,206 @@
+.azan {
+  direction: ltr;
+}
+
+.azan h2 {
+  color: #f3e5b8;
+  font-size: 16px;
+  text-align: center;
+}
+
+#chooseAudio .sheikh_name {
+  text-align: center;
+}
+
+#chooseAudio table {
+  border: 2px #00a9ce solid;
+  background: transparent;
+  width: 85%;
+  margin: auto;
+}
+
+#chooseAudio table th {
+  text-align: center;
+}
+
+#chooseAudio table tr {
+  text-align: right;
+  padding-right: 15px;
+  padding: 15px 4px;
+  font-size: 12px;
+  height: auto;
+  vertical-align: middle;
+  color: #000;
+}
+
+#chooseAudio table td {
+  text-align: center;
+  padding-right: 15px;
+  font-size: 11px;
+  padding: 15px 4px;
+  font-size: 14px;
+  height: auto;
+  vertical-align: middle;
+  color: #000;
+}
+
+#chooseRBT {
+  margin: 0 auto;
+  width: 50%;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  text-align-last: center;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+}
+
+#chooseAudio .np-play::before,
+#chooseAudio #play::before {
+  /* background: url(../images/play_small.svg) no-repeat center;
+  background-size: 14px; */
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f04b";
+}
+
+#chooseAudio #paused::before,
+#chooseAudio #playing::before {
+  /* background: url(../images/pause_small.png) no-repeat center;
+  background-size: 14px; */
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f04c";
+}
+
+/* Audio Player Styles ---------------------------------------------*/
+.audio-player {
+  height: 80px;
+  width: 100%;
+  background: #fff;
+  position: relative;
+  border-top: 1px solid whitesmoke;
+  box-shadow: 0px 1px 1px rgb(220, 220, 220);
+  margin-bottom: 30px;
+  color: #969696;
+}
+
+.audio-play-list {
+  background: #fff;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #709E18;
+}
+
+
+.play-status {
+  width: 50px;
+}
+
+.now-playing {
+  background: #ccc;
+}
+
+.audio-play-list li:last-child {
+  border-bottom: none;
+}
+
+.audio-play-list li.active {
+  color: #709E18;
+  background: #fafafa;
+}
+
+.album-cover {
+  height: 100%;
+  width: 80px;
+}
+
+.audio-controls-wrapper {
+  position: relative;
+  border-top: 1px solid whitesmoke;
+}
+
+.seek-bar,
+.seek-bar-thumb {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #ebebeb;
+}
+
+.seek-bar-thumb {
+  width: 0%;
+  background: #709E18;
+}
+
+.track-title {
+  position: absolute;
+  width: 68%;
+  right: 10px;
+  top: 10px;
+  text-align: right;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid whitesmoke;
+  color: #709E18;
+}
+
+
+.time-holder {
+  width: 26%;
+  font-size: 14px;
+  min-width: 80px;
+  max-width: 100px;
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  text-align: right;
+}
+
+.time-holder div {
+  float: right;
+}
+
+.audio-controls {
+  position: absolute;
+  width: 35%;
+  min-width: 100px;
+  max-width: 150px;
+  bottom: 15px;
+  left: 100px;
+  cursor: pointer;
+}
+
+span.fa-play {
+  color: #709E18;
+}
+
+.album-cover {
+  background: url('img/cover.jpg') no-repeat;
+  background-size: 80px;
+}
+
+#chooseAudio {
+  /* margin-bottom: 30px; */
+  width: 56%;
+  margin: 1.5rem auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center img {
+  display: block;
+  margin: 10px auto;
+  height: 55px;
+}
+
+@media (min-width: 320px) and (max-width: 415px) {
+    #chooseAudio {
+      width: 100%;
+    }
+  }

@@ -65,6 +65,8 @@ a:hover, a:focus, a:active {
   /* End Merath Page */
   /* Start Sebha Page */
   /* End Sebha Page */
+  /* Start Search Page */
+  /* End Search Page */
 }
 .main_container .header {
   position: sticky;
@@ -602,9 +604,65 @@ a:hover, a:focus, a:active {
   width: 70%;
   margin: 1.5rem auto;
 }
+.main_container .merath_page .border-bottom {
+  margin-bottom: 0.75rem;
+}
 .main_container .merath_page .merath_title h2 {
   text-align: center;
   margin-bottom: 1rem;
+}
+.main_container .merath_page .input_text .merath_input {
+  width: 90%;
+  text-align: center;
+  text-align-last: center;
+  border: 2px solid;
+  border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+  border-image-slice: 1;
+  background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #753bbd, #00a9ce);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.main_container .merath_page .input_span {
+  text-align: right;
+}
+.main_container .merath_page .input_span h4 {
+  line-height: 2.5rem;
+}
+.main_container .merath_page .input_span h4 .span_req {
+  color: red;
+}
+.main_container .merath_page .button_merath {
+  text-align: center;
+  margin: 5% auto;
+}
+.main_container .merath_page .button_merath .merath_btn {
+  width: 50%;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border: 0;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.main_container .merath_page .table_table .table {
+  border: 2px #00a9ce solid;
+  border-radius: 7px;
+  direction: rtl;
+}
+.main_container .merath_page .table_table .table tbody tr td {
+  padding: 1rem 0.7rem;
+  font-size: 1.25rem;
+}
+.main_container .merath_page .table_table .table tbody tr .td_1 {
+  text-align: right;
 }
 .main_container .sebha_page {
   width: 70%;
@@ -691,6 +749,40 @@ a:hover, a:focus, a:active {
 }
 .main_container .sebha_page a:hover {
   color: #bd0ce9;
+}
+.main_container .search_page {
+  margin: 2.5rem auto;
+  width: 75%;
+}
+.main_container .search_page .form_search {
+  position: relative;
+}
+.main_container .search_page .form_search .textbox {
+  outline: 0;
+  height: 3rem;
+  width: 100%;
+  padding: 0 1rem;
+  background: transparent;
+  border-bottom: 1px solid #adadad;
+  color: #000;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+.main_container .search_page .form_search .btn_search {
+  color: #000;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.main_container .search_page .form_search .btn_search:focus {
+  box-shadow: none;
 }
 
 @media (min-width: 320px) and (max-width: 415px) {
@@ -888,6 +980,75 @@ a:hover, a:focus, a:active {
   }
   .main_container .zakkah_page {
     width: 90%;
+  }
+  .main_container .merath_page {
+    width: 90%;
+  }
+  .main_container .merath_page .border-bottom {
+    margin-bottom: 0.75rem;
+  }
+  .main_container .merath_page .merath_title h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .main_container .merath_page .input_text .merath_input {
+    width: 90%;
+    text-align: center;
+    text-align-last: center;
+    border: 2px solid;
+    border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+    border-image-slice: 1;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #753bbd, #00a9ce);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  .main_container .merath_page .input_span {
+    text-align: right;
+  }
+  .main_container .merath_page .input_span h4 {
+    line-height: 2.5rem;
+  }
+  .main_container .merath_page .input_span h4 .span_req {
+    color: red;
+  }
+  .main_container .merath_page .button_merath {
+    text-align: center;
+    margin: 5% auto;
+  }
+  .main_container .merath_page .button_merath .merath_btn {
+    width: 50%;
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: 0;
+    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  .main_container .merath_page .table_table .table {
+    border: 2px #00a9ce solid;
+    border-radius: 7px;
+    direction: rtl;
+  }
+  .main_container .merath_page .table_table .table tbody tr td {
+    padding: 1rem 0.7rem;
+    font-size: 1.25rem;
+  }
+  .main_container .merath_page .table_table .table tbody tr .td_1 {
+    text-align: right;
+  }
+  .main_container .search_page {
+    width: 95%;
+  }
+  .main_container .search_page .textbox {
+    text-align: center;
   }
 }
 @media (min-width: 768px) and (max-width: 1023.9px) {

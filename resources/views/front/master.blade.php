@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Islamic | @yield('page_title')</title>
+    <meta name="url" content="{{url('/')}}">
+    <title>{{get_setting('title_page')}} | @yield('page_title')</title>
     <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
+    <script>
+        window.base_url = '{{url("/")}}';
+    </script>
 </head>
 
 <body>
@@ -103,8 +107,10 @@
                                     <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">حساب المواريث</a>
                                     <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">مواقيت الصلاة</a>
                                     <a class="dropdown-item text-capitalize link_href" href="{{url('mosque')}}">اقرب مسجد</a>
+                                    @if(request()->has('OpID') && request()->get('OpID') != '')
                                     <a class="dropdown-item text-capitalize link_href" href="{{url('azan')}}">اذان</a>
                                     <a class="dropdown-item text-capitalize link_href" href="{{url('rbts')}}">كول تون</a>
+                                    @endif
                                 </div>
                             </<a>
 
@@ -128,29 +134,31 @@
     <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
     <script src="{{asset('front/js/script.js')}}"></script>
     <script>
-            op_id = {{isset($_REQUEST['OpID']) ? 1 : 0}}
-            if (op_id) {
-                var operator_id = {{isset($_REQUEST['OpID']) ? $_REQUEST['OpID'] : ''}}
-                $('.link_href').each(function() {
-                    var $this = $(this);
-                    var _href = $this.attr("href");
-                    if (_href.includes('?')) {
-                        $this.attr("href", _href + '&OpID=' + operator_id);
-                    } else {
-                        $this.attr("href", _href + '?OpID=' + operator_id);
-                    }
-                });
-            }
-
-            $(function() {
-                url = window.location.href,
-                $('.navbar_ul li a').each(function() {
-                    if (url.includes(this.href)) {
-                        $(this).addClass('active');
-                        $(this).parent('li').addClass('active');
-                    }
-                });
+        op_id = {{isset($_REQUEST['OpID']) ? 1 : 0}}
+        if (op_id) {
+            var operator_id = {{isset($_REQUEST['OpID']) ? $_REQUEST['OpID'] : ''}}
+            $('.link_href').each(function() {
+                var $this = $(this);
+                var _href = $this.attr("href");
+                if (_href.includes('?')) {
+                    $this.attr("href", _href + '&OpID=' + operator_id);
+                } else {
+                    $this.attr("href", _href + '?OpID=' + operator_id);
+                }
             });
+        }
+
+        $(function() {
+            url = window.location.href,
+            $('.navbar_ul li a').each(function() {
+                if (url.includes(this.href)) {
+                    $(this).addClass('active');
+                    $(this).parent('li').addClass('active');
+                }
+            });
+        });
+
+        $('.search-res').val('{{request()->get("search")}}')
 
     </script>
     @yield('script')

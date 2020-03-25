@@ -9,7 +9,7 @@ use Validator;
 use App\Provider;
 use App\Audio;
 use App\Operator;
-
+use App\Language;
 class AudiosController extends Controller {
 
     public function __construct() {
@@ -28,7 +28,8 @@ class AudiosController extends Controller {
     public function index() {
 
         $audios = Audio::all();
-        return view('audios.index', compact('audios'));
+        $languages = Language::all();
+        return view('audios.index', compact('audios','languages'));
     }
 
     public function allData(Request $request)
@@ -50,7 +51,13 @@ class AudiosController extends Controller {
 
             })
             ->addColumn('title', function (audio $audio) {
-                return $audio->title;
+                $str = '';
+                $languages = Language::all();
+                foreach($languages as $language){
+                $str .= '<li> <b>'.$language->title .':'.'</b>'. $audio->getTranslation('title',$language->short_code).'</li>';
+                }
+                return $str;
+
             })
             ->addColumn('operator', function (audio $audio) {
                 return '<a href="'.url('operators/'.$audio->operator->id.'/edit').'"target=_blank>'.$audio->operator->name.'</a>';
@@ -95,7 +102,8 @@ class AudiosController extends Controller {
         }
         $providers = Provider::all();
         $operators = Operator::all();
-        return view('audios.form', compact('audio','providers','operators','videoID','video','providerID'));
+        $languages = Language::all();
+        return view('audios.form', compact('languages','audio','providers','operators','videoID','video','providerID'));
     }
 
     /**
@@ -115,13 +123,19 @@ class AudiosController extends Controller {
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
         }
-        $audio = new Audio($request->all());
+        $audio = new Audio();
+        $input = $request->except('title');
         if ($request->hasFile('source')) {
             $file = $request->file('source');
             $destinationFolder = $this->destinationFolder;
             $uniqID = uniqid();
-            $audio['source'] = $destinationFolder . $uniqID . "." . $file->getClientOriginalExtension();
+            $input['source'] = $destinationFolder . $uniqID . "." . $file->getClientOriginalExtension();
             $file->move($destinationFolder, $uniqID . "." . $file->getClientOriginalExtension());
+        }
+        $audio->fill($input);
+        foreach ($request->title as $key => $value)
+        {
+            $audio->setTranslation('title', $key, $value);
         }
         $audio->save();
         \Session::flash('success', 'Audio Added successfully');
@@ -150,7 +164,8 @@ class AudiosController extends Controller {
         $audio = Audio::findOrFail($id);
         $providers = Provider::all();
         $operators = Operator::all();
-        return view('audios.form', compact('operators','providers','audio','videoID','video','providerID'));
+        $languages = Language::all();
+        return view('audios.form', compact('languages','operators','providers','audio','videoID','video','providerID'));
     }
 
     /**
@@ -171,7 +186,7 @@ class AudiosController extends Controller {
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
         }
-        $newAudio = $request->all();
+        $newAudio = $request->except('title');
         $audio = Audio::findOrFail($id);
         $destinationFolder = $this->destinationFolder;
         if ($request->hasFile('source')) {
@@ -184,6 +199,10 @@ class AudiosController extends Controller {
             }
         } else {
             $newAudio['source'] = $audio['source'];
+        }
+        foreach ($request->title as $key => $value)
+        {
+            $audio->setTranslation('title', $key, $value);
         }
         $audio->update($newAudio);
         \Session::flash('success', 'Audio Updated successfully');

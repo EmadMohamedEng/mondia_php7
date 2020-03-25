@@ -27,13 +27,13 @@ Route::get('view_content/{id}','FrontController_v2@view_content')->name('front.i
 Route::get('sebha','FrontController@sebha')->name('front.sebha');
 Route::get('zakah','FrontController@zakah')->name('front.zakah');
 Route::get('merath','FrontController@merath')->name('front.merath');
-Route::get('merath_calc','FrontController@merath_calc');
-Route::get('salah_time','FrontController@salah_time')->name('front.salah');
+Route::get('merath_calc','FrontController_v2@merath_calc');
+Route::get('salah_time','FrontController_v2@salah_time')->name('front.salah');
 Route::get('mosque','FrontController_v2@mosque')->name('front.mosque');
-Route::get('azan','FrontController@azan')->name('front.azan');
-Route::get('providers/list_azan','FrontController@list_azan');
-Route::get('view_rbt/{id}','FrontController@view_rbt');
-Route::get('rbts','FrontController@rbts');
+Route::get('azan','FrontController_v2@azan')->name('front.azan');
+Route::get('list_azan/{id}','FrontController_v2@list_azan');
+Route::get('view_rbt/{id}','FrontController_v2@view_rbt');
+Route::get('rbts','FrontController_v2@rbts');
 
 Route::get('/landing',function(){
     return view('front.landing');

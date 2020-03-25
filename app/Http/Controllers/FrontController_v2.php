@@ -122,7 +122,7 @@ class FrontController_v2 extends Controller
         }
         else
         {
-          if($request->OpID)
+          if($request->has('OpID') && $request->OpID != '')
           {
             $content = $content->join('posts','posts.video_id','=','contents.id')
             ->where('posts.show_date', '<=', Carbon::now()->toDateString())
@@ -265,13 +265,13 @@ class FrontController_v2 extends Controller
         return view('front.azan', compact('providers'));
     }
 
-    public function list_azan(Request $request)
+    public function list_azan($id,Request $request)
     {
-        if ($request->has('OpID')) {
+        if ($request->has('OpID') && $request->OpID != '') {
             $opID = $request->OpID;
-            $audios = Audio::where('provider_id', $request->id)->where('operator_id', $opID)->where('azan_flage', 1)->get();
+            $audios = Audio::where('provider_id', $id)->where('operator_id', $opID)->where('azan_flage', 1)->get();
         } else {
-            $audios = Audio::where('provider_id', $request->id)->where('azan_flage', 1)->get();
+            $audios = Audio::where('provider_id', $id)->where('azan_flage', 1)->get();
         }
         $data = view('front.list_azan', compact('audios'))->render();
 
