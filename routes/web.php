@@ -77,12 +77,21 @@ Auth::routes([
     'register' => false
 ]);
 
-//OmanTel
+//OmanTel integration
 Route::get('omantel_landing', 'OmanTelController@index');
 Route::get('test_omantel_login', 'OmanTelController@testOmanTelLogin');
 Route::get('create_token', 'OmanTelController@create_token');
 Route::get('redirect', 'OmanTelController@redirect');
-Route::get('check_status', 'OmanTelController@check_status');
-Route::get('pin_code', 'OmanTelController@pin_code');
+Route::get('check_status/{userToken?}', 'OmanTelController@check_status');
+Route::get('pin_code/{userToken?}', 'OmanTelController@pin_code');
 Route::post('verify_pin', 'OmanTelController@verify_pin');
-Route::get('delete_subscription ', 'OmanTelController@delete_subscription');
+Route::get('delete_subscription/{requestId?}/{userToken?}', 'OmanTelController@delete_subscription');
+
+//Du integration
+Route::get('du_landing', 'DuController@index');
+Route::get('test_du_login', 'DuController@testOmanTelLogin');
+Route::get('du_create_token', 'DuController@create_token');
+Route::get('du_redirect', 'DuController@redirect');
+Route::get('du_check_status/{userToken?}', 'DuController@check_status');
+Route::get('du_pin_code', 'DuController@pin_code');
+Route::get('du_delete_subscription/{requestId?}/{userToken?}', 'DuController@delete_subscription');

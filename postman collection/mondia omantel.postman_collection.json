@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "ff92cc46-6733-4f50-a6bf-f6146bb4596b",
+		"name": "mondia omantel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "du",
+			"item": [
+				{
+					"name": "du_create_token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/mondia_php7/du_create_token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"mondia_php7",
+								"du_create_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usertoken",
+									"value": "C8b807fc5-9825-4f2c-ab97-e69c6457616b",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/mondia_php7/du_check_status/C8b807fc5-9825-4f2c-ab97-e69c6457616b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"mondia_php7",
+								"du_check_status",
+								"C8b807fc5-9825-4f2c-ab97-e69c6457616b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "redirect",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/mondia_php7/du_redirect",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"mondia_php7",
+								"du_redirect"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pin code",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usertoken",
+									"value": "C8b807fc5-9825-4f2c-ab97-e69c6457616b",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/mondia_php7/du_pin_code",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"mondia_php7",
+								"du_pin_code"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-MM-GATEWAY-KEY",
+						"value": " G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/mondia_php7/create_token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"mondia_php7",
+						"create_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "userToken",
+						"value": "Cc2a979b8-5b6a-420f-b0fe-30b96454957c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/mondia_php7/check_status/C4a5bfe47-4220-4b75-a668-62be715ce78e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"mondia_php7",
+						"check_status",
+						"C4a5bfe47-4220-4b75-a668-62be715ce78e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send pin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-MM-GATEWAY-KEY",
+						"value": " G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": " Bearer U947ba060-7b0c-48d5-bd65-444c352c5697",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/mondia_php7/pin_code/C4a5bfe47-4220-4b75-a668-62be715ce78e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"mondia_php7",
+						"pin_code",
+						"C4a5bfe47-4220-4b75-a668-62be715ce78e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify_pin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/mondia_php7/verify_pin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"mondia_php7",
+						"verify_pin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_subscription",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-MM-GATEWAY-KEY",
+						"value": " G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/mondia_php7/delete_subscription?requestId=168683679&userToken=U947ba060-7b0c-48d5-bd65-444c352c5697",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"mondia_php7",
+						"delete_subscription"
+					],
+					"query": [
+						{
+							"key": "requestId",
+							"value": "168683679"
+						},
+						{
+							"key": "userToken",
+							"value": "U947ba060-7b0c-48d5-bd65-444c352c5697"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
