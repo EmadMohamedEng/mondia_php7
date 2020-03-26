@@ -48,11 +48,11 @@ function get_static_routes()
     // Route::get('auth/register', 'Auth\AuthController@getRegister');
     // Route::post('auth/register', 'Auth\AuthController@postRegister');
 
-Auth::routes();
-Route::get('logout_ad', 'FrontController@logoutadmin');
-Route::get('du_landing/{peroid?}/{lang?}', 'FrontController@du_landing');
-Route::get('du_landing_success', 'FrontController@du_landing_success');
-Route::get('DuSecureRedirect', 'FrontController@DuSecureRedirect');
+    Auth::routes();
+    Route::get('logout_ad', 'FrontController@logoutadmin');
+    Route::get('du_landing/{peroid?}/{lang?}', 'FrontController@du_landing');
+    Route::get('du_landing_success', 'FrontController@du_landing_success');
+    Route::get('DuSecureRedirect', 'FrontController@DuSecureRedirect');
     Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@switchLang']);
 
 

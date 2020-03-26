@@ -93,5 +93,12 @@ Auth::routes([
     'register' => false
 ]);
 
-
-
+//OmanTel
+Route::get('omantel_landing', 'OmanTelController@index');
+Route::get('test_omantel_login', 'OmanTelController@testOmanTelLogin');
+Route::get('create_token', 'OmanTelController@create_token');
+Route::get('redirect', 'OmanTelController@redirect');
+Route::get('check_status', 'OmanTelController@check_status');
+Route::get('pin_code', 'OmanTelController@pin_code');
+Route::post('verify_pin', 'OmanTelController@verify_pin');
+Route::get('delete_subscription ', 'OmanTelController@delete_subscription');
