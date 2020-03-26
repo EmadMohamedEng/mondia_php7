@@ -78,7 +78,7 @@ class FrontController_v2 extends Controller
       $contents = $contents->limit(get_pageLength())->get();
 
       if(!request()->has('OpID') && !get_setting('enable_testing')){
-        return view('error.404');
+        return view('errors.404');
       }
 
       return view('front.list_content', compact('contents','service'));
@@ -134,6 +134,9 @@ class FrontController_v2 extends Controller
           {
             $content = $content->find($id);
           }
+        }
+        if(!$content){
+            return view('errors.404');
         }
         $contents = video::select('contents.*', 'contents.id as content_id','contents.title as content_title')
         ->join('services', 'services.id', '=', 'contents.service_id')

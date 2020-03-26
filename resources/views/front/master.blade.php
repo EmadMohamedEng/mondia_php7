@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="url" content="{{url('/')}}">
+    <link rel="shortcut icon" href="https://du-portal.mondiamedia.com/du-uae-portal/en/favicon.ico">
     <title>{{get_setting('title_page')}} | @yield('page_title')</title>
     <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
@@ -84,7 +85,7 @@
 
                             <div class="border-bottom"></div>
 
-                            <li class="nav-item">
+                            <li id="indexed" class="nav-item">
                                 <a class="nav-link text-capitalize link_href" href="{{route('front.index')}}"><i class="icon_before fas fa-home fa-lg"></i> Home
                                     <span class="sr-only">(current)</span>
                                 </a>
@@ -129,6 +130,12 @@
         </div>
     </main>
 
+    <!-- loading -->
+    <div class="loading-overlay">
+        <span class="spinner spinner-large spinner-blue spinner-slow"></span>
+    </div>
+  <!-- end loading -->
+
     <script src="{{asset('front/js/jquery-3.3.1.min.js')}}"></script>
     <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
@@ -147,17 +154,6 @@
                 }
             });
         }
-
-        $(function() {
-            url = window.location.href,
-            $('.navbar_ul li a').each(function() {
-                if (url.includes(this.href)) {
-                    $(this).addClass('active');
-                    $(this).parent('li').addClass('active');
-                }
-            });
-        });
-
         $('.search-res').val('{{request()->get("search")}}')
 
     </script>
