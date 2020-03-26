@@ -7,16 +7,21 @@
       <div class="row m-0">
         <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
           <div class="cover">
-            @if(session()->has('msisdn'))
-            <video style="width:100%" poster="{{$content->image_preview}}" controls>
-                <source src="{{url($content->video)}}" />
-            </video>
+            @if(session()->has('requestId') && session()->has('status') && session()->get('status') == 'active')
+                <video style="width:100%" poster="{{$content->image_preview}}" controls>
+                    <source src="{{url($content->video)}}" />
+                </video>
             @else
-            <img src="{{$content->type == 1 ? $content->image_preview : $content->video}}" alt="Video Cover">
-
-            <button class="btn button_play primary">
-              <i class="fas fa-play play_icon"></i> Play
-            </button>
+                <img src="{{$content->type == 1 ? $content->image_preview : $content->video}}" alt="Video Cover">
+                @if(request()->has('OpID') && request()->get('OpID') == omantel)
+                    <button onclick="location.href= '{{route('front.oman',['redirect_url' => url()->full()])}}'" class="btn button_play primary">
+                        <i class="fas fa-play play_icon"></i> Play
+                    </button>
+                @else
+                    <button class="btn button_play primary">
+                        <i class="fas fa-play play_icon"></i> Play
+                    </button>
+                @endif
             @endif
           </div>
         </div>

@@ -112,7 +112,6 @@ class FrontController_v2 extends Controller
 
     public function view_content($id,Request $request)
     {
-
         $view_coming_post = get_setting('view_coming_post');
         $enable = get_setting('enable_testing');
         $content = Video::query();
@@ -148,7 +147,21 @@ class FrontController_v2 extends Controller
             ->where('posts.show_date','<=',Carbon::now()->toDateString());
         }
         $contents = $contents->orderBy('contents.created_at', 'desc')->limit(4)->get();
+        if($request->has('userToken')){
+            $userToken = $request->userToken;
+            $refreshToken = $request->refreshToken;
+            $expiresIn = $request->expiresIn;
+            $status = $request->status;
 
+            $response = $this->check_status($userToken);
+
+            if(empty($response)){
+                return $this->pin_code($userToken);
+            }
+            else{
+                return view('front.inner', compact('content','contents'));
+            }
+        }
         return view('front.inner', compact('content','contents'));
     }
 
@@ -304,138 +317,8 @@ class FrontController_v2 extends Controller
 
 
 
-    /* ======================= new landing =================== */
-
-    public $front_view = "front.";
-    // --------------Live -----------------//
-    private $privateKey = "6g8UUH6mlUilXpOSssp8";
-    private $publicKey = "fhCP5KoWwDET9G9N9odF";
-    private $subscriptionPlanId = 514;
-    private $service_name = "yallawaffar";
-    public $customerAccountNumber = "customer159635721";
-    private $status = "live";
-
-
-    public function unsub(Request $request)
-    {
-
-        Session::forget('contract_id'); // to remove any contract_id from session
-        Session::forget('phone_number'); // to remove any contract_id from session
-
-        if (isset($_GET['operator_id']) && !empty($_GET['operator_id']))
-            $operator_id = $_GET['operator_id'];
-        return view('front.unsub', compact('operator_id', 'request'));
-    }
-
-
-    public function new_landing(Request $request)
-    {
-        // if (Session::has('phone_number') && Session::has('status') && Session::get('status') == "active") {
-        //     return redirect('/');
-        // }else{
-        // header inrichemnt DETECT
-        $result = array();
-        // get client ip
-        $ip = $_SERVER["REMOTE_ADDR"];
-
-        if (filter_var(@$_SERVER['HTTP_X_FORWARDED_FOR'], FILTER_VALIDATE_IP))
-            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        if (filter_var(@$_SERVER['HTTP_CLIENT_IP'], FILTER_VALIDATE_IP))
-            $ip = $_SERVER['HTTP_CLIENT_IP'];
-
-
-        if (isset($_SERVER['HTTP_USER_AGENT'])) {
-            $deviceModel = $_SERVER['HTTP_USER_AGENT'];
-        } else {
-            $deviceModel = "";
-        }
-
-
-        $country_from_ip = $this->ip_info("Visitor", "Country");
-        $result['date'] = Carbon::now()->format('Y-m-d H:i:s');
-        $result['ip'] = $ip;
-        $result['country'] = $country_from_ip;
-        $result['deviceModel'] = $deviceModel;
-        $result['AllHeaders'] = $_SERVER;
-
-
-        $actionName = "Hits";
-        $URL = $request->fullUrl();
-        $parameters_arr = $result;
-        $this->log($actionName, $URL, $parameters_arr);  // log in
-
-        return view($this->front_view . 'new_landing');
-        //    }
-    }
-
-    function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE)
-    {
-        $output = NULL;
-        if (filter_var($ip, FILTER_VALIDATE_IP) === FALSE) {
-            $ip = $_SERVER["REMOTE_ADDR"];
-            if ($deep_detect) {
-                if (filter_var(@$_SERVER['HTTP_X_FORWARDED_FOR'], FILTER_VALIDATE_IP))
-                    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-                if (filter_var(@$_SERVER['HTTP_CLIENT_IP'], FILTER_VALIDATE_IP))
-                    $ip = $_SERVER['HTTP_CLIENT_IP'];
-            }
-        }
-        $purpose = str_replace(array("name", "\n", "\t", " ", "-", "_"), NULL, strtolower(trim($purpose)));
-        $support = array("country", "countrycode", "state", "region", "city", "location", "address");
-        $continents = array(
-            "AF" => "Africa",
-            "AN" => "Antarctica",
-            "AS" => "Asia",
-            "EU" => "Europe",
-            "OC" => "Australia (Oceania)",
-            "NA" => "North America",
-            "SA" => "South America"
-        );
-        if (filter_var($ip, FILTER_VALIDATE_IP) && in_array($purpose, $support)) {
-            $ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $ip));
-            // dd($ipdat);
-            if (@strlen(trim($ipdat->geoplugin_countryCode)) == 2) {
-                switch ($purpose) {
-                    case "location":
-                        $output = array(
-                            "city" => @$ipdat->geoplugin_city,
-                            "state" => @$ipdat->geoplugin_regionName,
-                            "country" => @$ipdat->geoplugin_countryName,
-                            "country_code" => @$ipdat->geoplugin_countryCode,
-                            "continent" => @$continents[strtoupper($ipdat->geoplugin_continentCode)],
-                            "continent_code" => @$ipdat->geoplugin_continentCode
-                        );
-                        break;
-                    case "address":
-                        $address = array($ipdat->geoplugin_countryName);
-                        if (@strlen($ipdat->geoplugin_regionName) >= 1)
-                            $address[] = $ipdat->geoplugin_regionName;
-                        if (@strlen($ipdat->geoplugin_city) >= 1)
-                            $address[] = $ipdat->geoplugin_city;
-                        $output = implode(", ", array_reverse($address));
-                        break;
-                    case "city":
-                        $output = @$ipdat->geoplugin_city;
-                        break;
-                    case "state":
-                        $output = @$ipdat->geoplugin_regionName;
-                        break;
-                    case "region":
-                        $output = @$ipdat->geoplugin_regionName;
-                        break;
-                    case "country":
-                        $output = @$ipdat->geoplugin_countryName;
-                        break;
-                    case "countrycode":
-                        $output = @$ipdat->geoplugin_countryCode;
-                        break;
-                }
-            }
-        }
-        return $output;
-    }
-
-    public function log($actionName, $URL, $parameters_arr)
+    /* ======================= Oman Tel landing =================== */
+    public function log_action($actionName, $Url, $parameters_arr)
     {
         date_default_timezone_set("Africa/Cairo");
         $date = date("Y-m-d");
@@ -446,137 +329,262 @@ class FrontController_v2 extends Controller
         }
 
         $log->pushHandler(new StreamHandler(storage_path('logs/' . $date . '/' . $actionName . '/logFile.log', Logger::INFO)));
-        $log->addInfo($URL, $parameters_arr);
+        $log->addInfo($Url, $parameters_arr);
     }
 
 
+    public function create_token()
+    {
+        $url = 'http://gateway.mondiamedia.com/v0/api/gateway/token/client';
+
+        $headers = array(
+            "accept: application/json",
+            "content-type: application/x-www-form-urlencoded",
+            "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8"
+        );
+
+        $json = '';
+
+        $response = $this->SendRequestPost($url, $json, $headers);
+        $response = json_decode($response, true);
+        // make log
+        $actionName = "Create Token";
+        $parameters_arr = array(
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'response' => $response,
+        );
+
+        $this->log_action($actionName, $url, $parameters_arr);
+
+        return $response;
+    }
 
 
-    public function get_content_post($URL, $param)
+    public function redirect(Request $request)
+    {
+        $token = $this->create_token()['accessToken'];
+
+        $Url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . $request->redirect_url;
+
+        session()->put('success_url',$request->redirect_url);
+        // make log
+        $actionName = "Redirect";
+        $parameters_arr = array(
+            'token' => $token,
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'Url' => $Url,
+        );
+
+        $this->log_action($actionName, '', $parameters_arr);
+        return redirect($Url);
+    }
+
+    public function testOmanTelLogin(Request $request){
+
+        $userToken = $request->userToken;
+        $refreshToken = $request->refreshToken;
+        $expiresIn = $request->expiresIn;
+        $status = $request->status;
+
+        $response = $this->check_status($userToken);
+
+        if(empty($response)){
+            return $this->pin_code($userToken);
+        }else{
+            return $this->delete_subscription($response['id'], $userToken);
+        }
+
+    }
+
+    public function check_status($userToken)
     {
 
-        $content = json_encode($param);
+        $curl = curl_init();
 
-        //   print_r($content); die;
+        $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription?disableFiltering=false&subsTypeId=59160008&inclCancelled=false&inclSubscriptionType=false&subscriptionProvider=MONDIA_MEDIA";
 
-        $ch = curl_init($URL);
-        curl_setopt($ch, CURLOPT_HEADER, false);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-type: application/json"));
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
-        $result = curl_exec($ch);
+        $headers = array(
+            "accept: application/json",
+            "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
+            "Authorization: Bearer ".$userToken
+        );
+
+        $json = '';
+
+        $response = $this->SendRequestGet($url, $json, $headers);
+        $response = json_decode($response, true);
+
+        // make log
+        $actionName = "Check Status";
+        $parameters_arr = array(
+            'token' => $userToken,
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'response' => $response,
+        );
+        $this->log_action($actionName, $url, $parameters_arr);
+
+        return $response;
+    }
+
+    public function pin_code ($userToken)
+    {
+        $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription/subscribe/sendSubPin";
+
+        $headers = array(
+            "Content-Type: application/json",
+            "accept: application/json",
+            "X-MM-GATEWAY-KEY: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
+            "Authorization: Bearer ".$userToken
+        );
+
+        $vars['subscriptionTypeId'] = 59160008;
+        $vars['userAgent'] = 'IVAS';
+        $vars['agency'] = 'IVAS';
+        $json = json_encode($vars);
+
+        $response = $this->SendRequestPost($url, $json, $headers);
+        $response = json_decode($response, true);
+
+        // make log
+        $actionName = "Send PinCode";
+        $parameters_arr = array(
+            'token' => $userToken,
+            "response" => $response,
+        );
+
+        $this->log_action($actionName, $url, $parameters_arr);
+
+        Session::put('requestId', $response['custRequestId']);
+        Session::put('userToken', $userToken);
+
+        return redirect(route('front.pincode',['userToken' => $userToken , 'OpID' => omantel]));
+    }
+
+    public function pincode(Request $request)
+    {
+        $userToken = $request->userToken;
+        return view('front.pin_code', compact('userToken'));
+    }
+
+
+    public function verify_pin(Request $request)
+    {
+        $requestId = session('requestId');
+        $userToken = session('userToken');
+        $pin = $request->pincode;
+
+        $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription/subscribe/verifyPinAndSubscribe";
+
+        $headers = array(
+            "content-type: application/json",
+            "accept: application/json",
+            "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
+            "Authorization: Bearer ".$userToken
+        );
+
+        $vars['requestId'] = $requestId;
+        $vars['pin'] = $pin;
+        $vars['refererLink'] = 'http://omantelmyworld.com';
+        $vars['subscriptionTypeId'] = 59160008;
+
+        $json = json_encode($vars);
+
+        $response = $this->SendRequestPost($url, $json, $headers);
+        $response = json_decode($response, true);
+
+        // make log
+        $actionName = "Verify Pin";
+        $parameters_arr = array(
+            'token' => $userToken,
+            'requestId' => $requestId,
+            'pin' => $pin,
+            "response" => $response,
+        );
+
+        $this->log_action($actionName, $url, $parameters_arr);
+
+        // if($response['responseCode'] == 670){
+        //     return back()->with('faild','not success pincode');
+        // }
+        session()->put('status','active');
+        return redirect(session()->get('success_url'));
+    }
+
+    public function delete_subscription($requestId, $userToken)
+    {
+        $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription/$requestId";
+
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/json",
+                "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
+                "authorization: Bearer $userToken"
+            ),
+        ));
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        curl_close($curl);
+
+        $response = json_decode($response, true);
+
+        // make log
+        $actionName = "Delete Subscription";
+        $parameters_arr = array(
+            "response" => $response,
+        );
+        $this->log_action($actionName, $url, $parameters_arr);
+
+        if ($err) {
+            return $err;
+        } else {
+            return $response;
+        }
+    }
+
+    public function SendRequestPost($URL, $JSON, $headers)
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $URL);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 100);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 100);
+        curl_setopt($ch, CURLOPT_VERBOSE, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $JSON);
+        $sOutput = curl_exec($ch);
         curl_close($ch);
 
-        return $result;
+        return $sOutput;
     }
 
-    public function JICindex()
+    public function SendRequestGet($URL, $JSON, $headers)
     {
-        return view('JIC.index');
-    }
-    public function logoutadmin(Request $request)
-    {
-        Session::flush();
-        return redirect('/login');
-    }
+        $ch = curl_init();
 
+        curl_setopt($ch, CURLOPT_URL, $URL);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 100);
+        curl_setopt($ch, CURLOPT_ENCODING, "");
+        curl_setopt($ch, CURLOPT_MAXREDIRS, 10);
+        curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
-    public function du_landing(request $request)
-    {
-        $peroid = isset($request->peroid)  ?  $request->peroid  : "daily";
-        $lang =  isset($request->lang) ? $request->lang : "ar";
-        return view('landing_v2.du_landing', compact("peroid", "lang"));
-    }
+        $sOutput = curl_exec($ch);
+        curl_close($ch);
 
-    public function du_landing_success()
-    {
-        date_default_timezone_set("Africa/Cairo");
-        $URL = \Request::fullUrl();
-        // make log
-        $actionName = "DU SecureD Pincode Success";
-        $parameters_arr = array(
-            'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'URL' => $URL
-        );
-        $this->log($actionName, $URL, $parameters_arr);
-
-
-        return view('landing_v2.du_landing_success');
-    }
-
-    public function DuSecureRedirect(request $request)
-    {
-        date_default_timezone_set("Africa/Cairo");
-
-        if (isset($_REQUEST['number']) && $_REQUEST['number'] != "") {
-            $msisdn = $_REQUEST['number'];
-            $msisdn = "971" . $msisdn;
-        } else {
-            $msisdn = "";
-        }
-
-
-        require('uuid/UUID.php');
-        $trxid = \UUID::v4();
-
-        if (isset($_REQUEST['peroid']) && $_REQUEST['peroid'] != "") {
-            $plan = $_REQUEST['peroid'];
-
-            if ($plan  == "daily") {
-                $serviceid = "duelkheirdaily";
-                $price = 2;
-                $num = 1;
-            } elseif ($plan  == "weekly") {
-                $serviceid = "duelkheirweekly";
-                $price = 14;
-                $num = 7;
-            } else {
-                $serviceid = "duelkheirdaily";
-                $price = 2;
-                $num = 1;
-            }
-        } else { // default is daily
-            $serviceid = "duelkheirdaily";
-            $plan = "daily";
-            $price = 2;
-            $num = 1;
-        }
-
-
-        if (isset($_REQUEST['lang']) && $_REQUEST['lang'] != "") {
-            $local = $_REQUEST['lang'];
-        } else { // default is arabic
-            $local = "ar";
-        }
-
-        $redirectUrl =  url('/home');
-
-
-
-        // activation api :   http://pay-with-du.ae/20/digizone/digizone-flaterdaily-1-ar-doi-web?origin=digizone&uid=971555802322&trxid=56833e8d-c21b-453b-9e2a-f33f20415ae2&serviceProvider=secured&serviceid=flaterdaily&plan=daily&price=2&locale=ar
-        //  f5d1048a-995e-11e7-abc4-cec278b6b50a
-        //http://pay-with-du.ae/20/digizone/digizone-{$serviceid}-{$num}-{$local}-doi-web?
-        $URL = "http://pay-with-du.ae/20/digizone/digizone-{$serviceid}-{$num}-{$local}-doi-web?origin=digizone&uid=$msisdn&trxid=$trxid&serviceProvider=secured&serviceid=$serviceid&plan=$plan&price=$price&locale=$local&redirectUrl=";
-
-        // make log
-        $actionName = "DU SecureD Pincode Send";
-        $parameters_arr = array(
-            'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'URL' => $URL
-        );
-        $this->log($actionName, $URL, $parameters_arr);
-
-        $DuIntgration =    new DuIntgration();
-        $DuIntgration->url = $URL;
-        $DuIntgration->trxid = $trxid;
-        $DuIntgration->uid = $msisdn;
-        $DuIntgration->serviceid = $serviceid;
-        $DuIntgration->plan = $plan;
-        $DuIntgration->price = $price;
-        $DuIntgration->local = $local;
-        $DuIntgration->save();
-
-        return redirect($URL);
+        return $sOutput;
     }
 }

@@ -94,11 +94,15 @@ Auth::routes([
 ]);
 
 //OmanTel
-Route::get('omantel_landing', 'OmanTelController@index');
-Route::get('test_omantel_login', 'OmanTelController@testOmanTelLogin');
-Route::get('create_token', 'OmanTelController@create_token');
-Route::get('redirect', 'OmanTelController@redirect');
-Route::get('check_status', 'OmanTelController@check_status');
-Route::get('pin_code', 'OmanTelController@pin_code');
-Route::post('verify_pin', 'OmanTelController@verify_pin');
+define('omantel',9);
+// Route::get('omantel_landing', 'OmanTelController@index');
+// Route::get('test_omantel_login', 'OmanTelController@testOmanTelLogin');
+// Route::get('create_token', 'OmanTelController@create_token');
+Route::get('omantel/redirect', 'FrontController_v2@redirect')->name('front.oman');
+// Route::get('check_status', 'OmanTelController@check_status');
+Route::get('pin_code', 'FrontController_v2@pincode')->name('front.pincode');
+Route::post('verify_pin', 'FrontController_v2@verify_pin')->name('front.verfiy');
 Route::get('delete_subscription ', 'OmanTelController@delete_subscription');
+// Route::get('test',function(){
+//     session()->flush();
+// });
