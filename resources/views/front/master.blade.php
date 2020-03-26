@@ -91,7 +91,7 @@
                             </li>
                             @foreach(provider_menu() as $provider)
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon_before fas fa-futbol fa-lg"></i> {{$provider->getTranslation('title',getCode())}}</a>
+                                <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon_before fas fa-mosque fa-lg"></i> {{$provider->getTranslation('title',getCode())}}</a>
                                 <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
                                     @foreach($provider->services as $value)
                                     <a class="dropdown-item text-capitalize link_href" href="{{route('front.list',['service_id' => $value->id])}}">{{$value->getTranslation('title',getCode())}}</a>
@@ -100,7 +100,7 @@
                             </li>
                             @endforeach
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon_before fas fa-futbol fa-lg"></i> دليل مسلم</a>
+                                <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon_before fas fa-mosque fa-lg"></i> دليل مسلم</a>
                                 <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
                                     <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">السبحة الإلكترونية</a>
                                     <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">حساب الزكاة</a>
