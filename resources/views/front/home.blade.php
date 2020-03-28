@@ -34,7 +34,7 @@
             </div>
 
             <div class="col-6 no_padding">
-            <a href="{{route('front.service',['id' => $item->id])}}" class="btn btn_more text-capitalize link_href">more</a>
+            <a href="{{route('front.service',['id' => $item->id])}}" class="btn btn_more text-capitalize link_href">@lang('front.more')</a>
             </div>
         </div>
         </div>
@@ -164,7 +164,7 @@
             </div>
 
             <div class="col-6 no_padding">
-            <a href="{{route('front.service',['id' => $item->id])}}" class="btn btn_more text-capitalize link_href">more</a>
+            <a href="{{route('front.service',['id' => $item->id])}}" class="btn btn_more text-capitalize link_href">@lang('front.more')</a>
             </div>
         </div>
         </div>

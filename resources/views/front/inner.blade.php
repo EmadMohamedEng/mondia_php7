@@ -8,18 +8,18 @@
         <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
           <div class="cover">
             @if(session()->has('requestId') && session()->has('status') && session()->get('status') == 'active')
-                <video style="width:100%" poster="{{$content->image_preview}}" controls>
+                <video style="object-fit: cover;width:100%" poster="{{$content->image_preview}}" controls>
                     <source src="{{url($content->video)}}" />
                 </video>
             @else
                 <img src="{{$content->type == 1 ? $content->image_preview : $content->video}}" alt="Video Cover">
                 @if(request()->has('OpID') && request()->get('OpID') == omantel)
                     <button onclick="location.href= '{{route('front.oman',['redirect_url' => url()->full()])}}'" class="btn button_play primary">
-                        <i class="fas fa-play play_icon"></i> Play
+                        <i class="fas fa-play play_icon"></i> @lang('front.play')
                     </button>
                 @else
                     <button class="btn button_play primary">
-                        <i class="fas fa-play play_icon"></i> Play
+                        <i class="fas fa-play play_icon"></i> @lang('front.play')
                     </button>
                 @endif
             @endif
@@ -34,7 +34,7 @@
               </div>
 
               <div class="outside-cover">
-                <span>Release Date:{{$content->created_at->format('M d , Y')}}</span>
+                <span>@lang('front.release'):{{$content->created_at->format('M d , Y')}}</span>
               </div>
             </div>
           </div>
@@ -47,7 +47,7 @@
 
             <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
               <div class="pa_share">
-                <div>Share: </div>
+                <div>@lang('front.share'): </div>
               </div>
             </div>
 
@@ -91,7 +91,7 @@
           <div class="row m-0">
             <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
               <div class="pa_Videos">
-                <span>Related Videos: </span>
+                <span>@lang('front.related_video'): </span>
               </div>
             </div>
             @foreach ($contents as $item)

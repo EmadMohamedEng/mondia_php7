@@ -71,9 +71,11 @@ $('#Calculate').click(function () {
   if (SavedMoney >= min) {
     var result = SavedMoney / 40;
     $('#result').text(result);
+    $('#result_text').text(result_text);
   }
   else {
     $('#result').text('0');
+    $('#result_text').text('الاجمالى');
   }
 });
 

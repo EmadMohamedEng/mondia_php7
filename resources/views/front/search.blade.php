@@ -6,7 +6,7 @@
             <i class="fas fa-search fa-lg"></i>
           </button>
           <input type="hidden" name="OpID" value="{{request()->get('OpID')}}">
-          <input type="text" name="search" class="textbox search-res" placeholder="Search">
+          <input type="text" name="search" class="textbox search-res" placeholder="@lang('front.search')">
         </form>
       </div>
     </section>

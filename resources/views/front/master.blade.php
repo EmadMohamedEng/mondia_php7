@@ -70,7 +70,7 @@
                             <li class="nav-item">
                                 <div class="row m-0">
                                     <div class="col-6 p-0">
-                                        <div class="nav_item_welc text-capitalize font-weight-bolder" href="#0">welcome</div>
+                                        <div class="nav_item_welc text-capitalize font-weight-bolder" href="#0">@lang('front.welcome')</div>
                                     </div>
 
                                     <div class="col-6 p-0">
@@ -86,7 +86,7 @@
                             <div class="border-bottom"></div>
 
                             <li id="indexed" class="nav-item">
-                                <a class="nav-link text-capitalize link_href" href="{{route('front.index')}}"><i class="icon_before fas fa-home fa-lg"></i> Home
+                                <a class="nav-link text-capitalize link_href" href="{{route('front.index')}}"><i class="icon_before fas fa-home fa-lg"></i> @lang('front.home')
                                     <span class="sr-only">(current)</span>
                                 </a>
                             </li>
@@ -101,19 +101,27 @@
                             </li>
                             @endforeach
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon_before fas fa-mosque fa-lg"></i> دليل مسلم</a>
+                                <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon_before fas fa-mosque fa-lg"></i> @lang('front.muslim_guide')</a>
                                 <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
-                                    <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">السبحة الإلكترونية</a>
-                                    <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">حساب الزكاة</a>
-                                    <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">حساب المواريث</a>
-                                    <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">مواقيت الصلاة</a>
-                                    <a class="dropdown-item text-capitalize link_href" href="{{url('mosque')}}">اقرب مسجد</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('mosque')}}"> @lang('front.mosque')</a>
                                     @if(request()->has('OpID') && request()->get('OpID') != '')
-                                    <a class="dropdown-item text-capitalize link_href" href="{{url('azan')}}">اذان</a>
-                                    <a class="dropdown-item text-capitalize link_href" href="{{url('rbts')}}">كول تون</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('azan')}}">@lang('front.azan')</a>
+                                    <a class="dropdown-item text-capitalize link_href" href="{{url('rbts')}}"> @lang('front.call_tone')</a>
                                     @endif
                                 </div>
-                            </<a>
+                            </li>
+                            @if(session()->has('requestId') && session()->has('status') && session()->get('status') == 'active')
+                            <li class="nav-item ">
+                                <a class="nav-link text-capitalize" href="{{route('front.unsub',['requestId' => session()->get('requestId') , 'userToken' => session()->get('userToken')])}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-capitalize" href="{{route('front.logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
+                            </li>
+                            @endif
 
                             @if(session()->has('msisdn'))
                             <div class="border-bottom"></div>

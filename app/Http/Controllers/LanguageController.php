@@ -15,7 +15,8 @@ class LanguageController extends Controller
     public function switchLang($lang)
     {
         if (array_key_exists($lang, Config::get('languages'))) {
-            Session::put('applocale', $lang);
+            \Session::put('applocale', $lang);
+            \App::setlocale($lang);
         }
         return Redirect::back();
     }
@@ -39,7 +40,7 @@ class LanguageController extends Controller
     	                "short_code" => "required|unique:languages,short_code",
     	                "rtl" => "required"
     	            ]);
-    	
+
     	if ($validator->fails()) {
     		return back()->withErrors($validator)->withInput();
     	}
@@ -62,7 +63,7 @@ class LanguageController extends Controller
     	                "short_code" => "required|unique:languages,short_code,".$id,
     	                "rtl" => "required"
     	            ]);
-    	
+
     	if ($validator->fails()) {
     		return back()->withErrors($validator)->withInput();
     	}

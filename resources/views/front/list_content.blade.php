@@ -23,7 +23,7 @@
         </a>
         @else
         <a class="link_title link_href" href="{{route('front.list',['search' => request()->get('search')])}}">
-            <h6 class="">You Search About : {{request()->get('search')}}</h6>
+            <h6 class="">@lang('front.you_search_about') : {{request()->get('search')}}</h6>
         </a>
         @endif
       </div>
