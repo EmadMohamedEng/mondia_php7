@@ -12,12 +12,12 @@ class OperatorsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('operators')->delete();
-        
+
         \DB::table('operators')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 7,
                 'name' => 'etislat',
@@ -27,7 +27,7 @@ class OperatorsTableSeeder extends Seeder
                 'code' => 1500,
                 'country_id' => 2,
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 8,
                 'name' => 'orange',
@@ -37,8 +37,28 @@ class OperatorsTableSeeder extends Seeder
                 'code' => 9999,
                 'country_id' => 2,
             ),
+            1 =>
+            array (
+                'id' => 9,
+                'name' => 'omentel',
+                'operator_image' => 'uploads/operators/5c2b236e9e890.jpg',
+                'created_at' => '2019-01-01 08:23:10',
+                'updated_at' => '2019-01-01 08:23:10',
+                'code' => 1212,
+                'country_id' => 4,
+            ),
+            1 =>
+            array (
+                'id' => 10,
+                'name' => 'du',
+                'operator_image' => 'uploads/operators/5c2b236e9e890.jpg',
+                'created_at' => '2019-01-01 08:23:10',
+                'updated_at' => '2019-01-01 08:23:10',
+                'code' => 2568,
+                'country_id' => 5,
+            ),
         ));
-        
-        
+
+
     }
 }

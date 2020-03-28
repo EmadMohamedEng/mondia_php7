@@ -12,27 +12,41 @@ class CountriesTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('countries')->delete();
-        
+
         \DB::table('countries')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 2,
                 'title' => 'egypt',
                 'created_at' => '2018-05-07 10:21:24',
                 'updated_at' => '2018-05-07 10:21:24',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 3,
                 'title' => 'sa',
                 'created_at' => '2018-05-07 10:24:39',
                 'updated_at' => '2018-05-07 10:24:39',
             ),
+            2 =>
+            array (
+                'id' => 4,
+                'title' => 'oman',
+                'created_at' => '2018-05-07 10:24:39',
+                'updated_at' => '2018-05-07 10:24:39',
+            ),
+            3 =>
+            array (
+                'id' => 5,
+                'title' => 'emirate',
+                'created_at' => '2018-05-07 10:24:39',
+                'updated_at' => '2018-05-07 10:24:39',
+            ),
         ));
-        
-        
+
+
     }
 }

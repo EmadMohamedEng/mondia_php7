@@ -16,5 +16,7 @@ return [
     'zakah' => 'Zakat Calculate',
     'call_ton' => 'Call Tone',
     'muslim_guide' =>  'Muslim Guide',
-    'you_search_about' => 'You Search About'
+    'you_search_about' => 'You Search About',
+    'unsub' => 'UnsubScribe',
+    'logout' => 'LogOut',
 ];

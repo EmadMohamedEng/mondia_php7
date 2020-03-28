@@ -16,6 +16,8 @@ return [
     'zakah' => 'حساب الزكاه',
     'call_tone' => 'كول تون',
     'muslim_guide' => 'دليل مسلم',
-    'you_search_about' => 'البحث'
+    'you_search_about' => 'البحث',
+    'unsub' => 'الغاء الاشتراك',
+    'logout' => 'خروج',
 
 ];

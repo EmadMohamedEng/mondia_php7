@@ -62,11 +62,11 @@ Route::get('du_logout','FrontController@du_logout')->name('front.du_logout');
 // Route::get('du_landing', 'DuController@index');
 // Route::get('test_du_login', 'DuController@testOmanTelLogin');
 // Route::get('du_create_token', 'DuController@create_token');
- Route::get('test',function(){
-//     session()->put('requestId',170052363);
-//     session()->put('userToken','U57abae8b-344e-45ab-a83e-2976c8625143');
+//  Route::get('test',function(){
+// //     session()->put('requestId',170052363);
+// //     session()->put('userToken','U57abae8b-344e-45ab-a83e-2976c8625143');
+// //     session()->put('status','active');
+//     session()->put('requestId',39630768);
+//     session()->put('userToken','U7fec00ea-9d9c-42b2-84b4-f62ef8d225ad');
 //     session()->put('status','active');
-    session()->put('requestId',39630768);
-    session()->put('userToken','U7fec00ea-9d9c-42b2-84b4-f62ef8d225ad');
-    session()->put('status','active');
- });
+//  });
