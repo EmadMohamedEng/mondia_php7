@@ -17,6 +17,10 @@
                     <button onclick="location.href= '{{route('front.oman',['redirect_url' => url()->full()])}}'" class="btn button_play primary">
                         <i class="fas fa-play play_icon"></i> @lang('front.play')
                     </button>
+                @elseif(request()->has('OpID') && request()->get('OpID') == du)
+                <button onclick="location.href= '{{route('front.du',['redirect_url' => url()->full()])}}'" class="btn button_play primary">
+                    <i class="fas fa-play play_icon"></i> @lang('front.play')
+                </button>
                 @else
                     <button class="btn button_play primary">
                         <i class="fas fa-play play_icon"></i> @lang('front.play')

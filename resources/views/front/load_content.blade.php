@@ -10,7 +10,7 @@
         </a>
 
         <div class="card-body">
-            <h4 class="card-title text-capitalize">{{$item->getTranslation('content_title',getCode())}}</h4>
+            <h4 class="card-title text-capitalize">{{$item->getTranslation('title',getCode())}}</h4>
         </div>
         </div>
     </div>

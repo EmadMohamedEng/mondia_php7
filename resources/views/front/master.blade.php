@@ -116,10 +116,18 @@
                             </li>
                             @if(session()->has('requestId') && session()->has('status') && session()->get('status') == 'active')
                             <li class="nav-item ">
+                                @if(request()->get('OpID') == omantel)
                                 <a class="nav-link text-capitalize" href="{{route('front.unsub',['requestId' => session()->get('requestId') , 'userToken' => session()->get('userToken')])}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
+                                @elseif(request()->get('OpID') == du)
+                                <a class="nav-link text-capitalize" href="{{route('front.du_unsub',['requestId' => session()->get('requestId') , 'userToken' => session()->get('userToken')])}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
+                                @endif
                             </li>
                             <li class="nav-item ">
+                                @if(request()->get('OpID') == omantel)
                                 <a class="nav-link text-capitalize" href="{{route('front.logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
+                                @elseif(request()->get('OpID') == du)
+                                <a class="nav-link text-capitalize" href="{{route('front.du_logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
+                                @endif
                             </li>
                             @endif
 

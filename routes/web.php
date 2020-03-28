@@ -52,3 +52,21 @@ Route::get('logout','FrontController@logout')->name('front.logout');
 // Route::get('create_token', 'OmanTelController@create_token');
 // Route::get('check_status', 'OmanTelController@check_status');
 
+//Du integration
+define('du',10);
+Route::get('du_redirect', 'FrontController@du_redirect')->name('front.du');
+Route::get('du_check_status/{userToken?}', 'FrontController@du_check_status')->name('front.du_check');
+Route::get('du_pin_code', 'FrontController@du_pin_code')->name('front.du_pin_code');
+Route::get('du_delete_subscription/', 'FrontController@du_delete_subscription')->name('front.du_unsub');
+Route::get('du_logout','FrontController@du_logout')->name('front.du_logout');
+// Route::get('du_landing', 'DuController@index');
+// Route::get('test_du_login', 'DuController@testOmanTelLogin');
+// Route::get('du_create_token', 'DuController@create_token');
+ Route::get('test',function(){
+//     session()->put('requestId',170052363);
+//     session()->put('userToken','U57abae8b-344e-45ab-a83e-2976c8625143');
+//     session()->put('status','active');
+    session()->put('requestId',39630768);
+    session()->put('userToken','U7fec00ea-9d9c-42b2-84b4-f62ef8d225ad');
+    session()->put('status','active');
+ });

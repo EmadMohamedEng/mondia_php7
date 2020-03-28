@@ -56,8 +56,7 @@ class FrontController extends Controller
     public function contents(Request $request)
     {
       $service = '';
-      $contents = Video::select('*', 'contents.id as content_id', 'contents.title as content_title')
-          ->join('services', 'services.id', '=', 'contents.service_id');
+      $contents = Video::query();
       if($request->has('service_id') && $request->service_id != '')
       {
         $contents = $contents->where('service_id', $request->service_id);
@@ -86,8 +85,7 @@ class FrontController extends Controller
 
     public function load_contents(Request $request)
     {
-      $contents = Video::select('*', 'contents.id as content_id', 'contents.title as content_title')
-          ->join('services', 'services.id', '=', 'contents.service_id');
+      $contents = Video::query();
       if($request->has('service_id') && $request->service_id != '')
       {
         $contents = $contents->where('service_id', $request->service_id);
@@ -152,15 +150,28 @@ class FrontController extends Controller
             $refreshToken = $request->refreshToken;
             $expiresIn = $request->expiresIn;
             $status = $request->status;
-
-            $response = $this->check_status($userToken);
-
-            if(empty($response)){
-                return $this->pin_code($userToken);
+            if($request->OpID == omantel)
+            {
+                $response = $this->check_status($userToken);
+                if(empty($response)){
+                    return $this->pin_code($userToken);
+                }
+                else{
+                    session()->put('status','active');
+                    return view('front.inner', compact('content','contents'));
+                }
             }
-            else{
-                session()->put('status','active');
-                return view('front.inner', compact('content','contents'));
+
+            if($request->OpID == du)
+            {
+                $response = $this->du_check_status($userToken);
+                if(empty($response)){
+                    return $this->du_pin_code($userToken);
+                }
+                else{
+                    session()->put('status','active');
+                    return view('front.inner', compact('content','contents'));
+                }
             }
         }
         return view('front.inner', compact('content','contents'));
@@ -516,6 +527,151 @@ class FrontController extends Controller
     {
         session()->flush();
         return back();
+    }
+
+    // make du integration
+    public function du_create_token()
+    {
+        $url = 'http://gateway.mondiamedia.com/v0/api/gateway/token/client';
+
+        $headers = array(
+            "Accept: application/json",
+            "Content-Type: application/x-www-form-urlencoded",
+            "X-MM-GATEWAY-KEY: Gdea42150-deb0-e6a9-3d88-bcbc0c724f00"
+        );
+
+        $json = '';
+
+        $response = $this->SendRequestPost($url, $json, $headers);
+        $response = json_decode($response, true);
+        // make log
+        $actionName = "DU Create Token";
+        $parameters_arr = array(
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'response' => $response,
+        );
+
+        $this->log_action($actionName, $url, $parameters_arr);
+
+        return $response;
+    }
+
+
+    public function du_redirect(Request $request)
+    {
+        $token = $this->du_create_token()['accessToken'];
+
+        $Url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . urlencode($request->redirect_url);
+
+        session()->put('success_url',$request->redirect_url);
+
+        // make log
+        $actionName = "DU Redirect";
+        $parameters_arr = array(
+            'token' => $token,
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'Url' => $Url,
+        );
+
+        $this->log_action($actionName, '', $parameters_arr);
+        return redirect($Url);
+    }
+
+
+
+    public function du_check_status($userToken)
+    {
+
+        $curl = curl_init();
+
+        $url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/api/subscription?disableFiltering=false&subsTypeId=56830063&inclCancelled=false&inclSubscriptionType=false&subscriptionProvider=MONDIA_MEDIA";
+
+        $headers = array(
+            "accept: application/json",
+            "X-MM-GATEWAY-KEY: Gdea42150-deb0-e6a9-3d88-bcbc0c724f00",
+            "Authorization: Bearer ".$userToken
+        );
+
+        $json = '';
+
+        $response = $this->SendRequestGet($url, $json, $headers);
+        $response = json_decode($response, true);
+
+        // make log
+        $actionName = "DU Check Status";
+        $parameters_arr = array(
+            'token' => $userToken,
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'response' => $response,
+        );
+        $this->log_action($actionName, $url, $parameters_arr);
+
+        if(!empty($response)){
+            session()->put('requestId',$response[0]['id']);
+            session()->put('userToken',$userToken);
+        }
+        return $response;
+    }
+
+    public function du_pin_code()
+    {
+        $x = 12;
+
+        $trxid = $randomNum=substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyzABCDEFGHIJKLMNOPQRSTVWXYZ"), 0, $x);
+
+        $url = "http://pay-with-du.ae/16/mondiamedia/mondia-duelkheer-1-en-doi-web?serviceProvider=mondiamedia&serviceid=duelkheer&trxid=".$trxid."&redirectUrl=".urlencode(session()->get('success_url'));
+
+        // make log
+        $actionName = "DU Send PinCode";
+        $parameters_arr = array(
+            'trxid' => $trxid,
+        );
+
+        $this->log_action($actionName, $url, $parameters_arr);
+
+        return redirect($url);
+    }
+
+    public function du_delete_subscription(Request $request)
+    {
+        $url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/api/subscription/$request->requestId";
+
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/json",
+                "x-mm-gateway-key: Gdea42150-deb0-e6a9-3d88-bcbc0c724f00",
+                "authorization: Bearer $request->userToken"
+            ),
+        ));
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        curl_close($curl);
+
+        $response = json_decode($response, true);
+
+        // make log
+        $actionName = "DU Delete Subscription";
+        $parameters_arr = array(
+            "response" => $response,
+        );
+        $this->log_action($actionName, $url, $parameters_arr);
+
+        session()->flush();
+        return back();
+    }
+
+    public function du_logout()
+    {
+        session()->flush();
+        return redirect(session()->get('success_url'));
     }
 
 }

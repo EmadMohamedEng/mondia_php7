@@ -5,7 +5,9 @@
           <button class="btn btn_search" onclick="document.getElementById('form_search').submit">
             <i class="fas fa-search fa-lg"></i>
           </button>
+          @if(request()->has('OpID'))
           <input type="hidden" name="OpID" value="{{request()->get('OpID')}}">
+          @endif
           <input type="text" name="search" class="textbox search-res" placeholder="@lang('front.search')">
         </form>
       </div>
