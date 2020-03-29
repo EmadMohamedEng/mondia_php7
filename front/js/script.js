@@ -1,6 +1,5 @@
 $(document).ready(function () {
   $(".close_nav").click(function () {
-    // console.log($('#menu_toggle').attr('aria-expanded'))
     if ($('#menu_toggle').attr('aria-expanded')) {
       $('.navbar-collapse').removeClass('show')
     }
@@ -87,7 +86,9 @@ $(function () {
   $("ul li a").each(function () {
     if (url == (this.href)) {
       $("#indexed").removeClass("active_menu");
-      $(this).closest("li").addClass("active_menu");
+      $(this).parents("li").children("a").addClass("active_menu_parent");
+      $(this).closest("a").addClass("active_menu");
+      $(this).parents("li").children("div").show();
     }
   });
 });

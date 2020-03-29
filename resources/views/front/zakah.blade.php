@@ -2,7 +2,7 @@
 @section('page_title') @lang('front.zakah') @endsection
 @section('content')
 
-<div class="col-md-9 col-lg-9 col-xl-9 col-12 p-0 close_nav">
+<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
 
   <section class="zakkah_page">
     <h4 class="text-center font-weight-bold">@lang('front.zakah')</h4>

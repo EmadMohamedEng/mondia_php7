@@ -2,7 +2,7 @@
 @section('page_title') {{$provider->getTranslation('title',getCode())}} @endsection
 @section('content')
 
-<div class="col-md-12 col-lg-9 col-xl-9 col-12 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
     @include('front.search')
   <section class="list_page">
     <div class="content_carousel_head text-capitalize">
@@ -15,7 +15,7 @@
 
     <div class="row m-0">
         @foreach ($services as $service)
-        <div class="col-md-4 col-lg-5 col-xl-2 col-4 p-0">
+        <div class="col-md-4 col-lg-4 col-xl-2 col-4 p-0">
             <div class="item">
               <div class="card ovf-hidden">
                 <a class="owl_content_img view overlay link_href" href="{{route('front.list',['service_id' => $service->id])}}">

@@ -2,7 +2,7 @@
 @section('page_title') @lang('front.sebha') @endsection
 @section('content')
 
-<section class="col-md-12 col-lg-9 col-xl-9 col-12 p-0 close_nav">
+<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
   <section class="sebha_page">
     <div class="display">
       <h1 id="wordSebha"></h1>

@@ -1,6 +1,6 @@
 <?php $__env->startSection('page_title'); ?> Error <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
-<div class="col-md-12 col-lg-9 col-xl-9 col-12 p-0 close_nav">
+<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
     <section class="error_page">
       <div class="row m-0">
         <div class="col-md-12 col-lg-8 col-xl-8 col-12 p-0">
@@ -15,7 +15,7 @@
           </svg>
         </div>
 
-        <div class="col-md-12 col-lg-4 col-xl-4 col-12 p-0">
+        <div class="col-md-12 col-lg-12 col-xl-4 col-12 p-0">
           <div class="message-box">
             <h1>404</h1>
             <p>Page not found</p>
@@ -30,7 +30,7 @@
           </div>
         </div>
 
-        <div class="col-md-12 col-lg-4 col-xl-4 col-12 p-0">
+        <div class="col-md-12 col-lg-12 col-xl-4 col-12 p-0">
           <!-- <div class="buttons-con">
             <div class="action-link-wrap">
               <a onclick="history.back(-1)" class="link-button link-back-button">Go Back</a>

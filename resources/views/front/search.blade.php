@@ -1,4 +1,4 @@
-<div class="col-md-12 col-lg-9 col-xl-9 col-12 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
     <section class="search_page">
       <div class="col-md-12 col-lg-12 col-lg-12 col-12">
         <form class="form_search" id="form_search" action="{{route('front.list')}}" method="get">

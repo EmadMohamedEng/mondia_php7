@@ -2,7 +2,7 @@
 @section('page_title') @lang('front.prayer') @endsection
 @section('content')
 
-<div class="col-md-9 col-lg-9 col-xl-9 col-12 p-0 close_nav">
+<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
   <section class="salah_time_page">
     <div class="salah_time_title">
       <h2> @lang('front.prayer') </h2>

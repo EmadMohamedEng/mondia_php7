@@ -72,7 +72,6 @@ a:hover, a:focus, a:active {
 }
 .main_container .header {
   position: sticky;
-  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   height: 4rem;
   padding: 1.1rem 1.75rem;
 }
@@ -105,6 +104,7 @@ a:hover, a:focus, a:active {
 .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
   text-align: left;
+  float: left;
 }
 .main_container .nav_nav {
   background-color: #FFF;
@@ -157,7 +157,6 @@ a:hover, a:focus, a:active {
   width: 100%;
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:active, .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:focus, .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:hover {
-  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -185,7 +184,6 @@ a:hover, a:focus, a:active {
 }
 .main_container .img_carousel .owl_one .item .btn_subscribe button {
   border: 0;
-  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   margin: 0.55rem 0 0 1rem;
   border-radius: 6px;
@@ -209,7 +207,6 @@ a:hover, a:focus, a:active {
   text-align: right;
 }
 .main_container .content_carousel .content_carousel_head .btn_more {
-  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   border: 0;
   float: left;
@@ -321,7 +318,6 @@ a:hover, a:focus, a:active {
   color: #000;
 }
 .main_container .shakih_page .content_carousel_head .btn_more {
-  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   border: 0;
   float: right;
@@ -366,7 +362,6 @@ a:hover, a:focus, a:active {
 }
 .main_container .inner_page .cover button {
   border: 0;
-  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   position: absolute;
   top: 50%;
@@ -674,7 +669,6 @@ a:hover, a:focus, a:active {
   font-weight: bold;
   text-align: center;
   border: 0;
-  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -853,7 +847,6 @@ a:hover, a:focus, a:active {
 }
 .main_container .error_page .buttons-con .action-link-wrap .link-button {
   width: 100%;
-  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   padding: 0.5rem 0.75rem;
   cursor: pointer;
@@ -949,7 +942,19 @@ a:hover, a:focus, a:active {
   outline: 0;
 }
 
+.active_menu {
+  color: #FFF;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
 .active_menu a {
+  color: #2f7cc7 !important;
+}
+
+.active_menu_parent {
   color: #2f7cc7 !important;
 }
 
@@ -1210,7 +1215,6 @@ a:hover, a:focus, a:active {
     font-weight: bold;
     text-align: center;
     border: 0;
-    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -1515,7 +1519,6 @@ a:hover, a:focus, a:active {
     font-weight: bold;
     text-align: center;
     border: 0;
-    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -1840,7 +1843,6 @@ a:hover, a:focus, a:active {
     font-weight: bold;
     text-align: center;
     border: 0;
-    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -2177,7 +2179,6 @@ a:hover, a:focus, a:active {
     font-weight: bold;
     text-align: center;
     border: 0;
-    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -2587,7 +2588,6 @@ a:hover, a:focus, a:active {
     font-weight: bold;
     text-align: center;
     border: 0;
-    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -3028,7 +3028,6 @@ a:hover, a:focus, a:active {
     font-weight: bold;
     text-align: center;
     border: 0;
-    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;

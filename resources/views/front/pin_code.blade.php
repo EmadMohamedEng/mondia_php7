@@ -1,10 +1,10 @@
 @extends('front.master')
 @section('page_title') PinCode @endsection
 @section('content')
-<div class="col-md-12 col-lg-9 col-xl-9 col-12 p-0 close_nav">
+<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
     <section class="subscribe_page">
       <div class="row m-0">
-        <div class="col-md-9 col-lg-9 col-xl-9 col-12">
+        <div class="col-md-12 col-lg-12 col-xl-9 col-12">
           @if(session()->has('status') && session()->get('status') == 'active')
           <div class="alert alert-success" role="alert">تم التسجيل بنجاح
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
