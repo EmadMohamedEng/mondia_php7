@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
-  <!-- <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}"> -->
+  <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
   <script>
     window.base_url = '{{url("/")}}';
@@ -22,7 +22,7 @@
   <main class="main_container">
     <header class="header w-100">
       <div class="row">
-        <div class="col-md-6 col-lg-6 col-xl-6 col-8">
+        <div class="col-md-10 col-lg-10 col-xl-6 col-8">
           <div class="header_logo">
             <a class="arrow_back back" href="#0">
               <i class="fas fa-angle-left fa-lg"></i>
@@ -34,7 +34,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-6 col-xl-6 col-4">
+        <div class="col-md-2 col-lg-2 col-xl-6 col-4">
           <div class="header_icon">
             <i class="fas fa-search fa-lg"></i>
           </div>
@@ -43,7 +43,7 @@
     </header>
 
     <div class="row m-0">
-      <div class="col-md-3 col-lg-3 col-xl-3 col-12 p-0" style="z-index: 9999999999">
+      <div class="col-md-0 col-lg-0 col-xl-3 col-0 p-0" style="z-index: 9999999999">
         <nav class="nav_nav navbar navbar-expand-lg  primary-color">
           <button id="menu_toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="icon_before fas fa-bars fa-lg"></i>

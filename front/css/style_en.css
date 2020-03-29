@@ -932,7 +932,20 @@ a:hover, a:focus, a:active {
   outline: 0;
 }
 
+.active_menu {
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
+  color: #FFF;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
 .active_menu a {
+  color: #2f7cc7 !important;
+}
+
+.active_menu_parent {
   color: #2f7cc7 !important;
 }
 

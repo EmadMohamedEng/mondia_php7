@@ -1,7 +1,7 @@
 @extends('front.master')
 @section('page_title') Home @endsection
 @section('content')
-<div class="col-md-9 col-lg-9 col-xl-9 col-12 p-0 close_nav">
+<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
     @include('front.search')
     <section class="merath_page">
       <div class="merath_title">

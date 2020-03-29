@@ -1,4 +1,4 @@
-$bg_color: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
+// $bg_color: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
 $white_color: #FFF;
 $black_color: #000;
 $grey_color: #adadad;
@@ -57,7 +57,7 @@ a {
   /* Start Header */
   .header {
     position: sticky;
-    background: $bg_color;
+    // background: $bg_color;
     height: 4rem;
     padding: 1.10rem 1.75rem;
 
@@ -90,7 +90,7 @@ a {
 
       &.header_icon {
         text-align: left;
-        // float: right;
+        float: left;
       }
 
     }
@@ -163,7 +163,7 @@ a {
             &:active,
             &:focus,
             &:hover {
-              background: $bg_color;
+              // background: $bg_color;
               color: $white_color;
               border-radius: 8px;
               -webkit-border-radius: 8px;
@@ -205,7 +205,7 @@ a {
 
           button {
             border: 0;
-            background: $bg_color;
+            // background: $bg_color;
             color: $white_color;
             margin: 0.55rem 0 0 1rem;
             border-radius: 6px;
@@ -241,7 +241,7 @@ a {
       }
 
       .btn_more {
-        background: $bg_color;
+        // background: $bg_color;
         color: $white_color;
         border: 0;
         float: left;
@@ -411,7 +411,7 @@ a {
       }
 
       .btn_more {
-        background: $bg_color;
+        // background: $bg_color;
         color: $white_color;
         border: 0;
         float: right;
@@ -475,7 +475,7 @@ a {
 
       button {
         border: 0;
-        background: $bg_color;
+        // background: $bg_color;
         color: $white_color;
         position: absolute;
         top: 50%;
@@ -898,7 +898,7 @@ a {
         // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
         // border-image-slice: 1;
         // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
-        background: $bg_color;
+        // background: $bg_color;
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -1120,7 +1120,7 @@ a {
 
         .link-button {
           width: 100%;
-          background: $bg_color;
+          // background: $bg_color;
           color: $white_color;
           padding: 0.5rem 0.75rem;
           cursor: pointer;
@@ -1238,7 +1238,7 @@ a {
 }
 
 .active_menu {
-  background: $bg_color;
+  // background: $bg_color;
   color: $white_color;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -1632,7 +1632,7 @@ a {
           // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
           // border-image-slice: 1;
           // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
-          background: $bg_color;
+          // background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
           -moz-border-radius: 8px;
@@ -2083,7 +2083,7 @@ a {
           // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
           // border-image-slice: 1;
           // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
-          background: $bg_color;
+          // background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
           -moz-border-radius: 8px;
@@ -2557,7 +2557,7 @@ a {
           // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
           // border-image-slice: 1;
           // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
-          background: $bg_color;
+          // background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
           -moz-border-radius: 8px;
@@ -3049,7 +3049,7 @@ a {
           // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
           // border-image-slice: 1;
           // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
-          background: $bg_color;
+          // background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
           -moz-border-radius: 8px;
@@ -3638,7 +3638,7 @@ a {
           // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
           // border-image-slice: 1;
           // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
-          background: $bg_color;
+          // background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
           -moz-border-radius: 8px;
@@ -4267,7 +4267,7 @@ a {
           // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
           // border-image-slice: 1;
           // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
-          background: $bg_color;
+          // background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
           -moz-border-radius: 8px;

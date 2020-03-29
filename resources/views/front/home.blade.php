@@ -5,7 +5,7 @@
     $count = (int)(count(provider_menu())/2);
     $menu  = provider_menu();
 @endphp
-<div class="col-md-9 col-lg-9 col-xl-9 col-12 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
     @include('front.search')
     <section class="img_carousel">
         <div class="owl_one owl-carousel owl-theme" dir="ltr">
