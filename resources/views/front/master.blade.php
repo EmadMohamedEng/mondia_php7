@@ -12,10 +12,15 @@
     <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
     @if(request()->has('OpID') && request()->get('OpID') == du)
-    <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
+      @if(app()->getLocale() == 'ar')
+      <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
+      @else
+      <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
+      @endif
     @else
     <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
     @endif
+
     <script>
         window.base_url = '{{url("/")}}';
     </script>

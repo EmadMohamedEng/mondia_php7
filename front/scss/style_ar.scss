@@ -19,7 +19,7 @@ html {
 body {
   font-family: ar_regular;
   // font-family: DuCoHeadline, Arial, sans-serif;
-  direction: ltr;
+  direction: rtl;
   width: 100%;
   height: 100%;
   background: #f2f2f2;
@@ -67,24 +67,29 @@ a {
       display: inline-flex;
       position: relative;
 
-      h6 {
-        padding-left: 2rem;
+      &.header_logo {
+        float: right;
+        h6 {
+          padding-left: 2rem;
+        }
+
+        .arrow_back {
+          position: absolute;
+          top: 4%;
+          left: 10.75rem;
+          transform: translate(-50%, -50%);
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
       }
 
-      .arrow_back {
-        position: absolute;
-        top: 47%;
-        left: -0.5rem;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-      }
 
       &.header_icon {
-        text-align: right;
-        float: right;
+        text-align: left;
+        // float: right;
       }
 
     }
@@ -94,7 +99,7 @@ a {
     background-color: $white_color;
     width: 75%;
     margin-top: 1.5rem;
-    margin-left: 1rem;
+    margin-right: 1rem;
     padding: 0.5rem 0;
     position: sticky;
     border: 1px solid #bfbfbf;
@@ -102,9 +107,11 @@ a {
     .navbar_ul {
       display: block;
       width: 100%;
+      padding-right: 0;
 
       .nav_item_welc {
         margin-bottom: 0.25rem;
+        text-align: right;
       }
 
       .nav-item {
@@ -113,10 +120,15 @@ a {
         .nav-link {
           color: #000;
           cursor: pointer;
+          text-align: right;
+
+          .icon_before {
+            float: left;
+          }
 
           &.nav-link2 {
             padding: 0 0 0.75rem 0;
-            text-align: right;
+            text-align: left;
           }
         }
 
@@ -132,7 +144,7 @@ a {
           min-width: 0;
 
           &.dropdown-menu2 {
-            float: right;
+            float: left;
           }
 
           .dropdown-item {
@@ -224,13 +236,14 @@ a {
 
       .link_title {
         color: $black_color;
+        text-align: right;
       }
 
       .btn_more {
         background: $bg_color;
         color: $white_color;
         border: 0;
-        float: right;
+        float: left;
         padding: 0.25rem .5rem;
         margin-bottom: 1rem;
       }
@@ -282,6 +295,7 @@ a {
     .content_carousel_head {
       .link_title {
         color: $black_color;
+        text-align: right;
 
         h6 {
           margin-bottom: 1rem;
@@ -450,6 +464,7 @@ a {
 
     .cover {
       position: relative;
+      text-align: right;
 
       img {
         height: 22rem;
@@ -475,6 +490,7 @@ a {
     .poster {
       margin-top: 1.5rem;
       width: 100%;
+      text-align: right;
 
       .poster-details {
         .title-wrapper {
@@ -498,6 +514,7 @@ a {
 
       .pa_share {
         margin-top: 1rem;
+        text-align: right;
       }
 
       .shear_div {
@@ -570,6 +587,7 @@ a {
       .pa_Videos {
         margin-bottom: 1rem;
         margin-top: 1rem;
+        text-align: right;
       }
 
       .image_inner {
@@ -820,6 +838,7 @@ a {
 
   /* Start Merath Page */
   .merath_page {
+    direction: ltr;
     width: 70%;
     margin: 1.5rem auto;
 
@@ -1193,7 +1212,7 @@ a {
     border-width: 6px;
     position: fixed;
     bottom: 3rem;
-    left: 50%;
+    right: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -4179,7 +4198,7 @@ a {
           }
 
           .actions {
-            button{
+            button {
               &.button {
                 font-size: 2.5rem;
               }
