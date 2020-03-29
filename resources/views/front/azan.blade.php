@@ -1,5 +1,5 @@
 @extends('front.master')
-@section('page_title') Home @endsection
+@section('page_title') @lang('front.azan') @endsection
 @section('content')
 <?php
 preg_match("/iPhone|iPad|iPod/", $_SERVER['HTTP_USER_AGENT'], $matches);
@@ -33,7 +33,7 @@ switch ($os) {
     <div class="row m-0">
       <div class="col-md-12 col-lg-12 col-xl-12 col-12">
         <div class="azan_title">
-          <h2 class="text-capitalize text-center">يمكنك الآن اختيار الأذان بصوت شيخك المفضل</h2>
+          <h2 class="text-capitalize text-center">@lang('front.sheikh')</h2>
         </div>
       </div>
 
@@ -41,9 +41,9 @@ switch ($os) {
         <div class="input_text">
           <div class="form-group">
             <select id="chooseProvider" name="provider" class="form-control azan_input">
-              <option value="empty">اختر المؤذن</option>
+              <option value="empty">@lang('front.muezzin')</option>
                @foreach($providers as $value)
-               <option value="{{$value->provider->id}}">{{$value->provider->title}}</option>
+               <option value="{{$value->provider->id}}">{{$value->provider->getTranslation('title',getCode())}}</option>
                @endforeach
             </select>
           </div>
@@ -61,9 +61,9 @@ switch ($os) {
         <table class="table table-dark table-hover" dir="rtl">
             <thead>
                 <tr>
-                    <th>اشترك</th>
-                    <th>اختر</th>
-                    <th>تشغيل</th>
+                    <th>@lang('front.subscribe')</th>
+                    <th>@lang('front.choose')</th>
+                    <th> @lang('front.play')</th>
                 </tr>
             </thead>
             <tbody>
@@ -72,7 +72,7 @@ switch ($os) {
         </table>
       </div>
 
-      <a href="#" class="button" id="chooseRBT" onclick="confirm('لتأكيد الاشتراك فى الخدمة إضغط تأكيد')">انتهاء</a>
+      <a href="#" class="button" id="chooseRBT" onclick="confirm('لتأكيد الاشتراك فى الخدمة إضغط تأكيد')">@lang('front.end')</a>
 
       <div class="tab-bar-wrapper decorator"></div>
     </div>

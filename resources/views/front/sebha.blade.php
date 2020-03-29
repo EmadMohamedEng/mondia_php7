@@ -1,5 +1,5 @@
 @extends('front.master')
-@section('page_title') Home @endsection
+@section('page_title') @lang('front.sebha') @endsection
 @section('content')
 
 <section class="col-md-12 col-lg-9 col-xl-9 col-12 p-0 close_nav">

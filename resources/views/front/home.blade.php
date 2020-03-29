@@ -16,7 +16,7 @@
             </a>
 
             <div class="btn_subscribe w-100">
-                <button onclick="" class="btn text-capitalize">{{$content->getTranslation('title')}}</button>
+                <button onclick="" class="btn text-capitalize">{{$content->getTranslation('title',getCode())}}</button>
             </div>
         </div>
         @endforeach
@@ -65,13 +65,9 @@
         <div class="row m-0">
             <div class="col-6 p-0">
             <a class="link_title" href="#">
-                <h6 class="">muslim guide</h6>
+                <h6 class="">@lang('front.muslim_guide')</h6>
             </a>
             </div>
-
-            {{-- <div class="col-6 no_padding">
-            <a href="#" class="btn btn_more text-capitalize">more</a>
-            </div> --}}
         </div>
         </div>
 
@@ -86,7 +82,7 @@
             </a>
 
             <div class="card-body">
-                <h4 class="card-title text-capitalize">el sebha</h4>
+                <h4 class="card-title text-capitalize">@lang('front.sebha')</h4>
             </div>
             </div>
         </div>
@@ -101,7 +97,7 @@
             </a>
 
             <div class="card-body">
-                <h4 class="card-title text-capitalize">nearest mosque</h4>
+                <h4 class="card-title text-capitalize">@lang('front.mosque')</h4>
             </div>
             </div>
         </div>
@@ -116,7 +112,7 @@
             </a>
 
             <div class="card-body">
-                <h4 class="card-title text-capitalize">Zakah</h4>
+                <h4 class="card-title text-capitalize">@lang('front.zakah')</h4>
             </div>
             </div>
         </div>
@@ -131,7 +127,7 @@
             </a>
 
             <div class="card-body">
-                <h4 class="card-title text-capitalize">Merath</h4>
+                <h4 class="card-title text-capitalize">@lang('front.merath')</h4>
             </div>
             </div>
         </div>
@@ -146,7 +142,7 @@
             </a>
 
             <div class="card-body">
-                <h4 class="card-title text-capitalize">prayer time</h4>
+                <h4 class="card-title text-capitalize">@lang('front.prayer')</h4>
             </div>
             </div>
         </div>

@@ -21,7 +21,7 @@ switch ($os) {
 @foreach($audios as $val)
 <tr>
     <td>
-        <a class="btn btn-success" href="sms:{{$val->operator->code}}{{$Att}}{{$val->code}}">اجعلها كول تون</a>
+        <a class="btn btn-success" href="sms:{{$val->operator->code}}{{$Att}}{{$val->code}}">@lang('front.make_it_call_tone')</a>
     </td>
     <td>
         <a style="color:#000" href="#">

@@ -1,5 +1,5 @@
 @extends('front.master')
-@section('page_title') Home @endsection
+@section('page_title') {{$content->getTranslation('title',getCode())}} @endsection
 @section('content')
 <div class="col-md-9 col-lg-9 col-xl-9 col-12 p-0 close_nav">
     @include('front.search')

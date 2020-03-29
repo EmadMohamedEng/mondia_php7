@@ -1,11 +1,11 @@
 @extends('front.master')
-@section('page_title') Home @endsection
+@section('page_title') @lang('front.merath') @endsection
 @section('content')
 <div class="col-md-9 col-lg-9 col-xl-9 col-12 p-0 close_nav">
     @include('front.search')
     <section class="merath_page">
       <div class="merath_title">
-        <h2>حساب المواريث</h2>
+        <h2>@lang('front.merath')</h2>
       </div>
 
       <div class="row m-0">
@@ -16,7 +16,7 @@
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
-          <h4><span class="span_req">* </span>قيمة التركة</h4>
+          <h4><span class="span_req">* </span>@lang('front.the_value_of_the_estate')</h4>
         </div>
       </div>
 
@@ -30,7 +30,7 @@
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
-          <h4><span class="span_req">* </span>عدد الابناء </h4>
+          <h4><span class="span_req">* </span>@lang('front.number_of_children') </h4>
         </div>
       </div>
 
@@ -44,7 +44,7 @@
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
-          <h4><span class="span_req">* </span>عدد البنات </h4>
+          <h4><span class="span_req">* </span> @lang('front.number_of_girls')</h4>
         </div>
       </div>
 
@@ -54,14 +54,14 @@
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_text">
           <div class="form-group">
             <select class="form-control merath_input" name="sellist1" id="Baba">
-              <option>لا</option>
-              <option>نعم</option>
+              <option>@lang('front.no')</option>
+              <option>@lang('front.yes')</option>
             </select>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
-          <h4><span class="span_req">* </span>الاب </h4>
+          <h4><span class="span_req">* </span>@lang('front.feather') </h4>
         </div>
       </div>
 
@@ -71,14 +71,14 @@
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_text">
           <div class="form-group">
             <select class="form-control merath_input" name="" id="Anne">
-              <option>لا</option>
-              <option>نعم</option>
+              <option>@lang('front.no')</option>
+              <option>@lang('front.yes')</option>
             </select>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
-          <h4><span class="span_req">* </span>الام </h4>
+          <h4><span class="span_req">* </span>@lang('front.mother') </h4>
         </div>
       </div>
 
@@ -92,7 +92,7 @@
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
-          <h4><span class="span_req">* </span>عدد الاخوة </h4>
+          <h4><span class="span_req">* </span> @lang('front.number_of_brother') </h4>
         </div>
       </div>
 
@@ -106,7 +106,7 @@
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
-          <h4><span class="span_req">* </span>عدد الاخوات </h4>
+          <h4><span class="span_req">* </span>@lang('front.number_of_sister') </h4>
         </div>
       </div>
 
@@ -116,7 +116,7 @@
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_text">
           <div class="form-group">
             <select class="form-control merath_input" id="Es" name="">
-              <option>لا</option>
+              <option>@lang('front.no')</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -126,12 +126,12 @@
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
-          <h4><span class="span_req">* </span>عدد الزوجات </h4>
+          <h4><span class="span_req">* </span> @lang('front.number_of_wife') </h4>
         </div>
       </div>
 
       <div class="button_merath">
-        <button id="btn_cal" class="btn merath_btn" type="submit" disabled onclick="PayHesapla()">حساب الميراث
+        <button id="btn_cal" class="btn merath_btn" type="submit" disabled onclick="PayHesapla()"> @lang('front.merath')
         </button>
       </div>
 

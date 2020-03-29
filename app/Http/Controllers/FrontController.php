@@ -56,7 +56,7 @@ class FrontController extends Controller
     public function contents(Request $request)
     {
       $service = '';
-      $contents = Video::query();
+      $contents = Video::select('*','contents.id as content_id');
       if($request->has('service_id') && $request->service_id != '')
       {
         $contents = $contents->where('service_id', $request->service_id);
@@ -85,7 +85,7 @@ class FrontController extends Controller
 
     public function load_contents(Request $request)
     {
-      $contents = Video::query();
+      $contents = Video::select('*','contents.id as content_id');
       if($request->has('service_id') && $request->service_id != '')
       {
         $contents = $contents->where('service_id', $request->service_id);

@@ -1,12 +1,12 @@
 @extends('front.master')
-@section('page_title') Home @endsection
+@section('page_title') @lang('front.mosque') @endsection
 @section('content')
 
 <div class="col-md-9 col-lg-9 col-xl-9 col-12 close_nav">
     @include('front.search')
   <section class="nearmosque_page">
     <div class="nearmosque_title text-center">
-      <h2>اقرب مسجد</h2>
+      <h2>@lang('front.mosque')</h2>
       <div id="map" style="position: relative; overflow: hidden;"></div>
     </div>
   </section>

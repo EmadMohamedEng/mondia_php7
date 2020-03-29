@@ -1,5 +1,5 @@
 @extends('front.master')
-@section('page_title') Home @endsection
+@section('page_title') @lang('front.call_tone') @endsection
 @section('content')
 <?php
 preg_match("/iPhone|iPad|iPod/", $_SERVER['HTTP_USER_AGENT'], $matches);
@@ -47,16 +47,16 @@ switch ($os) {
         <table class="table table-dark table-hover" dir="rtl">
             <thead>
                 <tr>
-                    <th>اشترك</th>
-                    <th>اختر</th>
-                    <th>تشغيل</th>
+                    <th>@lang('front.subscribe')</th>
+                    <th>@lang('front.choose')</th>
+                    <th> @lang('front.play')</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($rbts as $val)
                 <tr>
                     <td>
-                        <a class="btn btn-success" href="sms:{{$val->operator->code}}{{$Att}}{{$val->code}}">اجعلها كول تون</a>
+                        <a class="btn btn-success" href="sms:{{$val->operator->code}}{{$Att}}{{$val->code}}">@lang('front.make_it_call_tone')</a>
                     </td>
                     <td>
                         <a style="color:#000" href="{{url('view_rbt/'.$val->id)}}">
