@@ -2,6 +2,7 @@
 @section('page_title') Home @endsection
 @section('content')
 <div class="col-md-9 col-lg-9 col-xl-9 col-12 p-0 close_nav">
+    @include('front.search')
     <section class="merath_page">
       <div class="merath_title">
         <h2>حساب المواريث</h2>

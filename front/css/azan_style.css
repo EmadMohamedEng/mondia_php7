@@ -209,3 +209,51 @@ span.fa-play {
     margin: -1.25rem auto 0.5rem 0;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1023.9px) {
+  #chooseAudio {
+    width: 90%;
+  }
+
+  #chooseAudio .sheikh_name {
+    font-size: 2.75rem;
+  }
+
+  #chooseRBT {
+    height: 3.5rem;
+    line-height: 3.5rem;
+    font-size: 2.5rem;
+  }
+
+  #chooseAudio table tr {
+    font-size: 22px;
+  }
+
+  #chooseAudio table td {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  #chooseAudio {
+    width: 90%;
+  }
+
+  #chooseAudio .sheikh_name {
+    font-size: 2.75rem;
+  }
+
+  #chooseRBT {
+    height: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 2.75rem;
+  }
+
+  #chooseAudio table tr {
+    font-size: 22px;
+  }
+
+  #chooseAudio table td {
+    font-size: 25px;
+  }
+}

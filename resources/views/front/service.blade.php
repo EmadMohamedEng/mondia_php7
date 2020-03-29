@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="col-md-12 col-lg-9 col-xl-9 col-12 no_padding close_nav">
+    @include('front.search')
   <section class="list_page">
     <div class="content_carousel_head text-capitalize">
       <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
