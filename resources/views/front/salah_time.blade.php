@@ -10,11 +10,12 @@
 
     <div class="time_btn">
       <div class="row m-0">
+      <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
+          <h4 class="h4_time_2">{{$hjrri_date->day.' - '.$hjrri_date->month .' - '.$hjrri_date->year}}</h4>
+        </div>
+
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
           <h4 class="h4_time">{{date('d/m/Y')}} </h4>
-        </div>
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
-          <h4 class="h4_time_2">{{$hjrri_date->day.' - '.$hjrri_date->month .' - '.$hjrri_date->year}}</h4>
         </div>
       </div>
     </div>

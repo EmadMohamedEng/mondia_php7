@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
+    <!-- <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}"> -->
+    <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
     <script>
         window.base_url = '{{url("/")}}';
     </script>
