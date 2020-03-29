@@ -69,6 +69,7 @@ a {
 
       &.header_logo {
         float: right;
+
         h6 {
           padding-left: 2rem;
         }
@@ -83,7 +84,7 @@ a {
           -ms-transform: rotate(180deg);
           -o-transform: rotate(180deg);
           transform: rotate(180deg);
-}
+        }
       }
 
 
@@ -1237,9 +1238,21 @@ a {
 }
 
 .active_menu {
+  background: $bg_color;
+  color: $white_color;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+
   a {
     color: #2f7cc7 !important;
   }
+}
+
+.active_menu_parent {
+  color: #2f7cc7 !important;
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {
