@@ -114,7 +114,7 @@ class RoutesTableSeeder extends Seeder
                 'route' => 'setting/{id}',
                 'controller_name' => 'SettingController',
                 'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '2018-02-05 13:56:27',
+                'updated_at' => '2020-03-24 11:17:21',
                 'function_name' => 'update',
             ),
             10 => 
@@ -1046,6 +1046,16 @@ class RoutesTableSeeder extends Seeder
                 'created_at' => '2018-12-27 13:52:47',
                 'updated_at' => '2018-12-27 13:52:47',
                 'function_name' => 'destroy',
+            ),
+            103 => 
+            array (
+                'id' => 132,
+                'method' => 'get',
+                'route' => 'listazan',
+                'controller_name' => 'ListAzanController',
+                'created_at' => '2020-03-25 10:46:07',
+                'updated_at' => '2020-03-25 10:46:07',
+                'function_name' => 'index',
             ),
         ));
         

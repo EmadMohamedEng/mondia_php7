@@ -12,184 +12,256 @@ class TansBodiesTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('tans_bodies')->delete();
-        
+
         \DB::table('tans_bodies')->insert(array (
-            0 => 
-            array (
-                'id' => 1,
-                'language_id' => 2,
-                'translatable_id' => 1,
-                'body' => 'dataf',
-                'created_at' => '2020-03-21 22:23:41',
-                'updated_at' => '2020-03-21 23:49:12',
-            ),
-            1 => 
-            array (
-                'id' => 2,
-                'language_id' => 2,
-                'translatable_id' => 2,
-                'body' => 'جديدfdf',
-                'created_at' => '2020-03-21 22:24:08',
-                'updated_at' => '2020-03-21 23:48:26',
-            ),
-            2 => 
-            array (
-                'id' => 3,
-                'language_id' => 2,
-                'translatable_id' => 3,
-                'body' => 'zzz',
-                'created_at' => '2020-03-21 23:41:21',
-                'updated_at' => '2020-03-21 23:41:21',
-            ),
-            3 => 
-            array (
-                'id' => 4,
-                'language_id' => 2,
-                'translatable_id' => 4,
-                'body' => 'aff',
-                'created_at' => '2020-03-21 23:46:56',
-                'updated_at' => '2020-03-21 23:46:56',
-            ),
-            4 => 
-            array (
-                'id' => 5,
-                'language_id' => 2,
-                'translatable_id' => 5,
-                'body' => 'xddd',
-                'created_at' => '2020-03-21 23:47:43',
-                'updated_at' => '2020-03-21 23:47:43',
-            ),
-            5 => 
-            array (
-                'id' => 6,
-                'language_id' => 2,
-                'translatable_id' => 6,
-                'body' => 'جديدي',
-                'created_at' => '2020-03-21 23:58:09',
-                'updated_at' => '2020-03-21 23:58:09',
-            ),
-            6 => 
-            array (
-                'id' => 7,
-                'language_id' => 2,
-                'translatable_id' => 7,
-                'body' => 'hello',
-                'created_at' => '2020-03-22 11:57:34',
-                'updated_at' => '2020-03-22 11:57:34',
-            ),
-            7 => 
+            2 =>
             array (
                 'id' => 8,
                 'language_id' => 2,
-                'translatable_id' => 8,
-                'body' => 'كلمه',
-                'created_at' => '2020-03-22 13:39:52',
-                'updated_at' => '2020-03-22 13:39:52',
+                'translatable_id' => 27,
+                'body' => 'مشارى راشد',
+                'created_at' => '2020-03-30 08:34:36',
+                'updated_at' => '2020-03-30 08:34:36',
             ),
-            8 => 
+            3 =>
             array (
                 'id' => 9,
                 'language_id' => 2,
-                'translatable_id' => 9,
-                'body' => 'جديدي',
-                'created_at' => '2020-03-22 14:56:02',
-                'updated_at' => '2020-03-22 14:56:02',
+                'translatable_id' => 28,
+                'body' => 'الطبلاوى',
+                'created_at' => '2020-03-30 08:35:01',
+                'updated_at' => '2020-03-30 08:35:01',
             ),
-            9 => 
+            4 =>
             array (
                 'id' => 10,
                 'language_id' => 2,
-                'translatable_id' => 10,
-                'body' => 'zxcxz',
-                'created_at' => '2020-03-22 14:56:02',
-                'updated_at' => '2020-03-22 14:56:02',
+                'translatable_id' => 29,
+                'body' => 'الهلباوى',
+                'created_at' => '2020-03-30 08:35:40',
+                'updated_at' => '2020-03-30 08:35:40',
             ),
-            10 => 
+            5 =>
             array (
                 'id' => 11,
                 'language_id' => 2,
-                'translatable_id' => 11,
-                'body' => 'جديد',
-                'created_at' => '2020-03-22 15:09:42',
-                'updated_at' => '2020-03-22 15:09:42',
+                'translatable_id' => 30,
+                'body' => 'طلال فاخر',
+                'created_at' => '2020-03-30 08:36:06',
+                'updated_at' => '2020-03-30 08:36:06',
             ),
-            11 => 
+            6 =>
             array (
                 'id' => 12,
                 'language_id' => 2,
-                'translatable_id' => 13,
-                'body' => 'جديد',
-                'created_at' => '2020-03-22 15:11:16',
-                'updated_at' => '2020-03-22 15:11:16',
+                'translatable_id' => 31,
+                'body' => 'تفسير القران',
+                'created_at' => '2020-03-30 08:37:14',
+                'updated_at' => '2020-03-30 08:37:14',
             ),
-            12 => 
+            7 =>
             array (
                 'id' => 13,
                 'language_id' => 2,
-                'translatable_id' => 15,
-                'body' => 'جديد',
-                'created_at' => '2020-03-22 15:11:45',
-                'updated_at' => '2020-03-22 15:11:45',
+                'translatable_id' => 32,
+                'body' => 'رسائل العفاسى',
+                'created_at' => '2020-03-30 08:38:28',
+                'updated_at' => '2020-03-30 08:38:28',
             ),
-            13 => 
+            8 =>
             array (
                 'id' => 14,
                 'language_id' => 2,
-                'translatable_id' => 17,
-                'body' => 'جديد',
-                'created_at' => '2020-03-22 15:13:16',
-                'updated_at' => '2020-03-22 15:13:16',
+                'translatable_id' => 33,
+                'body' => 'قران',
+                'created_at' => '2020-03-30 08:39:32',
+                'updated_at' => '2020-03-30 08:39:32',
             ),
-            14 => 
+            9 =>
             array (
                 'id' => 15,
                 'language_id' => 2,
-                'translatable_id' => 18,
-                'body' => 'جديد',
-                'created_at' => '2020-03-22 15:18:31',
-                'updated_at' => '2020-03-22 15:18:31',
+                'translatable_id' => 34,
+                'body' => 'تفسير 1',
+                'created_at' => '2020-03-30 08:41:08',
+                'updated_at' => '2020-03-30 08:41:08',
             ),
-            15 => 
+            10 =>
             array (
                 'id' => 16,
                 'language_id' => 2,
-                'translatable_id' => 19,
-                'body' => 'جديد',
-                'created_at' => '2020-03-22 15:22:13',
-                'updated_at' => '2020-03-22 15:22:13',
+                'translatable_id' => 35,
+                'body' => 'تفسير 2',
+                'created_at' => '2020-03-30 08:41:50',
+                'updated_at' => '2020-03-30 08:41:50',
             ),
-            16 => 
+            11 =>
             array (
                 'id' => 17,
                 'language_id' => 2,
-                'translatable_id' => 20,
-                'body' => 'جديدي',
-                'created_at' => '2020-03-22 15:25:59',
-                'updated_at' => '2020-03-22 15:25:59',
+                'translatable_id' => 36,
+                'body' => 'تفسير 3',
+                'created_at' => '2020-03-30 08:42:15',
+                'updated_at' => '2020-03-30 08:42:15',
             ),
-            17 => 
+            12 =>
             array (
                 'id' => 18,
                 'language_id' => 2,
-                'translatable_id' => 21,
-                'body' => 'dataf',
-                'created_at' => '2020-03-22 15:39:22',
-                'updated_at' => '2020-03-22 15:39:22',
+                'translatable_id' => 37,
+                'body' => 'تفسير 4',
+                'created_at' => '2020-03-30 08:42:59',
+                'updated_at' => '2020-03-30 08:43:17',
             ),
-            18 => 
+            13 =>
             array (
                 'id' => 19,
                 'language_id' => 2,
-                'translatable_id' => 22,
-                'body' => 'new',
-                'created_at' => '2020-03-22 15:40:29',
-                'updated_at' => '2020-03-22 15:40:29',
+                'translatable_id' => 38,
+                'body' => 'رسائل1',
+                'created_at' => '2020-03-30 08:44:48',
+                'updated_at' => '2020-03-30 08:44:48',
+            ),
+            14 =>
+            array (
+                'id' => 20,
+                'language_id' => 2,
+                'translatable_id' => 39,
+                'body' => 'ان ربنا هو الخالق نحبه ليس من اجل شى فقط لانه هو الله',
+                'created_at' => '2020-03-30 08:44:48',
+                'updated_at' => '2020-03-30 08:44:48',
+            ),
+            15 =>
+            array (
+                'id' => 21,
+                'language_id' => 2,
+                'translatable_id' => 40,
+                'body' => 'رسائل2',
+                'created_at' => '2020-03-30 08:46:26',
+                'updated_at' => '2020-03-30 08:46:26',
+            ),
+            16 =>
+            array (
+                'id' => 22,
+                'language_id' => 2,
+                'translatable_id' => 41,
+                'body' => 'ساعد الفقراء الذين يحتجون الى الطعام والماء',
+                'created_at' => '2020-03-30 08:46:26',
+                'updated_at' => '2020-03-30 08:46:26',
+            ),
+            17 =>
+            array (
+                'id' => 23,
+                'language_id' => 2,
+                'translatable_id' => 42,
+                'body' => 'قران 1',
+                'created_at' => '2020-03-30 08:47:22',
+                'updated_at' => '2020-03-30 08:47:22',
+            ),
+            18 =>
+            array (
+                'id' => 24,
+                'language_id' => 2,
+                'translatable_id' => 43,
+                'body' => 'قران 2',
+                'created_at' => '2020-03-30 08:47:50',
+                'updated_at' => '2020-03-30 08:47:50',
+            ),
+            19 =>
+            array (
+                'id' => 25,
+                'language_id' => 2,
+                'translatable_id' => 44,
+                'body' => 'قران 3',
+                'created_at' => '2020-03-30 08:48:26',
+                'updated_at' => '2020-03-30 08:48:26',
+            ),
+            20 =>
+            array (
+                'id' => 26,
+                'language_id' => 2,
+                'translatable_id' => 45,
+                'body' => 'قران 4',
+                'created_at' => '2020-03-30 08:49:06',
+                'updated_at' => '2020-03-30 08:49:06',
+            ),
+            21 =>
+            array (
+                'id' => 27,
+                'language_id' => 2,
+                'translatable_id' => 46,
+                'body' => 'تفسير 1',
+                'created_at' => '2020-03-30 08:55:40',
+                'updated_at' => '2020-03-30 08:55:40',
+            ),
+            22 =>
+            array (
+                'id' => 28,
+                'language_id' => 2,
+                'translatable_id' => 47,
+                'body' => 'تفسير 2',
+                'created_at' => '2020-03-30 08:56:15',
+                'updated_at' => '2020-03-30 08:56:15',
+            ),
+            23 =>
+            array (
+                'id' => 29,
+                'language_id' => 2,
+                'translatable_id' => 48,
+                'body' => 'قران',
+                'created_at' => '2020-03-30 08:56:53',
+                'updated_at' => '2020-03-30 08:56:53',
+            ),
+            24 =>
+            array (
+                'id' => 30,
+                'language_id' => 2,
+                'translatable_id' => 49,
+                'body' => 'قران 2',
+                'created_at' => '2020-03-30 08:57:29',
+                'updated_at' => '2020-03-30 08:57:29',
+            ),
+            25 =>
+            array (
+                'id' => 31,
+                'language_id' => 2,
+                'translatable_id' => 50,
+                'body' => 'تفسير 4',
+                'created_at' => '2020-03-30 08:57:59',
+                'updated_at' => '2020-03-30 08:57:59',
+            ),
+            26 =>
+            array (
+                'id' => 32,
+                'language_id' => 2,
+                'translatable_id' => 51,
+                'body' => 'قران 4',
+                'created_at' => '2020-03-30 08:58:45',
+                'updated_at' => '2020-03-30 08:58:45',
+            ),
+            27 =>
+            array (
+                'id' => 33,
+                'language_id' => 2,
+                'translatable_id' => 52,
+                'body' => 'تواشيح',
+                'created_at' => '2020-03-30 09:01:52',
+                'updated_at' => '2020-03-30 09:01:52',
+            ),
+            28 =>
+            array (
+                'id' => 34,
+                'language_id' => 2,
+                'translatable_id' => 53,
+                'body' => 'خواطر ايمانية',
+                'created_at' => '2020-03-30 09:03:39',
+                'updated_at' => '2020-03-30 09:03:39',
             ),
         ));
-        
-        
+
+
     }
 }

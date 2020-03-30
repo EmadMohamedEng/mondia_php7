@@ -3081,7 +3081,7 @@ a:hover, a:focus, a:active {
 
 .active_menu {
   background: #ff9e1b;
-  color: #fff;
+  color: #000;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -3093,6 +3093,6 @@ a:hover, a:focus, a:active {
 }
 
 .active_menu_parent {
-  color: #fafafa !important;
+  color: #ff9e1b !important;
 }
 /*# sourceMappingURL=style_en_oman.css.map */

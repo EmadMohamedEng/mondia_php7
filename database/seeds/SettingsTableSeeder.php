@@ -121,9 +121,9 @@ class SettingsTableSeeder extends Seeder
             array (
                 'id' => 67,
                 'key' => 'title_page',
-                'value' => 'islamic WebApp',
+                'value' => 'Mondia',
                 'created_at' => '2019-12-31 10:50:04',
-                'updated_at' => '2019-12-31 08:54:06',
+                'updated_at' => '2020-03-24 11:34:06',
                 'type_id' => 2,
                 'order' => 0,
             ),
@@ -181,9 +181,9 @@ class SettingsTableSeeder extends Seeder
             array (
                 'id' => 73,
                 'key' => 'pageLength',
-                'value' => '20',
+                'value' => '6',
                 'created_at' => '2020-03-03 12:42:27',
-                'updated_at' => '2020-03-03 12:42:27',
+                'updated_at' => '2020-03-24 11:18:43',
                 'type_id' => 2,
                 'order' => 0,
             ),
