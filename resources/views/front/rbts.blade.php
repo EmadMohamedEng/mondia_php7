@@ -26,6 +26,15 @@ switch ($os) {
     #chooseAudio .np-play::before, #chooseAudio #play::before{
         content:"";
     }
+    @if(request()->has('OpID') && request()->get('OpID') == omantel)
+        #chooseAudio table td a, #chooseAudio table td a span {
+        color: #fff;
+        background: #ff9e1b;
+      }
+      span.fa-play {
+        color: #ff9e1b;
+      }
+    @endif
 </style>
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
     @include('front.search')

@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
-    @if(request()->has('OpID') && request()->get('OpID') == du)
-      <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
+    @if(request()->has('OpID') && request()->get('OpID') == omantel)
+    <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
     @else
-      <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
     @endif
 
     @if(app()->getLocale() == 'ar')

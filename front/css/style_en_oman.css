@@ -3079,4 +3079,20 @@ a:hover, a:focus, a:active {
   }
 }
 
+.active_menu {
+  background: #ff9e1b;
+  color: #fff;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.active_menu a {
+    color: #e1e7ec !important;
+}
+
+.active_menu_parent {
+  color: #fafafa !important;
+}
 /*# sourceMappingURL=style_en_oman.css.map */
