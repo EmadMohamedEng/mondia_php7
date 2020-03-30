@@ -87,13 +87,14 @@ a:hover, a:focus, a:active {
 }
 .main_container .header .header_logo.header_logo h6,
 .main_container .header .header_icon.header_logo h6 {
-  padding-left: 2rem;
+  padding-right: 0;
+  padding-left: unset;
 }
 .main_container .header .header_logo.header_logo .arrow_back,
 .main_container .header .header_icon.header_logo .arrow_back {
   position: absolute;
   top: 4%;
-  left: 10.75rem;
+  right: -1rem;
   transform: translate(-50%, -50%);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -232,7 +233,6 @@ a:hover, a:focus, a:active {
 .main_container .content_carousel .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
-  line-height: 3.5rem;
 }
 .main_container .content_carousel .item .card .card-body .card-text i {
   color: #adadad;
@@ -270,7 +270,6 @@ a:hover, a:focus, a:active {
 .main_container .list_page .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
-  line-height: 3.5rem;
 }
 .main_container .list_page .item .card .card-body .card-text i {
   color: #adadad;
@@ -443,6 +442,9 @@ a:hover, a:focus, a:active {
   background-color: #FFF;
   border-color: #25D366;
 }
+.main_container .inner_page .section_content {
+  width: 100%;
+}
 .main_container .inner_page .section_content .border-bottom {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -461,6 +463,7 @@ a:hover, a:focus, a:active {
   margin-top: 21px;
   font-size: 14px;
   color: #6a6060;
+  text-align: right;
 }
 .main_container .inner_page .section_content .p_content_2 {
   font-size: 14px;
@@ -978,11 +981,21 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo,
 .main_container .header .header_icon {
-    float: right;
+    float: left !important;
+  }
+  .main_container .header .header_logo.header_icon,
+.main_container .header .header_icon.header_icon {
+    margin: 0.35rem 0 0 -1rem;
+  }
+  .main_container .header .header_logo h6,
+.main_container .header .header_icon h6 {
+    padding-right: 0;
+    padding-left: unset;
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: -2rem;
+    right: -1rem;
+    width: 0;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -997,8 +1010,11 @@ a:hover, a:focus, a:active {
     outline: 0;
     font-size: 1rem;
     position: fixed;
-    top: 2.15rem;
-    left: 2.5rem;
+    width: 0;
+    height: 0;
+    top: 1.5rem;
+    right: -1rem;
+    left: unset;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1016,6 +1032,7 @@ a:hover, a:focus, a:active {
     width: 15rem;
     height: 100vh;
     padding: 0 0;
+    overflow: scroll;
   }
   .main_container .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -1051,6 +1068,9 @@ a:hover, a:focus, a:active {
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
     top: 86%;
+  }
+  .main_container .content_carousel .content_carousel_head .link_title h6 {
+    font-size: 1.25rem;
   }
   .main_container .content_carousel .item .card {
     height: 13rem;
@@ -1230,7 +1250,7 @@ a:hover, a:focus, a:active {
     text-align: right;
   }
   .main_container .search_page {
-    width: 95%;
+    width: 92%;
   }
   .main_container .search_page .textbox {
     text-align: center;
@@ -1253,7 +1273,7 @@ a:hover, a:focus, a:active {
 
   .loading-overlay .spinner-large {
     bottom: 30%;
-    left: 31%;
+    right: 31%;
   }
 }
 @media (min-width: 360px) and (max-width: 374.9px) {
@@ -1276,11 +1296,21 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo,
 .main_container .header .header_icon {
-    float: right;
+    float: left !important;
+  }
+  .main_container .header .header_logo.header_icon,
+.main_container .header .header_icon.header_icon {
+    margin: 0.35rem 0 0 -1rem;
+  }
+  .main_container .header .header_logo h6,
+.main_container .header .header_icon h6 {
+    padding-right: 0;
+    padding-left: unset;
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: -3rem;
+    right: -2rem !important;
+    width: 0;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1293,10 +1323,13 @@ a:hover, a:focus, a:active {
   }
   .main_container .nav_nav button {
     outline: 0;
-    font-size: 1.4rem;
+    font-size: 1rem;
     position: fixed;
-    top: 2.15rem;
-    left: 3rem;
+    width: 0;
+    height: 0;
+    top: 1.5rem;
+    right: -1rem;
+    left: unset;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1314,6 +1347,7 @@ a:hover, a:focus, a:active {
     width: 15rem;
     height: 100vh;
     padding: 0 0;
+    overflow: scroll;
   }
   .main_container .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -1560,7 +1594,7 @@ a:hover, a:focus, a:active {
 
   .loading-overlay .spinner-large {
     bottom: 30%;
-    left: 31%;
+    right: 31%;
   }
 }
 @media (min-width: 375px) and (max-width: 410.9px) {
@@ -1583,11 +1617,22 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo,
 .main_container .header .header_icon {
-    float: right;
+    float: left !important;
+  }
+  .main_container .header .header_logo.header_icon,
+.main_container .header .header_icon.header_icon {
+    margin: 0.35rem 0 0 -1rem;
+  }
+  .main_container .header .header_logo h6,
+.main_container .header .header_icon h6 {
+    padding-right: 0;
+    padding-left: unset;
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: -3.5rem;
+    right: -2.25rem !important;
+    top: -0.25rem !important;
+    width: 0;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1602,8 +1647,11 @@ a:hover, a:focus, a:active {
     outline: 0;
     font-size: 1rem;
     position: fixed;
-    top: 2.15rem;
-    left: 2.5rem;
+    width: 0;
+    height: 0;
+    top: 1.5rem;
+    right: -1rem;
+    left: unset;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1621,6 +1669,7 @@ a:hover, a:focus, a:active {
     width: 15rem;
     height: 100vh;
     padding: 0 0;
+    overflow: scroll;
   }
   .main_container .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -1884,7 +1933,7 @@ a:hover, a:focus, a:active {
 
   .loading-overlay .spinner-large {
     bottom: 30%;
-    left: 31%;
+    right: 31%;
   }
 }
 @media (min-width: 411px) and (max-width: 415px) {
@@ -1907,16 +1956,22 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo,
 .main_container .header .header_icon {
-    float: right;
+    float: left !important;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-    left: -4rem;
-    font-size: 1.5rem;
+  .main_container .header .header_logo.header_icon,
+.main_container .header .header_icon.header_icon {
+    margin: 0.35rem 0 0 -1rem;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
-    font-size: 1.5rem;
+    padding-right: 0;
+    padding-left: unset;
+  }
+  .main_container .header .header_logo .arrow_back,
+.main_container .header .header_icon .arrow_back {
+    right: -2.25rem !important;
+    top: -0.25rem !important;
+    width: 0;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1929,10 +1984,13 @@ a:hover, a:focus, a:active {
   }
   .main_container .nav_nav button {
     outline: 0;
-    font-size: 1.4rem;
+    font-size: 1rem;
     position: fixed;
-    top: 2.15rem;
-    left: 3rem;
+    width: 0;
+    height: 0;
+    top: 1.5rem;
+    right: -1rem;
+    left: unset;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1950,6 +2008,7 @@ a:hover, a:focus, a:active {
     width: 15rem;
     height: 100vh;
     padding: 0 0;
+    overflow: scroll;
   }
   .main_container .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -2641,7 +2700,7 @@ a:hover, a:focus, a:active {
 
   .loading-overlay .spinner-large {
     bottom: 30%;
-    left: 35%;
+    right: 35%;
   }
 
   .alert {
@@ -3084,7 +3143,7 @@ a:hover, a:focus, a:active {
 
   .loading-overlay .spinner-large {
     bottom: 30%;
-    left: 35%;
+    right: 35%;
   }
 
   .alert {

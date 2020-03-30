@@ -71,13 +71,14 @@ a {
         float: right;
 
         h6 {
-          padding-left: 2rem;
+          padding-right: 0;
+          padding-left: unset;
         }
 
         .arrow_back {
           position: absolute;
           top: 4%;
-          left: 10.75rem;
+          right: -1rem;
           transform: translate(-50%, -50%);
           -webkit-transform: rotate(180deg);
           -moz-transform: rotate(180deg);
@@ -273,7 +274,6 @@ a {
           .card-title {
             text-align: center;
             font-size: 1.05rem;
-            line-height: 3.5rem;
           }
 
           .card-text {
@@ -330,7 +330,6 @@ a {
           .card-title {
             text-align: center;
             font-size: 1.05rem;
-            line-height: 3.5rem;
           }
 
           .card-text {
@@ -580,6 +579,8 @@ a {
     }
 
     .section_content {
+      width: 100%;
+
       .border-bottom {
         margin-top: 1rem;
         margin-bottom: 1rem;
@@ -601,6 +602,7 @@ a {
         margin-top: 21px;
         font-size: 14px;
         color: #6a6060;
+        text-align: right;
       }
 
       .p_content_2 {
@@ -1275,10 +1277,21 @@ a {
 
       .header_logo,
       .header_icon {
-        float: right;
+        float: left !important;
+
+        &.header_icon {
+          margin: 0.35rem 0 0 -1rem;
+        }
+
+        h6 {
+          padding-right: 0;
+          padding-left: unset;
+        }
 
         .arrow_back {
-          left: -2rem;
+          right: -1rem;
+          width: 0;
+
         }
       }
     }
@@ -1296,8 +1309,11 @@ a {
         outline: 0;
         font-size: 1rem;
         position: fixed;
-        top: 2.15rem;
-        left: 2.5rem;
+        width: 0;
+        height: 0;
+        top: 1.5rem;
+        right: -1rem;
+        left: unset;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -1318,6 +1334,7 @@ a {
         width: 15rem;
         height: 100vh;
         padding: 0 0;
+        overflow: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -1377,6 +1394,14 @@ a {
     }
 
     .content_carousel {
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 1.25rem;
+          }
+        }
+      }
+
       .item {
         .card {
           height: 13rem;
@@ -1661,7 +1686,7 @@ a {
     }
 
     .search_page {
-      width: 95%;
+      width: 92%;
 
       .textbox {
         text-align: center;
@@ -1691,7 +1716,7 @@ a {
   .loading-overlay {
     .spinner-large {
       bottom: 30%;
-      left: 31%;
+      right: 31%;
     }
   }
 }
@@ -1716,10 +1741,21 @@ a {
 
       .header_logo,
       .header_icon {
-        float: right;
+        float: left !important;
+
+        &.header_icon {
+          margin: 0.35rem 0 0 -1rem;
+        }
+
+        h6 {
+          padding-right: 0;
+          padding-left: unset;
+        }
 
         .arrow_back {
-          left: -3rem;
+          right: -2rem !important;
+          width: 0;
+
         }
       }
     }
@@ -1735,10 +1771,13 @@ a {
 
       button {
         outline: 0;
-        font-size: 1.4rem;
+        font-size: 1rem;
         position: fixed;
-        top: 2.15rem;
-        left: 3rem;
+        width: 0;
+        height: 0;
+        top: 1.5rem;
+        right: -1rem;
+        left: unset;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -1759,6 +1798,7 @@ a {
         width: 15rem;
         height: 100vh;
         padding: 0 0;
+        overflow: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -2144,7 +2184,7 @@ a {
   .loading-overlay {
     .spinner-large {
       bottom: 30%;
-      left: 31%;
+      right: 31%;
     }
   }
 }
@@ -2169,10 +2209,21 @@ a {
 
       .header_logo,
       .header_icon {
-        float: right;
+        float: left !important;
+
+        &.header_icon {
+          margin: 0.35rem 0 0 -1rem;
+        }
+
+        h6 {
+          padding-right: 0;
+          padding-left: unset;
+        }
 
         .arrow_back {
-          left: -3.5rem;
+          right: -2.25rem !important;
+          top: -0.25rem !important;
+          width: 0;
         }
       }
     }
@@ -2190,8 +2241,11 @@ a {
         outline: 0;
         font-size: 1rem;
         position: fixed;
-        top: 2.15rem;
-        left: 2.5rem;
+        width: 0;
+        height: 0;
+        top: 1.5rem;
+        right: -1rem;
+        left: unset;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -2212,6 +2266,7 @@ a {
         width: 15rem;
         height: 100vh;
         padding: 0 0;
+        overflow: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -2618,7 +2673,7 @@ a {
   .loading-overlay {
     .spinner-large {
       bottom: 30%;
-      left: 31%;
+      right: 31%;
     }
   }
 }
@@ -2643,15 +2698,21 @@ a {
 
       .header_logo,
       .header_icon {
-        float: right;
+        float: left !important;
 
-        .arrow_back {
-          left: -4rem;
-          font-size: 1.5rem;
+        &.header_icon {
+          margin: 0.35rem 0 0 -1rem;
         }
 
         h6 {
-          font-size: 1.5rem;
+          padding-right: 0;
+          padding-left: unset;
+        }
+
+        .arrow_back {
+          right: -2.25rem !important;
+          top: -0.25rem !important;
+          width: 0;
         }
       }
     }
@@ -2667,10 +2728,13 @@ a {
 
       button {
         outline: 0;
-        font-size: 1.4rem;
+        font-size: 1rem;
         position: fixed;
-        top: 2.15rem;
-        left: 3rem;
+        width: 0;
+        height: 0;
+        top: 1.5rem;
+        right: -1rem;
+        left: unset;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -2691,6 +2755,7 @@ a {
         width: 15rem;
         height: 100vh;
         padding: 0 0;
+        overflow: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -3713,7 +3778,7 @@ a {
   .loading-overlay {
     .spinner-large {
       bottom: 30%;
-      left: 35%;
+      right: 35%;
     }
   }
 
@@ -4346,7 +4411,7 @@ a {
   .loading-overlay {
     .spinner-large {
       bottom: 30%;
-      left: 35%;
+      right: 35%;
     }
   }
 

@@ -82,13 +82,13 @@ $('#Calculate').click(function () {
 $(function () {
   var url = window.location.href;
 
-  $("ul li a").each(function () { });
-  $("ul li a").each(function () {
+  $(".navbar_ul .nav-item a").each(function () { });
+  $(".navbar_ul .nav-item a").each(function () {
     if (url == (this.href)) {
       $("#indexed").removeClass("active_menu");
-      $(this).parents("li").children("a").addClass("active_menu_parent");
+      $(this).parents(".nav-item").children("a").addClass("active_menu_parent");
       $(this).closest("a").addClass("active_menu");
-      $(this).parents("li").children("div").show();
+      $(this).parents(".nav-item").children("div").show();
     }
   });
 });
