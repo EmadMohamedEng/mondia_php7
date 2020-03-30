@@ -54,7 +54,7 @@
 
           <div class="collapse navbar-collapse" id="basicExampleNav">
             <ul class="navbar_ul navbar-nav mr-auto">
-              <li class="nav-item nav_item_logo d-block d-sm-none d-md-none d-lg-none d-xl-none">
+              <li class="nav-item nav_item_logo d-block d-sm-none d-md-block d-lg-block d-xl-none">
                 <div class="row m-0">
                   <div class="col-12 p-0">
                     <a class="arrow_back back" href="#0">

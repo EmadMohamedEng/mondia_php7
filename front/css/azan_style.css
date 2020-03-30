@@ -44,6 +44,12 @@
   color: #000;
 }
 
+#chooseAudio table td a, 
+#chooseAudio table td a span{
+  color: #fff;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
+}
+
 #chooseRBT {
   margin: 0 auto;
   width: 50%;
@@ -177,7 +183,7 @@
 }
 
 span.fa-play {
-  color: #709E18;
+  color: #2f7cc7;
 }
 
 .album-cover {
