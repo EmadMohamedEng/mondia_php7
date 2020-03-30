@@ -2221,8 +2221,9 @@ a {
         }
 
         .arrow_back {
-          right: -2.25rem !important;
+          right: -2.75rem !important;
           top: -0.25rem !important;
+          font-size: 1.35rem;
           width: 0;
         }
       }
@@ -2326,6 +2327,14 @@ a {
     }
 
     .content_carousel {
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
       .item {
         .card {
           height: 13rem;
@@ -3205,25 +3214,25 @@ a {
         width: 100%;
         text-align: center;
         display: block;
+        float: left !important;
 
         .arrow_back {
-          left: 3.5rem;
-          top: 50%;
-          font-size: 2.5rem;
+          right: 3.25rem !important;
+          top: -0.25rem !important;
+          font-size: 2rem;
+          width: 0;
         }
 
         h6 {
           font-size: 2rem;
-          margin-top: 0.5rem;
-          margin-left: 5rem;
+          padding-left: 7rem !important;
+          text-align: left;
         }
 
         &.header_icon {
-          a {
-            i {
-              font-size: 2rem;
-              margin-top: 1rem;
-            }
+          i {
+            font-size: 2rem;
+            margin-top: 1rem;
           }
         }
       }
@@ -3242,8 +3251,11 @@ a {
         outline: 0;
         font-size: 2rem;
         position: fixed;
-        top: 2.85rem;
-        left: 4rem;
+        width: 0;
+        height: 0;
+        top: 1.5rem;
+        right: -1rem;
+        left: unset;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -3264,6 +3276,7 @@ a {
         width: 18rem;
         height: 100vh;
         padding: 0 0;
+        overflow: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -3280,6 +3293,7 @@ a {
               padding: 0.25rem 0;
               text-align: center;
               width: 60% !important;
+              font-size: 1.25rem;
 
               &.dropdown-item2 {
                 width: 100% !important;
@@ -3338,7 +3352,7 @@ a {
       .content_carousel_head {
         .link_title {
           h6 {
-            font-size: 2rem;
+            font-size: 2.5rem;
           }
         }
 
@@ -3815,25 +3829,25 @@ a {
         width: 100%;
         text-align: center;
         display: block;
+        float: left !important;
 
         .arrow_back {
-          left: 4.5rem;
-          top: 50%;
-          font-size: 2.75rem;
+          right: 3.25rem !important;
+          top: -0.25rem !important;
+          font-size: 2.5rem;
+          width: 0;
         }
 
         h6 {
           font-size: 2.5rem;
-          margin-top: 0.5rem;
-          margin-left: 5rem;
+          padding-left: 10rem !important;
+          text-align: left;
         }
 
         &.header_icon {
-          a {
-            i {
-              font-size: 2.5rem;
-              margin-top: 1rem;
-            }
+          i {
+            font-size: 2rem;
+            margin-top: 1rem;
           }
         }
       }
@@ -3850,10 +3864,13 @@ a {
 
       button {
         outline: 0;
-        font-size: 2.5rem;
+        font-size: 2rem;
         position: fixed;
-        top: 3.25rem;
-        left: 5rem;
+        width: 0;
+        height: 0;
+        top: 2rem;
+        right: -1rem;
+        left: unset;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -3871,13 +3888,14 @@ a {
 
       .navbar_ul {
         background-color: $white_color;
-        width: 23rem;
+        width: 18rem;
         height: 100vh;
         padding: 0 0;
+        overflow: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
-          font-size: 2rem;
+          font-size: 1.5rem;
 
           .nav-link {
             .icon_before {
@@ -3890,6 +3908,7 @@ a {
               padding: 0.25rem 0;
               text-align: center;
               width: 60% !important;
+              font-size: 1.25rem;
 
               &.dropdown-item2 {
                 width: 100% !important;
@@ -3898,7 +3917,7 @@ a {
           }
 
           &.nav_item_logo {
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
 
             .arrow_back {
               color: #00a9ce;
