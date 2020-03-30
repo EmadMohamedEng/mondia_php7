@@ -43,16 +43,18 @@
         </div>
 
         <div class="col-md-2 col-lg-2 col-xl-6 col-4">
-          <div class="header_icon">
-            <i class="fas fa-search fa-lg"></i>
-          </div>
+          <a href="#0">
+            <div class="header_icon">
+              <i class="fas fa-search fa-lg"></i>
+            </div>
+          </a>
         </div>
       </div>
     </header>
 
     <div class="row m-0">
       <div class="col-md-0 col-lg-0 col-xl-3 col-0 p-0" style="z-index: 9999999999">
-        <nav class="nav_nav navbar navbar-expand-lg  primary-color">
+        <nav class="nav_nav navbar navbar-expand-xl  primary-color">
           <button id="menu_toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="icon_before fas fa-bars fa-lg"></i>
             <span class="navbar-toggler-icon"></span>

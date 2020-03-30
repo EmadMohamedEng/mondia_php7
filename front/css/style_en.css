@@ -224,7 +224,6 @@ a:hover, a:focus, a:active {
 .main_container .content_carousel .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
-  line-height: 3.5rem;
 }
 .main_container .content_carousel .item .card .card-body .card-text i {
   color: #adadad;
@@ -261,7 +260,6 @@ a:hover, a:focus, a:active {
 .main_container .list_page .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
-  line-height: 3.5rem;
 }
 .main_container .list_page .item .card .card-body .card-text i {
   color: #adadad;
@@ -973,7 +971,7 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: -2rem;
+    left: 1.25rem;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1272,7 +1270,7 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: -3rem;
+    left: 0rem;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1580,7 +1578,7 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: -3.5rem;
+    left: -1rem;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1905,7 +1903,7 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: -4rem;
+    left: 0;
     font-size: 1.5rem;
   }
   .main_container .header .header_logo h6,
