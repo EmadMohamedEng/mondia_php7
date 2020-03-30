@@ -4,9 +4,9 @@
 @php
 if($content->type == 1){
   $src = $content->image_preview;
-}elseif($content->type == 2){
-  $src = $content->video;
 }elseif($content->type == 3){
+  $src = $content->video;
+}elseif($content->type == 2){
   $src = url('front\images\Cutting\Contnent_Page\001.png');
 }else{
   $src = url('front\images\Cutting\Contnent_Page\004.png');
@@ -45,7 +45,7 @@ if($content->type == 1){
           <div class="poster">
             <div class="poster-details">
               <div class="title-wrapper">
-                <h2 class="text-capitalize">{{$content->getTranslation('title',getCode())}}</h2>
+                <h2 class="text-capitalize">{{get_title($content->content_id)}}</h2>
               </div>
 
               <div class="outside-cover">
@@ -114,9 +114,9 @@ if($content->type == 1){
               @php
                 if($item->type == 1){
                   $src = $item->image_preview;
-                }elseif($item->type == 2){
-                  $src = $item->video;
                 }elseif($item->type == 3){
+                  $src = $item->video;
+                }elseif($item->type == 2){
                   $src = url('front\images\Cutting\Contnent_Page\001.png');
                 }else{
                   $src = url('front\images\Cutting\Contnent_Page\004.png');
@@ -126,7 +126,7 @@ if($content->type == 1){
             </div>
 
             <div class="col-md-10 col-lg-10 col-xl-10 col-10 p-0">
-                <p class="p_content text-capitalize">{{$item->getTranslation('title',getCode())}}</p>
+                <p class="p_content text-capitalize">{{get_title($item->content_id)}}</p>
             </div>
 
             <div class="border-bottom"></div>

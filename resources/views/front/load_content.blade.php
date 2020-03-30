@@ -6,9 +6,9 @@
             @php
                 if($item->type == 1){
                   $src = $item->image_preview;
-                }elseif($item->type == 2){
-                  $src = $item->video;
                 }elseif($item->type == 3){
+                  $src = $item->video;
+                }elseif($item->type == 2){
                   $src = 'front\images\Cutting\Contnent_Page\001.png';
                 }else{
                   $src = 'front\images\Cutting\Contnent_Page\004.png';

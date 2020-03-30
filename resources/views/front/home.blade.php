@@ -16,7 +16,7 @@
             </a>
 
             <div class="btn_subscribe w-100">
-                <button onclick="" class="btn text-capitalize">{{$content->getTranslation('title',getCode())}}</button>
+                <button onclick="" class="btn text-capitalize">{{get_title($content->content_id)}}</button>
             </div>
         </div>
         @endforeach

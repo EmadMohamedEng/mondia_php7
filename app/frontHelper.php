@@ -74,3 +74,8 @@ function getCode(){
     $code = session()->get('applocale');
     return $code;
 }
+
+function get_title($id){
+  $content = Video::find($id);
+  return $content->getTranslation('title',getCode());
+}

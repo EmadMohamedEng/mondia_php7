@@ -111,10 +111,10 @@ class FrontController extends Controller
     {
         $view_coming_post = get_setting('view_coming_post');
         $enable = get_setting('enable_testing');
-        $content = Video::query();
+        $content = Video::select('contents.*', 'contents.id as content_id');
         if($view_coming_post)
         {
-          $content = $content->find($id);
+          $content = $content->whereId($id)->first();
         }
         else
         {
@@ -128,7 +128,7 @@ class FrontController extends Controller
           }
           else
           {
-            $content = $content->find($id);
+            $content = $content->whereId($id)->first();
           }
         }
         if(!$content){

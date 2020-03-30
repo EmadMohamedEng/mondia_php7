@@ -38,12 +38,12 @@
                   @php
                       if($item->type == 1){
                         $src = $item->image_preview;
-                      }elseif($item->type == 2){
-                        $src = $item->video;
                       }elseif($item->type == 3){
-                        $src = 'front\images\Cutting\Contnent_Page\001.png';
+                        $src = $item->video;
+                      }elseif($item->type == 2){
+                        $src = url('front\images\Cutting\Contnent_Page\001.png');
                       }else{
-                        $src = 'front\images\Cutting\Contnent_Page\004.png';
+                        $src = url('front\images\Cutting\Contnent_Page\004.png');
                       }
                   @endphp
                   <img class="w-100" src="{{$src}}" alt="Card image cap">
@@ -53,7 +53,7 @@
                 </a>
 
                 <div class="card-body">
-                  <h4 class="card-title text-capitalize">{{$item->getTranslation('title',getCode())}}</h4>
+                  <h4 class="card-title text-capitalize">{{get_title($item->content_id)}}</h4>
                 </div>
               </div>
             </div>
