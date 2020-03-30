@@ -23,8 +23,7 @@ class FrontController extends Controller
 
     public function index()
     {
-        $latest = Video::select('*', 'contents.id as content_id')
-        ->join('services', 'services.id', '=', 'contents.service_id');
+        $latest = Video::select('*', 'contents.id as content_id');
         if (request()->has('OpID') && request()->get('OpID') != '')
         {
             $latest = $latest->join('posts', 'posts.video_id', '=', 'contents.id')
@@ -135,9 +134,9 @@ class FrontController extends Controller
         if(!$content){
             return view('errors.404');
         }
-        $contents = video::select('contents.*', 'contents.id as content_id','contents.title as content_title')
-        ->join('services', 'services.id', '=', 'contents.service_id')
-        ->where('service_id', $content->service->id)->whereNotIn('contents.id', [$content->id]);
+        $contents = video::select('contents.*', 'contents.id as content_id')
+        ->where('contents.service_id', $content->service->id)
+        ->whereNotIn('contents.id', [$content->id]);
         if($request->OpID)
         {
             $contents = $contents->join('posts','posts.video_id','=','contents.id')

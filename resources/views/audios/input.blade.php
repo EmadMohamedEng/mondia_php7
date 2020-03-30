@@ -1,6 +1,7 @@
 @if($videoID !=null)
 {!! Form::hidden('video_id',$videoID,['class'=>'form-control input-lg']) !!}
-{!! Form::hidden('title',$video->title,['class'=>'form-control input-lg']) !!}
+{!! Form::hidden('title[en]',$video->title,['class'=>'form-control input-lg']) !!}
+{!! Form::hidden('title[ar]',$video->title,['class'=>'form-control input-lg']) !!}
 {!! Form::hidden('provider_id',$video->service->provider->id,['class'=>'form-control input-lg']) !!}
 @elseif($providerID !=null)
 {!! Form::hidden('provider_id',$providerID,['class'=>'form-control input-lg']) !!}

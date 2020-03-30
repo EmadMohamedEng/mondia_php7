@@ -12,7 +12,7 @@
         @foreach($latest as $content)
         <div class="item">
             <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
-            <img class="m-auto d-block" src="{{$content->type == 1 ? $content->image_preview : ''}}" alt="banner_slider">
+            <img class="m-auto d-block" src="{{$content->type == 1 ? $content->image_preview : $content->video}}" alt="banner_slider">
             </a>
 
             <div class="btn_subscribe w-100">

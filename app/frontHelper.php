@@ -35,19 +35,15 @@ function provider_service($id)
 function provider_menu()
 {
     if (isset($_REQUEST['OpID'])) {
-        $opID = $_REQUEST['OpID'];
-
-        $posts = Post::where('operator_id', $opID)->get();
-        if (count($posts) > 0) {
-            foreach ($posts as $post) {
-                $contents = Video::where('id', $post->video_id)->get();
-            }
-            foreach ($contents as $content) {
-                $services = Service::where('id', $content->service_id)->get();
-            }
-            foreach ($services as $service) {
-                $provide_menu = Provider::where('id', $service->provider_id)->get();
-            }
+        $provider_ids = Video::select('*','providers.id as provider_id')
+        ->join('services','services.id','=','contents.service_id')
+        ->join('providers','providers.id','=','services.provider_id')
+        ->join('posts', 'posts.video_id', '=', 'contents.id')
+        ->where('posts.operator_id', request()->get('OpID'))
+        ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
+        ->pluck('provider_id');
+        if(count($provider_ids)){
+          $provide_menu = Provider::whereIn('id',$provider_ids)->get();
         } else {
             $provide_menu = Provider::where('id',0)->get();
         }
