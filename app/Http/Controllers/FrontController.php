@@ -70,7 +70,14 @@ class FrontController extends Controller
       }
       if($request->has('search') && $request->search != '')
       {
-        $contents = $contents->where('contents.title', 'like', '%' . $request->search . '%');
+        $contents = $contents->join('translatables','translatables.record_id','=','contents.id')
+        ->join('tans_bodies','tans_bodies.translatable_id','translatables.id')
+        ->where('translatables.table_name','contents')
+        ->where('translatables.column_name','title')
+        ->where(function($q) use ($request){
+          $q->where('contents.title', 'like', '%' . $request->search . '%');
+          $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+        });
       }
 
       $contents = $contents->limit(get_pageLength())->get();
