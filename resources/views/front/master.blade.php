@@ -36,7 +36,7 @@
               <i class="fas fa-angle-left fa-lg"></i>
             </a>
 
-            <a href="{{route('front.index')}}">
+            <a href="{{route('front.index')}}" class="link_href">
               <h6 class="h5">{{get_setting('title_page')}}</h6>
             </a>
           </div>

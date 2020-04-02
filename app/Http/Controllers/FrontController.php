@@ -23,6 +23,7 @@ class FrontController extends Controller
 
     public function index()
     {
+
         $latest = Video::select('*', 'contents.id as content_id');
         if (request()->has('OpID') && request()->get('OpID') != '')
         {
@@ -32,7 +33,7 @@ class FrontController extends Controller
             ->orderBy('posts.show_date', 'desc');
         }
 
-        $latest = $latest->whereIn('contents.type',[1,3])->limit(10)->latest('contents.created_at')->get();
+        $latest = $latest->whereIn('contents.type',[1,3])->limit(10)->latest('contents.created_at')->get();// video or images
         return view('front.home',compact('latest'));
     }
 

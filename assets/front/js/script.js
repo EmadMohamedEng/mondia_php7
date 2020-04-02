@@ -1,17 +1,17 @@
 /* global $, window, document */
 
-//to back 
-$(document).on('click', '.back', function () {
+//to back
+$(document).on('click', '.back', function() {
     'use strict';
     parent.history.back();
 });
 
 
 //loading screen
-$(window).on('load', function () {
+$(window).on('load', function() {
     'use strict';
-    $('.loading-overlay .spinner').fadeOut(800, function () {
-        $(this).parent().fadeOut(500, function () {
+    $('.loading-overlay .spinner').fadeOut(800, function() {
+        $(this).parent().fadeOut(500, function() {
             $('body').css('overflow', 'auto');
             $(this).remove();
         });
@@ -20,7 +20,7 @@ $(window).on('load', function () {
 
 
 // play and pause
-$('.np-play').click(function (e) {
+$('.np-play').click(function(e) {
     var audio = document.getElementById('audio_test');
     $('#audioSource').attr('src', $(this).find('.fa').attr('data-src'));
     if ($(this).find('.fa').hasClass('fa-play')) {
@@ -41,8 +41,8 @@ new WOW().init();
 
 
 // accordion
-$(function () {
-    var Accordion = function (el, multiple) {
+$(function() {
+    var Accordion = function(el, multiple) {
         this.el = el || {};
         this.multiple = multiple || false;
 
@@ -55,7 +55,7 @@ $(function () {
         }, this.dropdown)
     }
 
-    Accordion.prototype.dropdown = function (e) {
+    Accordion.prototype.dropdown = function(e) {
         var $el = e.data.el;
         $this = $(this),
             $next = $this.next();
@@ -87,7 +87,7 @@ $('.owl-carousel').owlCarousel({
             items: 1
         },
         600: {
-            items: 1
+            items: 2
         },
         1000: {
             items: 1
@@ -100,20 +100,20 @@ $(".owl-next").html('<i class="fas fa-chevron-circle-right fa-2x"></i>');
 
 //after video show modal
 var v = document.getElementById("myVideo");
-if(v){
-   v.onended = function () {
+if (v) {
+    v.onended = function() {
         $('#exampleModal').modal();
     };
 }
 //after audio show modal
 $('#player').on('ended', function() {
-  $('#exampleModal').modal();
+    $('#exampleModal').modal();
 });
 
 
 
 // x
-$('#phone').keyup(function () {
+$('#phone').keyup(function() {
     'use strict';
     $('.validity').css('display', 'block');
     if ($(this).val() == '') {
@@ -122,13 +122,13 @@ $('#phone').keyup(function () {
 });
 
 /* Hidden Logo Img In Foucs */
-$('#phone').focusin(function () {
+$('#phone').focusin(function() {
     'use strict';
     $('#image').css('display', 'none');
     $('.strip').css('margin-top', 20);
 });
 
-$('#phone').blur(function () {
+$('#phone').blur(function() {
     'use strict';
     $('#image').css('display', 'block');
     $('.strip').css('margin-top', -45);
@@ -139,4 +139,3 @@ $('#phone').blur(function () {
     }
 
 });
-

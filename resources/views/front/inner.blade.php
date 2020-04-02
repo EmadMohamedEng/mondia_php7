@@ -12,6 +12,8 @@ if($content->type == 1){
   $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
 @endphp
+
+
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
     @include('front.search')
     <section class="inner_page">
@@ -92,7 +94,7 @@ if($content->type == 1){
 
             <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
               <div class="shear_div">
-                <button class="btn whatsapp" onclick="location.href='https://api.whatsapp.com/send?text={{urldecode(url()->current())}}'">
+                <button class="btn whatsapp" onclick="location.href='https://api.whatsapp.com/send?text={{urlencode(url()->current())}}'">
                   <i class="fab fa-whatsapp"></i>
                 </button>
               </div>
@@ -115,7 +117,7 @@ if($content->type == 1){
                 if($item->type == 1){
                   $src = $item->image_preview;
                 }elseif($item->type == 3){
-                  $src = $item->video;
+                  $src =url(  $item->video );
                 }elseif($item->type == 2){
                   $src = url('front\images\Cutting\Contnent_Page\001.png');
                 }else{
