@@ -130,7 +130,7 @@ if($content->type == 1){
                   <img class="w-100" src="{{$src}}" class="image_inner"  alt="Card image cap">
                 </div>
 
-                <div class="col-md-8 col-lg-8 col-xl-8 col-8 p-0 ml-2">
+                <div class="col-md-8 col-lg-8 col-xl-8 col-8 p-0 ml-2 mr-2">
                     <p class="p_content text-capitalize">{{get_title($item->content_id)}}</p>
                 </div>
 
