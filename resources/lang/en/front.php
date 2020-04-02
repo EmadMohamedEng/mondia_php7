@@ -5,7 +5,7 @@ return [
     'more' => 'more',
     'search' => 'search',
     'release' => 'Release date',
-    'related_video' => 'Related Video',
+    'related_video' => 'Related Content',
     'play' => 'Play',
     'share' => 'Share',
     'azan' => 'Azan',

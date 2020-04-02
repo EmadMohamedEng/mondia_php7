@@ -5,7 +5,7 @@ return [
     'more' => 'المزيد',
     'search' => 'بحث',
     'release' =>  'تم التحرير في',
-    'related_video' => 'فيديوهات  مماثله',
+    'related_video' => 'محتوى  مماثل',
     'play' => 'تشغيل',
     'share' => 'مشاركة',
     'azan' => 'اذان',

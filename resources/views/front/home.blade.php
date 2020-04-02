@@ -16,7 +16,9 @@
             </a>
 
             <div class="btn_subscribe w-100">
-                <button onclick="" class="btn text-capitalize">{{get_title($content->content_id)}}</button>
+                <button onclick="" class="btn text-capitalize">
+                  <a href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
+                </button>
             </div>
         </div>
         @endforeach

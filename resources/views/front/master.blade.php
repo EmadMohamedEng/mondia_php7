@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="url" content="{{url('/')}}">
-    <link rel="shortcut icon" href="{{request()->get('OpID') == omantel ? asset('front/images/omantel_logo.png') : 'https://du-portal.mondiamedia.com/du-uae-portal/en/favicon.ico' }}">
+    <link rel="shortcut icon" href="{{request()->get('OpID') == omantel ? asset('front/images/omantel_logo.png') : asset('front/images/favicon.ico') }}">
     <title>{{get_setting('title_page')}} | @yield('page_title')</title>
     <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
