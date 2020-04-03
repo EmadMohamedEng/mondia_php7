@@ -160,11 +160,13 @@ class FrontController extends Controller
             if($request->OpID == omantel)
             {
                 $response = $this->check_status($userToken);
+                $response = json_decode($response, true);
                 if(empty($response)){
                     return $this->pin_code($userToken);
                 }
                 else{
                     session()->put('status','active');
+                  //  session()->put('check_status_id',  $response['id']);  // this need to be test
                     return view('front.inner', compact('content','contents'));
                 }
             }
@@ -352,7 +354,7 @@ class FrontController extends Controller
         $response = $this->SendRequestPost($url, $json, $headers);
         $response = json_decode($response, true);
         // make log
-        $actionName = "Create Token";
+        $actionName = "Omantel Create Token";
         $parameters_arr = array(
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
             'response' => $response,
@@ -371,7 +373,7 @@ class FrontController extends Controller
 
         session()->put('success_url',$request->redirect_url);
         // make log
-        $actionName = "Redirect";
+        $actionName = "OmanTel Redirect";
         $parameters_arr = array(
             'token' => $token,
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
@@ -401,7 +403,7 @@ class FrontController extends Controller
         $response = json_decode($response, true);
 
         // make log
-        $actionName = "Check Status";
+        $actionName = "Omantel Check Status";
         $parameters_arr = array(
             'token' => $userToken,
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
@@ -432,7 +434,7 @@ class FrontController extends Controller
         $response = json_decode($response, true);
 
         // make log
-        $actionName = "Send PinCode";
+        $actionName = "Omantel Send PinCode";
         $parameters_arr = array(
             'token' => $userToken,
             "response" => $response,
@@ -477,7 +479,7 @@ class FrontController extends Controller
         $response = json_decode($response, true);
 
         // make log
-        $actionName = "Verify Pin";
+        $actionName = "Omantel Verify Pin";
         $parameters_arr = array(
             'token' => $userToken,
             'requestId' => $requestId,
@@ -520,7 +522,7 @@ class FrontController extends Controller
         $response = json_decode($response, true);
 
         // make log
-        $actionName = "Delete Subscription";
+        $actionName = "Omantel Delete Subscription";
         $parameters_arr = array(
             "response" => $response,
         );

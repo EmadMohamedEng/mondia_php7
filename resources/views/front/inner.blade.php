@@ -8,7 +8,7 @@ if($content->type == 1){
   $src = $content->video;
 }elseif($content->type == 2){
   $src = url('front\images\Cutting\Contnent_Page\001.png');
-}else{
+}else{  // text default image
   $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
 @endphp

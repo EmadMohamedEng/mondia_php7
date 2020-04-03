@@ -42,7 +42,7 @@
                         $src = $item->video;
                       }elseif($item->type == 2){
                         $src = url('front\images\Cutting\Contnent_Page\001.png');
-                      }else{
+                      }else{ // text defauly image
                         $src = url('front\images\Cutting\Contnent_Page\004.png');
                       }
                   @endphp

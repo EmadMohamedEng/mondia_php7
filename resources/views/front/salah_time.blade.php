@@ -15,7 +15,7 @@
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
-          <h4 class="h4_time">{{date('d/m/Y')}} </h4>
+          <h4 class="h4_time">{{date('d-m-Y')}} </h4>
         </div>
       </div>
     </div>
