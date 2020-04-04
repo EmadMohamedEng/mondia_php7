@@ -491,9 +491,9 @@ class FrontController extends Controller
 
         $this->log_action($actionName, $url, $parameters_arr);
 
-        // if($response['responseCode'] == 670){
-        //     return back()->with('faild','not success pincode');
-        // }
+        if($response['responseCode'] == 670){
+            return back()->with('faild','not success pincode');
+        }
         session()->put('status','active');
         return redirect(session()->get('success_url'));
     }
