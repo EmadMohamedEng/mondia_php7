@@ -160,7 +160,7 @@ class FrontController extends Controller
             if($request->OpID == omantel)
             {
                 $response = $this->check_status($userToken);
-                $response = json_decode($response, true);
+               // $response = json_decode($response, true);
                 if(empty($response)){
                     return $this->pin_code($userToken);
                 }
