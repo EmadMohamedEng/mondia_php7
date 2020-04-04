@@ -20,7 +20,7 @@ if($content->type == 1){
       <div class="row m-0">
         <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
           <div class="cover">
-            @if(session()->has('requestId') && session()->has('status') && session()->get('status') == 'active')
+            @if(session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
                 <video style="object-fit: cover;width:100%" poster="{{$src}}" controls>
                     <source src="{{url($content->video)}}" />
                 </video>

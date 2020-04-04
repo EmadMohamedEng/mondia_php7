@@ -166,7 +166,7 @@ class FrontController extends Controller
                 }
                 else{
                     session()->put('status','active');
-                  //  session()->put('check_status_id',  $response['id']);  // this need to be test
+                    session()->put('check_status_id',  $response[0]['id']);
                     return view('front.inner', compact('content','contents'));
                 }
             }
@@ -174,11 +174,13 @@ class FrontController extends Controller
             if($request->OpID == du)
             {
                 $response = $this->du_check_status($userToken);
+
                 if(empty($response)){
                     return $this->du_pin_code($userToken);
                 }
                 else{
                     session()->put('status','active');
+                    session()->put('check_status_id',  $response[0]['id']);
                     return view('front.inner', compact('content','contents'));
                 }
             }
