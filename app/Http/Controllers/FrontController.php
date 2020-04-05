@@ -166,7 +166,6 @@ class FrontController extends Controller
                 }
                 else{
                     session()->put('status','active');
-                    session()->put('check_status_id',  $response[0]['id']);
                     return view('front.inner', compact('content','contents'));
                 }
             }
@@ -404,6 +403,8 @@ class FrontController extends Controller
         $response = $this->SendRequestGet($url, $json, $headers);
         $response = json_decode($response, true);
 
+        session()->put('check_status_id',  $response[0]['id']);
+
         // make log
         $actionName = "Omantel Check Status";
         $parameters_arr = array(
@@ -411,6 +412,7 @@ class FrontController extends Controller
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
             'headers' =>  $headers,
             'response' => $response,
+            'respcheck_status_idonse' => $response[0]['id'],
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
