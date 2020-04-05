@@ -81,7 +81,6 @@ switch ($os) {
         </table>
       </div>
 
-      <a href="#" class="button" id="chooseRBT" onclick="confirm('لتأكيد الاشتراك فى الخدمة إضغط تأكيد')">@lang('front.end')</a>
 
       <div class="tab-bar-wrapper decorator"></div>
     </div>

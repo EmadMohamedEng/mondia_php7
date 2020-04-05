@@ -38,7 +38,7 @@
                                         <th style="width:18px"><input type="checkbox" onclick="select_all('{{$table_name}}')"></th>
                                         <th>id</th>
                                         <th>Title</th>
-                                        <!-- <th>Image</!--> -->
+                                        <!-- <th>Image</!-->
                                         <th >Action</th>
                                     </tr>
                                 </thead>
