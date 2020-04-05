@@ -25,11 +25,11 @@ switch ($os) {
     </td>
     <td>
         <a style="color:#000" href="#">
-            <span>{{$val->getTranslation('title',getCode())}}</span>
+            <p>{{$val->getTranslation('title',getCode())}}</p>
         </a>
     </td>
     <td>
-        <div class="np-play play-status">
+        <div class="np-play">
             <span class="fa fa-play" data-src="{{url($val->source)}}"></span>
         </div>
         <audio id="audio_test" controls="controls" style="display:none">

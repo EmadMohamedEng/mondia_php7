@@ -101,7 +101,7 @@ trait Translatable {
             return $this->$column;
         } else {
             // dd($locale);
-            $language_id = Language::where('short_code', $locale)->first()->id;
+            $language_id = Language::where('short_code', $locale)->first();
             $trans = HasTranslation::where('table_name', $this->table)->where('record_id', $this->id)->where('column_name', $column)->first();
             if (!$trans) {
                 return ' ';

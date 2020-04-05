@@ -180,7 +180,7 @@ if (Config::get('languages')[App::getLocale()] == "English") {
                         <li class="divider"></li>
 
                         <li>
-                            <a href="{{url('/logout_ad')}}">
+                            <a href="{{url('/logout')}}">
                                 <i class="fa fa-off"></i>
                                 @lang('messages.logout')
                             </a>

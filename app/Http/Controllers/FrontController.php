@@ -531,12 +531,12 @@ class FrontController extends Controller
         $this->log_action($actionName, $url, $parameters_arr);
 
         session()->flush();
-        return back();
+        return redirect("/");
     }
 
     public function logout()
     {
-        session()->flush();
+        Session::forget(['requestId','userToken']);
         return back();
     }
 
@@ -676,7 +676,7 @@ class FrontController extends Controller
         $this->log_action($actionName, $url, $parameters_arr);
 
         session()->flush();
-        return back();
+        return redirect("/");
     }
 
     public function du_logout()

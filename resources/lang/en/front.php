@@ -15,6 +15,10 @@ return [
     'prayer' => 'Prayer Time',
     'zakah' => 'Zakat Calculate',
     'call_tone' => 'Call Tone',
+    'enter_pin' => 'Enter the activation code',
+    'the_send_phone' => 'A five-digit number has been sent to the phone number you entered. Please enter the five digits until the phone number is confirmed',
+    'enter_code_active' => 'Enter the activation code',
+    'Activate' => 'Activate',
     'muslim_guide' =>  'Muslim Guide',
     'you_search_about' => 'You Search About',
     'unsub' => 'UnsubScribe',
@@ -39,7 +43,7 @@ return [
     'subscribe' => 'Subscribe',
     'choose' => 'Choose',
     'play' => 'Play',
-    'make_it_call_tone' => 'Make It Call Tone',
+    'make_it_call_tone' => 'Make Call Tone',
     'salah' => 'Prayer',
     'time' => 'Time'
 ];
