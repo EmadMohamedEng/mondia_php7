@@ -160,6 +160,7 @@ class FrontController extends Controller
             $status = $request->status;
             if($request->OpID == omantel)
             {
+               session()->put('OpID',omantel);
                 $response = $this->check_status($userToken);
                // $response = json_decode($response, true);
                 if(empty($response)){
@@ -173,6 +174,7 @@ class FrontController extends Controller
 
             if($request->OpID == du)
             {
+               session()->put('OpID',du);
                 $response = $this->du_check_status($userToken);
 
                 if(empty($response)){
@@ -548,8 +550,15 @@ class FrontController extends Controller
 
     public function logout()
     {
+      if( session()->has('OpID')  && session()->get('OpID') != ''  ){
+
+        $Url = url("/?OpID=".session()->get('OpID')) ;
         session()->flush();
-        return back();
+        return redirect($Url);
+      }else{
+        return redirect(url('/'));
+      }
+
     }
 
     // make du integration

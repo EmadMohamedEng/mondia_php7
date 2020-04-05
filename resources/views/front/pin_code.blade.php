@@ -21,24 +21,26 @@
           </div>
           @endif
 
-          <h2 class="login_title my-4">ادخل كود التفعيل</h2>
+          <h2 class="login_title my-4"  style="color:#ff9e1b !important">ادخل كود التفعيل</h2>
 
           <div class="subscribe_bg">
-            <div class="subtitle mb-3 py-2 px-4">تم ارسال رقم مكون من خمس ارقام الى رقم التليفون الذى ادخلته رجاء ادخال الخمس ارقام حتى يتم تاكيد رقم التليفون</div>
+            <div class="subtitle mb-3 py-2 px-4" style="background-color:#ff9e1b !important">
+              تم ارسال رقم التحقق الى رقم التليفون الذى ادخلته برجاء ادخاله
+            </div>
 
             <form class="form-signin" action="{{url('verify_pin')}}" method="POST">
                 @csrf
               <div class="row form-group account-wall">
                 <div class="col-md-12 col-lg-12 col-xl-12 col-12 phone-number-input">
                   <div class="form-group px-3">
-                    <input type="number" class="form-control" placeholder="ادخل كود التفعيل" maxlength="14" autofocus="autofocus" id="msisdn" name="pincode" value="">
+                    <input type="number" class="form-control" required   placeholder="ادخل كود التفعيل" maxlength="14" autofocus="autofocus" id="msisdn" name="pincode" value="">
                   </div>
                 </div>
               </div>
 
               <div class="buttons row px-3 my-3">
-                <div class="col-md-12 col-lg-12 col-xl-12 col-12">
-                  <button name="action" value="SUBMIT" class="btn btnup btn-primary btn-block" type="submit">تفعيل</button>
+                <div class="col-md-12 col-lg-12 col-xl-12 col-12" >
+                  <button name="action" value="SUBMIT"  style="background-color:#ff9e1b !important"  class="btn btnup btn-primary btn-block" type="submit">تفعيل</button>
                 </div>
               </div>
             </form>
