@@ -412,7 +412,7 @@ class FrontController extends Controller
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
             'headers' =>  $headers,
             'response' => $response,
-            'respcheck_status_idonse' => $response[0]['id'],
+            'check_status_id' => $response[0]['id'],
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
