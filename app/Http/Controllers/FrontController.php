@@ -409,6 +409,7 @@ class FrontController extends Controller
         $parameters_arr = array(
             'token' => $userToken,
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'headers' =>  $headers,
             'response' => $response,
         );
         $this->log_action($actionName, $url, $parameters_arr);
@@ -438,7 +439,8 @@ class FrontController extends Controller
         // make log
         $actionName = "Omantel Send PinCode";
         $parameters_arr = array(
-            'token' => $userToken,
+            'userToken' => $userToken,
+            'headers' =>  $headers,
             "response" => $response,
         );
 
@@ -484,9 +486,10 @@ class FrontController extends Controller
         // make log
         $actionName = "Omantel Verify Pin";
         $parameters_arr = array(
-            'token' => $userToken,
+            'userToken' => $userToken,
             'requestId' => $requestId,
             'pin' => $pin,
+            'headers' =>  $headers,
             "response" => $response,
         );
 
@@ -527,6 +530,8 @@ class FrontController extends Controller
         // make log
         $actionName = "Omantel Delete Subscription";
         $parameters_arr = array(
+           'userToken' => $request->userToken,
+           'check_status_id' => $request->requestId,
             "response" => $response,
         );
         $this->log_action($actionName, $url, $parameters_arr);
@@ -560,6 +565,7 @@ class FrontController extends Controller
         $actionName = "DU Create Token";
         $parameters_arr = array(
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'headers' =>  $headers,
             'response' => $response,
         );
 
@@ -614,6 +620,8 @@ class FrontController extends Controller
         $parameters_arr = array(
             'token' => $userToken,
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'userToken' =>  $userToken,
+            'headers' =>  $headers,
             'response' => $response,
         );
         $this->log_action($actionName, $url, $parameters_arr);
@@ -672,7 +680,9 @@ class FrontController extends Controller
         // make log
         $actionName = "DU Delete Subscription";
         $parameters_arr = array(
-            "response" => $response,
+          'userToken' =>  $request->userToken,
+          'check_status_id' =>  $request->requestId,
+           "response" => $response,
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
