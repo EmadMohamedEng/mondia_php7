@@ -153,6 +153,7 @@ class FrontController extends Controller
         }
         $contents = $contents->orderBy('contents.created_at', 'desc')->limit(4)->get();
         if($request->has('userToken')){
+           session()->put('userToken',$request->get('userToken'));
             $userToken = $request->userToken;
             $refreshToken = $request->refreshToken;
             $expiresIn = $request->expiresIn;
@@ -506,7 +507,10 @@ class FrontController extends Controller
 
     public function delete_subscription(Request $request)
     {
-        $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription/$request->requestId";
+         $userToken  = session()->get('userToken') ;
+         $check_status_id  = session()->get('check_status_id') ;
+
+        $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription/$check_status_id ";
 
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -520,7 +524,7 @@ class FrontController extends Controller
             CURLOPT_HTTPHEADER => array(
                 "accept: application/json",
                 "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
-                "authorization: Bearer $request->userToken"
+                "authorization: Bearer $userToken"
             ),
         ));
         $response = curl_exec($curl);
@@ -532,8 +536,8 @@ class FrontController extends Controller
         // make log
         $actionName = "Omantel Delete Subscription";
         $parameters_arr = array(
-           'userToken' => $request->userToken,
-           'check_status_id' => $request->requestId,
+           'userToken' => $userToken,
+           'check_status_id' => $check_status_id,
             "response" => $response,
         );
         $this->log_action($actionName, $url, $parameters_arr);
