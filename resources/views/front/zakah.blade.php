@@ -6,7 +6,7 @@
 
   <section class="zakkah_page">
     <h4 class="text-center font-weight-bold">@lang('front.zakah')</h4>
-    <p class="text-right">
+    <p class="{{getCode() == 'ar' ? 'text-right' : 'text-left'}}">
         @lang('front.zakah_word')
     </p>
 

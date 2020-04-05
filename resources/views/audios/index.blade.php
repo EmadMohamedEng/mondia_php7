@@ -65,12 +65,14 @@
 <script>
    $('#audios').addClass('active');
         $('#audios-index').addClass('active');
+        console.log("{{request()->route('id')}}");
+        
     $(document).ready(function () {
         $('#example_rbt').DataTable({
             "processing": true,
             "serverSide": true,
             "search": {"regex":true},
-            ajax: "{!! url('audios/allData?video_id='.Request::route('id')) !!}",
+            ajax: "{!! url('audios/allData?(strpos(url()->full(),'provider') !== false ) ? provider_id= : video_id='.request()->route('id')) !!}",
             columns: [
                 {data: 'index'},
                 {data: 'id'},

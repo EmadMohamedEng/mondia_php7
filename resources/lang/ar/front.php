@@ -40,4 +40,6 @@ return [
     'choose' => 'أختر',
     'play' => 'تشغيل',
     'make_it_call_tone' => 'اجعلها كول تون',
+    'salah' => 'الصلاه',
+    'time' => 'الوقت'
 ];

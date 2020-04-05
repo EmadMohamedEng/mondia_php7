@@ -1,9 +1,14 @@
 @extends('front.master')
 @section('page_title') @lang('front.merath') @endsection
 @section('content')
+<style>
+  .input_span{
+    text-align: {{getCode() == 'ar' ? 'right' : 'left'}} !important;
+  }
+</style>
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
     @include('front.search')
-    <section class="merath_page">
+    <section class="merath_page" dir="{{getCode() == 'en' ? 'rtl' : 'ltr'}}">
       <div class="merath_title">
         <h2>@lang('front.merath')</h2>
       </div>
@@ -221,14 +226,12 @@
 <script src="{{asset('front/js/merath_calculation.js')}}"></script>
 <script>
     $(document).ready(function () {
-        $('input[type="number"]').keyup(function () {
+        $('#MalVarligi').keyup(function () {
 
             var empty = false;
-            $('input[type="number"]').each(function () {
-                if ($(this).val().length == 0) {
-                    empty = true;
-                }
-            });
+            if ($(this).val().length == 0) {
+                empty = true;
+            }
 
             if (empty) {
                 $(':input[type="submit"]').attr('disabled', 'disabled');

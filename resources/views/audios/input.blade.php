@@ -67,7 +67,7 @@
             <source src="{{url($audio->video->video)}}" type="video/mp4">
         </video>
         @else
-        {!! Form::file('source',["accept"=>"audio/*" ,"class"=>"default"]) !!}
+        {!! Form::file('source',["accept"=>"audio/*" ,"class"=>"default" , "required"]) !!}
         @endif
         @if($audio && $audio->video_id == null)
         <audio width="320" height="240" controls>
@@ -80,7 +80,7 @@
 <div class="form-group">
     <label class="col-sm-3 col-lg-2 control-label">Code <span class="text-danger">*</span></label>
     <div class="col-sm-9 col-lg-10 controls">
-        {!! Form::number("code", null ,['placeholder'=> "Code",'class'=>'form-control input-lg']) !!}
+        {!! Form::number("code", null ,['placeholder'=> "Code",'class'=>'form-control input-lg' , 'required']) !!}
     </div>
 </div>
 <div class="form-group">

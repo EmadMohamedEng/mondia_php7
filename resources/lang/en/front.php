@@ -40,4 +40,6 @@ return [
     'choose' => 'Choose',
     'play' => 'Play',
     'make_it_call_tone' => 'Make It Call Tone',
+    'salah' => 'Prayer',
+    'time' => 'Time'
 ];
