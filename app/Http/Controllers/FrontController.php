@@ -182,7 +182,6 @@ class FrontController extends Controller
                 }
                 else{
                     session()->put('status','active');
-                    session()->put('check_status_id',  $response[0]['id']);
                     return view('front.inner', compact('content','contents'));
                 }
             }
@@ -599,7 +598,7 @@ class FrontController extends Controller
     {
         $token = $this->du_create_token()['accessToken'];
 
-        $Url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . urlencode($request->redirect_url);
+        $Url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . urlencode($request->redirect_url)."&auto=false&authMode=AUTO&distributionChannel=APP";
 
         session()->put('success_url',$request->redirect_url);
 
@@ -635,6 +634,13 @@ class FrontController extends Controller
         $response = $this->SendRequestGet($url, $json, $headers);
         $response = json_decode($response, true);
 
+        if(isset($response[0]['id']) && $response[0]['id'] !=""){
+          $check_status_id = $response[0]['id']  ;
+          session()->put('check_status_id',  $response[0]['id']);
+        }else{
+          $check_status_id = "" ;
+        }
+
         // make log
         $actionName = "DU Check Status";
         $parameters_arr = array(
@@ -643,6 +649,7 @@ class FrontController extends Controller
             'userToken' =>  $userToken,
             'headers' =>  $headers,
             'response' => $response,
+            'check_status_id' => $check_status_id,
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
@@ -657,7 +664,7 @@ class FrontController extends Controller
     {
         $x = 12;
 
-        $trxid = $randomNum=substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyzABCDEFGHIJKLMNOPQRSTVWXYZ"), 0, $x);
+        $trxid = $randomNum=substr(str_shuffle("123456789123456789123456789"), 0, $x);
 
         $url = "http://pay-with-du.ae/16/mondiamedia/mondia-duelkheer-1-en-doi-web?serviceProvider=mondiamedia&serviceid=duelkheer&trxid=".$trxid."&redirectUrl=".urlencode(session()->get('success_url'));
 
@@ -674,7 +681,11 @@ class FrontController extends Controller
 
     public function du_delete_subscription(Request $request)
     {
-        $url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/api/subscription/$request->requestId";
+
+      $userToken  = session()->get('userToken') ;
+      $check_status_id  = session()->get('check_status_id') ;
+
+        $url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/api/subscription/$check_status_id";
 
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -688,7 +699,7 @@ class FrontController extends Controller
             CURLOPT_HTTPHEADER => array(
                 "accept: application/json",
                 "x-mm-gateway-key: G94193561-6669-1626-76fd-b7b02fe6b216",
-                "authorization: Bearer $request->userToken"
+                "authorization: Bearer  $userToken"
             ),
         ));
         $response = curl_exec($curl);
@@ -700,8 +711,8 @@ class FrontController extends Controller
         // make log
         $actionName = "DU Delete Subscription";
         $parameters_arr = array(
-          'userToken' =>  $request->userToken,
-          'check_status_id' =>  $request->requestId,
+          'userToken' =>   $userToken,
+          'check_status_id' =>  $check_status_id,
            "response" => $response,
         );
         $this->log_action($actionName, $url, $parameters_arr);
