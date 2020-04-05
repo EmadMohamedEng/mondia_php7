@@ -548,7 +548,7 @@ class FrontController extends Controller
         $headers = array(
             "Accept: application/json",
             "Content-Type: application/x-www-form-urlencoded",
-            "X-MM-GATEWAY-KEY: Gdea42150-deb0-e6a9-3d88-bcbc0c724f00"
+            "X-MM-GATEWAY-KEY: G94193561-6669-1626-76fd-b7b02fe6b216"
         );
 
         $json = '';
@@ -599,7 +599,7 @@ class FrontController extends Controller
 
         $headers = array(
             "accept: application/json",
-            "X-MM-GATEWAY-KEY: Gdea42150-deb0-e6a9-3d88-bcbc0c724f00",
+            "X-MM-GATEWAY-KEY: G94193561-6669-1626-76fd-b7b02fe6b216",
             "Authorization: Bearer ".$userToken
         );
 
@@ -658,7 +658,7 @@ class FrontController extends Controller
             CURLOPT_CUSTOMREQUEST => "DELETE",
             CURLOPT_HTTPHEADER => array(
                 "accept: application/json",
-                "x-mm-gateway-key: Gdea42150-deb0-e6a9-3d88-bcbc0c724f00",
+                "x-mm-gateway-key: G94193561-6669-1626-76fd-b7b02fe6b216",
                 "authorization: Bearer $request->userToken"
             ),
         ));
