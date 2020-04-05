@@ -480,6 +480,7 @@ class FrontController extends Controller
         $response = $this->SendRequestPost($url, $json, $headers);
         $response = json_decode($response, true);
 
+
         // make log
         $actionName = "Omantel Verify Pin";
         $parameters_arr = array(
