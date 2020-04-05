@@ -373,7 +373,7 @@ class FrontController extends Controller
     {
         $token = $this->create_token()['accessToken'];
 
-        $Url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . $request->redirect_url;
+        $Url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/web/auth/dialog?access_token=$token&redirect=".$request->redirect_url."&auto=false&authMode=AUTO&distributionChannel=APP";
 
         session()->put('success_url',$request->redirect_url);
         // make log
@@ -406,7 +406,12 @@ class FrontController extends Controller
         $response = $this->SendRequestGet($url, $json, $headers);
         $response = json_decode($response, true);
 
-        session()->put('check_status_id',  $response[0]['id']);
+        if(isset($response[0]['id']) && $response[0]['id'] !=""){
+          $check_status_id = $response[0]['id']  ;
+          session()->put('check_status_id',  $response[0]['id']);
+        }else{
+          $check_status_id = "" ;
+        }
 
         // make log
         $actionName = "Omantel Check Status";
@@ -415,7 +420,7 @@ class FrontController extends Controller
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
             'headers' =>  $headers,
             'response' => $response,
-            'check_status_id' => $response[0]['id'],
+            'check_status_id' =>   $check_status_id ,
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
