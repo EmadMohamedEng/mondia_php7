@@ -163,9 +163,7 @@ class ProvidersController extends Controller {
     }
 
     public function audios($id) {
-
-        $audios = \App\Audio::where('provider_id', $id)->get();
-        return view('audios.index', compact('audios'));
+        return view('audios.singleprovider');
     }
 
 }

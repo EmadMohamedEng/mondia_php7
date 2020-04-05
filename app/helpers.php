@@ -62,6 +62,7 @@ function get_static_routes()
     Route::get('videos/allData', 'VideosController@allData');
     Route::get('posts/allData', 'PostsController@allData');
     Route::get('audios/allData', 'AudiosController@allData');
+    Route::get('datatablesProviderAudios/{id}', 'AudiosController@datatablesProviderAudios');
     Route::get('listazan', 'ListAzanController@index');
 
 

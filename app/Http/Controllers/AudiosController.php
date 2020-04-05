@@ -41,6 +41,55 @@ class AudiosController extends Controller {
         $audios = $audios->get();
         $datatable = \DataTables::of($audios)
             ->addColumn('index', function (audio $audio) {
+                return '<input class="select_all_template" type="checkbox" name="selected_rows[]" value="'.$audio->id.'" class="roles" onclick="collect_selected(this)">';
+            })
+            ->addColumn('id', function (audio $audio){
+                return $audio->id;
+            })
+            ->addColumn('provider', function (audio $audio) {
+                return '<a href="'.url('providers/'.$audio->provider->id.'/edit').'"target=_blank>'.$audio->provider->title.'</a>';
+
+            })
+            ->addColumn('title', function (audio $audio) {
+                $str = '';
+                $languages = Language::all();
+                foreach($languages as $language){
+                $str .= '<li> <b>'.$language->title .':'.'</b>'. $audio->getTranslation('title',$language->short_code).'</li>';
+                }
+                return $str;
+
+            })
+            ->addColumn('operator', function (audio $audio) {
+                return '<a href="'.url('operators/'.$audio->operator->id.'/edit').'"target=_blank>'.$audio->operator->name.'</a>';
+            })
+            ->addColumn('code', function (audio $audio){
+                return $audio->code;
+            })
+            ->addColumn('video', function (audio $audio){
+                return ($audio->video_id)?$audio->video->title:' -- ';
+            })
+            ->addColumn('azan_flage', function (audio $audio){
+                return $audio->azan_flage == 1 ?"ON":"OFF";
+            })
+            ->addColumn('action', function (audio $audio) {
+                return '<td class="visible-md visible-lg">
+                                        <div class="btn-group">
+                                            <a class="btn btn-sm show-tooltip" href="' . url("audios/" . $audio->id . "/edit") . '" title="Edit"><i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-sm show-tooltip btn-danger" onclick="return ConfirmDelete();" href="' . url("audios/" . $audio->id . "/delete") . '" title="Delete"><i class="fa fa-trash"></i></a>
+                                        </div>
+                                    </td>';
+            })
+            ->escapeColumns([])
+            ->make(true);
+        return $datatable;
+    }
+
+    public function datatablesProviderAudios($id)
+    {
+        $audios = Audio::where('provider_id', $id)->get();
+
+        $datatable = \DataTables::of($audios)
+            ->addColumn('index', function (audio $audio) {
                 return '<input class="select_all_template" type="checkbox" name="selected_rows[]" value="{{$audio->id}}" class="roles" onclick="collect_selected(this)">';
             })
             ->addColumn('id', function (audio $audio){
