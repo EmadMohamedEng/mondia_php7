@@ -183,7 +183,6 @@ class FrontController extends Controller
     {
        session()->put('OpID',omantel);
         $response = $this->check_status($userToken);
-       // $response = json_decode($response, true);
         if(empty($response)){
             return $this->pin_code($userToken);
         }else{
@@ -714,13 +713,14 @@ class FrontController extends Controller
         return $response;
     }
 
+
     public function du_pin_code()
     {
         $x = 12;
 
         $trxid = $randomNum=substr(str_shuffle("123456789123456789123456789"), 0, $x);
 
-        $url = "http://pay-with-du.ae/16/mondiamedia/mondia-duelkheer-1-en-doi-web?serviceProvider=mondiamedia&serviceid=duelkheer&trxid=".$trxid."&redirectUrl=".urlencode(session()->get('success_url'));
+        $url = "http://pay-with-du.ae/16/mondiamedia/mondia-duelkheer-1-en-doi-web?serviceProvider=mondiamedia&serviceid=duelkheer&trxid=".$trxid."&redirectUrl=".urlencode(session()->get('current_url'));
 
         // make log
         $actionName = "DU Send PinCode";
@@ -777,8 +777,15 @@ class FrontController extends Controller
 
     public function du_logout()
     {
-        session()->flush();
-        return redirect(session()->get('success_url'));
+        if( session()->has('OpID')  && session()->get('OpID') != ''  ){
+
+          $Url = url("/?OpID=".session()->get('OpID')) ;
+          session()->flush();
+          return redirect($Url);
+        }else{
+          return redirect(url('/'));
+        }
+
     }
 
 }
