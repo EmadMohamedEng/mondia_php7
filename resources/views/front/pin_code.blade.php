@@ -5,13 +5,13 @@
     <section class="subscribe_page">
       <div class="row m-0">
         <div class="col-md-12 col-lg-12 col-xl-9 col-12">
-          @if(session()->has('status') && session()->get('status') == 'active')
+          {{--  @if(session()->has('status') && session()->get('status') == 'active')
           <div class="alert alert-success" role="alert">تم التسجيل بنجاح
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          @endif
+          @endif  --}}
 
           @if(session()->has('faild'))
           <div class="alert alert-danger" role="alert">من فضلك ادخل رقم التحقق الصحيح

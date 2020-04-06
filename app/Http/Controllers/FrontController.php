@@ -117,6 +117,8 @@ class FrontController extends Controller
 
     public function view_content($id,Request $request)
     {
+     $current_url =    \Request::fullUrl()  ;
+     session()->put('current_url',$current_url);
 
         $view_coming_post = get_setting('view_coming_post');
         $enable = get_setting('enable_testing');
@@ -153,16 +155,18 @@ class FrontController extends Controller
             ->where('posts.show_date','<=',Carbon::now()->toDateString());
         }
         $contents = $contents->orderBy('contents.created_at', 'desc')->limit(4)->get();
-        if($request->has('userToken')){
+        if($request->has('userToken')){ // subscribe for the first time
            session()->put('userToken',$request->get('userToken'));
             $userToken = $request->userToken;
             $refreshToken = $request->refreshToken;
             $expiresIn = $request->expiresIn;
             $status = $request->status;
 
-        }else{
+        }else{ // login for scond time
           $userToken =  session()->get('userToken')  ;
     }
+
+
 
 
     if($request->OpID == omantel)
@@ -395,6 +399,13 @@ class FrontController extends Controller
         return redirect($Url);
     }
 
+
+    public function test()
+    {
+      $current_url =  session()->get('current_url');
+      return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
+    }
+
     public function check_status($userToken)
     {
 
@@ -412,6 +423,13 @@ class FrontController extends Controller
 
         $response = $this->SendRequestGet($url, $json, $headers);
         $response = json_decode($response, true);
+
+        if(isset($response[0]['error']) && $response[0]['error'] =="TOKEN_NOT_VALID"){ // Token expire So create new one
+         $current_url =  session()->get('current_url');
+          return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
+        }
+
+
 
         if(isset($response[0]['id']) && $response[0]['id'] !=""){
           $check_status_id = $response[0]['id']  ;
@@ -452,6 +470,13 @@ class FrontController extends Controller
 
         $response = $this->SendRequestPost($url, $json, $headers);
         $response = json_decode($response, true);
+
+
+
+        if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID"){ // Token expire So create new one
+          $current_url =  session()->get('current_url');
+           return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
+         }
 
         // make log
         $actionName = "Omantel Send PinCode";
@@ -498,6 +523,12 @@ class FrontController extends Controller
 
         $response = $this->SendRequestPost($url, $json, $headers);
         $response = json_decode($response, true);
+
+
+        if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID"){ // Token expire So create new one
+          $current_url =  session()->get('current_url');
+           return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
+         }
 
 
         // make log
@@ -641,6 +672,7 @@ class FrontController extends Controller
 
         $response = $this->SendRequestGet($url, $json, $headers);
         $response = json_decode($response, true);
+
 
         if(isset($response[0]['id']) && $response[0]['id'] !=""){
           $check_status_id = $response[0]['id']  ;
