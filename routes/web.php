@@ -46,7 +46,7 @@ Route::get('omantel/redirect', 'FrontController@redirect')->name('front.oman');
 Route::get('pin_code', 'FrontController@pincode')->name('front.pincode');
 Route::post('verify_pin', 'FrontController@verify_pin')->name('front.verfiy');
 Route::get('delete_subscription', 'FrontController@delete_subscription')->name('front.unsub');
-Route::get('logout','FrontController@logout')->name('front.logout');
+Route::get('omantel_logout','FrontController@logout')->name('front.logout');
 // Route::get('omantel_landing', 'OmanTelController@index');
 // Route::get('test_omantel_login', 'OmanTelController@testOmanTelLogin');
 // Route::get('create_token', 'OmanTelController@create_token');

@@ -180,10 +180,13 @@ if (Config::get('languages')[App::getLocale()] == "English") {
                         <li class="divider"></li>
 
                         <li>
-                            <a href="{{url('/logout')}}">
+                            <a href="#" onclick="document.getElementById('logout_form').submit()">
                                 <i class="fa fa-off"></i>
                                 @lang('messages.logout')
                             </a>
+                            <form id="logout_form" action="{{route('logout')}}" method="post">
+                              @csrf
+                            </form>
                         </li>
                     </ul>
                     <!-- BEGIN User Dropdown -->
