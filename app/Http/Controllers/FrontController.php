@@ -556,7 +556,7 @@ class FrontController extends Controller
             return back()->with('faild','not success pincode');
         }
         session()->put('status','active');
-        return redirect(session()->get('success_url'));
+        return redirect(session()->get('current_url'));
     }
 
     public function delete_subscription(Request $request)
