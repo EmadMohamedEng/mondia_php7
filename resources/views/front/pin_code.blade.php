@@ -25,7 +25,8 @@
 
           <div class="subscribe_bg">
             <div class="subtitle mb-3 py-2 px-4" style="background-color:#ff9e1b !important">
-              تم ارسال رقم التحقق الى رقم التليفون الذى ادخلته برجاء ادخاله
+              تم ارسال رقم التحقق  الي هاتفك برجاء ادخاله
+
             </div>
 
             <form class="form-signin" action="{{url('verify_pin')}}" method="POST">
