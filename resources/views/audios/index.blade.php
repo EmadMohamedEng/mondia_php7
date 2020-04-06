@@ -66,12 +66,17 @@
    $('#audios').addClass('active');
         $('#audios-index').addClass('active');
         console.log("{{request()->route('id')}}");
-        
+
     $(document).ready(function () {
         $('#example_rbt').DataTable({
             "processing": true,
             "serverSide": true,
             "search": {"regex":true},
+            columnDefs: [ {
+            orderable: false,
+            className: 'select-checkbox',
+            targets:   0
+            } ],
             ajax: "{!! url('audios/allData?video_id='.request()->route('id')) !!}",
             columns: [
                 {data: 'index'},
@@ -84,7 +89,7 @@
                 {data: 'azan_flage'},
                 {data: 'action', searchable: false}
             ]
-             , "pageLength": {{get_pageLength()}}
+             , "pageLength": {{get_pageLength()}},
         });
     });
 </script>

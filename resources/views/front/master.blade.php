@@ -182,6 +182,19 @@
       });
     }
     $('.search-res').val('{{request()->get("search")}}')
+    $(document).on('click','.play_za',function(){
+      var _this = this
+      if($(this).hasClass('fa-play')){
+          $(this).removeClass('fa-play').addClass('fa-pause')
+
+          $('.play_za').not(this).each(function(){
+            $(this).removeClass('fa-pause').addClass('fa-play')
+          });
+      }
+      else{
+        $(this).removeClass('fa-pause').addClass('fa-play')
+      }
+    })
   </script>
   @yield('script')
 </body>

@@ -78,6 +78,11 @@ Post
             "processing": true,
             "serverSide": true,
             "search": {"regex":true},
+            columnDefs: [ {
+            orderable: false,
+            className: 'select-checkbox',
+            targets:   0
+            } ],
             ajax: "{!! url('posts/allData?video_id='.Request::route('id')) !!}",
             columns: [
                 {data: 'index'},

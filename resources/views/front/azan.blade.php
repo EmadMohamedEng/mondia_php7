@@ -23,15 +23,18 @@ switch ($os) {
 <!-- End Header -->
 <link rel="stylesheet" type="text/css" href="{{asset('front/css/azan_style.css')}}">
 <style>
-    #chooseAudio .np-play::before, #chooseAudio #play::before{
+    /* #chooseAudio .np-play::before, #chooseAudio #play::before{
         content:"";
-    }
+    } */
     @if(request()->has('OpID') && request()->get('OpID') == omantel)
-        #chooseAudio table td a, #chooseAudio table td a span {
+        #chooseAudio table td a {
         color: #fff;
         background: #ff9e1b;
       }
       span.fa-play {
+        color: #ff9e1b;
+      }
+      span.fa-pause {
         color: #ff9e1b;
       }
     @endif

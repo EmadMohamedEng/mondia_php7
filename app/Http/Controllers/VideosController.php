@@ -51,7 +51,7 @@ class VideosController extends Controller
         $service = null;
         $datatable = \DataTables::of($videos)
             ->addColumn('index', function (Video $video) {
-                return '<input class="select_all_template" type="checkbox" name="selected_rows[]" value="{{$videos->id}}" class="roles" onclick="collect_selected(this)">';
+                return '<input class="select_all_template" type="checkbox" name="selected_rows[]" value="'.$video->id.'" class="roles" onclick="collect_selected(this)">';
             })
             ->addColumn('id', function (Video $video) {
                 return $video->id;

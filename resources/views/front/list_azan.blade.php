@@ -24,13 +24,13 @@ switch ($os) {
         <a class="btn btn-success" href="sms:{{$val->operator->code}}{{$Att}}{{$val->code}}">@lang('front.make_it_call_tone')</a>
     </td>
     <td>
-        <a style="color:#000" href="#">
+        <p style="color:#000" href="#">
             <p>{{$val->getTranslation('title',getCode())}}</p>
-        </a>
+        </p>
     </td>
     <td>
         <div class="np-play">
-            <span class="fa fa-play" data-src="{{url($val->source)}}"></span>
+            <span class="fa fa-play play_za" data-src="{{url($val->source)}}"></span>
         </div>
         <audio id="audio_test" controls="controls" style="display:none">
             <source id="audioSource" src="">

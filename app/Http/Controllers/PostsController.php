@@ -40,7 +40,7 @@ class PostsController extends Controller
         $video = null;
         $datatable = \DataTables::of($posts)
             ->addColumn('index', function (Post $post) {
-                return '<input class="select_all_template" type="checkbox" name="selected_rows[]" value="{{$post->id}}" class="roles" onclick="collect_selected(this)">';
+                return '<input class="select_all_template" type="checkbox" name="selected_rows[]" value="'.$post->id.'" class="roles" onclick="collect_selected(this)">';
             })
             ->addColumn('id', function (Post $post) {
                 return $post->id;

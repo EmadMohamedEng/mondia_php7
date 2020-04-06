@@ -44,8 +44,7 @@
   color: #000;
 }
 
-#chooseAudio table td a, 
-#chooseAudio table td a span{
+#chooseAudio table td a{
   color: #fff;
   background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
 }
@@ -68,18 +67,18 @@
 #chooseAudio #play::before {
   /* background: url(../images/play_small.svg) no-repeat center;
   background-size: 14px; */
-  font-family: "Font Awesome 5 Free";
+  /* font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f04b";
+  content: "\f04b"; */
 }
 
 #chooseAudio #paused::before,
 #chooseAudio #playing::before {
   /* background: url(../images/pause_small.png) no-repeat center;
   background-size: 14px; */
-  font-family: "Font Awesome 5 Free";
+  /* font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f04c";
+  content: "\f04c"; */
 }
 
 /* Audio Player Styles ---------------------------------------------*/
@@ -183,6 +182,9 @@
 }
 
 span.fa-play {
+  color: #2f7cc7;
+}
+span.fa-pause {
   color: #2f7cc7;
 }
 

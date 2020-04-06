@@ -625,6 +625,8 @@ if (Config::get('languages')[App::getLocale()] == "English") {
             var selected_list = [];
             var checker_list = [];
             function collect_selected(element) {
+              console.log(element);
+
                 var id;
                 if (!element.value)
                 {

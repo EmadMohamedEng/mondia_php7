@@ -23,15 +23,18 @@ switch ($os) {
 <!-- End Header -->
 <link rel="stylesheet" type="text/css" href="{{asset('front/css/azan_style.css')}}">
 <style>
-    #chooseAudio .np-play::before, #chooseAudio #play::before{
+    /* #chooseAudio .np-play::before, #chooseAudio #play::before{
         content:"";
-    }
+    } */
     @if(request()->has('OpID') && request()->get('OpID') == omantel)
-        #chooseAudio table td a, #chooseAudio table td a span {
+        #chooseAudio table td a{
         color: #fff;
         background: #ff9e1b;
       }
       span.fa-play {
+        color: #ff9e1b;
+      }
+      span.fa-pause {
         color: #ff9e1b;
       }
     @endif
@@ -68,13 +71,13 @@ switch ($os) {
                         <a class="btn btn-success" href="sms:{{$val->operator->code}}{{$Att}}{{$val->code}}">@lang('front.make_it_call_tone')</a>
                     </td>
                     <td>
-                        <a style="color:#000" href="{{url('view_rbt/'.$val->id)}}">
+                        <p style="color:#000" href="{{url('view_rbt/'.$val->id)}}">
                             <span>{{$val->getTranslation('title',getCode())}}</span>
-                        </a>
+                        </p>
                     </td>
                     <td>
                         <div class="np-play play-status">
-                            <span class="fa fa-play" data-src="{{url($val->source)}}"></span>
+                            <span class="fa fa-play play_za" data-src="{{url($val->source)}}"></span>
                         </div>
                         <audio id="audio_test" controls="controls" style="display:none">
                             <source id="audioSource" src="">
