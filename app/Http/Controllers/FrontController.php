@@ -117,6 +117,7 @@ class FrontController extends Controller
 
     public function view_content($id,Request $request)
     {
+
         $view_coming_post = get_setting('view_coming_post');
         $enable = get_setting('enable_testing');
         $content = Video::select('contents.*', 'contents.id as content_id');
@@ -158,34 +159,41 @@ class FrontController extends Controller
             $refreshToken = $request->refreshToken;
             $expiresIn = $request->expiresIn;
             $status = $request->status;
-            if($request->OpID == omantel)
-            {
-               session()->put('OpID',omantel);
-                $response = $this->check_status($userToken);
-               // $response = json_decode($response, true);
-                if(empty($response)){
-                    return $this->pin_code($userToken);
-                }
-                else{
-                    session()->put('status','active');
-                    return view('front.inner', compact('content','contents'));
-                }
-            }
 
-            if($request->OpID == du)
-            {
-               session()->put('OpID',du);
-                $response = $this->du_check_status($userToken);
+        }else{
+          $userToken =  session()->get('userToken')  ;
+    }
 
-                if(empty($response)){
-                    return $this->du_pin_code($userToken);
-                }
-                else{
-                    session()->put('status','active');
-                    return view('front.inner', compact('content','contents'));
-                }
-            }
+
+    if($request->OpID == omantel)
+    {
+       session()->put('OpID',omantel);
+        $response = $this->check_status($userToken);
+       // $response = json_decode($response, true);
+        if(empty($response)){
+            return $this->pin_code($userToken);
         }
+        else{
+            session()->put('status','active');
+            return view('front.inner', compact('content','contents'));
+        }
+    }
+
+    if($request->OpID == du)
+    {
+       session()->put('OpID',du);
+        $response = $this->du_check_status($userToken);
+
+        if(empty($response)){
+            return $this->du_pin_code($userToken);
+        }
+        else{
+            session()->put('status','active');
+            return view('front.inner', compact('content','contents'));
+        }
+    }
+
+
         return view('front.inner', compact('content','contents'));
     }
 
