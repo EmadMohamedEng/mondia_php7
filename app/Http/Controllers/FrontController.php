@@ -163,7 +163,17 @@ class FrontController extends Controller
             $status = $request->status;
 
         }else{ // login for scond time
-          $userToken =  session()->get('userToken')  ;
+          if(session()->has('userToken') && session()->get('userToken') != ''){ // if our server session is expire
+            $userToken =  session()->get('userToken')  ;
+          }else{ // make Mondia login again by create new token
+            if($request->OpID == omantel){
+               return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
+           }elseif($request->OpID == du){
+            return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+           }
+
+          }
+
     }
 
 
@@ -176,8 +186,7 @@ class FrontController extends Controller
        // $response = json_decode($response, true);
         if(empty($response)){
             return $this->pin_code($userToken);
-        }
-        else{
+        }else{
             session()->put('status','active');
             return view('front.inner', compact('content','contents'));
         }
@@ -672,6 +681,11 @@ class FrontController extends Controller
 
         $response = $this->SendRequestGet($url, $json, $headers);
         $response = json_decode($response, true);
+
+        if(isset($response[0]['error']) && $response[0]['error'] =="TOKEN_NOT_VALID"){ // Token expire So create new one
+          $current_url =  session()->get('current_url');
+           return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+         }
 
 
         if(isset($response[0]['id']) && $response[0]['id'] !=""){
