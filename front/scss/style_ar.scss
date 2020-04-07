@@ -1,4 +1,4 @@
-// $bg_color: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
+$bg_color: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
 $white_color: #FFF;
 $black_color: #000;
 $grey_color: #adadad;
@@ -615,6 +615,51 @@ a {
   }
 
   /* End Inner Page */
+
+  /* Start Modal For InnerPager */
+  .modal_cover {
+    .modal-dialog {
+      .modal-content {
+        .modal-header {
+          .close {
+            margin: -1rem -1rem -1rem 0;
+          }
+        }
+        .modal-body {
+          .modal_club {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+
+            .btn {
+              background: $bg_color;
+              color: $white_color;
+              border: 0;
+            }
+
+            p {
+              font-size: 1.15rem;
+            }
+          }
+        }
+
+        .modal-footer {
+          justify-content: center;
+
+          .btn {
+            background: $bg_color;
+            color: $white_color;
+            border: 0;
+
+            &.btn_2 {
+              background: #00a9ce;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* End Modal For InnerPager *
 
   /* Start Azan Page */
   .azan_page {
