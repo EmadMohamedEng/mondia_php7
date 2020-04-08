@@ -6,7 +6,7 @@ return [
     'search' => 'بحث',
     'release' =>  'تم التحرير في',
     'related_video' => 'محتوى  مماثل',
-    'play' => 'تشغيل',
+    'watch_now' => 'شاهد الان',
     'share' => 'مشاركة',
     'azan' => 'اذان',
     'merath' => 'حساب المواريث',
@@ -46,5 +46,6 @@ return [
     'make_it_call_tone' => 'اجعلها كول تون',
     'salah' => 'الصلاه',
     'time' => 'الوقت' ,
-    'omantel_unsub_success' => 'تم الغاء اشتراكك بنجاح',
+    'unsub_success' => 'تم الغاء اشتراكك بنجاح',
+    'wrong_pincode' => 'رقم التحقق غير صحيح',
 ];

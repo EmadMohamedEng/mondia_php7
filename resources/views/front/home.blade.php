@@ -8,9 +8,9 @@
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
     @include('front.search')
 
-    @if(session()->has('Omantel_unsub_success') && session()->get('Omantel_unsub_success') != '')
+    @if(session()->has('unsub_success') && session()->get('unsub_success') != '')
     <div class="alert alert-success" role="alert">
-      @lang('front.omantel_unsub_success')
+      @lang('front.unsub_success')
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>

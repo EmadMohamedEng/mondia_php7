@@ -25,18 +25,13 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           @if(request()->has('OpID') && request()->get('OpID') == omantel)
 
           <button data-toggle="modal" data-target="#exampleModalCover" class="btn button_play primary">
-            <i class="fas fa-play play_icon"></i> @lang('front.play')
+            <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
 
           @elseif(request()->has('OpID') && request()->get('OpID') == du)
-{{--
-          <button onclick="location.href= '{{route('front.du',['redirect_url' => url()->full()])}}'" class="btn button_play primary">
-            <i class="fas fa-play play_icon"></i> @lang('front.play')
-          </button>  --}}
-
 
           <button data-toggle="modal" data-target="#exampleModalCover_du" class="btn button_play primary">
-            <i class="fas fa-play play_icon"></i> @lang('front.play')
+            <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
 
           @endif

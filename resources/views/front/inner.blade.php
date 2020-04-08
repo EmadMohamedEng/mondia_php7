@@ -27,15 +27,15 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           <img src="{{$src}}" alt="Video Cover">
           @if(request()->has('OpID') && request()->get('OpID') == omantel)
           <button onclick="location.href= '{{route('front.oman',['redirect_url' => url()->full()])}}'" class="btn button_play primary">
-            <i class="fas fa-play play_icon"></i> @lang('front.play')
+            <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
           @elseif(request()->has('OpID') && request()->get('OpID') == du)
           <button onclick="location.href= '{{route('front.du',['redirect_url' => url()->full()])}}'" class="btn button_play primary">
-            <i class="fas fa-play play_icon"></i> @lang('front.play')
+            <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
           @else
           <button data-toggle="modal" data-target="#exampleModalCover" class="btn button_play primary">
-            <i class="fas fa-play play_icon"></i> @lang('front.play')
+            <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
           @endif
           @endif

@@ -14,7 +14,8 @@
           @endif  --}}
 
           @if(session()->has('faild'))
-          <div class="alert alert-danger" role="alert">من فضلك ادخل رقم التحقق الصحيح
+          <div class="alert alert-danger" role="alert">
+            @lang('front.wrong_pincode')
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -42,6 +43,10 @@
                 </div>
               </div>
             </form>
+            <div class="col-md-12 col-lg-12 col-xl-12 col-12" >
+            <button   style="background-color:#ff9e1b !important;margin-bottom:18px;font-size:13px;" onclick="location.href= '{{url('Omantel_send_pincode')}}'"  type="button" class="btn btn_1 btn-lg text-center text-capitalize">Resend Pincode  </button>
+            </div>
+
           </div>
         </div>
       </div>

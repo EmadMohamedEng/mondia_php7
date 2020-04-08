@@ -6,7 +6,7 @@ return [
     'search' => 'search',
     'release' => 'Release date',
     'related_video' => 'Related Content',
-    'play' => 'Play',
+    'watch_now' => 'watch Now',
     'share' => 'Share',
     'azan' => 'Azan',
     'merath' => 'Inheritance account',
@@ -46,5 +46,6 @@ return [
     'make_it_call_tone' => 'Make Call Tone',
     'salah' => 'Prayer',
     'time' => 'Time',
-    'omantel_unsub_success' => 'You are unsubcribe success',
+    'unsub_success' => 'You are unsubcribe success',
+    'wrong_pincode' => 'The pincode is incorrect',
 ];
