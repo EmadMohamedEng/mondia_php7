@@ -891,4 +891,13 @@ class FrontController extends Controller
 
     }
 
+
+    public function du_set_session()
+    {
+      session()->put('userToken',"U597c0e5b-c351-4044-9ce2-f99e39fcc671");
+      echo  session()->get('userToken') ;
+    }
+
+
+
 }

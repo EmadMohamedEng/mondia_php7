@@ -62,6 +62,7 @@ Route::get('du_goto_pincode', 'FrontController@du_goto_pincode');
 Route::get('du_pin_code', 'FrontController@du_pin_code')->name('front.du_pin_code');
 Route::get('du_delete_subscription/', 'FrontController@du_delete_subscription')->name('front.du_unsub');
 Route::get('du_logout','FrontController@du_logout')->name('front.du_logout');
+Route::get('du_set_session','FrontController@du_set_session');
 // Route::get('du_landing', 'DuController@index');
 // Route::get('test_du_login', 'DuController@testOmanTelLogin');
 // Route::get('du_create_token', 'DuController@create_token');
