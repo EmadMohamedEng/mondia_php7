@@ -585,6 +585,12 @@ class FrontController extends Controller
 
         $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription/$check_status_id ";
 
+        $headers= array(
+          "accept: application/json",
+          "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
+          "authorization: Bearer $userToken"
+      ) ;
+
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
@@ -594,12 +600,11 @@ class FrontController extends Controller
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "DELETE",
-            CURLOPT_HTTPHEADER => array(
-                "accept: application/json",
-                "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
-                "authorization: Bearer $userToken"
-            ),
+            CURLOPT_HTTPHEADER => $headers,
         ));
+
+
+
         $response = curl_exec($curl);
         $err = curl_error($curl);
         curl_close($curl);
@@ -771,6 +776,12 @@ class FrontController extends Controller
 
         $url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/api/subscription/$check_status_id";
 
+        $headers = array(
+          "accept: application/json",
+          "x-mm-gateway-key: G94193561-6669-1626-76fd-b7b02fe6b216",
+          "authorization: Bearer  $userToken"
+      ) ;
+
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
@@ -780,11 +791,7 @@ class FrontController extends Controller
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "DELETE",
-            CURLOPT_HTTPHEADER => array(
-                "accept: application/json",
-                "x-mm-gateway-key: G94193561-6669-1626-76fd-b7b02fe6b216",
-                "authorization: Bearer  $userToken"
-            ),
+            CURLOPT_HTTPHEADER => $headers,
         ));
         $response = curl_exec($curl);
         $err = curl_error($curl);
@@ -797,6 +804,7 @@ class FrontController extends Controller
         $parameters_arr = array(
           'userToken' =>   $userToken,
           'check_status_id' =>  $check_status_id,
+          'headers' =>  $headers,
            "response" => $response,
         );
         $this->log_action($actionName, $url, $parameters_arr);
