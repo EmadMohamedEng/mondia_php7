@@ -51,6 +51,9 @@ a:hover, a:focus, a:active {
   /* End shakih Page */
   /* Start Inner Page */
   /* End Inner Page */
+  /* Start Modal For InnerPager */
+  /* End Modal For InnerPager *
+
   /* Start Azan Page */
   /* End Azan Page */
   /* Start Nearmosque Page */
@@ -470,6 +473,32 @@ a:hover, a:focus, a:active {
   color: #c39;
   margin-bottom: 0;
   margin-top: -0.75rem;
+}
+.main_container .modal_cover .modal-dialog .modal-content .modal-header .close {
+  margin: -1rem -1rem -1rem 0;
+}
+.main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club .btn {
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
+  color: #FFF;
+  border: 0;
+}
+.main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club p {
+  font-size: 1.15rem;
+}
+.main_container .modal_cover .modal-dialog .modal-content .modal-footer {
+  justify-content: center;
+}
+.main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn {
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
+  color: #FFF;
+  border: 0;
+}
+.main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn.btn_2 {
+  background: #00a9ce;
 }
 .main_container .azan_page {
   margin-top: 3rem;

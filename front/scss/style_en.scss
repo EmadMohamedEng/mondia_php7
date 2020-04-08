@@ -591,6 +591,46 @@ a {
     }
   }
 
+  /* Start Modal For InnerPager */
+  .modal_cover {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          .modal_club {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+
+            .btn {
+              background: $bg_color;
+              color: $white_color;
+              border: 0;
+            }
+
+            p {
+              font-size: 1.15rem;
+            }
+          }
+        }
+
+        .modal-footer {
+          justify-content: center;
+
+          .btn {
+            background: $bg_color;
+            color: $white_color;
+            border: 0;
+
+            &.btn_2 {
+              background: #00a9ce;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* End Modal For InnerPager */
+
   /* End Inner Page */
 
   /* Start Azan Page */
@@ -1475,6 +1515,28 @@ a {
       }
     }
 
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          top: 2rem;
+
+          .modal-header {
+            h5 {
+              font-size: 1.15rem;
+            }
+          }
+
+          .modal-footer {
+            justify-content: center;
+
+            .btn {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
     .azan_page {
       .azan_title {
         h2 {
@@ -1929,6 +1991,28 @@ a {
       }
     }
 
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          top: 2rem;
+
+          .modal-header {
+            h5 {
+              font-size: 1.15rem;
+            }
+          }
+
+          .modal-footer {
+            justify-content: center;
+
+            .btn {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
     .azan_page {
       .azan_title {
         h2 {
@@ -2376,6 +2460,28 @@ a {
           margin-left: 4rem;
           margin-top: 32px;
           font-size: 21px;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          top: 2rem;
+
+          .modal-header {
+            h5 {
+              font-size: 1.15rem;
+            }
+          }
+
+          .modal-footer {
+            justify-content: center;
+
+            .btn {
+              font-size: 1rem;
+            }
+          }
         }
       }
     }
@@ -2868,6 +2974,28 @@ a {
           margin-left: 4.25rem;
           margin-top: 37px;
           font-size: 20px;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          top: 2rem;
+
+          .modal-header {
+            h5 {
+              font-size: 1.15rem;
+            }
+          }
+
+          .modal-footer {
+            justify-content: center;
+
+            .btn {
+              font-size: 1rem;
+            }
+          }
         }
       }
     }
@@ -3401,6 +3529,47 @@ a {
           margin-left: 4.5rem;
           margin-top: 45px;
           font-size: 30px;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        max-width: 90%;
+
+        .modal-content {
+          .modal-header {
+            h5 {
+              font-size: 1.85rem;
+              width: 100%;
+            }
+
+            .close {
+              margin: -0.75rem -1rem -1rem auto;
+              font-size: 2.5rem;
+            }
+          }
+
+          .modal-body {
+            .modal_club {
+
+              .btn,
+              strong,
+              p {
+                font-size: 2rem;
+              }
+            }
+          }
+
+          .modal-footer {
+            padding: 1rem;
+
+            .btn {
+              font-size: 2rem;
+              padding: 0.5rem 4rem;
+              margin: 0 1rem;
+            }
+          }
         }
       }
     }
@@ -4018,6 +4187,47 @@ a {
           margin-left: 4.5rem;
           margin-top: 55px;
           font-size: 35px;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        max-width: 90%;
+
+        .modal-content {
+          .modal-header {
+            h5 {
+              font-size: 2.5rem;
+              width: 100%;
+            }
+
+            .close {
+              margin: -0.75rem -1rem -1rem auto;
+              font-size: 2.75rem;
+            }
+          }
+
+          .modal-body {
+            .modal_club {
+
+              .btn,
+              strong,
+              p {
+                font-size: 2.5rem;
+              }
+            }
+          }
+
+          .modal-footer {
+            padding: 1.25rem;
+
+            .btn {
+              font-size: 2.5rem;
+              margin: 0 1rem;
+              padding: 0.5rem 6rem;
+            }
+          }
         }
       }
     }

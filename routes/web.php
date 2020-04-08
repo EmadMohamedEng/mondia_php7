@@ -37,6 +37,7 @@ Route::get('azan','FrontController@azan')->name('front.azan');
 Route::get('list_azan/{id}','FrontController@list_azan');
 Route::get('view_rbt/{id}','FrontController@view_rbt');
 Route::get('rbts','FrontController@rbts');
+Route::get('test','FrontController@test');
 
 
 
@@ -70,3 +71,6 @@ Route::get('du_logout','FrontController@du_logout')->name('front.du_logout');
 //     session()->put('userToken','U7fec00ea-9d9c-42b2-84b4-f62ef8d225ad');
 //     session()->put('status','active');
 //  });
+
+
+

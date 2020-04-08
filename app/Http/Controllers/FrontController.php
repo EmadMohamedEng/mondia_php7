@@ -117,6 +117,9 @@ class FrontController extends Controller
 
     public function view_content($id,Request $request)
     {
+     $current_url =    \Request::fullUrl()  ;
+     session()->put('current_url',$current_url);
+
         $view_coming_post = get_setting('view_coming_post');
         $enable = get_setting('enable_testing');
         $content = Video::select('contents.*', 'contents.id as content_id');
@@ -152,39 +155,57 @@ class FrontController extends Controller
             ->where('posts.show_date','<=',Carbon::now()->toDateString());
         }
         $contents = $contents->orderBy('contents.created_at', 'desc')->limit(4)->get();
-        if($request->has('userToken')){
+        if($request->has('userToken')){ // subscribe for the first time
+           session()->put('userToken',$request->get('userToken'));
             $userToken = $request->userToken;
             $refreshToken = $request->refreshToken;
             $expiresIn = $request->expiresIn;
             $status = $request->status;
-            if($request->OpID == omantel)
-            {
-                $response = $this->check_status($userToken);
-                $response = json_decode($response, true);
-                if(empty($response)){
-                    return $this->pin_code($userToken);
-                }
-                else{
-                    session()->put('status','active');
-                    session()->put('check_status_id',  $response[0]['id']);
-                    return view('front.inner', compact('content','contents'));
-                }
-            }
 
-            if($request->OpID == du)
-            {
-                $response = $this->du_check_status($userToken);
+        }else{ // login for scond time
+          if(session()->has('userToken') && session()->get('userToken') != ''){ // if our server session is expire
+            $userToken =  session()->get('userToken')  ;
+          }else{ // make Mondia login again by create new token
+            if($request->OpID == omantel){
+               return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
+           }elseif($request->OpID == du){
+            return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+           }
 
-                if(empty($response)){
-                    return $this->du_pin_code($userToken);
-                }
-                else{
-                    session()->put('status','active');
-                    session()->put('check_status_id',  $response[0]['id']);
-                    return view('front.inner', compact('content','contents'));
-                }
-            }
+          }
+
+    }
+
+
+
+
+    if($request->OpID == omantel)
+    {
+       session()->put('OpID',omantel);
+        $response = $this->check_status($userToken);
+        if(empty($response)){
+            return $this->pin_code($userToken);
+        }else{
+            session()->put('status','active');
+            return view('front.inner', compact('content','contents'));
         }
+    }
+
+    if($request->OpID == du)
+    {
+       session()->put('OpID',du);
+        $response = $this->du_check_status($userToken);
+
+        if(empty($response)){
+            return $this->du_pin_code($userToken);
+        }
+        else{
+            session()->put('status','active');
+            return view('front.inner', compact('content','contents'));
+        }
+    }
+
+
         return view('front.inner', compact('content','contents'));
     }
 
@@ -371,7 +392,7 @@ class FrontController extends Controller
     {
         $token = $this->create_token()['accessToken'];
 
-        $Url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . $request->redirect_url;
+        $Url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/web/auth/dialog?access_token=$token&redirect=".$request->redirect_url."&auto=false&authMode=AUTO&distributionChannel=APP";
 
         session()->put('success_url',$request->redirect_url);
         // make log
@@ -384,6 +405,13 @@ class FrontController extends Controller
 
         $this->log_action($actionName, '', $parameters_arr);
         return redirect($Url);
+    }
+
+
+    public function test()
+    {
+      $current_url =  session()->get('current_url');
+      return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
     }
 
     public function check_status($userToken)
@@ -404,12 +432,28 @@ class FrontController extends Controller
         $response = $this->SendRequestGet($url, $json, $headers);
         $response = json_decode($response, true);
 
+        if(isset($response[0]['error']) && $response[0]['error'] =="TOKEN_NOT_VALID"){ // Token expire So create new one
+         $current_url =  session()->get('current_url');
+          return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
+        }
+
+
+
+        if(isset($response[0]['id']) && $response[0]['id'] !=""){
+          $check_status_id = $response[0]['id']  ;
+          session()->put('check_status_id',  $response[0]['id']);
+        }else{
+          $check_status_id = "" ;
+        }
+
         // make log
         $actionName = "Omantel Check Status";
         $parameters_arr = array(
             'token' => $userToken,
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'headers' =>  $headers,
             'response' => $response,
+            'check_status_id' =>   $check_status_id ,
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
@@ -435,10 +479,18 @@ class FrontController extends Controller
         $response = $this->SendRequestPost($url, $json, $headers);
         $response = json_decode($response, true);
 
+
+
+        if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID"){ // Token expire So create new one
+          $current_url =  session()->get('current_url');
+           return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
+         }
+
         // make log
         $actionName = "Omantel Send PinCode";
         $parameters_arr = array(
-            'token' => $userToken,
+            'userToken' => $userToken,
+            'headers' =>  $headers,
             "response" => $response,
         );
 
@@ -480,27 +532,38 @@ class FrontController extends Controller
         $response = $this->SendRequestPost($url, $json, $headers);
         $response = json_decode($response, true);
 
+
+        if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID"){ // Token expire So create new one
+          $current_url =  session()->get('current_url');
+           return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
+         }
+
+
         // make log
         $actionName = "Omantel Verify Pin";
         $parameters_arr = array(
-            'token' => $userToken,
+            'userToken' => $userToken,
             'requestId' => $requestId,
             'pin' => $pin,
+            'headers' =>  $headers,
             "response" => $response,
         );
 
         $this->log_action($actionName, $url, $parameters_arr);
 
-        // if($response['responseCode'] == 670){
-        //     return back()->with('faild','not success pincode');
-        // }
+        if($response['responseCode'] == 670){
+            return back()->with('faild','not success pincode');
+        }
         session()->put('status','active');
-        return redirect(session()->get('success_url'));
+        return redirect(session()->get('current_url'));
     }
 
     public function delete_subscription(Request $request)
     {
-        $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription/$request->requestId";
+         $userToken  = session()->get('userToken') ;
+         $check_status_id  = session()->get('check_status_id') ;
+
+        $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription/$check_status_id ";
 
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -514,7 +577,7 @@ class FrontController extends Controller
             CURLOPT_HTTPHEADER => array(
                 "accept: application/json",
                 "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
-                "authorization: Bearer $request->userToken"
+                "authorization: Bearer $userToken"
             ),
         ));
         $response = curl_exec($curl);
@@ -526,6 +589,8 @@ class FrontController extends Controller
         // make log
         $actionName = "Omantel Delete Subscription";
         $parameters_arr = array(
+           'userToken' => $userToken,
+           'check_status_id' => $check_status_id,
             "response" => $response,
         );
         $this->log_action($actionName, $url, $parameters_arr);
@@ -536,8 +601,15 @@ class FrontController extends Controller
 
     public function logout()
     {
-        Session::forget(['requestId','userToken']);
-        return back();
+      if( session()->has('OpID')  && session()->get('OpID') != ''  ){
+        $Url = url("/?OpID=".session()->get('OpID')) ;
+       // session()->flush();
+        Session::forget(['check_status_id','userToken']);
+        return redirect($Url);
+      }else{
+        return redirect(url('/'));
+      }
+
     }
 
     // make du integration
@@ -548,7 +620,7 @@ class FrontController extends Controller
         $headers = array(
             "Accept: application/json",
             "Content-Type: application/x-www-form-urlencoded",
-            "X-MM-GATEWAY-KEY: Gdea42150-deb0-e6a9-3d88-bcbc0c724f00"
+            "X-MM-GATEWAY-KEY: G94193561-6669-1626-76fd-b7b02fe6b216"
         );
 
         $json = '';
@@ -559,6 +631,7 @@ class FrontController extends Controller
         $actionName = "DU Create Token";
         $parameters_arr = array(
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'headers' =>  $headers,
             'response' => $response,
         );
 
@@ -572,7 +645,7 @@ class FrontController extends Controller
     {
         $token = $this->du_create_token()['accessToken'];
 
-        $Url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . urlencode($request->redirect_url);
+        $Url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . urlencode($request->redirect_url)."&auto=false&authMode=AUTO&distributionChannel=APP";
 
         session()->put('success_url',$request->redirect_url);
 
@@ -599,7 +672,7 @@ class FrontController extends Controller
 
         $headers = array(
             "accept: application/json",
-            "X-MM-GATEWAY-KEY: Gdea42150-deb0-e6a9-3d88-bcbc0c724f00",
+            "X-MM-GATEWAY-KEY: G94193561-6669-1626-76fd-b7b02fe6b216",
             "Authorization: Bearer ".$userToken
         );
 
@@ -608,12 +681,28 @@ class FrontController extends Controller
         $response = $this->SendRequestGet($url, $json, $headers);
         $response = json_decode($response, true);
 
+        if(isset($response[0]['error']) && $response[0]['error'] =="TOKEN_NOT_VALID"){ // Token expire So create new one
+          $current_url =  session()->get('current_url');
+           return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+         }
+
+
+        if(isset($response[0]['id']) && $response[0]['id'] !=""){
+          $check_status_id = $response[0]['id']  ;
+          session()->put('check_status_id',  $response[0]['id']);
+        }else{
+          $check_status_id = "" ;
+        }
+
         // make log
         $actionName = "DU Check Status";
         $parameters_arr = array(
             'token' => $userToken,
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'userToken' =>  $userToken,
+            'headers' =>  $headers,
             'response' => $response,
+            'check_status_id' => $check_status_id,
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
@@ -624,13 +713,14 @@ class FrontController extends Controller
         return $response;
     }
 
+
     public function du_pin_code()
     {
         $x = 12;
 
-        $trxid = $randomNum=substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyzABCDEFGHIJKLMNOPQRSTVWXYZ"), 0, $x);
+        $trxid = $randomNum=substr(str_shuffle("123456789123456789123456789"), 0, $x);
 
-        $url = "http://pay-with-du.ae/16/mondiamedia/mondia-duelkheer-1-en-doi-web?serviceProvider=mondiamedia&serviceid=duelkheer&trxid=".$trxid."&redirectUrl=".urlencode(session()->get('success_url'));
+        $url = "http://pay-with-du.ae/16/mondiamedia/mondia-duelkheer-1-en-doi-web?serviceProvider=mondiamedia&serviceid=duelkheer&trxid=".$trxid."&redirectUrl=".urlencode(session()->get('current_url'));
 
         // make log
         $actionName = "DU Send PinCode";
@@ -645,7 +735,11 @@ class FrontController extends Controller
 
     public function du_delete_subscription(Request $request)
     {
-        $url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/api/subscription/$request->requestId";
+
+      $userToken  = session()->get('userToken') ;
+      $check_status_id  = session()->get('check_status_id') ;
+
+        $url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/api/subscription/$check_status_id";
 
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -658,8 +752,8 @@ class FrontController extends Controller
             CURLOPT_CUSTOMREQUEST => "DELETE",
             CURLOPT_HTTPHEADER => array(
                 "accept: application/json",
-                "x-mm-gateway-key: Gdea42150-deb0-e6a9-3d88-bcbc0c724f00",
-                "authorization: Bearer $request->userToken"
+                "x-mm-gateway-key: G94193561-6669-1626-76fd-b7b02fe6b216",
+                "authorization: Bearer  $userToken"
             ),
         ));
         $response = curl_exec($curl);
@@ -671,7 +765,9 @@ class FrontController extends Controller
         // make log
         $actionName = "DU Delete Subscription";
         $parameters_arr = array(
-            "response" => $response,
+          'userToken' =>   $userToken,
+          'check_status_id' =>  $check_status_id,
+           "response" => $response,
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
@@ -681,8 +777,15 @@ class FrontController extends Controller
 
     public function du_logout()
     {
-        session()->flush();
-        return redirect(session()->get('success_url'));
+        if( session()->has('OpID')  && session()->get('OpID') != ''  ){
+
+          $Url = url("/?OpID=".session()->get('OpID')) ;
+          session()->flush();
+          return redirect($Url);
+        }else{
+          return redirect(url('/'));
+        }
+
     }
 
 }
