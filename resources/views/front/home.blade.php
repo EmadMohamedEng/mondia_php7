@@ -35,8 +35,6 @@
         </div>
     </section>
 
-
-
     @foreach ($menu->slice(0,$count) as $item)
     <section class="content_carousel">
         <div class="content_carousel_head text-capitalize">
@@ -48,7 +46,7 @@
             </div>
 
             <div class="col-6 no_padding">
-            <a href="{{route('front.service',['id' => $item->id])}}" class="btn btn_more text-capitalize link_href">@lang('front.more')</a>
+            <a href="{{route('front.service',['id' => $item->id])}}" class="btn btn_more text-capitalize link_href bounce-top">@lang('front.more')</a>
             </div>
         </div>
         </div>

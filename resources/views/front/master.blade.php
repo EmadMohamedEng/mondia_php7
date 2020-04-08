@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/animate.css')}}">
     @if(request()->has('OpID') && request()->get('OpID') == omantel)
     <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
     @else
@@ -36,7 +37,7 @@
               <i class="fas fa-angle-left fa-lg"></i>
             </a>
 
-            <a href="{{route('front.index')}}" class="link_href">
+            <a href="{{route('front.index')}}" class="link_href scale-up-bottom">
               <h6 class="h5">{{get_setting('title_page')}}</h6>
             </a>
           </div>
@@ -72,7 +73,7 @@
 
                   <div class="col-12 p-0">
                     <a class="link_href" href="{{route('front.index')}}">
-                      <img src="{{asset('front/images/'.(request()->get('OpID') == omantel ? 'omantel_logo.png' : 'du_logo.png'))}}" alt="Logo">
+                      <img class="pulsate-bck" src="{{asset('front/images/'.(request()->get('OpID') == omantel ? 'omantel_logo.png' : 'du_logo.png'))}}" alt="Logo">
                     </a>
                   </div>
                 </div>
