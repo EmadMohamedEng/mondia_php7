@@ -779,7 +779,7 @@ class FrontController extends Controller
         $headers = array(
           "accept: application/json",
           "x-mm-gateway-key: G94193561-6669-1626-76fd-b7b02fe6b216",
-          "authorization: Bearer  $userToken"
+          "authorization: Bearer $userToken"
       ) ;
 
         $curl = curl_init();
