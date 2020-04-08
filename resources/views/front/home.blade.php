@@ -17,6 +17,17 @@
     </div>
     @endif
 
+
+
+    @if(session()->has('unsub_fail') && session()->get('unsub_fail') != '')
+    <div class="alert alert-danger" role="alert">
+      @lang('front.unsub_fail')
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    @endif
+
     <section class="img_carousel">
         <div class="owl_one owl-carousel owl-theme" dir="ltr">
         @foreach($latest as $content)

@@ -49,4 +49,5 @@ return [
     'unsub_success' => 'You are unsubcribe success',
     'wrong_pincode' => 'The pincode is incorrect',
     'resend_pincode' => 'Resend Pincode',
+    'unsub_fail' => 'Unsubscription Failed',
 ];

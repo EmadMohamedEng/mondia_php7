@@ -768,7 +768,7 @@ class FrontController extends Controller
         return redirect($url);
     }
 
-    public function du_delete_subscription(Request $request)
+    public function du_delete_subscription_old(Request $request)
     {
 
       $userToken  = session()->get('userToken') ;
@@ -813,7 +813,70 @@ class FrontController extends Controller
         session()->flush();
         Session::flash('unsub_success', 'You are unsubscribe success');
         return redirect("?OpID=10");
+    }public function du_delete_subscription(Request $request)
+    {
+
+      $userToken  = session()->get('userToken') ;
+      $check_status_id  = session()->get('check_status_id') ;
+
+        $url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/api/subscription/unsubscribe/56830063?sendSms=true";
+
+        $headers = array(
+          "accept: application/json",
+          "x-mm-gateway-key: G94193561-6669-1626-76fd-b7b02fe6b216",
+          "authorization: Bearer  $userToken"
+      ) ;
+
+
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_HTTPHEADER => $headers,
+        ));
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        curl_close($curl);
+
+        $response = json_decode($response, true);
+
+      /*
+        {
+          "responseCode": 200,
+          "text": "UNSUB_OK",
+          "description": "Successfully unsubbed."
+      }
+      */
+
+
+        // make log
+        $actionName = "DU Delete Subscription";
+        $parameters_arr = array(
+          'userToken' =>   $userToken,
+          'check_status_id' =>  $check_status_id,
+          'headers' =>  $headers,
+           "response" => $response,
+        );
+        $this->log_action($actionName, $url, $parameters_arr);
+
+
+        if(isset( $response['text']) && $response['text'] == "UNSUB_OK" ){ // Unsub succcess
+          session()->flush();
+          Session::flash('unsub_success', 'You are unsubscribe success');
+        }else{
+          Session::flash('unsub_fail', 'There is error in unsubscribe');
+        }
+
+        return redirect("?OpID=10");
     }
+
+
+
 
     public function du_logout()
     {
