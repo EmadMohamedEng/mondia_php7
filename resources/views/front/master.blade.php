@@ -128,9 +128,9 @@
               @if(session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
               <li class="nav-item ">
                 @if(request()->get('OpID') == omantel)
-                <a class="nav-link text-capitalize" href="{{route('front.unsub',['requestId' => session()->get('check_status_id') , 'userToken' => session()->get('userToken')])}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
+                <a class="nav-link text-capitalize" href="{{route('front.unsub')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
                 @elseif(request()->get('OpID') == du)
-                <a class="nav-link text-capitalize" href="{{route('front.du_unsub',['requestId' => session()->get('check_status_id') , 'userToken' => session()->get('userToken')])}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
+                <a class="nav-link text-capitalize" href="{{route('front.du_unsub')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
                 @endif
               </li>
               <li class="nav-item ">
