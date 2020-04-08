@@ -184,7 +184,8 @@ class FrontController extends Controller
        session()->put('OpID',omantel);
         $response = $this->check_status($userToken);
         if(empty($response)){
-            return $this->pin_code($userToken);
+           // return $this->pin_code($userToken);
+           return view('front.inner_confirm', compact('content','contents'));
         }else{
             session()->put('status','active');
             return view('front.inner', compact('content','contents'));
@@ -197,7 +198,8 @@ class FrontController extends Controller
         $response = $this->du_check_status($userToken);
 
         if(empty($response)){
-            return $this->du_pin_code($userToken);
+           // return $this->du_pin_code($userToken);
+           return view('front.inner_confirm', compact('content','contents'));
         }
         else{
             session()->put('status','active');
@@ -208,6 +210,21 @@ class FrontController extends Controller
 
         return view('front.inner', compact('content','contents'));
     }
+
+
+    public function Omantel_send_pincode()
+    {
+        $userToken = session()->get('userToken') ;
+        return $this->pin_code($userToken);
+    }
+
+
+    public function du_goto_pincode()
+    {
+        $userToken = session()->get('userToken') ;
+        return $this->du_pin_code($userToken);
+    }
+
 
     public function sebha()
     {
@@ -392,7 +409,8 @@ class FrontController extends Controller
     {
         $token = $this->create_token()['accessToken'];
 
-        $Url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/web/auth/dialog?access_token=$token&redirect=".$request->redirect_url."&auto=false&authMode=AUTO&distributionChannel=APP";
+        $Url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/web/auth/dialog?access_token=$token&redirect=".urlencode($request->redirect_url)."&auto=false&authMode=AUTO&distributionChannel=APP";
+
 
         session()->put('success_url',$request->redirect_url);
         // make log
@@ -499,6 +517,8 @@ class FrontController extends Controller
         Session::put('requestId', $response['custRequestId']);
         Session::put('userToken', $userToken);
 
+     //  $current_url =  session()->get('current_url');
+     //  return redirect(url($current_url)) ;
         return redirect(route('front.pincode',['OpID' => omantel]));
     }
 
@@ -596,8 +616,12 @@ class FrontController extends Controller
         $this->log_action($actionName, $url, $parameters_arr);
 
         session()->flush();
-        return redirect("/");
+
+        Session::flash('Omantel_unsub_success', 'You are unsubscribe success');
+        return redirect("?OpID=9");
     }
+
+
 
     public function logout()
     {
@@ -681,7 +705,7 @@ class FrontController extends Controller
         $response = $this->SendRequestGet($url, $json, $headers);
         $response = json_decode($response, true);
 
-        if(isset($response[0]['error']) && $response[0]['error'] =="TOKEN_NOT_VALID"){ // Token expire So create new one
+        if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" || $response['error'] == "PARTNER_KEY_NOT_MATCHES"){ // Token expire So create new one
           $current_url =  session()->get('current_url');
            return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
          }
@@ -707,7 +731,7 @@ class FrontController extends Controller
         $this->log_action($actionName, $url, $parameters_arr);
 
         if(!empty($response)){
-            session()->put('requestId',$response[0]['id']);
+            session()->put('check_status_id',$response[0]['id']);
             session()->put('userToken',$userToken);
         }
         return $response;

@@ -7,6 +7,16 @@
 @endphp
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
     @include('front.search')
+
+    @if(session()->has('Omantel_unsub_success') && session()->get('Omantel_unsub_success') != '')
+    <div class="alert alert-success" role="alert">
+      @lang('front.omantel_unsub_success')
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    @endif
+
     <section class="img_carousel">
         <div class="owl_one owl-carousel owl-theme" dir="ltr">
         @foreach($latest as $content)
@@ -24,6 +34,8 @@
         @endforeach
         </div>
     </section>
+
+
 
     @foreach ($menu->slice(0,$count) as $item)
     <section class="content_carousel">

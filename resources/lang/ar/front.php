@@ -45,5 +45,6 @@ return [
     'play' => 'تشغيل',
     'make_it_call_tone' => 'اجعلها كول تون',
     'salah' => 'الصلاه',
-    'time' => 'الوقت'
+    'time' => 'الوقت' ,
+    'omantel_unsub_success' => 'تم الغاء اشتراكك بنجاح',
 ];

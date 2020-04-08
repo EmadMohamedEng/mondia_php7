@@ -37,7 +37,7 @@ Route::get('azan','FrontController@azan')->name('front.azan');
 Route::get('list_azan/{id}','FrontController@list_azan');
 Route::get('view_rbt/{id}','FrontController@view_rbt');
 Route::get('rbts','FrontController@rbts');
-Route::get('test','FrontController@test');
+Route::get('test2','FrontController@test');
 
 
 
@@ -45,6 +45,7 @@ Route::get('test','FrontController@test');
 define('omantel',9);
 Route::get('omantel/redirect', 'FrontController@redirect')->name('front.oman');
 Route::get('pin_code', 'FrontController@pincode')->name('front.pincode');
+Route::get('Omantel_send_pincode', 'FrontController@Omantel_send_pincode');
 Route::post('verify_pin', 'FrontController@verify_pin')->name('front.verfiy');
 Route::get('delete_subscription', 'FrontController@delete_subscription')->name('front.unsub');
 Route::get('omantel_logout','FrontController@logout')->name('front.logout');
@@ -57,6 +58,7 @@ Route::get('omantel_logout','FrontController@logout')->name('front.logout');
 define('du',10);
 Route::get('du_redirect', 'FrontController@du_redirect')->name('front.du');
 Route::get('du_check_status/{userToken?}', 'FrontController@du_check_status')->name('front.du_check');
+Route::get('du_goto_pincode', 'FrontController@du_goto_pincode');
 Route::get('du_pin_code', 'FrontController@du_pin_code')->name('front.du_pin_code');
 Route::get('du_delete_subscription/', 'FrontController@du_delete_subscription')->name('front.du_unsub');
 Route::get('du_logout','FrontController@du_logout')->name('front.du_logout');
