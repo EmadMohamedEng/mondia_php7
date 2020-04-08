@@ -44,7 +44,7 @@
               </div>
             </form>
             <div class="col-md-12 col-lg-12 col-xl-12 col-12" >
-            <button   style="background-color:#ff9e1b !important;margin-bottom:18px;font-size:13px;" onclick="location.href= '{{url('Omantel_send_pincode')}}'"  type="button" class="btn btn_1 btn-lg text-center text-capitalize">Resend Pincode  </button>
+            <button   style="background-color:#ff9e1b !important;margin-bottom:18px;font-size:13px;" onclick="location.href= '{{url('Omantel_send_pincode')}}'"  type="button" class="btn btn_1 btn-lg text-center text-capitalize">@lang('front.resend_pincode')  </button>
             </div>
 
           </div>

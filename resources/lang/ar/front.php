@@ -48,4 +48,5 @@ return [
     'time' => 'الوقت' ,
     'unsub_success' => 'تم الغاء اشتراكك بنجاح',
     'wrong_pincode' => 'رقم التحقق غير صحيح',
+    'resend_pincode' => 'اعادة ارسال رقم التحقق',
 ];
