@@ -16,7 +16,7 @@
           <label class="font-weight-bold"> @lang('front.zakah_gold_price') </label>
 
           <div class="field-value">
-            <input type="text" name="goldNissab" id="txtGoldPrice" class="textbox required" maxlength="255" />
+            <input type="text" name="goldNissab" id="txtGoldPrice" class="textbox required scale-up-bottom" maxlength="255" />
           </div>
 
           <span class="clearfix"></span>
@@ -28,7 +28,7 @@
           <label class="font-weight-bold"> @lang('front.zakah_saved_money') </label>
 
           <div class="field-value">
-            <input type="text" class="textbox required" id="txtSavedMoney" maxlength="255" />
+            <input type="text" class="textbox required scale-up-bottom" id="txtSavedMoney" maxlength="255" />
           </div>
 
           <span class="clearfix"></span>

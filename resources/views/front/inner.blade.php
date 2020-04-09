@@ -34,7 +34,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
             <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
           @else
-          <button data-toggle="modal" data-target="#exampleModalCover" class="btn button_play primary">
+          <button data-toggle="modal" data-target="#exampleModalCover" class="btn button_play primary bounce-top">
             <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
           @endif
@@ -130,7 +130,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
         </div>
 
         <div class="col-md-8 col-lg-8 col-xl-8 col-8 p-0 ml-2 mr-2">
-          <p class="p_content text-capitalize">{{get_title($item->content_id)}}</p>
+          <p class="p_content text-capitalize scale-up-bottom">{{get_title($item->content_id)}}</p>
         </div>
 
         <div class="border-bottom"></div>
@@ -169,11 +169,11 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
       <div class="modal-footer">
         <div class="row m-0">
           <div class="col-6">
-          <button type="button" class="btn btn_1 btn-lg text-center text-capitalize">subscribe</button>
+            <button type="button" class="btn btn_1 btn-lg text-center text-capitalize">subscribe</button>
           </div>
 
           <div class="col-6">
-          <button type="button" class="btn btn_2 btn-lg text-center text-capitalize" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn_2 btn-lg text-center text-capitalize" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

@@ -46,20 +46,18 @@
         </div>
     </section>
 
-
-
     @foreach ($menu->slice(0,$count) as $item)
     <section class="content_carousel">
         <div class="content_carousel_head text-capitalize">
         <div class="row m-0">
-            <div class="col-6 p-0">
+            <div class="col-6 p-0 padding_phones">
             <a class="link_title link_href" href="{{route('front.service',['provider_id' => $item->id])}}">
                 <h6 class="">{{$item->getTranslation('title',getCode())}}</h6>
             </a>
             </div>
 
-            <div class="col-6 no_padding">
-            <a href="{{route('front.service',['id' => $item->id])}}" class="btn btn_more text-capitalize link_href">@lang('front.more')</a>
+            <div class="col-6 padding_phones">
+            <a href="{{route('front.service',['id' => $item->id])}}" class="btn btn_more text-capitalize link_href bounce-top">@lang('front.more')</a>
             </div>
         </div>
         </div>
@@ -88,7 +86,7 @@
     <section class="content_carousel">
         <div class="content_carousel_head text-capitalize">
         <div class="row m-0">
-            <div class="col-6 p-0">
+            <div class="col-6 p-0 padding_phones">
             <a class="link_title" href="#">
                 <h6 class="">@lang('front.muslim_guide')</h6>
             </a>
@@ -178,13 +176,13 @@
     <section class="content_carousel">
         <div class="content_carousel_head text-capitalize">
         <div class="row m-0">
-            <div class="col-6 p-0">
+            <div class="col-6 p-0 padding_phones">
             <a class="link_title link_href" href="{{route('front.service',['provider_id' => $item->id])}}">
                 <h6 class="">{{$item->getTranslation('title',getCode())}}</h6>
             </a>
             </div>
 
-            <div class="col-6 no_padding">
+            <div class="col-6 padding_phones">
             <a href="{{route('front.service',['id' => $item->id])}}" class="btn btn_more text-capitalize link_href">@lang('front.more')</a>
             </div>
         </div>

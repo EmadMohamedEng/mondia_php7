@@ -6,7 +6,7 @@
     @include('front.search')
   <section class="list_page">
     <div class="content_carousel_head text-capitalize">
-      <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
+      <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0 padding_phones">
         <a class="link_title link_href" href="{{route('front.service',['provider_id' => $provider->id])}}">
           <h6 class="">{{$provider->getTranslation('title',getCode())}}</h6>
         </a>
@@ -17,7 +17,7 @@
         @foreach ($services as $service)
         <div class="col-md-4 col-lg-4 col-xl-2 col-4 p-0">
             <div class="item">
-              <div class="card ovf-hidden">
+              <div class="card ovf-hidden rotate-in-center">
                 <a class="owl_content_img view overlay link_href" href="{{route('front.list',['service_id' => $service->id])}}">
                   <img class="w-100" src="{{url($service->image)}}" alt="Card image cap">
                   <a>
