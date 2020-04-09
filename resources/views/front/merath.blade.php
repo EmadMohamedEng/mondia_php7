@@ -246,6 +246,7 @@
     function again(){
       $('.table_table').css('display', 'none');
       $('.all_mer').show()
+      document.documentElement.scrollTop = 0;
     }
 </script>
 @stop

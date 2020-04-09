@@ -11,6 +11,7 @@ $('#btn_cal').click(function () {
     $('#btn_cal').removeAttr('data-toggle', 'modal');
     $('#btn_cal').removeAttr('data-target', '#exampleModal');
     $('.all_mer').hide()
+    document.documentElement.scrollTop = 0;
   }
 });
 

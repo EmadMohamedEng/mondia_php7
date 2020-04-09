@@ -325,7 +325,7 @@ class FrontController extends Controller
         $hijri = new \HijriDate(strtotime($current_date));
 
         $day = $hijri->get_day();
-        $month = $hijri->get_month_name_ar($hijri->get_month());
+        $month = (getCode() == 'ar') ? $hijri->get_month_name_ar($hijri->get_month()) : $hijri->get_month_name($hijri->get_month());
         $year = $hijri->get_year();
 
         $hjrri_date_object = new \stdClass();

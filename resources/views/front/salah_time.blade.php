@@ -11,11 +11,11 @@
     <div class="time_btn">
       <div class="row m-0">
       <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
-          <h4 class="h4_time_2">{{$hjrri_date->day.' - '.$hjrri_date->month .' - '.$hjrri_date->year}}</h4>
+          <h4 class="h4_time_2" style="padding-left:{{getCode() == 'en' ? 0 : '' }}px" dir="{{getCode() == 'ar' ? 'rtl' : 'ltr'}}">{{$hjrri_date->day.' - '.$hjrri_date->month .' - '.$hjrri_date->year}}</h4>
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
-          <h4 class="h4_time">{{date('d-m-Y')}} </h4>
+          <h4 class="h4_time" style="padding-right:{{getCode() == 'en' ? 60 : '' }}px">{{date('d-m-Y')}} </h4>
         </div>
       </div>
     </div>
@@ -23,10 +23,10 @@
     <div class="time_btn" dir="rtl">
       <div class="row m-0">
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
-          <h4 class="h4_time">@lang('front.salah')</h4>
+          <h4 class="h4_time" >@lang('front.salah')</h4>
         </div>
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
-          <h4 class="h4_time_2">@lang('front.time')</h4>
+          <h4 class="h4_time_2" >@lang('front.time')</h4>
         </div>
       </div>
     </div>
