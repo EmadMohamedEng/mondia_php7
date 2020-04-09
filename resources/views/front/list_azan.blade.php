@@ -28,13 +28,6 @@ switch ($os) {
             <p>{{$val->getTranslation('title',getCode())}}</p>
         </p>
     </td>
-    <td>
-        <div class="np-play">
-            <span class="fa fa-play play_za" data-src="{{url($val->source)}}"></span>
-        </div>
-        <audio id="audio_test" controls="controls" style="display:none">
-            <source id="audioSource" src="">
-        </audio>
-    </td>
+    <td class="np-play" data-src="{{url($val->source)}}"></td>
 </tr>
 @endforeach

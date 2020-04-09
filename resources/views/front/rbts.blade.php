@@ -23,19 +23,19 @@ switch ($os) {
 <!-- End Header -->
 <link rel="stylesheet" type="text/css" href="{{asset('front/css/azan_style.css')}}">
 <style>
-    /* #chooseAudio .np-play::before, #chooseAudio #play::before{
-        content:"";
-    } */
+    
     @if(request()->has('OpID') && request()->get('OpID') == omantel)
         #chooseAudio table td a{
         color: #fff;
         background: #ff9e1b;
       }
-      span.fa-play {
-        color: #ff9e1b;
-      }
-      span.fa-pause {
-        color: #ff9e1b;
+      #chooseAudio #paused::before,
+      #chooseAudio #playing::before {
+        color:#ff9e1b;
+      } 
+      #chooseAudio .np-play::before,
+      #chooseAudio #play::before {
+        color:#ff9e1b;
       }
     @endif
 </style>
@@ -76,9 +76,7 @@ switch ($os) {
                         </p>
                     </td>
                     <td>
-                        <div class="np-play play-status">
-                            <span class="fa fa-play play_za" data-src="{{url($val->source)}}"></span>
-                        </div>
+                        <td class="np-play" data-src="{{url($val->source)}}"></td>
                         <audio id="audio_test" controls="controls" style="display:none">
                             <source id="audioSource" src="">
                         </audio>
