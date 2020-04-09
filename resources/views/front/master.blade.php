@@ -52,11 +52,11 @@
         </div>
 
         <div class="col-md-2 col-lg-2 col-xl-6 col-4">
-          <a href="#0">
+          {{-- <a href="#0">
             <div class="header_icon">
               <i class="fas fa-search fa-lg"></i>
             </div>
-          </a>
+          </a> --}}
         </div>
       </div>
     </header>
