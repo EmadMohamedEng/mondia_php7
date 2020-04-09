@@ -617,7 +617,7 @@ a:hover, a:focus, a:active {
   margin-bottom: 1rem;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value {
-  float: left;
+  float: right;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value input {
   padding: 0.25rem 0.5rem;

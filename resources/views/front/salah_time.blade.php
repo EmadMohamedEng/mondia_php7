@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav" dir="{{getCode() == 'ar' ? 'rtl' : 'ltr'}}">
-  <section class="salah_time_page">
+  <section class="salah_time_page bounce-top">
     <div class="salah_time_title">
       <h2> @lang('front.prayer') </h2>
     </div>

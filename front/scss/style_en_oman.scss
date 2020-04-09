@@ -65,15 +65,22 @@ a {
       color: $white_color;
       display: inline-flex;
       position: relative;
+      width: 100%;
+      text-align: right;
 
       h6 {
         padding-left: 2rem;
         font-weight: bold;
       }
 
-      img {
-        width: 25%;
-        float: right;
+      .link_href {
+        width: 100%;
+        text-align: right;
+
+        svg,
+        img {
+          width: 10%;
+        }
       }
 
       .arrow_back {
@@ -89,8 +96,7 @@ a {
       }
 
       &.header_icon {
-        text-align: right;
-        float: right;
+        direction: rtl;
 
         i {
           opacity: 0.5;
@@ -115,13 +121,14 @@ a {
 
       .nav_item_welc {
         margin-bottom: 0.25rem;
+        color: $bg_color;
       }
 
       .nav-item {
         padding: 0.25rem 0.5rem;
 
         .nav-link {
-          color: #000;
+          color: $bg_color;
           cursor: pointer;
 
           &.nav-link2 {
@@ -148,7 +155,7 @@ a {
           .dropdown-item {
             padding: .25rem 1rem;
             text-align: justify;
-            width: 60%;
+            width: 76%;
 
             &.dropdown-item2 {
               padding: .25rem 0;
@@ -234,6 +241,9 @@ a {
 
       .link_title {
         color: $black_color;
+        h6 {
+          font-weight: bold;
+        }
       }
 
       .btn_more {
@@ -1320,12 +1330,10 @@ a {
 
       .header_logo,
       .header_icon {
-        float: right;
-
-
         .arrow_back {
           left: 64%;
         }
+        img,svg {width: 25% !important;}
       }
     }
 
@@ -1791,11 +1799,11 @@ a {
 
       .header_logo,
       .header_icon {
-        float: right;
-
         .arrow_back {
           left: 67%;
         }
+
+        img,svg {width: 25% !important;}
       }
     }
 
@@ -2274,11 +2282,11 @@ a {
 
       .header_logo,
       .header_icon {
-        float: right;
-
         .arrow_back {
           left: 64%;
         }
+
+        img,svg {width: 25% !important;}
       }
     }
 
@@ -2777,12 +2785,12 @@ a {
 
       .header_logo,
       .header_icon {
-        float: right;
-
         .arrow_back {
           left: 64%;
           font-size: 1.5rem;
         }
+
+        img,svg {width: 25% !important;}
 
         h6 {
           font-size: 1.5rem;
@@ -3302,12 +3310,10 @@ a {
       .header_logo,
       .header_icon {
         width: 71%;
-        text-align: right;
-        display: block;
 
         .arrow_back {
-          left: 72%;
-          top: 1.25rem;
+          left: 69%;
+          top: 1.75rem;
           font-size: 2rem;
         }
 
@@ -3317,9 +3323,7 @@ a {
           margin-left: 5rem;
         }
 
-        img {
-          width: 18%;
-        }
+        img,svg {width: 25% !important;}
 
         &.header_icon {
           i {
@@ -3961,13 +3965,11 @@ a {
       .header_logo,
       .header_icon {
         width: 71%;
-        text-align: right;
-        display: block;
 
         .arrow_back {
-          left: 72%;
-          top: 1.25rem;
-          font-size: 2rem;
+          left: 75%;
+          top: 2rem;
+          font-size: 2.5rem;
         }
 
         h6 {
@@ -3976,9 +3978,7 @@ a {
           margin-left: 5rem;
         }
 
-        img {
-          width: 20%
-        }
+        img,svg {width: 18% !important;}
 
         &.header_icon {
           i {

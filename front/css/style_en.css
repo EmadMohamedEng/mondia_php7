@@ -83,16 +83,24 @@ a:hover, a:focus, a:active {
   color: #FFF;
   display: inline-flex;
   position: relative;
+  width: 100%;
+  text-align: right;
 }
 .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
   padding-left: 2rem;
   font-weight: bold;
 }
-.main_container .header .header_logo img,
-.main_container .header .header_icon img {
-  width: 25%;
-  float: right;
+.main_container .header .header_logo .link_href,
+.main_container .header .header_icon .link_href {
+  width: 100%;
+  text-align: right;
+}
+.main_container .header .header_logo .link_href svg,
+.main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href svg,
+.main_container .header .header_icon .link_href img {
+  width: 10%;
 }
 .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
@@ -108,8 +116,7 @@ a:hover, a:focus, a:active {
 }
 .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
-  text-align: right;
-  float: right;
+  direction: rtl;
 }
 .main_container .header .header_logo.header_icon i,
 .main_container .header .header_icon.header_icon i {
@@ -138,6 +145,9 @@ a:hover, a:focus, a:active {
   color: #000;
   cursor: pointer;
 }
+.main_container .nav_nav .navbar_ul .nav-item .nav-link i {
+  color: #00a9ce;
+}
 .main_container .nav_nav .navbar_ul .nav-item .nav-link.nav-link2 {
   padding: 0 0 0.75rem 0;
   text-align: right;
@@ -153,7 +163,7 @@ a:hover, a:focus, a:active {
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
   padding: 0.25rem 1rem;
   text-align: justify;
-  width: 60%;
+  width: 76%;
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
   padding: 0.25rem 0;
@@ -209,6 +219,9 @@ a:hover, a:focus, a:active {
 }
 .main_container .content_carousel .content_carousel_head .link_title {
   color: #000;
+}
+.main_container .content_carousel .content_carousel_head .link_title h6 {
+  font-weight: bold;
 }
 .main_container .content_carousel .content_carousel_head .btn_more {
   background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
@@ -607,8 +620,11 @@ a:hover, a:focus, a:active {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value {
+.main_container .zakkah_page .zakah_zakah .form_zakah .field label {
   float: left;
+}
+.main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value {
+  float: right;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value input {
   padding: 0.25rem 0.5rem;
@@ -1014,13 +1030,14 @@ a:hover, a:focus, a:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo,
-.main_container .header .header_icon {
-    float: right;
-  }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
     left: 64%;
+  }
+  .main_container .header .header_logo img, .main_container .header .header_logo svg,
+.main_container .header .header_icon img,
+.main_container .header .header_icon svg {
+    width: 25% !important;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1327,13 +1344,14 @@ a:hover, a:focus, a:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo,
-.main_container .header .header_icon {
-    float: right;
-  }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
     left: 67%;
+  }
+  .main_container .header .header_logo img, .main_container .header .header_logo svg,
+.main_container .header .header_icon img,
+.main_container .header .header_icon svg {
+    width: 25% !important;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1650,13 +1668,14 @@ a:hover, a:focus, a:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo,
-.main_container .header .header_icon {
-    float: right;
-  }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
     left: 64%;
+  }
+  .main_container .header .header_logo img, .main_container .header .header_logo svg,
+.main_container .header .header_icon img,
+.main_container .header .header_icon svg {
+    width: 25% !important;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1989,14 +2008,15 @@ a:hover, a:focus, a:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo,
-.main_container .header .header_icon {
-    float: right;
-  }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
     left: 64%;
     font-size: 1.5rem;
+  }
+  .main_container .header .header_logo img, .main_container .header .header_logo svg,
+.main_container .header .header_icon img,
+.main_container .header .header_icon svg {
+    width: 25% !important;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -2346,13 +2366,11 @@ a:hover, a:focus, a:active {
   .main_container .header .header_logo,
 .main_container .header .header_icon {
     width: 71%;
-    text-align: right;
-    display: block;
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 72%;
-    top: 1.25rem;
+    left: 69%;
+    top: 1.75rem;
     font-size: 2rem;
   }
   .main_container .header .header_logo h6,
@@ -2361,9 +2379,10 @@ a:hover, a:focus, a:active {
     margin-top: 0.5rem;
     margin-left: 5rem;
   }
-  .main_container .header .header_logo img,
-.main_container .header .header_icon img {
-    width: 18%;
+  .main_container .header .header_logo img, .main_container .header .header_logo svg,
+.main_container .header .header_icon img,
+.main_container .header .header_icon svg {
+    width: 25% !important;
   }
   .main_container .header .header_logo.header_icon i,
 .main_container .header .header_icon.header_icon i {
@@ -2806,14 +2825,12 @@ a:hover, a:focus, a:active {
   .main_container .header .header_logo,
 .main_container .header .header_icon {
     width: 71%;
-    text-align: right;
-    display: block;
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 72%;
-    top: 1.25rem;
-    font-size: 2rem;
+    left: 75%;
+    top: 2rem;
+    font-size: 2.5rem;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -2821,9 +2838,10 @@ a:hover, a:focus, a:active {
     margin-top: 0.5rem;
     margin-left: 5rem;
   }
-  .main_container .header .header_logo img,
-.main_container .header .header_icon img {
-    width: 20%;
+  .main_container .header .header_logo img, .main_container .header .header_logo svg,
+.main_container .header .header_icon img,
+.main_container .header .header_icon svg {
+    width: 18% !important;
   }
   .main_container .header .header_logo.header_icon i,
 .main_container .header .header_icon.header_icon i {
