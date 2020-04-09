@@ -37,10 +37,11 @@ class FrontController extends Controller
         return view('front.home',compact('latest'));
     }
 
-    public function services($id)
+    public function services(Request $request)
     {
 
-        $services = Service::query();
+        $services = Service::select('services.*','services.id as service_id');
+        $provider = null;
         if(request()->has('OpID') && request()->get('OpID') != ''){
             $services = $services->whereHas('videos', function($q){
                 $q->join('posts','posts.video_id' , '=' , 'contents.id')
@@ -48,8 +49,22 @@ class FrontController extends Controller
                 ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
             });
         }
-        $services = $services->where('provider_id',$id)->get();
-        $provider = Provider::whereId($id)->first();
+        if($request->has('provider_id') && $request->provider_id != ''){
+          $services = $services->where('provider_id',$request->provider_id);
+          $provider = Provider::whereId($request->provider_id)->first();
+        }
+
+        if($request->has('search') && $request->search != ''){
+          $services = $services->join('translatables','translatables.record_id','=','services.id')
+          ->join('tans_bodies','tans_bodies.translatable_id','translatables.id')
+          ->where('translatables.table_name','services')
+          ->where('translatables.column_name','title')
+          ->where(function($q) use ($request){
+            $q->where('services.title', 'like', '%' . $request->search . '%');
+            $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+          });
+        }
+        $services = $services->get();
         return view('front.service', compact('services','provider'));
     }
 
