@@ -67,7 +67,7 @@
             <source src="{{url($audio->video->video)}}" type="video/mp4">
         </video>
         @else
-        {!! Form::file('source',["accept"=>"audio/*" ,"class"=>"default" , "required"]) !!}
+        {!! Form::file('source',["accept"=>"audio/*" ,"class"=>"default" , !$audio ? "required" : ""]) !!}
         @endif
         @if($audio && $audio->video_id == null)
         <audio width="320" height="240" controls>

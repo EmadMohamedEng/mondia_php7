@@ -35,10 +35,10 @@
     <div class="time_btn">
       <div class="row m-0">
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
-          <h4 class="h4_time">{{$key}} </h4>
+          <h4 class="h4_time">{{get_salah($key , getCode())}} </h4>
         </div>
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
-          <h4 class="h4_time_2">{{$value}}</h4>
+          <h4 class="h4_time_2">{{$value}} </h4>
         </div>
       </div>
     </div>

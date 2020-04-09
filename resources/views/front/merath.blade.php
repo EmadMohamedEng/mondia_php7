@@ -9,6 +9,7 @@
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
     @include('front.search')
     <section class="merath_page" dir="{{getCode() == 'en' ? 'rtl' : 'ltr'}}">
+      <div class="all_mer" style="display:block">
       <div class="merath_title">
         <h2>@lang('front.merath')</h2>
       </div>
@@ -139,6 +140,7 @@
         <button id="btn_cal" class="btn merath_btn" type="submit" disabled onclick="PayHesapla()"> @lang('front.merath')
         </button>
       </div>
+      </div>
 
       <div class="table_table" style="display: none">
         <table class="table table-hover">
@@ -215,9 +217,9 @@
           </tbody>
         </table>
 
-        <div class="button_merath">
-          <a href="merath.php" class="btn merath_btn" onclick="PayHesapla()">حساب الميراث</a>
-        </div>
+         <div class="button_merath">
+          <button  class="btn merath_btn" onclick="again()">حساب الميراث</button>
+        </div> 
       </div>
     </section>
   </div>
@@ -240,5 +242,10 @@
             }
         });
     });
+
+    function again(){
+      $('.table_table').css('display', 'none');
+      $('.all_mer').show()
+    }
 </script>
 @stop

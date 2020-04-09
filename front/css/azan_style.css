@@ -67,18 +67,20 @@
 #chooseAudio #play::before {
   /* background: url(../images/play_small.svg) no-repeat center;
   background-size: 14px; */
-  /* font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f04b"; */
+  content: "\f04b"; 
+  color: #2f7cc7;
 }
 
 #chooseAudio #paused::before,
 #chooseAudio #playing::before {
   /* background: url(../images/pause_small.png) no-repeat center;
   background-size: 14px; */
-  /* font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f04c"; */
+  content: "\f04c";
+  color: #2f7cc7;
 }
 
 /* Audio Player Styles ---------------------------------------------*/

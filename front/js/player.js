@@ -1,6 +1,8 @@
 $(function () {
 	//console.log("clicked");
 	$('body').on('click', '.np-play', function (e) {
+    console.log(e);
+    
 		var songName = e.target.getAttribute('data-src');
 		var audioPlayer = document.querySelector('#player');
 		var self = $(this);

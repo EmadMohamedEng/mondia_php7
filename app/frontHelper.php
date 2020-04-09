@@ -79,3 +79,23 @@ function get_title($id){
   $content = Video::find($id);
   return $content->getTranslation('title',getCode());
 }
+
+function get_salah($value,$lang){
+  if($lang == 'en' && strpos($value , 'الظهر') !== false){
+    return 'Aduher';
+  }
+  if($lang == 'en' && strpos($value , 'العصر') !== false){
+    return 'Asr';
+  }
+  if($lang == 'en' && strpos($value , 'المغرب') !== false){
+    return "Maghreb's";
+  }
+  if($lang == 'en' && strpos($value ,'العشاء') !== false){
+    return 'Eshaa';
+  }
+  if($lang == 'en' && strpos($value , 'الفجر') !== false){
+    return 'Al-fajr';
+  }
+  return $value;
+  
+}

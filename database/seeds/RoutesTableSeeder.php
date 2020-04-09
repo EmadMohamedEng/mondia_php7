@@ -1057,6 +1057,16 @@ class RoutesTableSeeder extends Seeder
                 'updated_at' => '2020-03-25 10:46:07',
                 'function_name' => 'index',
             ),
+            104 => 
+            array (
+                'id' => 133,
+                'method' => 'get',
+                'route' => 'users/{id}/delete',
+                'controller_name' => 'UserController',
+                'created_at' => '2020-04-09 11:01:58',
+                'updated_at' => '2020-04-09 11:01:58',
+                'function_name' => 'destroy',
+            ),
         ));
         
         

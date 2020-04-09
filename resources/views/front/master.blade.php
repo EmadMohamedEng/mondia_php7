@@ -21,6 +21,13 @@
     @if(app()->getLocale() == 'ar')
     <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
     @endif
+    
+    <style>
+      .active_menu{
+        color:#000;
+        background:{{request()->get('OpID') == omantel ? '#ff9e1b' : 'linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%)'}};
+      }
+    </style>
 
     <script>
         window.base_url = '{{url("/")}}';
@@ -183,19 +190,19 @@
       });
     }
     $('.search-res').val('{{request()->get("search")}}')
-    $(document).on('click','.play_za',function(){
-      var _this = this
-      if($(this).hasClass('fa-play')){
-          $(this).removeClass('fa-play').addClass('fa-pause')
+    // $(document).on('click','.play_za',function(){
+    //   var _this = this
+    //   if($(this).children('.fa-play').hasClass('fa-play')){
+    //     $(this).children('.fa-play').removeClass('fa-play').addClass('fa-pause')
 
-          $('.play_za').not(this).each(function(){
-            $(this).removeClass('fa-pause').addClass('fa-play')
-          });
-      }
-      else{
-        $(this).removeClass('fa-pause').addClass('fa-play')
-      }
-    })
+    //       $('.play_za').not(this).each(function(){
+    //         $(this).children('.fa-play').removeClass('fa-pause').addClass('fa-play')
+    //       });
+    //   }
+    //   else{
+    //     $(this).children('.fa-play').removeClass('fa-pause').addClass('fa-play')
+    //   }
+    // })
   </script>
   @yield('script')
 </body>
