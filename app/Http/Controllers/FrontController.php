@@ -620,7 +620,7 @@ class FrontController extends Controller
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
-        session()->flush();
+     //   session()->flush();
         Session::flash('unsub_success', 'You are unsubscribe success');
         return redirect("?OpID=9");
     }
@@ -631,8 +631,8 @@ class FrontController extends Controller
     {
       if( session()->has('OpID')  && session()->get('OpID') != ''  ){
         $Url = url("/?OpID=".session()->get('OpID')) ;
-       // session()->flush();
-        Session::forget(['check_status_id','userToken']);
+        session()->flush();
+       // Session::forget(['check_status_id','userToken']);
         return redirect($Url);
       }else{
         return redirect(url('/'));
@@ -810,7 +810,7 @@ class FrontController extends Controller
         $this->log_action($actionName, $url, $parameters_arr);
 
 
-        session()->flush();
+       // session()->flush();
         Session::flash('unsub_success', 'You are unsubscribe success');
         return redirect("?OpID=10");
     }public function du_delete_subscription(Request $request)
@@ -866,7 +866,7 @@ class FrontController extends Controller
 
 
         if(isset( $response['text']) && $response['text'] == "UNSUB_OK" ){ // Unsub succcess
-          session()->flush();
+         // session()->flush();
           Session::flash('unsub_success', 'You are unsubscribe success');
         }else{
           Session::flash('unsub_fail', 'There is error in unsubscribe');
