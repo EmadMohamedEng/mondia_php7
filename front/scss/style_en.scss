@@ -12,12 +12,12 @@ html {
 }
 
 @font-face {
-  font-family: en_regular;
-  src: url(../images/ar_regular.ttf);
+  font-family: DuCoHeadline200;
+  src: url('../font/DuCoHeadline200.ttf')
 }
 
 body {
-  font-family: ar_regular;
+  font-family: DuCoHeadline200;
   // font-family: DuCoHeadline, Arial, sans-serif;
   direction: ltr;
   width: 100%;
@@ -69,9 +69,16 @@ a {
 
       h6 {
         padding-left: 2rem;
+        font-weight: bold;
+      }
+
+      img {
+        width: 25%;
+        float: right;
       }
 
       .arrow_back {
+        opacity: 0.5;
         position: absolute;
         top: 47%;
         left: -0.5rem;
@@ -85,6 +92,10 @@ a {
       &.header_icon {
         text-align: right;
         float: right;
+
+        i {
+          opacity: 0.5;
+        }
       }
 
     }
@@ -1314,7 +1325,7 @@ a {
 
 
         .arrow_back {
-          left: 1.25rem;
+          left: 64%;
         }
       }
     }
@@ -1331,6 +1342,7 @@ a {
       button {
         outline: 0;
         font-size: 1rem;
+        opacity: 0.5;
         position: fixed;
         top: 2.15rem;
         left: 2.5rem;
@@ -1361,6 +1373,7 @@ a {
           .nav-link {
             .icon_before {
               padding-right: 0.5rem;
+              color: #00a9ce;
             }
           }
 
@@ -1777,7 +1790,7 @@ a {
         float: right;
 
         .arrow_back {
-          left: 0rem;
+          left: 67%;
         }
       }
     }
@@ -1793,7 +1806,8 @@ a {
 
       button {
         outline: 0;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        opacity: 0.5;
         position: fixed;
         top: 2.15rem;
         left: 3rem;
@@ -1824,6 +1838,7 @@ a {
           .nav-link {
             .icon_before {
               padding-right: 0.5rem;
+              color: #00a9ce;
             }
           }
 
@@ -1879,7 +1894,8 @@ a {
       .content_carousel_head {
         .link_title {
           h6 {
-            font-size: 1.5rem;
+            font-weight: bold;
+            font-size: 1.25rem;
           }
         }
 
@@ -2252,7 +2268,7 @@ a {
         float: right;
 
         .arrow_back {
-          left: -1rem;
+          left: 64%;
         }
       }
     }
@@ -2269,6 +2285,7 @@ a {
       button {
         outline: 0;
         font-size: 1rem;
+        opacity: 0.5;
         position: fixed;
         top: 2.15rem;
         left: 2.5rem;
@@ -2299,6 +2316,7 @@ a {
           .nav-link {
             .icon_before {
               padding-right: 0.5rem;
+              color: #00a9ce;
             }
           }
 
@@ -2748,7 +2766,7 @@ a {
         float: right;
 
         .arrow_back {
-          left: 0;
+          left: 64%;
           font-size: 1.5rem;
         }
 
@@ -2769,7 +2787,8 @@ a {
 
       button {
         outline: 0;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        opacity: 0.5;
         position: fixed;
         top: 2.15rem;
         left: 3rem;
@@ -2800,6 +2819,7 @@ a {
           .nav-link {
             .icon_before {
               padding-right: 0.5rem;
+              color: #00a9ce;
             }
           }
 
@@ -2855,7 +2875,8 @@ a {
       .content_carousel_head {
         .link_title {
           h6 {
-            font-size: 1.5rem;
+            font-weight: bold;
+            font-size: 1.25rem;
           }
         }
 
@@ -3261,14 +3282,14 @@ a {
 
       .header_logo,
       .header_icon {
-        width: 100%;
-        text-align: center;
+        width: 71%;
+        text-align: right;
         display: block;
 
         .arrow_back {
-          left: 3.5rem;
-          top: 50%;
-          font-size: 2.5rem;
+          left: 72%;
+          top: 1.25rem;
+          font-size: 2rem;
         }
 
         h6 {
@@ -3277,13 +3298,15 @@ a {
           margin-left: 5rem;
         }
 
+        img {
+          width: 18%;
+        }
+
         &.header_icon {
-          a {
             i {
               font-size: 2rem;
               margin-top: 1rem;
             }
-          }
         }
       }
     }
@@ -3299,7 +3322,8 @@ a {
 
       button {
         outline: 0;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        opacity: 0.5;
         position: fixed;
         top: 2.85rem;
         left: 4rem;
@@ -3331,6 +3355,7 @@ a {
           .nav-link {
             .icon_before {
               padding-right: 0.5rem;
+              color: #00a9ce;
             }
           }
 
@@ -3398,6 +3423,7 @@ a {
         .link_title {
           h6 {
             font-size: 2rem;
+            font-weight: bold;
           }
         }
 
@@ -3433,6 +3459,7 @@ a {
         .link_title {
           h6 {
             font-size: 2rem;
+            font-weight: bold;
           }
         }
       }
@@ -3912,14 +3939,14 @@ a {
 
       .header_logo,
       .header_icon {
-        width: 100%;
-        text-align: center;
+        width: 71%;
+        text-align: right;
         display: block;
 
         .arrow_back {
-          left: 4.5rem;
-          top: 50%;
-          font-size: 2.75rem;
+          left: 72%;
+          top: 1.25rem;
+          font-size: 2rem;
         }
 
         h6 {
@@ -3928,12 +3955,14 @@ a {
           margin-left: 5rem;
         }
 
+        img {
+          width: 20%
+        }
+
         &.header_icon {
-          a {
-            i {
-              font-size: 2.5rem;
-              margin-top: 1rem;
-            }
+          i {
+            font-size: 2.5rem;
+            margin-top: 1rem;
           }
         }
       }
@@ -3951,6 +3980,7 @@ a {
       button {
         outline: 0;
         font-size: 2.5rem;
+        opacity: 0.5;
         position: fixed;
         top: 3.25rem;
         left: 5rem;
@@ -3982,6 +4012,7 @@ a {
           .nav-link {
             .icon_before {
               padding-right: 0.5rem;
+              color: #00a9ce;
             }
           }
 
@@ -4049,6 +4080,7 @@ a {
         .link_title {
           h6 {
             font-size: 2.35rem;
+            font-weight: bold;
           }
         }
 
@@ -4086,6 +4118,7 @@ a {
         .link_title {
           h6 {
             font-size: 2.35rem;
+            font-weight: bold;
           }
         }
       }
