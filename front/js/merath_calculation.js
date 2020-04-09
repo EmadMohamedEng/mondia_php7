@@ -10,6 +10,7 @@ $('#btn_cal').click(function () {
     $('.thead1_h4').css('display', 'none');
     $('#btn_cal').removeAttr('data-toggle', 'modal');
     $('#btn_cal').removeAttr('data-target', '#exampleModal');
+    $('.all_mer').hide()
   }
 });
 
