@@ -20,6 +20,8 @@ class MyisamToInnodb extends Migration
     }
 
 
+
+
     /**
      * Reverse the migrations.
      *
