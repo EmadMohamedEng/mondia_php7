@@ -6,7 +6,7 @@
     @include('front.search')
   <section class="list_page">
     <div class="content_carousel_head text-capitalize">
-      <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
+      <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0 padding_phones">
         <a class="link_title link_href" href="{{route('front.service',['provider_id' => $provider->id])}}">
           <h6 class="">{{$provider->getTranslation('title',getCode())}}</h6>
         </a>

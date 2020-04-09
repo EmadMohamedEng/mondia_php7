@@ -9,14 +9,14 @@
 @section('content')
 <style media="screen">
     .list_load {
-      min-height: 700px;
+      /* min-height: 700px; */
     }
   </style>
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
     @include('front.search')
   <section class="list_page">
     <div class="content_carousel_head text-capitalize">
-      <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
+      <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0 padding_phones">
         @if(request()->has('service_id') && request()->get('service_id') != '')
         <a class="link_title link_href" href="{{route('front.list',['service_id' => request()->get('service_id')])}}">
           <h6 class="">{{$service->getTranslation('title',getCode())}}</h6>
