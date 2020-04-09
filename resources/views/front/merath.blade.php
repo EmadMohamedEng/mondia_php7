@@ -8,7 +8,7 @@
 </style>
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
     @include('front.search')
-    <section class="merath_page" dir="{{getCode() == 'en' ? 'rtl' : 'ltr'}}">
+    <section class="bounce-top merath_page" dir="{{getCode() == 'en' ? 'rtl' : 'ltr'}}">
       <div class="all_mer" style="display:block">
       <div class="merath_title">
         <h2>@lang('front.merath')</h2>
@@ -219,7 +219,7 @@
 
          <div class="button_merath">
           <button  class="btn merath_btn" onclick="again()">حساب الميراث</button>
-        </div> 
+        </div>
       </div>
     </section>
   </div>

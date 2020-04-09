@@ -5,7 +5,7 @@
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 close_nav">
     @include('front.search')
   <section class="nearmosque_page">
-    <div class="nearmosque_title text-center">
+    <div class="nearmosque_title text-center bounce-top">
       <h2>@lang('front.mosque')</h2>
       <div id="map" style="position: relative; overflow: hidden;"></div>
     </div>

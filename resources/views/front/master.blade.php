@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="url" content="{{url('/')}}">
-    <link rel="shortcut icon" href="{{request()->get('OpID') == omantel ? asset('front/images/omantel_logo.png') : asset('front/images/favicon.ico') }}">
-    <title>{{get_setting('title_page')}} | @yield('page_title')</title>
-    <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/animate.css')}}">
-    @if(request()->has('OpID') && request()->get('OpID') == omantel)
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="url" content="{{url('/')}}">
+  <link rel="shortcut icon" href="{{request()->get('OpID') == omantel ? asset('front/images/omantel_logo.png') : asset('front/images/favicon.ico') }}">
+  <title>{{get_setting('title_page')}} | @yield('page_title')</title>
+  <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
+  <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
+  @if(request()->has('OpID') && request()->get('OpID') == omantel)
     <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
     @else
     <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
@@ -21,7 +21,7 @@
     @if(app()->getLocale() == 'ar')
     <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
     @endif
-    
+
     <style>
       .active_menu{
         color:#000;
@@ -29,9 +29,9 @@
       }
     </style>
 
-    <script>
-        window.base_url = '{{url("/")}}';
-    </script>
+  <script>
+    window.base_url = '{{url("/")}}';
+  </script>
 </head>
 
 <body>
@@ -44,8 +44,9 @@
               <i class="fas fa-angle-left fa-lg"></i>
             </a>
 
-            <a href="{{route('front.index')}}" class="link_href scale-up-bottom">
-              <h6 class="h5">{{get_setting('title_page')}}</h6>
+            <a href="{{route('front.index')}}" class="link_href">
+               <h6 class="h5"> {{request()->get('OpID') == omantel ? "Omantel":"Du"}}</h6>
+
             </a>
           </div>
         </div>
@@ -176,7 +177,7 @@
   <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
   <script src="{{asset('front/js/script.js')}}"></script>
   <script>
-    op_id = {{ isset($_REQUEST['OpID']) ? 1 : 0 }}
+    op_id = {{isset($_REQUEST['OpID']) ? 1 : 0}}
     if (op_id) {
       var operator_id = {{isset($_REQUEST['OpID']) ? $_REQUEST['OpID'] : ''}}
       $('.link_href').each(function() {
