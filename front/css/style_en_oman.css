@@ -84,17 +84,17 @@ a:hover, a:focus, a:active {
   display: inline-flex;
   position: relative;
   width: 100%;
-  text-align: right;
+  text-align: center;
 }
 .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
-  padding-left: 2rem;
+  padding-left: 0;
   font-weight: bold;
 }
 .main_container .header .header_logo .link_href,
 .main_container .header .header_icon .link_href {
   width: 100%;
-  text-align: right;
+  text-align: center;
 }
 .main_container .header .header_logo .link_href svg,
 .main_container .header .header_logo .link_href img,
@@ -1027,7 +1027,7 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 64%;
+    left: 41%;
   }
   .main_container .header .header_logo img, .main_container .header .header_logo svg,
 .main_container .header .header_icon img,
@@ -1346,7 +1346,7 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 67%;
+    left: 42%;
   }
   .main_container .header .header_logo img, .main_container .header .header_logo svg,
 .main_container .header .header_icon img,
@@ -1675,7 +1675,7 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 64%;
+    left: 42%;
   }
   .main_container .header .header_logo img, .main_container .header .header_logo svg,
 .main_container .header .header_icon img,
@@ -2020,8 +2020,8 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 64%;
-    font-size: 1.5rem;
+    left: 41%;
+    font-size: 1.25rem;
   }
   .main_container .header .header_logo img, .main_container .header .header_logo svg,
 .main_container .header .header_icon img,
@@ -2380,19 +2380,19 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo,
 .main_container .header .header_icon {
-    width: 71%;
+    width: 100%;
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 69%;
+    left: 44%;
     top: 1.75rem;
     font-size: 2rem;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
     font-size: 2rem;
-    margin-top: 0.5rem;
-    margin-left: 5rem;
+    margin-top: 0.25rem;
+    padding-left: 0;
   }
   .main_container .header .header_logo img, .main_container .header .header_logo svg,
 .main_container .header .header_icon img,
@@ -2842,19 +2842,19 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo,
 .main_container .header .header_icon {
-    width: 71%;
+    width: 100%;
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 75%;
+    left: 45%;
     top: 2rem;
     font-size: 2.5rem;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
     font-size: 2.5rem;
-    margin-top: 0.5rem;
-    margin-left: 5rem;
+    margin-top: 0.25rem;
+    padding-left: 0;
   }
   .main_container .header .header_logo img, .main_container .header .header_logo svg,
 .main_container .header .header_icon img,

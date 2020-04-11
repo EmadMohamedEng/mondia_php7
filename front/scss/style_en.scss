@@ -70,13 +70,13 @@ a {
       text-align: right;
 
       h6 {
-        padding-left: 2rem;
+        padding-left: 0;
         font-weight: bold;
       }
 
       .link_href {
         width: 100%;
-        text-align: right;
+        text-align: center;
 
         svg,
         img {
@@ -1336,7 +1336,7 @@ a {
       .header_logo,
       .header_icon {
         .arrow_back {
-          left: 64%;
+          left: 41%;
         }
 
         img,svg {width: 25% !important;}
@@ -1801,7 +1801,7 @@ a {
       .header_logo,
       .header_icon {
         .arrow_back {
-          left: 67%;
+          left: 42%;
         }
 
         img,svg {width: 25% !important;}
@@ -2279,7 +2279,7 @@ a {
       .header_logo,
       .header_icon {
         .arrow_back {
-          left: 64%;
+          left: 42%;
         }
 
         img,svg {width: 25% !important;}
@@ -2777,8 +2777,8 @@ a {
       .header_logo,
       .header_icon {
         .arrow_back {
-          left: 64%;
-          font-size: 1.5rem;
+          left: 41%;
+          font-size: 1.25rem;
         }
 
         img,svg {width: 25% !important;}
@@ -3295,18 +3295,19 @@ a {
 
       .header_logo,
       .header_icon {
-        width: 71%;
+        width: 100%;
+        text-align: center;
 
         .arrow_back {
-          left: 69%;
+          left: 44%;
           top: 1.75rem;
           font-size: 2rem;
         }
 
         h6 {
           font-size: 2rem;
-          margin-top: 0.5rem;
-          margin-left: 5rem;
+          margin-top: 0.25rem;
+          padding-left: 0;
         }
 
         img,svg {width: 25% !important;}
@@ -3948,18 +3949,18 @@ a {
 
       .header_logo,
       .header_icon {
-        width: 71%;
+        width: 100%;
 
         .arrow_back {
-          left: 75%;
+          left: 45%;
           top: 2rem;
           font-size: 2.5rem;
         }
 
         h6 {
           font-size: 2.5rem;
-          margin-top: 0.5rem;
-          margin-left: 5rem;
+          margin-top: 0.25rem;
+          padding-left: 0;
         }
 
         img,svg {width: 18% !important;}
