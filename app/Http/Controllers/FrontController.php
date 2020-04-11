@@ -132,8 +132,8 @@ class FrontController extends Controller
 
     public function view_content($id,Request $request)
     {
-     $current_url =    \Request::fullUrl()  ;
-     session()->put('current_url',$current_url);
+        $current_url =    \Request::fullUrl()  ;
+        session()->put('current_url',$current_url);
 
         $view_coming_post = get_setting('view_coming_post');
         $enable = get_setting('enable_testing');
@@ -189,41 +189,84 @@ class FrontController extends Controller
 
           }
 
+        }
+
+
+
+
+      if($request->OpID == omantel)
+      {
+        session()->put('OpID',omantel);
+          $response = $this->check_status($userToken);
+          if(empty($response)){
+            // return $this->pin_code($userToken);
+            return view('front.inner_confirm', compact('content','contents'));
+          }else{
+              session()->put('status','active');
+              return view('front.inner', compact('content','contents'));
+          }
+      }
+
+      if($request->OpID == du)
+      {
+        session()->put('OpID',du);
+          $response = $this->du_check_status($userToken);
+
+          if(empty($response)){
+            // return $this->du_pin_code($userToken);
+            return view('front.inner_confirm', compact('content','contents'));
+          }
+          else{
+              session()->put('status','active');
+              return view('front.inner', compact('content','contents'));
+          }
+      }
+
+
+      return view('front.inner', compact('content','contents'));
     }
 
-
-
-
-    if($request->OpID == omantel)
+    public function search(Request $request)
     {
-       session()->put('OpID',omantel);
-        $response = $this->check_status($userToken);
-        if(empty($response)){
-           // return $this->pin_code($userToken);
-           return view('front.inner_confirm', compact('content','contents'));
-        }else{
-            session()->put('status','active');
-            return view('front.inner', compact('content','contents'));
+        $services =Service::select('services.*','services.id as service_id')
+        ->join('translatables','translatables.record_id','=','services.id')
+        ->join('tans_bodies','tans_bodies.translatable_id','translatables.id')
+        ->where('translatables.table_name','services')
+        ->where('translatables.column_name','title')
+        ->where(function($q) use ($request){
+          $q->where('services.title', 'like', '%' . $request->search . '%');
+          $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+        });
+
+        $contents = Video::select('contents.*','contents.id as content_id')
+        ->join('translatables','translatables.record_id','=','contents.id')
+        ->join('tans_bodies','tans_bodies.translatable_id','translatables.id')
+        ->where('translatables.table_name','contents')
+        ->where('translatables.column_name','title')
+        ->where(function($q) use ($request){
+          $q->where('contents.title', 'like', '%' . $request->search . '%');
+          $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+        });
+
+        if(request()->has('OpID') && request()->get('OpID') != '')
+        {
+          $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
+          ->where('posts.operator_id', request()->get('OpID'))
+          ->where('posts.show_date', '<=', Carbon::now()->toDateString())
+          ->orderBy('posts.show_date','desc');
         }
-    }
-
-    if($request->OpID == du)
-    {
-       session()->put('OpID',du);
-        $response = $this->du_check_status($userToken);
-
-        if(empty($response)){
-           // return $this->du_pin_code($userToken);
-           return view('front.inner_confirm', compact('content','contents'));
+        if(request()->has('OpID') && request()->get('OpID') != '')
+        {
+          $services = $services->whereHas('videos', function($q){
+              $q->join('posts','posts.video_id' , '=' , 'contents.id')
+              ->where('posts.operator_id', request()->get('OpID'))
+              ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+          });
         }
-        else{
-            session()->put('status','active');
-            return view('front.inner', compact('content','contents'));
-        }
-    }
 
-
-        return view('front.inner', compact('content','contents'));
+        $services = $services->get();
+        $contents = $contents->get();
+        return view('front.search_result',compact('services','contents'));
     }
 
 
