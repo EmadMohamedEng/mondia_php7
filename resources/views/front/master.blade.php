@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
-  <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
   @if(request()->has('OpID') && request()->get('OpID') == omantel)
     <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
     @else
@@ -46,10 +45,16 @@
             </a>
 
             <a href="{{route('front.index')}}" class="link_href">
-              <h6 class="h5"> {{request()->get('OpID') == omantel ? "Omantel":"Du"}}</h6>
+            <!-- {{request()->get('OpID') == omantel ? '<img src="front/images/Du_header.png" alt="Logo">':'<img src="front/images/Du_header.png" alt="Logo">'}} -->
+            @if(request()->get('OpID') == omantel)
+            <img src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
+            @else
+            <img src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
+            @endif
             </a>
           </div>
         </div>
+
 
         {{-- <div class="col-md-2 col-lg-2 col-xl-6 col-4">
           <a href="#0">

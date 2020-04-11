@@ -77,14 +77,9 @@ a {
 
         .arrow_back {
           position: absolute;
-          top: 4%;
-          right: -1rem;
+          top: 1rem;
+          right: 100%;
           transform: translate(-50%, -50%);
-          -webkit-transform: rotate(180deg);
-          -moz-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-          -o-transform: rotate(180deg);
-          transform: rotate(180deg);
         }
       }
 
@@ -625,6 +620,7 @@ a {
             margin: -1rem -1rem -1rem 0;
           }
         }
+
         .modal-body {
           .modal_club {
             margin-top: 0.5rem;
@@ -1334,7 +1330,8 @@ a {
         }
 
         .arrow_back {
-          right: -1rem;
+          right: 100% !important;
+          top: 1rem !important;
           width: 0;
 
         }
@@ -1798,9 +1795,9 @@ a {
         }
 
         .arrow_back {
-          right: -2rem !important;
+          right: 100% !important;
+          top: 1rem !important;
           width: 0;
-
         }
       }
     }
@@ -2266,8 +2263,8 @@ a {
         }
 
         .arrow_back {
-          right: -2.75rem !important;
-          top: -0.25rem !important;
+          right: 100% !important;
+          top: 1rem !important;
           font-size: 1.35rem;
           width: 0;
         }
@@ -2764,8 +2761,8 @@ a {
         }
 
         .arrow_back {
-          right: -2.25rem !important;
-          top: -0.25rem !important;
+          right: 100% !important;
+          top: 1rem !important;
           width: 0;
         }
       }
@@ -3262,8 +3259,8 @@ a {
         float: left !important;
 
         .arrow_back {
-          right: 3.25rem !important;
-          top: -0.25rem !important;
+          right: 98% !important;
+          top: 1.5rem !important;
           font-size: 2rem;
           width: 0;
         }
@@ -3877,8 +3874,8 @@ a {
         float: left !important;
 
         .arrow_back {
-          right: 3.25rem !important;
-          top: -0.25rem !important;
+          right: 98% !important;
+          top: 1.5rem !important;
           font-size: 2.5rem;
           width: 0;
         }

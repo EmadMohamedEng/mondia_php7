@@ -77,9 +77,9 @@ a {
         width: 100%;
         text-align: center;
 
-        svg,
         img {
-          width: 10%;
+          width: 6%;
+          margin-top: -0.25rem;
         }
       }
 
@@ -1331,10 +1331,10 @@ a {
       .header_logo,
       .header_icon {
         .arrow_back {
-          left: 41%;
+          left: 100%;
         }
 
-        img,svg {width: 25% !important;}
+        img {width: 18% !important; margin-top: 0 !important;}
       }
     }
 
@@ -1801,10 +1801,10 @@ a {
       .header_logo,
       .header_icon {
         .arrow_back {
-          left: 42%;
+          left: 100%;
         }
 
-        img,svg {width: 25% !important;}
+        img {width: 18% !important; margin-top: 0 !important;}
       }
     }
 
@@ -2284,10 +2284,10 @@ a {
       .header_logo,
       .header_icon {
         .arrow_back {
-          left: 42%;
+          left: 100%;
         }
 
-        img,svg {width: 25% !important;}
+        img {width: 18% !important; margin-top: 0 !important;}
       }
     }
 
@@ -2787,11 +2787,11 @@ a {
       .header_logo,
       .header_icon {
         .arrow_back {
-          left: 41%;
+          left: 100%;
           font-size: 1.25rem;
         }
 
-        img,svg {width: 25% !important;}
+        img {width: 18% !important; margin-top: 0 !important;}
 
         h6 {
           font-size: 1.5rem;
@@ -3313,7 +3313,7 @@ a {
         width: 100%;
 
         .arrow_back {
-          left: 44%;
+          left: 100%;
           top: 1.75rem;
           font-size: 2rem;
         }
@@ -3324,7 +3324,7 @@ a {
           padding-left: 0;
         }
 
-        img,svg {width: 25% !important;}
+        img {width: 15% !important; margin-top: 0 !important;}
 
         &.header_icon {
           i {
@@ -3968,7 +3968,7 @@ a {
         width: 100%;
 
         .arrow_back {
-          left: 45%;
+          left: 100%;
           top: 2rem;
           font-size: 2.5rem
         }
@@ -3979,7 +3979,7 @@ a {
           padding-left: 0;
         }
 
-        img,svg {width: 18% !important;}
+        img {width: 13% !important; margin-top: 0 !important;}
 
         &.header_icon {
           i {

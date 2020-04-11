@@ -78,9 +78,9 @@ a {
         width: 100%;
         text-align: center;
 
-        svg,
         img {
-          width: 10%;
+          width: 4%;
+          margin-top: -0.5rem;
         }
       }
 
@@ -122,6 +122,7 @@ a {
 
       .nav_item_welc {
         margin-bottom: 0.25rem;
+        color: $black_color !important;
       }
 
       .nav-item {
@@ -1336,10 +1337,10 @@ a {
       .header_logo,
       .header_icon {
         .arrow_back {
-          left: 41%;
+          left: 100%;
         }
 
-        img,svg {width: 25% !important;}
+        img {width: 13% !important;}
       }
     }
 
@@ -1801,10 +1802,10 @@ a {
       .header_logo,
       .header_icon {
         .arrow_back {
-          left: 42%;
+          left: 100%;
         }
 
-        img,svg {width: 25% !important;}
+        img {width: 13% !important;}
       }
     }
 
@@ -2279,10 +2280,10 @@ a {
       .header_logo,
       .header_icon {
         .arrow_back {
-          left: 42%;
+          left: 100%;
         }
 
-        img,svg {width: 25% !important;}
+        img {width: 12% !important;}
       }
     }
 
@@ -2777,11 +2778,11 @@ a {
       .header_logo,
       .header_icon {
         .arrow_back {
-          left: 41%;
+          left: 100%;
           font-size: 1.25rem;
         }
 
-        img,svg {width: 25% !important;}
+        img {width: 12% !important;}
 
         h6 {
           font-size: 1.5rem;
@@ -3299,7 +3300,7 @@ a {
         text-align: center;
 
         .arrow_back {
-          left: 44%;
+          left: 100%;
           top: 1.75rem;
           font-size: 2rem;
         }
@@ -3310,7 +3311,7 @@ a {
           padding-left: 0;
         }
 
-        img,svg {width: 25% !important;}
+        img {width: 9% !important;}
 
         &.header_icon {
           i {
@@ -3952,7 +3953,7 @@ a {
         width: 100%;
 
         .arrow_back {
-          left: 45%;
+          left: 100%;
           top: 2rem;
           font-size: 2.5rem;
         }
@@ -3963,7 +3964,7 @@ a {
           padding-left: 0;
         }
 
-        img,svg {width: 18% !important;}
+        img {width: 8% !important;}
 
         &.header_icon {
           i {

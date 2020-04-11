@@ -96,11 +96,10 @@ a:hover, a:focus, a:active {
   width: 100%;
   text-align: center;
 }
-.main_container .header .header_logo .link_href svg,
 .main_container .header .header_logo .link_href img,
-.main_container .header .header_icon .link_href svg,
 .main_container .header .header_icon .link_href img {
-  width: 10%;
+  width: 4%;
+  margin-top: -0.5rem;
 }
 .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
@@ -137,6 +136,7 @@ a:hover, a:focus, a:active {
 }
 .main_container .nav_nav .navbar_ul .nav_item_welc {
   margin-bottom: 0.25rem;
+  color: #000 !important;
 }
 .main_container .nav_nav .navbar_ul .nav-item {
   padding: 0.25rem 0.5rem;
@@ -1032,12 +1032,11 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 41%;
+    left: 100%;
   }
-  .main_container .header .header_logo img, .main_container .header .header_logo svg,
-.main_container .header .header_icon img,
-.main_container .header .header_icon svg {
-    width: 25% !important;
+  .main_container .header .header_logo img,
+.main_container .header .header_icon img {
+    width: 13% !important;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1346,12 +1345,11 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 42%;
+    left: 100%;
   }
-  .main_container .header .header_logo img, .main_container .header .header_logo svg,
-.main_container .header .header_icon img,
-.main_container .header .header_icon svg {
-    width: 25% !important;
+  .main_container .header .header_logo img,
+.main_container .header .header_icon img {
+    width: 13% !important;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1670,12 +1668,11 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 42%;
+    left: 100%;
   }
-  .main_container .header .header_logo img, .main_container .header .header_logo svg,
-.main_container .header .header_icon img,
-.main_container .header .header_icon svg {
-    width: 25% !important;
+  .main_container .header .header_logo img,
+.main_container .header .header_icon img {
+    width: 12% !important;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -2010,13 +2007,12 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 41%;
-    font-size: 1.5rem;
+    left: 100%;
+    font-size: 1.25rem;
   }
-  .main_container .header .header_logo img, .main_container .header .header_logo svg,
-.main_container .header .header_icon img,
-.main_container .header .header_icon svg {
-    width: 25% !important;
+  .main_container .header .header_logo img,
+.main_container .header .header_icon img {
+    width: 12% !important;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -2370,7 +2366,7 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 44%;
+    left: 100%;
     top: 1.75rem;
     font-size: 2rem;
   }
@@ -2380,10 +2376,9 @@ a:hover, a:focus, a:active {
     margin-top: 0.25rem;
     padding-left: 0;
   }
-  .main_container .header .header_logo img, .main_container .header .header_logo svg,
-.main_container .header .header_icon img,
-.main_container .header .header_icon svg {
-    width: 25% !important;
+  .main_container .header .header_logo img,
+.main_container .header .header_icon img {
+    width: 9% !important;
   }
   .main_container .header .header_logo.header_icon i,
 .main_container .header .header_icon.header_icon i {
@@ -2829,7 +2824,7 @@ a:hover, a:focus, a:active {
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
-    left: 45%;
+    left: 100%;
     top: 2rem;
     font-size: 2.5rem;
   }
@@ -2839,10 +2834,9 @@ a:hover, a:focus, a:active {
     margin-top: 0.25rem;
     padding-left: 0;
   }
-  .main_container .header .header_logo img, .main_container .header .header_logo svg,
-.main_container .header .header_icon img,
-.main_container .header .header_icon svg {
-    width: 18% !important;
+  .main_container .header .header_logo img,
+.main_container .header .header_icon img {
+    width: 8% !important;
   }
   .main_container .header .header_logo.header_icon i,
 .main_container .header .header_icon.header_icon i {
