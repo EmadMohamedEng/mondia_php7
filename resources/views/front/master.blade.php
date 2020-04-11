@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
   @if(request()->has('OpID') && request()->get('OpID') == omantel)
     <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
     @else
@@ -38,26 +39,25 @@
   <main class="main_container">
     <header class="header w-100">
       <div class="row">
-        <div class="col-md-10 col-lg-10 col-xl-6 col-8">
+        <div class="col-md-12 col-lg-12 col-xl-12 col-12">
           <div class="header_logo">
             <a class="arrow_back back" href="#0">
               <i class="fas fa-angle-left fa-lg"></i>
             </a>
 
             <a href="{{route('front.index')}}" class="link_href">
-               <h6 class="h5"> {{request()->get('OpID') == omantel ? "Omantel":"Du"}}</h6>
-
+              <h6 class="h5"> {{request()->get('OpID') == omantel ? "Omantel":"Du"}}</h6>
             </a>
           </div>
         </div>
 
-        <div class="col-md-2 col-lg-2 col-xl-6 col-4">
-          {{-- <a href="#0">
+        {{-- <div class="col-md-2 col-lg-2 col-xl-6 col-4">
+          <a href="#0">
             <div class="header_icon">
               <i class="fas fa-search fa-lg"></i>
             </div>
-          </a> --}}
-        </div>
+          </a>
+        </div> --}}
       </div>
     </header>
 
