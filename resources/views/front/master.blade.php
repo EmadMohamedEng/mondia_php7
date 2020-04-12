@@ -47,9 +47,9 @@
             <a href="{{route('front.index')}}" class="link_href">
             <!-- {{request()->get('OpID') == omantel ? '<img src="front/images/Du_header.png" alt="Logo">':'<img src="front/images/Du_header.png" alt="Logo">'}} -->
             @if(request()->get('OpID') == omantel)
-            <img src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
+            <img class="scale-up-bottom" src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
             @else
-            <img src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
+            <img class="scale-up-bottom" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
             @endif
             </a>
           </div>

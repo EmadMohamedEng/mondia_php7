@@ -172,7 +172,7 @@ select {
             padding: .25rem 1rem;
             text-align: justify;
             width: 76%;
-            
+
             &.dropdown-item2 {
               padding: .25rem 0;
               width: 100%;
@@ -256,6 +256,7 @@ select {
 
       .link_title {
         color: $black_color;
+
         h6 {
           font-weight: bold;
         }
@@ -433,6 +434,7 @@ select {
         color: $white_color;
         border: 0;
         float: right;
+
         padding: 0.25rem .5rem;
         margin-bottom: 1rem;
       }
@@ -495,7 +497,7 @@ select {
         background: $bg_color;
         color: $white_color;
         position: absolute;
-        top: 0;
+        top: 49%;
         left: 35%;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
@@ -775,18 +777,10 @@ select {
 
       .h4_time_2 {
         text-align: right;
-
-        &.hegry_date {
-          text-align: left !important;
-        }
       }
 
       .h4_time {
         text-align: left;
-
-        &.melady_date {
-          text-align: right !important;
-        }
       }
     }
   }
@@ -1376,7 +1370,9 @@ select {
           left: 100%;
         }
 
-        img {width: 13% !important;}
+        img {
+          width: 13% !important;
+        }
       }
     }
 
@@ -1416,6 +1412,7 @@ select {
         width: 15rem;
         height: 100vh;
         padding: 0 0;
+        overflow-y: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -1651,24 +1648,23 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 3.5rem;
-        direction: rtl;
 
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          float: right;
-          padding-right: 8px;
+          float: left;
+          padding-left: 8px;
           line-height: 3rem;
           font-size: 1rem;
         }
 
         .h4_time_2 {
-          float: left;
-          padding-left: 8px;
+          float: right;
+          padding-right: 8px;
           line-height: 3rem;
-          font-size: 1.25rem;
+          font-size: 1rem;
         }
       }
     }
@@ -1841,7 +1837,9 @@ select {
           left: 100%;
         }
 
-        img {width: 13% !important;}
+        img {
+          width: 13% !important;
+        }
       }
     }
 
@@ -1881,6 +1879,7 @@ select {
         width: 15rem;
         height: 100vh;
         padding: 0 0;
+        overflow-y: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -2130,24 +2129,23 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 3.5rem;
-        direction: rtl;
 
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          float: right;
-          padding-right: 8px;
-          line-height: 3rem;
-          font-size: 1.35rem;
-        }
-
-        .h4_time_2 {
           float: left;
           padding-left: 8px;
           line-height: 3rem;
-          font-size: 1.35rem;
+          font-size: 1.09rem;
+        }
+
+        .h4_time_2 {
+          float: right;
+          padding-right: 8px;
+          line-height: 3rem;
+          font-size: 1.09rem;
         }
       }
     }
@@ -2319,7 +2317,9 @@ select {
           left: 100%;
         }
 
-        img {width: 12% !important;}
+        img {
+          width: 12% !important;
+        }
       }
     }
 
@@ -2359,6 +2359,7 @@ select {
         width: 15rem;
         height: 100vh;
         padding: 0 0;
+        overflow-y: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -2605,24 +2606,23 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 3.5rem;
-        direction: rtl;
 
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          float: right;
-          padding-right: 8px;
-          line-height: 3rem;
-          font-size: 1.25rem;
-        }
-
-        .h4_time_2 {
           float: left;
           padding-left: 8px;
           line-height: 3rem;
-          font-size: 1.25rem;
+          font-size: 1.15rem;
+        }
+
+        .h4_time_2 {
+          float: right;
+          padding-right: 8px;
+          line-height: 3rem;
+          font-size: 1.15rem;
         }
       }
     }
@@ -2818,7 +2818,9 @@ select {
           font-size: 1.25rem;
         }
 
-        img {width: 12% !important;}
+        img {
+          width: 12% !important;
+        }
 
         h6 {
           font-size: 1.5rem;
@@ -2862,6 +2864,7 @@ select {
         width: 15rem;
         height: 100vh;
         padding: 0 0;
+        overflow-y: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -3122,24 +3125,23 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 3.5rem;
-        direction: rtl;
 
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          float: right;
-          padding-right: 8px;
-          line-height: 3rem;
-          font-size: 1.5rem;
-        }
-
-        .h4_time_2 {
           float: left;
           padding-left: 8px;
           line-height: 3rem;
-          font-size: 1.5rem;
+          font-size: 1.25rem;
+        }
+
+        .h4_time_2 {
+          float: right;
+          padding-right: 8px;
+          line-height: 3rem;
+          font-size: 1.25rem;
         }
       }
     }
@@ -3347,7 +3349,9 @@ select {
           padding-left: 0;
         }
 
-        img {width: 9% !important;}
+        img {
+          width: 9% !important;
+        }
 
         &.header_icon {
           i {
@@ -3394,6 +3398,7 @@ select {
         width: 18rem;
         height: 100vh;
         padding: 0 0;
+        overflow-y: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -3712,22 +3717,21 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 4.5rem;
-        direction: rtl;
 
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          float: right;
-          padding-right: 8px;
+          float: left;
+          padding-left: 10px;
           line-height: 4rem;
           font-size: 2rem;
         }
 
         .h4_time_2 {
-          float: left;
-          padding-left: 8px;
+          float: right;
+          padding-right: 10px;
           line-height: 4rem;
           font-size: 2rem;
         }
@@ -4000,7 +4004,9 @@ select {
           padding-left: 0;
         }
 
-        img {width: 8% !important;}
+        img {
+          width: 8% !important;
+        }
 
         &.header_icon {
           i {
@@ -4047,6 +4053,7 @@ select {
         width: 23rem;
         height: 100vh;
         padding: 0 0;
+        overflow-y: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -4372,22 +4379,21 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 5.5rem;
-        direction: rtl;
 
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          float: right;
-          padding-right: 8px;
+          float: left;
+          padding-left: 12px;
           line-height: 5rem;
           font-size: 2.85rem;
         }
 
         .h4_time_2 {
-          float: left;
-          padding-left: 8px;
+          float: right;
+          padding-right: 12px;
           line-height: 5rem;
           font-size: 2.85rem;
         }

@@ -430,8 +430,8 @@ body {
         // background: $bg_color;
         color: $white_color;
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 49%;
+        left: 40%;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -665,20 +665,10 @@ body {
     .time_btn {
       .h4_time_2 {
         text-align: left;
-
-        &.hegry_date {
-          text-align: right !important;
-          float: right !important;
-        }
       }
 
       .h4_time {
         text-align: right;
-
-        &.melady_date {
-          text-align: left !important;
-          float: left !important;
-        }
       }
     }
   }
@@ -1438,14 +1428,16 @@ body {
 
         .h4_time {
           float: right;
-          padding-left: 8px;
+          padding-right: 8px;
+          padding-left: 0;
           line-height: 3rem;
           font-size: 1rem;
         }
 
         .h4_time_2 {
           float: left;
-          padding-right: 8px;
+          padding-left: 8px;
+          padding-right: 0;
           line-height: 3rem;
           font-size: 1rem;
         }
@@ -1907,16 +1899,18 @@ body {
 
         .h4_time {
           float: right;
-          padding-left: 8px;
+          padding-right: 8px;
+          padding-left: 0;
           line-height: 3rem;
-          font-size: 1.15rem;
+          font-size: 1.20rem;
         }
 
         .h4_time_2 {
           float: left;
-          padding-right: 8px;
+          padding-left: 8px;
+          padding-right: 0;
           line-height: 3rem;
-          font-size: 1.15rem;
+          font-size: 1.20rem;
         }
       }
     }
@@ -2382,16 +2376,18 @@ body {
 
         .h4_time {
           float: right;
-          padding-left: 8px;
+          padding-right: 8px;
+          padding-left: 0;
           line-height: 3rem;
-          font-size: 1.15rem;
+          font-size: 1.30rem;
         }
 
         .h4_time_2 {
           float: left;
-          padding-right: 8px;
+          padding-left: 8px;
+          padding-right: 0;
           line-height: 3rem;
-          font-size: 1.15rem;
+          font-size: 1.30rem;
         }
       }
     }
@@ -2884,16 +2880,18 @@ body {
 
         .h4_time {
           float: right;
-          padding-left: 8px;
+          padding-right: 8px;
+          padding-left: 0;
           line-height: 3rem;
-          font-size: 1.25rem;
+          font-size: 1.30rem;
         }
 
         .h4_time_2 {
           float: left;
-          padding-right: 8px;
+          padding-left: 8px;
+          padding-right: 0;
           line-height: 3rem;
-          font-size: 1.25rem;
+          font-size: 1.30rem;
         }
       }
     }
@@ -3435,15 +3433,17 @@ body {
 
         .h4_time {
           float: right;
-          padding-left: 8px;
-          line-height: 4rem;
+          padding-right: 10px;
+          padding-left: 0;
+          line-height: 3rem;
           font-size: 2rem;
         }
 
         .h4_time_2 {
           float: left;
-          padding-right: 8px;
-          line-height: 4rem;
+          padding-left: 10px;
+          padding-right: 0;
+          line-height: 3rem;
           font-size: 2rem;
         }
       }
@@ -4057,15 +4057,17 @@ body {
 
         .h4_time {
           float: right;
-          padding-left: 12px;
-          line-height: 5rem;
+          padding-right: 12px;
+          padding-left: 0;
+          line-height: 3rem;
           font-size: 2.85rem;
         }
 
         .h4_time_2 {
           float: left;
-          padding-right: 12px;
-          line-height: 5rem;
+          padding-left: 12px;
+          padding-right: 0;
+          line-height: 3rem;
           font-size: 2.85rem;
         }
       }
