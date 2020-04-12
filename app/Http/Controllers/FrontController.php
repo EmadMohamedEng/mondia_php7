@@ -171,15 +171,27 @@ class FrontController extends Controller
         }
         $contents = $contents->orderBy('contents.created_at', 'desc')->limit(4)->get();
         if($request->has('userToken')){ // subscribe for the first time
-           session()->put('userToken',$request->get('userToken'));
+
+
+       //   session()->put('userToken',$request->get('userToken'));
+
+          if($request->OpID == omantel){
+            session()->put('userToken_omantel',$request->get('userToken'));
+          }elseif($request->OpID == du){
+            session()->put('userToken_du',$request->get('userToken'));
+          }
+
+
             $userToken = $request->userToken;
             $refreshToken = $request->refreshToken;
             $expiresIn = $request->expiresIn;
             $status = $request->status;
 
         }else{ // login for scond time
-          if(session()->has('userToken') && session()->get('userToken') != ''){ // if our server session is expire
-            $userToken =  session()->get('userToken')  ;
+          if(session()->has('userToken_omantel') && session()->get('userToken_omantel') != ''){ // if our server session is expire
+            $userToken_omantel=  session()->get('userToken_omantel')  ;
+          }elseif(session()->has('userToken_du') && session()->get('userToken_du') != ''){
+            $userToken_du=  session()->get('userToken_du')  ;
           }else{ // make Mondia login again by create new token
             if($request->OpID == omantel){
                return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
@@ -197,12 +209,16 @@ class FrontController extends Controller
       if($request->OpID == omantel)
       {
         session()->put('OpID',omantel);
-          $response = $this->check_status($userToken);
+
+          $response = $this->check_status(session()->get('userToken_omantel') );
           if(empty($response)){
             // return $this->pin_code($userToken);
+            session()->put('status','not_active');
+            session()->put('menu_unsub_omantel','not_active');
             return view('front.inner_confirm', compact('content','contents'));
           }else{
               session()->put('status','active');
+              session()->put('menu_unsub_omantel','active');
               return view('front.inner', compact('content','contents'));
           }
       }
@@ -210,14 +226,18 @@ class FrontController extends Controller
       if($request->OpID == du)
       {
         session()->put('OpID',du);
-          $response = $this->du_check_status($userToken);
+          $response = $this->du_check_status(session()->get('userToken_du'));
+
 
           if(empty($response)){
             // return $this->du_pin_code($userToken);
+            session()->put('status','not_active');
+            session()->put('menu_unsub_du','not_active');
             return view('front.inner_confirm', compact('content','contents'));
           }
           else{
               session()->put('status','active');
+              session()->put('menu_unsub_du','active');
               return view('front.inner', compact('content','contents'));
           }
       }
@@ -511,10 +531,53 @@ class FrontController extends Controller
         $response = $this->SendRequestGet($url, $json, $headers);
         $response = json_decode($response, true);
 
-        if(isset($response[0]['error']) && $response[0]['error'] =="TOKEN_NOT_VALID"){ // Token expire So create new one
-         $current_url =  session()->get('current_url');
-          return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
-        }
+
+
+        if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" ){ // Token expire So create new one
+          $current_url =  session()->get('current_url');
+
+          // make log
+          $actionName = "Omantel Check Status with Error";
+          $parameters_arr = array(
+            'token' => $userToken,
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'headers' =>  $headers,
+            'response' => $response,
+            'error' =>$response['error'] ,
+          );
+          $this->log_action($actionName, $url, $parameters_arr);
+
+
+         //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+           $Url = url("/omantel/redirect?redirect_url=".$current_url);
+           header("Location: $Url");
+           die();
+         }
+
+
+         if(isset($response['error']) && $response['error'] =="PARTNER_KEY_NOT_MATCHES" ){ // after switch between Omantel and Du
+          $current_url =  session()->get('current_url');
+
+          // make log
+          $actionName = "Omantel Check Status with Error";
+          $parameters_arr = array(
+            'token' => $userToken,
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'headers' =>  $headers,
+            'response' => $response,
+            'error' =>$response['error'] ,
+          );
+          $this->log_action($actionName, $url, $parameters_arr);
+
+
+          // return redirect("/du_redirect?redirect_url=".$current_url);
+          $Url = url("/omantel/redirect?redirect_url=".$current_url);
+          header("Location: $Url");
+          die();
+
+         }
+
+
 
 
 
@@ -535,6 +598,11 @@ class FrontController extends Controller
             'check_status_id' =>   $check_status_id ,
         );
         $this->log_action($actionName, $url, $parameters_arr);
+
+        if(!empty($response)){
+          session()->put('check_status_id',$response[0]['id']);
+          session()->put('userToken_omantel',$userToken);
+      }
 
         return $response;
     }
@@ -692,8 +760,8 @@ class FrontController extends Controller
     {
       if( session()->has('OpID')  && session()->get('OpID') != ''  ){
         $Url = url("/?OpID=".session()->get('OpID')) ;
-        session()->flush();
-       // Session::forget(['check_status_id','userToken']);
+       // session()->flush();
+        Session::forget(['userToken_omantel']);
         return redirect($Url);
       }else{
         return redirect(url('/'));
@@ -732,11 +800,12 @@ class FrontController extends Controller
 
     public function du_redirect(Request $request)
     {
-        $token = $this->du_create_token()['accessToken'];
 
+        $token = $this->du_create_token()['accessToken'];
+        $redirect_url = $request->redirect_url ;
         $Url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . urlencode($request->redirect_url)."&auto=false&authMode=AUTO&distributionChannel=APP";
 
-        session()->put('success_url',$request->redirect_url);
+        session()->put('success_url',$redirect_url);
 
         // make log
         $actionName = "DU Redirect";
@@ -774,12 +843,47 @@ class FrontController extends Controller
 
         if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" ){ // Token expire So create new one
           $current_url =  session()->get('current_url');
-           return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+         //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+
+       // make log
+       $actionName = "DU Check Status with Error";
+       $parameters_arr = array(
+       'token' => $userToken,
+       'date' => Carbon::now()->format('Y-m-d H:i:s'),
+       'userToken' =>  $userToken,
+       'headers' =>  $headers,
+       'response' => $response,
+       'error' =>$response['error'] ,
+       );
+       $this->log_action($actionName, $url, $parameters_arr);
+
+
+           $Url = url("/du_redirect?redirect_url=".$current_url);
+           header("Location: $Url");
+           die();
          }
 
          if(isset($response['error']) && $response['error'] =="PARTNER_KEY_NOT_MATCHES" ){ // after switch between Omantel and Du
           $current_url =  session()->get('current_url');
-           return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+
+          // make log
+          $actionName = "DU Check Status with Error";
+          $parameters_arr = array(
+          'token' => $userToken,
+          'date' => Carbon::now()->format('Y-m-d H:i:s'),
+          'userToken' =>  $userToken,
+          'headers' =>  $headers,
+          'response' => $response,
+          'error' =>$response['error'] ,
+          );
+          $this->log_action($actionName, $url, $parameters_arr);
+
+
+          // return redirect("/du_redirect?redirect_url=".$current_url);
+          $Url = url("/du_redirect?redirect_url=".$current_url);
+          header("Location: $Url");
+          die();
+
          }
 
 
@@ -804,7 +908,7 @@ class FrontController extends Controller
 
         if(!empty($response)){
             session()->put('check_status_id',$response[0]['id']);
-            session()->put('userToken',$userToken);
+            session()->put('userToken_du',$userToken);
         }
         return $response;
     }
@@ -944,7 +1048,8 @@ class FrontController extends Controller
         if( session()->has('OpID')  && session()->get('OpID') != ''  ){
 
           $Url = url("/?OpID=".session()->get('OpID')) ;
-          session()->flush();
+         // session()->flush();
+          Session::forget(['userToken_du']);
           return redirect($Url);
         }else{
           return redirect(url('/'));

@@ -141,16 +141,16 @@
               </li>
               @if(session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
               <li class="nav-item ">
-                @if(request()->get('OpID') == omantel)
+                @if(request()->get('OpID') == omantel   && session()->has('menu_unsub_omantel') && session()->get('menu_unsub_omantel') == 'active' )
                 <a class="nav-link text-capitalize" href="{{route('front.unsub')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
-                @elseif(request()->get('OpID') == du)
+                @elseif(request()->get('OpID') == du  && session()->has('menu_unsub_du') && session()->get('menu_unsub_du') == 'active' )
                 <a class="nav-link text-capitalize" href="{{route('front.du_unsub')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
                 @endif
               </li>
               <li class="nav-item ">
-                @if(request()->get('OpID') == omantel)
+                @if(request()->get('OpID') == omantel && session()->has('menu_unsub_omantel') && session()->get('menu_unsub_omantel') == 'active'  )
                 <a class="nav-link text-capitalize" href="{{route('front.logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
-                @elseif(request()->get('OpID') == du)
+                @elseif(request()->get('OpID') == du  && session()->has('menu_unsub_du') && session()->get('menu_unsub_du') == 'active'  )
                 <a class="nav-link text-capitalize" href="{{route('front.du_logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
                 @endif
               </li>
