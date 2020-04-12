@@ -332,7 +332,7 @@ class FrontController extends Controller
         $new_arr = unserialize(file_get_contents($URL));
         // echo "Latitude:".$new_arr['geoplugin_latitude']." and Longitude:".$new_arr['geoplugin_longitude'];
         // die;
-        dd($new_arr);
+        // dd($new_arr);
         if (isset($new_arr[0]['geoplugin_latitude']) && isset($new_arr[0]['geoplugin_longitude'])) {
             $latitude = $new_arr[0]['geoplugin_latitude'];
             $longitude = $new_arr[0]['geoplugin_longitude'];
