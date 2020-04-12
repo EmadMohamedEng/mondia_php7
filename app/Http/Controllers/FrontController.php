@@ -333,9 +333,9 @@ class FrontController extends Controller
         // echo "Latitude:".$new_arr['geoplugin_latitude']." and Longitude:".$new_arr['geoplugin_longitude'];
         // die;
         // dd($new_arr);
-        if (isset($new_arr[0]['geoplugin_latitude']) && isset($new_arr[0]['geoplugin_longitude'])) {
-            $latitude = $new_arr[0]['geoplugin_latitude'];
-            $longitude = $new_arr[0]['geoplugin_longitude'];
+        if (isset($new_arr['geoplugin_latitude']) && isset($new_arr['geoplugin_longitude'])) {
+            $latitude = $new_arr['geoplugin_latitude'];
+            $longitude = $new_arr['geoplugin_longitude'];
         } else {
             $latitude = "30";
             $longitude = "31";
