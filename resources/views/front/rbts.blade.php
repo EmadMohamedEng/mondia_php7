@@ -56,7 +56,7 @@ switch ($os) {
       </div>
 
       <div id="chooseAudio">
-        <table class="table table-dark table-hover" dir="rtl">
+        <table class="table table-hover" dir="rtl">
             <thead>
                 <tr>
                     <th>@lang('front.subscribe')</th>
@@ -68,7 +68,7 @@ switch ($os) {
                 @foreach($rbts as $val)
                 <tr>
                     <td>
-                        <a class="btn btn-success" href="sms:{{$val->operator->code}}{{$Att}}{{$val->code}}">@lang('front.make_it_call_tone')</a>
+                        <a class="btn" href="sms:{{$val->operator->code}}{{$Att}}{{$val->code}}">@lang('front.make_it_call_tone')</a>
                     </td>
                     <td>
                         <p style="color:#000" href="{{url('view_rbt/'.$val->id)}}">
