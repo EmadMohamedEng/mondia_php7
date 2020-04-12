@@ -336,6 +336,18 @@ class FrontController extends Controller
 
         return view('front.salah_time', compact('prayer_times', 'hjrri_date'));
     }
+    public function salah_time2(Request $request)
+    {
+      $hjrri_date = $this->hjrri_date_cal();
+      $prayer_times = $this->prayTimesCal();
+      if($request->ajax()){
+        $lat = $request->location['lat'];
+        $long = $request->location['lng'];
+        
+      }
+
+      return view('front.salah_time2', compact('prayer_times', 'hjrri_date'));
+    }
 
     public function prayTimesCal()
     {

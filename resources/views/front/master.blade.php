@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="url" content="{{url('/')}}">
   <link rel="shortcut icon" href="{{request()->get('OpID') == omantel ? asset('front/images/omantel_logo.png') : asset('front/images/favicon.ico') }}">
@@ -181,6 +183,7 @@
   <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
   <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
   <script src="{{asset('front/js/script.js')}}"></script>
+  <script src="{{asset('front/js/js_PrayTimes.js')}}"></script>
   <script>
     op_id = {{isset($_REQUEST['OpID']) ? 1 : 0}}
     if (op_id) {
@@ -210,6 +213,7 @@
     //   }
     // })
   </script>
+
   @yield('script')
 </body>
 
