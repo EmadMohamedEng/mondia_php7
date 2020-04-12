@@ -320,16 +320,19 @@ class FrontController extends Controller
     public function prayTimesCal()
     {
         $ip = !empty($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
-        $URL = 'http://www.geoplugin.net/php.gp?ip=' . $ip;
-        $new_arr = curl_init($URL);
-        curl_setopt($new_arr, CURLOPT_HEADER, false);
-        curl_setopt($new_arr, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($new_arr, CURLOPT_HTTPHEADER, array("Content-type: application/json"));
-        curl_setopt($new_arr, CURLOPT_POST, true);
-        $result = curl_exec($new_arr);
-        curl_close($new_arr);
-        //  echo "Latitude:".$new_arr[0]['geoplugin_latitude']." and Longitude:".$new_arr[0]['geoplugin_longitude'];
-
+        $URL = 'http://www.geoplugin.net/php.gp?ip='.$ip;
+        // $new_arr = file_get_contents($URL );
+        // $new_arr = curl_init($URL);
+        // curl_setopt($new_arr, CURLOPT_HEADER, false);
+        // curl_setopt($new_arr, CURLOPT_RETURNTRANSFER, true);
+        // curl_setopt($new_arr, CURLOPT_HTTPHEADER, array("Content-type: application/json"));
+        // curl_setopt($new_arr, CURLOPT_POST, true);
+        // $result = curl_exec($new_arr);
+        // curl_close($new_arr);
+        $new_arr = unserialize(file_get_contents($URL));
+        // echo "Latitude:".$new_arr['geoplugin_latitude']." and Longitude:".$new_arr['geoplugin_longitude'];
+        // die;
+        dd($new_arr);
         if (isset($new_arr[0]['geoplugin_latitude']) && isset($new_arr[0]['geoplugin_longitude'])) {
             $latitude = $new_arr[0]['geoplugin_latitude'];
             $longitude = $new_arr[0]['geoplugin_longitude'];
