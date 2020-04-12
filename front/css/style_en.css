@@ -32,6 +32,12 @@ a:hover, a:focus, a:active {
   border: 0;
 }
 
+input:focus, input:active,
+select:focus,
+select:active {
+  box-shadow: 0 0 0 0.2rem #FFF !important;
+}
+
 .border-bottom {
   border-bottom: 2px solid #0000001f !important;
   width: 100%;
@@ -152,6 +158,10 @@ a:hover, a:focus, a:active {
   padding: 0 0 0.75rem 0;
   text-align: right;
 }
+.main_container .nav_nav .navbar_ul .nav-item .dropdown-toggle::after {
+  float: right;
+  margin-top: 0.75rem;
+}
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu {
   position: static;
   border: 0;
@@ -170,6 +180,7 @@ a:hover, a:focus, a:active {
   width: 100%;
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:active, .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:focus, .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:hover {
+  margin-top: 0.25rem;
   background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   border-radius: 8px;
@@ -587,6 +598,18 @@ a:hover, a:focus, a:active {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
+.main_container .salah_time_page .time_btn .h4_time_2 {
+  text-align: right;
+}
+.main_container .salah_time_page .time_btn .h4_time_2.hegry_date {
+  text-align: left !important;
+}
+.main_container .salah_time_page .time_btn .h4_time {
+  text-align: left;
+}
+.main_container .salah_time_page .time_btn .h4_time.melady_date {
+  text-align: right !important;
+}
 .main_container .subscribe_page {
   width: 70%;
   margin: 1.5rem auto;
@@ -674,6 +697,7 @@ a:hover, a:focus, a:active {
   margin-bottom: 1rem;
 }
 .main_container .merath_page .input_text .merath_input {
+  float: right;
   width: 90%;
   text-align: center;
   text-align-last: center;
@@ -692,6 +716,8 @@ a:hover, a:focus, a:active {
 }
 .main_container .merath_page .input_span h4 {
   line-height: 2.5rem;
+  font-size: 1.35rem;
+  float: left;
 }
 .main_container .merath_page .input_span h4 .span_req {
   color: red;
@@ -843,6 +869,9 @@ a:hover, a:focus, a:active {
 .main_container .search_page .form_search .textbox.input-middle:focus + .bord {
   width: 100%;
   left: 0;
+}
+.main_container .search_page .form_search .textbox:focus, .main_container .search_page .form_search .textbox:active {
+  box-shadow: none !important;
 }
 .main_container .search_page .form_search .btn_search {
   color: #000;
@@ -996,8 +1025,9 @@ a:hover, a:focus, a:active {
 }
 
 .active_menu {
+  margin-top: 0.25rem;
   background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
-  color: #FFF;
+  color: #FFF !important;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -1221,7 +1251,7 @@ a:hover, a:focus, a:active {
     float: right;
     padding-right: 8px;
     line-height: 3rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     float: left;
@@ -3201,6 +3231,7 @@ a:hover, a:focus, a:active {
   }
   .main_container .merath_page .button_merath .merath_btn {
     width: 50%;
+    height: 4rem;
     color: #FFF;
     font-size: 2.5rem;
     font-weight: bold;

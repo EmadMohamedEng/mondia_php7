@@ -70,7 +70,7 @@ switch ($os) {
 
       <div id="chooseAudio">
         <h2 id="provider-name" class="sheikh_name">sheikh name</h2>
-        <table class="table table-dark table-hover" dir="rtl">
+        <table class="table table-hover" dir="rtl">
             <thead>
                 <tr>
                     <th>@lang('front.subscribe')</th>

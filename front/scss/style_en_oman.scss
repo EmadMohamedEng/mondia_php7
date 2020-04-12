@@ -45,6 +45,15 @@ a {
   }
 }
 
+input,
+select {
+
+  &:focus,
+  &:active {
+    box-shadow: 0 0 0 0.2rem #FFF !important;
+  }
+}
+
 .border-bottom {
   border-bottom: 2px solid #0000001f !important;
   width: 100%;
@@ -128,7 +137,7 @@ a {
         padding: 0.25rem 0.5rem;
 
         .nav-link {
-          color: $bg_color;
+          color: $bg_color !important;
           cursor: pointer;
 
           &.nav-link2 {
@@ -140,6 +149,8 @@ a {
         .dropdown-toggle {
           &::after {
             // margin-left: 5.255em;
+            float: right;
+            margin-top: 0.75rem;
           }
         }
 
@@ -160,13 +171,12 @@ a {
             &.dropdown-item2 {
               padding: .25rem 0;
               width: 100%;
-
             }
-
 
             &:active,
             &:focus,
             &:hover {
+              margin-top: 0.5rem;
               background: $bg_color;
               color: $white_color;
               border-radius: 8px;
@@ -241,6 +251,7 @@ a {
 
       .link_title {
         color: $black_color;
+
         h6 {
           font-weight: bold;
         }
@@ -654,6 +665,14 @@ a {
   /* End Inner Page */
 
   /* Start Azan Page */
+  #chooseAudio table {
+    border: 2px solid $bg_color;
+
+    th {
+      border-color: $bg_color;
+    }
+  }
+
   .azan_page {
     margin-top: 3rem;
 
@@ -670,10 +689,7 @@ a {
         height: 3rem;
         text-align: center;
         text-align-last: center;
-        border: 2px solid;
-        border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-        border-image-slice: 1;
-        background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #753bbd, #00a9ce);
+        border: 2px solid $bg_color;
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -691,10 +707,7 @@ a {
         width: 100%;
         height: 3rem;
         text-align: center;
-        border: 2px solid;
-        border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-        border-image-slice: 1;
-        background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #753bbd, #00a9ce);
+        border: 2px solid $bg_color;
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -720,12 +733,7 @@ a {
         height: 66vh;
         width: 70%;
         margin: 0 auto;
-        border: double 5px transparent;
-        border-radius: 30px;
-        background-image: linear-gradient(#00a9ce, #753bbd),
-          linear-gradient(to right, #753bbd, #00a9ce);
-        background-origin: border-box;
-        background-clip: content-box, border-box;
+        border: 5px solid $bg_color;
       }
     }
   }
@@ -747,16 +755,29 @@ a {
     .time_btn {
       width: 100%;
       text-align: center;
-      border: 2px solid;
-      border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-      border-image-slice: 1;
+      border: 2px solid $bg_color;
       margin-bottom: 1%;
-      background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
       border-radius: 8px;
       -webkit-border-radius: 8px;
       -moz-border-radius: 8px;
       -ms-border-radius: 8px;
       -o-border-radius: 8px;
+
+      .h4_time_2 {
+        text-align: right;
+
+        &.hegry_date {
+          text-align: left !important;
+        }
+      }
+
+      .h4_time {
+        text-align: left;
+
+        &.melady_date {
+          text-align: right !important;
+        }
+      }
     }
   }
 
@@ -825,10 +846,7 @@ a {
             input {
               padding: 0.25rem 0.5rem;
               width: 100%;
-              border: solid 2px transparent;
-              background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #753bbd, #00a9ce);
-              background-origin: border-box;
-              background-clip: content-box, border-box;
+              border: solid 2px $bg_color;
               box-shadow: 2px 1000px 1px #fff inset;
               border-radius: 8px;
               -webkit-border-radius: 8px;
@@ -857,15 +875,14 @@ a {
               font-weight: bold;
               border-radius: 10px;
               padding: 7px 40px;
-              border: solid 2px transparent;
-              background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #753bbd, #00a9ce);
-              background-origin: border-box;
-              background-clip: content-box, border-box;
+              border: solid 2px $bg_color;
               box-shadow: 2px 1000px 1px #fff inset;
+              outline: 0;
 
               &:hover {
                 box-shadow: none;
                 color: white;
+                background: $bg_color;
               }
             }
           }
@@ -880,6 +897,7 @@ a {
   .merath_page {
     width: 70%;
     margin: 1.5rem auto;
+    direction: rtl;
 
     .border-bottom {
       // margin-top: 0.25rem;
@@ -895,13 +913,11 @@ a {
 
     .input_text {
       .merath_input {
+        float: right;
         width: 90%;
         text-align: center;
         text-align-last: center;
-        border: 2px solid;
-        border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-        border-image-slice: 1;
-        background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #753bbd, #00a9ce);
+        border: 2px solid $bg_color;
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -915,6 +931,8 @@ a {
 
       h4 {
         line-height: 2.5rem;
+        font-size: 1.35rem;
+        float: left;
 
         .span_req {
           color: red;
@@ -933,9 +951,6 @@ a {
         font-weight: bold;
         text-align: center;
         border: 0;
-        // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-        // border-image-slice: 1;
-        // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
         background: $bg_color;
         border-radius: 8px;
         -webkit-border-radius: 8px;
@@ -984,9 +999,7 @@ a {
       }
 
       #tally {
-        border: 2px solid;
-        border-image-source: linear-gradient(50deg, #bd0ce9 40%, #00a9ce 60%);
-        border-image-slice: 1;
+        border: 2px solid #ff9e1b;
         border-radius: 50%;
         width: 150px;
         height: 150px;
@@ -995,10 +1008,6 @@ a {
         font-size: 50px;
         margin-bottom: 20px;
         color: black;
-        background-image: linear-gradient(#f2f2f2, #f2f2f2),
-          linear-gradient(to right, #753bbd, #00a9ce);
-        background-origin: border-box;
-        background-clip: content-box, border-box;
       }
 
       .btn-bar {
@@ -1012,10 +1021,7 @@ a {
           transition: all 0.3s ease;
           margin: 15px auto;
           font-size: 27px;
-          border: 2px solid;
-          border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-          background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
-          border-image-slice: 1;
+          border: 2px solid $bg_color;
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
@@ -1055,10 +1061,7 @@ a {
       text-align: center;
       margin-bottom: 15px;
       padding: 9px;
-      border: 2px solid;
-      border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-      background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
-      border-image-slice: 1;
+      border: 2px solid $bg_color;
       border-radius: 10px;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
@@ -1108,6 +1111,11 @@ a {
             width: 100%;
             left: 0;
           }
+        }
+
+        &:focus,
+        &:active {
+          box-shadow: none !important;
         }
       }
 
@@ -1281,8 +1289,8 @@ a {
   }
 
   .spinner-blue {
-    border-top-color: #09d;
-    border-left-color: #09d;
+    border-top-color: $bg_color;
+    border-left-color: $bg_color;
   }
 }
 
@@ -1293,8 +1301,9 @@ a {
 }
 
 .active_menu {
+  margin-top: 0.25rem;
   background: $bg_color;
-  color: $white_color;
+  color: $white_color !important;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -1334,7 +1343,10 @@ a {
           left: 100%;
         }
 
-        img {width: 18% !important; margin-top: 0 !important;}
+        img {
+          width: 18% !important;
+          margin-top: 0 !important;
+        }
       }
     }
 
@@ -1713,9 +1725,6 @@ a {
           font-weight: bold;
           text-align: center;
           border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-          // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -1804,7 +1813,10 @@ a {
           left: 100%;
         }
 
-        img {width: 18% !important; margin-top: 0 !important;}
+        img {
+          width: 18% !important;
+          margin-top: 0 !important;
+        }
       }
     }
 
@@ -2194,9 +2206,6 @@ a {
           font-weight: bold;
           text-align: center;
           border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-          // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -2287,7 +2296,10 @@ a {
           left: 100%;
         }
 
-        img {width: 18% !important; margin-top: 0 !important;}
+        img {
+          width: 18% !important;
+          margin-top: 0 !important;
+        }
       }
     }
 
@@ -2697,9 +2709,6 @@ a {
           font-weight: bold;
           text-align: center;
           border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-          // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -2791,7 +2800,10 @@ a {
           font-size: 1.25rem;
         }
 
-        img {width: 18% !important; margin-top: 0 !important;}
+        img {
+          width: 18% !important;
+          margin-top: 0 !important;
+        }
 
         h6 {
           font-size: 1.5rem;
@@ -3219,9 +3231,6 @@ a {
           font-weight: bold;
           text-align: center;
           border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-          // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -3324,7 +3333,10 @@ a {
           padding-left: 0;
         }
 
-        img {width: 15% !important; margin-top: 0 !important;}
+        img {
+          width: 15% !important;
+          margin-top: 0 !important;
+        }
 
         &.header_icon {
           i {
@@ -3853,9 +3865,6 @@ a {
           font-weight: bold;
           text-align: center;
           border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-          // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -3979,7 +3988,10 @@ a {
           padding-left: 0;
         }
 
-        img {width: 13% !important; margin-top: 0 !important;}
+        img {
+          width: 13% !important;
+          margin-top: 0 !important;
+        }
 
         &.header_icon {
           i {
@@ -4525,14 +4537,12 @@ a {
 
         .merath_btn {
           width: 50%;
+          height: 4rem;
           color: $white_color;
           font-size: 2.5rem;
           font-weight: bold;
           text-align: center;
           border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-          // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;

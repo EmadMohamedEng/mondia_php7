@@ -46,6 +46,15 @@ a {
   }
 }
 
+input,
+select {
+
+  &:focus,
+  &:active {
+    box-shadow: 0 0 0 0.2rem #FFF !important;
+  }
+}
+
 .border-bottom {
   border-bottom: 2px solid #0000001f !important;
   width: 100%;
@@ -145,6 +154,8 @@ a {
         .dropdown-toggle {
           &::after {
             // margin-left: 5.255em;
+            float: right;
+            margin-top: 0.75rem;
           }
         }
 
@@ -161,17 +172,16 @@ a {
             padding: .25rem 1rem;
             text-align: justify;
             width: 76%;
-
+            
             &.dropdown-item2 {
               padding: .25rem 0;
               width: 100%;
-
             }
-
 
             &:active,
             &:focus,
             &:hover {
+              margin-top: 0.25rem;
               background: $bg_color;
               color: $white_color;
               border-radius: 8px;
@@ -762,6 +772,22 @@ a {
       -moz-border-radius: 8px;
       -ms-border-radius: 8px;
       -o-border-radius: 8px;
+
+      .h4_time_2 {
+        text-align: right;
+
+        &.hegry_date {
+          text-align: left !important;
+        }
+      }
+
+      .h4_time {
+        text-align: left;
+
+        &.melady_date {
+          text-align: right !important;
+        }
+      }
     }
   }
 
@@ -886,6 +912,7 @@ a {
   .merath_page {
     width: 70%;
     margin: 1.5rem auto;
+    // direction: rtl;
 
     .border-bottom {
       // margin-top: 0.25rem;
@@ -901,6 +928,7 @@ a {
 
     .input_text {
       .merath_input {
+        float: right;
         width: 90%;
         text-align: center;
         text-align-last: center;
@@ -921,6 +949,8 @@ a {
 
       h4 {
         line-height: 2.5rem;
+        font-size: 1.35rem;
+        float: left;
 
         .span_req {
           color: red;
@@ -1115,6 +1145,11 @@ a {
             left: 0;
           }
         }
+
+        &:focus,
+        &:active {
+          box-shadow: none !important;
+        }
       }
 
       .btn_search {
@@ -1299,8 +1334,9 @@ a {
 }
 
 .active_menu {
+  margin-top: 0.25rem;
   background: $bg_color;
-  color: $white_color;
+  color: $white_color !important;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -1625,7 +1661,7 @@ a {
           float: right;
           padding-right: 8px;
           line-height: 3rem;
-          font-size: 1.25rem;
+          font-size: 1rem;
         }
 
         .h4_time_2 {
@@ -4505,6 +4541,7 @@ a {
 
         .merath_btn {
           width: 50%;
+          height: 4rem;
           color: $white_color;
           font-size: 2.5rem;
           font-weight: bold;
