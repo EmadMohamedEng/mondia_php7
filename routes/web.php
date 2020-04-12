@@ -32,6 +32,7 @@ Route::get('zakah','FrontController@zakah')->name('front.zakah');
 Route::get('merath','FrontController@merath')->name('front.merath');
 Route::get('merath_calc','FrontController@merath_calc');
 Route::get('salah_time','FrontController@salah_time')->name('front.salah');
+Route::get('salah_time2','FrontController@salah_time2')->name('front.salah');
 Route::get('mosque','FrontController@mosque')->name('front.mosque');
 Route::get('azan','FrontController@azan')->name('front.azan');
 Route::get('list_azan/{id}','FrontController@list_azan');
