@@ -320,7 +320,6 @@ class FrontController extends Controller
     public function salah_time2(Request $request)
     {
       $timezone = $this->get_time_zone();
-      dd($timezone);
 
       $hjrri_date = $this->hjrri_date_cal();
 
@@ -329,12 +328,12 @@ class FrontController extends Controller
 
     public function get_time_zone(){
       $ip = !empty($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
-      $URL = 'http://www.geoplugin.net/php.gp?ip=';
+      $URL = 'http://www.geoplugin.net/php.gp?ip='.$ip;
       $new_arr = unserialize(file_get_contents($URL));
 
       $timezone = timezone_open($new_arr['geoplugin_timezone']);
       $datetime_eur = date_create("now", timezone_open("utc")); 
-      dd($new_arr);
+
 
       return timezone_offset_get($timezone, $datetime_eur)/3600;
     }
