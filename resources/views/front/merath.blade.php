@@ -5,6 +5,12 @@
   /* .input_span{
     text-align: {{getCode() == 'ar' ? 'right' : 'left'}} !important;
   } */
+  .table{
+    direction: {{getCode() == 'ar' ? 'rtl !important' : 'ltr !important'}};
+  }
+  .table tr td{
+    text-align: {{getCode() == 'ar' ? 'right !important' : 'left !important'}};
+  }
 </style>
 
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
