@@ -320,6 +320,7 @@ class FrontController extends Controller
     public function salah_time2(Request $request)
     {
       $timezone = $this->get_time_zone();
+      dd($timezone);
 
       $hjrri_date = $this->hjrri_date_cal();
 
