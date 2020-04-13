@@ -61,4 +61,16 @@ return [
     'OMR' => 'ريال عماني',
     'Du ElKheer' => 'دو الخير',
     'AED' => 'درهم إماراتي',
+    'dividing_estate' => 'قسمة التركه',
+    'sons_share' => 'نصيب الابناء',
+    'father_share' => "نصيب الاب",
+    'girls_share' => 'نصيب البنات',
+    'mother_share' => "نصيب الام",
+    'the_first_wife_share' => 'نصيب الزوجه الاولى',
+    'the_second_wife_share' => 'نصيب الزوجه الثانية',
+    'the_third_wife_share' => 'Tنصيب الزوجه الثالثة',
+    'the_four_wife_share' => 'نصيب الزوجه الرابعه',
+    'brother_share' => "نصيب الاخوه",
+    'sister_share' => "نصيب الاخوات",
+    'the_remain' => 'المتبقية'
 ];

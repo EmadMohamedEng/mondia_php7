@@ -61,4 +61,16 @@ return [
     'OMR' => 'OMR',
     'Du ElKheer' => 'Du ElKheer',
     'AED' => 'AED',
+    'dividing_estate' => 'Dividing the estate',
+    'sons_share' => 'Sons Share',
+    'girls_share' => 'Girls Share',
+    'father_share' => "Father's Share",
+    'mother_share' => "Mother's Share",
+    'the_first_wife_share' => 'The First Wife Share',
+    'the_second_wife_share' => 'The Second Wife Share',
+    'the_third_wife_share' => 'The Third Wife Share',
+    'the_four_wife_share' => 'The Fourth Wife Share',
+    'brother_share' => "Brother's Share",
+    'sister_share' => "Sister's Share",
+    'the_remain' => 'The Remaining'
 ];
