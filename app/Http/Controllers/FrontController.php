@@ -343,10 +343,16 @@ class FrontController extends Controller
       if($request->ajax()){
         $lat = $request->location['lat'];
         $long = $request->location['lng'];
-        
       }
 
       return view('front.salah_time2', compact('prayer_times', 'hjrri_date'));
+    }
+
+    public function salah_time3(Request $request)
+    {
+      $hjrri_date = $this->hjrri_date_cal();
+      $prayer_times = $this->prayTimesCal_v2();
+      return view('front.salah_time', compact('prayer_times', 'hjrri_date'));
     }
 
     public function prayTimesCal()
@@ -376,6 +382,38 @@ class FrontController extends Controller
         include(public_path('plugins/PrayTime.php'));
         $method = 5; // Egyptian General Authority of Survey
         $timeZone = +2;
+        $date = strtotime(date("Y-n-j"));  // php date month and day without leading zero   ... Use j instead of d and n instead of m:
+
+        $prayTime = new \PrayTime($method);
+        $prayTime->timeFormat = 1;  // 12-hour format
+        $times = $prayTime->getPrayerTimes($date, $latitude, $longitude, $timeZone);
+
+        $prayer_times = array();
+        foreach ($times as $key => $value) {
+            if ($prayTime->timeNames_ar[$key] == "Sunrise" || $prayTime->timeNames_ar[$key] == "Sunset") {
+                continue;
+            }
+            $prayer_times[$prayTime->timeNames_ar[$key]] = $value;
+        }
+        return $prayer_times;
+    }
+
+    public function prayTimesCal_v2()
+    {
+        // $ip1       = "91.72.180.37";      //emirate
+        // $ip2       = "105.181.117.137";   //Egypt
+        $location  =  $this->ip_info('visitor', "location");
+        if ($location['geoplugin_longitude'] || $location['geoplugin_latitude']) {
+            $latitude = $location['geoplugin_latitude'];
+            $longitude = $location['geoplugin_longitude'];
+        } else {
+            $latitude = "30";
+            $longitude = "31";
+        }
+
+        include(public_path('plugins/PrayTime.php'));
+        $method = $location['country'] == 'Egypt' ? 5 : 4; // Egyptian General Authority of Survey
+        $timeZone = $location['country'] == 'Egypt' ? +2 : +4;
         $date = strtotime(date("Y-n-j"));  // php date month and day without leading zero   ... Use j instead of d and n instead of m:
 
         $prayTime = new \PrayTime($method);

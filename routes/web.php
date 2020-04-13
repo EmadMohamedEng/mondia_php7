@@ -31,8 +31,9 @@ Route::get('sebha','FrontController@sebha')->name('front.sebha');
 Route::get('zakah','FrontController@zakah')->name('front.zakah');
 Route::get('merath','FrontController@merath')->name('front.merath');
 Route::get('merath_calc','FrontController@merath_calc');
-Route::get('salah_time','FrontController@salah_time')->name('front.salah');
-Route::get('salah_time2','FrontController@salah_time2')->name('front.salah');
+Route::get('salah_time','FrontController@salah_time3')->name('front.salah');  // working good
+Route::get('salah_time2','FrontController@salah_time2')->name('front.salah2');
+Route::get('salah_time3','FrontController@salah_time3')->name('front.salah3');
 Route::get('mosque','FrontController@mosque')->name('front.mosque');
 Route::get('azan','FrontController@azan')->name('front.azan');
 Route::get('list_azan/{id}','FrontController@list_azan');
@@ -40,7 +41,6 @@ Route::get('view_rbt/{id}','FrontController@view_rbt');
 Route::get('rbts','FrontController@rbts');
 Route::get('test2','FrontController@test');
 Route::get('search','FrontController@search')->name('front.search');
-
 
 //OmanTel
 define('omantel',9);
@@ -75,6 +75,5 @@ Route::get('du_set_session','FrontController@du_set_session');
 //     session()->put('userToken','U7fec00ea-9d9c-42b2-84b4-f62ef8d225ad');
 //     session()->put('status','active');
 //  });
-
 
 
