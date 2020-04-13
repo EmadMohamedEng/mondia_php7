@@ -50,7 +50,7 @@ switch ($os) {
       </div>
 
       <div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding">
-        <div class="input_text">
+        <div class="input_text roll-in-top">
           <div class="form-group">
             <select id="chooseProvider" name="provider" class="form-control azan_input">
               <option value="empty">@lang('front.muezzin')</option>
@@ -63,14 +63,14 @@ switch ($os) {
       </div>
 
       <div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding">
-        <div class="azan_text">
+        <div class="azan_text roll-in-top">
           <!-- <button id="chooseRBT" onclick="confirm('لتأكيد الاشتراك فى الخدمة إضغط تأكيد')" class="btn text-capitalize call_tone">اجعلها كول تون</button> -->
         </div>
       </div>
 
       <div id="chooseAudio">
         <h2 id="provider-name" class="sheikh_name">sheikh name</h2>
-        <table class="table table-hover" dir="rtl">
+        <table class="table table-hover roll-in-top" dir="rtl">
             <thead>
                 <tr>
                     <th>@lang('front.subscribe')</th>
@@ -83,7 +83,6 @@ switch ($os) {
             </tbody>
         </table>
       </div>
-
 
       <div class="tab-bar-wrapper decorator"></div>
     </div>

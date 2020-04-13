@@ -47,9 +47,9 @@
             <a href="{{route('front.index')}}" class="link_href">
             <!-- {{request()->get('OpID') == omantel ? '<img src="front/images/Du_header.png" alt="Logo">':'<img src="front/images/Du_header.png" alt="Logo">'}} -->
             @if(request()->get('OpID') == omantel)
-            <img class="scale-up-bottom" src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
+            <img class="bounce-top" src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
             @else
-            <img class="scale-up-bottom" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
+            <img class="bounce-top" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
             @endif
             </a>
           </div>
@@ -68,7 +68,7 @@
 
     <div class="row m-0">
       <div class="col-md-0 col-lg-0 col-xl-3 col-0 p-0" style="z-index: 9999999999">
-        <nav class="nav_nav navbar navbar-expand-xl  primary-color">
+        <nav class="nav_nav navbar navbar-expand-xl primary-color">
           <button id="menu_toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="icon_before fas fa-bars fa-lg"></i>
             <span class="navbar-toggler-icon"></span>

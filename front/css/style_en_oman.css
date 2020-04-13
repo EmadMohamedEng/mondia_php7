@@ -3439,6 +3439,35 @@ select:active {
     opacity: 1;
   }
 }
+.roll-in-top {
+  -webkit-animation: roll-in-top 1s ease-in-out 1s both;
+  animation: roll-in-top 1s ease-in-out 1s both;
+}
+
+@-webkit-keyframes roll-in-top {
+  0% {
+    -webkit-transform: translateY(-800px) rotate(-540deg);
+    transform: translateY(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes roll-in-top {
+  0% {
+    -webkit-transform: translateY(-800px) rotate(-540deg);
+    transform: translateY(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
 .pulsate-bck {
   -webkit-animation: pulsate-bck 1.5s ease-in-out infinite both;
   animation: pulsate-bck 1.5s ease-in-out infinite both;
