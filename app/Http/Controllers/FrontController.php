@@ -345,9 +345,9 @@ class FrontController extends Controller
         $datetime_eur = date_create("now", timezone_open("utc")); 
         return timezone_offset_get($timezone, $datetime_eur)/3600;
       }else{        
-        $parameters_arr['Timezone'] = $new_arr['default egypt'];
-        $parameters_arr['Latitude'] = $new_arr['null'];
-        $parameters_arr['Longitude'] = $new_arr['null'];
+        $parameters_arr['Timezone'] = ['default egypt'];
+        $parameters_arr['Latitude'] = ['null'];
+        $parameters_arr['Longitude'] = ['null'];
 
         $this->log_action($actionName, $url, $parameters_arr);
 
