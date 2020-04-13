@@ -51,5 +51,14 @@ return [
     'resend_pincode' => 'Resend Pincode',
     'unsub_fail' => 'Unsubscription Failed',
     'service' => 'Services',
-    'content' => 'Contents'
+    'content' => 'Contents',
+    'Daily renewal subscription' => 'Daily renewal subscription',
+    'omantel ElKheer' => 'Omantel ElKheer',
+    'Please confirm subscription to' => 'Please confirm subscription to',
+    'For' => 'For',
+    'subscribe' => 'subscribe',
+    'Close' => 'Close',
+    'OMR' => 'OMR',
+    'Du ElKheer' => 'Du ElKheer',
+    'AED' => 'AED',
 ];

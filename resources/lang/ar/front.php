@@ -51,5 +51,14 @@ return [
     'resend_pincode' => 'اعادة ارسال رقم التحقق',
     'unsub_fail' => 'حدثت مشكلة اثناء عملية الغاء الاشتراك',
     'service' => 'خدمات',
-    'content' => 'محتوى'
+    'content' => 'محتوى',
+    'Daily renewal subscription' => 'اشتراك يجدد يوميا',
+    'omantel ElKheer' => 'عمانتل الخير',
+    'Please confirm subscription to' => 'تاكيد الاشتراك في',
+    'For' => 'ب',
+    'subscribe' => 'اشتراك',
+    'Close' => 'الغاء',
+    'OMR' => 'ريال عماني',
+    'Du ElKheer' => 'دو الخير',
+    'AED' => 'درهم إماراتي',
 ];

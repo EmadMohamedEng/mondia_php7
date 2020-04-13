@@ -710,10 +710,50 @@ class FrontController extends Controller
 
 
 
-        if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID"){ // Token expire So create new one
+         if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" ){ // Token expire So create new one
           $current_url =  session()->get('current_url');
-           return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
+
+          // make log
+          $actionName = "Omantel Check Status with Error";
+          $parameters_arr = array(
+            'token' => $userToken,
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'headers' =>  $headers,
+            'response' => $response,
+            'error' =>$response['error'] ,
+          );
+          $this->log_action($actionName, $url, $parameters_arr);
+
+
+         //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+           $Url = url("/omantel/redirect?redirect_url=".$current_url);
+           header("Location: $Url");
+           die();
          }
+
+
+         if(isset($response['error']) && $response['error'] =="PARTNER_KEY_NOT_MATCHES" ){ // after switch between Omantel and Du
+          $current_url =  session()->get('current_url');
+
+          // make log
+          $actionName = "Omantel Check Status with Error";
+          $parameters_arr = array(
+            'token' => $userToken,
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'headers' =>  $headers,
+            'response' => $response,
+            'error' =>$response['error'] ,
+          );
+          $this->log_action($actionName, $url, $parameters_arr);
+
+
+          // return redirect("/du_redirect?redirect_url=".$current_url);
+          $Url = url("/omantel/redirect?redirect_url=".$current_url);
+          header("Location: $Url");
+          die();
+
+         }
+
 
         // make log
         $actionName = "Omantel Send PinCode";
@@ -741,7 +781,7 @@ class FrontController extends Controller
     public function verify_pin(Request $request)
     {
         $requestId = session('requestId');
-        $userToken = session('userToken');
+        $userToken = session('userToken_omantel');
         $pin = $request->pincode;
 
         $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription/subscribe/verifyPinAndSubscribe";
@@ -764,10 +804,51 @@ class FrontController extends Controller
         $response = json_decode($response, true);
 
 
-        if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID"){ // Token expire So create new one
+
+         if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" ){ // Token expire So create new one
           $current_url =  session()->get('current_url');
-           return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
+
+          // make log
+          $actionName = "Omantel Check Status with Error";
+          $parameters_arr = array(
+            'token' => $userToken,
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'headers' =>  $headers,
+            'response' => $response,
+            'error' =>$response['error'] ,
+          );
+          $this->log_action($actionName, $url, $parameters_arr);
+
+
+         //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+           $Url = url("/omantel/redirect?redirect_url=".$current_url);
+           header("Location: $Url");
+           die();
          }
+
+
+         if(isset($response['error']) && $response['error'] =="PARTNER_KEY_NOT_MATCHES" ){ // after switch between Omantel and Du
+          $current_url =  session()->get('current_url');
+
+          // make log
+          $actionName = "Omantel Check Status with Error";
+          $parameters_arr = array(
+            'token' => $userToken,
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'headers' =>  $headers,
+            'response' => $response,
+            'error' =>$response['error'] ,
+          );
+          $this->log_action($actionName, $url, $parameters_arr);
+
+
+          // return redirect("/du_redirect?redirect_url=".$current_url);
+          $Url = url("/omantel/redirect?redirect_url=".$current_url);
+          header("Location: $Url");
+          die();
+
+         }
+
 
 
         // make log
@@ -791,7 +872,7 @@ class FrontController extends Controller
 
     public function delete_subscription(Request $request)
     {
-         $userToken  = session()->get('userToken') ;
+         $userToken  = session()->get('userToken_omantel') ;
          $check_status_id  = session()->get('check_status_id') ;
 
         $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription/$check_status_id ";
@@ -822,6 +903,55 @@ class FrontController extends Controller
 
         $response = json_decode($response, true);
 
+
+
+        if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" ){ // Token expire So create new one
+          $current_url =  session()->get('current_url');
+
+          // make log
+          $actionName = "Omantel Check Status For Delete with Error";
+          $parameters_arr = array(
+            'token' => $userToken,
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'headers' =>  $headers,
+            'response' => $response,
+            'error' =>$response['error'] ,
+          );
+          $this->log_action($actionName, $url, $parameters_arr);
+
+
+         //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+           $Url = url("/omantel/redirect?redirect_url=".$current_url);
+           header("Location: $Url");
+           die();
+         }
+
+
+         if(isset($response['error']) && $response['error'] =="PARTNER_KEY_NOT_MATCHES" ){ // after switch between Omantel and Du
+          $current_url =  session()->get('current_url');
+
+          // make log
+          $actionName = "Omantel Check Status For Delete with Error";
+          $parameters_arr = array(
+            'token' => $userToken,
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),
+            'headers' =>  $headers,
+            'response' => $response,
+            'error' =>$response['error'] ,
+          );
+          $this->log_action($actionName, $url, $parameters_arr);
+
+
+          // return redirect("/du_redirect?redirect_url=".$current_url);
+          $Url = url("/omantel/redirect?redirect_url=".$current_url);
+          header("Location: $Url");
+          die();
+
+         }
+
+
+
+
         // make log
         $actionName = "Omantel Delete Subscription";
         $parameters_arr = array(
@@ -831,9 +961,15 @@ class FrontController extends Controller
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
-     //   session()->flush();
-        Session::flash('unsub_success', 'You are unsubscribe success');
-        return redirect("?OpID=9");
+
+        if(isset( $response['text']) && $response['text'] == "UNSUB_OK" ){ // Unsub succcess
+          // session()->flush();
+          Session::forget(['menu_unsub_omantel']);
+           Session::flash('unsub_success', 'You are unsubscribe success');
+         }else{
+           Session::flash('unsub_fail', 'There is error in unsubscribe');
+         }
+         return redirect("?OpID=9");
     }
 
 
@@ -1060,10 +1196,14 @@ class FrontController extends Controller
        // session()->flush();
         Session::flash('unsub_success', 'You are unsubscribe success');
         return redirect("?OpID=10");
-    }public function du_delete_subscription(Request $request)
+    }
+
+
+
+    public function du_delete_subscription(Request $request)
     {
 
-      $userToken  = session()->get('userToken') ;
+      $userToken  = session()->get('userToken_du') ;
       $check_status_id  = session()->get('check_status_id') ;
 
         $url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/api/subscription/unsubscribe/56830063?sendSms=true";
@@ -1101,6 +1241,53 @@ class FrontController extends Controller
       */
 
 
+
+      if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" ){ // Token expire So create new one
+        $current_url =  session()->get('current_url');
+       //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+
+     // make log
+     $actionName = "DU Check Status with Error";
+     $parameters_arr = array(
+     'token' => $userToken,
+     'date' => Carbon::now()->format('Y-m-d H:i:s'),
+     'userToken' =>  $userToken,
+     'headers' =>  $headers,
+     'response' => $response,
+     'error' =>$response['error'] ,
+     );
+     $this->log_action($actionName, $url, $parameters_arr);
+
+
+         $Url = url("/du_redirect?redirect_url=".$current_url);
+         header("Location: $Url");
+         die();
+       }
+
+       if(isset($response['error']) && $response['error'] =="PARTNER_KEY_NOT_MATCHES" ){ // after switch between Omantel and Du
+        $current_url =  session()->get('current_url');
+
+        // make log
+        $actionName = "DU Check Status with Error";
+        $parameters_arr = array(
+        'token' => $userToken,
+        'date' => Carbon::now()->format('Y-m-d H:i:s'),
+        'userToken' =>  $userToken,
+        'headers' =>  $headers,
+        'response' => $response,
+        'error' =>$response['error'] ,
+        );
+        $this->log_action($actionName, $url, $parameters_arr);
+
+
+        // return redirect("/du_redirect?redirect_url=".$current_url);
+        $Url = url("/du_redirect?redirect_url=".$current_url);
+        header("Location: $Url");
+        die();
+
+       }
+
+
         // make log
         $actionName = "DU Delete Subscription";
         $parameters_arr = array(
@@ -1114,6 +1301,7 @@ class FrontController extends Controller
 
         if(isset( $response['text']) && $response['text'] == "UNSUB_OK" ){ // Unsub succcess
          // session()->flush();
+         Session::forget(['menu_unsub_du']);
           Session::flash('unsub_success', 'You are unsubscribe success');
         }else{
           Session::flash('unsub_fail', 'There is error in unsubscribe');
