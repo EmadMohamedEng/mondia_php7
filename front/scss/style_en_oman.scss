@@ -491,7 +491,7 @@ select {
         background: $bg_color;
         color: $white_color;
         position: absolute;
-        top: 0;
+        top: 49%;
         left: 35%;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
@@ -765,18 +765,10 @@ select {
 
       .h4_time_2 {
         text-align: right;
-
-        &.hegry_date {
-          text-align: left !important;
-        }
       }
 
       .h4_time {
         text-align: left;
-
-        &.melady_date {
-          text-align: right !important;
-        }
       }
     }
   }
@@ -1386,6 +1378,7 @@ select {
         width: 15rem;
         height: 100vh;
         padding: 0 0;
+        overflow-y: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -1626,24 +1619,23 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 3.5rem;
-        direction: rtl;
 
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          float: right;
-          padding-right: 8px;
-          line-height: 3rem;
-          font-size: 1.25rem;
-        }
-
-        .h4_time_2 {
           float: left;
           padding-left: 8px;
           line-height: 3rem;
-          font-size: 1.25rem;
+          font-size: 1rem;
+        }
+
+        .h4_time_2 {
+          float: right;
+          padding-right: 8px;
+          line-height: 3rem;
+          font-size: 1rem;
         }
       }
     }
@@ -1856,6 +1848,7 @@ select {
         width: 15rem;
         height: 100vh;
         padding: 0 0;
+        overflow-y: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -2117,17 +2110,17 @@ select {
         }
 
         .h4_time {
-          float: right;
-          padding-right: 8px;
-          line-height: 3rem;
-          font-size: 1.35rem;
-        }
-
-        .h4_time_2 {
           float: left;
           padding-left: 8px;
           line-height: 3rem;
-          font-size: 1.35rem;
+          font-size: 1.09rem;
+        }
+
+        .h4_time_2 {
+          float: right;
+          padding-right: 8px;
+          line-height: 3rem;
+          font-size: 1.09rem;
         }
       }
     }
@@ -2339,6 +2332,7 @@ select {
         width: 15rem;
         height: 100vh;
         padding: 0 0;
+        overflow-y: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -2590,24 +2584,23 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 3.5rem;
-        direction: rtl;
 
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          float: right;
-          padding-right: 8px;
-          line-height: 3rem;
-          font-size: 1.25rem;
-        }
-
-        .h4_time_2 {
           float: left;
           padding-left: 8px;
           line-height: 3rem;
-          font-size: 1.25rem;
+          font-size: 1.15rem;
+        }
+
+        .h4_time_2 {
+          float: right;
+          padding-right: 8px;
+          line-height: 3rem;
+          font-size: 1.15rem;
         }
       }
     }
@@ -2847,6 +2840,7 @@ select {
         width: 15rem;
         height: 100vh;
         padding: 0 0;
+        overflow-y: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -3112,24 +3106,23 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 3.5rem;
-        direction: rtl;
 
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          float: right;
-          padding-right: 8px;
-          line-height: 3rem;
-          font-size: 1.5rem;
-        }
-
-        .h4_time_2 {
           float: left;
           padding-left: 8px;
           line-height: 3rem;
-          font-size: 1.5rem;
+          font-size: 1.25rem;
+        }
+
+        .h4_time_2 {
+          float: right;
+          padding-right: 8px;
+          line-height: 3rem;
+          font-size: 1.25rem;
         }
       }
     }
@@ -3383,6 +3376,7 @@ select {
         width: 18rem;
         height: 100vh;
         padding: 0 0;
+        overflow-y: scroll;
 
         .nav-item {
           color: $bg_color;
@@ -3703,22 +3697,20 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 4.5rem;
-        direction: rtl;
-
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          float: right;
-          padding-right: 8px;
+          float: left;
+          padding-left: 10px;
           line-height: 4rem;
           font-size: 2rem;
         }
 
         .h4_time_2 {
-          float: left;
-          padding-left: 8px;
+          float: right;
+          padding-right: 10px;
           line-height: 4rem;
           font-size: 2rem;
         }
@@ -4038,6 +4030,7 @@ select {
         width: 23rem;
         height: 100vh;
         padding: 0 0;
+        overflow-y: scroll;
 
         .nav-item {
           padding: 0.25rem 0.75rem;
@@ -4368,22 +4361,20 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 5.5rem;
-        direction: rtl;
-
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          float: right;
-          padding-right: 8px;
+          float: left;
+          padding-left: 12px;
           line-height: 5rem;
           font-size: 2.85rem;
         }
 
         .h4_time_2 {
-          float: left;
-          padding-left: 8px;
+          float: right;
+          padding-right: 12px;
           line-height: 5rem;
           font-size: 2.85rem;
         }

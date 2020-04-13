@@ -388,7 +388,7 @@ select:active {
   background: #ff9e1b;
   color: #FFF;
   position: absolute;
-  top: 0;
+  top: 49%;
   left: 35%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -591,14 +591,8 @@ select:active {
 .main_container .salah_time_page .time_btn .h4_time_2 {
   text-align: right;
 }
-.main_container .salah_time_page .time_btn .h4_time_2.hegry_date {
-  text-align: left !important;
-}
 .main_container .salah_time_page .time_btn .h4_time {
   text-align: left;
-}
-.main_container .salah_time_page .time_btn .h4_time.melady_date {
-  text-align: right !important;
 }
 .main_container .subscribe_page {
   width: 70%;
@@ -1072,6 +1066,7 @@ select:active {
     width: 15rem;
     height: 100vh;
     padding: 0 0;
+    overflow-y: scroll;
   }
   .main_container .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -1218,22 +1213,21 @@ select:active {
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
     height: 3.5rem;
-    direction: rtl;
   }
   .main_container .salah_time_page .time_btn .input_span {
     padding: 0 !important;
   }
   .main_container .salah_time_page .time_btn .h4_time {
-    float: right;
-    padding-right: 8px;
-    line-height: 3rem;
-    font-size: 1.25rem;
-  }
-  .main_container .salah_time_page .time_btn .h4_time_2 {
     float: left;
     padding-left: 8px;
     line-height: 3rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
+  }
+  .main_container .salah_time_page .time_btn .h4_time_2 {
+    float: right;
+    padding-right: 8px;
+    line-height: 3rem;
+    font-size: 1rem;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -1391,6 +1385,7 @@ select:active {
     width: 15rem;
     height: 100vh;
     padding: 0 0;
+    overflow-y: scroll;
   }
   .main_container .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -1551,16 +1546,16 @@ select:active {
     padding: 0 !important;
   }
   .main_container .salah_time_page .time_btn .h4_time {
-    float: right;
-    padding-right: 8px;
-    line-height: 3rem;
-    font-size: 1.35rem;
-  }
-  .main_container .salah_time_page .time_btn .h4_time_2 {
     float: left;
     padding-left: 8px;
     line-height: 3rem;
-    font-size: 1.35rem;
+    font-size: 1.09rem;
+  }
+  .main_container .salah_time_page .time_btn .h4_time_2 {
+    float: right;
+    padding-right: 8px;
+    line-height: 3rem;
+    font-size: 1.09rem;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -1720,6 +1715,7 @@ select:active {
     width: 15rem;
     height: 100vh;
     padding: 0 0;
+    overflow-y: scroll;
   }
   .main_container .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -1874,22 +1870,21 @@ select:active {
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
     height: 3.5rem;
-    direction: rtl;
   }
   .main_container .salah_time_page .time_btn .input_span {
     padding: 0 !important;
   }
   .main_container .salah_time_page .time_btn .h4_time {
-    float: right;
-    padding-right: 8px;
-    line-height: 3rem;
-    font-size: 1.25rem;
-  }
-  .main_container .salah_time_page .time_btn .h4_time_2 {
     float: left;
     padding-left: 8px;
     line-height: 3rem;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+  }
+  .main_container .salah_time_page .time_btn .h4_time_2 {
+    float: right;
+    padding-right: 8px;
+    line-height: 3rem;
+    font-size: 1.15rem;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -2070,6 +2065,7 @@ select:active {
     width: 15rem;
     height: 100vh;
     padding: 0 0;
+    overflow-y: scroll;
   }
   .main_container .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -2232,22 +2228,21 @@ select:active {
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
     height: 3.5rem;
-    direction: rtl;
   }
   .main_container .salah_time_page .time_btn .input_span {
     padding: 0 !important;
   }
   .main_container .salah_time_page .time_btn .h4_time {
-    float: right;
-    padding-right: 8px;
-    line-height: 3rem;
-    font-size: 1.5rem;
-  }
-  .main_container .salah_time_page .time_btn .h4_time_2 {
     float: left;
     padding-left: 8px;
     line-height: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+  .main_container .salah_time_page .time_btn .h4_time_2 {
+    float: right;
+    padding-right: 8px;
+    line-height: 3rem;
+    font-size: 1.25rem;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -2442,6 +2437,7 @@ select:active {
     width: 18rem;
     height: 100vh;
     padding: 0 0;
+    overflow-y: scroll;
   }
   .main_container .nav_nav .navbar_ul .nav-item {
     color: #ff9e1b;
@@ -2644,20 +2640,19 @@ select:active {
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
     height: 4.5rem;
-    direction: rtl;
   }
   .main_container .salah_time_page .time_btn .input_span {
     padding: 0 !important;
   }
   .main_container .salah_time_page .time_btn .h4_time {
-    float: right;
-    padding-right: 8px;
+    float: left;
+    padding-left: 10px;
     line-height: 4rem;
     font-size: 2rem;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
-    float: left;
-    padding-left: 8px;
+    float: right;
+    padding-right: 10px;
     line-height: 4rem;
     font-size: 2rem;
   }
@@ -2904,6 +2899,7 @@ select:active {
     width: 23rem;
     height: 100vh;
     padding: 0 0;
+    overflow-y: scroll;
   }
   .main_container .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -3115,20 +3111,19 @@ select:active {
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
     height: 5.5rem;
-    direction: rtl;
   }
   .main_container .salah_time_page .time_btn .input_span {
     padding: 0 !important;
   }
   .main_container .salah_time_page .time_btn .h4_time {
-    float: right;
-    padding-right: 8px;
+    float: left;
+    padding-left: 12px;
     line-height: 5rem;
     font-size: 2.85rem;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
-    float: left;
-    padding-left: 8px;
+    float: right;
+    padding-right: 12px;
     line-height: 5rem;
     font-size: 2.85rem;
   }
