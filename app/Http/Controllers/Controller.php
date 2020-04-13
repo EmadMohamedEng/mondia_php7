@@ -148,7 +148,8 @@ abstract class Controller extends BaseController
                             "continent" => @$continents[strtoupper($ipdat->geoplugin_continentCode)],
                             "continent_code" => @$ipdat->geoplugin_continentCode,
                             'geoplugin_latitude' => @$ipdat->geoplugin_latitude,
-                            'geoplugin_longitude' => @$ipdat->geoplugin_longitude
+                            'geoplugin_longitude' => @$ipdat->geoplugin_longitude,
+                            'time_zone' => @file_get_contents('https://ipapi.co/'.$ip.'/timezone/')
                         );
                         break;
                     case "address":
