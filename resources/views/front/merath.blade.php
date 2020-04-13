@@ -8,13 +8,13 @@
 </style>
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
   @include('front.search')
-  <section class="bounce-top merath_page" dir="{{getCode() == 'en' ? 'rtl' : 'ltr'}}">
+  <section class="merath_page" dir="{{getCode() == 'en' ? 'rtl' : 'ltr'}}">
     <div class="all_mer" style="display:block">
       <div class="merath_title">
         <h2>@lang('front.merath')</h2>
       </div>
 
-      <div class="row m-0">
+      <div class="row m-0 roll-in-top">
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
           <!-- <h4><span class="span_req">* </span>@lang('front.the_value_of_the_estate')</h4> -->
           <h4>@lang('front.the_value_of_the_estate')</h4>
@@ -29,7 +29,7 @@
 
       <div class="border-bottom"></div>
 
-      <div class="row m-0">
+      <div class="row m-0 roll-in-top">
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
           <!-- <h4><span class="span_req">* </span>@lang('front.number_of_children') </h4> -->
           <h4>@lang('front.number_of_children') </h4>
@@ -44,7 +44,7 @@
 
       <div class="border-bottom"></div>
 
-      <div class="row m-0">
+      <div class="row m-0 roll-in-top">
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
           <!-- <h4><span class="span_req">* </span> @lang('front.number_of_girls')</h4> -->
           <h4>@lang('front.number_of_girls')</h4>
@@ -59,7 +59,7 @@
 
       <div class="border-bottom"></div>
 
-      <div class="row m-0">
+      <div class="row m-0 roll-in-top">
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
           <!-- <h4><span class="span_req">* </span>@lang('front.feather') </h4> -->
           <h4>@lang('front.feather') </h4>
@@ -77,7 +77,7 @@
 
       <div class="border-bottom"></div>
 
-      <div class="row m-0">
+      <div class="row m-0 roll-in-top">
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
           <!-- <h4><span class="span_req">* </span>@lang('front.mother') </h4> -->
           <h4>@lang('front.mother') </h4>
@@ -95,7 +95,7 @@
 
       <div class="border-bottom"></div>
 
-      <div class="row m-0">
+      <div class="row m-0 roll-in-top">
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
           <!-- <h4><span class="span_req">* </span> @lang('front.number_of_brother') </h4> -->
           <h4>@lang('front.number_of_brother') </h4>
@@ -110,7 +110,7 @@
 
       <div class="border-bottom"></div>
 
-      <div class="row m-0">
+      <div class="row m-0 roll-in-top">
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
           <!-- <h4><span class="span_req">* </span>@lang('front.number_of_sister') </h4> -->
           <h4>@lang('front.number_of_sister') </h4>
@@ -125,7 +125,7 @@
 
       <div class="border-bottom"></div>
 
-      <div class="row m-0">
+      <div class="row m-0 roll-in-top">
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
           <!-- <h4><span class="span_req">* </span> @lang('front.number_of_wife') </h4> -->
           <h4>@lang('front.number_of_wife') </h4>
@@ -144,7 +144,7 @@
         </div>
       </div>
 
-      <div class="button_merath">
+      <div class="button_merath roll-in-top">
         <button id="btn_cal" class="btn merath_btn" type="submit" disabled onclick="PayHesapla()"> @lang('front.merath')
         </button>
       </div>

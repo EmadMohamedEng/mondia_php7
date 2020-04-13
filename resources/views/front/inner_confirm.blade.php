@@ -24,13 +24,13 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           <img src="{{$src}}" alt="Video Cover">
           @if(request()->has('OpID') && request()->get('OpID') == omantel)
 
-          <button data-toggle="modal" data-target="#exampleModalCover" class="btn button_play primary bounce-top">
+          <button data-toggle="modal" data-target="#exampleModalCover" class="btn button_play primary roll-in-top">
             <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
 
           @elseif(request()->has('OpID') && request()->get('OpID') == du)
 
-          <button data-toggle="modal" data-target="#exampleModalCover_du" class="btn button_play primary bounce-top">
+          <button data-toggle="modal" data-target="#exampleModalCover_du" class="btn button_play primary roll-in-top">
             <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
 

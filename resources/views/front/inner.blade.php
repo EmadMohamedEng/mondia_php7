@@ -34,7 +34,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
             <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
           @else
-          <button data-toggle="modal" data-target="#exampleModalCover" class="btn button_play primary bounce-top">
+          <button data-toggle="modal" data-target="#exampleModalCover" class="btn button_play primary roll-in-top">
             <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
           @endif

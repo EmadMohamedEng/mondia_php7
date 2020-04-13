@@ -64,7 +64,7 @@ switch ($os) {
                     <th> @lang('front.play')</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="roll-in-top">
                 @foreach($rbts as $val)
                 <tr>
                     <td>

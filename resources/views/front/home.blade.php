@@ -57,7 +57,7 @@
             </div>
 
             <div class="col-6 padding_phones">
-            <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href bounce-top">@lang('front.more')</a>
+            <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
             </div>
         </div>
         </div>
