@@ -962,13 +962,13 @@ class FrontController extends Controller
         $this->log_action($actionName, $url, $parameters_arr);
 
 
-        if(isset( $response['text']) && $response['text'] == "UNSUB_OK" ){ // Unsub succcess
+       // if(isset( $response['text']) && $response['text'] == "UNSUB_OK" ){ // Unsub succcess
           // session()->flush();
           Session::forget(['menu_unsub_omantel']);
            Session::flash('unsub_success', 'You are unsubscribe success');
-         }else{
-           Session::flash('unsub_fail', 'There is error in unsubscribe');
-         }
+        //  }else{
+        //    Session::flash('unsub_fail', 'There is error in unsubscribe');
+        //  }
          return redirect("?OpID=9");
     }
 
