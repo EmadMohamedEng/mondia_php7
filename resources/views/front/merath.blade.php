@@ -154,72 +154,72 @@
     <div class="table_table" style="display: none">
       <table class="table table-hover">
         <thead>
-          <h4 class="text-center thead2_h4" style="display: none">قسمة التركة</h4>
+          <h4 class="text-center thead2_h4" style="display: none">@lang('front.dividing_estate')</h4>
         </thead>
 
         <tbody>
           <tr>
-            <td class="td_1">نصيب الابناء</td>
+            <td class="td_1">@lang('front.sons_share')</td>
 
             <td id="ECp" class="td_2 form-group">0</td>
           </tr>
 
           <tr>
-            <td class="td_1">نصيب البنات</td>
+            <td class="td_1">@lang('front.girls_share')</td>
 
             <td id="KCp" class="td_2">0</td>
           </tr>
 
           <tr>
-            <td class="td_1">نصيب الاب</td>
+            <td class="td_1">@lang('front.father_share')</td>
 
             <td id="Bp" class="td_2">0</td>
           </tr>
 
           <tr>
-            <td class="td_1">نصيب الام</td>
+            <td class="td_1">@lang('front.mother_share')</td>
 
             <td id="Ap" class="td_2">0</td>
           </tr>
 
           <tr>
-            <td class="td_1">نصيب الزوجة الاولى</td>
+            <td class="td_1">@lang('front.the_first_wife_share')</td>
 
             <td id="Es1p" class="td_2">0</td>
           </tr>
 
           <tr>
-            <td class="td_1">نصيب الزوجة الثانية</td>
+            <td class="td_1">@lang('front.the_second_wife_share')</td>
 
             <td id="Es2p" class="td_2">0</td>
           </tr>
 
           <tr>
-            <td class="td_1">نصيب الزوجة الثالثة</td>
+            <td class="td_1">@lang('front.the_third_wife_share')</td>
 
             <td id="Es3p" class="td_2">0</td>
           </tr>
 
           <tr>
-            <td class="td_1">نصيب الزوجة الرابعة</td>
+            <td class="td_1">@lang('front.the_four_wife_share')</td>
 
             <td id="Es4p" class="td_2">0</td>
           </tr>
 
           <tr>
-            <td class="td_1">نصيب الاخوة</td>
+            <td class="td_1">@lang('front.brother_share')</td>
 
             <td id="EKp" class="td_2">0</td>
           </tr>
 
           <tr>
-            <td class="td_1">نصيب الاخوات</td>
+            <td class="td_1">@lang('front.sister_share')</td>
 
             <td id="KKp" class="td_2">0</td>
           </tr>
 
           <tr>
-            <td class="td_1">المتبقية</td>
+            <td class="td_1">@lang('front.the_remain')</td>
 
             <td class="td_2">0</td>
           </tr>
@@ -227,7 +227,7 @@
       </table>
 
       <div class="button_merath">
-        <button class="btn merath_btn" onclick="again()">حساب الميراث</button>
+        <button class="btn merath_btn" onclick="again()">@lang('front.merath') </button>
       </div>
     </div>
   </section>
