@@ -336,16 +336,26 @@ class FrontController extends Controller
 
         return view('front.salah_time', compact('prayer_times', 'hjrri_date'));
     }
+
     public function salah_time2(Request $request)
     {
-      $hjrri_date = $this->hjrri_date_cal();
-      $prayer_times = $this->prayTimesCal();
-      if($request->ajax()){
-        $lat = $request->location['lat'];
-        $long = $request->location['lng'];
-      }
+      $timezone = $this->get_time_zone();
 
-      return view('front.salah_time2', compact('prayer_times', 'hjrri_date'));
+      $hjrri_date = $this->hjrri_date_cal();
+
+      return view('front.salah_time2', compact('timezone','hjrri_date'));
+    }
+
+    public function get_time_zone(){
+      $ip = !empty($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
+      $URL = 'http://www.geoplugin.net/php.gp?ip='.$ip;
+      $new_arr = unserialize(file_get_contents($URL));
+
+      $timezone = timezone_open($new_arr['geoplugin_timezone']? $new_arr['geoplugin_timezone']: 'Africa/cairo');
+      $datetime_eur = date_create("now", timezone_open("utc"));
+
+
+      return timezone_offset_get($timezone, $datetime_eur)/3600;
     }
 
     public function salah_time3(Request $request)
