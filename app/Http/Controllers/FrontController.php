@@ -292,14 +292,14 @@ class FrontController extends Controller
 
     public function Omantel_send_pincode()
     {
-        $userToken = session()->get('userToken') ;
+        $userToken = session()->get('userToken_omantel') ;
         return $this->pin_code($userToken);
     }
 
 
     public function du_goto_pincode()
     {
-        $userToken = session()->get('userToken') ;
+        $userToken = session()->get('userToken_du') ;
         return $this->du_pin_code($userToken);
     }
 
