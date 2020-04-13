@@ -72,15 +72,24 @@
         };
 
         var date = new Date(); // today
-        var times = prayTimes.getTimes(date, [current_lat, current_lng], 2);
-        var list = ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
+        // var visitortimezone = -date.getTimezoneOffset()/60;
+        // console.log(visitortimezone);
 
-        var html = '<div class="time_btn"><div class="row m-0">';
+        var times = prayTimes.getTimes(date, [current_lat, current_lng], "{{$timezone}}");
+        
+        var list = ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
+        var list2 = ['الفجر', 'الظهر', 'العصر', 'المغرب', 'العشاء'];
+        var html = '';
         for(var i in list)	{
-          html += '<div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span"><h4 class="h4_time">'+ list[i]+ ' </h4></div>';
+            html += '<div class="time_btn"><div class="row m-0">';
+          if("{{getCode()}}" == 'ar'){
+            html += '<div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span"><h4 class="h4_time">'+ list2[i] +' </h4></div>';
+          }else{
+            html += '<div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span"><h4 class="h4_time">'+ list[i] +' </h4></div>';
+          }
           html += '<div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span"><h4 class="h4_time_2">'+ times[list[i].toLowerCase()]+ '</h4></div>';
+          html += '</div></div>';
         }
-        html += '</div></div>';
         document.getElementById('table').innerHTML = html;
 
       });

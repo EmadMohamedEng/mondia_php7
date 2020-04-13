@@ -161,7 +161,7 @@ function PrayTimes(method) {
 		highLats : 'NightMiddle'
 	},
 
-	timeFormat = '24h',
+	timeFormat = '12h',
 	timeSuffixes = ['am', 'pm'],
 	invalidTime =  '-----',
 
