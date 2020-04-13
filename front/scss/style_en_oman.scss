@@ -731,9 +731,10 @@ select {
 
       #map {
         height: 66vh;
-        width: 70%;
+        width: 90%;
         margin: 0 auto;
         border: 5px solid $bg_color;
+        border-radius: 14px;
       }
     }
   }
@@ -889,7 +890,6 @@ select {
   .merath_page {
     width: 70%;
     margin: 1.5rem auto;
-    direction: rtl;
 
     .border-bottom {
       // margin-top: 0.25rem;
@@ -919,7 +919,7 @@ select {
     }
 
     .input_span {
-      text-align: right;
+      text-align: left;
 
       h4 {
         line-height: 2.5rem;
@@ -1698,11 +1698,9 @@ select {
       }
 
       .input_span {
-        text-align: right;
-
         h4 {
-          line-height: 2.5rem;
-          font-size: 1.25rem;
+          line-height: 2.25rem;
+          font-size: 1rem;
         }
       }
 
@@ -2181,10 +2179,9 @@ select {
       }
 
       .input_span {
-        text-align: right;
-
         h4 {
-          line-height: 2.5rem;
+          line-height: 2.25rem;
+          font-size: 1rem
         }
       }
 
@@ -2683,11 +2680,9 @@ select {
       }
 
       .input_span {
-        text-align: right;
-
         h4 {
-          line-height: 3.5rem;
-          font-size: 1.7rem;
+          line-height: 3rem;
+          font-size: 1.25rem;
         }
       }
 
@@ -3205,11 +3200,9 @@ select {
       }
 
       .input_span {
-        text-align: right;
-
         h4 {
-          line-height: 3.5rem;
-          font-size: 1.7rem;
+          line-height: 3rem;
+          font-size: 1.25rem;
         }
       }
 
@@ -3838,8 +3831,6 @@ select {
       }
 
       .input_span {
-        text-align: right;
-
         h4 {
           line-height: 4rem;
           font-size: 2rem;
@@ -4514,8 +4505,6 @@ select {
       }
 
       .input_span {
-        text-align: right;
-
         h4 {
           line-height: 4.5rem;
           font-size: 2.5rem;

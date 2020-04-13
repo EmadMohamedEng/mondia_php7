@@ -565,9 +565,10 @@ select:active {
 }
 .main_container .nearmosque_page .nearmosque_title #map {
   height: 66vh;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
   border: 5px solid #ff9e1b;
+  border-radius: 14px;
 }
 .main_container .salah_time_page {
   width: 70%;
@@ -665,7 +666,6 @@ select:active {
 .main_container .merath_page {
   width: 70%;
   margin: 1.5rem auto;
-  direction: rtl;
 }
 .main_container .merath_page .border-bottom {
   margin-bottom: 0.75rem;
@@ -687,7 +687,7 @@ select:active {
   -o-border-radius: 8px;
 }
 .main_container .merath_page .input_span {
-  text-align: right;
+  text-align: left;
 }
 .main_container .merath_page .input_span h4 {
   line-height: 2.5rem;
@@ -1265,12 +1265,9 @@ select:active {
     text-align: center;
     margin-bottom: 1rem;
   }
-  .main_container .merath_page .input_span {
-    text-align: right;
-  }
   .main_container .merath_page .input_span h4 {
-    line-height: 2.5rem;
-    font-size: 1.25rem;
+    line-height: 2.25rem;
+    font-size: 1rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
@@ -1593,11 +1590,9 @@ select:active {
     text-align: center;
     margin-bottom: 1rem;
   }
-  .main_container .merath_page .input_span {
-    text-align: right;
-  }
   .main_container .merath_page .input_span h4 {
-    line-height: 2.5rem;
+    line-height: 2.25rem;
+    font-size: 1rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
@@ -1937,12 +1932,9 @@ select:active {
   .main_container .merath_page .input_text .merath_input {
     font-size: 1.5rem;
   }
-  .main_container .merath_page .input_span {
-    text-align: right;
-  }
   .main_container .merath_page .input_span h4 {
-    line-height: 3.5rem;
-    font-size: 1.7rem;
+    line-height: 3rem;
+    font-size: 1.25rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
@@ -2295,12 +2287,9 @@ select:active {
   .main_container .merath_page .input_text .merath_input {
     font-size: 1.5rem;
   }
-  .main_container .merath_page .input_span {
-    text-align: right;
-  }
   .main_container .merath_page .input_span h4 {
-    line-height: 3.5rem;
-    font-size: 1.7rem;
+    line-height: 3rem;
+    font-size: 1.25rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
@@ -2738,9 +2727,6 @@ select:active {
   }
   .main_container .merath_page .input_text .merath_input {
     font-size: 2rem;
-  }
-  .main_container .merath_page .input_span {
-    text-align: right;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 4rem;
@@ -3215,9 +3201,6 @@ select:active {
   }
   .main_container .merath_page .input_text .merath_input {
     font-size: 2.5rem;
-  }
-  .main_container .merath_page .input_span {
-    text-align: right;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 4.5rem;

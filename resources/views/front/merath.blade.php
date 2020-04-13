@@ -2,25 +2,26 @@
 @section('page_title') @lang('front.merath') @endsection
 @section('content')
 <style>
-  .input_span{
+  /* .input_span{
     text-align: {{getCode() == 'ar' ? 'right' : 'left'}} !important;
-  }
+  } */
 </style>
+
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
   @include('front.search')
-  <section class="merath_page" dir="{{getCode() == 'en' ? 'rtl' : 'ltr'}}">
+  <section class="merath_page">
     <div class="all_mer" style="display:block">
       <div class="merath_title">
         <h2>@lang('front.merath')</h2>
       </div>
 
       <div class="row m-0 roll-in-top">
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
+        <div class="col-md-8 col-lg-8 col-xl-6 col-8 p-0 input_span">
           <!-- <h4><span class="span_req">* </span>@lang('front.the_value_of_the_estate')</h4> -->
           <h4>@lang('front.the_value_of_the_estate')</h4>
         </div>
 
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_text">
+        <div class="col-md-4 col-lg-4 col-xl-6 col-4 p-0 input_text">
           <div class="form-group">
             <input type="number" class="form-control merath_input" id="MalVarligi" onkeypress="EnsureNumeric()" name="MalVarligi" placeholder="0" min="0" required>
           </div>
@@ -30,12 +31,12 @@
       <div class="border-bottom"></div>
 
       <div class="row m-0 roll-in-top">
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
+        <div class="col-md-8 col-lg-8 col-xl-6 col-8 p-0 input_span">
           <!-- <h4><span class="span_req">* </span>@lang('front.number_of_children') </h4> -->
           <h4>@lang('front.number_of_children') </h4>
         </div>
 
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_text">
+        <div class="col-md-4 col-lg-4 col-xl-6 col-4 p-0 input_text">
           <div class="form-group">
             <input type="number" class="form-control merath_input" id="ErkekCocuk" placeholder="0" min="0" name="" placeholder="">
           </div>
@@ -45,12 +46,12 @@
       <div class="border-bottom"></div>
 
       <div class="row m-0 roll-in-top">
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
+        <div class="col-md-8 col-lg-8 col-xl-6 col-8 p-0 input_span">
           <!-- <h4><span class="span_req">* </span> @lang('front.number_of_girls')</h4> -->
           <h4>@lang('front.number_of_girls')</h4>
         </div>
 
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_text">
+        <div class="col-md-4 col-lg-4 col-xl-6 col-4 p-0 input_text">
           <div class="form-group">
             <input type="number" class="form-control merath_input" placeholder="0" min="0" id="KizCocuk" name="" placeholder="">
           </div>
@@ -60,12 +61,12 @@
       <div class="border-bottom"></div>
 
       <div class="row m-0 roll-in-top">
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
+        <div class="col-md-8 col-lg-8 col-xl-6 col-8 p-0 input_span">
           <!-- <h4><span class="span_req">* </span>@lang('front.feather') </h4> -->
           <h4>@lang('front.feather') </h4>
         </div>
 
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_text">
+        <div class="col-md-4 col-lg-4 col-xl-6 col-4 p-0 input_text">
           <div class="form-group">
             <select class="form-control merath_input" name="sellist1" id="Baba">
               <option>@lang('front.no')</option>
@@ -78,12 +79,12 @@
       <div class="border-bottom"></div>
 
       <div class="row m-0 roll-in-top">
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
+        <div class="col-md-8 col-lg-8 col-xl-6 col-8 p-0 input_span">
           <!-- <h4><span class="span_req">* </span>@lang('front.mother') </h4> -->
           <h4>@lang('front.mother') </h4>
         </div>
 
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_text">
+        <div class="col-md-4 col-lg-4 col-xl-6 col-4 p-0 input_text">
           <div class="form-group">
             <select class="form-control merath_input" name="" id="Anne">
               <option>@lang('front.no')</option>
@@ -96,12 +97,12 @@
       <div class="border-bottom"></div>
 
       <div class="row m-0 roll-in-top">
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
+        <div class="col-md-8 col-lg-8 col-xl-6 col-8 p-0 input_span">
           <!-- <h4><span class="span_req">* </span> @lang('front.number_of_brother') </h4> -->
           <h4>@lang('front.number_of_brother') </h4>
         </div>
 
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_text">
+        <div class="col-md-4 col-lg-4 col-xl-6 col-4 p-0 input_text">
           <div class="form-group">
             <input type="number" class="form-control merath_input" placeholder="0" min="0" id="ErkekKardes" name="" placeholder="">
           </div>
@@ -111,12 +112,12 @@
       <div class="border-bottom"></div>
 
       <div class="row m-0 roll-in-top">
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
+        <div class="col-md-8 col-lg-8 col-xl-6 col-8 p-0 input_span">
           <!-- <h4><span class="span_req">* </span>@lang('front.number_of_sister') </h4> -->
           <h4>@lang('front.number_of_sister') </h4>
         </div>
 
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_text">
+        <div class="col-md-4 col-lg-4 col-xl-6 col-4 p-0 input_text">
           <div class="form-group">
             <input type="number" class="form-control merath_input" placeholder="0" min="0" id="KizKardes" name="" placeholder="">
           </div>
@@ -126,12 +127,12 @@
       <div class="border-bottom"></div>
 
       <div class="row m-0 roll-in-top">
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_span">
+        <div class="col-md-8 col-lg-8 col-xl-6 col-8 p-0 input_span">
           <!-- <h4><span class="span_req">* </span> @lang('front.number_of_wife') </h4> -->
           <h4>@lang('front.number_of_wife') </h4>
         </div>
 
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 input_text">
+        <div class="col-md-4 col-lg-4 col-xl-6 col-4 p-0 input_text">
           <div class="form-group">
             <select class="form-control merath_input" id="Es" name="">
               <option>@lang('front.no')</option>
