@@ -334,7 +334,7 @@ class FrontController extends Controller
 
       $timezone = timezone_open($new_arr['geoplugin_timezone']);
       $datetime_eur = date_create("now", timezone_open("utc")); 
-
+      dd($new_arr);
 
       return timezone_offset_get($timezone, $datetime_eur)/3600;
     }
