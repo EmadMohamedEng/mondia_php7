@@ -735,7 +735,7 @@ select {
 
       #map {
         height: 66vh;
-        width: 70%;
+        width: 90%;
         margin: 0 auto;
         border: double 5px transparent;
         border-radius: 30px;
@@ -939,7 +939,7 @@ select {
     }
 
     .input_span {
-      text-align: right;
+      text-align: left;
 
       h4 {
         line-height: 2.5rem;
@@ -1727,11 +1727,9 @@ select {
       }
 
       .input_span {
-        text-align: right;
-
         h4 {
-          line-height: 2.5rem;
-          font-size: 1.25rem;
+          line-height: 2.25rem;
+          font-size: 1rem;
         }
       }
 
@@ -2206,10 +2204,9 @@ select {
       }
 
       .input_span {
-        text-align: right;
-
         h4 {
           line-height: 2.5rem;
+          font-size: 1.15rem;
         }
       }
 
@@ -2705,11 +2702,9 @@ select {
       }
 
       .input_span {
-        text-align: right;
-
         h4 {
-          line-height: 3.5rem;
-          font-size: 1.7rem;
+          line-height: 3rem;
+          font-size: 1.25rem;
         }
       }
 
@@ -3224,11 +3219,10 @@ select {
       }
 
       .input_span {
-        text-align: right;
 
         h4 {
-          line-height: 3.5rem;
-          font-size: 1.7rem;
+          line-height: 3rem;
+          font-size: 1.25rem;
         }
       }
 
@@ -3859,8 +3853,6 @@ select {
       }
 
       .input_span {
-        text-align: right;
-
         h4 {
           line-height: 4rem;
           font-size: 2rem;
@@ -4533,8 +4525,6 @@ select {
       }
 
       .input_span {
-        text-align: right;
-
         h4 {
           line-height: 4.5rem;
           font-size: 2.5rem;
@@ -4915,4 +4905,5 @@ select {
     opacity: 1;
   }
 }
+
 /* End Animation */
