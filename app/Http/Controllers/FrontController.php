@@ -351,11 +351,29 @@ class FrontController extends Controller
       $URL = 'http://www.geoplugin.net/php.gp?ip='.$ip;
       $new_arr = unserialize(file_get_contents($URL));
 
-      $timezone = timezone_open($new_arr['geoplugin_timezone']? $new_arr['geoplugin_timezone']: 'Africa/cairo');
-      $datetime_eur = date_create("now", timezone_open("utc"));
+      $actionName = 'Salah time';
+      $url = url('/');
 
+      if(!empty($new_arr['geoplugin_timezone'])){
+        $parameters_arr['Timezone'] = $new_arr['geoplugin_timezone'];
+        $parameters_arr['Latitude'] = $new_arr['geoplugin_latitude'];
+        $parameters_arr['Longitude'] = $new_arr['geoplugin_longitude'];
 
-      return timezone_offset_get($timezone, $datetime_eur)/3600;
+        $this->log_action($actionName, $url, $parameters_arr);
+
+        $timezone = timezone_open($new_arr['geoplugin_timezone']);
+
+        $datetime_eur = date_create("now", timezone_open("utc"));
+        return timezone_offset_get($timezone, $datetime_eur)/3600;
+      }else{
+        $parameters_arr['Timezone'] = ['default egypt'];
+        $parameters_arr['Latitude'] = ['null'];
+        $parameters_arr['Longitude'] = ['null'];
+
+        $this->log_action($actionName, $url, $parameters_arr);
+
+        return 2; // default egypt
+      }
     }
 
     public function salah_time3(Request $request)
