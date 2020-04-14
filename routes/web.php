@@ -41,7 +41,7 @@ Route::get('view_rbt/{id}','FrontController@view_rbt');
 Route::get('rbts','FrontController@rbts');
 Route::get('test2','FrontController@test');
 Route::get('search','FrontController@search')->name('front.search');
-
+Route::get('muslim_inner_confirm','FrontController@muslim_inner')->name('front.muslim_inner');
 //OmanTel
 define('omantel',9);
 Route::get('omantel/redirect', 'FrontController@redirect')->name('front.oman');

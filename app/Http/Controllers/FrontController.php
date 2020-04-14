@@ -333,6 +333,12 @@ class FrontController extends Controller
         return view('front.merath_calc');
     }
 
+    public function muslim_inner(Request $request)
+    {
+      session()->put('current_url',$request->crl_url);
+      return view('front.muslim_inner_confirm');
+    }
+
     // salah time
     public function salah_time()
     {
