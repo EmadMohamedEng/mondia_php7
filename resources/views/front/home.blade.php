@@ -62,7 +62,7 @@
         </div>
         </div>
 
-        <div class="owl_content owl-carousel owl-theme" dir="ltr">
+        <div class="{{(count($item->services) == 1 ? 'owl_content_one':(count($item->services) == 2 ? 'owl_content_two' : 'owl_content'))}} owl-carousel owl-theme" dir="ltr">
         @foreach ($item->services as $service)
         <div class="item">
             <div class="card ovf-hidden">
@@ -94,7 +94,7 @@
         </div>
         </div>
 
-        <div class="owl_content owl-carousel owl-theme" dir="ltr">
+        <div class="owl_one owl-carousel owl-theme" dir="ltr">
         <div class="item">
             <div class="card ovf-hidden">
             <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
@@ -188,7 +188,7 @@
         </div>
         </div>
 
-        <div class="owl_content owl-carousel owl-theme" dir="ltr">
+        <div class="{{(count($item->services) == 1 ? 'owl_content_one':(count($item->services) == 2 ? 'owl_content_two' : 'owl_content'))}} owl-carousel owl-theme" dir="ltr">
         @foreach ($item->services as $service)
         <div class="item">
             <div class="card ovf-hidden">

@@ -65,6 +65,50 @@ $('.owl_content').owlCarousel({
     }
 });
 
+$('.owl_content_one').owlCarousel({
+  loop: false,
+  margin: 5,
+  autoplay: false,
+  autoplayTimeout: 3000,
+  animateOut: 'fadeOut',
+  nav: false,
+  dots: false,
+  center: false,
+  responsive: {
+      0: {
+          items: 1
+      },
+      600: {
+          items: 1
+      },
+      1000: {
+          items: 1
+      }
+  }
+});
+
+$('.owl_content_two').owlCarousel({
+  loop: false,
+  margin: 5,
+  autoplay: false,
+  autoplayTimeout: 3000,
+  animateOut: 'fadeOut',
+  nav: false,
+  dots: false,
+  center: false,
+  responsive: {
+      0: {
+          items: 2
+      },
+      600: {
+          items: 2
+      },
+      1000: {
+          items: 2
+      }
+  }
+});
+
 $('#Calculate').click(function() {
     var GoldPrice = $('#txtGoldPrice').val();
     var SavedMoney = $('#txtSavedMoney').val();
