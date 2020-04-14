@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -35,6 +34,10 @@
     window.base_url = '{{url("/")}}';
   </script>
 </head>
+
+<?php
+$enable = get_setting('enable_testing');
+?>
 
 <body>
   <main class="main_container">
@@ -130,18 +133,18 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon_before fas fa-mosque fa-lg"></i> @lang('front.muslim_guide')</a>
                 <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
-                  @if(!request()->has('OpID')||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
+                  @if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
                   <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
                   <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
                   <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
                   <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
                   <a class="dropdown-item text-capitalize link_href" href="{{url('mosque')}}"> @lang('front.mosque')</a>
                   @else
-                  <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('sebha')])}}">@lang('front.sebha')</a>
-                  <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('zakah')])}}">@lang('front.zakah')</a>
-                  <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('merath')])}}">@lang('front.merath')</a>
-                  <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('salah_time')])}}">@lang('front.prayer')</a>
-                  <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('mosque')])}}"> @lang('front.mosque')</a>
+                  <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('sebha?OpID='.request()->get("OpID"))])}}">@lang('front.sebha')</a>
+                  <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('zakah?OpID='.request()->get("OpID"))])}}">@lang('front.zakah')</a>
+                  <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('merath?OpID='.request()->get("OpID"))])}}">@lang('front.merath')</a>
+                  <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.request()->get("OpID"))])}}">@lang('front.prayer')</a>
+                  <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('mosque?OpID='.request()->get("OpID"))])}}"> @lang('front.mosque')</a>
                   @endif
                   @if(request()->has('OpID') && request()->get('OpID') != '')
                   <a class="dropdown-item text-capitalize link_href" href="{{url('azan')}}">@lang('front.azan')</a>

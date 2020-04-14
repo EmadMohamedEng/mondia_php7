@@ -175,6 +175,14 @@ class FrontController extends Controller
             ->where('posts.show_date','<=',Carbon::now()->toDateString());
         }
         $contents = $contents->orderBy('contents.created_at', 'desc')->limit(4)->get();
+
+        if($enable){  // enable testing from backend
+           return view('front.inner_enable_testing', compact('content','contents'));
+        }
+
+
+
+
         if($request->has('userToken')){ // subscribe for the first time
 
 
@@ -251,6 +259,9 @@ class FrontController extends Controller
       return view('front.inner', compact('content','contents'));
     }
 
+
+
+
     public function search(Request $request)
     {
         $services =Service::select('services.*','services.id as service_id')
@@ -311,30 +322,67 @@ class FrontController extends Controller
 
     public function sebha()
     {
+      if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
 
         return view('front.sebha');
+      }else{
+        return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
+      }
     }
 
     public function zakah()
     {
+      if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
 
         return view('front.zakah');
+      }else{
+        return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
+      }
+
+
     }
 
     public function merath()
     {
+      if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
 
         return view('front.merath');
+      }else{
+        return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
+      }
+
     }
 
     public function merath_calc()
-    {
+    { if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
 
-        return view('front.merath_calc');
+      return view('front.merath_calc');
+    }else{
+      return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
     }
+
+    }
+
+
+
+       public function mosque()
+       {
+           { if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
+
+            return view('front.mosque');
+
+          }else{
+            return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
+          }
+       }
+
+
+      }
+
 
     public function muslim_inner(Request $request)
     {
+
       session()->put('current_url',$request->crl_url);
       return view('front.muslim_inner_confirm');
     }
@@ -389,9 +437,18 @@ class FrontController extends Controller
 
     public function salah_time3(Request $request)
     {
-      $hjrri_date = $this->hjrri_date_cal();
-      $prayer_times = $this->prayTimesCal_v2();
-      return view('front.salah_time', compact('prayer_times', 'hjrri_date'));
+      if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
+
+        $hjrri_date = $this->hjrri_date_cal();
+        $prayer_times = $this->prayTimesCal_v2();
+        return view('front.salah_time', compact('prayer_times', 'hjrri_date'));
+
+      }else{
+        return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
+      }
+
+
+
     }
 
     public function prayTimesCal()
@@ -495,12 +552,6 @@ class FrontController extends Controller
         return $hjrri_date_object;
     }
 
-    // end salah time
-    public function mosque()
-    {
-
-        return view('front.mosque');
-    }
 
     public function azan(Request $request)
     {

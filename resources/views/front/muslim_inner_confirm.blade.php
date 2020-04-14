@@ -2,7 +2,7 @@
 @section('page_title') @lang('front.muslim_guide') @endsection
 @section('content')
 @php
-$src = url('front\images\Cutting\Contnent_Page\004.png');
+$src = url('front\images\Cutting\Home_Page\004.png');
 @endphp
 
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
