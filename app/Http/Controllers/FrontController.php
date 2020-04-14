@@ -37,7 +37,7 @@ class FrontController extends Controller
           $latest = $latest->latest('contents.created_at');
         }
 
-        $latest = $latest->whereIn('contents.type',[1,3])->groupBy('service_id')->limit(10)->get();// video or images
+        $latest = $latest->whereIn('contents.type',[1,3])->groupBy('service_id')->limit(20)->get();// video or images
         return view('front.home',compact('latest'));
     }
 
