@@ -113,7 +113,7 @@
               <div class="border-bottom"></div>
 
               <li id="indexed" class="nav-item">
-                <a class="nav-link text-capitalize link_href" style="background-color:#fff;!important" href="{{route('front.index')}}"><i class="icon_before fas fa-home fa-lg"></i> @lang('front.home')
+                <a class="nav-link text-capitalize link_href" style="background:#fff !important;color:#000 !important" href="{{route('front.index')}}"><i class="icon_before fas fa-home fa-lg"></i> @lang('front.home')
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
