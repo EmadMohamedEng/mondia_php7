@@ -32,8 +32,12 @@ class FrontController extends Controller
             ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
             ->orderBy('posts.show_date', 'desc');
         }
+        else
+        {
+          $latest = $latest->latest('contents.created_at');
+        }
 
-        $latest = $latest->whereIn('contents.type',[1,3])->limit(10)->latest('contents.created_at')->get();// video or images
+        $latest = $latest->whereIn('contents.type',[1,3])->groupBy('service_id')->limit(10)->get();// video or images
         return view('front.home',compact('latest'));
     }
 
