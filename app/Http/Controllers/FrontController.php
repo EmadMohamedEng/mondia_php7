@@ -132,6 +132,7 @@ class FrontController extends Controller
 
     public function view_content($id,Request $request)
     {
+
         $current_url =    \Request::fullUrl()  ;
         session()->put('current_url',$current_url);
 
@@ -979,7 +980,7 @@ class FrontController extends Controller
       if( session()->has('OpID')  && session()->get('OpID') != ''  ){
         $Url = url("/?OpID=".session()->get('OpID')) ;
        // session()->flush();
-        Session::forget(['userToken_omantel']);
+        Session::forget(['userToken_omantel','menu_unsub_omantel']);
         return redirect($Url);
       }else{
         return redirect(url('/'));
@@ -1134,11 +1135,20 @@ class FrontController extends Controller
 
     public function du_pin_code()
     {
+
+
+        if(    app()->getLocale()  !=NULL   ){
+          $current_lang= app()->getLocale() ;
+        }else{
+          $current_lang ="en";
+        }
+
+
         $x = 12;
 
         $trxid = $randomNum=substr(str_shuffle("123456789123456789123456789"), 0, $x);
 
-        $url = "http://pay-with-du.ae/16/mondiamedia/mondia-duelkheer-1-en-doi-web?serviceProvider=mondiamedia&serviceid=duelkheer&trxid=".$trxid."&redirectUrl=".urlencode(session()->get('current_url'));
+        $url = "http://pay-with-du.ae/16/mondiamedia/mondia-duelkheer-1-$current_lang-doi-web?serviceProvider=mondiamedia&serviceid=duelkheer&trxid=".$trxid."&redirectUrl=".urlencode(session()->get('current_url'));
 
         // make log
         $actionName = "DU Send PinCode";
@@ -1319,7 +1329,7 @@ class FrontController extends Controller
 
           $Url = url("/?OpID=".session()->get('OpID')) ;
          // session()->flush();
-          Session::forget(['userToken_du']);
+          Session::forget(['userToken_du','menu_unsub_du']);
           return redirect($Url);
         }else{
           return redirect(url('/'));
