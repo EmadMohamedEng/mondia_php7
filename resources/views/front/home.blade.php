@@ -61,8 +61,27 @@
             </div>
         </div>
         </div>
+        @if(count($item->services) == 1 || count($item->services) == 2)
+        @foreach ($item->services as $service)
+        <div class="col-md-4 col-lg-4 col-xl-2 col-4 p-0">
+            <div class="item">
+              <div class="card ovf-hidden rotate-in-center">
+                <a class="owl_content_img view overlay link_href" href="{{route('front.list',['service_id' => $service->service_id])}}">
+                  <img class="w-100" src="{{url($service->image)}}" alt="Card image cap">
+                  <a>
+                    <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                  </a>
+                </a>
 
-        <div class="{{(count($item->services) == 1 ? 'owl_content_one':(count($item->services) == 2 ? 'owl_content_two' : 'owl_content'))}} owl-carousel owl-theme" dir="ltr">
+                <div class="card-body">
+                  <h4 class="card-title text-capitalize">{{$service->getTranslation('title',getCode())}}</h4>
+                </div>
+              </div>
+            </div>
+        </div>
+        @endforeach
+        @else
+        <div class="owl_one owl-carousel owl-theme" dir="ltr">
         @foreach ($item->services as $service)
         <div class="item">
             <div class="card ovf-hidden">
@@ -80,6 +99,7 @@
         </div>
         @endforeach
         </div>
+        @endif
     </section>
     @endforeach
 
@@ -187,8 +207,27 @@
             </div>
         </div>
         </div>
+        @if(count($item->services) == 1 || count($item->services) == 2)
+        @foreach ($item->services as $service)
+        <div class="col-md-4 col-lg-4 col-xl-2 col-4 p-0">
+            <div class="item">
+              <div class="card ovf-hidden rotate-in-center">
+                <a class="owl_content_img view overlay link_href" href="{{route('front.list',['service_id' => $service->service_id])}}">
+                  <img class="w-100" src="{{url($service->image)}}" alt="Card image cap">
+                  <a>
+                    <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                  </a>
+                </a>
 
-        <div class="{{(count($item->services) == 1 ? 'owl_content_one':(count($item->services) == 2 ? 'owl_content_two' : 'owl_content'))}} owl-carousel owl-theme" dir="ltr">
+                <div class="card-body">
+                  <h4 class="card-title text-capitalize">{{$service->getTranslation('title',getCode())}}</h4>
+                </div>
+              </div>
+            </div>
+        </div>
+        @endforeach
+        @else
+        <div class="owl_content owl-carousel owl-theme" dir="ltr">
         @foreach ($item->services as $service)
         <div class="item">
             <div class="card ovf-hidden">
@@ -206,6 +245,7 @@
         </div>
         @endforeach
         </div>
+        @endif
     </section>
     @endforeach
 </div>
