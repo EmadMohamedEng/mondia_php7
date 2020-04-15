@@ -379,6 +379,9 @@ body {
 .main_container .shakih_page .item .card .card-body .card-text i {
   color: #adadad;
 }
+.main_container .list_page .content_carousel_head {
+  text-align: right;
+}
 .main_container .inner_page {
   margin-top: 1.5rem;
 }
