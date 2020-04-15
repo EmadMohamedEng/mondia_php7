@@ -183,7 +183,6 @@ body {
   }
 
   .content_carousel {
-
     .content_carousel_head {
       margin-top: 2rem;
 
@@ -203,6 +202,7 @@ body {
     }
 
     .owl_content_one {
+      direction: rtl !important;
       .item {
         .card {
           border-radius: 10px;
@@ -240,6 +240,7 @@ body {
     }
 
     .owl_content_two {
+      direction: rtl !important;
       .item {
         .card {
           border-radius: 10px;
@@ -277,6 +278,7 @@ body {
     }
 
     .owl_content_three {
+      direction: rtl !important;
       .item {
         .card {
           border-radius: 10px;
@@ -309,11 +311,11 @@ body {
             }
           }
         }
-  
       }
     }
 
     .owl_content_four {
+      direction: rtl !important;
       .item {
         .card {
           border-radius: 10px;
@@ -385,62 +387,6 @@ body {
         }
   
       }
-    }
-  }
-
-  /* End Home Page */
-
-  /* Start List Page */
-  .list_page {
-    margin-top: 1.5rem;
-
-    .content_carousel_head {
-      .link_title {
-        color: $black_color;
-        text-align: right;
-
-        h6 {
-          margin-bottom: 1rem;
-          font-weight: bold;
-        }
-      }
-    }
-
-    .item {
-      margin-bottom: 1rem;
-
-      .card {
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-        height: 16rem;
-
-        .owl_content_img {
-          img {
-            height: 9.375rem;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-          }
-        }
-
-        .card-body {
-          padding: 1.25rem 0.25rem;
-
-          .card-title {
-            text-align: center;
-            font-size: 1.05rem;
-          }
-
-          .card-text {
-            i {
-              color: $grey_color;
-            }
-          }
-        }
-      }
-
     }
   }
 
