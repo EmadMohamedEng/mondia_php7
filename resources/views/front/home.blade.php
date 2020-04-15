@@ -117,7 +117,13 @@
         <div class="owl_one owl-carousel owl-theme" dir="ltr">
         <div class="item">
             <div class="card ovf-hidden">
-            <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
+
+              @if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
+              <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
+                @else
+                <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('sebha?OpID='.request()->get("OpID"))])}}">
+                @endif
+
                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/01.png')}}" alt="Card image cap">
                 <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
@@ -132,7 +138,13 @@
 
         <div class="item">
             <div class="card ovf-hidden">
-            <a class="owl_content_img view overlay link_href" href="{{url('mosque')}}">
+
+              @if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
+              <a class="owl_content_img view overlay link_href" href="{{url('mosque')}}">
+                @else
+                <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('mosque?OpID='.request()->get("OpID"))])}}">
+                @endif
+
                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/02.png')}}" alt="Card image cap">
                 <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
@@ -147,7 +159,13 @@
 
         <div class="item">
             <div class="card ovf-hidden">
-            <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
+
+              @if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
+              <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
+                @else
+                <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('zakah?OpID='.request()->get("OpID"))])}}">
+                @endif
+
                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/07.png')}}" alt="Card image cap">
                 <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
@@ -162,7 +180,14 @@
 
         <div class="item">
             <div class="card ovf-hidden">
-            <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
+
+
+              @if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
+              <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
+                @else
+                <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('merath?OpID='.request()->get("OpID"))])}}">
+                @endif
+
                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/04.png')}}" alt="Card image cap">
                 <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
@@ -177,7 +202,12 @@
 
         <div class="item">
             <div class="card ovf-hidden">
-            <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
+              @if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
+              <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
+                @else
+                <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.request()->get("OpID"))])}}">
+                @endif
+
                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/03.png')}}" alt="Card image cap">
                 <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>

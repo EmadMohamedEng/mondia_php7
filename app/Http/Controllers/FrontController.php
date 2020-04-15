@@ -320,59 +320,59 @@ class FrontController extends Controller
     }
 
 
-    public function sebha()
+    public function sebha(Request $request)
     {
       if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
 
         return view('front.sebha');
       }else{
-        return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
+        return redirect( route('front.muslim_inner',['crl_url' => url('sebha?OpID='.$request->get("OpID"))]));
       }
     }
 
-    public function zakah()
+    public function zakah(Request $request)
     {
       if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
 
         return view('front.zakah');
       }else{
-        return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
+        return redirect( route('front.muslim_inner',['crl_url' => url('zakah?OpID='.$request->get("OpID"))]));
       }
 
 
     }
 
-    public function merath()
+    public function merath(Request $request)
     {
       if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
 
         return view('front.merath');
       }else{
-        return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
+        return redirect( route('front.muslim_inner',['crl_url' => url('merath?OpID='.$request->get("OpID"))]));
       }
 
     }
 
-    public function merath_calc()
+    public function merath_calc(Request $request)
     { if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
 
       return view('front.merath_calc');
     }else{
-      return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
+      return redirect( route('front.muslim_inner',['crl_url' => url('merath_calc?OpID='.$request->get("OpID"))]));
     }
 
     }
 
 
 
-       public function mosque()
+       public function mosque(Request $request)
        {
            { if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
 
             return view('front.mosque');
 
           }else{
-            return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
+            return redirect( route('front.muslim_inner',['crl_url' => url('mosque?OpID='.$request->get("OpID"))]));
           }
        }
 
