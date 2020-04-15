@@ -61,29 +61,32 @@
             </div>
         </div>
         </div>
-        @if(count($item->services) < 5)
-        <div class="row">
-          @foreach ($item->services as $service)
-          <div class="col-md-4 col-lg-4 col-xl-2 col-4 mr-1 p-0">
-              <div class="item">
-                <div class="card ovf-hidden rotate-in-center">
-                  <a class="owl_content_img view overlay link_href" href="{{route('front.list',['service_id' => $service->service_id])}}">
-                    <img class="w-100" src="{{url($service->image)}}" alt="Card image cap">
-                    <a>
-                      <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                    </a>
-                  </a>
 
-                  <div class="card-body">
-                    <h4 class="card-title text-capitalize">{{$service->getTranslation('title',getCode())}}</h4>
-                  </div>
-                </div>
-              </div>
-          </div>
-          @endforeach
-        </div>
-        @else
-        <div class="owl_content owl-carousel owl-theme" dir="ltr">
+        
+        @php
+        if(count($item->services) == 1){
+          $owl_1 = 'owl_content_one';
+        }
+
+        if(count($item->services) == 2){
+          $owl_1 = 'owl_content_two';
+        }
+
+        if(count($item->services) == 3){
+          $owl_1 = 'owl_content_three';
+        }
+
+        if(count($item->services) == 4){
+          $owl_1 = 'owl_content_four';
+        }
+
+        if(count($item->services)  >= 5){
+          $owl_1 = 'owl_content_five';
+        }
+        @endphp
+
+        
+        <div class="{{$owl_1}} owl-carousel owl-theme" dir="ltr">
         @foreach ($item->services as $service)
         <div class="item">
             <div class="card ovf-hidden">
@@ -101,7 +104,6 @@
         </div>
         @endforeach
         </div>
-        @endif
     </section>
     @endforeach
 
@@ -116,7 +118,7 @@
         </div>
         </div>
 
-        <div class="owl_content owl-carousel owl-theme" dir="ltr">
+        <div class="owl_content owl_content_five owl-carousel owl-theme" dir="ltr">
         <div class="item">
             <div class="card ovf-hidden">
 
@@ -239,29 +241,30 @@
             </div>
         </div>
         </div>
-        @if(count($item->services) < 5)
-        <div class="row">
-          @foreach ($item->services as $service)
-          <div class="col-md-4 col-lg-4 col-xl-2 col-4 mr-1 p-0">
-              <div class="item">
-                <div class="card ovf-hidden rotate-in-center">
-                  <a class="owl_content_img view overlay link_href" href="{{route('front.list',['service_id' => $service->service_id])}}">
-                    <img class="w-100" src="{{url($service->image)}}" alt="Card image cap">
-                    <a>
-                      <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                    </a>
-                  </a>
 
-                  <div class="card-body">
-                    <h4 class="card-title text-capitalize">{{$service->getTranslation('title',getCode())}}</h4>
-                  </div>
-                </div>
-              </div>
-          </div>
-          @endforeach
-        </div>
-        @else
-        <div class="owl_content owl-carousel owl-theme" dir="ltr">
+        @php
+        if(count($item->services) == 1){
+          $owl = 'owl_content_one';
+        }
+
+        if(count($item->services) == 2){
+          $owl = 'owl_content_two';
+        }
+
+        if(count($item->services) == 3){
+          $owl = 'owl_content_three';
+        }
+
+        if(count($item->services) == 4){
+          $owl = 'owl_content_four';
+        }
+
+        if(count($item->services)  >= 5){
+          $owl = 'owl_content_five';
+        }
+        @endphp
+
+        <div class="{{$owl}} owl-carousel owl-theme" dir="ltr">
         @foreach ($item->services as $service)
         <div class="item">
             <div class="card ovf-hidden">
@@ -279,7 +282,6 @@
         </div>
         @endforeach
         </div>
-        @endif
     </section>
     @endforeach
 </div>

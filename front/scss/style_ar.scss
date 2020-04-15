@@ -202,39 +202,189 @@ body {
       }
     }
 
-    .item {
-      .card {
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-        height: 16rem;
-
-        .owl_content_img {
-          img {
-            height: 9.375rem;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+    .owl_content_one {
+      .item {
+        .card {
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          height: 16rem;
+  
+          .owl_content_img {
+            img {
+              height: 9.375rem;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+            }
           }
-        }
-
-        .card-body {
-          padding: 1.25rem 0.25rem;
-
-          .card-title {
-            text-align: center;
-            font-size: 1.05rem;
-          }
-
-          .card-text {
-            i {
-              color: $grey_color;
+  
+          .card-body {
+            padding: 1.25rem 0.25rem;
+  
+            .card-title {
+              text-align: center;
+              font-size: 1.05rem;
+            }
+  
+            .card-text {
+              i {
+                color: $grey_color;
+              }
             }
           }
         }
+  
       }
+    }
 
+    .owl_content_two {
+      .item {
+        .card {
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          height: 16rem;
+  
+          .owl_content_img {
+            img {
+              height: 9.375rem;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+            }
+          }
+  
+          .card-body {
+            padding: 1.25rem 0.25rem;
+  
+            .card-title {
+              text-align: center;
+              font-size: 1.05rem;
+            }
+  
+            .card-text {
+              i {
+                color: $grey_color;
+              }
+            }
+          }
+        }
+  
+      }
+    }
+
+    .owl_content_three {
+      .item {
+        .card {
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          height: 16rem;
+  
+          .owl_content_img {
+            img {
+              height: 9.375rem;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+            }
+          }
+  
+          .card-body {
+            padding: 1.25rem 0.25rem;
+  
+            .card-title {
+              text-align: center;
+              font-size: 1.05rem;
+            }
+  
+            .card-text {
+              i {
+                color: $grey_color;
+              }
+            }
+          }
+        }
+  
+      }
+    }
+
+    .owl_content_four {
+      .item {
+        .card {
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          height: 16rem;
+  
+          .owl_content_img {
+            img {
+              height: 9.375rem;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+            }
+          }
+  
+          .card-body {
+            padding: 1.25rem 0.25rem;
+  
+            .card-title {
+              text-align: center;
+              font-size: 1.05rem;
+            }
+  
+            .card-text {
+              i {
+                color: $grey_color;
+              }
+            }
+          }
+        }
+  
+      }
+    }
+
+    .owl_content_five {
+      .item {
+        .card {
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          height: 16rem;
+  
+          .owl_content_img {
+            img {
+              height: 9.375rem;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+            }
+          }
+  
+          .card-body {
+            padding: 1.25rem 0.25rem;
+  
+            .card-title {
+              text-align: center;
+              font-size: 1.05rem;
+            }
+  
+            .card-text {
+              i {
+                color: $grey_color;
+              }
+            }
+          }
+        }
+  
+      }
     }
   }
 
