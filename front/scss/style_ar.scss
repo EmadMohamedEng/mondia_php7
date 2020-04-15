@@ -1114,6 +1114,10 @@ body {
   /* End Error Page */
 }
 
+.row {
+  margin: 0 !important;
+}
+
 @media (min-width: 320px) and (max-width: 359.9px) {
   .padding_phones {
     padding-left: 1rem !important;
