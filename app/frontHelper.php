@@ -97,5 +97,36 @@ function get_salah($value,$lang){
     return 'Al-fajr';
   }
   return $value;
-  
+
+}
+
+function get_contents($id)
+{
+      $contents = Video::select('*','contents.id as content_id');
+      if($id)
+      {
+        $contents = $contents->where('service_id', $id);
+      }
+      if(request()->has('OpID') && request()->get('OpID') != '')
+      {
+        $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
+        ->where('posts.operator_id', request()->get('OpID'))
+        ->where('posts.show_date', '<=', \Carbon\Carbon::now()->toDateString())
+        ->orderBy('posts.show_date','desc');
+      }
+      if(request()->has('search') && request()->get('search') != '')
+      {
+        $contents = $contents->join('translatables','translatables.record_id','=','contents.id')
+        ->join('tans_bodies','tans_bodies.translatable_id','translatables.id')
+        ->where('translatables.table_name','contents')
+        ->where('translatables.column_name','title')
+        ->where(function($q){
+          $q->where('contents.title', 'like', '%' . request()->get('search'). '%');
+          $q->orWhere('tans_bodies.body', 'like', '%' . request()->get('search') . '%');
+        });
+      }
+
+      $contents = $contents->limit(10)->get();
+
+      return $contents;
 }
