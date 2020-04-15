@@ -10,6 +10,7 @@ $src = url('front\images\Cutting\Home_Page\004.png');
   <section class="inner_page">
     <div class="row m-0">
       <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
+       <h3 style="text-align:center;padding:10px">   @lang('front.muslim_guide')</h3>
         <div class="cover">
           <img src="{{$src}}" alt="Video Cover">
           @if(request()->has('OpID') && request()->get('OpID') == omantel)
