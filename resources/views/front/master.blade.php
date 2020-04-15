@@ -146,10 +146,10 @@ $enable = get_setting('enable_testing');
                   <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.request()->get("OpID"))])}}">@lang('front.prayer')</a>
                   <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('mosque?OpID='.request()->get("OpID"))])}}"> @lang('front.mosque')</a>
                   @endif
-                  @if(request()->has('OpID') && request()->get('OpID') != '')
+                  {{--  @if(request()->has('OpID') && request()->get('OpID') != '')
                   <a class="dropdown-item text-capitalize link_href" href="{{url('azan')}}">@lang('front.azan')</a>
                   <a class="dropdown-item text-capitalize link_href" href="{{url('rbts')}}"> @lang('front.call_tone')</a>
-                  @endif
+                  @endif  --}}
                 </div>
               </li>
               @if(session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
