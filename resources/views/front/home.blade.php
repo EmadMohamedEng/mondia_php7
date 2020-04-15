@@ -114,7 +114,7 @@
         </div>
         </div>
 
-        <div class="owl_one owl-carousel owl-theme" dir="ltr">
+        <div class="owl_content owl-carousel owl-theme" dir="ltr">
         <div class="item">
             <div class="card ovf-hidden">
 
