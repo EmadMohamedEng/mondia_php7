@@ -1413,6 +1413,7 @@ select {
             .arrow_back {
               color: $bg_color;
               font-size: 1.5rem;
+              float: right;
             }
 
             img {
@@ -1881,6 +1882,7 @@ select {
             .arrow_back {
               color: $bg_color;
               font-size: 1.5rem;
+              float: right;
             }
 
             img {
@@ -2364,6 +2366,7 @@ select {
             .arrow_back {
               color: $bg_color;
               font-size: 1.5rem;
+              float: right;
             }
 
             img {
@@ -2870,6 +2873,7 @@ select {
             .arrow_back {
               color: $bg_color;
               font-size: 1.5rem;
+              float: right;
             }
 
             img {
@@ -3386,9 +3390,10 @@ select {
 
           .dropdown-menu {
             .dropdown-item {
-              padding: 0.25rem 0;
+              padding: 0.25rem 0.75rem;
               text-align: center;
-              width: 60% !important;
+              width: 90% !important;
+              font-size: 1.5rem;
 
               &.dropdown-item2 {
                 width: 100% !important;
@@ -3402,6 +3407,7 @@ select {
             .arrow_back {
               color: $bg_color;
               font-size: 1.5rem;
+              float: right;
             }
 
             img {
@@ -4041,9 +4047,10 @@ select {
 
           .dropdown-menu {
             .dropdown-item {
-              padding: 0.25rem 0;
+              padding: 0.25rem 0.75rem;
               text-align: center;
-              width: 60% !important;
+              width: 80% !important;
+              font-size: 1.75rem;
 
               &.dropdown-item2 {
                 width: 100% !important;
@@ -4057,6 +4064,7 @@ select {
             .arrow_back {
               color: $bg_color;
               font-size: 1.5rem;
+              float: right;
             }
 
             img {

@@ -12,7 +12,6 @@ body {
   /* Start Header */
   .header {
     position: sticky;
-    // background: $bg_color;
     height: 4rem;
     padding: 1.10rem 1.75rem;
 
@@ -584,8 +583,6 @@ body {
             margin-bottom: 0.5rem;
 
             .btn {
-              background: $bg_color;
-              color: $white_color;
               border: 0;
             }
 
@@ -599,12 +596,9 @@ body {
           justify-content: center;
 
           .btn {
-            background: $bg_color;
-            color: $white_color;
             border: 0;
 
             &.btn_2 {
-              background: #00a9ce;
             }
           }
         }
@@ -1227,6 +1221,7 @@ body {
 
             .arrow_back {
               font-size: 1.5rem;
+              float: left;
             }
 
             img {
@@ -1693,6 +1688,7 @@ body {
 
             .arrow_back {
               font-size: 1.5rem;
+              float: left;
             }
 
             img {
@@ -2164,6 +2160,7 @@ body {
 
             .arrow_back {
               font-size: 1.5rem;
+              float: left;
             }
 
             img {
@@ -2663,6 +2660,7 @@ body {
 
             .arrow_back {
               font-size: 1.5rem;
+              float: left;
             }
 
             img {
@@ -3179,6 +3177,7 @@ body {
 
             .arrow_back {
               font-size: 1.5rem;
+              float: left;
             }
 
             img {
@@ -3796,6 +3795,7 @@ body {
 
             .arrow_back {
               font-size: 1.5rem;
+              float: left;
             }
 
             img {

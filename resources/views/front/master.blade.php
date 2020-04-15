@@ -84,8 +84,8 @@ $enable = get_setting('enable_testing');
               <li class="nav-item nav_item_logo d-block d-sm-none d-md-block d-lg-block d-xl-none">
                 <div class="row m-0">
                   <div class="col-12 p-0">
-                    <a class="arrow_back back" href="#0">
-                      <i class="fas fa-angle-left fa-lg"></i>
+                    <a class="arrow_back close_nav">
+                      <i class="fas fa-times fa-lg"></i>
                     </a>
                   </div>
 
