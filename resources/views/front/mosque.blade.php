@@ -6,7 +6,7 @@
     @include('front.search')
   <section class="nearmosque_page">
     <div class="nearmosque_title text-center roll-in-top">
-      <h2>@lang('front.mosque')</h2>
+      <h2 class="text-capitalize">@lang('front.mosque')</h2>
       <div id="map" style="position: relative; overflow: hidden;"></div>
     </div>
   </section>

@@ -1442,6 +1442,7 @@ select {
             .arrow_back {
               color: #00a9ce;
               font-size: 1.5rem;
+              float: right;
             }
 
             img {
@@ -1907,6 +1908,7 @@ select {
             .arrow_back {
               color: #00a9ce;
               font-size: 1.5rem;
+              float: right;
             }
 
             img {
@@ -2386,6 +2388,7 @@ select {
             .arrow_back {
               color: #00a9ce;
               font-size: 1.5rem;
+              float: right;
             }
 
             img {
@@ -2889,6 +2892,7 @@ select {
             .arrow_back {
               color: #00a9ce;
               font-size: 1.5rem;
+              float: right;
             }
 
             img {
@@ -3407,9 +3411,10 @@ select {
 
           .dropdown-menu {
             .dropdown-item {
-              padding: 0.25rem 0;
+              padding: 0.25rem 0.75rem;
               text-align: center;
-              width: 60% !important;
+              width: 75% !important;
+              font-size: 1.5rem;
 
               &.dropdown-item2 {
                 width: 100% !important;
@@ -3423,6 +3428,7 @@ select {
             .arrow_back {
               color: #00a9ce;
               font-size: 1.5rem;
+              float: right;
             }
 
             img {
@@ -4060,9 +4066,10 @@ select {
 
           .dropdown-menu {
             .dropdown-item {
-              padding: 0.25rem 0;
+              padding: 0.25rem 0.75rem;
               text-align: center;
-              width: 60% !important;
+              width: 80% !important;
+              font-size: 1.75rem;
 
               &.dropdown-item2 {
                 width: 100% !important;
@@ -4076,6 +4083,7 @@ select {
             .arrow_back {
               color: #00a9ce;
               font-size: 1.5rem;
+              float: right;
             }
 
             img {

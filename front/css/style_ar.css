@@ -446,8 +446,6 @@ body {
   margin-bottom: 0.5rem;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club .btn {
-  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
-  color: #FFF;
   border: 0;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club p {
@@ -457,12 +455,7 @@ body {
   justify-content: center;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn {
-  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
-  color: #FFF;
   border: 0;
-}
-.main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn.btn_2 {
-  background: #00a9ce;
 }
 .main_container .azan_page {
   margin-top: 3rem;
@@ -839,6 +832,7 @@ body {
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1.5rem;
+    float: left;
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo img {
     width: 30%;
@@ -1144,6 +1138,7 @@ body {
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1.5rem;
+    float: left;
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo img {
     width: 30%;
@@ -1456,6 +1451,7 @@ body {
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1.5rem;
+    float: left;
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo img {
     width: 30%;
@@ -1787,6 +1783,7 @@ body {
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1.5rem;
+    float: left;
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo img {
     width: 30%;
@@ -2132,6 +2129,7 @@ body {
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1.5rem;
+    float: left;
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo img {
     width: 30%;
@@ -2555,6 +2553,7 @@ body {
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1.5rem;
+    float: left;
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo img {
     width: 30%;
