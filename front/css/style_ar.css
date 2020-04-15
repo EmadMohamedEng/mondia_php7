@@ -581,6 +581,7 @@ body {
 }
 .main_container .subscribe_page .subscribe_bg .form-signin .buttons button {
   border-radius: 60px !important;
+  margin-bottom: 1rem;
 }
 .main_container .zakkah_page {
   margin: 2rem auto;
