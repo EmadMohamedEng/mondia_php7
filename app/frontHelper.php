@@ -126,7 +126,7 @@ function get_contents($id)
         });
       }
 
-      $contents = $contents->limit(10)->get();
+      $contents = $contents->limit(6)->get();
 
       return $contents;
 }
