@@ -242,7 +242,7 @@ select:active {
   padding: 0.25rem 0.5rem;
   margin-bottom: 1rem;
 }
-.main_container .content_carousel .item .card {
+.main_container .content_carousel .owl_content_one .item .card {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -250,19 +250,111 @@ select:active {
   -o-border-radius: 10px;
   height: 16rem;
 }
-.main_container .content_carousel .item .card .owl_content_img img {
+.main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
   height: 9.375rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.main_container .content_carousel .item .card .card-body {
+.main_container .content_carousel .owl_content_one .item .card .card-body {
   padding: 1.25rem 0.25rem;
 }
-.main_container .content_carousel .item .card .card-body .card-title {
+.main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
 }
-.main_container .content_carousel .item .card .card-body .card-text i {
+.main_container .content_carousel .owl_content_one .item .card .card-body .card-text i {
+  color: #adadad;
+}
+.main_container .content_carousel .owl_content_two .item .card {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  height: 16rem;
+}
+.main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
+  height: 9.375rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.main_container .content_carousel .owl_content_two .item .card .card-body {
+  padding: 1.25rem 0.25rem;
+}
+.main_container .content_carousel .owl_content_two .item .card .card-body .card-title {
+  text-align: center;
+  font-size: 1.05rem;
+}
+.main_container .content_carousel .owl_content_two .item .card .card-body .card-text i {
+  color: #adadad;
+}
+.main_container .content_carousel .owl_content_three .item .card {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  height: 16rem;
+}
+.main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+  height: 9.375rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.main_container .content_carousel .owl_content_three .item .card .card-body {
+  padding: 1.25rem 0.25rem;
+}
+.main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
+  text-align: center;
+  font-size: 1.05rem;
+}
+.main_container .content_carousel .owl_content_three .item .card .card-body .card-text i {
+  color: #adadad;
+}
+.main_container .content_carousel .owl_content_four .item .card {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  height: 16rem;
+}
+.main_container .content_carousel .owl_content_four .item .card .owl_content_img img {
+  height: 9.375rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.main_container .content_carousel .owl_content_four .item .card .card-body {
+  padding: 1.25rem 0.25rem;
+}
+.main_container .content_carousel .owl_content_four .item .card .card-body .card-title {
+  text-align: center;
+  font-size: 1.05rem;
+}
+.main_container .content_carousel .owl_content_four .item .card .card-body .card-text i {
+  color: #adadad;
+}
+.main_container .content_carousel .owl_content_five .item .card {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  height: 16rem;
+}
+.main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+  height: 9.375rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.main_container .content_carousel .owl_content_five .item .card .card-body {
+  padding: 1.25rem 0.25rem;
+}
+.main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+  text-align: center;
+  font-size: 1.05rem;
+}
+.main_container .content_carousel .owl_content_five .item .card .card-body .card-text i {
   color: #adadad;
 }
 .main_container .list_page {
