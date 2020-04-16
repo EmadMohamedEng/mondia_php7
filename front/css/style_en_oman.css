@@ -203,21 +203,21 @@ select:active {
 .main_container .img_carousel .owl_one .item .btn_subscribe {
   height: 3.5rem;
   background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: 91%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .main_container .img_carousel .owl_one .item .btn_subscribe button {
   border: 0;
   background: #ff9e1b;
   color: #FFF;
-  margin: 0.55rem 0 0 1rem;
+  margin: 0;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
+  position: absolute;
+  top: 93.25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .main_container .img_carousel .owl-dots button {
   outline: 0;
@@ -1111,8 +1111,8 @@ select:active {
   .main_container .img_carousel .owl_one .item .owl_one_img img {
     height: 20rem;
   }
-  .main_container .img_carousel .owl_one .item .btn_subscribe {
-    top: 91%;
+  .main_container .img_carousel .owl_one .item .btn_subscribe button {
+    top: 92.5%;
   }
   .main_container .content_carousel .item .card {
     height: 13rem;
@@ -1302,6 +1302,7 @@ select:active {
   }
   .main_container .search_page {
     width: 95%;
+    margin: 0.5rem auto;
   }
   .main_container .search_page .textbox {
     text-align: center;
@@ -1428,8 +1429,9 @@ select:active {
   .main_container .img_carousel .owl_one .item .owl_one_img img {
     height: 22.5rem;
   }
-  .main_container .img_carousel .owl_one .item .btn_subscribe {
-    top: 92%;
+  .main_container .img_carousel .owl_one .item .btn_subscribe button {
+    top: 93.5%;
+    font-size: 1rem;
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-weight: bold;
@@ -1631,6 +1633,7 @@ select:active {
   }
   .main_container .search_page {
     width: 95%;
+    margin: 0.75rem auto;
   }
   .main_container .search_page .textbox {
     text-align: center;
@@ -1757,8 +1760,9 @@ select:active {
   .main_container .img_carousel .owl_one .item .owl_one_img img {
     height: 23.438rem;
   }
-  .main_container .img_carousel .owl_one .item .btn_subscribe {
-    top: 93%;
+  .main_container .img_carousel .owl_one .item .btn_subscribe button {
+    top: 93.5%;
+    font-size: 1rem;
   }
   .main_container .content_carousel .item .card {
     height: 13rem;
@@ -1974,6 +1978,7 @@ select:active {
   }
   .main_container .search_page {
     width: 95%;
+    margin: 0.75rem auto;
   }
   .main_container .search_page .textbox {
     text-align: center;
@@ -2105,8 +2110,9 @@ select:active {
   .main_container .img_carousel .owl_one .item .owl_one_img img {
     height: 25.688rem;
   }
-  .main_container .img_carousel .owl_one .item .btn_subscribe {
-    top: 93%;
+  .main_container .img_carousel .owl_one .item .btn_subscribe button {
+    top: 94%;
+    font-size: 1rem;
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-weight: bold;
@@ -2330,6 +2336,7 @@ select:active {
   }
   .main_container .search_page {
     width: 95%;
+    margin: 0.75rem auto;
   }
   .main_container .search_page .textbox {
     text-align: center;
@@ -2476,12 +2483,11 @@ select:active {
     height: 48rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
-    top: 95%;
-    height: 4.5rem;
+    height: 5rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
-    margin: 0.75rem 0 0 1rem;
-    font-size: 1.5rem;
+    top: 95%;
+    font-size: 1.75rem;
   }
   .main_container .img_carousel .owl-theme .owl-dots .owl-dot span {
     width: 18px;
@@ -2881,7 +2887,7 @@ select:active {
   }
   .main_container .search_page {
     width: 95%;
-    margin: 2.5rem auto;
+    margin: 1.5rem auto;
   }
   .main_container .search_page .btn_search {
     font-size: 1.5rem;
@@ -3042,12 +3048,11 @@ select:active {
     height: 25.938rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
-    top: 90.5%;
-    height: 5rem;
+    height: 6.5rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
-    margin: 0.5rem 0 0 1rem;
-    font-size: 2.15rem;
+    top: 91%;
+    font-size: 1.2rem;
   }
   .main_container .img_carousel .owl-theme .owl-dots .owl-dot span {
     width: 18px;
@@ -3358,7 +3363,7 @@ select:active {
   }
   .main_container .search_page {
     width: 95%;
-    margin: 3.5rem auto;
+    margin: 3rem auto;
   }
   .main_container .search_page .btn_search {
     font-size: 2rem;

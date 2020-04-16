@@ -37,7 +37,7 @@
             </a>
 
             <div class="btn_subscribe w-100">
-                <button onclick="" class="btn text-capitalize">
+                <button onclick="" class="btn btn-sm text-capitalize">
                   <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
                 </button>
             </div>

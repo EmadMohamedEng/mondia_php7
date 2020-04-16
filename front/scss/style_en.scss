@@ -118,7 +118,7 @@ select {
 
   .nav_nav {
     background-color: $white_color;
-    width: 75%;
+    width: 85%;
     margin-top: 1.5rem;
     margin-left: 1rem;
     padding: 0.5rem 0;
@@ -218,22 +218,26 @@ select {
         .btn_subscribe {
           height: 3.5rem;
           background-color: rgba(0, 0, 0, .7);
-          position: absolute;
-          top: 91%;
-          left: 50%;
-          transform: translate(-50%, -50%);
 
           button {
             border: 0;
             background: $bg_color;
             color: $white_color;
-            margin: 0.55rem 0 0 1rem;
+            margin: 0;
             border-radius: 6px;
             -webkit-border-radius: 6px;
             -moz-border-radius: 6px;
             -ms-border-radius: 6px;
             -o-border-radius: 6px;
-          }
+            position: absolute;
+            top: 93.25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+}
         }
       }
     }
@@ -1617,7 +1621,9 @@ select {
           }
 
           .btn_subscribe {
-            top: 91%;
+            button {
+              top: 92.5%;
+            }
           }
         }
       }
@@ -1928,6 +1934,7 @@ select {
 
     .search_page {
       width: 95%;
+      margin: 0.5rem auto;
 
       .textbox {
         text-align: center;
@@ -2083,7 +2090,10 @@ select {
           }
 
           .btn_subscribe {
-            top: 92%;
+            button {
+              top: 93.5%;
+              font-size: 1rem;
+            }
           }
         }
       }
@@ -2408,6 +2418,7 @@ select {
 
     .search_page {
       width: 95%;
+      margin: 0.75rem auto;
 
       .textbox {
         text-align: center;
@@ -2563,7 +2574,10 @@ select {
           }
 
           .btn_subscribe {
-            top: 93%;
+            button {
+              top: 93.5%;
+              font-size: 1rem;
+            }
           }
         }
       }
@@ -2907,6 +2921,7 @@ select {
 
     .search_page {
       width: 95%;
+      margin: 0.75rem auto;
 
       .textbox {
         text-align: center;
@@ -3067,7 +3082,10 @@ select {
           }
 
           .btn_subscribe {
-            top: 93%;
+            button {
+              top: 94%;
+              font-size: 1rem;
+            }
           }
         }
       }
@@ -3426,6 +3444,7 @@ select {
 
     .search_page {
       width: 95%;
+      margin: 0.75rem auto;
 
       .textbox {
         text-align: center;
@@ -3603,12 +3622,11 @@ select {
           }
 
           .btn_subscribe {
-            top: 95%;
-            height: 4.5rem;
+            height: 5rem;
 
             button {
-              margin: 0.75rem 0 0 1rem;
-              font-size: 1.5rem;
+              top: 95%;
+              font-size: 1.75rem;
             }
           }
         }
@@ -4067,7 +4085,7 @@ select {
 
     .search_page {
       width: 95%;
-      margin: 2.5rem auto;
+      margin: 1.5rem auto;
 
       .btn_search {
         font-size: 1.5rem
@@ -4258,12 +4276,11 @@ select {
           }
 
           .btn_subscribe {
-            top: 90.5%;
-            height: 5rem;
+            height: 6.5rem;
 
             button {
-              margin: 0.5rem 0 0 1rem;
-              font-size: 2.15rem;
+              top: 91%;
+              font-size: 1.2rem;
             }
           }
         }
@@ -4742,7 +4759,7 @@ select {
 
     .search_page {
       width: 95%;
-      margin: 3.5rem auto;
+      margin: 3rem auto;
 
       .btn_search {
         font-size: 2rem
@@ -5030,4 +5047,5 @@ select {
     transform: scale(1);
   }
 }
+
 /* End Animation */
