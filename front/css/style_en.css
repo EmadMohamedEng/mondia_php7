@@ -151,8 +151,9 @@ select:active {
   color: #000;
   cursor: pointer;
 }
-.main_container .nav_nav .navbar_ul .nav-item .nav-link i {
-  color: #00a9ce;
+.main_container .nav_nav .navbar_ul .nav-item .nav-link svg {
+  fill: #00a9ce;
+  width: 15%;
 }
 .main_container .nav_nav .navbar_ul .nav-item .nav-link.nav-link2 {
   padding: 0 0 0.75rem 0;
@@ -172,8 +173,8 @@ select:active {
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
   padding: 0.25rem 1rem;
-  text-align: justify;
-  width: 76%;
+  text-align: center;
+  width: 100%;
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
   padding: 0.25rem 0;
@@ -1199,7 +1200,7 @@ select:active {
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
     padding: 0.25rem 0;
     text-align: center;
-    width: 60% !important;
+    width: 100% !important;
   }
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
@@ -1510,7 +1511,7 @@ select:active {
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
     padding: 0.25rem 0;
     text-align: center;
-    width: 60% !important;
+    width: 100% !important;
   }
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
@@ -1832,7 +1833,7 @@ select:active {
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
     padding: 0.25rem 0;
     text-align: center;
-    width: 60% !important;
+    width: 100% !important;
   }
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
@@ -2174,7 +2175,7 @@ select:active {
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
     padding: 0.25rem 0;
     text-align: center;
-    width: 60% !important;
+    width: 100% !important;
   }
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
@@ -2540,7 +2541,7 @@ select:active {
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
     padding: 0.25rem 0.75rem;
     text-align: center;
-    width: 75% !important;
+    width: 100% !important;
     font-size: 1.5rem;
   }
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
@@ -2997,7 +2998,7 @@ select:active {
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
     padding: 0.25rem 0.75rem;
     text-align: center;
-    width: 80% !important;
+    width: 100% !important;
     font-size: 1.75rem;
   }
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
