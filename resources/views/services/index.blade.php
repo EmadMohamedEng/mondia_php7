@@ -46,7 +46,7 @@ Service
                                 </thead>
                                 <tbody>
                                     @foreach($services as $value)
-                                    <tr>
+                                    <tr class="row-table" id="{{$value->id}}">
                                         <td><input class="select_all_template" type="checkbox" name="selected_rows[]" value="{{$value->id}}" class="roles" onclick="collect_selected(this)"></td>
                                         <td>{{$value->id}}</td>
                                         <td><a href="{{url('providers/'.$value->provider->id.'/edit')}}" target='_blank'> {{$value->provider->title}}</a></td>
@@ -99,5 +99,35 @@ Service
 <script>
     $('#services').addClass('active');
     $('#services-index').addClass('active');
+</script>
+
+<script src="{{asset('js/table-dragger.min.js')}}"></script>
+
+<script>
+  var list = []
+  var el = document.getElementById('example');
+  var dragger = tableDragger(el, {
+    mode: 'row',
+    dragHandler: '.row-table',
+    onlyBody: true,
+  });
+  dragger.on('drop',function(from, to){
+    $('.row-table').each(function(index,e){
+      list.push($(this).attr('id'))
+    });
+
+    $.ajax({
+      type:'post',
+      url:'{{url("admin/service/order/")}}',
+      data: {
+        list: list,
+      },
+      success: function(data) {
+        console.log(list);
+        list = []
+      }
+		});
+  });
+
 </script>
 @stop

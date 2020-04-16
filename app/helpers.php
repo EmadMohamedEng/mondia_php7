@@ -86,6 +86,8 @@ function get_static_routes()
         Route::post('admin/elfinder', 'ElfinderController@getIndex');
         Route::get('admin/seed_manager', 'DashboardController@seed_manager');
         Route::post('admin/seed_tables', 'DashboardController@seed_tables');
+        Route::post('admin/provider/order', 'ProvidersController@order_provider');
+        Route::post('admin/service/order', 'ServicesController@order_provider');
         Route::get('JIC/index', 'FrontController@JICindex');
     });
 

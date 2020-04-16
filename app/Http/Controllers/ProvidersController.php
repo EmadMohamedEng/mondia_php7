@@ -25,7 +25,7 @@ class ProvidersController extends Controller {
      */
     public function index() {
 
-        $providers = Provider::all();
+        $providers = Provider::orderBy('index','asc')->get();
         $languages = Language::all();
         return view('providers.index', compact('providers','languages'));
     }
@@ -164,6 +164,18 @@ class ProvidersController extends Controller {
 
     public function audios($id) {
         return view('audios.singleprovider');
+    }
+
+    public function order_provider(Request $request)
+    {
+      $providers = Provider::all();
+
+      foreach ($providers as $key => $value) {
+        $value->index  = (array_search($value->id,$request->list)) + 1;
+        $value->save();
+      }
+
+      return 'ok';
     }
 
 }

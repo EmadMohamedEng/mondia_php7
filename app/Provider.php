@@ -15,7 +15,7 @@ class Provider extends Model {
     ];
 
     public function services() {
-        return $this->hasMany('App\Service');
+        return $this->hasMany('App\Service')->orderBy('services.index','asc');
     }
 
     public function audio() {

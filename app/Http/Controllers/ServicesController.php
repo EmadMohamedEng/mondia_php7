@@ -27,7 +27,7 @@ class ServicesController extends Controller {
      */
     public function index() {
 
-        $services = Service::all();
+        $services = Service::orderBy('index','asc')->get();
         $provider = null;
         $languages = Language::all();
         return view('services.index', compact('services','provider','languages'));
@@ -175,6 +175,18 @@ class ServicesController extends Controller {
         $videos = \App\Video::where('service_id', $id)->get();
         $service = $id;
         return view('videos.index', compact('videos','service'));
+    }
+
+    public function order_provider(Request $request)
+    {
+      $services = Service::all();
+
+      foreach ($services as $key => $value) {
+        $value->index  = (array_search($value->id,$request->list)) + 1;
+        $value->save();
+      }
+
+      return 'ok';
     }
 
 }

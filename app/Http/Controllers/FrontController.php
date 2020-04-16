@@ -37,13 +37,20 @@ class FrontController extends Controller
           $latest = $latest->latest('contents.created_at');
         }
 
-        $latest = $latest->whereIn('contents.type',[1,3])->groupBy('service_id')->limit(20)->get();// video or images
+        $latest = $latest->where('service_id',26);
+
+        $ramdan = $latest ;
+
+        if(!$ramdan->count()){
+          $latest = $latest->orWhereNotNull('service_id')->groupBy('service_id');
+        }
+
+        $latest = $latest->whereIn('contents.type',[1,3])->limit(3)->get(); // video or images
         return view('front.home',compact('latest'));
     }
 
     public function services(Request $request)
     {
-
         $services = Service::select('services.*','services.id as service_id');
         $provider = null;
         if(request()->has('OpID') && request()->get('OpID') != ''){
@@ -68,7 +75,7 @@ class FrontController extends Controller
             $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
           });
         }
-        $services = $services->get();
+        $services = $services->orderBy('services.index','asc')->get();
         return view('front.service', compact('services','provider'));
     }
 
@@ -100,7 +107,7 @@ class FrontController extends Controller
         });
       }
 
-      $contents = $contents->limit(get_pageLength())->get();
+      $contents = $contents->orderBy('contents.id','asc')->limit(get_pageLength())->get();
 
       if(!request()->has('OpID') && !get_setting('enable_testing')){
         return view('errors.404');
@@ -128,7 +135,7 @@ class FrontController extends Controller
         $contents = $contents->where('contents.title', 'like', '%' . $request->search . '%');
       }
 
-      $contents = $contents->offset($request->start)->limit(get_pageLength())->get();
+      $contents = $contents->orderBy('contents.id','asc')->offset($request->start)->limit(get_pageLength())->get();
 
       $view = view('front.load_content', compact('contents'))->render();
       return Response(array('html' => $view));

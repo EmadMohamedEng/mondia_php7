@@ -43,8 +43,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($providers as $value)
-                                    <tr>
+                                    @foreach($providers as $key=>$value)
+                                    <tr class="row-table" id="{{$value->id}}">
                                         <td><input class="select_all_template" type="checkbox" name="selected_rows[]" value="{{$value->id}}" class="roles" onclick="collect_selected(this)"></td>
                                         <td>{{$value->id}}</td>
                                         <td>
@@ -87,8 +87,38 @@
 @section('script')
 <script>
 
-        $('#providers').addClass('active');
-        $('#providers-index').addClass('active');
+  $('#providers').addClass('active');
+  $('#providers-index').addClass('active');
+
+</script>
+
+<script src="{{asset('js/table-dragger.min.js')}}"></script>
+
+<script>
+  var list = []
+  var el = document.getElementById('example');
+  var dragger = tableDragger(el, {
+    mode: 'row',
+    dragHandler: '.row-table',
+    onlyBody: true,
+  });
+  dragger.on('drop',function(from, to){
+    $('.row-table').each(function(index,e){
+      list.push($(this).attr('id'))
+    });
+
+    $.ajax({
+      type:'post',
+      url:'{{url("admin/provider/order/")}}',
+      data: {
+        list: list,
+      },
+      success: function(data) {
+        console.log(list);
+        list = []
+      }
+		});
+  });
 
 </script>
 @stop
