@@ -2,16 +2,13 @@
 @section('page_title') @lang('front.muslim_guide') @endsection
 @section('content')
 @php
-$base = url('/');
-$url = request('crl_url');
-$route = substr_replace(str_replace($base , '' ,$url) ,"", -7);
-if($route == '/zakah'){
+if(strpos(url()->full(),'zakah') !== false){
   $src = url('front\images\Cutting\Home_Page\006.png');
-}else if($route == '/merath'){
+}else if(strpos(url()->full(),'merath') !== false){
   $src = url('front\images\Cutting\Home_Page\001.png');
-}else if($route == '/salah_time'){
+}else if(strpos(url()->full(),'salah_time')!==false){
   $src = url('front\images\Cutting\Home_Page\003.png');
-}else if($route == '/mosque'){
+}else if(strpos(url()->full(),'mosque')!==false){
   $src = url('front\images\Cutting\Home_Page\007.png');
 }else{
   $src = url('front\images\Cutting\Home_Page\004.png');
