@@ -126,8 +126,8 @@ $enable = get_setting('enable_testing');
                   @if($provider->image == null)
                         <i class="icon_before fas fa-mosque fa-lg"></i>
                   @else
-                        <img src="{{$provider->image}}" alt="" style="width: 10%">
-                    @endif
+                      <span>{!! $provider->image !!}</span>
+                  @endif
 
                     {{$provider->getTranslation('title',getCode())}}</a>
                 <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
