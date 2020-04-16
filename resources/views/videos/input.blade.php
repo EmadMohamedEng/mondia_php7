@@ -68,6 +68,9 @@
         <span>Only extensions supported png, jpg, and jpeg</span>
     </div>
 </div>
+
+
+
 <div class="form-group video_display" style="display: none">
     <label class="col-sm-3 col-md-2 control-label">Source <span class="text-danger">*</span></label>
     <div class="col-sm-9 col-md-8 controls">
