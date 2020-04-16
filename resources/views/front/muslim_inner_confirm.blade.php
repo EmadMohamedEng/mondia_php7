@@ -2,7 +2,20 @@
 @section('page_title') @lang('front.muslim_guide') @endsection
 @section('content')
 @php
-$src = url('front\images\Cutting\Home_Page\004.png');
+$base = url('/');
+$url = request('crl_url');
+$route = substr_replace(str_replace($base , '' ,$url) ,"", -7);
+if($route == '/zakah'){
+  $src = url('front\images\Cutting\Home_Page\006.png');
+}else if($route == '/merath'){
+  $src = url('front\images\Cutting\Home_Page\001.png');
+}else if($route == '/salah_time'){
+  $src = url('front\images\Cutting\Home_Page\003.png');
+}else if($route == '/mosque'){
+  $src = url('front\images\Cutting\Home_Page\007.png');
+}else{
+  $src = url('front\images\Cutting\Home_Page\004.png');
+}
 @endphp
 
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
