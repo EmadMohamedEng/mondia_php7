@@ -133,7 +133,7 @@
                 @else
                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/01.png')}}" alt="Card image cap">
                 @endif
-                
+
                 <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
