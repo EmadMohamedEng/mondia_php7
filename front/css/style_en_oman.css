@@ -1302,6 +1302,7 @@ select:active {
   }
   .main_container .search_page {
     width: 95%;
+    margin: 0.5rem auto;
   }
   .main_container .search_page .textbox {
     text-align: center;
@@ -1631,6 +1632,7 @@ select:active {
   }
   .main_container .search_page {
     width: 95%;
+    margin: 0.75rem auto;
   }
   .main_container .search_page .textbox {
     text-align: center;
@@ -1974,6 +1976,7 @@ select:active {
   }
   .main_container .search_page {
     width: 95%;
+    margin: 0.75rem auto;
   }
   .main_container .search_page .textbox {
     text-align: center;
@@ -2330,6 +2333,7 @@ select:active {
   }
   .main_container .search_page {
     width: 95%;
+    margin: 0.75rem auto;
   }
   .main_container .search_page .textbox {
     text-align: center;
@@ -2881,7 +2885,7 @@ select:active {
   }
   .main_container .search_page {
     width: 95%;
-    margin: 2.5rem auto;
+    margin: 1.5rem auto;
   }
   .main_container .search_page .btn_search {
     font-size: 1.5rem;
@@ -3358,7 +3362,7 @@ select:active {
   }
   .main_container .search_page {
     width: 95%;
-    margin: 3.5rem auto;
+    margin: 3rem auto;
   }
   .main_container .search_page .btn_search {
     font-size: 2rem;
