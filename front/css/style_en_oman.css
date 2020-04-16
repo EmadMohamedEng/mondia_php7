@@ -1105,10 +1105,10 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 12rem;
+    height: 16rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
-    top: 86%;
+    top: 89%;
   }
   .main_container .content_carousel .item .card {
     height: 13rem;
@@ -1422,10 +1422,10 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 12rem;
+    height: 16rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
-    top: 86%;
+    top: 89%;
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-weight: bold;
@@ -1751,10 +1751,10 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 12rem;
+    height: 16rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
-    top: 86%;
+    top: 89%;
   }
   .main_container .content_carousel .item .card {
     height: 13rem;
@@ -2099,10 +2099,10 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 12rem;
+    height: 16rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
-    top: 86%;
+    top: 89%;
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-weight: bold;
@@ -2469,10 +2469,10 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 19.5rem;
+    height: 31rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
-    top: 89%;
+    top: 92%;
     height: 4.5rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
@@ -3593,35 +3593,6 @@ select:active {
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
-  }
-}
-.rotate-in-center {
-  -webkit-animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
-  animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
-}
-
-@-webkit-keyframes rotate-in-center {
-  0% {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1;
-  }
-}
-@keyframes rotate-in-center {
-  0% {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1;
   }
 }
 /* End Animation */
