@@ -53,7 +53,7 @@ return [
     'service' => 'Services',
     'content' => 'Contents',
     'Daily renewal subscription' => 'Daily renewal subscription',
-    'omantel ElKheer' => 'Omantel Alkhair',
+    'omantel ElKheer' => 'Omantel ElKheer',
     'Please confirm subscription to' => 'Please confirm subscription to',
     'For' => 'For',
     'subscribe' => 'subscribe',
