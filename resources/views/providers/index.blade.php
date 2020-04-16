@@ -66,7 +66,9 @@
                                                 <a class="btn btn-sm show-tooltip" href="{{url("providers/$value->id/services")}}" title="Services"><i class="fa fa-table"></i></a>
                                                 @endif
                                                 <a class="btn btn-sm show-tooltip" href="{{url("providers/$value->id/edit")}}" title="Edit"><i class="fa fa-edit"></i></a>
+                                                @if(get_setting('provider_delete_flag'))
                                                 <a class="btn btn-sm show-tooltip btn-danger" onclick="return ConfirmDelete();" href="{{url("providers/$value->id/delete")}}" title="Delete"><i class="fa fa-trash"></i></a>
+                                                @endif
                                             </div>
                                         </td>
                                     </tr>
