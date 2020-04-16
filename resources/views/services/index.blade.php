@@ -77,7 +77,9 @@ Service
                                                 <a class="btn btn-sm show-tooltip" href="{{url("services/$value->id/videos")}}" title="Contents"><i class="fa fa-table"></i></a>
                                                 @endif
                                                 <a class="btn btn-sm show-tooltip" href="{{url("services/$value->id/edit?provider=$provider")}}" title="Edit"><i class="fa fa-edit"></i></a>
+                                                @if(get_setting('service_delete_flag'))
                                                 <a class="btn btn-sm show-tooltip btn-danger" onclick="return ConfirmDelete();" href="{{url("services/$value->id/delete")}}" title="Delete"><i class="fa fa-trash"></i></a>
+                                                @endif
                                             </div>
                                         </td>
                                     </tr>
