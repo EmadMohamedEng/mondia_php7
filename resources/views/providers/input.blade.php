@@ -23,13 +23,13 @@
       </div>
   </div>
 </div>
-{{-- <!-- <div class="form-group">
+<div class="form-group">
     <label class="col-sm-3 col-md-2 control-label">Image <span class="text-danger">*</span></label>
     <div class="col-sm-9 col-md-8 controls">
         <div class="fileupload fileupload-new" data-provides="fileupload">
             <div class="fileupload-new img-thumbnail" style="width: 200px; height: 150px;">
                 @if($provider)
-                <img src="{{$provider->image}}" alt="" />
+                <img src="{{url($provider->image)}}" alt="" />
                 @else
                 <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" />
                 @endif
@@ -46,7 +46,7 @@
         <span class="label label-important">NOTE!</span>
         <span>Only extensions supported png, jpg, and jpeg</span>
     </div>
-</div> --> --}}
+</div>
 
 <div class="form-group">
     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">

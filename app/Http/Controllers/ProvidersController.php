@@ -65,7 +65,9 @@ class ProvidersController extends Controller {
             $uniqID = uniqid();
             $input['image'] = $destinationFolder . $uniqID . "." . $file->getClientOriginalExtension();
             $file->move($destinationFolder, $uniqID . "." . $file->getClientOriginalExtension());
+            $provider->image = $input['image'];
         }
+
         foreach ($request->title as $key => $value)
         {
             $provider->setTranslation('title', $key, $value);
