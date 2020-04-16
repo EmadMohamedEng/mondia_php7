@@ -36,7 +36,8 @@
 
       ;
     }
-  </style>
+
+  </style>  
 
   <script>
     window.base_url = '{{url("/")}}';
@@ -46,7 +47,13 @@
 <?php
 $enable = get_setting('enable_testing');
 ?>
-
+@if(request()->get('OpID') == omantel)
+<style>
+  .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn.btn_2{
+    background:#ff9e1b;
+  }
+</style>
+@endif
 <body>
   <main class="main_container">
     <header class="header w-100">
