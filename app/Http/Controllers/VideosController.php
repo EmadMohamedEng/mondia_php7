@@ -151,9 +151,18 @@ class VideosController extends Controller
                 return back();
             }
             $destinationFolder = $this->destinationFolder;
-            $uniqID = uniqid();
-            $input['video'] = $destinationFolder . $uniqID . "." . $file->getClientOriginalExtension();
-            $file->move($destinationFolder, $uniqID . "." . $file->getClientOriginalExtension());
+            if(get_setting('content_exact_name'))
+            {
+              $input['video'] = $destinationFolder . $file->getClientOriginalName();
+              $file->move($destinationFolder, $file->getClientOriginalName());
+            }
+            else
+            {
+              $uniqID = uniqid();
+              $input['video'] = $destinationFolder . $uniqID . "." . $file->getClientOriginalExtension();
+              $file->move($destinationFolder, $uniqID . "." . $file->getClientOriginalExtension());
+            }
+
             if($service->type == 1)
             {
                 if($request->hasFile('image_preview')){
@@ -262,9 +271,17 @@ class VideosController extends Controller
                     \Session::flash('failed', 'File must be ' . implode(' , ', $vidExtensions) . ' only !! According To Service Type , try again with that extensions please..');
                     return back();
                 }
-                $uniqueID = uniqid();
-                $file->move($destinationFolder, $uniqueID . "." . $file->getClientOriginalExtension());
-                $newVideo['video'] = $destinationFolder . $uniqueID . "." . $file->getClientOriginalExtension();
+                if(get_setting('content_exact_name'))
+                {
+                  $file->move($destinationFolder, $file->getClientOriginalName());
+                  $newVideo['video'] = $destinationFolder . $file->getClientOriginalName();
+                }
+                else
+                {
+                  $uniqueID = uniqid();
+                  $file->move($destinationFolder, $uniqueID . "." . $file->getClientOriginalExtension());
+                  $newVideo['video'] = $destinationFolder . $uniqueID . "." . $file->getClientOriginalExtension();
+                }
                 if (file_exists($video['video'])) {
                     unlink($video['video']);
                 }
