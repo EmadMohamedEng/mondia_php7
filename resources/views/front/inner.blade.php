@@ -20,9 +20,22 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
       <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
         <div class="cover">
           @if(session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
-          <video style="object-fit: cover;width:100%" poster="{{$src}}" controls>
-            <source src="{{url($content->video)}}" />
-          </video>
+            @if($content->type == 1)
+            <video style="object-fit: cover;width:100%" poster="{{$src}}" controls>
+              <source src="{{url($content->video)}}" />
+            </video>
+            @endif
+            @if($content->type == 2)
+            <audio src="{{url($content->video)}}" controls></audio>
+            @endif
+            @if($content->type == 3)
+            <img src="{{url($content->video)}}" alt="Video Cover">
+            @endif
+            @if($content->type == 4)
+            <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
+              <h4>{{$content->getTranslation('content_text',getCode())}}</h4>
+            </div>
+            @endif
           @else
           <img src="{{$src}}" alt="Video Cover">
           @if(request()->has('OpID') && request()->get('OpID') == omantel)

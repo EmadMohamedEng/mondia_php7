@@ -512,7 +512,12 @@ class FrontController extends Controller
             $longitude = "31";
         }
 
-        $dtz = new \DateTimeZone($location['time_zone']??'Africa/cairo');
+        try {
+          $dtz = new \DateTimeZone($location['time_zone']);
+        } catch (\Throwable $e) {
+          $dtz = new \DateTimeZone('Africa/cairo');
+        }
+        
         $time_in_sofia = new \DateTime('now', $dtz);
         $offset = $dtz->getOffset( $time_in_sofia )/(1*60*60);
 
