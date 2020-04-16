@@ -37,12 +37,14 @@ class FrontController extends Controller
           $latest = $latest->latest('contents.created_at');
         }
 
-        $latest = $latest->where('service_id',26);
+        $latest = $latest->join('services','services.id','=','contents.service_id')
+                  ->join('providers','providers.id','=','services.provider_id')
+                  ->where('providers.id',26);
 
         $ramdan = $latest ;
 
         if(!$ramdan->count()){
-          $latest = $latest->orWhereNotNull('service_id')->groupBy('service_id');
+          $latest = $latest->orWhereNotNull('providers.id')->groupBy('service_id');
         }
 
         $latest = $latest->whereIn('contents.type',[1,3])->limit(3)->get(); // video or images
