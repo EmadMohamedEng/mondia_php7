@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -14,21 +15,28 @@
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
   @if(request()->has('OpID') && request()->get('OpID') == omantel)
-    <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
-    @else
-    <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
-    @endif
+  <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
+  @else
+  <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
+  @endif
 
-    @if(app()->getLocale() == 'ar')
-    <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
-    @endif
+  @if(app()->getLocale() == 'ar')
+  <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
+  @endif
 
-    <style>
-      .active_menu{
-        color:#000;
-        background:{{request()->get('OpID') == omantel ? '#ff9e1b' : 'linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%)'}};
+  <style>
+    .active_menu {
+      color: #000;
+
+      background: {
+          {
+          request()->get('OpID')==omantel ? '#ff9e1b': 'linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%)'
+        }
       }
-    </style>
+
+      ;
+    }
+  </style>
 
   <script>
     window.base_url = '{{url("/")}}';
@@ -50,12 +58,12 @@ $enable = get_setting('enable_testing');
             </a>
 
             <a href="{{route('front.index')}}" class="link_href">
-            <!-- {{request()->get('OpID') == omantel ? '<img src="front/images/Du_header.png" alt="Logo">':'<img src="front/images/Du_header.png" alt="Logo">'}} -->
-            @if(request()->get('OpID') == omantel)
-            <img class="bounce-top" src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
-            @else
-            <img class="bounce-top" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
-            @endif
+              <!-- {{request()->get('OpID') == omantel ? '<img src="front/images/Du_header.png" alt="Logo">':'<img src="front/images/Du_header.png" alt="Logo">'}} -->
+              @if(request()->get('OpID') == omantel)
+              <img class="bounce-top" src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
+              @else
+              <img class="bounce-top" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
+              @endif
             </a>
           </div>
         </div>
@@ -116,13 +124,23 @@ $enable = get_setting('enable_testing');
               <div class="border-bottom"></div>
 
               <li id="indexed" class="nav-item">
-                <a class="nav-link text-capitalize link_href" style="background:#fff !important;color:#000 !important" href="{{route('front.index')}}"><i class="icon_before fas fa-home fa-lg"></i> @lang('front.home')
+                <a class="nav-link text-capitalize link_href" style="background:#fff !important;color:#000 !important" href="{{route('front.index')}}">
+                  <!-- <img src="front/images/menu_icons/Home.svg" alt=""> -->
+                  <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 27 22" style="enable-background:new 0 0 27 22;" xml:space="preserve">
+                    <path class="st0" d="M21.8,9.6L21.8,9.6l-7.3-7.3c-0.3-0.3-0.8-0.5-1.2-0.5c-0.5,0-0.9,0.2-1.2,0.5L4.9,9.6l0,0  c-0.7,0.7-0.7,1.7,0,2.3c0.3,0.3,0.7,0.5,1.1,0.5c0,0,0,0,0.1,0h0.3v5.4c0,1.1,0.9,1.9,1.9,1.9h2.9c0.3,0,0.5-0.2,0.5-0.5V15  c0-0.5,0.4-0.9,0.9-0.9h1.7c0.5,0,0.9,0.4,0.9,0.9v4.2c0,0.3,0.2,0.5,0.5,0.5h2.9c1.1,0,1.9-0.9,1.9-1.9v-5.4h0.3  c0.5,0,0.9-0.2,1.2-0.5C22.5,11.3,22.5,10.3,21.8,9.6z M21,11.2c-0.1,0.1-0.3,0.2-0.4,0.2h-0.8c-0.3,0-0.5,0.2-0.5,0.5v5.9  c0,0.5-0.4,0.9-0.9,0.9h-2.3V15c0-1.1-0.9-1.9-1.9-1.9h-1.7c-1.1,0-1.9,0.9-1.9,1.9v3.6H8.4c-0.5,0-0.9-0.4-0.9-0.9v-5.9  c0-0.3-0.2-0.5-0.5-0.5H6.2l0,0c-0.2,0-0.3-0.1-0.4-0.2c-0.2-0.2-0.2-0.6,0-0.9l0,0l0,0l7.3-7.3c0.1-0.1,0.3-0.2,0.4-0.2  c0.2,0,0.3,0.1,0.4,0.2l7.3,7.3l0,0C21.3,10.7,21.3,11,21,11.2z" />
+                  </svg>
+                  @lang('front.home')
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
               @foreach(provider_menu() as $provider)
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon_before fas fa-mosque fa-lg"></i> {{$provider->getTranslation('title',getCode())}}</a>
+                <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <!-- <img src="front/images/menu_icons/Home.svg" alt=""> -->
+                  <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 27 22" style="enable-background:new 0 0 27 22;" xml:space="preserve">
+                    <path class="st0" d="M16.1,1.9c0.3,0.1,0.5,0.2,0.8,0.3c0.5,0.3,0.7,0.8,0.7,1.2c0,1.9,0,3.7,0,5.5c0,1.1-0.5,2-1.3,2.7  c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.3,0,0.5,0,0.8c0.1,0,0.2,0,0.2,0c0.6,0,1.2,0,1.8,0c1.4,0.2,2.6,1.4,2.8,2.8c0,0.2,0,0.4,0,0.6  c0,1,0,2.1,0,3.1c0,0.4-0.2,0.7-0.7,0.7c-4.6,0-9.3,0-13.9,0c-0.5,0-0.7-0.2-0.7-0.7c0-1,0-2.1,0-3.1c0-1.7,1.1-3,2.7-3.4  c0.2,0,0.5-0.1,0.7-0.1c0.5,0,1,0,1.5,0c0-0.3,0-0.6,0-0.9c0,0,0-0.1-0.1-0.1c-0.8-0.8-1.3-1.9-1.3-3.1c0-1.7,0-3.4,0-5.1  c0-0.8,0.5-1.5,1.3-1.7l0,0C12.6,1.9,14.4,1.9,16.1,1.9z M14,12.9c0,0.1,0,0.1,0,0.2c0,1.1,0,2.3,0,3.4c0,0.2,0,0.4-0.2,0.5  c-0.2,0.2-0.4,0.2-0.6,0.1c-0.2-0.1-0.3-0.3-0.3-0.5c0-1.1,0-2.3,0-3.5c0-0.1,0-0.1,0-0.2c-0.4-0.1-0.8-0.2-1-0.3c0,0.3,0,0.5,0,0.8  c0,0.4-0.2,0.6-0.6,0.6c-0.7,0-1.3,0-2,0c-1.3,0-2.3,1-2.3,2.3c0,0.8,0,1.7,0,2.5c0,0.1,0,0.1,0,0.2c0.6,0,1.1,0,1.8,0  c0-0.8,0-1.6,0-2.3c0-0.2,0.1-0.3,0.2-0.5C9.1,16,9.4,16,9.6,16c0.2,0.1,0.3,0.3,0.4,0.5c0,0.7,0,1.4,0,2.1c0,0.1,0,0.2,0,0.3  c2.4,0,4.9,0,7.4,0c0-0.1,0-0.1,0-0.2c0-0.7,0-1.4,0-2.1c0-0.4,0.2-0.6,0.6-0.6c0.3,0,0.6,0.3,0.6,0.6c0,0.8,0,1.4,0,2.2  c0,0.1,0,0.1,0,0.2c0.6,0,1.1,0,1.8,0c0-0.1,0-0.1,0-0.2c0-0.8,0-1.7,0-2.5c0-1.3-1-2.3-2.3-2.3c-0.7,0-1.3,0-2.1,0  c-0.4,0-0.6-0.2-0.6-0.6c0-0.3,0-0.5,0-0.8C14.7,12.7,14.4,12.8,14,12.9z M10.5,6.6c0,0.8,0,1.6,0,2.3c0,0.8,0.3,1.5,0.8,2.1  c0,0,0.1,0.1,0.2,0.1c0-0.3,0-0.6,0-0.8c0-0.8,0.6-1.2,1.2-1.2c0.3,0,0.5,0,0.8,0c1.4-0.1,2,0.5,1.9,1.9c0,0.1,0,0.1,0,0.2  c0,0,0,0,0.1,0c0,0,0,0,0.1-0.1c0.6-0.6,0.9-1.2,0.9-2.1c0-0.8,0-1.5,0-2.3V6.6C14.4,6.6,12.5,6.6,10.5,6.6z M16.5,5.5  C16.5,5.4,16.5,5.4,16.5,5.5c0-0.7,0-1.3,0-1.9c0-0.4-0.2-0.6-0.6-0.6c-1.6,0-3.2,0-4.8,0c-0.4,0-0.6,0.2-0.6,0.6c0,0.6,0,1.1,0,1.8  v0.1C12.5,5.5,14.4,5.5,16.5,5.5z M14.4,11L14.4,11c0-0.2,0-0.5,0-0.7c0-0.2-0.1-0.2-0.2-0.2c-0.5,0-0.8,0-1.3,0  c-0.2,0-0.2,0.1-0.2,0.2c0,0.5,0,0.8,0,1.3c0,0.1,0.1,0.1,0.1,0.2c0.5,0.2,1,0.2,1.5,0l0.1-0.1C14.4,11.3,14.4,11.2,14.4,11z" />
+                  </svg>
+                  {{$provider->getTranslation('title',getCode())}}</a>
                 <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
                   @foreach($provider->services as $value)
                   <a class="dropdown-item text-capitalize link_href" href="{{route('front.list',['service_id' => $value->id])}}">{{$value->getTranslation('title',getCode())}}</a>
@@ -131,9 +149,23 @@ $enable = get_setting('enable_testing');
               </li>
               @endforeach
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon_before fas fa-mosque fa-lg"></i> @lang('front.muslim_guide')</a>
+                <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <!-- <img src="front/images/menu_icons/muslim_guide.svg" alt=""> -->
+                  <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 27 22" xml:space="preserve">
+                    <g>
+                      <path class="st0" d="M22.8,10.7l-2.5-2.5V4.7c0-0.3-0.3-0.6-0.6-0.6h-3.5l-2.5-2.5c-0.1-0.1-0.2-0.2-0.4-0.2   c-0.1,0-0.3,0.1-0.4,0.2l-2.5,2.5H7c-0.3,0-0.6,0.3-0.6,0.6v3.5l-2.5,2.5c-0.2,0.2-0.2,0.6,0,0.8L6.4,14v3.5c0,0.3,0.3,0.6,0.6,0.6   h3.5l2.5,2.5c0.1,0.1,0.2,0.2,0.4,0.2s0.3-0.1,0.4-0.2l2.5-2.5h3.5c0.3,0,0.6-0.3,0.6-0.6V14l2.5-2.5c0.1-0.1,0.2-0.2,0.2-0.4   S22.9,10.8,22.8,10.7z M19.4,13.4c-0.1,0.1-0.2,0.2-0.2,0.4V17H16c-0.1,0-0.3,0.1-0.4,0.2l-2.2,2.2l-2.2-2.2C11,17,10.9,17,10.7,17   H7.5v-3.2c0-0.1-0.1-0.3-0.2-0.4l-2.2-2.2l2.2-2.2c0.1-0.1,0.2-0.2,0.2-0.4V5.3h3.2c0.1,0,0.3-0.1,0.4-0.2l2.2-2.2l2.2,2.2   c0.1,0.1,0.2,0.2,0.4,0.2h3.2v3.2c0,0.1,0.1,0.3,0.2,0.4l2.2,2.2L19.4,13.4z" />
+                      <path class="st0" d="M11.9,8.1C12,8.1,12,8,11.9,8.1C12,8,12,8,11.9,8.1l-0.3-1c0,0,0,0,0,0c0,0,0,0,0,0c-0.1,0-0.1,0.1-0.2,0.1   c-0.1,0.1-0.3,0.2-0.4,0.3c0,0,0,0,0,0.1c0.3,0.6,0.2,1.6,0.1,2.4c0,0.2,0,0.4-0.1,0.5c0,0.6-0.5,0.8-0.9,0.8   c-0.3,0-0.6-0.1-0.7-0.3c-0.1-0.2-0.1-0.5,0.1-0.9c0,0,0,0,0-0.1c0,0,0,0-0.1,0c-0.1,0-0.7,0.8-0.7,1.4c0,0.3,0.1,0.7,0.8,0.8   c0.1,0,0.1,0,0.2,0c0.7,0,1.7-0.3,1.8-1.2c0-0.1,0-0.3,0-0.6C11.5,9.6,11.6,8.1,11.9,8.1z" />
+                      <path class="st0" d="M18.4,10.5c-0.3,0-0.6-0.2-0.8-0.4c-0.1-0.1-0.2-0.2-0.3-0.2c-0.2-0.2-0.5-0.5-0.8-0.6c-0.1,0-0.1-0.1-0.2-0.1   c-0.4,0-0.8,0.5-0.8,0.8c0,0.1,0,0.2,0.2,0.3c0,0,0,0,0.1,0c0.1-0.2,0.2-0.3,0.4-0.3c0.2,0,0.3,0.2,0.5,0.3   c0.1,0.1,0.2,0.1,0.2,0.2c-0.3,0-0.6,0.1-0.8,0.1c-0.5,0-1-0.1-1-0.4C15,9.6,15.1,9,15.2,8.4c0.1-0.3,0.1-0.7,0.1-1c0,0,0,0,0-0.1   c0,0,0,0-0.1,0c-0.6,0.3-0.8,0.9-1,1.4c-0.1,0.4-0.3,0.8-0.6,1.1c-0.2-1.1-0.6-1.9-1.3-2.6c0,0,0,0-0.1,0c0,0,0,0,0,0   c0,0.1,0,0.2-0.1,0.3c-0.1,0.5-0.3,1,0.3,1.3c0,0,0,0,0.1,0c0,0,0,0,0,0l0-0.1c0.3,0.5,0.5,0.9,0.6,1.4c-0.2,0.1-0.4,0.3-0.6,0.4   c-0.3,0.1-0.6,0.3-0.7,0.5c0,0,0,0.1,0,0.1c0.2,0.2,0.4,0.4,0.7,0.4c0.8,0,1.6-1.4,1.9-2.2c0,0,0,0,0,0c-0.1,0.8-0.3,1.7,0.8,2   c0,0,0,0,0,0c0.1,0,0.2,0,0.3,0h0C16.1,11.4,18.2,11.4,18.4,10.5C18.5,10.6,18.5,10.6,18.4,10.5C18.5,10.5,18.4,10.5,18.4,10.5z" />
+                      <polygon class="st0" points="11,13.2 10.5,13.2 10.5,12.5 10.1,12.5 10.1,14.3 10.5,14.3 10.5,13.5 11,13.5 11,14.3 11.4,14.3    11.4,12.5 11,12.5  " />
+                      <path class="st0" d="M12,12.5l-0.4,1.8h0.4l0.1-0.4h0.4l0.1,0.4h0.4l-0.4-1.8H12z M12.1,13.6l0.1-0.7l0.1,0.7H12.1z" />
+                      <polygon class="st0" points="13.4,12.5 13.1,12.5 13.1,14.3 14.1,14.3 14.1,14 13.4,14  " />
+                      <path class="st0" d="M14.6,12.5l-0.4,1.8h0.4l0.1-0.4h0.4l0.1,0.4h0.4l-0.4-1.8H14.6z M14.7,13.6l0.1-0.7l0.1,0.7H14.7z" />
+                      <polygon class="st0" points="16.1,12.5 15.7,12.5 15.7,14.3 16.7,14.3 16.7,14 16.1,14  " />
+                    </g>
+                  </svg>
+                  @lang('front.muslim_guide')</a>
                 <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
-                  @if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
+                  @if( get_setting('enable_testing') ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
                   <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
                   <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
                   <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
@@ -146,24 +178,24 @@ $enable = get_setting('enable_testing');
                   <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.request()->get("OpID"))])}}">@lang('front.prayer')</a>
                   <a class="dropdown-item text-capitalize link_href" href="{{route('front.muslim_inner',['crl_url' => url('mosque?OpID='.request()->get("OpID"))])}}"> @lang('front.mosque')</a>
                   @endif
-                  {{--  @if(request()->has('OpID') && request()->get('OpID') != '')
+                  {{-- @if(request()->has('OpID') && request()->get('OpID') != '')
                   <a class="dropdown-item text-capitalize link_href" href="{{url('azan')}}">@lang('front.azan')</a>
                   <a class="dropdown-item text-capitalize link_href" href="{{url('rbts')}}"> @lang('front.call_tone')</a>
-                  @endif  --}}
+                  @endif --}}
                 </div>
               </li>
               @if(session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
               <li class="nav-item ">
-                @if(request()->get('OpID') == omantel   && session()->has('menu_unsub_omantel') && session()->get('menu_unsub_omantel') == 'active' )
+                @if(request()->get('OpID') == omantel && session()->has('menu_unsub_omantel') && session()->get('menu_unsub_omantel') == 'active' )
                 <a class="nav-link text-capitalize" href="{{route('front.unsub')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
-                @elseif(request()->get('OpID') == du  && session()->has('menu_unsub_du') && session()->get('menu_unsub_du') == 'active' )
+                @elseif(request()->get('OpID') == du && session()->has('menu_unsub_du') && session()->get('menu_unsub_du') == 'active' )
                 <a class="nav-link text-capitalize" href="{{route('front.du_unsub')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
                 @endif
               </li>
               <li class="nav-item ">
-                @if(request()->get('OpID') == omantel && session()->has('menu_unsub_omantel') && session()->get('menu_unsub_omantel') == 'active'  )
+                @if(request()->get('OpID') == omantel && session()->has('menu_unsub_omantel') && session()->get('menu_unsub_omantel') == 'active' )
                 <a class="nav-link text-capitalize" href="{{route('front.logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
-                @elseif(request()->get('OpID') == du  && session()->has('menu_unsub_du') && session()->get('menu_unsub_du') == 'active'  )
+                @elseif(request()->get('OpID') == du && session()->has('menu_unsub_du') && session()->get('menu_unsub_du') == 'active' )
                 <a class="nav-link text-capitalize" href="{{route('front.du_logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
                 @endif
               </li>
