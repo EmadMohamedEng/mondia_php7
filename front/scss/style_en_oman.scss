@@ -1433,12 +1433,12 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 12rem;
+              height: 16rem;
             }
           }
 
           .btn_subscribe {
-            top: 86%;
+            top: 89%;
           }
         }
       }
@@ -1902,12 +1902,12 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 12rem;
+              height: 16rem;
             }
           }
 
           .btn_subscribe {
-            top: 86%;
+            top: 89%;
           }
         }
       }
@@ -2386,12 +2386,12 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 12rem;
+              height: 16rem;
             }
           }
 
           .btn_subscribe {
-            top: 86%;
+            top: 89%;
           }
         }
       }
@@ -2893,12 +2893,12 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 12rem;
+              height: 16rem;
             }
           }
 
           .btn_subscribe {
-            top: 86%;
+            top: 89%;
           }
         }
       }
@@ -3427,12 +3427,12 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 19.5rem;
+              height: 31rem;
             }
           }
 
           .btn_subscribe {
-            top: 89%;
+            top: 92%;
             height: 4.5rem;
 
             button {
@@ -3473,7 +3473,7 @@ select {
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
             height: 16rem;
-    
+
             .owl_content_img {
               img {
                 height: 9.375rem;
@@ -3481,15 +3481,15 @@ select {
                 border-top-right-radius: 10px;
               }
             }
-    
+
             .card-body {
               padding: 1.25rem 0.25rem;
-    
+
               .card-title {
                 text-align: center;
                 font-size: 1.05rem;
               }
-    
+
               .card-text {
                 i {
                   color: $grey_color;
@@ -3497,10 +3497,10 @@ select {
               }
             }
           }
-    
+
         }
       }
-  
+
       .owl_content_two {
         .item {
           .card {
@@ -3510,7 +3510,7 @@ select {
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
             height: 16rem;
-    
+
             .owl_content_img {
               img {
                 height: 9.375rem;
@@ -3518,15 +3518,15 @@ select {
                 border-top-right-radius: 10px;
               }
             }
-    
+
             .card-body {
               padding: 1.25rem 0.25rem;
-    
+
               .card-title {
                 text-align: center;
                 font-size: 1.05rem;
               }
-    
+
               .card-text {
                 i {
                   color: $grey_color;
@@ -3534,10 +3534,10 @@ select {
               }
             }
           }
-    
+
         }
       }
-  
+
       .owl_content_three {
         .item {
           .card {
@@ -3547,7 +3547,7 @@ select {
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
             height: 16rem;
-    
+
             .owl_content_img {
               img {
                 height: 9.375rem;
@@ -3555,15 +3555,15 @@ select {
                 border-top-right-radius: 10px;
               }
             }
-    
+
             .card-body {
               padding: 1.25rem 0.25rem;
-    
+
               .card-title {
                 text-align: center;
                 font-size: 1.05rem;
               }
-    
+
               .card-text {
                 i {
                   color: $grey_color;
@@ -3571,10 +3571,10 @@ select {
               }
             }
           }
-    
+
         }
       }
-  
+
       .owl_content_four {
         .item {
           .card {
@@ -3584,7 +3584,7 @@ select {
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
             height: 16rem;
-    
+
             .owl_content_img {
               img {
                 height: 9.375rem;
@@ -3592,15 +3592,15 @@ select {
                 border-top-right-radius: 10px;
               }
             }
-    
+
             .card-body {
               padding: 1.25rem 0.25rem;
-    
+
               .card-title {
                 text-align: center;
                 font-size: 1.05rem;
               }
-    
+
               .card-text {
                 i {
                   color: $grey_color;
@@ -3608,10 +3608,10 @@ select {
               }
             }
           }
-    
+
         }
       }
-  
+
       .owl_content_five {
         .item {
           .card {
@@ -3621,7 +3621,7 @@ select {
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
             height: 16rem;
-    
+
             .owl_content_img {
               img {
                 height: 9.375rem;
@@ -3629,15 +3629,15 @@ select {
                 border-top-right-radius: 10px;
               }
             }
-    
+
             .card-body {
               padding: 1.25rem 0.25rem;
-    
+
               .card-title {
                 text-align: center;
                 font-size: 1.05rem;
               }
-    
+
               .card-text {
                 i {
                   color: $grey_color;
@@ -3645,7 +3645,7 @@ select {
               }
             }
           }
-    
+
         }
       }
     }
@@ -5020,39 +5020,6 @@ select {
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
-  }
-}
-
-.rotate-in-center {
-  -webkit-animation: rotate-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-  animation: rotate-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-}
-
-@-webkit-keyframes rotate-in-center {
-  0% {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1;
-  }
-}
-
-@keyframes rotate-in-center {
-  0% {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1;
   }
 }
 /* End Animation */

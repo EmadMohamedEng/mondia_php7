@@ -128,7 +128,12 @@
                 <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('sebha?OpID='.request()->get("OpID"))])}}">
                 @endif
 
+                @if (request()->get("OpID") == 9)
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/01.png')}}" alt="Card image cap">
+                @else
                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/01.png')}}" alt="Card image cap">
+                @endif
+                
                 <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
@@ -148,8 +153,11 @@
                 @else
                 <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('mosque?OpID='.request()->get("OpID"))])}}">
                 @endif
-
+                @if (request()->get("OpID") == 9)
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/02.png')}}" alt="Card image cap">
+                @else
                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/02.png')}}" alt="Card image cap">
+                @endif
                 <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
@@ -169,8 +177,11 @@
                 @else
                 <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('zakah?OpID='.request()->get("OpID"))])}}">
                 @endif
-
+                @if (request()->get("OpID") == 9)
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/07.png')}}" alt="Card image cap">
+                @else
                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/07.png')}}" alt="Card image cap">
+                @endif
                 <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
@@ -191,8 +202,11 @@
                 @else
                 <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('merath?OpID='.request()->get("OpID"))])}}">
                 @endif
-
+                @if (request()->get("OpID") == 9)
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/04.png')}}" alt="Card image cap">
+                @else
                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/04.png')}}" alt="Card image cap">
+                @endif
                 <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
@@ -211,8 +225,11 @@
                 @else
                 <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.request()->get("OpID"))])}}">
                 @endif
-
+                @if (request()->get("OpID") == 9)
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/03.png')}}" alt="Card image cap">
+                @else
                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/03.png')}}" alt="Card image cap">
+                @endif
                 <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
