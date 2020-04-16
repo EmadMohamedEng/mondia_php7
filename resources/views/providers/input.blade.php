@@ -27,12 +27,7 @@
 <div class="form-group">
     <label class="col-sm-3 col-lg-2 control-label">Value *</label>
     <div class="col-sm-9 col-lg-10 controls">
-        <textarea class="form-control col-md-12" name="image"
-        rows="6">
-            @isset($provider->image)
-                {{$provider->image}}
-            @endisset
-        </textarea>
+        <textarea class="form-control col-md-12" name="image" rows="6">@isset($provider->image){{$provider->image}}@endisset</textarea>
     </div>
 </div>
 
