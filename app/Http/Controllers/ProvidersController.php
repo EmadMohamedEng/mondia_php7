@@ -52,20 +52,19 @@ class ProvidersController extends Controller {
 
         $validator = Validator::make($request->all(), [
                     'title' => 'required',
-                    'image' => 'mimes:jpg,jpeg,png',
         ]);
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
         }
         $provider = new Provider();
         $input = $request->except('title');
-        if($request->hasFile('image')){
-            $file = $request->file('image');
-            $destinationFolder = $this->destinationFolder;
-            $uniqID = uniqid();
-            $input['image'] = $destinationFolder . $uniqID . "." . $file->getClientOriginalExtension();
-            $file->move($destinationFolder, $uniqID . "." . $file->getClientOriginalExtension());
-            $provider->image = $input['image'];
+        if($request->has('image')){
+            // $file = $request->file('image');
+            // $destinationFolder = $this->destinationFolder;
+            // $uniqID = uniqid();
+            // $input['image'] = $destinationFolder . $uniqID . "." . $file->getClientOriginalExtension();
+            // $file->move($destinationFolder, $uniqID . "." . $file->getClientOriginalExtension());
+            $provider->image = $request->image;
         }
 
         foreach ($request->title as $key => $value)
@@ -111,7 +110,6 @@ class ProvidersController extends Controller {
 
         $validator = Validator::make($request->all(), [
                     'title' => 'required',
-                    'image' => 'mimes:jpg,jpeg,png',
         ]);
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
@@ -119,14 +117,15 @@ class ProvidersController extends Controller {
         $newProvider = $request->except('title');
         $provider = Provider::findOrFail($id);
         $destinationFolder = $this->destinationFolder;
-        if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $uniqueID = uniqid();
-            $file->move($destinationFolder, $uniqueID . "." . $file->getClientOriginalExtension());
-            $newProvider['image'] = $destinationFolder . $uniqueID . "." . $file->getClientOriginalExtension();
-            if (file_exists($provider['image'])) {
-                unlink($provider['image']);
-            }
+        if ($request->has('image')) {
+            $newProvider['image'] = $request->image;
+            // $file = $request->file('image');
+            // $uniqueID = uniqid();
+            // $file->move($destinationFolder, $uniqueID . "." . $file->getClientOriginalExtension());
+            // $newProvider['image'] = $destinationFolder . $uniqueID . "." . $file->getClientOriginalExtension();
+            // if (file_exists($provider['image'])) {
+            //     unlink($provider['image']);
+            // }
         } else {
             $newProvider['image'] = $provider['image'];
         }
