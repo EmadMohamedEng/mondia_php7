@@ -111,8 +111,7 @@ function get_contents($id)
       {
         $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
         ->where('posts.operator_id', request()->get('OpID'))
-        ->where('posts.show_date', '<=', \Carbon\Carbon::now()->toDateString())
-        ->orderBy('posts.show_date','desc');
+        ->where('posts.show_date', '<=', \Carbon\Carbon::now()->toDateString());
       }
       if(request()->has('search') && request()->get('search') != '')
       {

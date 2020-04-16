@@ -29,8 +29,7 @@ class FrontController extends Controller
         {
             $latest = $latest->join('posts', 'posts.video_id', '=', 'contents.id')
             ->where('posts.operator_id', request()->get('OpID'))
-            ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
-            ->orderBy('posts.show_date', 'desc');
+            ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
         }
         else
         {
@@ -94,8 +93,7 @@ class FrontController extends Controller
       {
         $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
         ->where('posts.operator_id', request()->get('OpID'))
-        ->where('posts.show_date', '<=', Carbon::now()->toDateString())
-        ->orderBy('posts.show_date','desc');
+        ->where('posts.show_date', '<=', Carbon::now()->toDateString());
       }
       if($request->has('search') && $request->search != '')
       {
@@ -129,8 +127,7 @@ class FrontController extends Controller
       {
         $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
         ->where('posts.operator_id', request()->get('OpID'))
-        ->where('posts.show_date', '<=', Carbon::now()->format('Y-m-d'))
-        ->orderBy('posts.show_date','desc');
+        ->where('posts.show_date', '<=', Carbon::now()->format('Y-m-d'));
       }
       if($request->has('search') && $request->search != '')
       {
@@ -297,8 +294,7 @@ class FrontController extends Controller
         {
           $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
           ->where('posts.operator_id', request()->get('OpID'))
-          ->where('posts.show_date', '<=', Carbon::now()->toDateString())
-          ->orderBy('posts.show_date','desc');
+          ->where('posts.show_date', '<=', Carbon::now()->toDateString());
         }
         if(request()->has('OpID') && request()->get('OpID') != '')
         {
