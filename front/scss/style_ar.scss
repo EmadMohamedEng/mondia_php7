@@ -7,20 +7,10 @@ body {
 }
 
 .main_container {
-  padding-bottom: 10%;
-
   /* Start Header */
   .header {
-    position: sticky;
-    height: 4rem;
-    padding: 1.10rem 1.75rem;
-
     .header_logo,
     .header_icon {
-      color: $white_color;
-      display: inline-flex;
-      position: relative;
-
       &.header_logo {
         float: right;
 
@@ -30,7 +20,6 @@ body {
         }
 
         .arrow_back {
-          position: absolute;
           top: 1rem;
           right: 100%;
           transform: translate(-50%, -50%);
@@ -47,30 +36,15 @@ body {
   }
 
   .nav_nav {
-    background-color: $white_color;
-    width: 75%;
-    margin-top: 1.5rem;
-    margin-right: 1rem;
-    padding: 0.5rem 0;
-    position: sticky;
-    border: 1px solid #bfbfbf;
-
     .navbar_ul {
-      display: block;
-      width: 100%;
       padding-right: 0;
 
       .nav_item_welc {
-        margin-bottom: 0.25rem;
         text-align: right;
       }
 
       .nav-item {
-        padding: 0.25rem 0.5rem;
-
         .nav-link {
-          color: #000;
-          cursor: pointer;
           text-align: right;
 
           .icon_before {
@@ -79,49 +53,23 @@ body {
           }
 
           &.nav-link2 {
-            padding: 0 0 0.75rem 0;
             text-align: left;
           }
         }
 
         .dropdown-toggle {
           &::after {
-            // margin-left: 5.255em;
             float: left;
           }
         }
 
         .dropdown-menu {
-          position: static;
-          border: 0;
-          min-width: 0;
-
           &.dropdown-menu2 {
             float: left;
           }
 
           .dropdown-item {
-            padding: .25rem 1rem;
-            text-align: justify;
-            width: 100%;
-
             &.dropdown-item2 {
-              padding: .25rem 0;
-              width: 100%;
-
-            }
-
-
-            &:active,
-            &:focus,
-            &:hover {
-              // background: $bg_color;
-              color: $white_color;
-              border-radius: 8px;
-              -webkit-border-radius: 8px;
-              -moz-border-radius: 8px;
-              -ms-border-radius: 8px;
-              -o-border-radius: 8px;
             }
           }
         }
@@ -133,32 +81,11 @@ body {
 
   /* Start Home Page */
   .img_carousel {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-
-
     .owl_one {
       .item {
-        position: relative;
 
         .btn_subscribe {
-          height: 3.5rem;
-          background-color: rgba(0, 0, 0, .7);
-          position: absolute;
-          top: 91%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-
           button {
-            border: 0;
-            // background: $bg_color;
-            color: $white_color;
-            margin: 0.55rem 0 0 1rem;
-            border-radius: 6px;
-            -webkit-border-radius: 6px;
-            -moz-border-radius: 6px;
-            -ms-border-radius: 6px;
-            -o-border-radius: 6px;
           }
         }
       }
@@ -166,221 +93,27 @@ body {
 
     .owl-dots {
       button {
-        outline: 0;
       }
-    }
-
-    .owl-theme .owl-dots .owl-dot.active span,
-    .owl-theme .owl-dots .owl-dot:hover span {
-      background: #c39;
     }
   }
 
   .content_carousel {
     .content_carousel_head {
-      margin-top: 2rem;
-
       .link_title {
-        color: $black_color;
         text-align: right;
       }
 
       .btn_more {
-        // background: $bg_color;
-        color: $white_color;
-        border: 0;
         float: left;
-        padding: 0.25rem .5rem;
-        margin-bottom: 1rem;
       }
     }
 
-    .owl_content_one {
-      direction: rtl !important;
-      .item {
-        .card {
-          border-radius: 10px;
-          -webkit-border-radius: 10px;
-          -moz-border-radius: 10px;
-          -ms-border-radius: 10px;
-          -o-border-radius: 10px;
-          height: 16rem;
-  
-          .owl_content_img {
-            img {
-              height: 9.375rem;
-              border-top-left-radius: 10px;
-              border-top-right-radius: 10px;
-            }
-          }
-  
-          .card-body {
-            padding: 1.25rem 0.25rem;
-  
-            .card-title {
-              text-align: center;
-              font-size: 1.05rem;
-            }
-  
-            .card-text {
-              i {
-                color: $grey_color;
-              }
-            }
-          }
-        }
-  
-      }
-    }
-
-    .owl_content_two {
-      direction: rtl !important;
-      .item {
-        .card {
-          border-radius: 10px;
-          -webkit-border-radius: 10px;
-          -moz-border-radius: 10px;
-          -ms-border-radius: 10px;
-          -o-border-radius: 10px;
-          height: 16rem;
-  
-          .owl_content_img {
-            img {
-              height: 9.375rem;
-              border-top-left-radius: 10px;
-              border-top-right-radius: 10px;
-            }
-          }
-  
-          .card-body {
-            padding: 1.25rem 0.25rem;
-  
-            .card-title {
-              text-align: center;
-              font-size: 1.05rem;
-            }
-  
-            .card-text {
-              i {
-                color: $grey_color;
-              }
-            }
-          }
-        }
-  
-      }
-    }
-
-    .owl_content_three {
-      direction: rtl !important;
-      .item {
-        .card {
-          border-radius: 10px;
-          -webkit-border-radius: 10px;
-          -moz-border-radius: 10px;
-          -ms-border-radius: 10px;
-          -o-border-radius: 10px;
-          height: 16rem;
-  
-          .owl_content_img {
-            img {
-              height: 9.375rem;
-              border-top-left-radius: 10px;
-              border-top-right-radius: 10px;
-            }
-          }
-  
-          .card-body {
-            padding: 1.25rem 0.25rem;
-  
-            .card-title {
-              text-align: center;
-              font-size: 1.05rem;
-            }
-  
-            .card-text {
-              i {
-                color: $grey_color;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .owl_content_four {
-      direction: rtl !important;
-      .item {
-        .card {
-          border-radius: 10px;
-          -webkit-border-radius: 10px;
-          -moz-border-radius: 10px;
-          -ms-border-radius: 10px;
-          -o-border-radius: 10px;
-          height: 16rem;
-  
-          .owl_content_img {
-            img {
-              height: 9.375rem;
-              border-top-left-radius: 10px;
-              border-top-right-radius: 10px;
-            }
-          }
-  
-          .card-body {
-            padding: 1.25rem 0.25rem;
-  
-            .card-title {
-              text-align: center;
-              font-size: 1.05rem;
-            }
-  
-            .card-text {
-              i {
-                color: $grey_color;
-              }
-            }
-          }
-        }
-  
-      }
-    }
-
+    .owl_content_one,
+    .owl_content_two,
+    .owl_content_three,
+    .owl_content_four,
     .owl_content_five {
-      .item {
-        .card {
-          border-radius: 10px;
-          -webkit-border-radius: 10px;
-          -moz-border-radius: 10px;
-          -ms-border-radius: 10px;
-          -o-border-radius: 10px;
-          height: 16rem;
-  
-          .owl_content_img {
-            img {
-              height: 9.375rem;
-              border-top-left-radius: 10px;
-              border-top-right-radius: 10px;
-            }
-          }
-  
-          .card-body {
-            padding: 1.25rem 0.25rem;
-  
-            .card-title {
-              text-align: center;
-              font-size: 1.05rem;
-            }
-  
-            .card-text {
-              i {
-                color: $grey_color;
-              }
-            }
-          }
-        }
-  
-      }
+      direction: rtl !important;
     }
   }
 
@@ -1342,7 +1075,6 @@ body {
       .owl_one {
         .item {
           .btn_subscribe {
-            // top: 86%;
           }
         }
       }
@@ -1802,9 +1534,7 @@ body {
 
       .owl_one {
         .item {
-
           .btn_subscribe {
-            // top: 86%;
           }
         }
       }
@@ -2271,7 +2001,6 @@ body {
         .item {
 
           .btn_subscribe {
-            // top: 86%;
           }
         }
       }
@@ -2766,7 +2495,6 @@ body {
         .item {
 
           .btn_subscribe {
-            // top: 86%;
           }
         }
       }
@@ -3278,13 +3006,6 @@ body {
         .item {
 
           .btn_subscribe {
-            // top: 89%;
-            height: 4.5rem;
-
-            button {
-              margin: 0.75rem 0 0 1rem;
-              font-size: 1.5rem;
-            }
           }
         }
       }
@@ -3890,13 +3611,6 @@ body {
       .owl_one {
         .item {
           .btn_subscribe {
-            // top: 90.5%;
-            height: 5rem;
-
-            button {
-              margin: 0.5rem 0 0 1rem;
-              font-size: 2.15rem;
-            }
           }
         }
       }
