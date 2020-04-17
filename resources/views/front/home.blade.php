@@ -65,15 +65,15 @@
 
         @php
         if(count($item->services) == 1){
-          $owl_1 = 'owl_content_four';
+          $owl_1 = 'owl_content_one';
         }
 
         if(count($item->services) == 2){
-          $owl_1 = 'owl_content_four';
+          $owl_1 = 'owl_content_two';
         }
 
         if(count($item->services) == 3){
-          $owl_1 = 'owl_content_four';
+          $owl_1 = 'owl_content_three';
         }
 
         if(count($item->services) == 4){
@@ -261,15 +261,15 @@
 
         @php
         if(count($item->services) == 1){
-          $owl = 'owl_content_four';
+          $owl = 'owl_content_one';
         }
 
         if(count($item->services) == 2){
-          $owl = 'owl_content_four';
+          $owl = 'owl_content_two';
         }
 
         if(count($item->services) == 3){
-          $owl = 'owl_content_four';
+          $owl = 'owl_content_three';
         }
 
         if(count($item->services) == 4){
