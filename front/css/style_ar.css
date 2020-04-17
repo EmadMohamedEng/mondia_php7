@@ -159,29 +159,11 @@ body {
 .main_container .list_page .content_carousel_head {
   text-align: right;
 }
-.main_container .inner_page {
-  margin-top: 1.5rem;
-}
 .main_container .inner_page .cover {
-  position: relative;
   text-align: right;
 }
-.main_container .inner_page .cover img {
-  height: 22rem;
-  width: 92%;
-  opacity: 0.7;
-}
 .main_container .inner_page .cover button {
-  border: 0;
-  color: #FFF;
-  position: absolute;
-  top: 49%;
   left: 40%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
 }
 .main_container .inner_page .poster {
   margin-top: 1.5rem;
