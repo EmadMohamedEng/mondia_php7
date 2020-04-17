@@ -9,6 +9,8 @@ use Validator;
 use App\Provider;
 use App\Service;
 use App\Language;
+use App\Exports\ServicesExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ServicesController extends Controller {
 
@@ -188,5 +190,8 @@ class ServicesController extends Controller {
 
       return 'ok';
     }
-
+    public function export() 
+    {
+        return Excel::download(new ServicesExport, 'Services.xlsx');
+    }
 }

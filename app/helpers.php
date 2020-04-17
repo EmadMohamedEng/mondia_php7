@@ -58,13 +58,15 @@ function get_static_routes()
 
 
     Route::group(['middleware'=> 'auth'],function(){
-    Route::resource('static_translation','\App\Http\Controllers\StaticTranslationController');
-    Route::get('videos/allData', 'VideosController@allData');
-    Route::get('posts/allData', 'PostsController@allData');
-    Route::get('audios/allData', 'AudiosController@allData');
-    Route::get('datatablesProviderAudios/{id}', 'AudiosController@datatablesProviderAudios');
-    Route::get('listazan', 'ListAzanController@index');
-
+        Route::resource('static_translation','\App\Http\Controllers\StaticTranslationController');
+        Route::get('videos/allData', 'VideosController@allData');
+        Route::get('posts/allData', 'PostsController@allData');
+        Route::get('audios/allData', 'AudiosController@allData');
+        Route::get('datatablesProviderAudios/{id}', 'AudiosController@datatablesProviderAudios');
+        Route::get('listazan', 'ListAzanController@index');
+        Route::get('provider/export/', 'ProvidersController@export');
+        Route::get('service/export/', 'ServicesController@export');
+        Route::get('content/export/', 'VideosController@export');
 
     });
 
