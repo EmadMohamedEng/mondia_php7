@@ -4,14 +4,19 @@
 @php
 if(strpos(url()->full(),'zakah') !== false){
   $src = url('front\images\Cutting\Home_Page\006.png');
+  $title = trans('front.zakah');
 }else if(strpos(url()->full(),'merath') !== false){
   $src = url('front\images\Cutting\Home_Page\001.png');
+  $title = trans('front.merath');
 }else if(strpos(url()->full(),'salah_time')!==false){
   $src = url('front\images\Cutting\Home_Page\003.png');
+  $title = trans('front.prayer');
 }else if(strpos(url()->full(),'mosque')!==false){
   $src = url('front\images\Cutting\Home_Page\007.png');
+  $title = trans('front.mosque');
 }else{
   $src = url('front\images\Cutting\Home_Page\004.png');
+  $title = trans('front.sebha');
 }
 @endphp
 
@@ -20,7 +25,7 @@ if(strpos(url()->full(),'zakah') !== false){
   <section class="inner_page">
     <div class="row m-0">
       <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
-       <h3 style="text-align:center;padding:10px">   @lang('front.muslim_guide')</h3>
+       <h3 style="text-align:center;padding:10px">{{$title}}</h3>
         <div class="cover">
           <img src="{{$src}}" alt="Video Cover">
           @if(request()->has('OpID') && request()->get('OpID') == omantel)
