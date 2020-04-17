@@ -125,7 +125,7 @@ function get_contents($id)
         });
       }
 
-      $contents = $contents->orderBy('contents.id','asc')->limit(6)->get();
+      $contents = $contents->orderBy('contents.index','asc')->limit(6)->get();
 
       return $contents;
 }

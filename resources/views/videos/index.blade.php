@@ -78,12 +78,14 @@
             "processing": true,
             "serverSide": true,
             "search": {"regex":true},
+            "aLengthMenu": [10, 25, 50, 100 , 200, 300, 400, 500, 1000],
             columnDefs: [ {
             orderable: false,
             className: 'select-checkbox',
             targets:   0
             } ],
             ajax: "{!! url('videos/allData?service_id='.Request::route('id')) !!}",
+            rowId: 'id',
             columns: [
                 {data: 'index'},
                 {data: 'id'},
@@ -92,9 +94,71 @@
                 {data: 'url',name:'url'},
                 {data: 'action', searchable: false}
 
-            ]
-            , "pageLength": {{get_pageLength()}}
+            ],
+            "pageLength": {{get_pageLength()}},
+            "fnCreatedRow": function (row, data, index) {
+              $(row).addClass("row-table")
+            }
         });
+
+        $("#example_video").sortable({
+          items: "tr",
+          cursor: 'move',
+          opacity: 0.6,
+          update: function() {
+              sendOrderToServer();
+          }
+        });
+
+        function sendOrderToServer() {
+            var list = []
+            $('.row-table').each(function(index,e){
+              list.push($(this).attr('id'))
+            });
+            $.ajax({
+              type:'post',
+              url:'{{url("admin/video/order/")}}',
+              data: {
+                list: list,
+              },
+              success: function(data) {
+                console.log(list);
+                list = []
+              }
+            });
+        }
     });
 </script>
+
+{{-- <script src="{{asset('js/table-dragger.min.js')}}"></script>
+<script>
+jQuery(document).on('DOMNodeInserted','tbody', function (e) {
+  var list = []
+  var el = document.getElementById('example_video');
+  var dragger = tableDragger(el, {
+    mode: 'row',
+    dragHandler: '.row-table',
+    onlyBody: true,
+  });
+  dragger.on('drop',function(from, to){
+    $('.row-table').each(function(index,e){
+      list.push($(this).attr('id'))
+    });
+
+    $.ajax({
+      type:'post',
+      url:'{{url("admin/service/order/")}}',
+      data: {
+        list: list,
+      },
+      success: function(data) {
+        console.log(list);
+        list = []
+      }
+		});
+  });
+})
+
+</script> --}}
+
 @stop

@@ -107,7 +107,7 @@ class FrontController extends Controller
         });
       }
 
-      $contents = $contents->orderBy('contents.id','asc')->limit(get_pageLength())->get();
+      $contents = $contents->orderBy('contents.index','asc')->limit(get_pageLength())->get();
 
       if(!request()->has('OpID') && !get_setting('enable_testing')){
         return view('errors.404');
@@ -134,7 +134,7 @@ class FrontController extends Controller
         $contents = $contents->where('contents.title', 'like', '%' . $request->search . '%');
       }
 
-      $contents = $contents->orderBy('contents.id','asc')->offset($request->start)->limit(get_pageLength())->get();
+      $contents = $contents->orderBy('contents.index','asc')->offset($request->start)->limit(get_pageLength())->get();
 
       $view = view('front.load_content', compact('contents'))->render();
       return Response(array('html' => $view));
@@ -180,7 +180,7 @@ class FrontController extends Controller
             ->where('posts.operator_id',$request->OpID)
             ->where('posts.show_date','<=',Carbon::now()->toDateString());
         }
-        $contents = $contents->orderBy('contents.created_at', 'desc')->limit(4)->get();
+        $contents = $contents->orderBy('contents.index', 'asc')->limit(4)->get();
 
         if($enable){  // enable testing from backend
            return view('front.inner_enable_testing', compact('content','contents'));

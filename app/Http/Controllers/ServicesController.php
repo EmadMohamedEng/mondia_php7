@@ -177,7 +177,7 @@ class ServicesController extends Controller {
         return view('videos.index', compact('videos','service'));
     }
 
-    public function order_provider(Request $request)
+    public function order_service(Request $request)
     {
       $services = Service::all();
 

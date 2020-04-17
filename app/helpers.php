@@ -87,7 +87,8 @@ function get_static_routes()
         Route::get('admin/seed_manager', 'DashboardController@seed_manager');
         Route::post('admin/seed_tables', 'DashboardController@seed_tables');
         Route::post('admin/provider/order', 'ProvidersController@order_provider');
-        Route::post('admin/service/order', 'ServicesController@order_provider');
+        Route::post('admin/service/order', 'ServicesController@order_service');
+        Route::post('admin/video/order', 'VideosController@order_video');
         Route::get('JIC/index', 'FrontController@JICindex');
     });
 

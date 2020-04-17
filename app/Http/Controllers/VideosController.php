@@ -47,7 +47,7 @@ class VideosController extends Controller
         if($request->has('service_id') && $request->service_id != ''){
             $videos = $videos->where('service_id',$request->service_id)->orderBy("created_at", "desc");
         }
-        $videos = $videos->get();
+        $videos = $videos->orderBy('index','asc')->get();
         $service = null;
         $datatable = \DataTables::of($videos)
             ->addColumn('index', function (Video $video) {
@@ -358,5 +358,17 @@ class VideosController extends Controller
 
         $audios = \App\Audio::where('video_id', $id)->get();
         return view('audios.index', compact('audios'));
+    }
+
+    public function order_video(Request $request)
+    {
+      $videos = Video::whereIn('id',$request->list)->get();
+
+      foreach ($videos as $key => $value) {
+        $value->index  = (array_search($value->id,$request->list)) + 1;
+        $value->save();
+      }
+
+      return 'ok';
     }
 }
