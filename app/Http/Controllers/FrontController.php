@@ -29,6 +29,7 @@ class FrontController extends Controller
         {
             $latest = $latest->join('posts', 'posts.video_id', '=', 'contents.id')
             ->where('posts.operator_id', request()->get('OpID'))
+            ->where('posts.slider', 1)
             ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
         }
         else
@@ -36,15 +37,15 @@ class FrontController extends Controller
           $latest = $latest->latest('contents.created_at');
         }
 
-        $latest = $latest->join('services','services.id','=','contents.service_id')
-                  ->join('providers','providers.id','=','services.provider_id')
-                  ->where('providers.id',26);
+        // $latest = $latest->join('services','services.id','=','contents.service_id')
+        //           ->join('providers','providers.id','=','services.provider_id')
+        //           ->where('providers.id',26);
 
-        $ramdan = $latest ;
+        // $ramdan = $latest ;
 
-        if(!$ramdan->count()){
-          $latest = $latest->orWhereNotNull('providers.id')->groupBy('service_id');
-        }
+        // if(!$ramdan->count()){
+        //   $latest = $latest->orWhereNotNull('providers.id')->groupBy('service_id');
+        // }
 
         $latest = $latest->whereIn('contents.type',[1,3])->limit(3)->get(); // video or images
         return view('front.home',compact('latest'));
@@ -442,15 +443,19 @@ class FrontController extends Controller
 
     public function salah_time3(Request $request)
     {
-      if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
+      // if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
 
         $hjrri_date = $this->hjrri_date_cal();
         $prayer_times = $this->prayTimesCal_v2();
+
+        $fajr = strtotime($prayer_times['الفجر']);
+        $imsak = date("h:i a", strtotime('-10 minutes', $fajr));
+        $prayer_times['امساك'] = $imsak;
         return view('front.salah_time', compact('prayer_times', 'hjrri_date'));
 
-      }else{
-        return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
-      }
+      // }else{
+      //   return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
+      // }
 
 
 

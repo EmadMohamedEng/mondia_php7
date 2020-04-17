@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model {
 
     protected $fillable = [
-        'operator_id', 'video_id', 'show_date', 'active'
+        'operator_id', 'video_id', 'show_date', 'active', 'slider'
     ];
 
     public function operator() {
