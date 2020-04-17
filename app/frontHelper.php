@@ -96,6 +96,9 @@ function get_salah($value,$lang){
   if($lang == 'en' && strpos($value , 'الفجر') !== false){
     return 'Al-fajr';
   }
+  if($lang == 'en' && strpos($value , 'امساك') !== false){
+    return 'Al-Imsak';
+  }
   return $value;
 
 }
