@@ -94,14 +94,14 @@
       <ul id="myTab1" class="nav nav-tabs">
               <?php $i=0;?>
               @foreach($languages as $language)
-                  <li class="{{($i++)? '':'active'}}"><a href="#content_text{{$language->short_code}}" data-toggle="tab"> {{$language->title}}</a></li>
+                  <li class="{{($i++)? '':'active'}}"><a href="#cktextarea{{$language->short_code}}" data-toggle="tab"> {{$language->title}}</a></li>
               @endforeach
       </ul>
       <div class="tab-content">
           <?php $i=0;?>
           @foreach($languages as $language)
-              <div class="tab-pane fade in {{($i++)? '':'active'}}" id="content_text{{$language->short_code}}">
-                  <textarea class="form-control" name="content_text[{{$language->short_code}}]" cols="9" rows="20">@if($video){!! $video->getTranslation('content_text',$language->short_code)  !!}@endif</textarea>
+              <div class="tab-pane fade in {{($i++)? '':'active'}}" id="cktextarea{{$language->short_code}}">
+                  <textarea class="form-control ckeditor" name="content_text[{{$language->short_code}}]" cols="9" rows="20">@if($video){!! $video->getTranslation('content_text',$language->short_code)  !!}@endif</textarea>
               </div>
           @endforeach
       </div>

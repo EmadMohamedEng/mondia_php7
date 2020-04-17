@@ -12,7 +12,26 @@ $src = url('front\images\Cutting\Contnent_Page\001.png');
 $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
 @endphp
-
+<style>
+  @media (max-width: 374.9px) and (min-width: 360px){
+    .main_container .inner_page .cover img {
+      width: 100%;
+      height: unset;
+    }
+  }
+  .main_container .inner_page .cover img {
+    height: 32rem;
+    width: 92%;
+    opacity: 0.7;
+  }
+</style>
+<?php
+if (session()->get('applocale') == 'ar') {
+  $text = "text-align: right";
+} else {
+  $text = "text-align: left";
+}
+?>
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
   @include('front.search')
   <section class="inner_page">
@@ -33,7 +52,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
             @endif
             @if($content->type == 4)
             <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
-              <h4>{{$content->getTranslation('content_text',getCode())}}</h4>
+              <h4 style="{{$text}}">{!!$content->getTranslation('content_text',getCode())!!}</h4>
             </div>
             @endif
           @else

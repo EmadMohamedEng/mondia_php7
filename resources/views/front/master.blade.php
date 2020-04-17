@@ -54,6 +54,11 @@ $enable = get_setting('enable_testing');
   }
 </style>
 @endif
+<style>
+  .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item{
+    font-size: 14px;
+  }
+</style>
 <body>
   <main class="main_container">
     <header class="header w-100">
