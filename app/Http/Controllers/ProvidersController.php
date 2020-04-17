@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Validator;
-use App\Provider;
 use App\Language;
-class ProvidersController extends Controller {
+use App\Provider;
+use App\Exports\ProvidersExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Http\Request;
+use Validator;
 
-    public function __construct() {
+class ProvidersController extends Controller
+{
+
+    public function __construct()
+    {
 
         if (!file_exists('uploads/providers')) {
             mkdir('uploads/providers', 0777, true);
@@ -23,11 +27,12 @@ class ProvidersController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
+    public function index()
+    {
 
-        $providers = Provider::orderBy('index','asc')->get();
+        $providers = Provider::orderBy('index', 'asc')->get();
         $languages = Language::all();
-        return view('providers.index', compact('providers','languages'));
+        return view('providers.index', compact('providers', 'languages'));
     }
 
     /**
@@ -35,11 +40,12 @@ class ProvidersController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function create() {
+    public function create()
+    {
 
         $provider = null;
         $languages = Language::all();
-        return view('providers.form', compact('provider','languages'));
+        return view('providers.form', compact('provider', 'languages'));
     }
 
     /**
@@ -48,17 +54,18 @@ class ProvidersController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
 
         $validator = Validator::make($request->all(), [
-                    'title' => 'required',
+            'title' => 'required',
         ]);
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
         }
         $provider = new Provider();
         $input = $request->except('title');
-        if($request->has('image')){
+        if ($request->has('image')) {
             // $file = $request->file('image');
             // $destinationFolder = $this->destinationFolder;
             // $uniqID = uniqid();
@@ -67,8 +74,7 @@ class ProvidersController extends Controller {
             $provider->image = $request->image;
         }
 
-        foreach ($request->title as $key => $value)
-        {
+        foreach ($request->title as $key => $value) {
             $provider->setTranslation('title', $key, $value);
         }
         $provider->save();
@@ -82,7 +88,8 @@ class ProvidersController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
+    public function show($id)
+    {
         //
     }
 
@@ -92,11 +99,12 @@ class ProvidersController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id) {
+    public function edit($id)
+    {
 
         $provider = Provider::findOrFail($id);
         $languages = Language::all();
-        return view('providers.form', compact('provider','languages'));
+        return view('providers.form', compact('provider', 'languages'));
     }
 
     /**
@@ -106,10 +114,11 @@ class ProvidersController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id) {
+    public function update(Request $request, $id)
+    {
 
         $validator = Validator::make($request->all(), [
-                    'title' => 'required',
+            'title' => 'required',
         ]);
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
@@ -130,8 +139,7 @@ class ProvidersController extends Controller {
             $newProvider['image'] = $provider['image'];
         }
 
-        foreach ($request->title as $key => $value)
-        {
+        foreach ($request->title as $key => $value) {
             $provider->setTranslation('title', $key, $value);
         }
         $provider->update($newProvider);
@@ -145,38 +153,48 @@ class ProvidersController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id) {
+    public function destroy($id)
+    {
 
         $provider = Provider::find($id);
-        if (file_exists($provider['image']))
+        if (file_exists($provider['image'])) {
             unlink($provider['image']);
+        }
+
         Provider::destroy($id);
         \Session::flash('success', 'Provider Deleted Successfully');
         return redirect('providers');
     }
 
-    public function services($id) {
+    public function services($id)
+    {
 
         $services = \App\Service::where('provider_id', $id)->get();
-        $provider = $id ;
+        $provider = $id;
         $languages = Language::all();
-        return view('services.index', compact('services','provider','languages'));
+        return view('services.index', compact('services', 'provider', 'languages'));
     }
 
-    public function audios($id) {
+    public function audios($id)
+    {
         return view('audios.singleprovider');
     }
 
     public function order_provider(Request $request)
     {
-      $providers = Provider::all();
+        $providers = Provider::all();
 
-      foreach ($providers as $key => $value) {
-        $value->index  = (array_search($value->id,$request->list)) + 1;
-        $value->save();
-      }
+        foreach ($providers as $key => $value) {
+            $value->index = (array_search($value->id, $request->list)) + 1;
+            $value->save();
+        }
 
-      return 'ok';
+        return 'ok';
+    }
+
+    public function export() 
+    {
+        return Excel::download(new ProvidersExport, 'Providers.xlsx');
     }
 
 }

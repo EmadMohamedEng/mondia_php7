@@ -19,6 +19,7 @@
                     <div class="box-content">
                         <div class="btn-toolbar pull-right">
                             <div class="btn-group">
+                                <a class="btn btn-sm btn-primary" href="{{url('provider/export')}}">Export exccel sheet</a>
                                 <a class="btn btn-circle show-tooltip" title="" href="{{url('providers/create')}}" data-original-title="Add new record"><i class="fa fa-plus"></i></a>
                                 <?php
                                 $table_name = "providers";
