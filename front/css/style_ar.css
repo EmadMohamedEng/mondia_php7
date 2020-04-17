@@ -83,13 +83,6 @@ body {
 .main_container .content_carousel .content_carousel_head .btn_more {
   float: left;
 }
-.main_container .content_carousel .owl_content_one,
-.main_container .content_carousel .owl_content_two,
-.main_container .content_carousel .owl_content_three,
-.main_container .content_carousel .owl_content_four,
-.main_container .content_carousel .owl_content_five {
-  direction: rtl !important;
-}
 .main_container .mowdo3t_page {
   margin-top: 1.5rem;
 }
@@ -477,40 +470,6 @@ body {
   width: 100%;
   color: black;
 }
-.main_container .search_page {
-  margin: 2.5rem auto;
-  width: 75%;
-}
-.main_container .search_page .form_search {
-  position: relative;
-}
-.main_container .search_page .form_search .textbox {
-  outline: 0;
-  height: 3rem;
-  width: 100%;
-  padding: 0 1rem;
-  background: transparent;
-  border-bottom: 1px solid #adadad;
-  color: #000;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-}
-.main_container .search_page .form_search .btn_search {
-  color: #000;
-  opacity: 0.5;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-.main_container .search_page .form_search .btn_search:focus {
-  box-shadow: none;
-}
 .main_container .error_page {
   margin: 0 auto;
   width: 100%;
@@ -868,28 +827,6 @@ body {
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
   }
-  .main_container .search_page {
-    width: 92%;
-  }
-  .main_container .search_page .textbox {
-    text-align: center;
-  }
-  .main_container .error_page {
-    margin: 0 auto 0 0;
-  }
-  .main_container .error_page svg {
-    height: 85%;
-  }
-  .main_container .error_page .message-box {
-    font-size: 1.5rem;
-    top: -18rem;
-    left: 42%;
-  }
-  .main_container .error_page .buttons-con {
-    top: -1rem;
-    left: 50%;
-  }
-
   .loading-overlay .spinner-large {
     bottom: 30%;
     right: 31%;
@@ -1174,28 +1111,6 @@ body {
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
   }
-  .main_container .search_page {
-    width: 95%;
-  }
-  .main_container .search_page .textbox {
-    text-align: center;
-  }
-  .main_container .error_page {
-    margin: 2rem auto 0 0;
-  }
-  .main_container .error_page svg {
-    height: 100%;
-  }
-  .main_container .error_page .message-box {
-    font-size: 2rem;
-    top: -19rem;
-    left: 42%;
-  }
-  .main_container .error_page .buttons-con {
-    top: 3rem;
-    left: 50%;
-  }
-
   .loading-overlay .spinner-large {
     bottom: 30%;
     right: 31%;
@@ -1500,15 +1415,6 @@ body {
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
-  }
-  .main_container .search_page {
-    width: 95%;
-  }
-  .main_container .search_page .textbox {
-    text-align: center;
-  }
-  .main_container .error_page {
-    margin: 0 auto 0 0;
   }
   .main_container .error_page svg {
     height: 85%;
@@ -1830,12 +1736,6 @@ body {
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
-  }
-  .main_container .search_page {
-    width: 95%;
-  }
-  .main_container .search_page .textbox {
-    text-align: center;
   }
   .main_container .error_page {
     margin: 2rem auto 0 0;
@@ -2230,18 +2130,6 @@ body {
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
-  }
-  .main_container .search_page {
-    width: 95%;
-    margin: 2.5rem auto;
-  }
-  .main_container .search_page .btn_search {
-    font-size: 1.5rem;
-  }
-  .main_container .search_page .textbox {
-    text-align: center;
-    height: 4.5rem !important;
-    font-size: 2rem;
   }
   .main_container .error_page {
     margin: 2rem auto 0 0;
@@ -2656,18 +2544,6 @@ body {
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
-  }
-  .main_container .search_page {
-    width: 95%;
-    margin: 3.5rem auto;
-  }
-  .main_container .search_page .btn_search {
-    font-size: 2rem;
-  }
-  .main_container .search_page .textbox {
-    text-align: center;
-    height: 5.5rem !important;
-    font-size: 2.75rem;
   }
   .main_container .error_page {
     margin: 2rem auto 0 0;

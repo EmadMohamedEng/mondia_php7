@@ -111,9 +111,12 @@ body {
     .owl_content_one,
     .owl_content_two,
     .owl_content_three,
-    .owl_content_four,
+    .owl_content_four {
+      // direction: rtl !important;
+    }
+
     .owl_content_five {
-      direction: rtl !important;
+      // direction: ltr !important;
     }
   }
 
@@ -807,39 +810,13 @@ body {
 
   /* Start Search Page */
   .search_page {
-    margin: 2.5rem auto;
-    width: 75%;
-
     .form_search {
-      position: relative;
 
       .textbox {
-        outline: 0;
-        height: 3rem;
-        width: 100%;
-        padding: 0 1rem;
-        background: transparent;
-        border-bottom: 1px solid $grey_color;
-        color: $black_color;
-        border-top: 0;
-        border-right: 0;
-        border-left: 0;
       }
 
       .btn_search {
-        color: $black_color;
-        opacity: 0.5;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-
         &:focus {
-          box-shadow: none;
         }
       }
     }
@@ -1375,29 +1352,19 @@ body {
     }
 
     .search_page {
-      width: 92%;
-
       .textbox {
-        text-align: center;
       }
     }
 
     .error_page {
-      margin: 0 auto 0 0;
 
       svg {
-        height: 85%;
       }
 
       .message-box {
-        font-size: 1.5rem;
-        top: -18rem;
-        left: 42%;
       }
 
       .buttons-con {
-        top: -1rem;
-        left: 50%;
       }
     }
   }
@@ -1839,29 +1806,20 @@ body {
     }
 
     .search_page {
-      width: 95%;
 
       .textbox {
-        text-align: center;
       }
     }
 
     .error_page {
-      margin: 2rem auto 0 0;
 
       svg {
-        height: 100%;
       }
 
       .message-box {
-        font-size: 2rem;
-        top: -19rem;
-        left: 42%;
       }
 
       .buttons-con {
-        top: 3rem;
-        left: 50%;
       }
     }
   }
@@ -2334,16 +2292,12 @@ body {
     }
 
     .search_page {
-      width: 95%;
 
       .textbox {
-        text-align: center;
       }
     }
 
     .error_page {
-      margin: 0 auto 0 0;
-
       svg {
         height: 85%;
       }
@@ -2833,10 +2787,8 @@ body {
     }
 
     .search_page {
-      width: 95%;
 
       .textbox {
-        text-align: center;
       }
     }
 
@@ -3424,17 +3376,12 @@ body {
     }
 
     .search_page {
-      width: 95%;
-      margin: 2.5rem auto;
+
 
       .btn_search {
-        font-size: 1.5rem
       }
 
       .textbox {
-        text-align: center;
-        height: 4.5rem !important;
-        font-size: 2rem;
       }
     }
 
@@ -4048,17 +3995,10 @@ body {
     }
 
     .search_page {
-      width: 95%;
-      margin: 3.5rem auto;
-
       .btn_search {
-        font-size: 2rem
       }
 
       .textbox {
-        text-align: center;
-        height: 5.5rem !important;
-        font-size: 2.75rem;
       }
     }
 
