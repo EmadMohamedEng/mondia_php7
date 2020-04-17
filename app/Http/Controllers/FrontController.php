@@ -443,15 +443,19 @@ class FrontController extends Controller
 
     public function salah_time3(Request $request)
     {
-      if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
+      // if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
 
         $hjrri_date = $this->hjrri_date_cal();
         $prayer_times = $this->prayTimesCal_v2();
+
+        $fajr = strtotime($prayer_times['الفجر']);
+        $imsak = date("h:i a", strtotime('-10 minutes', $fajr));
+        $prayer_times['امساك'] = $imsak;
         return view('front.salah_time', compact('prayer_times', 'hjrri_date'));
 
-      }else{
-        return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
-      }
+      // }else{
+      //   return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
+      // }
 
 
 
