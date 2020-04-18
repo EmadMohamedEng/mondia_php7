@@ -112,50 +112,50 @@ $('.owl_content_three').owlCarousel({
   }
 });
 
-// $('.owl_content_four').owlCarousel({
-//   rtl: true,
-//   loop: true,
-//   margin: 5,
-//   autoplay: true,
-//   autoplayTimeout: 3000,
-//   animateOut: 'fadeOut',
-//   nav: false,
-//   dots: false,
-//   center: false,
-//   responsive: {
-//     0: {
-//       items: 3
-//     },
-//     600: {
-//       items: 3
-//     },
-//     1000: {
-//       items: 4
-//     }
-//   }
-// });
+$('.owl_content_four').owlCarousel({
+  rtl: true,
+  loop: true,
+  margin: 5,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  animateOut: 'fadeOut',
+  nav: false,
+  dots: false,
+  center: false,
+  responsive: {
+    0: {
+      items: 3
+    },
+    600: {
+      items: 3
+    },
+    1000: {
+      items: 4
+    }
+  }
+});
 
-// $('.owl_content_five').owlCarousel({
-//   rtl: true,
-//   loop: true,
-//   margin: 5,
-//   autoplay: true,
-//   autoplayTimeout: 3000,
-//   nav: false,
-//   dots: false,
-//   center: true,
-//   responsive: {
-//     0: {
-//       items: 3
-//     },
-//     600: {
-//       items: 3
-//     },
-//     1000: {
-//       items: 5
-//     }
-//   }
-// });
+$('.owl_content_five').owlCarousel({
+  rtl: true,
+  loop: true,
+  margin: 5,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  nav: false,
+  dots: false,
+  center: true,
+  responsive: {
+    0: {
+      items: 3
+    },
+    600: {
+      items: 3
+    },
+    1000: {
+      items: 5
+    }
+  }
+});
 
 $('#Calculate').click(function () {
   var GoldPrice = $('#txtGoldPrice').val();
