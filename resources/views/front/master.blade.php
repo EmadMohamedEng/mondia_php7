@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
   @endif
 
-  @if(app()->getLocale() == 'ar')
+  @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
   <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
   @endif
 
@@ -124,10 +124,11 @@ $enable = get_setting('enable_testing');
                   </div>
 
                   <div class="col-6 p-0">
-                    <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{getCode() == 'ar' ? 'عربى' : 'English'}}</a>
+                    <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
                     <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
-                      <a class="dropdown-item dropdown-item2 text-capitalize" href="{{url('lang/en')}}">English</a>
-                      <a class="dropdown-item dropdown-item2 text-capitalize" href="{{url('lang/ar')}}">عربى</a>
+                      @foreach(Config::get('languages') as $key=>$lang)
+                      <a class="dropdown-item dropdown-item2 text-capitalize" href="{{url('lang/'.$key)}}">{{$lang}}</a>
+                      @endforeach
                     </div>
                   </div>
                 </div>

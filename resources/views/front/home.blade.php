@@ -291,10 +291,11 @@
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
             </a>
-
+            @if($service->provider_id != 27)
             <div class="card-body">
                 <h4 class="card-title text-capitalize">{{$service->getTranslation('title',getCode())}}</h4>
             </div>
+            @endif
             </div>
         </div>
         @endforeach
