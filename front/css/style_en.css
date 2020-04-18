@@ -852,7 +852,7 @@ select:active {
 }
 .main_container .sebha_page {
   width: 70%;
-  margin: 1.5rem auto;
+  margin: 3.5rem auto;
 }
 .main_container .sebha_page .display {
   text-align: center;
@@ -879,14 +879,13 @@ select:active {
   background-clip: content-box, border-box;
 }
 .main_container .sebha_page .display .btn-bar button {
-  width: 155px;
-  height: 50px;
+  width: 65%;
+  height: 4.5rem;
   display: block;
   color: black;
   font-weight: bold;
   border-radius: 4px;
-  transition: all 0.3s ease;
-  margin: 15px auto;
+  margin: 2rem auto;
   font-size: 27px;
   border: 2px solid;
   border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
@@ -897,6 +896,17 @@ select:active {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.main_container .sebha_page .display .btn-bar button i {
+  font-size: 2.75rem;
+}
+.main_container .sebha_page .display .btn-bar button:focus {
+  outline: 0;
 }
 .main_container .sebha_page .modal.show .modal-dialog {
   margin-top: 80px;
@@ -1378,6 +1388,9 @@ select:active {
     line-height: 3rem;
     font-size: 1rem;
   }
+  .main_container .sebha_page .display .btn-bar button {
+    width: 100%;
+  }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
     margin-top: 0;
@@ -1714,6 +1727,9 @@ select:active {
     padding-right: 8px;
     line-height: 3rem;
     font-size: 1.09rem;
+  }
+  .main_container .sebha_page .display .btn-bar button {
+    width: 100%;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -2054,6 +2070,9 @@ select:active {
     padding-right: 8px;
     line-height: 3rem;
     font-size: 1.15rem;
+  }
+  .main_container .sebha_page .display .btn-bar button {
+    width: 100%;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -2422,6 +2441,9 @@ select:active {
     padding-right: 8px;
     line-height: 3rem;
     font-size: 1.25rem;
+  }
+  .main_container .sebha_page .display .btn-bar button {
+    width: 100%;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -2942,7 +2964,7 @@ select:active {
     font-size: 2rem;
   }
   .main_container .sebha_page {
-    margin: 3.5rem auto;
+    margin: 11rem auto;
   }
   .main_container .sebha_page .display #tally {
     width: 200px;
@@ -2954,9 +2976,8 @@ select:active {
     margin-top: 3rem;
   }
   .main_container .sebha_page .display .btn-bar button {
-    width: 250px;
-    height: 75px;
-    font-size: 38px;
+    width: 100%;
+    height: 6.5rem;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -3435,7 +3456,7 @@ select:active {
     font-size: 2.85rem;
   }
   .main_container .sebha_page {
-    margin: 3.5rem auto;
+    margin: 11rem auto;
   }
   .main_container .sebha_page .display #tally {
     width: 200px;
@@ -3447,9 +3468,11 @@ select:active {
     margin-top: 3rem;
   }
   .main_container .sebha_page .display .btn-bar button {
-    width: 250px;
-    height: 75px;
-    font-size: 38px;
+    width: 100%;
+    height: 7.5rem;
+  }
+  .main_container .sebha_page .display .btn-bar button i {
+    font-size: 3.75 rem;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
