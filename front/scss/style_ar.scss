@@ -122,118 +122,6 @@ body {
 
   /* End List Page */
 
-  /* Start mowdo3t Page */
-  .mowdo3t_page {
-    margin-top: 1.5rem;
-
-    .content_carousel_head {
-      .link_title {
-        color: $black_color;
-
-        h6 {
-          margin-bottom: 1rem;
-        }
-      }
-    }
-
-    .item {
-      .card {
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-        height: 16rem;
-
-        .owl_content_img {
-          img {
-            height: 9.375rem;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-          }
-        }
-
-        .card-body {
-          padding: 1.25rem 0.25rem;
-
-          .card-title {
-            text-align: center;
-            font-size: 1.05rem;
-            line-height: 3.5rem;
-          }
-
-          .card-text {
-            i {
-              color: $grey_color;
-            }
-          }
-        }
-      }
-
-    }
-  }
-
-  /* End mowdo3t Page */
-
-  /* Start shakih Page */
-  .shakih_page {
-    margin-top: 1.5rem;
-
-    .content_carousel_head {
-      margin-top: 2rem;
-
-      .link_title {
-        color: $black_color;
-      }
-
-      .btn_more {
-        // background: $bg_color;
-        color: $white_color;
-        border: 0;
-        float: right;
-        padding: 0.25rem .5rem;
-        margin-bottom: 1rem;
-      }
-    }
-
-    .item {
-      .card {
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-        height: 16rem;
-
-        .owl_content_img {
-          img {
-            height: 9.375rem;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-          }
-        }
-
-        .card-body {
-          padding: 1.25rem 0.25rem;
-
-          .card-title {
-            text-align: center;
-            font-size: 1.05rem;
-            line-height: 3.5rem;
-          }
-
-          .card-text {
-            i {
-              color: $grey_color;
-            }
-          }
-        }
-      }
-
-    }
-  }
-
-  /* End shakih Page */
 
   .list_page {
     .content_carousel_head {
@@ -243,7 +131,6 @@ body {
 
   /* Start Inner Page */
   .inner_page {
-
     .cover {
       text-align: right;
 

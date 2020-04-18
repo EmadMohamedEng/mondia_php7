@@ -388,7 +388,7 @@ select:active {
   height: 16rem;
 }
 .main_container .list_page .item .card .owl_content_img img {
-  height: 9.375rem;
+  height: 11rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -1264,10 +1264,10 @@ select:active {
     font-size: 1rem;
   }
   .main_container .list_page .item .card {
-    height: 13rem;
+    height: 14.5rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 7.188rem;
+    height: 9.875rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -1601,10 +1601,10 @@ select:active {
     font-size: 1rem;
   }
   .main_container .list_page .item .card {
-    height: 13rem;
+    height: 16rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 7.188rem;
+    height: 11.25rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -1933,10 +1933,10 @@ select:active {
     font-size: 1rem;
   }
   .main_container .list_page .item .card {
-    height: 13rem;
+    height: 16.5rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 7.188rem;
+    height: 11.6rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -2301,10 +2301,10 @@ select:active {
     font-size: 1.25rem;
   }
   .main_container .list_page .item .card {
-    height: 13rem;
+    height: 17.5rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 7.188rem;
+    height: 12.719rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -2791,10 +2791,10 @@ select:active {
     font-weight: bold;
   }
   .main_container .list_page .item .card {
-    height: 22.188rem;
+    height: 23.5rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 15.625rem;
+    height: 17.625rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -3280,10 +3280,10 @@ select:active {
     font-weight: bold;
   }
   .main_container .list_page .item .card {
-    height: 27.188rem;
+    height: 28.75rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 20.938rem;
+    height: 21.25rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
