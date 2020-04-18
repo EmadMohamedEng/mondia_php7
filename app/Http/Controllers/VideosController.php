@@ -315,7 +315,11 @@ class VideosController extends Controller
             return redirect("services/$request->service_id/videos");
         }
 
-        return redirect('videos');
+
+
+        return redirect("services/$video->service_id/videos");
+      //  return redirect('videos');
+        //return  redirect()->back();
     }
 
     /**
