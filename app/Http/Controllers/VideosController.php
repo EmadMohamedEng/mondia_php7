@@ -189,6 +189,7 @@ class VideosController extends Controller
                 $video->setTranslation('content_text', $key, $value);
             }
         }
+
         $video->save();
         \Session::flash('success', 'Content Added successfully');
         if (isset($request->service)) {
