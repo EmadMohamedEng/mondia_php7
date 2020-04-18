@@ -110,7 +110,7 @@ class FrontController extends Controller
         });
       }
 
-      $contents = $contents->orderBy('contents.index','asc')->limit(get_pageLength())->get();
+      $contents = $contents->groupBy('contents.id')->orderBy('contents.index','asc')->limit(get_pageLength())->get();
 
       if(!request()->has('OpID') && !get_setting('enable_testing')){
         return view('errors.404');
@@ -137,7 +137,7 @@ class FrontController extends Controller
         $contents = $contents->where('contents.title', 'like', '%' . $request->search . '%');
       }
 
-      $contents = $contents->orderBy('contents.index','asc')->offset($request->start)->limit(get_pageLength())->get();
+      $contents = $contents->groupBy('contents.id')->orderBy('contents.index','asc')->offset($request->start)->limit(get_pageLength())->get();
 
       $view = view('front.load_content', compact('contents'))->render();
       return Response(array('html' => $view));
