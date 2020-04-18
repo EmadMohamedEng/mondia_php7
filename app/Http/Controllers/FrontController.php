@@ -1221,6 +1221,10 @@ class FrontController extends Controller
           $current_lang ="en";
         }
 
+        if( app()->getLocale() == "ur"){
+          $current_lang ="en";
+        }
+
 
         $x = 12;
 
