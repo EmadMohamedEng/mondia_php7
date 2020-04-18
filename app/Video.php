@@ -12,7 +12,7 @@ class Video extends Model {
     protected $table = 'contents';
 
     protected $fillable = [
-        'service_id', 'title', 'video','type' ,'image_preview','content_text'
+        'service_id', 'title', 'video','type' ,'image_preview','content_text','index'
     ];
 
     public function getImagePreviewAttribute($value)

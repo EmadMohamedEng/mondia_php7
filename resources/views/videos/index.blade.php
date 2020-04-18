@@ -41,6 +41,7 @@
                                         <th>id</th>
                                         <th>Service</th>
                                         <th>Title</th>
+                                        <th>index2</th>
                                         <th>URl</th>
                                         <th>Action</th>
                                     </tr>
@@ -93,6 +94,7 @@
                 {data: 'id'},
                 {data: 'service',name:'service'},  // here to can search with product title that FK
                 {data: 'title'},
+                {data: 'index2'},
                 {data: 'url',name:'url'},
                 {data: 'action', searchable: false}
 

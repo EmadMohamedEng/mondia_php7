@@ -35,7 +35,7 @@ class VideosController extends Controller
     public function index()
     {
 
-        $videos = Video::all();
+       $videos = Video::all();
         $service = null;
         return view('videos.index', compact('videos', 'service'));
     }
@@ -44,7 +44,7 @@ class VideosController extends Controller
     {
         $videos = Video::query();
         if ($request->has('service_id') && $request->service_id != '') {
-            $videos = $videos->where('service_id', $request->service_id)->orderBy("created_at", "desc");
+            $videos = $videos->where('service_id', $request->service_id);
         }
         $videos = $videos->orderBy('index','asc')->get();
         $service = null;
@@ -69,6 +69,11 @@ class VideosController extends Controller
                 return $str;
 
             })
+
+
+            ->addColumn('index2', function (Video $video) {
+              return $video->index;
+          })
             ->addColumn('url', function (Video $video) {
                 return '<td>
                             <input type="text" id="url_h' . $video->id . '"  value="' . url('view_content/' . $video->id) . '">
