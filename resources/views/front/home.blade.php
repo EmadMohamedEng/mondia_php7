@@ -46,7 +46,7 @@
         @foreach($health as $content)
         <div class="item">
             <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
-            <img class="m-auto d-block" src="https://islamic.digizone.com.kw/uploads/services/5e9b28180b947.jpg" alt="banner_slider">
+            <img class="m-auto d-block" src="https://islamic.digizone.com.kw/uploads/services/5e9b36be810e5.jpg" alt="banner_slider">
             </a>
 
             <div class="btn_subscribe w-100">
