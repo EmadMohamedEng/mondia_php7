@@ -247,16 +247,20 @@ select:active {
   padding: 0.25rem 0.5rem;
   margin-bottom: 1rem;
 }
+.main_container .content_carousel .owl_content_one .item {
+  width: 65%;
+  margin: 0 auto;
+}
 .main_container .content_carousel .owl_content_one .item .card {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  height: 16rem;
+  height: 24.625rem;
 }
 .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-  height: 9.375rem;
+  height: 20rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -384,7 +388,7 @@ select:active {
   height: 16rem;
 }
 .main_container .list_page .item .card .owl_content_img img {
-  height: 9.375rem;
+  height: 11rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -477,6 +481,9 @@ select:active {
 }
 .main_container .inner_page .cover {
   position: relative;
+}
+.main_container .inner_page .cover video {
+  padding: 0 2rem;
 }
 .main_container .inner_page .cover img {
   height: 55rem;
@@ -845,7 +852,7 @@ select:active {
 }
 .main_container .sebha_page {
   width: 70%;
-  margin: 1.5rem auto;
+  margin: 3.5rem auto;
 }
 .main_container .sebha_page .display {
   text-align: center;
@@ -872,14 +879,13 @@ select:active {
   background-clip: content-box, border-box;
 }
 .main_container .sebha_page .display .btn-bar button {
-  width: 155px;
-  height: 50px;
+  width: 65%;
+  height: 4.5rem;
   display: block;
   color: black;
   font-weight: bold;
   border-radius: 4px;
-  transition: all 0.3s ease;
-  margin: 15px auto;
+  margin: 2rem auto;
   font-size: 27px;
   border: 2px solid;
   border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
@@ -890,6 +896,17 @@ select:active {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.main_container .sebha_page .display .btn-bar button i {
+  font-size: 2.75rem;
+}
+.main_container .sebha_page .display .btn-bar button:focus {
+  outline: 0;
 }
 .main_container .sebha_page .modal.show .modal-dialog {
   margin-top: 80px;
@@ -1235,6 +1252,15 @@ select:active {
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
     top: 92.5%;
   }
+  .main_container .content_carousel .owl_content_one .item {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_one .item .card {
+    height: 15rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
+    height: 10rem;
+  }
   .main_container .content_carousel .item .card {
     height: 13rem;
   }
@@ -1248,10 +1274,10 @@ select:active {
     font-size: 1rem;
   }
   .main_container .list_page .item .card {
-    height: 13rem;
+    height: 14.5rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 7.188rem;
+    height: 9.875rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -1273,6 +1299,13 @@ select:active {
   }
   .main_container .inner_page {
     margin-top: 0;
+  }
+  .main_container .inner_page .cover h4 {
+    font-size: 1.15rem;
+    padding: 0 0.35rem;
+  }
+  .main_container .inner_page .cover video {
+    padding: 0 0;
   }
   .main_container .inner_page .cover img {
     width: 100%;
@@ -1354,6 +1387,9 @@ select:active {
     padding-right: 8px;
     line-height: 3rem;
     font-size: 1rem;
+  }
+  .main_container .sebha_page .display .btn-bar button {
+    width: 100%;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -1556,6 +1592,15 @@ select:active {
     padding: 0.25rem 0.75rem;
     font-size: 1.25rem;
   }
+  .main_container .content_carousel .owl_content_one .item {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_one .item .card {
+    height: 15rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
+    height: 10rem;
+  }
   .main_container .content_carousel .item .card {
     height: 13rem;
   }
@@ -1569,10 +1614,10 @@ select:active {
     font-size: 1rem;
   }
   .main_container .list_page .item .card {
-    height: 13rem;
+    height: 16rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 7.188rem;
+    height: 11.25rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -1594,6 +1639,13 @@ select:active {
   }
   .main_container .inner_page {
     margin-top: 0;
+  }
+  .main_container .inner_page .cover h4 {
+    font-size: 1.35rem;
+    padding: 0 0.35rem;
+  }
+  .main_container .inner_page .cover video {
+    padding: 0 0;
   }
   .main_container .inner_page .cover img {
     width: 100%;
@@ -1675,6 +1727,9 @@ select:active {
     padding-right: 8px;
     line-height: 3rem;
     font-size: 1.09rem;
+  }
+  .main_container .sebha_page .display .btn-bar button {
+    width: 100%;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -1872,6 +1927,15 @@ select:active {
     top: 93.5%;
     font-size: 1rem;
   }
+  .main_container .content_carousel .owl_content_one .item {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_one .item .card {
+    height: 16.5rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
+    height: 11.5rem;
+  }
   .main_container .content_carousel .item .card {
     height: 13rem;
   }
@@ -1885,10 +1949,10 @@ select:active {
     font-size: 1rem;
   }
   .main_container .list_page .item .card {
-    height: 13rem;
+    height: 16.5rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 7.188rem;
+    height: 11.6rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -1914,6 +1978,13 @@ select:active {
   .main_container .inner_page .section_content .image_inner {
     height: 100px;
     width: 100px;
+  }
+  .main_container .inner_page .cover h4 {
+    font-size: 1.35rem;
+    padding: 0 0.35rem;
+  }
+  .main_container .inner_page .cover video {
+    padding: 0 0;
   }
   .main_container .inner_page .cover img {
     width: 100%;
@@ -1999,6 +2070,9 @@ select:active {
     padding-right: 8px;
     line-height: 3rem;
     font-size: 1.15rem;
+  }
+  .main_container .sebha_page .display .btn-bar button {
+    width: 100%;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -2224,6 +2298,15 @@ select:active {
     padding: 0.25rem 0.75rem;
     font-size: 1.25rem;
   }
+  .main_container .content_carousel .owl_content_one .item {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_one .item .card {
+    height: 16.5rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
+    height: 11.5rem;
+  }
   .main_container .content_carousel .item .card {
     height: 13rem;
   }
@@ -2237,10 +2320,10 @@ select:active {
     font-size: 1.25rem;
   }
   .main_container .list_page .item .card {
-    height: 13rem;
+    height: 17.5rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 7.188rem;
+    height: 12.719rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -2266,6 +2349,13 @@ select:active {
   .main_container .inner_page .section_content .image_inner {
     height: 110px;
     width: 110px;
+  }
+  .main_container .inner_page .cover h4 {
+    font-size: 1.5rem;
+    padding: 0 0.35rem;
+  }
+  .main_container .inner_page .cover video {
+    padding: 0 0;
   }
   .main_container .inner_page .cover img {
     width: 100%;
@@ -2351,6 +2441,9 @@ select:active {
     padding-right: 8px;
     line-height: 3rem;
     font-size: 1.25rem;
+  }
+  .main_container .sebha_page .display .btn-bar button {
+    width: 100%;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -2600,27 +2693,130 @@ select:active {
     padding: 0.25rem 1rem;
     font-size: 1.85rem;
   }
-  .main_container .content_carousel .item .card {
-    height: 22.188rem;
+  .main_container .content_carousel .owl_content_one .item .card {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 23rem;
   }
-  .main_container .content_carousel .item .card .owl_content_img img {
-    height: 15.625rem;
+  .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
+    height: 17rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
-  .main_container .content_carousel .item .card .card-body {
-    padding: 1rem 0.25rem;
+  .main_container .content_carousel .owl_content_one .item .card .card-body {
+    padding: 1.25rem 0.25rem;
   }
-  .main_container .content_carousel .item .card .card-body .card-title {
-    font-size: 1.65rem;
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 1.9rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-text i {
+    color: #adadad;
+  }
+  .main_container .content_carousel .owl_content_two .item .card {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 16rem;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
+    height: 9.375rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .card-body {
+    padding: 1.25rem 0.25rem;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .card-body .card-text i {
+    color: #adadad;
+  }
+  .main_container .content_carousel .owl_content_three .item .card {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 16rem;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+    height: 9.375rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .card-body {
+    padding: 1.25rem 0.25rem;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .card-body .card-text i {
+    color: #adadad;
+  }
+  .main_container .content_carousel .owl_content_four .item .card {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 16rem;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .owl_content_img img {
+    height: 9.375rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .card-body {
+    padding: 1.25rem 0.25rem;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .card-body .card-text i {
+    color: #adadad;
+  }
+  .main_container .content_carousel .owl_content_five .item .card {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 16rem;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 9.375rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .card-body {
+    padding: 1.25rem 0.25rem;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .card-body .card-text i {
+    color: #adadad;
   }
   .main_container .list_page .content_carousel_head .link_title h6 {
     font-size: 2rem;
     font-weight: bold;
   }
   .main_container .list_page .item .card {
-    height: 22.188rem;
+    height: 23.5rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 15.625rem;
+    height: 17.625rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -2646,6 +2842,13 @@ select:active {
   .main_container .inner_page .section_content .image_inner {
     height: 170px;
     width: 170px;
+  }
+  .main_container .inner_page .cover h4 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+  .main_container .inner_page .cover video {
+    padding: 0 0;
   }
   .main_container .inner_page .cover img {
     width: 100%;
@@ -2761,7 +2964,7 @@ select:active {
     font-size: 2rem;
   }
   .main_container .sebha_page {
-    margin: 3.5rem auto;
+    margin: 11rem auto;
   }
   .main_container .sebha_page .display #tally {
     width: 200px;
@@ -2773,9 +2976,8 @@ select:active {
     margin-top: 3rem;
   }
   .main_container .sebha_page .display .btn-bar button {
-    width: 250px;
-    height: 75px;
-    font-size: 38px;
+    width: 100%;
+    height: 6.5rem;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
@@ -2996,7 +3198,7 @@ select:active {
   }
   .main_container .nav_nav .navbar_ul {
     background-color: #FFF;
-    width: 23rem;
+    width: 31rem;
     height: 100vh;
     padding: 0 0;
     overflow-y: scroll;
@@ -3056,6 +3258,29 @@ select:active {
     padding: 0.25rem 1.5rem;
     font-size: 2.5rem;
   }
+  .main_container .content_carousel .owl_content_one .item .card {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 33rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
+    height: 26rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .card-body {
+    padding: 1.25rem 0.25rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 2.25rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-text i {
+    color: #adadad;
+  }
   .main_container .content_carousel .item .card {
     height: 27.188rem;
   }
@@ -3076,10 +3301,10 @@ select:active {
     font-weight: bold;
   }
   .main_container .list_page .item .card {
-    height: 27.188rem;
+    height: 28.75rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 20.938rem;
+    height: 21.25rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -3105,6 +3330,13 @@ select:active {
   .main_container .inner_page .section_content .image_inner {
     height: 200px;
     width: 200px;
+  }
+  .main_container .inner_page .cover h4 {
+    font-size: 2.35rem;
+    padding: 0 1rem;
+  }
+  .main_container .inner_page .cover video {
+    padding: 0 0;
   }
   .main_container .inner_page .cover img {
     width: 100%;
@@ -3224,7 +3456,7 @@ select:active {
     font-size: 2.85rem;
   }
   .main_container .sebha_page {
-    margin: 3.5rem auto;
+    margin: 11rem auto;
   }
   .main_container .sebha_page .display #tally {
     width: 200px;
@@ -3236,9 +3468,11 @@ select:active {
     margin-top: 3rem;
   }
   .main_container .sebha_page .display .btn-bar button {
-    width: 250px;
-    height: 75px;
-    font-size: 38px;
+    width: 100%;
+    height: 7.5rem;
+  }
+  .main_container .sebha_page .display .btn-bar button i {
+    font-size: 3.75 rem;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;

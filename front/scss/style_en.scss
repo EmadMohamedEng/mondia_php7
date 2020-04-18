@@ -237,7 +237,7 @@ select {
             -moz-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             -o-transform: translate(-50%, -50%);
-}
+          }
         }
       }
     }
@@ -279,17 +279,20 @@ select {
 
     .owl_content_one {
       .item {
+        width: 65%;
+        margin: 0 auto;
+
         .card {
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
+          height: 24.625rem;
 
           .owl_content_img {
             img {
-              height: 9.375rem;
+              height: 20rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -492,7 +495,7 @@ select {
 
         .owl_content_img {
           img {
-            height: 9.375rem;
+            height: 11rem;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
           }
@@ -639,6 +642,10 @@ select {
 
     .cover {
       position: relative;
+
+      video {
+        padding: 0 2rem;
+      }
 
       img {
         height: 55rem;
@@ -1156,7 +1163,7 @@ select {
   /* Start Sebha Page */
   .sebha_page {
     width: 70%;
-    margin: 1.5rem auto;
+    margin: 3.5rem auto;
 
     .display {
       text-align: center;
@@ -1187,14 +1194,13 @@ select {
 
       .btn-bar {
         button {
-          width: 155px;
-          height: 50px;
+          width: 65%;
+          height: 4.5rem;
           display: block;
           color: black;
           font-weight: bold;
           border-radius: 4px;
-          transition: all 0.3s ease;
-          margin: 15px auto;
+          margin: 2rem auto;
           font-size: 27px;
           border: 2px solid;
           border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
@@ -1205,6 +1211,19 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
+          transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+
+          i {
+            font-size: 2.75rem;
+          }
+
+          &:focus {
+            outline: 0;
+          }
         }
       }
     }
@@ -1290,7 +1309,7 @@ select {
             -moz-transition: all .4s ease-in-out;
             -ms-transition: all .4s ease-in-out;
             -o-transition: all .4s ease-in-out;
-}
+          }
 
           &:focus+.bord {
             width: 100%;
@@ -1634,6 +1653,22 @@ select {
     }
 
     .content_carousel {
+      .owl_content_one {
+        .item {
+          width: 100%;
+
+          .card {
+            height: 15rem;
+
+            .owl_content_img {
+              img {
+                height: 10rem;
+              }
+            }
+          }
+        }
+      }
+
       .item {
         .card {
           height: 13rem;
@@ -1658,11 +1693,11 @@ select {
     .list_page {
       .item {
         .card {
-          height: 13rem;
+          height: 14.5rem;
 
           .owl_content_img {
             img {
-              height: 7.188rem;
+              height: 9.875rem;
             }
           }
 
@@ -1703,6 +1738,15 @@ select {
       margin-top: 0;
 
       .cover {
+        h4 {
+          font-size: 1.15rem;
+          padding: 0 0.35rem;
+        }
+
+        video {
+          padding: 0 0;
+        }
+
         img {
           width: 100%;
           height: 12.813rem;
@@ -1831,6 +1875,14 @@ select {
     }
 
     .sebha_page {
+      .display {
+        .btn-bar {
+          button {
+            width: 100%;
+          }
+        }
+      }
+
       #sebhaModal {
         .modal-dialog {
           position: relative;
@@ -2118,6 +2170,22 @@ select {
         }
       }
 
+      .owl_content_one {
+        .item {
+          width: 100%;
+
+          .card {
+            height: 15rem;
+
+            .owl_content_img {
+              img {
+                height: 10rem;
+              }
+            }
+          }
+        }
+      }
+
       .item {
         .card {
           height: 13rem;
@@ -2142,11 +2210,11 @@ select {
     .list_page {
       .item {
         .card {
-          height: 13rem;
+          height: 16rem;
 
           .owl_content_img {
             img {
-              height: 7.188rem;
+              height: 11.25rem;
             }
           }
 
@@ -2187,6 +2255,15 @@ select {
       margin-top: 0;
 
       .cover {
+        h4 {
+          font-size: 1.35rem;
+          padding: 0 0.35rem;
+        }
+
+        video {
+          padding: 0 0;
+        }
+
         img {
           width: 100%;
           height: 12.813rem;
@@ -2315,6 +2392,14 @@ select {
     }
 
     .sebha_page {
+      .display {
+        .btn-bar {
+          button {
+            width: 100%;
+          }
+        }
+      }
+
       #sebhaModal {
         .modal-dialog {
           position: relative;
@@ -2588,6 +2673,22 @@ select {
     }
 
     .content_carousel {
+      .owl_content_one {
+        .item {
+          width: 100%;
+
+          .card {
+            height: 16.5rem;
+
+            .owl_content_img {
+              img {
+                height: 11.5rem;
+              }
+            }
+          }
+        }
+      }
+
       .item {
         .card {
           height: 13rem;
@@ -2612,11 +2713,11 @@ select {
     .list_page {
       .item {
         .card {
-          height: 13rem;
+          height: 16.5rem;
 
           .owl_content_img {
             img {
-              height: 7.188rem;
+              height: 11.6rem;
             }
           }
 
@@ -2664,6 +2765,15 @@ select {
       }
 
       .cover {
+        h4 {
+          font-size: 1.35rem;
+          padding: 0 0.35rem;
+        }
+
+        video {
+          padding: 0 0;
+        }
+
         img {
           width: 100%;
           height: 12.813rem;
@@ -2796,6 +2906,14 @@ select {
     }
 
     .sebha_page {
+      .display {
+        .btn-bar {
+          button {
+            width: 100%;
+          }
+        }
+      }
+
       #sebhaModal {
         .modal-dialog {
           position: relative;
@@ -3110,6 +3228,22 @@ select {
         }
       }
 
+      .owl_content_one {
+        .item {
+          width: 100%;
+
+          .card {
+            height: 16.5rem;
+
+            .owl_content_img {
+              img {
+                height: 11.5rem;
+              }
+            }
+          }
+        }
+      }
+
       .item {
         .card {
           height: 13rem;
@@ -3134,11 +3268,11 @@ select {
     .list_page {
       .item {
         .card {
-          height: 13rem;
+          height: 17.5rem;
 
           .owl_content_img {
             img {
-              height: 7.188rem;
+              height: 12.719rem;
             }
           }
 
@@ -3186,6 +3320,15 @@ select {
       }
 
       .cover {
+        h4 {
+          font-size: 1.5rem;
+          padding: 0 0.35rem;
+        }
+
+        video {
+          padding: 0 0;
+        }
+
         img {
           width: 100%;
           height: 12.813rem;
@@ -3318,6 +3461,14 @@ select {
     }
 
     .sebha_page {
+      .display {
+        .btn-bar {
+          button {
+            width: 100%;
+          }
+        }
+      }
+
       #sebhaModal {
         .modal-dialog {
           position: relative;
@@ -3657,23 +3808,188 @@ select {
         }
       }
 
-      .item {
-        .card {
-          height: 22.188rem;
+      .owl_content_one {
+        .item {
+          .card {
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            height: 23rem;
 
-          .owl_content_img {
-            img {
-              height: 15.625rem;
+            .owl_content_img {
+              img {
+                height: 17rem;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              }
+            }
+
+            .card-body {
+              padding: 1.25rem 0.25rem;
+
+              .card-title {
+                text-align: center;
+                font-size: 1.9rem;
+              }
+
+              .card-text {
+                i {
+                  color: $grey_color;
+                }
+              }
             }
           }
 
-          .card-body {
-            padding: 1rem 0.25rem;
+        }
+      }
 
-            .card-title {
-              font-size: 1.65rem;
+      .owl_content_two {
+        .item {
+          .card {
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            height: 16rem;
+
+            .owl_content_img {
+              img {
+                height: 9.375rem;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              }
+            }
+
+            .card-body {
+              padding: 1.25rem 0.25rem;
+
+              .card-title {
+                text-align: center;
+                font-size: 1.05rem;
+              }
+
+              .card-text {
+                i {
+                  color: $grey_color;
+                }
+              }
             }
           }
+
+        }
+      }
+
+      .owl_content_three {
+        .item {
+          .card {
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            height: 16rem;
+
+            .owl_content_img {
+              img {
+                height: 9.375rem;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              }
+            }
+
+            .card-body {
+              padding: 1.25rem 0.25rem;
+
+              .card-title {
+                text-align: center;
+                font-size: 1.05rem;
+              }
+
+              .card-text {
+                i {
+                  color: $grey_color;
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      .owl_content_four {
+        .item {
+          .card {
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            height: 16rem;
+
+            .owl_content_img {
+              img {
+                height: 9.375rem;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              }
+            }
+
+            .card-body {
+              padding: 1.25rem 0.25rem;
+
+              .card-title {
+                text-align: center;
+                font-size: 1.05rem;
+              }
+
+              .card-text {
+                i {
+                  color: $grey_color;
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      .owl_content_five {
+        .item {
+          .card {
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            height: 16rem;
+
+            .owl_content_img {
+              img {
+                height: 9.375rem;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              }
+            }
+
+            .card-body {
+              padding: 1.25rem 0.25rem;
+
+              .card-title {
+                text-align: center;
+                font-size: 1.05rem;
+              }
+
+              .card-text {
+                i {
+                  color: $grey_color;
+                }
+              }
+            }
+          }
+
         }
       }
     }
@@ -3690,11 +4006,11 @@ select {
 
       .item {
         .card {
-          height: 22.188rem;
+          height: 23.5rem;
 
           .owl_content_img {
             img {
-              height: 15.625rem;
+              height: 17.625rem;
             }
           }
 
@@ -3742,6 +4058,15 @@ select {
       }
 
       .cover {
+        h4 {
+          font-size: 2rem;
+          padding: 0 1rem;
+        }
+
+        video {
+          padding: 0 0;
+        }
+
         img {
           width: 100%;
           height: 25rem;
@@ -3911,7 +4236,7 @@ select {
     }
 
     .sebha_page {
-      margin: 3.5rem auto;
+      margin: 11rem auto;
 
       .display {
         #tally {
@@ -3925,9 +4250,8 @@ select {
           margin-top: 3rem;
 
           button {
-            width: 250px;
-            height: 75px;
-            font-size: 38px;
+            width: 100%;
+            height: 6.5rem;
           }
         }
       }
@@ -4220,7 +4544,7 @@ select {
 
       .navbar_ul {
         background-color: $white_color;
-        width: 23rem;
+        width: 31rem;
         height: 100vh;
         padding: 0 0;
         overflow-y: scroll;
@@ -4311,6 +4635,43 @@ select {
         }
       }
 
+      .owl_content_one {
+        .item {
+          .card {
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            height: 33rem;
+
+            .owl_content_img {
+              img {
+                height: 26rem;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              }
+            }
+
+            .card-body {
+              padding: 1.25rem 0.25rem;
+
+              .card-title {
+                text-align: center;
+                font-size: 2.25rem;
+              }
+
+              .card-text {
+                i {
+                  color: $grey_color;
+                }
+              }
+            }
+          }
+
+        }
+      }
+
       .item {
         .card {
           height: 27.188rem;
@@ -4346,11 +4707,11 @@ select {
 
       .item {
         .card {
-          height: 27.188rem;
+          height: 28.75rem;
 
           .owl_content_img {
             img {
-              height: 20.938rem;
+              height: 21.25rem;
             }
           }
 
@@ -4398,6 +4759,15 @@ select {
       }
 
       .cover {
+        h4 {
+          font-size: 2.35rem;
+          padding: 0 1rem;
+        }
+
+        video {
+          padding: 0 0;
+        }
+
         img {
           width: 100%;
           height: 35.938rem;
@@ -4572,7 +4942,7 @@ select {
     }
 
     .sebha_page {
-      margin: 3.5rem auto;
+      margin: 11rem auto;
 
       .display {
         #tally {
@@ -4586,9 +4956,12 @@ select {
           margin-top: 3rem;
 
           button {
-            width: 250px;
-            height: 75px;
-            font-size: 38px;
+            width: 100%;
+            height: 7.5rem;
+
+            i {
+              font-size: 3.75 rem;
+            }
           }
         }
       }
