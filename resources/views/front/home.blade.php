@@ -59,6 +59,131 @@
         </div>
     </section>
 
+
+
+
+
+    <section class="content_carousel">
+      <div class="content_carousel_head text-capitalize">
+      <div class="row m-0">
+          <div class="col-6 p-0 padding_phones">
+          <a class="link_title" href="#">
+              <h6 class="">@lang('front.muslim_guide')</h6>
+          </a>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="owl_content owl_content_five owl-carousel owl-theme" dir="ltr">
+      <div class="item">
+          <div class="card ovf-hidden">
+
+            <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
+
+              @if (request()->get("OpID") == 9)
+              <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/01.png')}}" alt="Card image cap">
+              @else
+              <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/01.png')}}" alt="Card image cap">
+              @endif
+
+              <a>
+              <div class="mask waves-effect waves-light rgba-white-slight"></div>
+              </a>
+          </a>
+
+          <div class="card-body">
+              <h4 class="card-title text-capitalize">@lang('front.sebha')</h4>
+          </div>
+          </div>
+      </div>
+
+      <div class="item">
+          <div class="card ovf-hidden">
+
+            <a class="owl_content_img view overlay link_href" href="{{url('mosque')}}">
+              @if (request()->get("OpID") == 9)
+              <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/02.png')}}" alt="Card image cap">
+              @else
+              <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/02.png')}}" alt="Card image cap">
+              @endif
+              <a>
+              <div class="mask waves-effect waves-light rgba-white-slight"></div>
+              </a>
+          </a>
+
+          <div class="card-body">
+              <h4 class="card-title text-capitalize">@lang('front.mosque')</h4>
+          </div>
+          </div>
+      </div>
+
+      <div class="item">
+          <div class="card ovf-hidden">
+
+            <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
+              @if (request()->get("OpID") == 9)
+              <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/07.png')}}" alt="Card image cap">
+              @else
+              <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/07.png')}}" alt="Card image cap">
+              @endif
+              <a>
+              <div class="mask waves-effect waves-light rgba-white-slight"></div>
+              </a>
+          </a>
+
+          <div class="card-body">
+              <h4 class="card-title text-capitalize">@lang('front.zakah')</h4>
+          </div>
+          </div>
+      </div>
+
+
+      @if (request()->get("OpID") != 9)
+
+      <div class="item">
+          <div class="card ovf-hidden">
+            <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
+              @if (request()->get("OpID") == 9)
+              <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/04.png')}}" alt="Card image cap">
+              @else
+              <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/04.png')}}" alt="Card image cap">
+              @endif
+              <a>
+              <div class="mask waves-effect waves-light rgba-white-slight"></div>
+              </a>
+          </a>
+
+          <div class="card-body">
+              <h4 class="card-title text-capitalize">@lang('front.merath')</h4>
+          </div>
+          </div>
+      </div>
+
+      @endif
+
+      <div class="item">
+          <div class="card ovf-hidden">
+            <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
+              @if (request()->get("OpID") == 9)
+              <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/03.png')}}" alt="Card image cap">
+              @else
+              <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/03.png')}}" alt="Card image cap">
+              @endif
+              <a>
+              <div class="mask waves-effect waves-light rgba-white-slight"></div>
+              </a>
+          </a>
+
+          <div class="card-body">
+              <h4 class="card-title text-capitalize">@lang('front.prayer')</h4>
+          </div>
+          </div>
+      </div>
+      </div>
+  </section>
+
+
     @foreach ($menu->slice(0,$count) as $item)
     <section class="content_carousel">
         <div class="content_carousel_head text-capitalize">
@@ -120,141 +245,7 @@
     </section>
     @endforeach
 
-    <section class="content_carousel">
-        <div class="content_carousel_head text-capitalize">
-        <div class="row m-0">
-            <div class="col-6 p-0 padding_phones">
-            <a class="link_title" href="#">
-                <h6 class="">@lang('front.muslim_guide')</h6>
-            </a>
-            </div>
-        </div>
-        </div>
 
-        <div class="owl_content owl_content_five owl-carousel owl-theme" dir="ltr">
-        <div class="item">
-            <div class="card ovf-hidden">
-
-              @if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
-              <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
-                @else
-                <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('sebha?OpID='.request()->get("OpID"))])}}">
-                @endif
-
-                @if (request()->get("OpID") == 9)
-                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/01.png')}}" alt="Card image cap">
-                @else
-                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/01.png')}}" alt="Card image cap">
-                @endif
-
-                <a>
-                <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                </a>
-            </a>
-
-            <div class="card-body">
-                <h4 class="card-title text-capitalize">@lang('front.sebha')</h4>
-            </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="card ovf-hidden">
-
-              @if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
-              <a class="owl_content_img view overlay link_href" href="{{url('mosque')}}">
-                @else
-                <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('mosque?OpID='.request()->get("OpID"))])}}">
-                @endif
-                @if (request()->get("OpID") == 9)
-                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/02.png')}}" alt="Card image cap">
-                @else
-                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/02.png')}}" alt="Card image cap">
-                @endif
-                <a>
-                <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                </a>
-            </a>
-
-            <div class="card-body">
-                <h4 class="card-title text-capitalize">@lang('front.mosque')</h4>
-            </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="card ovf-hidden">
-
-              @if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
-              <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
-                @else
-                <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('zakah?OpID='.request()->get("OpID"))])}}">
-                @endif
-                @if (request()->get("OpID") == 9)
-                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/07.png')}}" alt="Card image cap">
-                @else
-                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/07.png')}}" alt="Card image cap">
-                @endif
-                <a>
-                <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                </a>
-            </a>
-
-            <div class="card-body">
-                <h4 class="card-title text-capitalize">@lang('front.zakah')</h4>
-            </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="card ovf-hidden">
-
-
-              @if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
-              <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
-                @else
-                <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('merath?OpID='.request()->get("OpID"))])}}">
-                @endif
-                @if (request()->get("OpID") == 9)
-                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/04.png')}}" alt="Card image cap">
-                @else
-                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/04.png')}}" alt="Card image cap">
-                @endif
-                <a>
-                <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                </a>
-            </a>
-
-            <div class="card-body">
-                <h4 class="card-title text-capitalize">@lang('front.merath')</h4>
-            </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="card ovf-hidden">
-              @if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
-              <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
-                @else
-                <a class="owl_content_img view overlay link_href" href="{{route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.request()->get("OpID"))])}}">
-                @endif
-                @if (request()->get("OpID") == 9)
-                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/03.png')}}" alt="Card image cap">
-                @else
-                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/03.png')}}" alt="Card image cap">
-                @endif
-                <a>
-                <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                </a>
-            </a>
-
-            <div class="card-body">
-                <h4 class="card-title text-capitalize">@lang('front.prayer')</h4>
-            </div>
-            </div>
-        </div>
-        </div>
-    </section>
 
     @foreach ($menu->slice($count,count($menu)) as $item)
     <section class="content_carousel">

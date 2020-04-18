@@ -158,7 +158,7 @@ if (session()->get('applocale') == 'ar') {
           $src = url('front\images\Cutting\Contnent_Page\004.png');
           }
           @endphp
-          <img class="w-100" src="{{$src}}" class="image_inner" alt="Card image cap">
+          <img class="w-100 h-100" src="{{$src}}" class="image_inner" alt="Card image cap">
         </div>
 
         <div class="col-md-8 col-lg-8 col-xl-8 col-8 p-0 ml-2 mr-2">

@@ -51,11 +51,22 @@ class FrontController extends Controller
 
         $latest = $latest->whereIn('contents.type',[1,3])->limit(3)->get(); // video or images
 
-        $health = Video::select('*', 'contents.id as content_id')
-        ->join('services','services.id','=','contents.service_id')
-        ->join('providers','providers.id','=','services.provider_id')
-        ->where('providers.id',28)
-        ->get();
+
+
+        $health = Video::select('*', 'contents.id as content_id');
+        if (request()->has('OpID') && request()->get('OpID') != '')
+        {
+           $health = $health->join('posts', 'posts.video_id', '=', 'contents.id')
+            ->where('posts.operator_id', request()->get('OpID'))
+            ->join('services','services.id','=','contents.service_id')
+            ->join('providers','providers.id','=','services.provider_id')
+            ->where('providers.id',28)
+            ->where('posts.slider', 1)
+            ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+        }
+
+        $health  =  $health->get();
+
 
         return view('front.home',compact('latest','health'));
     }
@@ -347,34 +358,19 @@ class FrontController extends Controller
 
     public function zakah(Request $request)
     {
-      if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
-
         return view('front.zakah');
-      }else{
-        return redirect( route('front.muslim_inner',['crl_url' => url('zakah?OpID='.$request->get("OpID"))]));
-      }
-
 
     }
 
     public function merath(Request $request)
     {
-      if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
-
         return view('front.merath');
-      }else{
-        return redirect( route('front.muslim_inner',['crl_url' => url('merath?OpID='.$request->get("OpID"))]));
-      }
 
     }
 
     public function merath_calc(Request $request)
-    { if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
-
+    {
       return view('front.merath_calc');
-    }else{
-      return redirect( route('front.muslim_inner',['crl_url' => url('merath_calc?OpID='.$request->get("OpID"))]));
-    }
 
     }
 
@@ -382,17 +378,12 @@ class FrontController extends Controller
 
        public function mosque(Request $request)
        {
-           { if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
 
             return view('front.mosque');
 
-          }else{
-            return redirect( route('front.muslim_inner',['crl_url' => url('mosque?OpID='.$request->get("OpID"))]));
-          }
        }
 
 
-      }
 
 
     public function muslim_inner(Request $request)
@@ -452,8 +443,6 @@ class FrontController extends Controller
 
     public function salah_time3(Request $request)
     {
-       if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
-
         $hjrri_date = $this->hjrri_date_cal();
         $prayer_times = $this->prayTimesCal_v2();
 
@@ -461,10 +450,6 @@ class FrontController extends Controller
         $imsak = date("h:i a", strtotime('-10 minutes', $fajr));
         $prayer_times['امساك'] = $imsak;
         return view('front.salah_time', compact('prayer_times', 'hjrri_date'));
-
-       }else{
-        return redirect( route('front.muslim_inner',['crl_url' => url('salah_time?OpID='.$request->get("OpID"))]));
-       }
 
 
 
