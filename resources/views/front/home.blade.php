@@ -43,6 +43,19 @@
             </div>
         </div>
         @endforeach
+        @foreach($health as $content)
+        <div class="item">
+            <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
+            <img class="m-auto d-block" src="https://islamic.digizone.com.kw/uploads/services/5e9afd688ad14.jpg" alt="banner_slider">
+            </a>
+
+            <div class="btn_subscribe w-100">
+                <button onclick="" class="btn btn-sm text-capitalize">
+                  <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
+                </button>
+            </div>
+        </div>
+        @endforeach
         </div>
     </section>
 

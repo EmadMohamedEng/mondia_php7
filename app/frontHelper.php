@@ -20,7 +20,7 @@ function get_providers()
 {
 
     $providers = null;
-    $providers = Provider::where('title', 'not like', '%دليل المسلم%')->orderBy('index','asc')->get();
+    $providers = Provider::where('title', 'not like', '%دليل المسلم%')->where('id','<>',28)->orderBy('index','asc')->get();
     return $providers;
 }
 
@@ -43,9 +43,9 @@ function provider_menu()
         ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
         ->pluck('provider_id');
         if(count($provider_ids)){
-          $provide_menu = Provider::whereIn('id',$provider_ids)->orderBy('index','asc')->get();
+          $provide_menu = Provider::whereIn('id',$provider_ids)->where('id','<>',28)->orderBy('index','asc')->get();
         } else {
-            $provide_menu = Provider::where('id',0)->orderBy('index','asc')->get();
+            $provide_menu = Provider::where('id','<>',28)->orderBy('index','asc')->get();
         }
     } else {
         $provide_menu = get_providers();

@@ -50,7 +50,14 @@ class FrontController extends Controller
         }
 
         $latest = $latest->whereIn('contents.type',[1,3])->limit(3)->get(); // video or images
-        return view('front.home',compact('latest'));
+
+        $health = Video::select('*', 'contents.id as content_id')
+        ->join('services','services.id','=','contents.service_id')
+        ->join('providers','providers.id','=','services.provider_id')
+        ->where('providers.id',28)
+        ->get();
+
+        return view('front.home',compact('latest','health'));
     }
 
     public function services(Request $request)
