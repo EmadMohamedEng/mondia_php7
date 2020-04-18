@@ -51,10 +51,11 @@
                     <div class="mask waves-effect waves-light rgba-white-slight"></div>
                   </a>
                 </a>
-
+                @if($item->service_id != 33)
                 <div class="card-body">
                   <h4 class="card-title text-capitalize">{{get_title($item->content_id)}}</h4>
                 </div>
+                @endif
               </div>
             </div>
         </div>
