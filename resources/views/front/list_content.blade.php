@@ -46,7 +46,7 @@
                         $src = url('front\images\Cutting\Contnent_Page\004.png');
                       }
                   @endphp
-                  <img class="w-100" src="{{$src}}" alt="Card image cap">
+                  <img class="w-100" src="{{$src}}" alt="Card image cap" style="height: 11.25rem;">
                   <a>
                     <div class="mask waves-effect waves-light rgba-white-slight"></div>
                   </a>
