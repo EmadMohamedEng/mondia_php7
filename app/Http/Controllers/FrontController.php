@@ -348,9 +348,9 @@ class FrontController extends Controller
 
     public function sebha(Request $request)
     {
- 
+
         return view('front.sebha');
-     
+
     }
 
     public function zakah(Request $request)
@@ -446,6 +446,7 @@ class FrontController extends Controller
         $fajr = strtotime($prayer_times['الفجر']);
         $imsak = date("h:i a", strtotime('-10 minutes', $fajr));
         $prayer_times['امساك'] = $imsak;
+
         return view('front.salah_time', compact('prayer_times', 'hjrri_date'));
 
 
@@ -528,7 +529,7 @@ class FrontController extends Controller
 
         $prayer_times = array();
         foreach ($times as $key => $value) {
-            if ($prayTime->timeNames_ar[$key] == "Sunrise" || $prayTime->timeNames_ar[$key] == "Sunset") {
+            if ($prayTime->timeNames_ar[$key] == "Sunset") {
                 continue;
             }
             $prayer_times[$prayTime->timeNames_ar[$key]] = $value;

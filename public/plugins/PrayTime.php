@@ -117,7 +117,7 @@ class PrayTime
 
     var $timeNames_ar = array(
         'الفجر',
-        'Sunrise',
+        'الشروق',
         'الظهر',
         'العصر',
         'Sunset',
