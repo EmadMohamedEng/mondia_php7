@@ -37,7 +37,7 @@ class HijriDate{
     public function get_month_name($i){
         static $month  = array(
             "muharram", "safar", "rabiulawal", "rabiulakhir",
-            "jamadilawal", "jamadilakhir", "rejab", "syaaban",
+            "jamadilawal", "jamadilakhir", "rejab", "Sha’ban",
             "ramadhan", "syawal", "zulkaedah", "zulhijjah"
         );
         return $month[$i-1];
