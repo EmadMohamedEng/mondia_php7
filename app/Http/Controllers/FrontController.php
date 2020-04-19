@@ -348,12 +348,9 @@ class FrontController extends Controller
 
     public function sebha(Request $request)
     {
-      if(  get_setting('enable_testing')  ||session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active'){
-
+ 
         return view('front.sebha');
-      }else{
-        return redirect( route('front.muslim_inner',['crl_url' => url('sebha?OpID='.$request->get("OpID"))]));
-      }
+     
     }
 
     public function zakah(Request $request)
