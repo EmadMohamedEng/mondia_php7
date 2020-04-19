@@ -224,7 +224,7 @@ select:active {
 }
 .main_container .img_carousel .owl-theme .owl-dots .owl-dot.active span,
 .main_container .img_carousel .owl-theme .owl-dots .owl-dot:hover span {
-  background: #ff9e1b;
+  background: #004c97;
 }
 .main_container .content_carousel .content_carousel_head {
   margin-top: 2rem;
