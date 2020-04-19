@@ -81,25 +81,25 @@ function get_title($id){
 }
 
 function get_salah($value,$lang){
-  if($lang == 'en' && strpos($value , 'الظهر') !== false){
+  if(($lang == 'en' || $lang =='')  && strpos($value , 'الظهر') !== false){
     return 'Aduher';
   }
-  if($lang == 'en' && strpos($value , 'العصر') !== false){
+  if(($lang == 'en' || $lang =='')  && strpos($value , 'العصر') !== false){
     return 'Asr';
   }
-  if($lang == 'en' && strpos($value , 'المغرب') !== false){
+  if(($lang == 'en' || $lang =='')  && strpos($value , 'المغرب') !== false){
     return "Maghreb's";
   }
-  if($lang == 'en' && strpos($value ,'العشاء') !== false){
+  if(($lang == 'en' || $lang =='')  && strpos($value ,'العشاء') !== false){
     return 'Eshaa';
   }
-  if($lang == 'en' && strpos($value , 'الفجر') !== false){
+  if(($lang == 'en' || $lang =='')  && strpos($value , 'الفجر') !== false){
     return 'Al-fajr';
   }
-  if($lang == 'en' && strpos($value , 'امساك') !== false){
+  if(($lang == 'en' || $lang =='')  && strpos($value , 'امساك') !== false){
     return 'Al-Imsak';
   }
-  if($lang == 'en' && strpos($value , 'الشروق') !== false){
+  if(($lang == 'en' || $lang =='')  && strpos($value , 'الشروق') !== false){
     return 'Sunrise';
   }
   return $value;
