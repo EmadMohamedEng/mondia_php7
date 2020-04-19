@@ -44,7 +44,12 @@
 
         <div class="col-md-4 col-lg-4 col-xl-6 col-4 p-0 input_text">
           <div class="form-group">
-            <input type="number" class="form-control merath_input" id="ErkekCocuk" placeholder="0" min="0" name="" placeholder="">
+            <select class="form-control merath_input" id="ErkekCocuk" name="" >
+              <option value="0">@lang('front.no')</option>
+              @for($i = 1 ; $i <= 10 ; $i++)
+              <option value="{{$i}}">{{$i}}</option>
+              @endfor
+            </select>
           </div>
         </div>
       </div>
@@ -59,7 +64,12 @@
 
         <div class="col-md-4 col-lg-4 col-xl-6 col-4 p-0 input_text">
           <div class="form-group">
-            <input type="number" class="form-control merath_input" placeholder="0" min="0" id="KizCocuk" name="" placeholder="">
+            <select class="form-control merath_input" id="KizCocuk" name="" >
+              <option value="0">@lang('front.no')</option>
+              @for($i = 1 ; $i <= 10 ; $i++)
+              <option value="{{$i}}">{{$i}}</option>
+              @endfor
+            </select>
           </div>
         </div>
       </div>
@@ -110,7 +120,12 @@
 
         <div class="col-md-4 col-lg-4 col-xl-6 col-4 p-0 input_text">
           <div class="form-group">
-            <input type="number" class="form-control merath_input" placeholder="0" min="0" id="ErkekKardes" name="" placeholder="">
+            <select class="form-control merath_input" id="ErkekKardes" name="">
+              <option value="0">@lang('front.no')</option>
+              @for($i = 1 ; $i <= 10 ; $i++)
+              <option value="{{$i}}">{{$i}}</option>
+              @endfor
+            </select>
           </div>
         </div>
       </div>
@@ -125,7 +140,12 @@
 
         <div class="col-md-4 col-lg-4 col-xl-6 col-4 p-0 input_text">
           <div class="form-group">
-            <input type="number" class="form-control merath_input" placeholder="0" min="0" id="KizKardes" name="" placeholder="">
+            <select class="form-control merath_input" id="KizKardes" name="" >
+              <option value="0">@lang('front.no')</option>
+              @for($i = 1 ; $i <= 10 ; $i++)
+              <option value="{{$i}}">{{$i}}</option>
+              @endfor
+            </select>
           </div>
         </div>
       </div>
