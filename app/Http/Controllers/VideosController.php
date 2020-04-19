@@ -165,7 +165,7 @@ class VideosController extends Controller
                 $file->move($destinationFolder, $uniqID . "." . $file->getClientOriginalExtension());
             }
 
-            if ($service->type == 1) {
+            if ($service->type == 1 || $service->type == 2) {
                 if ($request->hasFile('image_preview')) {
                     $image_name = uniqid();
                     $input['image_preview'] = $image_name . ".png";
@@ -293,7 +293,7 @@ class VideosController extends Controller
                 }
             } else {
                 $newVideo['video'] = $video['video'];
-                if ($service->type == 1) {
+                if ($service->type == 1 || $service->type == 2) {
                     if ($request->hasFile('image_preview')) {
                         $image_name = uniqid();
                         $newVideo['image_preview'] = $image_name . ".png";

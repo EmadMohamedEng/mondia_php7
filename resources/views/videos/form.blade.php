@@ -39,7 +39,7 @@ Content
 
     var type_init = $('#first_select').find('option:selected').attr('id');
     var img_type =  $('.accept_type').attr('accept')
-    if(type_init == 1){
+    if(type_init == 1 || type_init == 2){
         $('.img_pre').show()
     }
     if(type_init != 4 && img_type ){
@@ -55,7 +55,7 @@ Content
         $('.img_pre').hide()
         $('.content_text').hide()
         $('.video_display').show()
-        if(type == 1){
+        if(type == 1 || type == 2){
             $('.img_pre').show()
         }
         if(type == 4){
@@ -65,7 +65,7 @@ Content
      })
 
 
-    if(img_type.includes('video')){
+    if(img_type.includes('video') || img_type.includes('audio')){
         $('.img_pre').show()
     }
     if(!img_type){
