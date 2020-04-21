@@ -154,7 +154,7 @@ if (session()->get('applocale') == 'ar') {
           }elseif($item->type == 3){
           $src =url( $item->video );
           }elseif($item->type == 2){
-          $src = url('front\images\Cutting\Contnent_Page\001.png');
+            $src = $content->image_preview;
           }else{
           $src = url('front\images\Cutting\Contnent_Page\004.png');
           }
