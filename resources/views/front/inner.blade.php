@@ -7,7 +7,7 @@ $src = $content->image_preview;
 }elseif($content->type == 3){
 $src = $content->video;
 }elseif($content->type == 2){
-$src = url('front\images\Cutting\Contnent_Page\001.jpg');
+$src = $content->image_preview;
 }else{ // text default image
 $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
