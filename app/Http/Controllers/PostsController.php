@@ -190,4 +190,20 @@ class PostsController extends Controller
         \Session::flash('success', 'Post Deleted Successfully');
         return redirect('posts');
     }
+
+    // add stc post
+    public function post_stc()
+    {
+        $contents = Video::all();
+        foreach ($contents as $key => $value) {
+          Post::create([
+            'video_id' => $value->id,
+            'operator_id' => stc,
+            'show_date' => '2020-04-21',
+            'active' => 1,
+            'slider' => 0
+          ]);
+        }
+        echo "ok";
+    }
 }
