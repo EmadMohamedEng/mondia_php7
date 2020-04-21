@@ -31,7 +31,7 @@ switch ($os) {
       #chooseAudio #paused::before,
       #chooseAudio #playing::before {
         color:#ff9e1b;
-      } 
+      }
 
       #chooseAudio .np-play::before,
       #chooseAudio #play::before {

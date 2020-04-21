@@ -1088,9 +1088,10 @@ class FrontController extends Controller
     public function du_redirect(Request $request)
     {
 
+
         $token = $this->du_create_token()['accessToken'];
         $redirect_url = $request->redirect_url ;
-        $Url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . urlencode($request->redirect_url)."&auto=false&authMode=AUTO&distributionChannel=APP";
+        $Url = "http://du-portal-lcm.mondiamedia.com/du-portal-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . urlencode($request->redirect_url)."&auto=false&authMode=AUTO&distributionChannel=APP";
 
         session()->put('success_url',$redirect_url);
 
