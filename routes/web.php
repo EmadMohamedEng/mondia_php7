@@ -76,4 +76,5 @@ Route::get('du_set_session','FrontController@du_set_session');
 //     session()->put('status','active');
 //  });
 
-
+// stc id
+define('stc',11);
