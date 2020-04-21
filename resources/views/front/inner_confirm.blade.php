@@ -7,7 +7,7 @@ $src = $content->image_preview;
 }elseif($content->type == 3){
 $src = url($content->video);
 }elseif($content->type == 2){
-$src = url('front\images\Cutting\Contnent_Page\001.png');
+ $src = $content->image_preview;
 }else{ // text default image
 $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
@@ -125,7 +125,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           $src = url('front\images\Cutting\Contnent_Page\004.png');
           }
           @endphp
-          <img class="w-100" src="{{$src}}" class="image_inner" alt="Card image cap">
+          <img class="w-100 h-100" src="{{$src}}"   style="opacity: 1 !important;height:auto" class="image_inner" alt="Card image cap">
         </div>
 
         <div class="col-md-8 col-lg-8 col-xl-8 col-8 p-0 ml-2 mr-2">
@@ -194,7 +194,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
       <div class="modal-body">
         <div class="row m-0">
           <div class="col-12 modal_club">
-            <button type="button" class="btn btn-lg btn-block text-center text-capitalize"> @lang('front.Du ElKheer')</button>
+            <button type="button" class="btn btn-lg btn-block text-center"> @lang('front.Du ElKheer')</button>
           </div>
 
 

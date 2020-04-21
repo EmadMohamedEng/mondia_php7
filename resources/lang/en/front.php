@@ -59,7 +59,7 @@ return [
     'subscribe' => 'subscribe',
     'Close' => 'Close',
     'OMR' => 'OMR',
-    'Du ElKheer' => 'du Alkhair',
+    'Du ElKheer' => 'du Al Khair',
     'AED' => 'AED',
     'dividing_estate' => 'Dividing the estate',
     'sons_share' => 'Sons Share',
