@@ -73,8 +73,10 @@ $enable = get_setting('enable_testing');
               <!-- {{request()->get('OpID') == omantel ? '<img src="front/images/Du_header.png" alt="Logo">':'<img src="front/images/Du_header.png" alt="Logo">'}} -->
               @if(request()->get('OpID') == omantel)
               <img class="bounce-top" src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
-              @else
+              @elseif(request()->get('OpID') == du)
               <img class="bounce-top" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
+              @else
+              <img class="bounce-top" src='{{asset("front/images/STC01.png")}}' alt='Logo'>
               @endif
             </a>
           </div>
