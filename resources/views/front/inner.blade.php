@@ -7,7 +7,7 @@ $src = $content->image_preview;
 }elseif($content->type == 3){
 $src = $content->video;
 }elseif($content->type == 2){
-$src = url('front\images\Cutting\Contnent_Page\001.png');
+$src = url('front\images\Cutting\Contnent_Page\001.jpg');
 }else{ // text default image
 $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
@@ -45,7 +45,8 @@ if (session()->get('applocale') == 'ar') {
             </video>
             @endif
             @if($content->type == 2)
-            <audio src="{{url($content->video)}}" controls></audio>
+                <img src="{{$src}}" alt="Video Cover">
+                <audio src="{{url($content->video)}}" controls style="width: 94%;"></audio>
             @endif
             @if($content->type == 3)
             <img src="{{url($content->video)}}" alt="Video Cover">
