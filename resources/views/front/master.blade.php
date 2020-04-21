@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="url" content="{{url('/')}}">
   <link rel="shortcut icon" href="{{(request()->get('OpID') == omantel ? asset('front/images/omantel_logo.png') : ( request()->get('OpID')== stc ? asset('front/images/STC01.png') :asset('front/images/favicon.ico'))) }}">
-  <title>{{get_setting('title_page')}} | @yield('page_title')</title>
+  <title> @yield('page_title')</title>
   <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
