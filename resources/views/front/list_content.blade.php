@@ -41,7 +41,7 @@
                       }elseif($item->type == 3){
                         $src = $item->video;
                       }elseif($item->type == 2){
-                        $src = url('front\images\Cutting\Contnent_Page\001.png');
+                        $src = $item->image_preview;
                       }else{ // text defauly image
                         $src = url('front\images\Cutting\Contnent_Page\004.png');
                       }

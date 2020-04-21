@@ -9,7 +9,7 @@
                 }elseif($item->type == 3){
                   $src = $item->video;
                 }elseif($item->type == 2){
-                  $src = 'front\images\Cutting\Contnent_Page\001.png';
+                  $src = $item->image_preview;
                 }else{
                   $src = 'front\images\Cutting\Contnent_Page\004.png';
                 }
