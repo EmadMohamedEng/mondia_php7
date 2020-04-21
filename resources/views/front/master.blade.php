@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
   @if(request()->has('OpID') && request()->get('OpID') == omantel)
   <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
+  @elseif(request()->has('OpID') && request()->get('OpID') == stc)
+  <link rel="stylesheet" href="{{asset('front/css/style_en_stc.css')}}">
   @else
   <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
   @endif
