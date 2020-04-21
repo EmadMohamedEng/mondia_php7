@@ -78,7 +78,7 @@ $enable = get_setting('enable_testing');
               @elseif(request()->get('OpID') == du)
               <img class="bounce-top" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
               @else
-              {{-- <img class="bounce-top" src='{{asset("front/images/STC01.png")}}' alt='Logo'> --}}
+              {{-- <img class="bounce-top" src='{{asset("front/images/daleel_elmuslim.png")}}' alt='Logo'> --}}
               @lang('front.Daleel Al Muslim')
               @endif
             </a>
@@ -114,9 +114,18 @@ $enable = get_setting('enable_testing');
                     </a>
                   </div>
 
+
+
                   <div class="col-12 p-0">
                     <a class="link_href" href="{{route('front.index')}}">
-                      <img class="pulsate-bck" src="{{asset('front/images/'.(request()->get('OpID') == omantel ? 'omantel_logo.png' : 'du_logo.png'))}}" alt="Logo">
+                      @if(request()->has('OpID') && request()->get('OpID') == omantel)
+                  <img class="pulsate-bck" src="{{asset('front/images/omantel_logo.png')}}" alt="Logo">
+                  @elseif(request()->has('OpID') && request()->get('OpID') == du)
+                  <img class="pulsate-bck" src="{{asset('front/images/du_logo.png')}}" alt="Logo">
+                  @else
+                  {{-- <img class="pulsate-bck" src="{{asset('front/images/daleel_elmuslim.png')}}" alt="Logo"> --}}
+                   @endif
+
                     </a>
                   </div>
                 </div>
