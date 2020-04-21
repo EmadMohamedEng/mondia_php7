@@ -35,7 +35,7 @@
     <label class="col-sm-3 col-lg-2 control-label">Show In Slider</label>
     <div class="col-sm-9 col-lg-10 controls">
         <label class="radio">
-            {!! Form::select('slider',array(1=>'YES',0=>'NO'),null,['class'=>'form-control chosen','required'=>'required']) !!}
+            {!! Form::select('slider',array(0=>'NO',1=>'YES'),null,['class'=>'form-control chosen','required'=>'required']) !!}
         </label>
     </div>
 </div>

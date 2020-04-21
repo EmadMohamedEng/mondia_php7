@@ -20,9 +20,27 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
       <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
         <div class="cover">
 
+          @if($content->type == 1)
           <video style="object-fit: cover;width:100%" poster="{{$src}}" controls>
             <source src="{{url($content->video)}}" />
           </video>
+          @endif
+          @if($content->type == 2)
+              <img src="{{$src}}" alt="Video Cover">
+              <audio src="{{url($content->video)}}" controls style="width: 94%;"></audio>
+          @endif
+          @if($content->type == 3)
+          <img src="{{url($content->video)}}" alt="Video Cover">
+          @endif
+          @if($content->type == 4)
+          <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
+            <h4 style="{{$text}}">{!!$content->getTranslation('content_text',getCode())!!}</h4>
+          </div>
+          @endif
+
+
+
+
         </div>
       </div>
 

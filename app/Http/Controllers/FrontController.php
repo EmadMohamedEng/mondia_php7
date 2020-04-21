@@ -203,7 +203,7 @@ class FrontController extends Controller
         }
         $contents = $contents->orderBy('contents.index', 'asc')->limit(4)->get();
 
-        if($enable){  // enable testing from backend
+        if($enable  ||  $request->OpID == stc){  // enable testing from backend
            return view('front.inner_enable_testing', compact('content','contents'));
         }
 
