@@ -78,7 +78,8 @@ $enable = get_setting('enable_testing');
               @elseif(request()->get('OpID') == du)
               <img class="bounce-top" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
               @else
-              <img class="bounce-top" src='{{asset("front/images/STC01.png")}}' alt='Logo'>
+              {{-- <img class="bounce-top" src='{{asset("front/images/STC01.png")}}' alt='Logo'> --}}
+              @lang('front.Daleel Al Muslim')
               @endif
             </a>
           </div>

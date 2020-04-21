@@ -72,5 +72,6 @@ return [
     'the_four_wife_share' => 'نصيب الزوجه الرابعه',
     'brother_share' => "نصيب الاخوه",
     'sister_share' => "نصيب الاخوات",
-    'the_remain' => 'المتبقية'
+    'the_remain' => 'المتبقية' ,
+    'Daleel Al Muslim' => 'دليل المسلم',
 ];

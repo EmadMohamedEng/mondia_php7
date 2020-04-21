@@ -72,5 +72,6 @@ return [
     'the_four_wife_share' => 'The Fourth Wife Share',
     'brother_share' => "Brother's Share",
     'sister_share' => "Sister's Share",
-    'the_remain' => 'The Remaining'
+    'the_remain' => 'The Remaining',
+    'Daleel Al Muslim' => 'Daleel Al Muslim',
 ];

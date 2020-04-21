@@ -72,5 +72,6 @@ return [
     'the_four_wife_share' => 'چوتھی بیوی کا حصہ',
     'brother_share' => "بھائی کا حصہ",
     'sister_share' => "بہن کا حصہ",
-    'the_remain' => 'بقایہ'
+    'the_remain' => 'بقایہ',
+    'Daleel Al Muslim' => 'Daleel Al Muslim',
 ];
