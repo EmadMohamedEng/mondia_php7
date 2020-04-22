@@ -74,7 +74,7 @@ class StcController extends Controller
           $Msisdn = new Msisdn();
           $Msisdn->final_status = 1;
           $Msisdn->msisdn = $CGMSISDN;
-          $Msisdn->operator_id = 51; // viva
+          $Msisdn->operator_id = stc; // viva
           $Msisdn->ad_company = "DF";
 
           $Msisdn->ooredoo_notify_id = $notify->id;
@@ -86,7 +86,7 @@ class StcController extends Controller
         }
 
         $msisdn = preg_replace('/^965/', '', $CGMSISDN);
-        session(['MSISDN' => $msisdn, 'status' => 'active']);
+        session(['MSISDN' => $msisdn, 'status' => 'active' , 'stc_op_id' => stc]);
         return redirect('/?OpID=' . stc);
       }
     }
@@ -106,7 +106,7 @@ class StcController extends Controller
     // check subscribe
     $Msisdn = Msisdn::where('msisdn', '=', "965" . $msisdn)->where('final_status', '=', 1)->where('operator_id', '=', 51)->orderBy('id', 'DESC')->first();
     if ($Msisdn) {
-      session(['MSISDN' => $msisdn, 'status' => 'active']);
+      session(['MSISDN' => $msisdn, 'status' => 'active', 'stc_op_id' => stc]);
       return redirect('/?OpID=' . stc);
     } else {
 
@@ -143,7 +143,7 @@ class StcController extends Controller
       $pended_url = "";
     }
 
-    $URL = "http://cg.mobi-mind.net/?ID=551,d9655615,661,8061,3,IVAS,$ivas_portal_link$pended_url";
+    $URL = "http://cg.mobi-mind.net/?ID=357,bae9d56d,661,8061,3,IVAS,$ivas_portal_link$pended_url";
 
     // make log
     $actionName = "Viva Subscribe Track";
@@ -210,7 +210,7 @@ class StcController extends Controller
       $ad_company =  "headway";
     }
 
-    if ($ChannelID == 11142  && $ServiceID == 808 && $User == "kuwait@idex" && $Password == "kuwait@!dex" && $OperatorID == 41904) {
+    if ($User == "kuwait@idex" && $Password == "kuwait@!dex") {
 
 
       /*
@@ -290,7 +290,7 @@ class StcController extends Controller
 
           $Msisdn = new Msisdn();
           $Msisdn->msisdn = $msisdn;
-          $Msisdn->operator_id = 51; // viva
+          $Msisdn->operator_id = stc; // viva
           $Msisdn->ad_company = $ad_company;
           if ($STATUS == "ACT-SB") {
             $Msisdn->final_status = 1;

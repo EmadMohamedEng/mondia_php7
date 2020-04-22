@@ -203,8 +203,11 @@ class FrontController extends Controller
         }
         $contents = $contents->orderBy('contents.index', 'asc')->limit(4)->get();
 
-        if($enable  ||  $request->OpID == stc){  // enable testing from backend
-           return view('front.inner_enable_testing', compact('content','contents'));
+        if($request->has('OpID') && $request->OpID == stc){  // enable testing from backend
+          if($enable || (session()->get('stc_op_id') == stc && session()->get('status') == 'active' && session()->has('MSISDN'))){
+            return view('front.inner_enable_testing', compact('content','contents'));
+          }
+          return redirect('landing_stc');
         }
 
 
