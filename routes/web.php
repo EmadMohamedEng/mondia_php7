@@ -79,3 +79,11 @@ Route::get('du_set_session','FrontController@du_set_session');
 
 // stc id
 define('stc',11);
+Route::get('landing_stc', 'StcController@viva_login');
+Route::post('viva_login_action', 'StcController@viva_login_action');
+Route::get('notification', 'StcController@notification');
+Route::get('landing_stc_1', 'StcController@subscribeViva_1');
+Route::get('logout_viva', 'StcController@logout');
+define('SNAP_VIVA_URL', url('') . '/landing_stc');
+define('SNAP_VIVA_CHANNEL_ID', 4493);
+// define('viva_kuwait_operator_id', 6);
