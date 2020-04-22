@@ -86,16 +86,16 @@ function get_title($id)
 function get_salah($value, $lang)
 {
     if (($lang == 'en' || $lang == '') && strpos($value, 'الظهر') !== false) {
-        return 'Aduher';
+        return 'Dhuhr';
     }
     if (($lang == 'en' || $lang == '') && strpos($value, 'العصر') !== false) {
         return 'Asr';
     }
     if (($lang == 'en' || $lang == '') && strpos($value, 'المغرب') !== false) {
-        return "Maghreb's";
+        return "Maghrib";
     }
     if (($lang == 'en' || $lang == '') && strpos($value, 'العشاء') !== false) {
-        return 'Eshaa';
+        return 'Isha';
     }
     if (($lang == 'en' || $lang == '') && strpos($value, 'الفجر') !== false) {
         return 'Al-fajr';

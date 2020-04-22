@@ -543,8 +543,8 @@ class FrontController extends Controller
         $hjrri_date = array();
         include(public_path('plugins/HijriDate.php'));
         $hijri = new \HijriDate();
-        $current_date = date("Y-m-d", strtotime("+1 day"));
-        // $current_date = date("Y-m-d");
+       // $current_date = date("Y-m-d", strtotime("+1 day"));
+         $current_date = date("Y-m-d");
         $hijri = new \HijriDate(strtotime($current_date));
 
         $day = $hijri->get_day();
