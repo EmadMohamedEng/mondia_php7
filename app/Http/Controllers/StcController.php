@@ -104,10 +104,10 @@ class StcController extends Controller
     }
 
     // check subscribe
-    $Msisdn = Msisdn::where('msisdn', '=', "965" . $msisdn)->where('final_status', '=', 1)->where('operator_id', '=', 51)->orderBy('id', 'DESC')->first();
+    $Msisdn = Msisdn::where('msisdn', '=', "965" . $msisdn)->where('final_status', '=', 1)->where('operator_id', '=', stc)->orderBy('id', 'DESC')->first();
     if ($Msisdn) {
       session(['MSISDN' => $msisdn, 'status' => 'active', 'stc_op_id' => stc]);
-      return redirect('/?OpID=' . stc);
+      return redirect('/?OpID='.stc);
     } else {
 
       if (Session::has('ads')) {
