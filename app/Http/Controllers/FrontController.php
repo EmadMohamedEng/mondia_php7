@@ -210,7 +210,12 @@ class FrontController extends Controller
           return redirect('landing_stc');
         }
 
-
+        if($request->has('OpID') && $request->OpID == ooredoo){  // enable testing from backend
+          if($enable || (session()->get('ooredoo_op_id') == stc && session()->get('status') == 'active' && session()->has('MSISDN'))){
+            return view('front.inner_enable_testing', compact('content','contents'));
+          }
+          return redirect('ooredoo_qatar_landing');
+        }
 
 
         if($request->has('userToken')){ // subscribe for the first time
