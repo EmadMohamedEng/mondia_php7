@@ -18,14 +18,14 @@
     <div class="main_container">
         <div class="landing_page">
 
-            <div class="strip">
+            <div class="strip" style="color:#000;">
                 <h4>استمتع بوقتك مع خدمه</h4>
                 <h2>دليل مسلم</h2>
             </div>
 
             <div class="shbka">
                 <div class="container">
-                    <h3>اشترك الان</h3>
+                    <h3 style="color:#000 !important;">اشترك الان</h3>
                     <div class="zain_viva">
                         @if(Session::has('success'))
                         <div class="alert alert-success alert-dismissible">
@@ -43,9 +43,9 @@
                                 <img src="img/viva.png" id="viva">
                             </div>-->
 
-                            <div class="col-12">
+                            {{-- <div class="col-12">
                                 <img src="{{ asset('front/images/STC01.png') }}" id="zain">
-                            </div>
+                            </div> --}}
 
                             <!--<div class="col-12">
                                 <img src="img/oredoo.png" id="ooredoo">
@@ -64,7 +64,7 @@
                             <label for="phone"><span>965</span></label>
                             <input type="hidden" name="prev_url"
                                 value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-                            <input type="tel" class="form-control" value="{{$msisdn}}" id="phone"
+                            <input autocomplete="off" type="tel" class="form-control" value="{{$msisdn}}" id="phone"
                                 placeholder="ادخل رقم تليفونك"
                                 oninvalid="setCustomValidity('يجب ان تدخل 8 ارقام')" name="number" required
                                 pattern="[0-9]{8}">

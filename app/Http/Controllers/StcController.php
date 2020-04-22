@@ -146,7 +146,7 @@ class StcController extends Controller
     $URL = "http://cg.mobi-mind.net/?ID=357,bae9d56d,661,8061,3,IVAS,$ivas_portal_link$pended_url";
 
     // make log
-    $actionName = "Viva Subscribe Track";
+    $actionName = "STC Kuwait Subscribe Track";
     $parameters_arr = array(
       'date' => Carbon::now()->format('Y-m-d H:i:s'),
       'URL' => $URL
@@ -238,7 +238,7 @@ class StcController extends Controller
 
 
       // log for all history
-      $actionName = "Mondia Viva Notification Url";
+      $actionName = "Stc Kuwait Notification Url";
       $this->log($actionName, $URL, $parameters_arr);
 
 
@@ -257,7 +257,6 @@ class StcController extends Controller
         // update msisdn status
         $Msisdn = Msisdn::where('msisdn', '=', $msisdn)->orderBy('id', 'DESC')->first();
         if ($Msisdn) {
-
 
           if ($STATUS == "ACT-SB") {
             $Msisdn->final_status = 0;
@@ -303,7 +302,7 @@ class StcController extends Controller
             $message = "unsubscription";
           } elseif ($STATUS == "FSC-BL") {
             $Msisdn->final_status = 1;
-            $message = "fist success billing";
+            $message = "first success billing";
           } elseif ($STATUS == "RSC-BL") { // First Failed billing   OR   unsubscription
             $Msisdn->final_status = 1;
             $message = "renewal success ";
@@ -333,7 +332,7 @@ class StcController extends Controller
       $result['status'] = "Fail";
       $result['type'] = "viva_notification_url";
       $result['url'] = $URL;
-      $result['message'] = "wrong parameters";
+      $result['message'] = "wrong credentials";
     }
 
     return Response(array('result' => $result));
