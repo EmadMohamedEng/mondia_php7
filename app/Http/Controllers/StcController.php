@@ -34,8 +34,6 @@ class StcController extends Controller
 
     // new case after user confirms his pin and subscribe he will redirect to this link :    http://localhost:8080/urdu_php7/landing_stc?CGSTATUS=0&CGMSISDN=96551747685
 
-
-
     if (isset($_REQUEST['CGMSISDN']) && $_REQUEST['CGMSISDN'] != "" && isset($_REQUEST['CGSTATUS']) && $_REQUEST['CGSTATUS'] != "") {
       $CGMSISDN =  $_REQUEST['CGMSISDN'];
       $CGSTATUS = $_REQUEST['CGSTATUS'];
@@ -91,6 +89,20 @@ class StcController extends Controller
       }
     }
 
+    // new case for paramter msisdn http://localhost:8080/mondia_php7/landing_stc?msisdn=96512345678
+      if($request->has('msisdn') && $request->msisdn != ''){
+        $Msisdn = Msisdn::where('msisdn', '=',$request->msisdn)->where('final_status', '=', 1)->where('operator_id', '=', stc)->orderBy('id', 'DESC')->first();
+        if ($Msisdn) {
+          session(['MSISDN' => $msisdn, 'status' => 'active', 'stc_op_id' => stc]);
+          return redirect('/?OpID=' . stc);
+        } else {
+          $ivas_portal_link = urlencode(SNAP_VIVA_URL);  // here we can append ads parameter
+          $pended_url = "&msisdn=" . $request->msisdn;
+          $URL = "http://cg.mobi-mind.net/?ID=357,bae9d56d,661,8061,3,IVAS,$ivas_portal_link$pended_url";
+          return redirect($URL);
+        }
+      }
+
     return view('landing_v2.stc.viva_landing', compact('msisdn'));
   }
 
@@ -104,7 +116,7 @@ class StcController extends Controller
     }
 
     // check subscribe
-    $Msisdn = Msisdn::where('msisdn', '=', "965" . $msisdn)->where('final_status', '=', 1)->where('operator_id', '=', 51)->orderBy('id', 'DESC')->first();
+    $Msisdn = Msisdn::where('msisdn', '=', "965" . $msisdn)->where('final_status', '=', 1)->where('operator_id', '=', stc)->orderBy('id', 'DESC')->first();
     if ($Msisdn) {
       session(['MSISDN' => $msisdn, 'status' => 'active', 'stc_op_id' => stc]);
       return redirect('/?OpID=' . stc);
