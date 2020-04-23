@@ -7,7 +7,7 @@ use Validator;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Illuminate\Support\Facades\File;
-
+use App\TimWe;
 class TimweController extends Controller
 {
 
@@ -74,6 +74,13 @@ class TimweController extends Controller
         $ReqResponse['message'] = 'string';
         $ReqResponse['partnerNotifResponseBody'] = array('test1', 'test2');
 
+        $timewe = TimWe::create([
+          'api_request' => $URL,
+          'payload' => json_encode($vars),
+          'response' => json_encode($ReqResponse),
+          'type'  =>$actionName
+        ]);
+
         return json_encode($ReqResponse);
     }
 
@@ -125,6 +132,12 @@ class TimweController extends Controller
         $ReqResponse['message'] = 'string';
         $ReqResponse['partnerNotifResponseBody'] = array('test1', 'test2');
 
+        $timewe = TimWe::create([
+          'api_request' => $URL,
+          'payload' => json_encode($vars),
+          'response' => json_encode($ReqResponse),
+          'type'  =>$actionName
+        ]);
         return json_encode($ReqResponse);
     }
 
@@ -178,6 +191,13 @@ class TimweController extends Controller
         $ReqResponse['message'] = 'string';
         $ReqResponse['partnerNotifResponseBody'] = array('test1', 'test2');
 
+        $timewe = TimWe::create([
+          'api_request' => $URL,
+          'payload' => json_encode($vars),
+          'response' => json_encode($ReqResponse),
+          'type'  =>$actionName
+        ]);
+
         return json_encode($ReqResponse);
     }
 
@@ -228,6 +248,13 @@ class TimweController extends Controller
         $ReqResponse['inError”'] = 'false';
         $ReqResponse['message'] = 'string';
         $ReqResponse['partnerNotifResponseBody'] = array('test1', 'test2');
+
+        $timewe = TimWe::create([
+          'api_request' => $URL,
+          'payload' => json_encode($vars),
+          'response' => json_encode($ReqResponse),
+          'type'  =>$actionName
+        ]);
 
         return json_encode($ReqResponse);
     }
@@ -281,6 +308,13 @@ class TimweController extends Controller
         $ReqResponse['inError”'] = 'false';
         $ReqResponse['message'] = 'string';
         $ReqResponse['partnerNotifResponseBody'] = array('test1', 'test2');
+
+        $timewe = TimWe::create([
+          'api_request' => $URL,
+          'payload' => json_encode($vars),
+          'response' => json_encode($ReqResponse),
+          'type'  =>$actionName
+        ]);
 
         return json_encode($ReqResponse);
     }
@@ -387,6 +421,13 @@ class TimweController extends Controller
 
         $this->log($actionName, $URL, $result);
 
+        $timewe = TimWe::create([
+          'api_request' => $URL,
+          'payload' => json_encode($vars),
+          'response' => json_encode($result),
+          'type'  =>$actionName
+        ]);
+
         return $ReqResponse;
     }
 
@@ -440,6 +481,13 @@ class TimweController extends Controller
         $result['date'] = date('Y-m-d H:i:s');
 
         $this->log($actionName, $URL, $result);
+
+        $timewe = TimWe::create([
+          'api_request' => $URL,
+          'payload' => json_encode($vars),
+          'response' => json_encode($result),
+          'type'  =>$actionName
+        ]);
 
         if($ReqResponse['code'] == 'SUCCESS'){
             return view('landing_v2.timwe_landing.timwe_pinCode');
@@ -497,6 +545,13 @@ class TimweController extends Controller
         $result['date'] = date('Y-m-d H:i:s');
 
         $this->log($actionName, $URL, $result);
+
+        $timewe = TimWe::create([
+          'api_request' => $URL,
+          'payload' => json_encode($vars),
+          'response' => json_encode($result),
+          'type'  =>$actionName
+        ]);
 
         if($ReqResponse['code'] == 'SUCCESS'){
           session(['MSISDN' => session('userIdentifier'),'status' => 'active' , 'ooredoo_op_id' => ooredoo]);
@@ -557,6 +612,14 @@ class TimweController extends Controller
         $result['date'] = date('Y-m-d H:i:s');
 
         $this->log($actionName, $URL, $result);
+
+        $timewe = TimWe::create([
+          'api_request' => $URL,
+          'payload' => json_encode($vars),
+          'response' => json_encode($result),
+          'type'  =>$actionName
+        ]);
+
         // dd($ReqResponse['responseData']['subscriptionResult']);
         if($ReqResponse['responseData']['subscriptionResult'] == 'OPTOUT_CANCELED_OK'){
             return redirect('ooredoo_qatar_unsub')->with('success', 'تم الغاء الاشتراك بنجاح');
