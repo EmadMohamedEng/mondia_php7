@@ -78,6 +78,7 @@ class TimweController extends Controller
           'api_request' => $URL,
           'payload' => json_encode($vars),
           'response' => json_encode($ReqResponse),
+          'header' => json_encode($headers),
           'type'  =>$actionName
         ]);
 
@@ -136,6 +137,7 @@ class TimweController extends Controller
           'api_request' => $URL,
           'payload' => json_encode($vars),
           'response' => json_encode($ReqResponse),
+          'header' => json_encode($headers),
           'type'  =>$actionName
         ]);
         return json_encode($ReqResponse);
@@ -195,6 +197,7 @@ class TimweController extends Controller
           'api_request' => $URL,
           'payload' => json_encode($vars),
           'response' => json_encode($ReqResponse),
+          'header' => json_encode($headers),
           'type'  =>$actionName
         ]);
 
@@ -253,6 +256,7 @@ class TimweController extends Controller
           'api_request' => $URL,
           'payload' => json_encode($vars),
           'response' => json_encode($ReqResponse),
+          'header' => json_encode($headers),
           'type'  =>$actionName
         ]);
 
@@ -424,7 +428,8 @@ class TimweController extends Controller
         $timewe = TimWe::create([
           'api_request' => $URL,
           'payload' => json_encode($vars),
-          'response' => json_encode($result),
+          'response' => json_encode($ReqResponse),
+          'header' => json_encode($headers),
           'type'  =>$actionName
         ]);
 
@@ -485,7 +490,8 @@ class TimweController extends Controller
         $timewe = TimWe::create([
           'api_request' => $URL,
           'payload' => json_encode($vars),
-          'response' => json_encode($result),
+          'response' => json_encode($ReqResponse),
+          'header' => json_encode($headers),
           'type'  =>$actionName
         ]);
 
@@ -549,7 +555,8 @@ class TimweController extends Controller
         $timewe = TimWe::create([
           'api_request' => $URL,
           'payload' => json_encode($vars),
-          'response' => json_encode($result),
+          'response' => json_encode($ReqResponse),
+          'header' => json_encode($headers),
           'type'  =>$actionName
         ]);
 
@@ -616,7 +623,8 @@ class TimweController extends Controller
         $timewe = TimWe::create([
           'api_request' => $URL,
           'payload' => json_encode($vars),
-          'response' => json_encode($result),
+          'response' => json_encode($ReqResponse),
+          'header' => json_encode($headers),
           'type'  =>$actionName
         ]);
 
