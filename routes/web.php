@@ -79,3 +79,7 @@ Route::get('du_set_session','FrontController@du_set_session');
 
 // stc id
 define('stc',11);
+define('encrypt_key',"Affasy00!");
+Route::get("latest/quran",'FrontController@Todayquran');
+Route::get("all/quran",'FrontController@Latesquran');
+Route::get("landing/{id}",'FrontController@landingquran');

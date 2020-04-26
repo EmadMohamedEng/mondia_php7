@@ -25,18 +25,15 @@ class FrontController extends Controller
     {
 
         $latest = Video::select('*', 'contents.id as content_id');
-        if (request()->has('OpID') && request()->get('OpID') != '')
-        {
+        if (request()->has('OpID') && request()->get('OpID') != '') {
             $latest = $latest->join('posts', 'posts.video_id', '=', 'contents.id')
-            ->where('posts.operator_id', request()->get('OpID'))
-            ->join('services','services.id','=','contents.service_id')
-            ->join('providers','providers.id','=','services.provider_id')
-            ->where('posts.slider', 1)
-            ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
-        }
-        else
-        {
-          $latest = $latest->latest('contents.created_at');
+                ->where('posts.operator_id', request()->get('OpID'))
+                ->join('services', 'services.id', '=', 'contents.service_id')
+                ->join('providers', 'providers.id', '=', 'services.provider_id')
+                ->where('posts.slider', 1)
+                ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+        } else {
+            $latest = $latest->latest('contents.created_at');
         }
 
         // $latest = $latest->join('services','services.id','=','contents.service_id')
@@ -45,181 +42,164 @@ class FrontController extends Controller
 
         // $ramdan = $latest ;
 
-         if(!$latest->count()){
-           $latest = $latest->orWhereNotNull('providers.id')->groupBy('service_id');
+        if (!$latest->count()) {
+            $latest = $latest->orWhereNotNull('providers.id')->groupBy('service_id');
         }
 
-        $latest = $latest->whereIn('contents.type',[1,3])->limit(3)->get(); // video or images
-
+        $latest = $latest->whereIn('contents.type', [1, 3])->limit(3)->get(); // video or images
 
 
         $health = Video::select('*', 'contents.id as content_id');
-        if (request()->has('OpID') && request()->get('OpID') != '')
-        {
-           $health = $health->join('posts', 'posts.video_id', '=', 'contents.id')
-            ->where('posts.operator_id', request()->get('OpID'))
-            ->join('services','services.id','=','contents.service_id')
-            ->join('providers','providers.id','=','services.provider_id')
-            ->where('providers.id',28)
-            ->where('posts.slider', 1)
-            ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+        if (request()->has('OpID') && request()->get('OpID') != '') {
+            $health = $health->join('posts', 'posts.video_id', '=', 'contents.id')
+                ->where('posts.operator_id', request()->get('OpID'))
+                ->join('services', 'services.id', '=', 'contents.service_id')
+                ->join('providers', 'providers.id', '=', 'services.provider_id')
+                ->where('providers.id', 28)
+                ->where('posts.slider', 1)
+                ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
         }
 
-        $health  =  $health->get();
+        $health = $health->get();
 
 
-        return view('front.home',compact('latest','health'));
+        return view('front.home', compact('latest', 'health'));
     }
 
     public function services(Request $request)
     {
-        $services = Service::select('services.*','services.id as service_id');
+        $services = Service::select('services.*', 'services.id as service_id');
         $provider = null;
-        if(request()->has('OpID') && request()->get('OpID') != ''){
-            $services = $services->whereHas('videos', function($q){
-                $q->join('posts','posts.video_id' , '=' , 'contents.id')
-                ->where('posts.operator_id', request()->get('OpID'))
-                ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+        if (request()->has('OpID') && request()->get('OpID') != '') {
+            $services = $services->whereHas('videos', function ($q) {
+                $q->join('posts', 'posts.video_id', '=', 'contents.id')
+                    ->where('posts.operator_id', request()->get('OpID'))
+                    ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
             });
         }
-        if($request->has('provider_id') && $request->provider_id != ''){
-          $services = $services->where('provider_id',$request->provider_id);
-          $provider = Provider::whereId($request->provider_id)->first();
+        if ($request->has('provider_id') && $request->provider_id != '') {
+            $services = $services->where('provider_id', $request->provider_id);
+            $provider = Provider::whereId($request->provider_id)->first();
         }
 
-        if($request->has('search') && $request->search != ''){
-          $services = $services->join('translatables','translatables.record_id','=','services.id')
-          ->join('tans_bodies','tans_bodies.translatable_id','translatables.id')
-          ->where('translatables.table_name','services')
-          ->where('translatables.column_name','title')
-          ->where(function($q) use ($request){
-            $q->where('services.title', 'like', '%' . $request->search . '%');
-            $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
-          });
+        if ($request->has('search') && $request->search != '') {
+            $services = $services->join('translatables', 'translatables.record_id', '=', 'services.id')
+                ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
+                ->where('translatables.table_name', 'services')
+                ->where('translatables.column_name', 'title')
+                ->where(function ($q) use ($request) {
+                    $q->where('services.title', 'like', '%' . $request->search . '%');
+                    $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+                });
         }
-        $services = $services->orderBy('services.index','asc')->get();
-        return view('front.service', compact('services','provider'));
+        $services = $services->orderBy('services.index', 'asc')->get();
+        return view('front.service', compact('services', 'provider'));
     }
 
     public function contents(Request $request)
     {
-      $service = '';
-      $contents = Video::select('*','contents.id as content_id');
-      if($request->has('service_id') && $request->service_id != '')
-      {
-        $contents = $contents->where('service_id', $request->service_id);
-        $service = Service::find($request->service_id);
-      }
-      if(request()->has('OpID') && request()->get('OpID') != '')
-      {
-        $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
-        ->where('posts.operator_id', request()->get('OpID'))
-        ->where('posts.show_date', '<=', Carbon::now()->toDateString());
-      }
-      if($request->has('search') && $request->search != '')
-      {
-        $contents = $contents->join('translatables','translatables.record_id','=','contents.id')
-        ->join('tans_bodies','tans_bodies.translatable_id','translatables.id')
-        ->where('translatables.table_name','contents')
-        ->where('translatables.column_name','title')
-        ->where(function($q) use ($request){
-          $q->where('contents.title', 'like', '%' . $request->search . '%');
-          $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
-        });
-      }
+        $service = '';
+        $contents = Video::select('*', 'contents.id as content_id');
+        if ($request->has('service_id') && $request->service_id != '') {
+            $contents = $contents->where('service_id', $request->service_id);
+            $service = Service::find($request->service_id);
+        }
+        if (request()->has('OpID') && request()->get('OpID') != '') {
+            $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
+                ->where('posts.operator_id', request()->get('OpID'))
+                ->where('posts.show_date', '<=', Carbon::now()->toDateString());
+        }
+        if ($request->has('search') && $request->search != '') {
+            $contents = $contents->join('translatables', 'translatables.record_id', '=', 'contents.id')
+                ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
+                ->where('translatables.table_name', 'contents')
+                ->where('translatables.column_name', 'title')
+                ->where(function ($q) use ($request) {
+                    $q->where('contents.title', 'like', '%' . $request->search . '%');
+                    $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+                });
+        }
 
-      $contents = $contents->groupBy('contents.id')->orderBy('contents.index','asc')->limit(get_pageLength())->get();
+        $contents = $contents->groupBy('contents.id')->orderBy('contents.index', 'asc')->limit(get_pageLength())->get();
 
-      if(!request()->has('OpID') && !get_setting('enable_testing')){
-        return view('errors.404');
-      }
+        if (!request()->has('OpID') && !get_setting('enable_testing')) {
+            return view('errors.404');
+        }
 
-      return view('front.list_content', compact('contents','service'));
+        return view('front.list_content', compact('contents', 'service'));
     }
 
     public function load_contents(Request $request)
     {
-      $contents = Video::select('*','contents.id as content_id');
-      if($request->has('service_id') && $request->service_id != '')
-      {
-        $contents = $contents->where('service_id', $request->service_id);
-      }
-      if(request()->has('OpID') && request()->get('OpID') != '')
-      {
-        $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
-        ->where('posts.operator_id', request()->get('OpID'))
-        ->where('posts.show_date', '<=', Carbon::now()->format('Y-m-d'));
-      }
-      if($request->has('search') && $request->search != '')
-      {
-        $contents = $contents->where('contents.title', 'like', '%' . $request->search . '%');
-      }
+        $contents = Video::select('*', 'contents.id as content_id');
+        if ($request->has('service_id') && $request->service_id != '') {
+            $contents = $contents->where('service_id', $request->service_id);
+        }
+        if (request()->has('OpID') && request()->get('OpID') != '') {
+            $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
+                ->where('posts.operator_id', request()->get('OpID'))
+                ->where('posts.show_date', '<=', Carbon::now()->format('Y-m-d'));
+        }
+        if ($request->has('search') && $request->search != '') {
+            $contents = $contents->where('contents.title', 'like', '%' . $request->search . '%');
+        }
 
-      $contents = $contents->groupBy('contents.id')->orderBy('contents.index','asc')->offset($request->start)->limit(get_pageLength())->get();
+        $contents = $contents->groupBy('contents.id')->orderBy('contents.index', 'asc')->offset($request->start)->limit(get_pageLength())->get();
 
-      $view = view('front.load_content', compact('contents'))->render();
-      return Response(array('html' => $view));
+        $view = view('front.load_content', compact('contents'))->render();
+        return Response(array('html' => $view));
     }
 
-    public function view_content($id,Request $request)
+    public function view_content($id, Request $request)
     {
 
-        $current_url =    \Request::fullUrl()  ;
-        session()->put('current_url',$current_url);
+        $current_url = \Request::fullUrl();
+        session()->put('current_url', $current_url);
 
         $view_coming_post = get_setting('view_coming_post');
         $enable = get_setting('enable_testing');
         $content = Video::select('contents.*', 'contents.id as content_id');
-        if($view_coming_post)
-        {
-          $content = $content->whereId($id)->first();
-        }
-        else
-        {
-          if($request->has('OpID') && $request->OpID != '')
-          {
-            $content = $content->join('posts','posts.video_id','=','contents.id')
-            ->where('posts.show_date', '<=', Carbon::now()->toDateString())
-            ->where('posts.operator_id',$request->OpID)
-            ->where('contents.id',$id)
-            ->first();
-          }
-          else
-          {
+        if ($view_coming_post) {
             $content = $content->whereId($id)->first();
-          }
+        } else {
+            if ($request->has('OpID') && $request->OpID != '') {
+                $content = $content->join('posts', 'posts.video_id', '=', 'contents.id')
+                    ->where('posts.show_date', '<=', Carbon::now()->toDateString())
+                    ->where('posts.operator_id', $request->OpID)
+                    ->where('contents.id', $id)
+                    ->first();
+            } else {
+                $content = $content->whereId($id)->first();
+            }
         }
-        if(!$content){
+        if (!$content) {
             return view('errors.404');
         }
         $contents = video::select('contents.*', 'contents.id as content_id')
-        ->where('contents.service_id', $content->service->id)
-        ->whereNotIn('contents.id', [$content->id]);
-        if($request->OpID)
-        {
-            $contents = $contents->join('posts','posts.video_id','=','contents.id')
-            ->where('posts.operator_id',$request->OpID)
-            ->where('posts.show_date','<=',Carbon::now()->toDateString());
+            ->where('contents.service_id', $content->service->id)
+            ->whereNotIn('contents.id', [$content->id]);
+        if ($request->OpID) {
+            $contents = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
+                ->where('posts.operator_id', $request->OpID)
+                ->where('posts.show_date', '<=', Carbon::now()->toDateString());
         }
         $contents = $contents->orderBy('contents.index', 'asc')->limit(4)->get();
 
-        if($enable  ||  $request->OpID == stc){  // enable testing from backend
-           return view('front.inner_enable_testing', compact('content','contents'));
+        if ($enable || $request->OpID == stc) {  // enable testing from backend
+            return view('front.inner_enable_testing', compact('content', 'contents'));
         }
 
 
+        if ($request->has('userToken')) { // subscribe for the first time
 
 
-        if($request->has('userToken')){ // subscribe for the first time
+            //   session()->put('userToken',$request->get('userToken'));
 
-
-       //   session()->put('userToken',$request->get('userToken'));
-
-          if($request->OpID == omantel){
-            session()->put('userToken_omantel',$request->get('userToken'));
-          }elseif($request->OpID == du){
-            session()->put('userToken_du',$request->get('userToken'));
-          }
+            if ($request->OpID == omantel) {
+                session()->put('userToken_omantel', $request->get('userToken'));
+            } elseif ($request->OpID == du) {
+                session()->put('userToken_du', $request->get('userToken'));
+            }
 
 
             $userToken = $request->userToken;
@@ -227,121 +207,112 @@ class FrontController extends Controller
             $expiresIn = $request->expiresIn;
             $status = $request->status;
 
-        }else{ // login for scond time
-          if(session()->has('userToken_omantel') && session()->get('userToken_omantel') != ''){ // if our server session is expire
-            $userToken_omantel=  session()->get('userToken_omantel')  ;
-          }elseif(session()->has('userToken_du') && session()->get('userToken_du') != ''){
-            $userToken_du=  session()->get('userToken_du')  ;
-          }else{ // make Mondia login again by create new token
-            if($request->OpID == omantel){
-               return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
-           }elseif($request->OpID == du){
-            return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
-           }
+        } else { // login for scond time
+            if (session()->has('userToken_omantel') && session()->get('userToken_omantel') != '') { // if our server session is expire
+                $userToken_omantel = session()->get('userToken_omantel');
+            } elseif (session()->has('userToken_du') && session()->get('userToken_du') != '') {
+                $userToken_du = session()->get('userToken_du');
+            } else { // make Mondia login again by create new token
+                if ($request->OpID == omantel) {
+                    return redirect(url("/omantel/redirect?redirect_url=" . $current_url));
+                } elseif ($request->OpID == du) {
+                    return redirect(url("/du_redirect?redirect_url=" . $current_url));
+                }
 
-          }
+            }
 
         }
 
 
+        if ($request->OpID == omantel) {
+            session()->put('OpID', omantel);
+
+            $response = $this->check_status(session()->get('userToken_omantel'));
+            if (empty($response)) {
+                // return $this->pin_code($userToken);
+                session()->put('status', 'not_active');
+                session()->put('menu_unsub_omantel', 'not_active');
+                return view('front.inner_confirm', compact('content', 'contents'));
+            } else {
+                session()->put('status', 'active');
+                session()->put('menu_unsub_omantel', 'active');
+                return view('front.inner', compact('content', 'contents'));
+            }
+        }
+
+        if ($request->OpID == du) {
+            session()->put('OpID', du);
+            $response = $this->du_check_status(session()->get('userToken_du'));
 
 
-      if($request->OpID == omantel)
-      {
-        session()->put('OpID',omantel);
-
-          $response = $this->check_status(session()->get('userToken_omantel') );
-          if(empty($response)){
-            // return $this->pin_code($userToken);
-            session()->put('status','not_active');
-            session()->put('menu_unsub_omantel','not_active');
-            return view('front.inner_confirm', compact('content','contents'));
-          }else{
-              session()->put('status','active');
-              session()->put('menu_unsub_omantel','active');
-              return view('front.inner', compact('content','contents'));
-          }
-      }
-
-      if($request->OpID == du)
-      {
-        session()->put('OpID',du);
-          $response = $this->du_check_status(session()->get('userToken_du'));
+            if (empty($response)) {
+                // return $this->du_pin_code($userToken);
+                session()->put('status', 'not_active');
+                session()->put('menu_unsub_du', 'not_active');
+                return view('front.inner_confirm', compact('content', 'contents'));
+            } else {
+                session()->put('status', 'active');
+                session()->put('menu_unsub_du', 'active');
+                return view('front.inner', compact('content', 'contents'));
+            }
+        }
 
 
-          if(empty($response)){
-            // return $this->du_pin_code($userToken);
-            session()->put('status','not_active');
-            session()->put('menu_unsub_du','not_active');
-            return view('front.inner_confirm', compact('content','contents'));
-          }
-          else{
-              session()->put('status','active');
-              session()->put('menu_unsub_du','active');
-              return view('front.inner', compact('content','contents'));
-          }
-      }
-
-
-      return view('front.inner', compact('content','contents'));
+        return view('front.inner', compact('content', 'contents'));
     }
-
-
 
 
     public function search(Request $request)
     {
-        $services =Service::select('services.*','services.id as service_id')
-        ->join('translatables','translatables.record_id','=','services.id')
-        ->join('tans_bodies','tans_bodies.translatable_id','translatables.id')
-        ->where('translatables.table_name','services')
-        ->where('translatables.column_name','title')
-        ->where(function($q) use ($request){
-          $q->where('services.title', 'like', '%' . $request->search . '%');
-          $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
-        });
+        $services = Service::select('services.*', 'services.id as service_id')
+            ->join('translatables', 'translatables.record_id', '=', 'services.id')
+            ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
+            ->where('translatables.table_name', 'services')
+            ->where('translatables.column_name', 'title')
+            ->where(function ($q) use ($request) {
+                $q->where('services.title', 'like', '%' . $request->search . '%');
+                $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+            });
 
-        $contents = Video::select('contents.*','contents.id as content_id')
-        ->join('translatables','translatables.record_id','=','contents.id')
-        ->join('tans_bodies','tans_bodies.translatable_id','translatables.id')
-        ->where('translatables.table_name','contents')
-        ->where('translatables.column_name','title')
-        ->where(function($q) use ($request){
-          $q->where('contents.title', 'like', '%' . $request->search . '%');
-          $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
-        });
+        $contents = Video::select('contents.*', 'contents.id as content_id')
+            ->join('translatables', 'translatables.record_id', '=', 'contents.id')
+            ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
+            ->where('translatables.table_name', 'contents')
+            ->where('translatables.column_name', 'title')
+            ->where(function ($q) use ($request) {
+                $q->where('contents.title', 'like', '%' . $request->search . '%');
+                $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+            });
 
-        if(request()->has('OpID') && request()->get('OpID') != '')
-        {
-          $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
-          ->where('posts.operator_id', request()->get('OpID'))
-          ->where('posts.show_date', '<=', Carbon::now()->toDateString());
+        if (request()->has('OpID') && request()->get('OpID') != '') {
+            $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
+                ->where('posts.operator_id', request()->get('OpID'))
+                ->where('posts.show_date', '<=', Carbon::now()->toDateString());
         }
-        if(request()->has('OpID') && request()->get('OpID') != '')
-        {
-          $services = $services->whereHas('videos', function($q){
-              $q->join('posts','posts.video_id' , '=' , 'contents.id')
-              ->where('posts.operator_id', request()->get('OpID'))
-              ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
-          });
+        if (request()->has('OpID') && request()->get('OpID') != '') {
+            $services = $services->whereHas('videos', function ($q) {
+                $q->join('posts', 'posts.video_id', '=', 'contents.id')
+                    ->where('posts.operator_id', request()->get('OpID'))
+                    ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+            });
         }
 
         $services = $services->get();
         $contents = $contents->get();
-        return view('front.search_result',compact('services','contents'));
+        return view('front.search_result', compact('services', 'contents'));
     }
 
 
     public function Omantel_send_pincode()
     {
-        $userToken = session()->get('userToken_omantel') ;
+        $userToken = session()->get('userToken_omantel');
         return $this->pin_code($userToken);
     }
 
 
     public function du_goto_pincode()
     {
-        $userToken = session()->get('userToken_du') ;
+        $userToken = session()->get('userToken_du');
         return $this->du_pin_code($userToken);
     }
 
@@ -367,27 +338,24 @@ class FrontController extends Controller
 
     public function merath_calc(Request $request)
     {
-      return view('front.merath_calc');
+        return view('front.merath_calc');
 
     }
 
 
+    public function mosque(Request $request)
+    {
 
-       public function mosque(Request $request)
-       {
+        return view('front.mosque');
 
-            return view('front.mosque');
-
-       }
-
-
+    }
 
 
     public function muslim_inner(Request $request)
     {
 
-      session()->put('current_url',$request->crl_url);
-      return view('front.muslim_inner_confirm');
+        session()->put('current_url', $request->crl_url);
+        return view('front.muslim_inner_confirm');
     }
 
     // salah time
@@ -401,41 +369,42 @@ class FrontController extends Controller
 
     public function salah_time2(Request $request)
     {
-      $timezone = $this->get_time_zone();
+        $timezone = $this->get_time_zone();
 
-      $hjrri_date = $this->hjrri_date_cal();
+        $hjrri_date = $this->hjrri_date_cal();
 
-      return view('front.salah_time2', compact('timezone','hjrri_date'));
+        return view('front.salah_time2', compact('timezone', 'hjrri_date'));
     }
 
-    public function get_time_zone(){
-      $ip = !empty($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
-      $URL = 'http://www.geoplugin.net/php.gp?ip='.$ip;
-      $new_arr = unserialize(file_get_contents($URL));
+    public function get_time_zone()
+    {
+        $ip = !empty($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
+        $URL = 'http://www.geoplugin.net/php.gp?ip=' . $ip;
+        $new_arr = unserialize(file_get_contents($URL));
 
-      $actionName = 'Salah time';
-      $url = url('/');
+        $actionName = 'Salah time';
+        $url = url('/');
 
-      if(!empty($new_arr['geoplugin_timezone'])){
-        $parameters_arr['Timezone'] = $new_arr['geoplugin_timezone'];
-        $parameters_arr['Latitude'] = $new_arr['geoplugin_latitude'];
-        $parameters_arr['Longitude'] = $new_arr['geoplugin_longitude'];
+        if (!empty($new_arr['geoplugin_timezone'])) {
+            $parameters_arr['Timezone'] = $new_arr['geoplugin_timezone'];
+            $parameters_arr['Latitude'] = $new_arr['geoplugin_latitude'];
+            $parameters_arr['Longitude'] = $new_arr['geoplugin_longitude'];
 
-        $this->log_action($actionName, $url, $parameters_arr);
+            $this->log_action($actionName, $url, $parameters_arr);
 
-        $timezone = timezone_open($new_arr['geoplugin_timezone']);
+            $timezone = timezone_open($new_arr['geoplugin_timezone']);
 
-        $datetime_eur = date_create("now", timezone_open("utc"));
-        return timezone_offset_get($timezone, $datetime_eur)/3600;
-      }else{
-        $parameters_arr['Timezone'] = ['default egypt'];
-        $parameters_arr['Latitude'] = ['null'];
-        $parameters_arr['Longitude'] = ['null'];
+            $datetime_eur = date_create("now", timezone_open("utc"));
+            return timezone_offset_get($timezone, $datetime_eur) / 3600;
+        } else {
+            $parameters_arr['Timezone'] = ['default egypt'];
+            $parameters_arr['Latitude'] = ['null'];
+            $parameters_arr['Longitude'] = ['null'];
 
-        $this->log_action($actionName, $url, $parameters_arr);
+            $this->log_action($actionName, $url, $parameters_arr);
 
-        return 2; // default egypt
-      }
+            return 2; // default egypt
+        }
     }
 
     public function salah_time3(Request $request)
@@ -450,13 +419,12 @@ class FrontController extends Controller
         return view('front.salah_time', compact('prayer_times', 'hjrri_date'));
 
 
-
     }
 
     public function prayTimesCal()
     {
         $ip = !empty($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
-        $URL = 'http://www.geoplugin.net/php.gp?ip='.$ip;
+        $URL = 'http://www.geoplugin.net/php.gp?ip=' . $ip;
         // $new_arr = file_get_contents($URL );
         // $new_arr = curl_init($URL);
         // curl_setopt($new_arr, CURLOPT_HEADER, false);
@@ -500,7 +468,7 @@ class FrontController extends Controller
     {
         // $ip1       = "91.72.180.37";      //emirate
         //  $ip2       = "105.181.117.137";   //Egypt
-        $location  =  $this->ip_info('visitor', "location");
+        $location = $this->ip_info('visitor', "location");
         if ($location['geoplugin_longitude'] || $location['geoplugin_latitude']) {
             $latitude = $location['geoplugin_latitude'];
             $longitude = $location['geoplugin_longitude'];
@@ -510,17 +478,17 @@ class FrontController extends Controller
         }
 
         try {
-          $dtz = new \DateTimeZone($location['time_zone']);
+            $dtz = new \DateTimeZone($location['time_zone']);
         } catch (\Throwable $e) {
-          $dtz = new \DateTimeZone('Africa/cairo');
+            $dtz = new \DateTimeZone('Africa/cairo');
         }
 
         $time_in_sofia = new \DateTime('now', $dtz);
-        $offset = $dtz->getOffset( $time_in_sofia )/(1*60*60);
+        $offset = $dtz->getOffset($time_in_sofia) / (1 * 60 * 60);
 
         include(public_path('plugins/PrayTime.php'));
         $method = $location['country'] == 'Egypt' ? 5 : 4;
-        $timeZone = $offset < 0 ? $offset : "+".$offset;
+        $timeZone = $offset < 0 ? $offset : "+" . $offset;
         $date = strtotime(date("Y-n-j"));  // php date month and day without leading zero   ... Use j instead of d and n instead of m:
 
         $prayTime = new \PrayTime($method);
@@ -574,7 +542,7 @@ class FrontController extends Controller
         return view('front.azan', compact('providers'));
     }
 
-    public function list_azan($id,Request $request)
+    public function list_azan($id, Request $request)
     {
         if ($request->has('OpID') && $request->OpID != '') {
             $opID = $request->OpID;
@@ -609,7 +577,6 @@ class FrontController extends Controller
     }
 
 
-
     /* ======================= Oman Tel landing =================== */
     public function create_token()
     {
@@ -641,10 +608,10 @@ class FrontController extends Controller
     {
         $token = $this->create_token()['accessToken'];
 
-        $Url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/web/auth/dialog?access_token=$token&redirect=".urlencode($request->redirect_url)."&auto=false&authMode=AUTO&distributionChannel=APP";
+        $Url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . urlencode($request->redirect_url) . "&auto=false&authMode=AUTO&distributionChannel=APP";
 
 
-        session()->put('success_url',$request->redirect_url);
+        session()->put('success_url', $request->redirect_url);
         // make log
         $actionName = "OmanTel Redirect";
         $parameters_arr = array(
@@ -660,8 +627,8 @@ class FrontController extends Controller
 
     public function test()
     {
-      $current_url =  session()->get('current_url');
-      return redirect(url("/omantel/redirect?redirect_url=".$current_url)) ;
+        $current_url = session()->get('current_url');
+        return redirect(url("/omantel/redirect?redirect_url=" . $current_url));
     }
 
     public function check_status($userToken)
@@ -674,7 +641,7 @@ class FrontController extends Controller
         $headers = array(
             "accept: application/json",
             "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
-            "Authorization: Bearer ".$userToken
+            "Authorization: Bearer " . $userToken
         );
 
         $json = '';
@@ -683,60 +650,56 @@ class FrontController extends Controller
         $response = json_decode($response, true);
 
 
+        if (isset($response['error']) && $response['error'] == "TOKEN_NOT_VALID") { // Token expire So create new one
+            $current_url = session()->get('current_url');
 
-        if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" ){ // Token expire So create new one
-          $current_url =  session()->get('current_url');
-
-          // make log
-          $actionName = "Omantel Check Status with Error";
-          $parameters_arr = array(
-            'token' => $userToken,
-            'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'headers' =>  $headers,
-            'response' => $response,
-            'error' =>$response['error'] ,
-          );
-          $this->log_action($actionName, $url, $parameters_arr);
-
-
-         //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
-           $Url = url("/omantel/redirect?redirect_url=".$current_url);
-           header("Location: $Url");
-           die();
-         }
+            // make log
+            $actionName = "Omantel Check Status with Error";
+            $parameters_arr = array(
+                'token' => $userToken,
+                'date' => Carbon::now()->format('Y-m-d H:i:s'),
+                'headers' => $headers,
+                'response' => $response,
+                'error' => $response['error'],
+            );
+            $this->log_action($actionName, $url, $parameters_arr);
 
 
-         if(isset($response['error']) && $response['error'] =="PARTNER_KEY_NOT_MATCHES" ){ // after switch between Omantel and Du
-          $current_url =  session()->get('current_url');
-
-          // make log
-          $actionName = "Omantel Check Status with Error";
-          $parameters_arr = array(
-            'token' => $userToken,
-            'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'headers' =>  $headers,
-            'response' => $response,
-            'error' =>$response['error'] ,
-          );
-          $this->log_action($actionName, $url, $parameters_arr);
+            //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+            $Url = url("/omantel/redirect?redirect_url=" . $current_url);
+            header("Location: $Url");
+            die();
+        }
 
 
-          // return redirect("/du_redirect?redirect_url=".$current_url);
-          $Url = url("/omantel/redirect?redirect_url=".$current_url);
-          header("Location: $Url");
-          die();
+        if (isset($response['error']) && $response['error'] == "PARTNER_KEY_NOT_MATCHES") { // after switch between Omantel and Du
+            $current_url = session()->get('current_url');
 
-         }
+            // make log
+            $actionName = "Omantel Check Status with Error";
+            $parameters_arr = array(
+                'token' => $userToken,
+                'date' => Carbon::now()->format('Y-m-d H:i:s'),
+                'headers' => $headers,
+                'response' => $response,
+                'error' => $response['error'],
+            );
+            $this->log_action($actionName, $url, $parameters_arr);
 
 
+            // return redirect("/du_redirect?redirect_url=".$current_url);
+            $Url = url("/omantel/redirect?redirect_url=" . $current_url);
+            header("Location: $Url");
+            die();
+
+        }
 
 
-
-        if(isset($response[0]['id']) && $response[0]['id'] !=""){
-          $check_status_id = $response[0]['id']  ;
-          session()->put('check_status_id',  $response[0]['id']);
-        }else{
-          $check_status_id = "" ;
+        if (isset($response[0]['id']) && $response[0]['id'] != "") {
+            $check_status_id = $response[0]['id'];
+            session()->put('check_status_id', $response[0]['id']);
+        } else {
+            $check_status_id = "";
         }
 
         // make log
@@ -744,21 +707,21 @@ class FrontController extends Controller
         $parameters_arr = array(
             'token' => $userToken,
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'headers' =>  $headers,
+            'headers' => $headers,
             'response' => $response,
-            'check_status_id' =>   $check_status_id ,
+            'check_status_id' => $check_status_id,
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
-        if(!empty($response)){
-          session()->put('check_status_id',$response[0]['id']);
-          session()->put('userToken_omantel',$userToken);
-      }
+        if (!empty($response)) {
+            session()->put('check_status_id', $response[0]['id']);
+            session()->put('userToken_omantel', $userToken);
+        }
 
         return $response;
     }
 
-    public function pin_code ($userToken)
+    public function pin_code($userToken)
     {
         $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription/subscribe/sendSubPin";
 
@@ -766,7 +729,7 @@ class FrontController extends Controller
             "Content-Type: application/json",
             "accept: application/json",
             "X-MM-GATEWAY-KEY: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
-            "Authorization: Bearer ".$userToken
+            "Authorization: Bearer " . $userToken
         );
 
         $vars['subscriptionTypeId'] = 59160008;
@@ -778,57 +741,56 @@ class FrontController extends Controller
         $response = json_decode($response, true);
 
 
+        if (isset($response['error']) && $response['error'] == "TOKEN_NOT_VALID") { // Token expire So create new one
+            $current_url = session()->get('current_url');
 
-         if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" ){ // Token expire So create new one
-          $current_url =  session()->get('current_url');
-
-          // make log
-          $actionName = "Omantel Check Status with Error";
-          $parameters_arr = array(
-            'token' => $userToken,
-            'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'headers' =>  $headers,
-            'response' => $response,
-            'error' =>$response['error'] ,
-          );
-          $this->log_action($actionName, $url, $parameters_arr);
-
-
-         //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
-           $Url = url("/omantel/redirect?redirect_url=".$current_url);
-           header("Location: $Url");
-           die();
-         }
+            // make log
+            $actionName = "Omantel Check Status with Error";
+            $parameters_arr = array(
+                'token' => $userToken,
+                'date' => Carbon::now()->format('Y-m-d H:i:s'),
+                'headers' => $headers,
+                'response' => $response,
+                'error' => $response['error'],
+            );
+            $this->log_action($actionName, $url, $parameters_arr);
 
 
-         if(isset($response['error']) && $response['error'] =="PARTNER_KEY_NOT_MATCHES" ){ // after switch between Omantel and Du
-          $current_url =  session()->get('current_url');
-
-          // make log
-          $actionName = "Omantel Check Status with Error";
-          $parameters_arr = array(
-            'token' => $userToken,
-            'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'headers' =>  $headers,
-            'response' => $response,
-            'error' =>$response['error'] ,
-          );
-          $this->log_action($actionName, $url, $parameters_arr);
+            //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+            $Url = url("/omantel/redirect?redirect_url=" . $current_url);
+            header("Location: $Url");
+            die();
+        }
 
 
-          // return redirect("/du_redirect?redirect_url=".$current_url);
-          $Url = url("/omantel/redirect?redirect_url=".$current_url);
-          header("Location: $Url");
-          die();
+        if (isset($response['error']) && $response['error'] == "PARTNER_KEY_NOT_MATCHES") { // after switch between Omantel and Du
+            $current_url = session()->get('current_url');
 
-         }
+            // make log
+            $actionName = "Omantel Check Status with Error";
+            $parameters_arr = array(
+                'token' => $userToken,
+                'date' => Carbon::now()->format('Y-m-d H:i:s'),
+                'headers' => $headers,
+                'response' => $response,
+                'error' => $response['error'],
+            );
+            $this->log_action($actionName, $url, $parameters_arr);
+
+
+            // return redirect("/du_redirect?redirect_url=".$current_url);
+            $Url = url("/omantel/redirect?redirect_url=" . $current_url);
+            header("Location: $Url");
+            die();
+
+        }
 
 
         // make log
         $actionName = "Omantel Send PinCode";
         $parameters_arr = array(
             'userToken' => $userToken,
-            'headers' =>  $headers,
+            'headers' => $headers,
             "response" => $response,
         );
 
@@ -837,9 +799,9 @@ class FrontController extends Controller
         Session::put('requestId', $response['custRequestId']);
         Session::put('userToken', $userToken);
 
-     //  $current_url =  session()->get('current_url');
-     //  return redirect(url($current_url)) ;
-        return redirect(route('front.pincode',['OpID' => omantel]));
+        //  $current_url =  session()->get('current_url');
+        //  return redirect(url($current_url)) ;
+        return redirect(route('front.pincode', ['OpID' => omantel]));
     }
 
     public function pincode(Request $request)
@@ -859,7 +821,7 @@ class FrontController extends Controller
             "content-type: application/json",
             "accept: application/json",
             "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
-            "Authorization: Bearer ".$userToken
+            "Authorization: Bearer " . $userToken
         );
 
         $vars['requestId'] = $requestId;
@@ -873,51 +835,49 @@ class FrontController extends Controller
         $response = json_decode($response, true);
 
 
+        if (isset($response['error']) && $response['error'] == "TOKEN_NOT_VALID") { // Token expire So create new one
+            $current_url = session()->get('current_url');
 
-         if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" ){ // Token expire So create new one
-          $current_url =  session()->get('current_url');
-
-          // make log
-          $actionName = "Omantel Check Status with Error";
-          $parameters_arr = array(
-            'token' => $userToken,
-            'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'headers' =>  $headers,
-            'response' => $response,
-            'error' =>$response['error'] ,
-          );
-          $this->log_action($actionName, $url, $parameters_arr);
-
-
-         //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
-           $Url = url("/omantel/redirect?redirect_url=".$current_url);
-           header("Location: $Url");
-           die();
-         }
+            // make log
+            $actionName = "Omantel Check Status with Error";
+            $parameters_arr = array(
+                'token' => $userToken,
+                'date' => Carbon::now()->format('Y-m-d H:i:s'),
+                'headers' => $headers,
+                'response' => $response,
+                'error' => $response['error'],
+            );
+            $this->log_action($actionName, $url, $parameters_arr);
 
 
-         if(isset($response['error']) && $response['error'] =="PARTNER_KEY_NOT_MATCHES" ){ // after switch between Omantel and Du
-          $current_url =  session()->get('current_url');
-
-          // make log
-          $actionName = "Omantel Check Status with Error";
-          $parameters_arr = array(
-            'token' => $userToken,
-            'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'headers' =>  $headers,
-            'response' => $response,
-            'error' =>$response['error'] ,
-          );
-          $this->log_action($actionName, $url, $parameters_arr);
+            //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+            $Url = url("/omantel/redirect?redirect_url=" . $current_url);
+            header("Location: $Url");
+            die();
+        }
 
 
-          // return redirect("/du_redirect?redirect_url=".$current_url);
-          $Url = url("/omantel/redirect?redirect_url=".$current_url);
-          header("Location: $Url");
-          die();
+        if (isset($response['error']) && $response['error'] == "PARTNER_KEY_NOT_MATCHES") { // after switch between Omantel and Du
+            $current_url = session()->get('current_url');
 
-         }
+            // make log
+            $actionName = "Omantel Check Status with Error";
+            $parameters_arr = array(
+                'token' => $userToken,
+                'date' => Carbon::now()->format('Y-m-d H:i:s'),
+                'headers' => $headers,
+                'response' => $response,
+                'error' => $response['error'],
+            );
+            $this->log_action($actionName, $url, $parameters_arr);
 
+
+            // return redirect("/du_redirect?redirect_url=".$current_url);
+            $Url = url("/omantel/redirect?redirect_url=" . $current_url);
+            header("Location: $Url");
+            die();
+
+        }
 
 
         // make log
@@ -926,31 +886,31 @@ class FrontController extends Controller
             'userToken' => $userToken,
             'requestId' => $requestId,
             'pin' => $pin,
-            'headers' =>  $headers,
+            'headers' => $headers,
             "response" => $response,
         );
 
         $this->log_action($actionName, $url, $parameters_arr);
 
-        if($response['responseCode'] == 670){
-            return back()->with('faild','not success pincode');
+        if ($response['responseCode'] == 670) {
+            return back()->with('faild', 'not success pincode');
         }
-        session()->put('status','active');
+        session()->put('status', 'active');
         return redirect(session()->get('current_url'));
     }
 
     public function delete_subscription(Request $request)
     {
-         $userToken  = session()->get('userToken_omantel') ;
-         $check_status_id  = session()->get('check_status_id') ;
+        $userToken = session()->get('userToken_omantel');
+        $check_status_id = session()->get('check_status_id');
 
         $url = "http://gateway.mondiamedia.com/omantel-om-lcm-v1/api/subscription/$check_status_id ";
 
-        $headers= array(
-          "accept: application/json",
-          "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
-          "authorization: Bearer $userToken"
-      ) ;
+        $headers = array(
+            "accept: application/json",
+            "x-mm-gateway-key: G703a1c14-0afb-7c9e-bcb3-2854e471f8e8",
+            "authorization: Bearer $userToken"
+        );
 
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -965,7 +925,6 @@ class FrontController extends Controller
         ));
 
 
-
         $response = curl_exec($curl);
         $err = curl_error($curl);
         curl_close($curl);
@@ -973,86 +932,82 @@ class FrontController extends Controller
         $response = json_decode($response, true);
 
 
+        if (isset($response['error']) && $response['error'] == "TOKEN_NOT_VALID") { // Token expire So create new one
+            $current_url = session()->get('current_url');
 
-        if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" ){ // Token expire So create new one
-          $current_url =  session()->get('current_url');
-
-          // make log
-          $actionName = "Omantel Check Status For Delete with Error";
-          $parameters_arr = array(
-            'token' => $userToken,
-            'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'headers' =>  $headers,
-            'response' => $response,
-            'error' =>$response['error'] ,
-          );
-          $this->log_action($actionName, $url, $parameters_arr);
-
-
-         //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
-           $Url = url("/omantel/redirect?redirect_url=".$current_url);
-           header("Location: $Url");
-           die();
-         }
+            // make log
+            $actionName = "Omantel Check Status For Delete with Error";
+            $parameters_arr = array(
+                'token' => $userToken,
+                'date' => Carbon::now()->format('Y-m-d H:i:s'),
+                'headers' => $headers,
+                'response' => $response,
+                'error' => $response['error'],
+            );
+            $this->log_action($actionName, $url, $parameters_arr);
 
 
-         if(isset($response['error']) && $response['error'] =="PARTNER_KEY_NOT_MATCHES" ){ // after switch between Omantel and Du
-          $current_url =  session()->get('current_url');
-
-          // make log
-          $actionName = "Omantel Check Status For Delete with Error";
-          $parameters_arr = array(
-            'token' => $userToken,
-            'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'headers' =>  $headers,
-            'response' => $response,
-            'error' =>$response['error'] ,
-          );
-          $this->log_action($actionName, $url, $parameters_arr);
+            //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+            $Url = url("/omantel/redirect?redirect_url=" . $current_url);
+            header("Location: $Url");
+            die();
+        }
 
 
-          // return redirect("/du_redirect?redirect_url=".$current_url);
-          $Url = url("/omantel/redirect?redirect_url=".$current_url);
-          header("Location: $Url");
-          die();
+        if (isset($response['error']) && $response['error'] == "PARTNER_KEY_NOT_MATCHES") { // after switch between Omantel and Du
+            $current_url = session()->get('current_url');
 
-         }
+            // make log
+            $actionName = "Omantel Check Status For Delete with Error";
+            $parameters_arr = array(
+                'token' => $userToken,
+                'date' => Carbon::now()->format('Y-m-d H:i:s'),
+                'headers' => $headers,
+                'response' => $response,
+                'error' => $response['error'],
+            );
+            $this->log_action($actionName, $url, $parameters_arr);
 
 
+            // return redirect("/du_redirect?redirect_url=".$current_url);
+            $Url = url("/omantel/redirect?redirect_url=" . $current_url);
+            header("Location: $Url");
+            die();
+
+        }
 
 
         // make log
         $actionName = "Omantel Delete Subscription";
         $parameters_arr = array(
-           'userToken' => $userToken,
-           'check_status_id' => $check_status_id,
+            'userToken' => $userToken,
+            'check_status_id' => $check_status_id,
             "response" => $response,
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
 
-       // if(isset( $response['text']) && $response['text'] == "UNSUB_OK" ){ // Unsub succcess
-          // session()->flush();
-          Session::forget(['menu_unsub_omantel']);
-           Session::flash('unsub_success', 'You are unsubscribe success');
+        // if(isset( $response['text']) && $response['text'] == "UNSUB_OK" ){ // Unsub succcess
+        // session()->flush();
+        Session::forget(['menu_unsub_omantel']);
+        Session::flash('unsub_success', 'You are unsubscribe success');
         //  }else{
         //    Session::flash('unsub_fail', 'There is error in unsubscribe');
         //  }
-         return redirect("?OpID=9");
+        return redirect("?OpID=9");
     }
-
 
 
     public function logout()
     {
-      if( session()->has('OpID')  && session()->get('OpID') != ''  ){
-        $Url = url("/?OpID=".session()->get('OpID')) ;
-       // session()->flush();
-        Session::forget(['userToken_omantel','menu_unsub_omantel']);
-        return redirect($Url);
-      }else{
-        return redirect(url('/'));
-      }
+        if (session()->has('OpID') && session()->get('OpID') != '') {
+            $Url = url("/?OpID=" . session()->get('OpID'));
+            // session()->flush();
+            Session::forget(['userToken_omantel', 'menu_unsub_omantel']);
+            return redirect($Url);
+        } else {
+            return redirect(url('/'));
+        }
 
     }
 
@@ -1075,7 +1030,7 @@ class FrontController extends Controller
         $actionName = "DU Create Token";
         $parameters_arr = array(
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'headers' =>  $headers,
+            'headers' => $headers,
             'response' => $response,
         );
 
@@ -1090,10 +1045,10 @@ class FrontController extends Controller
 
 
         $token = $this->du_create_token()['accessToken'];
-        $redirect_url = $request->redirect_url ;
-        $Url = "http://du-portal-lcm.mondiamedia.com/du-portal-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . urlencode($request->redirect_url)."&auto=false&authMode=AUTO&distributionChannel=APP";
+        $redirect_url = $request->redirect_url;
+        $Url = "http://du-portal-lcm.mondiamedia.com/du-portal-lcm-v1/web/auth/dialog?access_token=$token&redirect=" . urlencode($request->redirect_url) . "&auto=false&authMode=AUTO&distributionChannel=APP";
 
-        session()->put('success_url',$redirect_url);
+        session()->put('success_url', $redirect_url);
 
         // make log
         $actionName = "DU Redirect";
@@ -1108,7 +1063,6 @@ class FrontController extends Controller
     }
 
 
-
     public function du_check_status($userToken)
     {
 
@@ -1119,7 +1073,7 @@ class FrontController extends Controller
         $headers = array(
             "accept: application/json",
             "X-MM-GATEWAY-KEY: G94193561-6669-1626-76fd-b7b02fe6b216",
-            "Authorization: Bearer ".$userToken
+            "Authorization: Bearer " . $userToken
         );
 
         $json = '';
@@ -1127,59 +1081,59 @@ class FrontController extends Controller
         $response = $this->SendRequestGet($url, $json, $headers);
         $response = json_decode($response, true);
 
-       // print_r($response); die;
+        // print_r($response); die;
 
-        if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" ){ // Token expire So create new one
-          $current_url =  session()->get('current_url');
-         //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
+        if (isset($response['error']) && $response['error'] == "TOKEN_NOT_VALID") { // Token expire So create new one
+            $current_url = session()->get('current_url');
+            //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
 
-       // make log
-       $actionName = "DU Check Status with Error";
-       $parameters_arr = array(
-       'token' => $userToken,
-       'date' => Carbon::now()->format('Y-m-d H:i:s'),
-       'userToken' =>  $userToken,
-       'headers' =>  $headers,
-       'response' => $response,
-       'error' =>$response['error'] ,
-       );
-       $this->log_action($actionName, $url, $parameters_arr);
-
-
-           $Url = url("/du_redirect?redirect_url=".$current_url);
-           header("Location: $Url");
-           die();
-         }
-
-         if(isset($response['error']) && $response['error'] =="PARTNER_KEY_NOT_MATCHES" ){ // after switch between Omantel and Du
-          $current_url =  session()->get('current_url');
-
-          // make log
-          $actionName = "DU Check Status with Error";
-          $parameters_arr = array(
-          'token' => $userToken,
-          'date' => Carbon::now()->format('Y-m-d H:i:s'),
-          'userToken' =>  $userToken,
-          'headers' =>  $headers,
-          'response' => $response,
-          'error' =>$response['error'] ,
-          );
-          $this->log_action($actionName, $url, $parameters_arr);
+            // make log
+            $actionName = "DU Check Status with Error";
+            $parameters_arr = array(
+                'token' => $userToken,
+                'date' => Carbon::now()->format('Y-m-d H:i:s'),
+                'userToken' => $userToken,
+                'headers' => $headers,
+                'response' => $response,
+                'error' => $response['error'],
+            );
+            $this->log_action($actionName, $url, $parameters_arr);
 
 
-          // return redirect("/du_redirect?redirect_url=".$current_url);
-          $Url = url("/du_redirect?redirect_url=".$current_url);
-          header("Location: $Url");
-          die();
+            $Url = url("/du_redirect?redirect_url=" . $current_url);
+            header("Location: $Url");
+            die();
+        }
 
-         }
+        if (isset($response['error']) && $response['error'] == "PARTNER_KEY_NOT_MATCHES") { // after switch between Omantel and Du
+            $current_url = session()->get('current_url');
+
+            // make log
+            $actionName = "DU Check Status with Error";
+            $parameters_arr = array(
+                'token' => $userToken,
+                'date' => Carbon::now()->format('Y-m-d H:i:s'),
+                'userToken' => $userToken,
+                'headers' => $headers,
+                'response' => $response,
+                'error' => $response['error'],
+            );
+            $this->log_action($actionName, $url, $parameters_arr);
 
 
-        if(isset($response[0]['id']) && $response[0]['id'] !=""){
-          $check_status_id = $response[0]['id']  ;
-          session()->put('check_status_id',  $response[0]['id']);
-        }else{
-          $check_status_id = "" ;
+            // return redirect("/du_redirect?redirect_url=".$current_url);
+            $Url = url("/du_redirect?redirect_url=" . $current_url);
+            header("Location: $Url");
+            die();
+
+        }
+
+
+        if (isset($response[0]['id']) && $response[0]['id'] != "") {
+            $check_status_id = $response[0]['id'];
+            session()->put('check_status_id', $response[0]['id']);
+        } else {
+            $check_status_id = "";
         }
 
         // make log
@@ -1187,16 +1141,16 @@ class FrontController extends Controller
         $parameters_arr = array(
             'token' => $userToken,
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'userToken' =>  $userToken,
-            'headers' =>  $headers,
+            'userToken' => $userToken,
+            'headers' => $headers,
             'response' => $response,
             'check_status_id' => $check_status_id,
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
-        if(!empty($response)){
-            session()->put('check_status_id',$response[0]['id']);
-            session()->put('userToken_du',$userToken);
+        if (!empty($response)) {
+            session()->put('check_status_id', $response[0]['id']);
+            session()->put('userToken_du', $userToken);
         }
         return $response;
     }
@@ -1206,22 +1160,22 @@ class FrontController extends Controller
     {
 
 
-        if(    app()->getLocale()  !=NULL   ){
-          $current_lang= app()->getLocale() ;
-        }else{
-          $current_lang ="en";
+        if (app()->getLocale() != NULL) {
+            $current_lang = app()->getLocale();
+        } else {
+            $current_lang = "en";
         }
 
-        if( app()->getLocale() == "ur"){
-          $current_lang ="en";
+        if (app()->getLocale() == "ur") {
+            $current_lang = "en";
         }
 
 
         $x = 12;
 
-        $trxid = $randomNum=substr(str_shuffle("123456789123456789123456789"), 0, $x);
+        $trxid = $randomNum = substr(str_shuffle("123456789123456789123456789"), 0, $x);
 
-        $url = "http://pay-with-du.ae/16/mondiamedia/mondia-duelkheer-1-$current_lang-doi-web?serviceProvider=mondiamedia&serviceid=duelkheer&trxid=".$trxid."&redirectUrl=".urlencode(session()->get('current_url'));
+        $url = "http://pay-with-du.ae/16/mondiamedia/mondia-duelkheer-1-$current_lang-doi-web?serviceProvider=mondiamedia&serviceid=duelkheer&trxid=" . $trxid . "&redirectUrl=" . urlencode(session()->get('current_url'));
 
         // make log
         $actionName = "DU Send PinCode";
@@ -1237,16 +1191,16 @@ class FrontController extends Controller
     public function du_delete_subscription_old(Request $request)
     {
 
-      $userToken  = session()->get('userToken') ;
-      $check_status_id  = session()->get('check_status_id') ;
+        $userToken = session()->get('userToken');
+        $check_status_id = session()->get('check_status_id');
 
         $url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/api/subscription/$check_status_id";
 
         $headers = array(
-          "accept: application/json",
-          "x-mm-gateway-key: G94193561-6669-1626-76fd-b7b02fe6b216",
-          "authorization: Bearer $userToken"
-      ) ;
+            "accept: application/json",
+            "x-mm-gateway-key: G94193561-6669-1626-76fd-b7b02fe6b216",
+            "authorization: Bearer $userToken"
+        );
 
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -1268,34 +1222,33 @@ class FrontController extends Controller
         // make log
         $actionName = "DU Delete Subscription";
         $parameters_arr = array(
-          'userToken' =>   $userToken,
-          'check_status_id' =>  $check_status_id,
-          'headers' =>  $headers,
-           "response" => $response,
+            'userToken' => $userToken,
+            'check_status_id' => $check_status_id,
+            'headers' => $headers,
+            "response" => $response,
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
 
-       // session()->flush();
+        // session()->flush();
         Session::flash('unsub_success', 'You are unsubscribe success');
         return redirect("?OpID=10");
     }
 
 
-
     public function du_delete_subscription(Request $request)
     {
 
-      $userToken  = session()->get('userToken_du') ;
-      $check_status_id  = session()->get('check_status_id') ;
+        $userToken = session()->get('userToken_du');
+        $check_status_id = session()->get('check_status_id');
 
         $url = "http://gateway.mondiamedia.com/du-portal-lcm-v1/api/subscription/unsubscribe/56830063?sendSms=true";
 
         $headers = array(
-          "accept: application/json",
-          "x-mm-gateway-key: G94193561-6669-1626-76fd-b7b02fe6b216",
-          "authorization: Bearer $userToken"
-      ) ;
+            "accept: application/json",
+            "x-mm-gateway-key: G94193561-6669-1626-76fd-b7b02fe6b216",
+            "authorization: Bearer $userToken"
+        );
 
 
         $curl = curl_init();
@@ -1315,97 +1268,94 @@ class FrontController extends Controller
 
         $response = json_decode($response, true);
 
-      /*
-        {
-          "responseCode": 200,
-          "text": "UNSUB_OK",
-          "description": "Successfully unsubbed."
-      }
-      */
+        /*
+          {
+            "responseCode": 200,
+            "text": "UNSUB_OK",
+            "description": "Successfully unsubbed."
+        }
+        */
 
 
+        if (isset($response['error']) && $response['error'] == "TOKEN_NOT_VALID") { // Token expire So create new one
+            $current_url = session()->get('current_url');
+            //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
 
-      if(isset($response['error']) && $response['error'] =="TOKEN_NOT_VALID" ){ // Token expire So create new one
-        $current_url =  session()->get('current_url');
-       //  return redirect(url("/du_redirect?redirect_url=".$current_url)) ;
-
-     // make log
-     $actionName = "DU Check Status with Error";
-     $parameters_arr = array(
-     'token' => $userToken,
-     'date' => Carbon::now()->format('Y-m-d H:i:s'),
-     'userToken' =>  $userToken,
-     'headers' =>  $headers,
-     'response' => $response,
-     'error' =>$response['error'] ,
-     );
-     $this->log_action($actionName, $url, $parameters_arr);
-
-
-         $Url = url("/du_redirect?redirect_url=".$current_url);
-         header("Location: $Url");
-         die();
-       }
-
-       if(isset($response['error']) && $response['error'] =="PARTNER_KEY_NOT_MATCHES" ){ // after switch between Omantel and Du
-        $current_url =  session()->get('current_url');
-
-        // make log
-        $actionName = "DU Check Status with Error";
-        $parameters_arr = array(
-        'token' => $userToken,
-        'date' => Carbon::now()->format('Y-m-d H:i:s'),
-        'userToken' =>  $userToken,
-        'headers' =>  $headers,
-        'response' => $response,
-        'error' =>$response['error'] ,
-        );
-        $this->log_action($actionName, $url, $parameters_arr);
+            // make log
+            $actionName = "DU Check Status with Error";
+            $parameters_arr = array(
+                'token' => $userToken,
+                'date' => Carbon::now()->format('Y-m-d H:i:s'),
+                'userToken' => $userToken,
+                'headers' => $headers,
+                'response' => $response,
+                'error' => $response['error'],
+            );
+            $this->log_action($actionName, $url, $parameters_arr);
 
 
-        // return redirect("/du_redirect?redirect_url=".$current_url);
-        $Url = url("/du_redirect?redirect_url=".$current_url);
-        header("Location: $Url");
-        die();
+            $Url = url("/du_redirect?redirect_url=" . $current_url);
+            header("Location: $Url");
+            die();
+        }
 
-       }
+        if (isset($response['error']) && $response['error'] == "PARTNER_KEY_NOT_MATCHES") { // after switch between Omantel and Du
+            $current_url = session()->get('current_url');
+
+            // make log
+            $actionName = "DU Check Status with Error";
+            $parameters_arr = array(
+                'token' => $userToken,
+                'date' => Carbon::now()->format('Y-m-d H:i:s'),
+                'userToken' => $userToken,
+                'headers' => $headers,
+                'response' => $response,
+                'error' => $response['error'],
+            );
+            $this->log_action($actionName, $url, $parameters_arr);
+
+
+            // return redirect("/du_redirect?redirect_url=".$current_url);
+            $Url = url("/du_redirect?redirect_url=" . $current_url);
+            header("Location: $Url");
+            die();
+
+        }
 
 
         // make log
         $actionName = "DU Delete Subscription";
         $parameters_arr = array(
-          'userToken' =>   $userToken,
-          'check_status_id' =>  $check_status_id,
-          'headers' =>  $headers,
-           "response" => $response,
+            'userToken' => $userToken,
+            'check_status_id' => $check_status_id,
+            'headers' => $headers,
+            "response" => $response,
         );
         $this->log_action($actionName, $url, $parameters_arr);
 
 
-        if(isset( $response['text']) && $response['text'] == "UNSUB_OK" ){ // Unsub succcess
-         // session()->flush();
-         Session::forget(['menu_unsub_du']);
-          Session::flash('unsub_success', 'You are unsubscribe success');
-        }else{
-          Session::flash('unsub_fail', 'There is error in unsubscribe');
+        if (isset($response['text']) && $response['text'] == "UNSUB_OK") { // Unsub succcess
+            // session()->flush();
+            Session::forget(['menu_unsub_du']);
+            Session::flash('unsub_success', 'You are unsubscribe success');
+        } else {
+            Session::flash('unsub_fail', 'There is error in unsubscribe');
         }
 
         return redirect("?OpID=10");
     }
 
 
-
-
     public function du_logout()
     {
-        if( session()->has('OpID')  && session()->get('OpID') != ''  ){
+        if (session()->has('OpID') && session()->get('OpID') != '') {
 
-          $Url = url("/?OpID=".session()->get('OpID')) ;
-         // session()->flush();
-          Session::forget(['userToken_du','menu_unsub_du']);
-          return redirect($Url);
-        }else{
-          return redirect(url('/'));
+            $Url = url("/?OpID=" . session()->get('OpID'));
+            // session()->flush();
+            Session::forget(['userToken_du', 'menu_unsub_du']);
+            return redirect($Url);
+        } else {
+            return redirect(url('/'));
         }
 
     }
@@ -1413,10 +1363,42 @@ class FrontController extends Controller
 
     public function du_set_session()
     {
-      session()->put('userToken',"U597c0e5b-c351-4044-9ce2-f99e39fcc671");
-      echo  session()->get('userToken') ;
+        session()->put('userToken', "U597c0e5b-c351-4044-9ce2-f99e39fcc671");
+        echo session()->get('userToken');
     }
 
+    public function Todayquran()
+    {
+        if (request()->get('OpID') == stc) {
+            $ApiHandler = new ApiController();
+            $latestpost = $ApiHandler->TodayStc();
+            return view('front.today_stc', compact('latestpost'));
+        } else {
+            return view('errors.404');
+        }
+    }
 
+    public function Latesquran()
+    {
+        if (request()->get('OpID') == stc) {
+            $ApiHandler = new ApiController();
+            $allVideo = $ApiHandler->LatestStc();
+            return view('front.list_stc', compact('allVideo'));
+        } else {
+            return view('errors.404');
+        }
+    }
+
+    public function landingquran($id)
+    {
+        if (request()->get('OpID') == stc) {
+            $ApiHandler = new ApiController();
+            $landingPost = $ApiHandler->InnerStc($id);
+            $allVideo = $ApiHandler->LatestStc();
+            return view('front.inner_stc', compact('landingPost','allVideo'));
+        } else {
+            return view('errors.404');
+        }
+    }
 
 }

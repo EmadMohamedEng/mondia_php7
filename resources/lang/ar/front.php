@@ -52,6 +52,7 @@ return [
     'unsub_fail' => 'حدثت مشكلة اثناء عملية الغاء الاشتراك',
     'service' => 'خدمات',
     'content' => 'محتوى',
+    'quran' => 'قرآن لايف',
     'Daily renewal subscription' => 'اشتراك يجدد يوميا',
     'omantel ElKheer' => 'عمانتل الخير',
     'Please confirm subscription to' => 'تاكيد الاشتراك في',

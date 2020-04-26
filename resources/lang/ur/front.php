@@ -32,6 +32,7 @@ return [
     'number_of_girls' => 'لڑکیوں کی تعداد',
     'feather' => 'والد',
     'mother' => 'والدہ',
+    'quran' => 'قرآن لايف',
     'number_of_brother' => 'بھائیوں کی تعداد',
     'number_of_sister' => 'بہنوں کی تعداد',
     'number_of_wife' => 'بیویوں کی تعداد',
