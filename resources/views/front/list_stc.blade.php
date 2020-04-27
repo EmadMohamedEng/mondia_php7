@@ -23,7 +23,7 @@ List video
         <div class="col-md-4 col-lg-4 col-xl-2 col-6 p-0">
             <div class="item">
               <div class="card ovf-hidden">
-                <a class="owl_content_img view overlay link_href" href="{{url("landing/$video->id")}}">
+                <a class="owl_content_img view overlay link_href" href="{{url("landing/$video->postId")}}">
                   <img class="w-100" src="{{$imgUrl}}" alt="Card image cap" style="height: 11.25rem;">
 
                   <a>
@@ -31,8 +31,17 @@ List video
                   </a>
                 </a>
                 <div class="card-body">
-                  <a class="link_href" href="{{url("landing/$video->id")}}">
-                    <h4 class="card-title text-capitalize" style="color:#ff375e ">{{$video->title}}</h4>
+                  <a class="link_href" href="{{url("landing/$video->postId")}}">
+                    <h4 class="card-title text-capitalize" style="color:#ff375e ">
+                      @if(app()->getLocale() == 'ar')
+                        {{$video->title_ar}}
+                      @elseif(app()->getLocale() == 'en')
+                        {{$video->title_en}}
+                      @elseif(app()->getLocale() == 'ur')
+                        {{$video->title_ar}}
+
+                      @endif
+                    </h4>
                   </a>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 @extends('front.master')
-@section('page_title')  @endsection
+@section('page_title') Inner quran @endsection
 @section('content')
     <?php
     $imgUrl = "http://quranlive.digizone.com.kw/front/images/img_1.png";
@@ -14,41 +14,58 @@
                         <video poster="{{$imgUrl}}" style="object-fit: cover;width:50%;" controls>
                             <source src="{{encrypt_content($landingPost->video)}}"/>
                         </video>
-                        <h1 style="color: #ff375e;">{{$landingPost->title}}</h1>
+                        <h1 style="color: #ff375e;">
+                            @if(app()->getLocale() == 'ar')
+                                {{$landingPost->title_ar}}
+                            @elseif(app()->getLocale() == 'en')
+                                {{$landingPost->title_en}}
+                            @elseif(app()->getLocale() == 'ur')
+                                {{$landingPost->title_ar}}
+
+                            @endif
+                        </h1>
                     </div>
 
                 </div>
-
 
                 <div class="border-bottom"></div>
 
-                <div class="socail_media padding_phones">
-                    <div class="row m-0 list_load">
-                        @foreach($allVideo as $video)
-                            <div class="col-md-6">
-                                <div class="item">
-                                    <div class="card ovf-hidden">
-                                        <a class="owl_content_img view overlay link_href" href="{{url("landing/$video->id")}}">
-                                            <img class="w-100" src="{{$imgUrl}}" alt="Card image cap" style="height: 11.25rem;">
+                <section class="section_content padding_phones">
+                    <div class="row m-0">
+                        <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
+                            <div class="pa_Videos">
+                                <span>@lang('front.related_video'): </span>
+                            </div>
+                        </div>
 
-                                            <a>
-                                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                                            </a>
-                                        </a>
-                                        <div class="card-body">
-                                            <a class="link_href" href="{{url("landing/$video->id")}}">
-                                                <h4 class="card-title text-capitalize" style="color:#ff375e ">{{$video->title}}</h4>
-                                            </a>
-                                        </div>
+                        @foreach($allVideo as $video)
+                            <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
+                                <a class="row link_href" href="{{url("landing/$video->postId")}}">
+                                    <div class="col-md-2 col-lg-2 col-xl-2 col-2 p-0">
+                                        <img class="w-100 h-100" src="{{$imgUrl}}" class="image_inner"
+                                             alt="Card image cap">
                                     </div>
-                                </div>
+
+                                    <div class="col-md-8 col-lg-8 col-xl-8 col-8 p-0 ml-2 mr-2">
+                                        <p class="p_content text-capitalize scale-up-bottom">
+                                            @if(app()->getLocale() == 'ar')
+                                                {{$video->title_ar}}
+                                            @elseif(app()->getLocale() == 'en')
+                                                {{$video->title_en}}
+                                            @elseif(app()->getLocale() == 'ur')
+                                                {{$landingPost->title_ar}}
+                                            @endif
+                                        </p>
+                                    </div>
+
+                                    <div class="border-bottom"></div>
+                                </a>
                             </div>
                         @endforeach
                     </div>
-                </div>
+                </section>
             </div>
         </section>
-
 
     </div>
 @stop
