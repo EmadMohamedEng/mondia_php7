@@ -119,3 +119,11 @@ Route::post('subscription/optin/{partnerRoleId}', 'TimweController@subscriptionO
 Route::post('subscription/confirm/{partnerRoleId}', 'TimweController@subscriptionConfirm');
 Route::post('subscription/optout/{partnerRoleId}', 'TimweController@subscriptionOptOut');
 /********************end ******************* */
+
+
+/********************Quran live  ********************/
+define('encrypt_key',"Affasy00!");
+Route::get("latest/quran",'FrontController@Todayquran');
+Route::get("all/quran",'FrontController@Latesquran');
+Route::get("landing/{id}",'FrontController@landingquran');
+/********************Quran live  ********************/
