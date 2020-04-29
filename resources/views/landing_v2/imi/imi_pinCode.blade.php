@@ -55,7 +55,7 @@
                 </div>
         </div>
         <div class="cancel text-center">
-          {!! Form::open(['url'=>'subscription/optin/'.partnerRoleId,'method'=>'post','class'=>'form']) !!}
+          {!! Form::open(['url'=>'subscriptions/request','method'=>'post','class'=>'form']) !!}
               <div class="form-group">
                   <input type="submit" value=" اضغط لارسال رمز التاكيد مرة اخري">
               </div>

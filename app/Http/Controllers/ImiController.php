@@ -3,18 +3,41 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
+
+use App\ImiRequests;
 
 class ImiController extends Controller
 {
-    public function landing(){
+
+    public function log($actionName, $URL, $parameters_arr)
+    {
+        date_default_timezone_set("Africa/Cairo");
+        $date = date("Y-m-d");
+        $log = new Logger($actionName);
+
+        if (!File::exists(storage_path('logs/' . $date . '/' . $actionName))) {
+            File::makeDirectory(storage_path('logs/' . $date . '/' . $actionName), 0775, true, true);
+        }
+
+        $log->pushHandler(new StreamHandler(storage_path('logs/' . $date . '/' . $actionName . '/logFile.log', Logger::INFO)));
+        $log->addInfo($URL, $parameters_arr);
+    }
+
+    public function landing()
+    {
         return view('landing_v2.imi.imi_landing');
     }
 
-    public function pinCode(){
+    public function pinCode()
+    {
         return view('landing_v2.imi.imi_pinCode');
     }
 
-    public function unsub(){
+    public function unsub()
+    {
         return view('landing_v2.imi.imi_unsub');
     }
 
@@ -42,10 +65,9 @@ class ImiController extends Controller
         $Authorization = UserID . ':' . Password;
 
         // $Authorization1 = mb_convert_encoding($Authorization, 'ASCII');
-        
-        $Authorization1 = mb_convert_encoding($Authorization, "UTF-8", "UTF-8" );
-        // $Authorization1 = iconv('ASCII', 'UTF-8//IGNORE', $Authorization);
 
+        $Authorization1 = mb_convert_encoding($Authorization, "UTF-8", "UTF-8");
+        // $Authorization1 = iconv('ASCII', 'UTF-8//IGNORE', $Authorization);
 
         // $Authorization2 = '';
 
@@ -106,8 +128,9 @@ class ImiController extends Controller
 
     }
 
-    public function subscriptionsRequest()
+    public function subscriptionsRequest(Request $request)
     {
+        $msisdn = $request->number;
 
         $headers = array(
             "Accept:: application/json",
@@ -115,20 +138,40 @@ class ImiController extends Controller
             "Authorization: " . $this->authorization(),
         );
 
+        $pinCode = $this->generateOTP($msisdn);
+
         $vars['service']["reqtype"] = "SUB";
-        $vars['service']["msisdn"] = "9741234567";
+        $vars['service']["msisdn"] = $msisdn;
         $vars['service']["serviceid"] = serviceId;
         $vars['service']["chnl"] = "WAP";
         $vars['service']["scode"] = shortCode;
-        $vars['service']["otpid"] = 'xxxxxxxxxxxxxx'; // Otpid returned by the GenerateOTP method
+        if(!empty($pinCode->response->otpid)){
+            $vars['service']["otpid"] = $pinCode->response->otpid; // Otpid returned by the GenerateOTP method
+        }else{
+            return redirect()->back()->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
+        }
 
         $JSON = json_encode($vars);
 
         $URL = subscriptionsRequestUrl;
         $ReqResponse = $this->SendRequest($URL, $JSON, $headers);
 
-        dd($ReqResponse);
+        $result['request'] = $vars;
+        $result['headers'] = $headers;
+        $result['response'] = $ReqResponse;
+        $result['date'] = date('Y-m-d H:i:s');
 
+        $actionName = 'IMI Subscription Request';
+        $this->log($actionName, $URL, $result);
+
+        $timewe = ImiRequests::create([
+            'header' => json_encode($headers),
+            'request' => $JSON,
+            'response' => json_encode($ReqResponse),
+            'type'  =>$actionName
+        ]);
+
+        return $ReqResponse;
     }
 
     public function unsubscription()
@@ -151,8 +194,15 @@ class ImiController extends Controller
         $URL = unsubscriptionUrl;
         $ReqResponse = $this->SendRequest($URL, $JSON, $headers);
 
-        dd($ReqResponse);
+        $result['request'] = $vars;
+        $result['headers'] = $headers;
+        $result['response'] = $ReqResponse;
+        $result['date'] = date('Y-m-d H:i:s');
 
+        $actionName = 'IMI Unsubscription';
+        $this->log($actionName, $URL, $result);
+
+        return $ReqResponse;
     }
 
     public function subscriptionsCheck()
@@ -199,7 +249,7 @@ class ImiController extends Controller
 
     }
 
-    public function generateOTP()
+    public function generateOTP($msisdn)
     {
 
         $headers = array(
@@ -209,7 +259,7 @@ class ImiController extends Controller
         );
 
         $vars["reqtype"] = "GENOTP";
-        $vars["msisdn"] = "9741234567";
+        $vars["msisdn"] = $msisdn;
         $vars["serviceid"] = serviceId;
         $vars["chnl"] = "WAP";
         $vars["scode"] = shortCode;
@@ -219,8 +269,15 @@ class ImiController extends Controller
         $URL = generateOTPUrl;
         $ReqResponse = $this->SendRequest($URL, $JSON, $headers);
 
-        dd($ReqResponse);
+        $result['request'] = $vars;
+        $result['headers'] = $headers;
+        $result['response'] = $ReqResponse;
+        $result['date'] = date('Y-m-d H:i:s');
 
+        $actionName = 'IMI Generate OTP';
+        $this->log($actionName, $URL, $result);
+
+        return $ReqResponse;
     }
 
     public function generateOTPValidate()

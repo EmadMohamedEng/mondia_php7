@@ -151,10 +151,10 @@ define('getServicesUrl','https://mazajak-c.ooredoo.ps/TPAPI/GetServiceDetails/Ge
 Route::get('subscriptions/getservices', 'ImiController@getServices');
 
 define('subscriptionsRequestUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/SUBUSER');
-Route::get('subscriptions/request', 'ImiController@subscriptionsRequest');
+Route::post('subscriptions/request', 'ImiController@subscriptionsRequest');
 
 define('unsubscriptionUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/UnSubUser');
-Route::get('subscriptions/unsubscription', 'ImiController@unsubscription');
+Route::post('subscriptions/unsubscription', 'ImiController@unsubscription');
 
 define('subscriptionsCheckUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/CheckStatus');
 Route::get('subscriptions/check', 'ImiController@subscriptionsCheck');
@@ -162,9 +162,9 @@ Route::get('subscriptions/check', 'ImiController@subscriptionsCheck');
 Route::get('subscriptions/notification', 'ImiController@subscriptionsNotification');
 
 define('generateOTPUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/GenerateOTP');
-Route::get('generateOTP', 'ImiController@generateOTP');
+Route::post('generateOTP', 'ImiController@generateOTP');
 
 define('generateOTPValidateUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/ValidateOTP');
-Route::get('generateOTPValidate', 'ImiController@generateOTPValidate');
+Route::post('generateOTPValidate', 'ImiController@generateOTPValidate');
 
 /*******************end IMI digital *****************/

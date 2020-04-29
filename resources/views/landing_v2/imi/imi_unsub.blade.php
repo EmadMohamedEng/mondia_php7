@@ -48,7 +48,7 @@
             <div class="container">
                 <div class="form_content">
                     <!--<h5>ادخل رقم الهاتف</h5>-->
-                    <form method="post" action="{{url('subscription/optout/'.partnerRoleId)}}"   onsubmit="document.getElementById('zain_submit').disabled='true';"  id="form_zain">
+                    <form method="post" action="{{url('subscriptions/unsubscription')}}"   onsubmit="document.getElementById('zain_submit').disabled='true';"  id="form_zain">
                         {{ csrf_field() }}
                         <div class="form-group form-inline">
                             <label for="phone"><span>974</span></label>
