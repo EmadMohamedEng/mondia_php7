@@ -127,3 +127,43 @@ Route::get("latest/quran",'FrontController@Todayquran');
 Route::get("all/quran",'FrontController@Latesquran');
 Route::get("landing/{id}",'FrontController@landingquran');
 /********************Quran live  ********************/
+
+
+/*******************start IMI digital *****************/
+
+define('UserID','imimobile');
+define('Password','imimobile123');
+define('vendor','ivas');
+define('serviceId','123456');
+define('shortCode','123456');
+
+Route::get('imi/login', 'ImiController@landing');
+Route::get('imi/pincode', 'ImiController@pinCode');
+Route::get('imi/unsubscribe', 'ImiController@unsub');
+
+Route::get('authorization', 'ImiController@authorization');
+
+define('authenticationUrl','https://mazajak-c.ooredoo.ps/TPAPI/charging/chargeuser');
+Route::get('Authentication', 'ImiController@authentication');
+
+define('getServicesUrl','https://mazajak-c.ooredoo.ps/TPAPI/GetServiceDetails/GetSerDetails');
+Route::get('subscriptions/getservices', 'ImiController@getServices');
+
+define('subscriptionsRequestUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/SUBUSER');
+Route::get('subscriptions/request', 'ImiController@subscriptionsRequest');
+
+define('unsubscriptionUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/UnSubUser');
+Route::get('subscriptions/unsubscription', 'ImiController@unsubscription');
+
+define('subscriptionsCheckUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/CheckStatus');
+Route::get('subscriptions/check', 'ImiController@subscriptionsCheck');
+
+Route::get('subscriptions/notification', 'ImiController@subscriptionsNotification');
+
+define('generateOTPUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/GenerateOTP');
+Route::get('generateOTP', 'ImiController@generateOTP');
+
+define('generateOTPValidateUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/ValidateOTP');
+Route::get('generateOTPValidate', 'ImiController@generateOTPValidate');
+
+/*******************end IMI digital *****************/
