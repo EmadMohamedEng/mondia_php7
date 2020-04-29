@@ -461,7 +461,7 @@ class TimweController extends Controller
         $vars["productId"] = productId;
         $vars["mcc"] = "427";
         $vars["mnc"] = "01";
-        $vars["entryChannel"] = "WAP";
+        $vars["entryChannel"] = "WEB";
         $vars["largeAccount"] = largeAccount;
         $vars["subKeyword"] = "";
         // $vars["trackingId"] = "12637414527";
@@ -530,7 +530,7 @@ class TimweController extends Controller
         $vars["productId"] = productId;
         $vars["mcc"] = "427";
         $vars["mnc"] = "01";
-        $vars["entryChannel"] = "WAP";
+        $vars["entryChannel"] = "WEB";
         $vars["clientIp"] = "";
         $vars["transactionAuthCode"] = $request->pincode;
 
@@ -562,6 +562,7 @@ class TimweController extends Controller
 
         if($ReqResponse['code'] == 'SUCCESS'){
           session(['MSISDN' => session('userIdentifier'),'status' => 'active' , 'ooredoo_op_id' => ooredoo]);
+          return redirect('/?OpID='.ooredoo);
         }else{
             return redirect('ooredoo_qatar_pin')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
         }
@@ -591,7 +592,7 @@ class TimweController extends Controller
         $vars["productId"] = productId;
         $vars["mcc"] = "427";
         $vars["mnc"] = "01";
-        $vars["entryChannel"] = "WAP";
+        $vars["entryChannel"] = "WEB";
         $vars["largeAccount"] = largeAccount;
         $vars["subKeyword"] = "SUB";
         // $vars["trackingId"] = "12637414527";
