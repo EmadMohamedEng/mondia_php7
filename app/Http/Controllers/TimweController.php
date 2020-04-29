@@ -374,6 +374,13 @@ class TimweController extends Controller
         }
     }
 
+    public function testMT(){
+        $sendMT = new Request();
+        $sendMT->msisdn = session('userIdentifier');
+        $sendMT->sms = url('/?OpID='.ooredoo);
+        return $this->sendMt($sendMT);
+    }
+
     public function sendMt(Request $request)
     {
         date_default_timezone_set('Asia/Qatar');
@@ -564,7 +571,7 @@ class TimweController extends Controller
             session(['MSISDN' => session('userIdentifier'),'status' => 'active' , 'ooredoo_op_id' => ooredoo]);
             $sendMT = new Request();
             $sendMT->msisdn = session('userIdentifier');
-            $sendMT->sms = redirect('/?OpID='.ooredoo);
+            $sendMT->sms = url('/?OpID='.ooredoo);
             $this->sendMt($sendMT);
           //send mt with link
         }else{
