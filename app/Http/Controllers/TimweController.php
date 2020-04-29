@@ -374,12 +374,12 @@ class TimweController extends Controller
         }
     }
 
-    public function sendMt($channel, $partnerRole)
+    public function sendMt(Request $request)
     {
         date_default_timezone_set('Asia/Qatar');
 
-        $channel = $channel;
-        $partnerRoleId = $partnerRole;
+        $channel = 'sms';
+        $partnerRoleId = partnerRoleId;
 
         require('uuid/UUID.php');
         $trxid = \UUID::v4();
@@ -398,8 +398,8 @@ class TimweController extends Controller
         $vars["pricepointId"] = MTFreePricepointId;
         $vars["mcc"] = "427";
         $vars["mnc"] = "01";
-        $vars["text"] = "MESSAGE TO BE SENT TO USER";
-        $vars["msisdn"] = "9741234567";
+        $vars["text"] = $request->sms;
+        $vars["msisdn"] = $request->msisdn;
         $vars["largeAccount"] = largeAccount;
         $vars["sendDate"] = "'.$sendDate.'";
         $vars["priority"] = "NORMAL";
@@ -561,8 +561,12 @@ class TimweController extends Controller
         ]);
 
         if($ReqResponse['code'] == 'SUCCESS'){
-          session(['MSISDN' => session('userIdentifier'),'status' => 'active' , 'ooredoo_op_id' => ooredoo]);
-          return redirect('/?OpID='.ooredoo);
+            session(['MSISDN' => session('userIdentifier'),'status' => 'active' , 'ooredoo_op_id' => ooredoo]);
+            $sendMT = new Request();
+            $sendMT->msisdn = session('userIdentifier');
+            $sendMT->sms = redirect('/?OpID='.ooredoo);
+            $this->sendMt($sendMT);
+          //send mt with link
         }else{
             return redirect('ooredoo_qatar_pin')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
         }
