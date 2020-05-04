@@ -48,16 +48,16 @@
             <div class="container">
                 <div class="form_content">
                     <!--<h5>ادخل رقم الهاتف</h5>-->
-                    <form method="post" action="{{url('subscriptions/request')}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
+                    <form method="post" action="{{url('generateOTP')}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
                         {{ csrf_field() }}
                         <div class="form-group form-inline">
-                            <label for="phone"><span>974</span></label>
+                            <label for="phone"><span>972</span></label>
                             <input type="hidden" name="prev_url"
                                 value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
                             <input type="tel" class="form-control" value="" id="phone"
                                 placeholder="ادخل رقم تليفونك"
                                 oninvalid="setCustomValidity('يجب ان تدخل 8 ارقام')" name="number" required
-                                pattern="[0-9]{8}">
+                                pattern="[0-9]{9}">
                             <span class="validity"></span>
                         </div>
 
@@ -69,8 +69,8 @@
                 </div>
             </div>
 
-            <div class="cancel text-center mt-4">
-              <p>لالغاء الاشتراك يرجي الضغط علي هذا <a href="{{url('imi/unsub')}}">الرابط</a></p>
+            <div class="cancel text-center mt-4 font-weight-bold text-danger">
+              <p class="h4">لالغاء الاشتراك يرجي الضغط علي هذا <a href="{{url('imi/unsubscribe')}}">الرابط</a></p>
             </div>
 
         </div>
@@ -87,14 +87,10 @@
     <script>
         $(document).ready(function(){
            var msisdn =   $("#phone").val() ;
-            if(msisdn != "" && msisdn.length == 8 && msisdn!= "@_MSISDN"){
+            if(msisdn != "" && msisdn.length == 9 && msisdn!= "@_MSISDN"){
                 $("#viva_form").submit();
              }
          });
-
-        $('#zain_submit').focusin(function () {
-            $('#viva_form').submit()
-        });
 
     </script>
 

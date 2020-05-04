@@ -120,22 +120,3 @@ $('#phone').keyup(function() {
         $('.validity').css('display', 'none');
     }
 });
-
-/* Hidden Logo Img In Foucs */
-$('#phone').focusin(function() {
-    'use strict';
-    $('#image').css('display', 'none');
-    $('.strip').css('margin-top', 20);
-});
-
-$('#phone').blur(function() {
-    'use strict';
-    $('#image').css('display', 'block');
-    $('.strip').css('margin-top', -45);
-
-    var phone = $("#phone").val();
-    if (phone != "" && phone.length == 8) {
-        $("#form").submit()
-    }
-
-});

@@ -132,39 +132,50 @@ Route::get("landing/{id}",'FrontController@landingquran');
 
 /*******************start IMI digital *****************/
 
-define('UserID','imimobile');
-define('Password','imimobile123');
-define('vendor','ivas');
-define('serviceId','123456');
-define('shortCode','123456');
+define('UserID','Ziyadat');
+define('Password','6874');
+define('authorization','Basic aW1pbW9iaWxlOmltaW1vYmlsZTEyMw==');
+define('vendor','Afasi');
+define('serviceId','Afasi');
+define('shortCode','6874');
 
 Route::get('imi/login', 'ImiController@landing');
 Route::get('imi/pincode', 'ImiController@pinCode');
 Route::get('imi/unsubscribe', 'ImiController@unsub');
 
-Route::get('authorization', 'ImiController@authorization');
+Route::get('authorization', 'ImiController@authorization'); // auth used in header
 
-define('authenticationUrl','https://mazajak-c.ooredoo.ps/TPAPI/charging/chargeuser');
-Route::get('Authentication', 'ImiController@authentication');
+$url = 'https://mazajak-c.ooredoo.ps/TPAPI'; // base URL
 
-define('getServicesUrl','https://mazajak-c.ooredoo.ps/TPAPI/GetServiceDetails/GetSerDetails');
-Route::get('subscriptions/getservices', 'ImiController@getServices');
-
-define('subscriptionsRequestUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/SUBUSER');
-Route::post('subscriptions/request', 'ImiController@subscriptionsRequest');
-
-define('unsubscriptionUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/UnSubUser');
-Route::post('subscriptions/unsubscription', 'ImiController@unsubscription');
-
-define('subscriptionsCheckUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/CheckStatus');
-Route::get('subscriptions/check', 'ImiController@subscriptionsCheck');
-
-Route::get('subscriptions/notification', 'ImiController@subscriptionsNotification');
-
-define('generateOTPUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/GenerateOTP');
+// send pincode
+define('generateOTPUrl', $url.'/payment/GenerateOTP');
 Route::post('generateOTP', 'ImiController@generateOTP');
 
-define('generateOTPValidateUrl','https://mazajak-c.ooredoo.ps/TPAPI/payment/ValidateOTP');
+// validate pincode
+define('generateOTPValidateUrl', $url.'/payment/ValidateOTP');
 Route::post('generateOTPValidate', 'ImiController@generateOTPValidate');
+
+// subscribe
+define('subscriptionsRequestUrl', $url.'/payment/SUBUSER');
+Route::post('subscriptions/request', 'ImiController@subscriptionsRequest');
+
+//unsubscribe
+define('unsubscriptionUrl', $url.'/payment/UnSubUser');
+Route::post('subscriptions/unsubscription', 'ImiController@unsubscription');
+
+//charge user
+define('authenticationUrl', $url.'/charging/chargeuser');
+Route::get('Authentication', 'ImiController@authentication');
+
+//msisdn subscribed services
+define('getServicesUrl', $url.'/GetServiceDetails/GetSerDetails');
+Route::get('subscriptions/getservices', 'ImiController@getServices');
+
+//msisdn check status
+define('subscriptionsCheckUrl', $url.'/payment/CheckStatus');
+Route::get('subscriptions/check', 'ImiController@subscriptionsCheck');
+
+//notification
+Route::get('subscriptions/notification', 'ImiController@subscriptionsNotification');
 
 /*******************end IMI digital *****************/

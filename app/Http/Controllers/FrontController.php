@@ -206,6 +206,12 @@ class FrontController extends Controller
           return redirect('ooredoo_qatar_landing');
         }
 
+        if($request->has('OpID') && $request->OpID == imi_op_id()){  // enable testing from backend
+          if($enable || (session()->get('imi_op_id') == imi_op_id() && session()->get('status') == 'active' && session()->has('MSISDN'))){
+            return view('front.inner_enable_testing', compact('content','contents'));
+          }
+          return redirect('imi/login');
+        }
 
         if($request->has('userToken')){ // subscribe for the first time
 
