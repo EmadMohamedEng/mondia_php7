@@ -138,6 +138,7 @@ define('authorization','Basic aW1pbW9iaWxlOmltaW1vYmlsZTEyMw==');
 define('vendor','Afasi');
 define('serviceId','Afasi');
 define('shortCode','6874');
+define('phoneKey','972');
 
 Route::get('imi/login', 'ImiController@landing');
 Route::get('imi/pincode', 'ImiController@pinCode');

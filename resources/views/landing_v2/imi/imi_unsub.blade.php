@@ -19,13 +19,12 @@
         <div class="landing_page">
 
             <div class="strip">
-                <h4>استمتع بوقتك مع خدمه</h4>
                 <h2>دليل مسلم</h2>
             </div>
 
             <div class="shbka">
                 <div class="container">
-                    <h3>اشترك الان</h3>
+                    <h3>الغاء الاشترك</h3>
                     <div class="zain_viva">
                         @if(Session::has('success'))
                         <div class="alert alert-success alert-dismissible">
@@ -51,13 +50,13 @@
                     <form method="post" action="{{url('subscriptions/unsubscription')}}"   onsubmit="document.getElementById('zain_submit').disabled='true';"  id="form_zain">
                         {{ csrf_field() }}
                         <div class="form-group form-inline">
-                            <label for="phone"><span>974</span></label>
+                            <label for="phone"><span>{{phoneKey}}</span></label>
                             <input type="hidden" name="prev_url"
                                 value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
                             <input type="tel" class="form-control" value="" id="phone"
                                 placeholder="ادخل رقم تليفونك"
-                                oninvalid="setCustomValidity('يجب ان تدخل 8 ارقام')" name="number" required
-                                pattern="[0-9]{8}">
+                                oninvalid="setCustomValidity('يجب ان تدخل 9 ارقام')" name="number" required
+                                pattern="[0-9]{9}">
                             <span class="validity"></span>
                         </div>
 
@@ -68,6 +67,10 @@
                 <h5>الى <span>965</span><span> STOP1 </span>لالغاء الاشتراك ارسل</h5>-->
                 </div>
             </div>
+
+            <div class="cancel text-center mt-4 font-weight-bold text-danger">
+                <p class="h4">للاشتراك يرجي الضغط علي هذا <a href="{{url('imi/login')}}">الرابط</a></p>
+            </div>  
 
         </div>
 

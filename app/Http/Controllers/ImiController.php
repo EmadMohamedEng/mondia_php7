@@ -213,7 +213,7 @@ class ImiController extends Controller
         );
 
         $vars['service']["reqtype"] = "UNSUB";
-        $vars['service']["msisdn"] = $request->number;
+        $vars['service']["msisdn"] = phoneKey.$request->number;
         $vars['service']["serviceid"] = serviceId;
         $vars['service']["chnl"] = "WAP";
         $vars['service']["scode"] = shortCode;
@@ -225,7 +225,7 @@ class ImiController extends Controller
 
         $result['request'] = $vars;
         $result['headers'] = $headers;
-        $result['response'] = $ReqResponse;
+        $result['response'] = json_decode($ReqResponse, true);
         $result['date'] = date('Y-m-d H:i:s');
 
         $actionName = 'IMI Unsubscription';
@@ -240,7 +240,7 @@ class ImiController extends Controller
             'type'  =>$actionName
         ]);
 
-        return $ReqResponse['service']['resdescription'];
+        return redirect('imi/unsubscribe')->with('success',$ReqResponse['service']['resdescription']);
     }
 
     public function subscriptionsCheck()
@@ -312,7 +312,7 @@ class ImiController extends Controller
         );
 
         $vars["reqtype"] = "GENOTP";
-        $vars["msisdn"] = '972'.$request->number;
+        $vars["msisdn"] = phoneKey.$request->number;
         $vars["serviceid"] = serviceId;
         $vars["chnl"] = "WAP";
         $vars["scode"] = shortCode;
@@ -340,7 +340,7 @@ class ImiController extends Controller
         ]);
 
         $request->session()->put('otpid', $ReqResponse['response']['otpid']);
-        $request->session()->put('msisdn', '972'.$request->number);
+        $request->session()->put('msisdn', phoneKey.$request->number);
 
         return view("landing_v2.imi.imi_pinCode");
     }
