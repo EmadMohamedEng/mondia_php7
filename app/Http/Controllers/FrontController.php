@@ -466,6 +466,13 @@ class FrontController extends Controller
         $imsak = date("h:i a", strtotime('-10 minutes', $fajr));
         $prayer_times['امساك'] = $imsak;
 
+        if(request()->get('OpID') == 9)
+        {
+          foreach($prayer_times as $key => $value){
+            $prayer_times[$key] = date("h:i a", strtotime('+1 minutes', strtotime($prayer_times[$key])));
+          }
+        }
+
         return view('front.salah_time', compact('prayer_times', 'hjrri_date'));
 
 
@@ -519,7 +526,16 @@ class FrontController extends Controller
     {
         // $ip1       = "91.72.180.37";      //emirate
         //  $ip2       = "105.181.117.137";   //Egypt
-        $location  =  $this->ip_info('visitor', "location");
+        $ip3 = 	"62.231.247.72"; //oman
+        if(request()->get('OpID') == 9)
+        {
+          $location  =  $this->ip_info($ip3, "location");
+        }
+        else
+        {
+          $location  =  $this->ip_info('visitor', "location");
+        }
+        // return $location;
         if ($location['geoplugin_longitude'] || $location['geoplugin_latitude']) {
             $latitude = $location['geoplugin_latitude'];
             $longitude = $location['geoplugin_longitude'];
@@ -536,6 +552,7 @@ class FrontController extends Controller
 
         $time_in_sofia = new \DateTime('now', $dtz);
         $offset = $dtz->getOffset( $time_in_sofia )/(1*60*60);
+        // return $offset;
 
         include(public_path('plugins/PrayTime.php'));
         $method = $location['country'] == 'Egypt' ? 5 : 4;
