@@ -21,8 +21,14 @@ use App\DuIntgration;
 class FrontController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
+
+
+      if($request->has('OpID') ){
+            session()->put('current_op_id',$request->get('OpID'));
+      }
+
 
         $latest = Video::select('*', 'contents.id as content_id');
         if (request()->has('OpID') && request()->get('OpID') != '')
@@ -448,6 +454,11 @@ class FrontController extends Controller
 
     public function salah_time3(Request $request)
     {
+
+      if($request->has('OpID') ){
+        session()->put('current_op_id',$request->get('OpID'));
+     }
+
         $hjrri_date = $this->hjrri_date_cal();
         $prayer_times = $this->prayTimesCal_v2();
 
@@ -551,8 +562,14 @@ class FrontController extends Controller
         $hjrri_date = array();
         include(public_path('plugins/HijriDate.php'));
         $hijri = new \HijriDate();
-       // $current_date = date("Y-m-d", strtotime("+1 day"));
-         $current_date = date("Y-m-d");
+
+        if( session()->has('current_op_id')  && session()->get('current_op_id') == omantel ){
+          $current_date = date("Y-m-d", strtotime("-1 day"));
+        }else{
+          $current_date = date("Y-m-d");
+        }
+
+
         $hijri = new \HijriDate(strtotime($current_date));
 
         $day = $hijri->get_day();
