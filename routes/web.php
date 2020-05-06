@@ -148,6 +148,10 @@ Route::get('authorization', 'ImiController@authorization'); // auth used in head
 
 $url = 'https://mazajak-c.ooredoo.ps/TPAPI'; // base URL
 
+//msisdn check status
+define('subscriptionsCheckUrl', $url.'/payment/CheckStatus');
+Route::post('subscriptions/check', 'ImiController@subscriptionsCheck');
+
 // send pincode
 define('generateOTPUrl', $url.'/payment/GenerateOTP');
 Route::post('generateOTP', 'ImiController@generateOTP');
@@ -165,16 +169,12 @@ define('unsubscriptionUrl', $url.'/payment/UnSubUser');
 Route::post('subscriptions/unsubscription', 'ImiController@unsubscription');
 
 //charge user
-define('authenticationUrl', $url.'/charging/chargeuser');
-Route::get('Authentication', 'ImiController@authentication');
+define('chargingUrl', $url.'/charging/chargeuser');
+Route::get('charging', 'ImiController@charging');
 
 //msisdn subscribed services
 define('getServicesUrl', $url.'/GetServiceDetails/GetSerDetails');
 Route::get('subscriptions/getservices', 'ImiController@getServices');
-
-//msisdn check status
-define('subscriptionsCheckUrl', $url.'/payment/CheckStatus');
-Route::get('subscriptions/check', 'ImiController@subscriptionsCheck');
 
 //notification
 Route::get('subscriptions/notification', 'ImiController@subscriptionsNotification');

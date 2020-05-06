@@ -76,7 +76,7 @@ class ImiController extends Controller
         return authorization;
     }
 
-    public function authentication()
+    public function charging()
     {
 
         $headers = array(
@@ -85,9 +85,9 @@ class ImiController extends Controller
             "Authorization: " . $this->authorization(),
         );
 
-        $vars['ChargeUser']["msisdn"] = "9741234567";
-        $vars['ChargeUser']["otpid"] = "9741234567";
-        $vars['ChargeUser']["transid"] = "2349873294879347";
+        $vars['ChargeUser']["msisdn"] = session()->get('msisdn');;
+        $vars['ChargeUser']["otpid"] = session()->get('otpid');;
+        $vars['ChargeUser']["transid"] = microtime();
         $vars['ChargeUser']["ctype"] = "SUB";
         $vars['ChargeUser']["pcode"] = "1.00";
         $vars['ChargeUser']["chnl"] = "WAP";
@@ -96,12 +96,12 @@ class ImiController extends Controller
 
         $JSON = json_encode($vars);
 
-        $URL = authenticationUrl;
+        $URL = chargingUrl;
         $ReqResponse = $this->SendRequest($URL, $JSON, $headers);
 
         $result['request'] = $vars;
         $result['headers'] = $headers;
-        $result['response'] = $ReqResponse;
+        $result['response'] = json_decode($ReqResponse, true);
         $result['date'] = date('Y-m-d H:i:s');
 
         $actionName = 'IMI Subscription Request';
@@ -195,12 +195,12 @@ class ImiController extends Controller
             'type'  =>$actionName
         ]);
 
-        // if($ReqResponse['service']['status'] == 0){
-        if(true){
+        if($ReqResponse['service']['status'] == 0){
+            $this->charging();
             session(['MSISDN' => session()->get('msisdn'), 'status' => 'active' , 'imi_op_id' => imi_op_id()]);
             return redirect('/?OpID='.imi_op_id());
         }else{
-            // return redirect('imi/login');
+            return redirect('imi/pincode')->with('failed', 'لقد حدث خطأ, برجاء المحاولة مرة اخري');
         }
     }
 
@@ -243,7 +243,7 @@ class ImiController extends Controller
         return redirect('imi/unsubscribe')->with('success',$ReqResponse['service']['resdescription']);
     }
 
-    public function subscriptionsCheck()
+    public function subscriptionsCheck(Request $request)
     {
 
         $headers = array(
@@ -253,12 +253,12 @@ class ImiController extends Controller
         );
 
         $vars['service']["reqtype"] = "CHECK";
-        $vars['service']["msisdn"] = "9741234567";
+        $vars['service']["msisdn"] = phoneKey.$request->number;
 
         // optional params if we need a specific service id
-        // $vars['service']["serviceid"] = serviceId;
-        // $vars['service']["Status"] = "Active";
-        // $vars['service']["scode"] = shortCode;
+        $vars['service']["serviceid"] = serviceId;
+        $vars['service']["Status"] = "Active";
+        $vars['service']["scode"] = shortCode;
 
         $JSON = json_encode($vars);
 
@@ -267,10 +267,10 @@ class ImiController extends Controller
 
         $result['request'] = $vars;
         $result['headers'] = $headers;
-        $result['response'] = $ReqResponse;
+        $result['response'] = json_decode($ReqResponse, true);
         $result['date'] = date('Y-m-d H:i:s');
 
-        $actionName = 'IMI Subscription Request';
+        $actionName = 'IMI Check Status';
         $this->log($actionName, $URL, $result);
 
         $ReqResponse = json_decode($ReqResponse, true);
@@ -282,7 +282,14 @@ class ImiController extends Controller
             'type'  =>$actionName
         ]);
 
-        return $ReqResponse;
+        $request->session()->put('msisdn', phoneKey.$request->number);
+
+        if($ReqResponse['response']['status'] == 0){
+            session(['MSISDN' => session()->get('msisdn'), 'status' => 'active' , 'imi_op_id' => imi_op_id()]);
+            return redirect('/?OpID='.imi_op_id());
+        }else{
+            return $this->generateOTP();
+        }
     }
 
     //  http://IP:Port/XXX/?msisdn=<msisdn>&serviceid=<svcid value>&chnl=XXX&action=<SUB/ UNSUB/REN>&status=<Status>
@@ -303,7 +310,7 @@ class ImiController extends Controller
 
     }
 
-    public function generateOTP(Request $request)
+    public function generateOTP()
     {
         $headers = array(
             "Accept:: application/json",
@@ -312,7 +319,7 @@ class ImiController extends Controller
         );
 
         $vars["reqtype"] = "GENOTP";
-        $vars["msisdn"] = phoneKey.$request->number;
+        $vars["msisdn"] = session()->get('msisdn');
         $vars["serviceid"] = serviceId;
         $vars["chnl"] = "WAP";
         $vars["scode"] = shortCode;
@@ -339,8 +346,7 @@ class ImiController extends Controller
             'type'  =>$actionName
         ]);
 
-        $request->session()->put('otpid', $ReqResponse['response']['otpid']);
-        $request->session()->put('msisdn', phoneKey.$request->number);
+        session()->put('otpid', $ReqResponse['response']['otpid']);
 
         return view("landing_v2.imi.imi_pinCode");
     }
@@ -384,9 +390,11 @@ class ImiController extends Controller
             'type'  =>$actionName
         ]);
 
-        if($ReqResponse['response']['rescode'] == 2102){ // wrong pincode
+        if($ReqResponse['response']['status'] == 0){ // true pincode
             $request->session()->put('otpid', $ReqResponse['response']['otpid']);
             return $this->subscriptionsRequest();
+        }else{
+            return redirect('imi/pincode')->with('failed', 'الكود خاظئ, برجاء المحاولة مرة اخري');
         }
     }
 }
