@@ -388,7 +388,7 @@ class TimweController extends Controller
         $channel = 'sms';
         $partnerRoleId = partnerRoleId;
 
-        require('uuid/UUID.php');
+        require_once('uuid/UUID.php');
         $trxid = \UUID::v4();
 
         $headers = array(
@@ -449,7 +449,7 @@ class TimweController extends Controller
 
         $partnerRoleId = $partnerRole;
 
-        require('uuid/UUID.php');
+        require_once('uuid/UUID.php');
         $trxid = \UUID::v4();
 
         $headers = array(
@@ -515,7 +515,7 @@ class TimweController extends Controller
 
         $partnerRoleId = $partnerRole;
 
-        require('uuid/UUID.php');
+        require_once('uuid/UUID.php');
         $trxid = \UUID::v4();
 
         $headers = array(
@@ -585,7 +585,7 @@ class TimweController extends Controller
 
         $partnerRoleId = $partnerRole;
 
-        require('uuid/UUID.php');
+        require_once('uuid/UUID.php');
         $trxid = \UUID::v4();
 
         $headers = array(
