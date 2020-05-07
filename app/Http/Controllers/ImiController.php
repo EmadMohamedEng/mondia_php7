@@ -8,6 +8,7 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
 use App\ImiRequests;
+use App\Subscriber;
 
 class ImiController extends Controller
 {
@@ -196,6 +197,11 @@ class ImiController extends Controller
         ]);
 
         if($ReqResponse['service']['status'] == 0){
+            Subscriber::create([
+                'msisdn' => session()->get('msisdn'),
+                'serviceId' => serviceId,
+                'requestId' => $timewe->id,
+            ]);
             $this->charging();
             session(['MSISDN' => session()->get('msisdn'), 'status' => 'active' , 'imi_op_id' => imi_op_id()]);
             return redirect('/?OpID='.imi_op_id());
@@ -296,7 +302,6 @@ class ImiController extends Controller
     //  &Nextrenewaldate=yyyy-MM-dd HH:mm:ss&TransactionID=!Transactionid!&price=<Billed price>
     public function subscriptionsNotification(Request $request)
     {
-
         $vars['msisdn'] = $request->msisdn;
         $vars['serviceid'] = $request->serviceid;
         $vars['chnl'] = $request->chnl;
@@ -306,7 +311,22 @@ class ImiController extends Controller
         $vars['TransactionID'] = $request->TransactionID;
         $vars['price'] = $request->price;
 
-        dd($vars);
+        $URL = '';
+
+        $result['params'] = $vars;
+        $result['date'] = date('Y-m-d H:i:s');
+
+        $actionName = 'IMI Subscribtion Notification';
+        $this->log($actionName, $URL, $result);
+
+        $reesponse = 'success';
+
+        $timewe = ImiRequests::create([
+            'header' => '',
+            'request' => json_encode($vars),
+            'response' => $response,
+            'type'  =>$actionName
+        ]);
 
     }
 
