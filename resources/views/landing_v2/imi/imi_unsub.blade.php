@@ -68,8 +68,8 @@
                 </div>
             </div>
 
-            <div class="cancel text-center mt-4 font-weight-bold text-danger">
-                <p class="h4">للاشتراك يرجي الضغط علي هذا <a href="{{url('imi/login')}}">الرابط</a></p>
+            <div class="cancel text-center mt-4 font-weight-bold">
+                <p class="h4"><a class="btn-success p-1" href="{{url('imi/login')}}">للاشتراك</a></p>
             </div>
 
         </div>

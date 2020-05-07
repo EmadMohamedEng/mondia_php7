@@ -69,8 +69,8 @@
                 </div>
             </div>
 
-            <div class="cancel text-center mt-4 font-weight-bold text-danger">
-              <p class="h4">لالغاء الاشتراك يرجي الضغط علي هذا <a href="{{url('imi/unsubscribe')}}">الرابط</a></p>
+            <div class="cancel text-center mt-4 font-weight-bold text-primary">
+              <p class="h4"><a class="btn-danger p-1" href="{{url('imi/unsubscribe')}}">الغاء الاشتراك</a></p>
             </div>
 
         </div>
