@@ -104,7 +104,7 @@ class ImiController extends Controller
         $result['response'] = json_decode($ReqResponse, true);
         $result['date'] = date('Y-m-d H:i:s');
 
-        $actionName = 'IMI Subscription Request';
+        $actionName = 'IMI Charging';
         $this->log($actionName, $URL, $result);
 
         $ReqResponse = json_decode($ReqResponse, true);
@@ -143,7 +143,7 @@ class ImiController extends Controller
         $result['response'] = $ReqResponse;
         $result['date'] = date('Y-m-d H:i:s');
 
-        $actionName = 'IMI Subscription Request';
+        $actionName = 'IMI GetServices';
         $this->log($actionName, $URL, $result);
 
         $ReqResponse = json_decode($ReqResponse, true);
@@ -382,7 +382,7 @@ class ImiController extends Controller
         $this->log($actionName, $URL, $result);
 
         $ReqResponse = json_decode($ReqResponse, true);
-        
+
         $timewe = ImiRequests::create([
             'header' => json_encode($headers),
             'request' => $JSON,

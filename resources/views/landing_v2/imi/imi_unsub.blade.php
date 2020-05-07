@@ -70,7 +70,7 @@
 
             <div class="cancel text-center mt-4 font-weight-bold text-danger">
                 <p class="h4">للاشتراك يرجي الضغط علي هذا <a href="{{url('imi/login')}}">الرابط</a></p>
-            </div>  
+            </div>
 
         </div>
 

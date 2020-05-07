@@ -136,7 +136,7 @@ define('UserID','Ziyadat');
 define('Password','6874');
 define('authorization','Basic aW1pbW9iaWxlOmltaW1vYmlsZTEyMw==');
 define('vendor','Afasi');
-define('serviceId','Afasi');
+define('serviceId','4');
 define('shortCode','6874');
 define('phoneKey','972');
 
