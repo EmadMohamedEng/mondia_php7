@@ -572,8 +572,11 @@ class TimweController extends Controller
             $sendMT = new Request();
             $sendMT->msisdn = session('userIdentifier');
             $sendMT->sms = url('/?OpID='.ooredoo);
+             //send mt with link
             $this->sendMt($sendMT);
-          //send mt with link
+            return redirect(url('/?OpID='.ooredoo)) ;
+
+
         }else{
             return redirect('ooredoo_qatar_pin')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
         }
