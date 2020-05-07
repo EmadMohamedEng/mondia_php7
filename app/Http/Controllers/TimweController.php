@@ -573,7 +573,7 @@ class TimweController extends Controller
             $sendMT->msisdn = session('userIdentifier');
             $sendMT->sms = url('/?OpID='.ooredoo);
              //send mt with link
-            $this->sendMt($sendMT);
+           // $this->sendMt($sendMT); // should be fire after receive first charging success
             return redirect(url('/?OpID='.ooredoo)) ;
 
 
