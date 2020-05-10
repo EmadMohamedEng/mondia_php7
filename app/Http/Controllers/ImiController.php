@@ -202,7 +202,7 @@ class ImiController extends Controller
                 'serviceId' => serviceId,
                 'requestId' => $timewe->id,
             ]);
-            $this->charging();
+           // $this->charging();
             session(['MSISDN' => session()->get('msisdn'), 'status' => 'active' , 'imi_op_id' => imi_op_id()]);
             return redirect('/?OpID='.imi_op_id());
         }else{
