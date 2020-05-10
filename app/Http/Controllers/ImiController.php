@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use Validator;
 
 use App\ImiRequests;
+use App\ImiNotification;
 use App\Subscriber;
+use App\ImiUnsubscriber;
 
 class ImiController extends Controller
 {
@@ -110,7 +113,7 @@ class ImiController extends Controller
 
         $ReqResponse = json_decode($ReqResponse, true);
 
-        $timewe = ImiRequests::create([
+        $imi = ImiRequests::create([
             'header' => json_encode($headers),
             'request' => $JSON,
             'response' => json_encode($ReqResponse),
@@ -149,7 +152,7 @@ class ImiController extends Controller
 
         $ReqResponse = json_decode($ReqResponse, true);
 
-        $timewe = ImiRequests::create([
+        $imi = ImiRequests::create([
             'header' => json_encode($headers),
             'request' => $JSON,
             'response' => json_encode($ReqResponse),
@@ -189,7 +192,7 @@ class ImiController extends Controller
 
         $ReqResponse = json_decode($ReqResponse, true);
 
-        $timewe = ImiRequests::create([
+        $imi = ImiRequests::create([
             'header' => json_encode($headers),
             'request' => $JSON,
             'response' => json_encode($ReqResponse),
@@ -200,9 +203,9 @@ class ImiController extends Controller
             Subscriber::create([
                 'msisdn' => session()->get('msisdn'),
                 'serviceId' => serviceId,
-                'requestId' => $timewe->id,
+                'requestId' => $imi->id,
             ]);
-           // $this->charging();
+            // $this->charging();
             session(['MSISDN' => session()->get('msisdn'), 'status' => 'active' , 'imi_op_id' => imi_op_id()]);
             return redirect('/?OpID='.imi_op_id());
         }else{
@@ -239,12 +242,27 @@ class ImiController extends Controller
 
         $ReqResponse = json_decode($ReqResponse, true);
 
-        $timewe = ImiRequests::create([
+        $imi = ImiRequests::create([
             'header' => json_encode($headers),
             'request' => $JSON,
             'response' => json_encode($ReqResponse),
             'type'  =>$actionName
         ]);
+        
+        if($ReqResponse['service']['status'] == 0){
+            $subscriber = Subscriber::where('msisdn', phoneKey.$request->number)->where('serviceId', serviceId)->first();
+            $subscriber->delete();
+
+            $unsubscribe = ImiUnsubscriber::where('msisdn', phoneKey.$request->number)->where('serviceId', serviceId)->first();
+            
+            if(empty($unsubscribe)){
+                ImiUnsubscriber::create([
+                    'msisdn' => phoneKey.$request->number,
+                    'serviceId' => serviceId,
+                    'requestId' => $imi->id,
+                ]);
+            }
+        }
 
         return redirect('imi/unsubscribe')->with('success',$ReqResponse['service']['resdescription']);
     }
@@ -281,7 +299,7 @@ class ImiController extends Controller
 
         $ReqResponse = json_decode($ReqResponse, true);
 
-        $timewe = ImiRequests::create([
+        $imi = ImiRequests::create([
             'header' => json_encode($headers),
             'request' => $JSON,
             'response' => json_encode($ReqResponse),
@@ -291,6 +309,14 @@ class ImiController extends Controller
         $request->session()->put('msisdn', phoneKey.$request->number);
 
         if($ReqResponse['response']['status'] == 0){
+            $subscriber = Subscriber::where('msisdn', session()->get('msisdn'))->where('serviceId', serviceId)->first();
+            if(empty($subscriber)){
+                Subscriber::create([
+                    'msisdn' => session()->get('msisdn'),
+                    'serviceId' => serviceId,
+                    'requestId' => $imi->id,
+                ]);
+            }
             session(['MSISDN' => session()->get('msisdn'), 'status' => 'active' , 'imi_op_id' => imi_op_id()]);
             return redirect('/?OpID='.imi_op_id());
         }else{
@@ -300,34 +326,47 @@ class ImiController extends Controller
 
     //  http://IP:Port/XXX/?msisdn=<msisdn>&serviceid=<svcid value>&chnl=XXX&action=<SUB/ UNSUB/REN>&status=<Status>
     //  &Nextrenewaldate=yyyy-MM-dd HH:mm:ss&TransactionID=!Transactionid!&price=<Billed price>
-    public function subscriptionsNotification(Request $request)
+    public function imi_notification(Request $request)
     {
         $vars['msisdn'] = $request->msisdn;
-        $vars['serviceid'] = $request->serviceid;
-        $vars['chnl'] = $request->chnl;
+        $vars['svcid'] = $request->svcid;
+        $vars['channel'] = $request->channel;
         $vars['action'] = $request->action;
         $vars['status'] = $request->status;
         $vars['Nextrenewaldate'] = $request->Nextrenewaldate;
         $vars['TransactionID'] = $request->TransactionID;
-        $vars['price'] = $request->price;
 
-        $URL = '';
+        $validator = Validator::make($request->all(), [
+            'msisdn' => 'required',
+            'svcid' => 'required',
+            // 'channel' => 'required',
+            'action' => 'required',
+            'status' => 'required',
+            // 'Nextrenewaldate' => 'required',
+            'TransactionID' => 'required',
+        ]);
 
+        if ($validator->fails()) {
+            $reesponse['status'] = 1;
+            $reesponse['message'] = $validator->errors();
+            return $reesponse;
+        }
+
+        $URL = \Request::fullUrl();
         $result['params'] = $vars;
         $result['date'] = date('Y-m-d H:i:s');
 
-        $actionName = 'IMI Subscribtion Notification';
+        $actionName = 'IMI Notification';
         $this->log($actionName, $URL, $result);
-
-        $reesponse = 'success';
-
-        $timewe = ImiRequests::create([
-            'header' => '',
-            'request' => json_encode($vars),
-            'response' => $response,
-            'type'  =>$actionName
-        ]);
-
+        
+        $vars['link'] = $URL;
+        $imi = ImiNotification::create($vars);
+            
+        $reesponse['status'] = 0;
+        $reesponse['description'] = 'success';
+        $reesponse['responseId'] = $imi->id;
+        
+        return $reesponse;
     }
 
     public function generateOTP()
@@ -359,7 +398,7 @@ class ImiController extends Controller
 
         $ReqResponse = json_decode($ReqResponse, true);
 
-        $timewe = ImiRequests::create([
+        $imi = ImiRequests::create([
             'header' => json_encode($headers),
             'request' => $JSON,
             'response' => json_encode($ReqResponse),
@@ -373,7 +412,6 @@ class ImiController extends Controller
 
     public function generateOTPValidate(Request $request)
     {
-
         $headers = array(
             "Accept:: application/json",
             "Content-Type: application/json",
@@ -403,7 +441,7 @@ class ImiController extends Controller
 
         $ReqResponse = json_decode($ReqResponse, true);
 
-        $timewe = ImiRequests::create([
+        $imi = ImiRequests::create([
             'header' => json_encode($headers),
             'request' => $JSON,
             'response' => json_encode($ReqResponse),
@@ -416,5 +454,47 @@ class ImiController extends Controller
         }else{
             return redirect('imi/pincode')->with('failed', 'الكود خاظئ, برجاء المحاولة مرة اخري');
         }
+    }
+
+    public function imiSubCheck(Request $request)
+    {
+
+        $headers = array(
+            "Accept:: application/json",
+            "Content-Type: application/json",
+            "Authorization: " . $this->authorization(),
+        );
+
+        $vars['service']["reqtype"] = "CHECK";
+        $vars['service']["msisdn"] = $request->number;
+
+        // optional params if we need a specific service id
+        $vars['service']["serviceid"] = $request->serviceId;
+        $vars['service']["Status"] = "Active";
+        $vars['service']["scode"] = shortCode;
+
+        $JSON = json_encode($vars);
+
+        $URL = subscriptionsCheckUrl;
+        $ReqResponse = $this->SendRequest($URL, $JSON, $headers);
+
+        $result['request'] = $vars;
+        $result['headers'] = $headers;
+        $result['response'] = json_decode($ReqResponse, true);
+        $result['date'] = date('Y-m-d H:i:s');
+
+        $actionName = 'IMI Check Status';
+        $this->log($actionName, $URL, $result);
+
+        $ReqResponse = json_decode($ReqResponse, true);
+
+        $imi = ImiRequests::create([
+            'header' => json_encode($headers),
+            'request' => $JSON,
+            'response' => json_encode($ReqResponse),
+            'type'  =>$actionName
+        ]);
+
+        return $ReqResponse;
     }
 }

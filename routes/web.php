@@ -177,6 +177,6 @@ define('getServicesUrl', $url.'/GetServiceDetails/GetSerDetails');
 Route::get('subscriptions/getservices', 'ImiController@getServices');
 
 //notification
-Route::get('subscriptions/notification', 'ImiController@subscriptionsNotification');
+Route::get('imi/notification', 'ImiController@imi_notification');
 
 /*******************end IMI digital *****************/

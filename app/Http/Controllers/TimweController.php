@@ -8,6 +8,8 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Illuminate\Support\Facades\File;
 use App\TimWe;
+use App\timweUnsubscriber;
+use App\timweSubscriber;
 class TimweController extends Controller
 {
 
@@ -502,10 +504,24 @@ class TimweController extends Controller
           'type'  =>$actionName
         ]);
 
-        if($ReqResponse['code'] == 'SUCCESS'){
-            return view('landing_v2.timwe_landing.timwe_pinCode');
+        if($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_ALREADY_ACTIVE'){
+            $subscribe = timweSubscriber::where('msisdn', session('userIdentifier'))->where('serviceId', productId)->first();
+            
+            if(empty($unsubscribe)){
+                timweSubscriber::create([
+                    'msisdn' => session('userIdentifier'),
+                    'serviceId' => productId,
+                    'requestId' => $timewe->id,
+                ]);
+            }
+            session(['MSISDN' => session('userIdentifier'),'status' => 'active' , 'ooredoo_op_id' => ooredoo]);
+            return redirect(url('/?OpID='.ooredoo)) ;
         }else{
-            return redirect('ooredoo_qatar_landing')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
+            if($ReqResponse['code'] == 'SUCCESS'){
+                return view('landing_v2.timwe_landing.timwe_pinCode');
+            }else{
+                return redirect('ooredoo_qatar_landing')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
+            }
         }
     }
 
@@ -574,6 +590,15 @@ class TimweController extends Controller
             $sendMT->sms = url('/?OpID='.ooredoo);
              //send mt with link
            // $this->sendMt($sendMT); // should be fire after receive first charging success
+           $subscribe = timweSubscriber::where('msisdn', session('userIdentifier'))->where('serviceId', productId)->first();
+            
+           if(empty($subscribe)){
+               timweSubscriber::create([
+                   'msisdn' => session('userIdentifier'),
+                   'serviceId' => productId,
+                   'requestId' => $timewe->id,
+               ]);
+           }
             return redirect(url('/?OpID='.ooredoo)) ;
 
 
@@ -645,6 +670,14 @@ class TimweController extends Controller
 
         // dd($ReqResponse['responseData']['subscriptionResult']);
         if($ReqResponse['responseData']['subscriptionResult'] == 'OPTOUT_CANCELED_OK'){
+            $subscribe = timweSubscriber::where('msisdn', '974'.$request->number)->where('serviceId', productId)->first();
+            $subscribe->delete();
+
+            timweUnsubscriber::create([
+                'msisdn' => '974'.$request->number,
+                'serviceId' => productId,
+                'requestId' => $timewe->id,
+            ]);
             return redirect('ooredoo_qatar_unsub')->with('success', 'تم الغاء الاشتراك بنجاح');
         }else{
             return redirect('ooredoo_qatar_unsub')->with('failed', 'هذا الرقم غير مشترك بالخدمة');
