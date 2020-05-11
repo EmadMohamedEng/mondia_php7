@@ -494,7 +494,15 @@ class ImiController extends Controller
             'response' => json_encode($ReqResponse),
             'type'  =>$actionName
         ]);
+        
+        if($ReqResponse['response']['status'] == '0'){
+            $res['status'] = 0;
+            $res['message'] = 'success';
+        }else{
+            $res['status'] = 1;
+            $res['message'] = 'fail';
+        }
 
-        return $ReqResponse;
+        return $res;
     }
 }
