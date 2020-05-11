@@ -469,7 +469,7 @@ class ImiController extends Controller
         $vars['service']["msisdn"] = $request->number;
 
         // optional params if we need a specific service id
-        $vars['service']["serviceid"] = $request->serviceId;
+        $vars['service']["serviceid"] = 8;
         $vars['service']["Status"] = "Active";
         $vars['service']["scode"] = shortCode;
 
@@ -503,6 +503,6 @@ class ImiController extends Controller
             $res['message'] = 'fail';
         }
 
-        return $res;
+        return json_encode($res);
     }
 }
