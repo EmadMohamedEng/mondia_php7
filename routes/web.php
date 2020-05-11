@@ -109,6 +109,7 @@ define('apikeysubscription', '8086e440d80847a6b534c88a6c33a172');
 define('presharedkeysubscription', 'cutfvCPZrlzMo6t8');
 /************* end config Timwe******************/
 
+Route::get('testMT', 'TimweController@testMT');
 Route::get('ooredoo_qatar_landing', 'TimweController@index');
 Route::get('ooredoo_qatar_pin', 'TimweController@pincode');
 Route::get('ooredoo_qatar_unsub', 'TimweController@unsubscribe');
@@ -120,3 +121,63 @@ Route::post('subscription/optin/{partnerRoleId}', 'TimweController@subscriptionO
 Route::post('subscription/confirm/{partnerRoleId}', 'TimweController@subscriptionConfirm');
 Route::post('subscription/optout/{partnerRoleId}', 'TimweController@subscriptionOptOut');
 /********************end ******************* */
+
+
+/********************Quran live  ********************/
+define('encrypt_key',"Affasy00!");
+Route::get("latest/quran",'FrontController@Todayquran');
+Route::get("all/quran",'FrontController@Latesquran');
+Route::get("landing/{id}",'FrontController@landingquran');
+/********************Quran live  ********************/
+
+
+/*******************start IMI digital *****************/
+
+define('UserID','Ziyadat');
+define('Password','6874');
+define('authorization','Basic aW1pbW9iaWxlOmltaW1vYmlsZTEyMw==');
+define('vendor','Afasi');
+define('serviceId','4');
+define('shortCode','6874');
+define('phoneKey','972');
+
+Route::get('imi/login', 'ImiController@landing');
+Route::get('imi/pincode', 'ImiController@pinCode');
+Route::get('imi/unsubscribe', 'ImiController@unsub');
+
+Route::get('authorization', 'ImiController@authorization'); // auth used in header
+
+$url = 'https://mazajak-c.ooredoo.ps/TPAPI'; // base URL
+
+//msisdn check status
+define('subscriptionsCheckUrl', $url.'/payment/CheckStatus');
+Route::post('subscriptions/check', 'ImiController@subscriptionsCheck');
+
+// send pincode
+define('generateOTPUrl', $url.'/payment/GenerateOTP');
+Route::post('generateOTP', 'ImiController@generateOTP');
+
+// validate pincode
+define('generateOTPValidateUrl', $url.'/payment/ValidateOTP');
+Route::post('generateOTPValidate', 'ImiController@generateOTPValidate');
+
+// subscribe
+define('subscriptionsRequestUrl', $url.'/payment/SUBUSER');
+Route::post('subscriptions/request', 'ImiController@subscriptionsRequest');
+
+//unsubscribe
+define('unsubscriptionUrl', $url.'/payment/UnSubUser');
+Route::post('subscriptions/unsubscription', 'ImiController@unsubscription');
+
+//charge user
+define('chargingUrl', $url.'/charging/chargeuser');
+Route::get('charging', 'ImiController@charging');
+
+//msisdn subscribed services
+define('getServicesUrl', $url.'/GetServiceDetails/GetSerDetails');
+Route::get('subscriptions/getservices', 'ImiController@getServices');
+
+//notification
+Route::get('imi/notification', 'ImiController@imi_notification');
+
+/*******************end IMI digital *****************/

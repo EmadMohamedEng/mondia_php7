@@ -4,7 +4,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\DeleteAll ;
 use App\RouteModel ;
+use App\Country;
+use App\Operator;
 
+function imi_op_id(){
+    $country = Country::where('title', 'palestine')->first();
+    if(!empty($country)){
+        $op = Operator::where('country_id', $country->id)->where('name', 'ooredoo')->first();
+        if(!empty($op)){
+            return $op;
+        }
+    }
+    return 8;
+}
 
 function delete_multiselect(Request $request) // select many contract from index table and delete them
 {
@@ -215,4 +227,38 @@ function dynamic_routes($route_model,$found_roles)
         }) ;
     }
  }
+function encrypt_content($link){
+    $today =gmdate("n/j/Y g:i:s A");
+
+    // http://arabica.binarywaves.com:8081/rot/affasy_demo.mp4/playlist.m3u8 // old
+
+    $initial_url = $link; // Live
+
+    //Part of the stream name which is being use in signature
+
+    $signed_stream ="live/stream";
+
+    $ip = $_SERVER['REMOTE_ADDR'];
+
+    $key = encrypt_key;
+
+    $validminutes =20;
+
+    $str2hash =$ip.$key.$today.$validminutes;
+
+    $md5raw =md5($str2hash,true);
+
+    $base64hash =base64_encode($md5raw);
+
+    $urlsignature ="server_time=".$today ."&hash_value=".$base64hash."&validminutes=$validminutes"."&strm_len=".strlen($signed_stream);
+
+
+    $base64urlsignature =base64_encode($urlsignature);
+
+
+    $signedurlwithvalidinterval =$initial_url."?wmsAuthSign=$base64urlsignature";
+
+    return $signedurlwithvalidinterval;
+}
+
 

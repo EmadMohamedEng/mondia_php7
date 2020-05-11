@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTimWesTable extends Migration
+class CreateImiUnsubscribersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateTimWesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tim_wes', function (Blueprint $table) {
+        Schema::create('imi_unsubscribers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('api_request')->nullable();
-            $table->longText('payload')->nullable();
-            $table->longText('response')->nullable();
-            $table->longText('header')->nullable();
-            $table->string('type')->nullable();
+            $table->string('msisdn');
+            $table->string('serviceId');
+            $table->string('requestId');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateTimWesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tim_wes');
+        Schema::dropIfExists('imi_unsubscribers');
     }
 }
