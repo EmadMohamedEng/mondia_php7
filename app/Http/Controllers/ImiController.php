@@ -248,13 +248,13 @@ class ImiController extends Controller
             'response' => json_encode($ReqResponse),
             'type'  =>$actionName
         ]);
-        
+
         if($ReqResponse['service']['status'] == 0){
             $subscriber = Subscriber::where('msisdn', phoneKey.$request->number)->where('serviceId', serviceId)->first();
             $subscriber->delete();
 
             $unsubscribe = ImiUnsubscriber::where('msisdn', phoneKey.$request->number)->where('serviceId', serviceId)->first();
-            
+
             if(empty($unsubscribe)){
                 ImiUnsubscriber::create([
                     'msisdn' => phoneKey.$request->number,
@@ -324,8 +324,9 @@ class ImiController extends Controller
         }
     }
 
-    //  http://IP:Port/XXX/?msisdn=<msisdn>&serviceid=<svcid value>&chnl=XXX&action=<SUB/ UNSUB/REN>&status=<Status>
-    //  &Nextrenewaldate=yyyy-MM-dd HH:mm:ss&TransactionID=!Transactionid!&price=<Billed price>
+    /*
+    localhost/mondia_php7/imi/notification?msisdn=<msisdn>&svcid=<svcid_value>&channel=XXX&action=<SUB/UNSUB/REN>&status=<Status>&Nextrenewaldate=2020-05-11 12.22.11&TransactionID=!Transactionid!
+    */
     public function imi_notification(Request $request)
     {
         $vars['msisdn'] = $request->msisdn;
@@ -358,14 +359,14 @@ class ImiController extends Controller
 
         $actionName = 'IMI Notification';
         $this->log($actionName, $URL, $result);
-        
+
         $vars['link'] = $URL;
         $imi = ImiNotification::create($vars);
-            
+
         $reesponse['status'] = 0;
         $reesponse['description'] = 'success';
         $reesponse['responseId'] = $imi->id;
-        
+
         return $reesponse;
     }
 

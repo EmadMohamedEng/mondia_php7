@@ -160,7 +160,7 @@ $enable = get_setting('enable_testing');
                 </a>
               </li>
               @if(request()->get('OpID') == stc)
-              <li id="indexed" class="nav-item">
+              {{-- <li id="indexed" class="nav-item">
                 <a class="nav-link text-capitalize link_href" style="background:#fff !important;color:#000 !important" href="{{url("latest/quran")}}">
                   <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 27 22" xml:space="preserve">
                     <g>
@@ -177,7 +177,7 @@ $enable = get_setting('enable_testing');
                   @lang('front.quran')
                   <span class="sr-only">(current)</span>
                 </a>
-              </li>
+              </li> --}}
               @endif
               @foreach(provider_menu() as $provider)
               <li class="nav-item dropdown">
