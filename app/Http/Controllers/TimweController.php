@@ -506,7 +506,7 @@ class TimweController extends Controller
 
         if($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_ALREADY_ACTIVE'){
             $subscribe = timweSubscriber::where('msisdn', session('userIdentifier'))->where('serviceId', productId)->first();
-            
+
             if(empty($unsubscribe)){
                 timweSubscriber::create([
                     'msisdn' => session('userIdentifier'),
@@ -591,7 +591,7 @@ class TimweController extends Controller
              //send mt with link
            // $this->sendMt($sendMT); // should be fire after receive first charging success
            $subscribe = timweSubscriber::where('msisdn', session('userIdentifier'))->where('serviceId', productId)->first();
-            
+
            if(empty($subscribe)){
                timweSubscriber::create([
                    'msisdn' => session('userIdentifier'),
