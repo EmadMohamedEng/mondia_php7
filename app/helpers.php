@@ -18,6 +18,17 @@ function imi_op_id(){
     return 8;
 }
 
+function timwe_op_id(){
+    $country = Country::where('title', 'qautar')->first();
+    if(!empty($country)){
+        $op = Operator::where('country_id', $country->id)->where('name', 'ooredoo')->first();
+        if(!empty($op)){
+            return $op->id;
+        }
+    }
+    return 10;
+}
+
 function delete_multiselect(Request $request) // select many contract from index table and delete them
 {
     $selected_list =  explode(",",$request['selected_list']);

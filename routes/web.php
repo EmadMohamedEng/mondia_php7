@@ -90,7 +90,7 @@ define('SNAP_VIVA_CHANNEL_ID', 4493);
 ///////////////////////// stc Kuwait /////////////////////////////
 
 /************* Start config Timwe******************/
-define('ooredoo',12);
+define('ooredoo',timwe_op_id());
 define('PartnerId', '2534');
 define('productId', '10458');
 define('partnerRoleId', '2614');
@@ -184,11 +184,18 @@ Route::get('imi/notification', 'ImiController@imi_notification');
 
 /*******************end IMI digital *****************/
 
-// Route::get('yousef_test', function(){
-//     session()->put('check_status_id','123');
-//     session()->put('MSISDN','0121548794');
-//     session()->put('status','active');
-//     session()->put('imi_op_id','14');
+Route::get('imi_test', function(){
+    session()->put('MSISDN','0121548794');
+    session()->put('status','active');
+    session()->put('imi_op_id',imi_op_id());
 
-//     return redirect(url('/?OpID='.imi_op_id()));
-// });
+    return redirect(url('/?OpID='.imi_op_id()));
+});
+
+Route::get('timwe_test', function(){
+    session()->put('userIdentifier','0121548794');
+    session()->put('status','active');
+    session()->put('ooredoo_op_id',timwe_op_id());
+
+    return redirect(url('/?OpID='.timwe_op_id()));
+});
