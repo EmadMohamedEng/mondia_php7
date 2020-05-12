@@ -19,12 +19,12 @@
         <div class="landing_page">
 
             <div class="strip">
-                <h2>دليل مسلم</h2>
+                <h2 class="text-dark">دليل مسلم</h2>
             </div>
 
             <div class="shbka">
                 <div class="container">
-                    <h3>الغاء الاشترك</h3>
+                    <h3 class="text-dark">الغاء الاشترك</h3>
                     <div class="zain_viva">
                         @if(Session::has('success'))
                         <div class="alert alert-success alert-dismissible">

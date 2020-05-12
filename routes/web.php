@@ -113,6 +113,7 @@ Route::get('testMT', 'TimweController@testMT');
 Route::get('ooredoo_qatar_landing', 'TimweController@index');
 Route::get('ooredoo_qatar_pin', 'TimweController@pincode');
 Route::get('ooredoo_qatar_unsub', 'TimweController@unsubscribe');
+Route::get('ooredoo_qatar_logout', 'TimweController@logout');
 
 //Timwe Api
 Route::post('generateKey', 'TimweController@generateKey');
@@ -144,6 +145,7 @@ define('phoneKey','972');
 Route::get('imi/login', 'ImiController@landing');
 Route::get('imi/pincode', 'ImiController@pinCode');
 Route::get('imi/unsubscribe', 'ImiController@unsub');
+Route::get('imi/logout', 'ImiController@logout');
 
 Route::get('authorization', 'ImiController@authorization'); // auth used in header
 
@@ -181,3 +183,12 @@ Route::get('subscriptions/getservices', 'ImiController@getServices');
 Route::get('imi/notification', 'ImiController@imi_notification');
 
 /*******************end IMI digital *****************/
+
+// Route::get('yousef_test', function(){
+//     session()->put('check_status_id','123');
+//     session()->put('MSISDN','0121548794');
+//     session()->put('status','active');
+//     session()->put('imi_op_id','14');
+
+//     return redirect(url('/?OpID='.imi_op_id()));
+// });

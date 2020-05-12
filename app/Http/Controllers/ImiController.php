@@ -498,4 +498,12 @@ class ImiController extends Controller
 
         return $ReqResponse;
     }
+
+    public function logout(){
+        session()->forget('MSISDN');
+        session()->forget('status');
+        session()->forget('imi_op_id');
+
+        return redirect('imi/login');
+    }
 }

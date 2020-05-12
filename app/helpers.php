@@ -12,7 +12,7 @@ function imi_op_id(){
     if(!empty($country)){
         $op = Operator::where('country_id', $country->id)->where('name', 'ooredoo')->first();
         if(!empty($op)){
-            return $op;
+            return $op->id;
         }
     }
     return 8;
