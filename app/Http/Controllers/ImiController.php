@@ -470,7 +470,7 @@ class ImiController extends Controller
         $vars['service']["msisdn"] = $request->number;
 
         // optional params if we need a specific service id
-        $vars['service']["serviceid"] = $request->serviceId;
+        $vars['service']["serviceid"] = 8;
         $vars['service']["Status"] = "Active";
         $vars['service']["scode"] = shortCode;
 
@@ -495,7 +495,15 @@ class ImiController extends Controller
             'response' => json_encode($ReqResponse),
             'type'  =>$actionName
         ]);
+        
+        if($ReqResponse['response']['status'] == '0'){
+            $res['status'] = 0;
+            $res['message'] = 'success';
+        }else{
+            $res['status'] = 1;
+            $res['message'] = 'fail';
+        }
 
-        return $ReqResponse;
+        return json_encode($res);
     }
 }
