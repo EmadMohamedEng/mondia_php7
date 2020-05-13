@@ -194,6 +194,7 @@ Route::get('imi_test', function(){
 
 Route::get('timwe_test', function(){
     session()->put('userIdentifier','0121548794');
+    session()->put('MSISDN','0121548794');
     session()->put('status','active');
     session()->put('ooredoo_op_id',timwe_op_id());
 

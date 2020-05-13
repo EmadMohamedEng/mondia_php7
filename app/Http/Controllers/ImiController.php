@@ -457,7 +457,7 @@ class ImiController extends Controller
         }
     }
 
-    public function imiSubCheck(Request $request)
+    public function man_elkeal_check_status(Request $request)
     {
 
         $headers = array(
@@ -470,7 +470,7 @@ class ImiController extends Controller
         $vars['service']["msisdn"] = $request->number;
 
         // optional params if we need a specific service id
-        $vars['service']["serviceid"] = 8;
+        $vars['service']["serviceid"] = 9;  // man elkeal sub keyword
         $vars['service']["Status"] = "Active";
         $vars['service']["scode"] = shortCode;
 
@@ -495,7 +495,7 @@ class ImiController extends Controller
             'response' => json_encode($ReqResponse),
             'type'  =>$actionName
         ]);
-        
+
         if($ReqResponse['response']['status'] == '0'){
             $res['status'] = 0;
             $res['message'] = 'success';

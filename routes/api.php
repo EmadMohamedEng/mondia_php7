@@ -17,4 +17,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('subscriptions/check', 'ImiController@imiSubCheck');
+Route::post('man_elkeal_check_status', 'ImiController@man_elkeal_check_status');

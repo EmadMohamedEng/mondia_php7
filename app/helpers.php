@@ -19,14 +19,14 @@ function imi_op_id(){
 }
 
 function timwe_op_id(){
-    $country = Country::where('title', 'qautar')->first();
+    $country = Country::where('title', 'Qutar')->first();
     if(!empty($country)){
         $op = Operator::where('country_id', $country->id)->where('name', 'ooredoo')->first();
         if(!empty($op)){
             return $op->id;
         }
     }
-    return 10;
+    return 12;
 }
 
 function delete_multiselect(Request $request) // select many contract from index table and delete them
