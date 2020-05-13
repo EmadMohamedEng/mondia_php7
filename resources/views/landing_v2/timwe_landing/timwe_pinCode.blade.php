@@ -21,7 +21,7 @@
             <div class="start_video" id="video">
 
             </div>
-            <div class="strip">
+            <div class="strip text-dark">
                 <h2>ادخل كود التفعيل</h2>
             </div>
 

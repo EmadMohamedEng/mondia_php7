@@ -18,14 +18,14 @@
     <div class="main_container">
         <div class="landing_page">
 
-            <div class="strip">
+            <div class="strip text-dark">
                 <h4>استمتع بوقتك مع خدمه</h4>
                 <h2>دليل مسلم</h2>
             </div>
 
             <div class="shbka">
                 <div class="container">
-                    <h3>اشترك الان</h3>
+                    <h3 class="text-dark">اشترك الان</h3>
                     <div class="zain_viva">
                         @if(Session::has('success'))
                         <div class="alert alert-success alert-dismissible">

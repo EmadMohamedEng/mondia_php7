@@ -702,4 +702,12 @@ class TimweController extends Controller
 
         return $sOutput;
     }
+
+    public function logout(){
+        session()->forget('userIdentifier');
+        session()->forget('status');
+        session()->forget('ooredoo_op_id');
+
+        return redirect('ooredoo_qatar_landing');
+    }
 }

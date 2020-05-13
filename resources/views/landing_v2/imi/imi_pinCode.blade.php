@@ -22,7 +22,7 @@
 
             </div>
             <div class="strip">
-                <h2>ادخل كود التفعيل</h2>
+                <h2 class="text-dark">ادخل كود التفعيل</h2>
             </div>
 
             <div class="shbka pt-5">
