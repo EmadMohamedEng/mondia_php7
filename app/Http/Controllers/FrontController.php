@@ -10,6 +10,7 @@ use App\Provider;
 use App\Service;
 use App\Audio;
 use App\Post;
+use App\MondiaSubscriber;
 
 use Monolog\Logger;
 use Carbon\Carbon;
@@ -268,6 +269,17 @@ class FrontController extends Controller
           }else{
               session()->put('status','active');
               session()->put('menu_unsub_omantel','active');
+
+              $subscriber['check_status_id'] = session()->get('check_status_id');
+              
+              $subCheck = MondiaSubscriber::where('check_status_id', $subscriber['check_status_id'])->where('operator_id', omantel)->first();
+              
+              if(!$subCheck){
+                  $subscriber['operator_id'] = omantel;
+    
+                  MondiaSubscriber::create($subscriber);
+              }
+
               return view('front.inner', compact('content','contents'));
           }
       }
@@ -287,6 +299,17 @@ class FrontController extends Controller
           else{
               session()->put('status','active');
               session()->put('menu_unsub_du','active');
+
+              $subscriber['check_status_id'] = session()->get('check_status_id');
+
+              $subCheck = MondiaSubscriber::where('check_status_id', $subscriber['check_status_id'])->where('operator_id', du)->first();
+              
+              if(!$subCheck){
+                $subscriber['operator_id'] = du;
+
+                MondiaSubscriber::create($subscriber);
+              }
+
               return view('front.inner', compact('content','contents'));
           }
       }
