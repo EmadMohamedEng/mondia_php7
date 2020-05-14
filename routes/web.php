@@ -185,7 +185,7 @@ Route::get('imi/notification', 'ImiController@imi_notification');
 /*******************end IMI digital *****************/
 
 Route::get('imi_test', function(){
-    session()->put('MSISDN','0121548794');
+    session()->put('msisdn','0121548794');
     session()->put('status','active');
     session()->put('imi_op_id',imi_op_id());
 

@@ -53,7 +53,7 @@
                             <label for="phone"><span>{{phoneKey}}</span></label>
                             <input type="hidden" name="prev_url"
                                 value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-                            <input type="tel" class="form-control" value="" id="phone"
+                            <input type="tel" class="form-control" @if(session()->has('msisdn')) value="{{session()->get('msisdn')}}" @endif id="phone"
                                 placeholder="ادخل رقم تليفونك"
                                 oninvalid="setCustomValidity('يجب ان تدخل 9 ارقام')" name="number" required
                                 pattern="[0-9]{9}">
