@@ -308,7 +308,7 @@ class ImiController extends Controller
 
         $request->session()->put('msisdn', phoneKey.$request->number);
 
-        if($ReqResponse['response']['status'] == 0){
+        if($ReqResponse['services']['serviceid'] == 4){
             $subscriber = Subscriber::where('msisdn', session()->get('msisdn'))->where('serviceId', serviceId)->first();
             if(empty($subscriber)){
                 Subscriber::create([
