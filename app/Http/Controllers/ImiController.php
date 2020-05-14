@@ -308,20 +308,36 @@ class ImiController extends Controller
 
         $request->session()->put('msisdn', phoneKey.$request->number);
 
-        if(isset($ReqResponse['services']['serviceid']) && $ReqResponse['services']['serviceid'] == serviceId){
-            $subscriber = Subscriber::where('msisdn', session()->get('msisdn'))->where('serviceId', serviceId)->first();
-            if(empty($subscriber)){
-                Subscriber::create([
-                    'msisdn' => session()->get('msisdn'),
-                    'serviceId' => serviceId,
-                    'requestId' => $imi->id,
-                ]);
-            }
-            session(['MSISDN' => session()->get('msisdn'), 'status' => 'active' , 'imi_op_id' => imi_op_id()]);
-            return redirect('/?OpID='.imi_op_id());
-        }else{
-            return $this->generateOTP();
-        }
+
+
+if(isset($ReqResponse['services'])  && count($ReqResponse['services']) > 0 ){ // user has subscribe sevices
+
+  foreach($ReqResponse['services'] as   $service ){
+
+    if($service['serviceid']  == serviceId){
+
+      $subscriber = Subscriber::where('msisdn', session()->get('msisdn'))->where('serviceId', serviceId)->first();
+      if(empty($subscriber)){
+          Subscriber::create([
+              'msisdn' => session()->get('msisdn'),
+              'serviceId' => serviceId,
+              'requestId' => $imi->id,
+          ]);
+      }
+      session(['MSISDN' => session()->get('msisdn'), 'status' => 'active' , 'imi_op_id' => imi_op_id()]);
+      return redirect('/?OpID='.imi_op_id());
+
+    }
+
+  }
+
+}else{
+    return $this->generateOTP();
+}
+
+
+
+
     }
 
     /*
