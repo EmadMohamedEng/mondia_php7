@@ -272,12 +272,12 @@ class FrontController extends Controller
               session()->put('menu_unsub_omantel','active');
 
               $subscriber['check_status_id'] = session()->get('check_status_id');
-              
+
               $subCheck = MondiaSubscriber::where('check_status_id', $subscriber['check_status_id'])->where('operator_id', omantel)->first();
-              
+
               if(!$subCheck){
                   $subscriber['operator_id'] = omantel;
-    
+
                   MondiaSubscriber::create($subscriber);
               }
 
@@ -304,7 +304,7 @@ class FrontController extends Controller
               $subscriber['check_status_id'] = session()->get('check_status_id');
 
               $subCheck = MondiaSubscriber::where('check_status_id', $subscriber['check_status_id'])->where('operator_id', du)->first();
-              
+
               if(!$subCheck){
                 $subscriber['operator_id'] = du;
 
@@ -1055,16 +1055,6 @@ class FrontController extends Controller
             );
             $this->log_action($actionName, $url, $parameters_arr);
 
-            $subscriber = MondiaSubscriber::where('check_status_id', $check_status_id)->where('operator_id', omantel)->first();
-            
-            if($subscriber){
-                $subscriber->destroy();
-            }
-
-            $unsubscriber['check_status_id'] = $check_status_id;
-            $unsubscriber['operator_id'] = omantel;
-
-            MondiaUnsubscriber::create($unsubscriber);
 
             // return redirect("/du_redirect?redirect_url=".$current_url);
             $Url = url("/omantel/redirect?redirect_url=" . $current_url);
@@ -1091,6 +1081,20 @@ class FrontController extends Controller
         //  }else{
         //    Session::flash('unsub_fail', 'There is error in unsubscribe');
         //  }
+
+         // Make Ubsub DB
+        $subscriber = MondiaSubscriber::where('check_status_id', $check_status_id)->where('operator_id', omantel)->first();
+
+        if($subscriber){
+            $subscriber->destroy();
+        }
+
+        $unsubscriber['check_status_id'] = $check_status_id;
+        $unsubscriber['operator_id'] = omantel;
+
+        MondiaUnsubscriber::create($unsubscriber);
+
+
         return redirect("?OpID=9");
     }
 
@@ -1435,8 +1439,9 @@ class FrontController extends Controller
             Session::forget(['menu_unsub_du']);
             Session::flash('unsub_success', 'You are unsubscribe success');
 
+            // Unsub DB
             $subscriber = MondiaSubscriber::where('check_status_id', $check_status_id)->where('operator_id', du)->first();
-            
+
             if($subscriber){
                 $subscriber->destroy();
             }
