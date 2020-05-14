@@ -11,6 +11,7 @@ use App\Service;
 use App\Audio;
 use App\Post;
 use App\MondiaSubscriber;
+use App\MondiaUnsubscriber;
 
 use Monolog\Logger;
 use Carbon\Carbon;
@@ -1054,6 +1055,16 @@ class FrontController extends Controller
             );
             $this->log_action($actionName, $url, $parameters_arr);
 
+            $subscriber = MondiaSubscriber::where('check_status_id', $check_status_id)->where('operator_id', omantel)->first();
+            
+            if($subscriber){
+                $subscriber->destroy();
+            }
+
+            $unsubscriber['check_status_id'] = $check_status_id;
+            $unsubscriber['operator_id'] = omantel;
+
+            MondiaUnsubscriber::create($unsubscriber);
 
             // return redirect("/du_redirect?redirect_url=".$current_url);
             $Url = url("/omantel/redirect?redirect_url=" . $current_url);
@@ -1400,6 +1411,16 @@ class FrontController extends Controller
             );
             $this->log_action($actionName, $url, $parameters_arr);
 
+            $subscriber = MondiaSubscriber::where('check_status_id', $check_status_id)->where('operator_id', du)->first();
+            
+            if($subscriber){
+                $subscriber->destroy();
+            }
+
+            $unsubscriber['check_status_id'] = $check_status_id;
+            $unsubscriber['operator_id'] = omantel;
+
+            MondiaUnsubscriber::create($unsubscriber);
 
             // return redirect("/du_redirect?redirect_url=".$current_url);
             $Url = url("/du_redirect?redirect_url=" . $current_url);

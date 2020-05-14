@@ -16,7 +16,7 @@ class CreateMondiaUnsubscribersTable extends Migration
         Schema::create('mondia_unsubscribers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('check_status_id');
-            $table->text('operator_id');
+            $table->integer('operator_id');
             $table->timestamps();
         });
     }
