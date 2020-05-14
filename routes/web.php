@@ -185,7 +185,7 @@ Route::get('imi/notification', 'ImiController@imi_notification');
 /*******************end IMI digital *****************/
 
 Route::get('imi_test', function(){
-    session()->put('msisdn','0121548794');
+    session()->put('msisdn','566789011');
     session()->put('status','active');
     session()->put('imi_op_id',imi_op_id());
 
@@ -193,8 +193,8 @@ Route::get('imi_test', function(){
 });
 
 Route::get('timwe_test', function(){
-    session()->put('userIdentifier','0121548794');
-    session()->put('MSISDN','0121548794');
+    session()->put('userIdentifier','66671329');
+    session()->put('MSISDN','66671329');
     session()->put('status','active');
     session()->put('ooredoo_op_id',timwe_op_id());
 
