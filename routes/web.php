@@ -89,7 +89,7 @@ define('SNAP_VIVA_URL', url('') . '/landing_stc');
 define('SNAP_VIVA_CHANNEL_ID', 4493);
 ///////////////////////// stc Kuwait /////////////////////////////
 
-/************* Start config Timwe******************/
+/******timwe_op_id******* Start config Timwe******************/
 define('ooredoo',timwe_op_id());
 define('PartnerId', '2534');
 define('productId', '10458');
