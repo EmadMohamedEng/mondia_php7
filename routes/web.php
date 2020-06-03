@@ -80,6 +80,7 @@ Route::get('du_set_session','FrontController@du_set_session');
 
 ///////////////////////// stc Kuwait /////////////////////////////
 define('stc',11);
+define('mbc',14);
 Route::get('landing_stc', 'StcController@viva_login');
 Route::post('viva_login_action', 'StcController@viva_login_action');
 Route::get('notification', 'StcController@notification');
