@@ -29,6 +29,17 @@ function timwe_op_id(){
     return 12;
 }
 
+function mbc_op_id(){
+    $country = Country::where('title', 'Ksa')->first();
+    if(!empty($country)){
+        $op = Operator::where('country_id', $country->id)->where('name', 'mbc')->first();
+        if(!empty($op)){
+            return $op->id;
+        }
+    }
+    return 14;
+}
+
 function delete_multiselect(Request $request) // select many contract from index table and delete them
 {
     $selected_list =  explode(",",$request['selected_list']);
