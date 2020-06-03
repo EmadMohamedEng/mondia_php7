@@ -100,7 +100,7 @@ select {
 
       .arrow_back {
         color: $black_color;
-        opacity: 0.5;
+        // opacity: 0.5;
         position: absolute;
         top: 47%;
         left: -0.5rem;
@@ -824,7 +824,7 @@ select {
             border: 0;
 
             &.btn_2 {
-              background: #00a9ce;
+              background: #efc049;
             }
           }
         }
@@ -854,9 +854,9 @@ select {
         text-align: center;
         text-align-last: center;
         border: 2px solid;
-        border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
         border-image-slice: 1;
-        background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #753bbd, #00a9ce);
+        border-image-source: linear-gradient(45deg, #aa6620 40%, #efc049 60%);
+        background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #efc049);
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -875,9 +875,9 @@ select {
         height: 3rem;
         text-align: center;
         border: 2px solid;
-        border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
         border-image-slice: 1;
-        background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #753bbd, #00a9ce);
+        border-image-source: linear-gradient(45deg, #aa6620 40%, #efc049 60%);
+        background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #efc049);
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -905,8 +905,7 @@ select {
         margin: 0 auto;
         border: double 5px transparent;
         border-radius: 30px;
-        background-image: linear-gradient(#00a9ce, #753bbd),
-          linear-gradient(to right, #753bbd, #00a9ce);
+        background-image: linear-gradient(#aa6620, #efc049), linear-gradient(to right, #aa6620, #efc049);
         background-origin: border-box;
         background-clip: content-box, border-box;
       }
@@ -931,10 +930,10 @@ select {
       width: 100%;
       text-align: center;
       border: 2px solid;
-      border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-      border-image-slice: 1;
       margin-bottom: 1%;
-      background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+      border-image-slice: 1;
+      border-image-source: linear-gradient(45deg, #aa6620 40%, #efc049 60%);
+      background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #efc049);
       border-radius: 8px;
       -webkit-border-radius: 8px;
       -moz-border-radius: 8px;
@@ -1018,7 +1017,7 @@ select {
               padding: 0.25rem 0.5rem;
               width: 100%;
               border: solid 2px transparent;
-              background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #753bbd, #00a9ce);
+              background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #aa6620, #efc049);
               background-origin: border-box;
               background-clip: content-box, border-box;
               box-shadow: 2px 1000px 1px #fff inset;
@@ -1050,7 +1049,7 @@ select {
               border-radius: 10px;
               padding: 7px 40px;
               border: solid 2px transparent;
-              background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #753bbd, #00a9ce);
+              background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #aa6620, #efc049);
               background-origin: border-box;
               background-clip: content-box, border-box;
               box-shadow: 2px 1000px 1px #fff inset;
@@ -1081,6 +1080,7 @@ select {
 
     .merath_title {
       h2 {
+        color: #efc049;
         text-align: center;
         margin-bottom: 1rem;
       }
@@ -1093,9 +1093,9 @@ select {
         text-align: center;
         text-align-last: center;
         border: 2px solid;
-        border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
         border-image-slice: 1;
-        background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #753bbd, #00a9ce);
+        border-image-source: linear-gradient(45deg, #aa6620 40%, #efc049 60%);
+        background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #efc049);
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -1108,6 +1108,7 @@ select {
       text-align: left;
 
       h4 {
+        color: #efc049;
         line-height: 2.5rem;
         font-size: 1.35rem;
         float: left;
@@ -1129,9 +1130,9 @@ select {
         font-weight: bold;
         text-align: center;
         border: 0;
-        // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+        // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #efc049 60%);
         // border-image-slice: 1;
-        // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+        // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #efc049);
         background: $bg_color;
         border-radius: 8px;
         -webkit-border-radius: 8px;
@@ -1142,13 +1143,16 @@ select {
     }
 
     .table_table {
+      .thead2_h4 {color: #efc049;}
+
       .table {
-        border: 2px #00a9ce solid;
+        border: 2px #efc049 solid;
         border-radius: 7px;
         direction: rtl;
 
         tbody {
           tr {
+            color: #efc049;
             td {
               padding: 1rem 0.7rem;
               font-size: 1.25rem;
@@ -1181,7 +1185,6 @@ select {
 
       #tally {
         border: 2px solid;
-        border-image-source: linear-gradient(50deg, #bd0ce9 40%, #00a9ce 60%);
         border-image-slice: 1;
         border-radius: 50%;
         width: 150px;
@@ -1191,8 +1194,8 @@ select {
         font-size: 50px;
         margin-bottom: 20px;
         color: black;
-        background-image: linear-gradient(#f2f2f2, #f2f2f2),
-          linear-gradient(to right, #753bbd, #00a9ce);
+        border-image-source: linear-gradient(45deg, #aa6620 40%, #efc049 60%);
+        background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #efc049);
         background-origin: border-box;
         background-clip: content-box, border-box;
       }
@@ -1208,8 +1211,8 @@ select {
           margin: 2rem auto;
           font-size: 27px;
           border: 2px solid;
-          border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-          background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+          border-image-source: linear-gradient(45deg, #aa6620 40%, #efc049 60%);
+          background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #efc049);
           border-image-slice: 1;
           border-radius: 10px;
           -webkit-border-radius: 10px;
@@ -1264,8 +1267,8 @@ select {
       margin-bottom: 15px;
       padding: 9px;
       border: 2px solid;
-      border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-      background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+      border-image-source: linear-gradient(45deg, #aa6620 40%, #efc049 60%);
+      background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #efc049);
       border-image-slice: 1;
       border-radius: 10px;
       -webkit-border-radius: 10px;
@@ -1330,7 +1333,7 @@ select {
 
       .btn_search {
         color: $black_color;
-        opacity: 0.5;
+        // opacity: 0.5;
         position: absolute;
         top: 50%;
         left: 0;
@@ -1498,8 +1501,8 @@ select {
   }
 
   .spinner-blue {
-    border-top-color: #09d;
-    border-left-color: #09d;
+    border-top-color: #efc049;
+    border-left-color: #efc049;
   }
 }
 
@@ -1602,7 +1605,7 @@ select {
           .nav-link {
             .icon_before {
               padding-right: 0.5rem;
-              color: #00a9ce;
+              color: #efc049;
             }
           }
 
@@ -1622,7 +1625,7 @@ select {
             margin-bottom: 1rem;
 
             .arrow_back {
-              color: #00a9ce;
+              color: #efc049;
               font-size: 1.5rem;
               float: right;
             }
@@ -1962,9 +1965,9 @@ select {
           font-weight: bold;
           text-align: center;
           border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #efc049 60%);
           // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #efc049);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -1976,7 +1979,7 @@ select {
 
       .table_table {
         .table {
-          border: 2px #00a9ce solid;
+          border: 2px #efc049 solid;
           border-radius: 7px;
           direction: rtl;
 
@@ -2104,7 +2107,7 @@ select {
           .nav-link {
             .icon_before {
               padding-right: 0.5rem;
-              color: #00a9ce;
+              color: #efc049;
             }
           }
 
@@ -2124,7 +2127,7 @@ select {
             margin-bottom: 1rem;
 
             .arrow_back {
-              color: #00a9ce;
+              color: #efc049;
               font-size: 1.5rem;
               float: right;
             }
@@ -2477,9 +2480,9 @@ select {
           font-weight: bold;
           text-align: center;
           border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #efc049 60%);
           // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #efc049);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -2491,7 +2494,7 @@ select {
 
       .table_table {
         .table {
-          border: 2px #00a9ce solid;
+          border: 2px #efc049 solid;
           border-radius: 7px;
           direction: rtl;
 
@@ -2621,7 +2624,7 @@ select {
           .nav-link {
             .icon_before {
               padding-right: 0.5rem;
-              color: #00a9ce;
+              color: #efc049;
             }
           }
 
@@ -2641,7 +2644,7 @@ select {
             margin-bottom: 1rem;
 
             .arrow_back {
-              color: #00a9ce;
+              color: #efc049;
               font-size: 1.5rem;
               float: right;
             }
@@ -3013,9 +3016,9 @@ select {
           font-weight: bold;
           text-align: center;
           border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #efc049 60%);
           // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #efc049);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -3027,7 +3030,7 @@ select {
 
       .table_table {
         .table {
-          border: 2px #00a9ce solid;
+          border: 2px #efc049 solid;
           border-radius: 7px;
           direction: rtl;
 
@@ -3162,7 +3165,7 @@ select {
           .nav-link {
             .icon_before {
               padding-right: 0.5rem;
-              color: #00a9ce;
+              color: #efc049;
             }
           }
 
@@ -3182,7 +3185,7 @@ select {
             margin-bottom: 1rem;
 
             .arrow_back {
-              color: #00a9ce;
+              color: #efc049;
               font-size: 1.5rem;
               float: right;
             }
@@ -3569,9 +3572,9 @@ select {
           font-weight: bold;
           text-align: center;
           border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #efc049 60%);
           // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #efc049);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -3583,7 +3586,7 @@ select {
 
       .table_table {
         .table {
-          border: 2px #00a9ce solid;
+          border: 2px #efc049 solid;
           border-radius: 7px;
           direction: rtl;
 
@@ -3734,7 +3737,7 @@ select {
           .nav-link {
             .icon_before {
               padding-right: 0.5rem;
-              color: #00a9ce;
+              color: #efc049;
             }
           }
 
@@ -3755,7 +3758,7 @@ select {
             margin-bottom: 1rem;
 
             .arrow_back {
-              color: #00a9ce;
+              color: #efc049;
               font-size: 1.5rem;
               float: right;
             }
@@ -4377,9 +4380,9 @@ select {
           font-weight: bold;
           text-align: center;
           border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #efc049 60%);
           // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #efc049);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -4396,7 +4399,7 @@ select {
         }
 
         .table {
-          border: 2px #00a9ce solid;
+          border: 2px #efc049 solid;
           border-radius: 7px;
           direction: rtl;
 
@@ -4561,7 +4564,7 @@ select {
           .nav-link {
             .icon_before {
               padding-right: 0.5rem;
-              color: #00a9ce;
+              color: #efc049;
             }
           }
 
@@ -4582,7 +4585,7 @@ select {
             margin-bottom: 3rem;
 
             .arrow_back {
-              color: #00a9ce;
+              color: #efc049;
               font-size: 1.5rem;
               float: right;
             }
@@ -5100,9 +5103,9 @@ select {
           font-weight: bold;
           text-align: center;
           border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #efc049 60%);
           // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #efc049);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -5119,7 +5122,7 @@ select {
         }
 
         .table {
-          border: 2px #00a9ce solid;
+          border: 2px #efc049 solid;
           border-radius: 7px;
           direction: rtl;
 
