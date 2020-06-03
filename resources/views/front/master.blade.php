@@ -19,7 +19,7 @@
   @elseif(request()->has('OpID') && request()->get('OpID') == stc)
   <link rel="stylesheet" href="{{asset('front/css/style_en_stc.css')}}">
   @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
-  <link rel="stylesheet" href="{{asset('front/css/style_en_stc.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/style_en_mbc.css')}}">
   @else
   <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
   @endif
