@@ -15,7 +15,7 @@ class AddOperatorAndCountry extends Migration
     {
         \DB::table('countries')->insert(
             array(
-                'id' => 11,
+                'id' => 9,
                 'title' => 'Ksa'
             )
         );
@@ -23,7 +23,7 @@ class AddOperatorAndCountry extends Migration
             array(
                 'id' => 14,
                 'name' => 'mbc',
-                'country_id' => 11
+                'country_id' => 9
             )
         );
     }
