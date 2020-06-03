@@ -221,6 +221,15 @@ class FrontController extends Controller
           return redirect('imi/login');
         }
 
+
+
+        if($request->has('OpID') && $request->OpID == mbc){  //mbc
+          if($enable ){
+            return view('front.inner_enable_testing', compact('content','contents'));
+          }
+          return redirect('?OpID='.mbc);
+        }
+
         if($request->has('userToken')){ // subscribe for the first time
 
 
