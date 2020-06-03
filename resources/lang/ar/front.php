@@ -32,6 +32,7 @@ return [
     'number_of_girls' => 'عدد البنات ',
     'feather' => 'الاب',
     'mother' => 'الام',
+    'Mbc' => 'MBC',
     'number_of_brother' => 'عدد الاخوه',
     'number_of_sister' => 'عدد الاخوات',
     'number_of_wife' => 'عدد الزوجات',

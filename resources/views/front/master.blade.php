@@ -79,6 +79,8 @@ $enable = get_setting('enable_testing');
               <img class="bounce-top" src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
               @elseif(request()->get('OpID') == du)
               <img class="bounce-top" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
+                @elseif (request()->get("OpID") == mbc)
+                  @lang('front.Mbc')
               @else
               {{-- <img class="bounce-top" src='{{asset("front/images/daleel_elmuslim.png")}}' alt='Logo'> --}}
               @lang('front.Daleel Al Muslim')
