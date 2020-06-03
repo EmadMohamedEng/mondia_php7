@@ -36,6 +36,7 @@ return [
     'number_of_sister' => 'Number of sisters',
     'number_of_wife' => 'Number of wife',
     'quran' => 'quran live',
+    'Mbc' => 'MBC',
     'yes' => 'Yes',
     'no' => 'No',
     'sheikh' => "You can now choose the call to prayer with your favorite Sheikh's voice",
