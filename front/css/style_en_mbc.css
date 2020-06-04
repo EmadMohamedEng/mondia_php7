@@ -170,7 +170,8 @@ select:active {
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu {
   position: static;
   border: 0;
-  min-width: 0;
+  min-width: 55%;
+  background-color: #0f1218;
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu.dropdown-menu2 {
   float: right;
@@ -179,6 +180,7 @@ select:active {
   padding: 0.25rem 1rem;
   text-align: center;
   width: 100%;
+  color: #efc049;
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
   padding: 0.25rem 0;
@@ -232,7 +234,7 @@ select:active {
 }
 .main_container .img_carousel .owl-theme .owl-dots .owl-dot.active span,
 .main_container .img_carousel .owl-theme .owl-dots .owl-dot:hover span {
-  background: #c39;
+  background: #aa6620;
 }
 .main_container .content_carousel .content_carousel_head {
   margin-top: 2rem;
@@ -519,6 +521,7 @@ select:active {
 }
 .main_container .inner_page .poster .poster-details .outside-cover {
   margin-bottom: 2rem;
+  color: #FFF;
 }
 .main_container .inner_page .socail_media {
   width: 50%;
@@ -594,11 +597,11 @@ select:active {
 .main_container .inner_page .section_content .p_content {
   margin-top: 21px;
   font-size: 14px;
-  color: #efc049;
+  color: #FFF;
 }
 .main_container .inner_page .section_content .p_content_2 {
   font-size: 14px;
-  color: #c39;
+  color: #aa6620;
   margin-bottom: 0;
   margin-top: -0.75rem;
 }
@@ -1195,7 +1198,7 @@ select:active {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 13% !important;
+    width: 25% !important;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1209,7 +1212,6 @@ select:active {
   .main_container .nav_nav button {
     outline: 0;
     font-size: 1rem;
-    opacity: 0.5;
     position: fixed;
     top: 2.15rem;
     left: 2.5rem;
@@ -1220,13 +1222,13 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .nav_nav button .icon_before {
-    color: #FFF;
+    color: #efc049;
   }
   .main_container .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
   .main_container .nav_nav .navbar_ul {
-    background-color: #FFF;
+    background-color: #0f1218;
     width: 15rem;
     height: 100vh;
     padding: 0 0;
@@ -1526,7 +1528,7 @@ select:active {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 13% !important;
+    width: 25% !important;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1540,7 +1542,6 @@ select:active {
   .main_container .nav_nav button {
     outline: 0;
     font-size: 1.2rem;
-    opacity: 0.5;
     position: fixed;
     top: 2.15rem;
     left: 3rem;
@@ -1551,13 +1552,13 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .nav_nav button .icon_before {
-    color: #FFF;
+    color: #efc049;
   }
   .main_container .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
   .main_container .nav_nav .navbar_ul {
-    background-color: #FFF;
+    background-color: #0f1218;
     width: 15rem;
     height: 100vh;
     padding: 0 0;
@@ -1869,7 +1870,7 @@ select:active {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 12% !important;
+    width: 25% !important;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1883,7 +1884,6 @@ select:active {
   .main_container .nav_nav button {
     outline: 0;
     font-size: 1rem;
-    opacity: 0.5;
     position: fixed;
     top: 2.15rem;
     left: 2.5rem;
@@ -1894,13 +1894,13 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .nav_nav button .icon_before {
-    color: #FFF;
+    color: #efc049;
   }
   .main_container .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
   .main_container .nav_nav .navbar_ul {
-    background-color: #FFF;
+    background-color: #0f1218;
     width: 15rem;
     height: 100vh;
     padding: 0 0;
@@ -2228,7 +2228,7 @@ select:active {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 12% !important;
+    width: 25% !important;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -2246,7 +2246,6 @@ select:active {
   .main_container .nav_nav button {
     outline: 0;
     font-size: 1.2rem;
-    opacity: 0.5;
     position: fixed;
     top: 2.15rem;
     left: 3rem;
@@ -2257,13 +2256,13 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .nav_nav button .icon_before {
-    color: #FFF;
+    color: #efc049;
   }
   .main_container .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
   .main_container .nav_nav .navbar_ul {
-    background-color: #FFF;
+    background-color: #0f1218;
     width: 15rem;
     height: 100vh;
     padding: 0 0;
@@ -2632,7 +2631,6 @@ select:active {
   .main_container .nav_nav button {
     outline: 0;
     font-size: 1.5rem;
-    opacity: 0.5;
     position: fixed;
     top: 2.85rem;
     left: 4rem;
@@ -2643,14 +2641,14 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .nav_nav button .icon_before {
-    color: #FFF;
+    color: #efc049;
   }
   .main_container .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
   .main_container .nav_nav .navbar_ul {
-    background-color: #FFF;
-    width: 18rem;
+    background-color: #0f1218;
+    width: 23rem;
     height: 100vh;
     padding: 0 0;
     overflow-y: scroll;
@@ -3197,7 +3195,6 @@ select:active {
   .main_container .nav_nav button {
     outline: 0;
     font-size: 2.5rem;
-    opacity: 0.5;
     position: fixed;
     top: 3.25rem;
     left: 5rem;
@@ -3208,13 +3205,13 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .nav_nav button .icon_before {
-    color: #FFF;
+    color: #efc049;
   }
   .main_container .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
   .main_container .nav_nav .navbar_ul {
-    background-color: #FFF;
+    background-color: #0f1218;
     width: 31rem;
     height: 100vh;
     padding: 0 0;

@@ -167,7 +167,9 @@ select {
         .dropdown-menu {
           position: static;
           border: 0;
-          min-width: 0;
+          min-width: 55%;
+          background-color: $bg_color2;
+
 
           &.dropdown-menu2 {
             float: right;
@@ -177,6 +179,7 @@ select {
             padding: .25rem 1rem;
             text-align: center;
             width: 100%;
+            color: $text_color;
 
             &.dropdown-item2 {
               padding: .25rem 0;
@@ -252,7 +255,7 @@ select {
 
     .owl-theme .owl-dots .owl-dot.active span,
     .owl-theme .owl-dots .owl-dot:hover span {
-      background: #c39;
+      background: #aa6620;
     }
   }
 
@@ -673,6 +676,7 @@ select {
 
         .outside-cover {
           margin-bottom: 2rem;
+          color: $white_color
         }
       }
     }
@@ -767,12 +771,12 @@ select {
       .p_content {
         margin-top: 21px;
         font-size: 14px;
-        color: $text_color;
+        color: $white_color;
       }
 
       .p_content_2 {
         font-size: 14px;
-        color: #c39;
+        color: #aa6620;
         margin-bottom: 0;
         margin-top: -0.75rem;
       }
@@ -1538,7 +1542,7 @@ select {
         }
 
         img {
-          width: 13% !important;
+          width: 25% !important;
         }
       }
     }
@@ -1555,7 +1559,6 @@ select {
       button {
         outline: 0;
         font-size: 1rem;
-        opacity: 0.5;
         position: fixed;
         top: 2.15rem;
         left: 2.5rem;
@@ -1566,7 +1569,7 @@ select {
         -o-transform: translate(-50%, -50%);
 
         .icon_before {
-          color: $white_color;
+          color: $text_color;
         }
       }
 
@@ -1575,7 +1578,7 @@ select {
       }
 
       .navbar_ul {
-        background-color: $white_color;
+        background-color: $bg_color2;
         width: 15rem;
         height: 100vh;
         padding: 0 0;
@@ -2039,7 +2042,7 @@ select {
         }
 
         img {
-          width: 13% !important;
+          width: 25% !important;
         }
       }
     }
@@ -2056,7 +2059,6 @@ select {
       button {
         outline: 0;
         font-size: 1.2rem;
-        opacity: 0.5;
         position: fixed;
         top: 2.15rem;
         left: 3rem;
@@ -2067,7 +2069,7 @@ select {
         -o-transform: translate(-50%, -50%);
 
         .icon_before {
-          color: $white_color;
+          color: $text_color;
         }
       }
 
@@ -2076,7 +2078,7 @@ select {
       }
 
       .navbar_ul {
-        background-color: $white_color;
+        background-color: $bg_color2;
         width: 15rem;
         height: 100vh;
         padding: 0 0;
@@ -2556,7 +2558,7 @@ select {
         }
 
         img {
-          width: 12% !important;
+          width: 25% !important;
         }
       }
     }
@@ -2573,7 +2575,6 @@ select {
       button {
         outline: 0;
         font-size: 1rem;
-        opacity: 0.5;
         position: fixed;
         top: 2.15rem;
         left: 2.5rem;
@@ -2584,7 +2585,7 @@ select {
         -o-transform: translate(-50%, -50%);
 
         .icon_before {
-          color: $white_color;
+          color: $text_color
         }
       }
 
@@ -2593,7 +2594,7 @@ select {
       }
 
       .navbar_ul {
-        background-color: $white_color;
+        background-color: $bg_color2;
         width: 15rem;
         height: 100vh;
         padding: 0 0;
@@ -3093,7 +3094,7 @@ select {
         }
 
         img {
-          width: 12% !important;
+          width: 25% !important;
         }
 
         h6 {
@@ -3114,7 +3115,6 @@ select {
       button {
         outline: 0;
         font-size: 1.2rem;
-        opacity: 0.5;
         position: fixed;
         top: 2.15rem;
         left: 3rem;
@@ -3125,7 +3125,7 @@ select {
         -o-transform: translate(-50%, -50%);
 
         .icon_before {
-          color: $white_color;
+          color: $text_color
         }
       }
 
@@ -3134,7 +3134,7 @@ select {
       }
 
       .navbar_ul {
-        background-color: $white_color;
+        background-color: $bg_color2;
         width: 15rem;
         height: 100vh;
         padding: 0 0;
@@ -3684,7 +3684,6 @@ select {
       button {
         outline: 0;
         font-size: 1.5rem;
-        opacity: 0.5;
         position: fixed;
         top: 2.85rem;
         left: 4rem;
@@ -3695,7 +3694,7 @@ select {
         -o-transform: translate(-50%, -50%);
 
         .icon_before {
-          color: $white_color;
+          color: $text_color
         }
       }
 
@@ -3704,8 +3703,8 @@ select {
       }
 
       .navbar_ul {
-        background-color: $white_color;
-        width: 18rem;
+        background-color: $bg_color2;
+        width: 23rem;
         height: 100vh;
         padding: 0 0;
         overflow-y: scroll;
@@ -4506,7 +4505,6 @@ select {
       button {
         outline: 0;
         font-size: 2.5rem;
-        opacity: 0.5;
         position: fixed;
         top: 3.25rem;
         left: 5rem;
@@ -4517,7 +4515,7 @@ select {
         -o-transform: translate(-50%, -50%);
 
         .icon_before {
-          color: $white_color;
+          color: $text_color
         }
       }
 
@@ -4526,7 +4524,7 @@ select {
       }
 
       .navbar_ul {
-        background-color: $white_color;
+        background-color: $bg_color2;
         width: 31rem;
         height: 100vh;
         padding: 0 0;
