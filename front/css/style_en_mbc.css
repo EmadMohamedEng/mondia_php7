@@ -595,7 +595,8 @@ select:active {
   width: 80px;
 }
 .main_container .inner_page .section_content .p_content {
-  margin-top: 21px;
+  margin-top: 4rem;
+  margin-left: 0.5rem;
   font-size: 14px;
   color: #FFF;
 }
@@ -1356,7 +1357,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 3rem;
+    margin-top: 2.25rem;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
@@ -1695,7 +1696,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 2.25rem;
+    margin-top: 2.5rem;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
@@ -2035,8 +2036,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4rem;
-    margin-top: 32px;
+    margin-top: 2.5rem;
     font-size: 21px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
@@ -2405,8 +2405,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4.25rem;
-    margin-top: 37px;
+    margin-top: 2.5rem;
     font-size: 20px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
@@ -2901,8 +2900,8 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4.5rem;
-    margin-top: 45px;
+    margin-top: 6rem;
+    margin-left: 0.75rem;
     font-size: 30px;
   }
   .main_container .modal_cover .modal-dialog {
@@ -3392,8 +3391,8 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4.5rem;
-    margin-top: 55px;
+    margin-top: 9rem;
+    margin-left: 1rem;
     font-size: 35px;
   }
   .main_container .modal_cover .modal-dialog {

@@ -144,10 +144,11 @@ if (session()->get('applocale') == 'ar') {
       </div>
     </div>
 
+
     @foreach ($contents as $item)
     <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
-      <a class="row link_href" href="{{route('front.inner',['id' => $item->content_id])}}">
-        <div class="col-md-2 col-lg-2 col-xl-2 col-2 p-0">
+      <a class="row link_href m-0" href="{{route('front.inner',['id' => $item->content_id])}}">
+        <div class="col-md-4 col-lg-4 col-xl-2 col-4 p-0">
           @php
           if($item->type == 1){
           $src = $item->image_preview;
@@ -162,7 +163,7 @@ if (session()->get('applocale') == 'ar') {
           <img class="w-100 h-100" src="{{$src}}" class="image_inner" alt="Card image cap">
         </div>
 
-        <div class="col-md-8 col-lg-8 col-xl-8 col-8 p-0 ml-2 mr-2">
+        <div class="col-md-8 col-lg-8 col-xl-10 col-8 p-0">
           <p class="p_content text-capitalize scale-up-bottom">{{get_title($item->content_id)}}</p>
         </div>
 
