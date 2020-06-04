@@ -485,9 +485,15 @@ class FrontController extends Controller
         $hjrri_date = $this->hjrri_date_cal();
         $prayer_times = $this->prayTimesCal_v2();
 
-        $fajr = strtotime($prayer_times['الفجر']);
-        $imsak = date("h:i a", strtotime('-10 minutes', $fajr));
-        $prayer_times['امساك'] = $imsak;
+        if(request()->get('OpID') == mbc){
+
+        }else{
+            $fajr = strtotime($prayer_times['الفجر']);
+            $imsak = date("h:i a", strtotime('-10 minutes', $fajr));
+            $prayer_times['امساك'] = $imsak;
+        }
+
+
 
         if(request()->get('OpID') == 9)
         {
