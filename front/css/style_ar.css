@@ -96,6 +96,8 @@ body {
 }
 .main_container .inner_page .section_content .p_content {
   text-align: right;
+  margin-right: 0.5rem;
+  margin-left: 0;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-header .close {
   margin: -1rem -1rem -1rem 0;
@@ -316,8 +318,6 @@ body {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4rem;
-    margin-top: 32px;
     font-size: 21px;
   }
   .main_container .salah_time_page .time_btn {
