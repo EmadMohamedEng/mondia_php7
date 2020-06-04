@@ -132,7 +132,7 @@ select:active {
   opacity: 0.5;
 }
 .main_container .nav_nav {
-  background-color: #FFF;
+  background-color: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
   width: 85%;
   margin-top: 1.5rem;
   margin-left: 1rem;
@@ -507,6 +507,7 @@ select:active {
   -o-transform: translate(-50%, -50%);
 }
 .main_container .inner_page .poster {
+  color: #efc049;
   margin-top: 1.5rem;
   width: 100%;
 }
@@ -524,6 +525,7 @@ select:active {
   margin-bottom: 1.5rem;
 }
 .main_container .inner_page .socail_media .pa_share {
+  color: #efc049;
   margin-top: 1rem;
 }
 .main_container .inner_page .socail_media .shear_div {
@@ -580,6 +582,7 @@ select:active {
   margin-bottom: 1rem;
 }
 .main_container .inner_page .section_content .pa_Videos {
+  color: #efc049;
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
@@ -591,7 +594,7 @@ select:active {
 .main_container .inner_page .section_content .p_content {
   margin-top: 21px;
   font-size: 14px;
-  color: #fff;
+  color: #efc049;
 }
 .main_container .inner_page .section_content .p_content_2 {
   font-size: 14px;
@@ -627,6 +630,7 @@ select:active {
 }
 .main_container .azan_page .azan_title {
   margin-bottom: 2rem;
+  color: #efc049;
 }
 .main_container .azan_page .input_text {
   width: 50%;
@@ -672,6 +676,7 @@ select:active {
 }
 .main_container .nearmosque_page .nearmosque_title h2 {
   margin-bottom: 1.5rem;
+  color: #efc049;
 }
 .main_container .nearmosque_page .nearmosque_title #map {
   height: 66vh;
@@ -688,6 +693,7 @@ select:active {
   margin: 1.5rem auto;
 }
 .main_container .salah_time_page .salah_time_title h2 {
+  color: #efc049;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -956,7 +962,7 @@ select:active {
   -o-border-radius: 10px;
 }
 .main_container .sebha_page a:hover {
-  color: #bd0ce9;
+  color: #efc049;
 }
 .main_container .search_page {
   margin: 2.5rem auto;
@@ -1158,11 +1164,11 @@ select:active {
   -o-border-radius: 8px;
 }
 .active_menu a {
-  color: #000 !important;
+  color: #FFF !important;
 }
 
 .active_menu_parent {
-  color: #000 !important;
+  color: #FFF !important;
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {
