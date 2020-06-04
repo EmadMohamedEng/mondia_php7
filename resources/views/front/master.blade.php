@@ -12,7 +12,7 @@
   @elseif(request()->has('OpID') && request()->get('OpID') == stc)
     <link rel="shortcut icon" href="{{asset('front/images/STC01.png')}}">
   @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
-    <link rel="shortcut icon" href="{{asset('front/images/mbc_header.png')}}">
+    <link rel="shortcut icon" href="{{asset('front/images/mbc_header - fav.png')}}">
   @else
     <link rel="shortcut icon" href="{{asset('front/images/favicon.ico')}}">
   @endif
