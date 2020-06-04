@@ -7,7 +7,15 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="url" content="{{url('/')}}">
-  <link rel="shortcut icon" href="{{(request()->get('OpID') == omantel ? asset('front/images/omantel_logo.png') : ( request()->get('OpID')== stc ? asset('front/images/STC01.png') :asset('front/images/favicon.ico'))) }}">
+  @if(request()->has('OpID') && request()->get('OpID') == omantel)
+    <link rel="shortcut icon" href="{{asset('front/images/omantel_logo.png')}}">
+  @elseif(request()->has('OpID') && request()->get('OpID') == stc)
+    <link rel="shortcut icon" href="{{asset('front/images/STC01.png')}}">
+  @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
+    <link rel="shortcut icon" href="{{asset('front/images/mbc_header.png')}}">
+  @else
+    <link rel="shortcut icon" href="{{asset('front/images/favicon.ico')}}">
+  @endif
   <title> @yield('page_title')</title>
   <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
@@ -126,6 +134,8 @@ $enable = get_setting('enable_testing');
                   <img class="pulsate-bck" src="{{asset('front/images/omantel_logo.png')}}" alt="Logo">
                   @elseif(request()->has('OpID') && request()->get('OpID') == du)
                   <img class="pulsate-bck" src="{{asset('front/images/du_logo.png')}}" alt="Logo">
+                      @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
+                        <img class="pulsate-bck" src="{{asset('front/images/mbc_header.png')}}" alt="Logo">
                   @else
                   {{-- <img class="pulsate-bck" src="{{asset('front/images/daleel_elmuslim.png')}}" alt="Logo"> --}}
                    @endif
