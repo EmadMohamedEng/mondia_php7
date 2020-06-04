@@ -157,6 +157,13 @@ body {
 
       .shear_div {
         padding-right: 1rem;
+
+        .facebook,
+        .twitter,
+        .messenger,
+        .whatsapp {
+          margin-right: 1.5rem;
+        }
       }
     }
 
@@ -276,6 +283,7 @@ body {
 
   .main_container {
     .header {
+
       .header_logo,
       .header_icon {
         float: left !important;
@@ -332,6 +340,7 @@ body {
     .salah_time_page {
       .time_btn {
         direction: rtl;
+
         .h4_time {
           float: right;
           padding-right: 8px;
@@ -473,6 +482,7 @@ body {
   .main_container {
 
     .header {
+
       .header_logo,
       .header_icon {
         float: left !important;
@@ -761,6 +771,7 @@ body {
     .salah_time_page {
       .time_btn {
         direction: rtl;
+
         .h4_time {
           float: right;
           padding-right: 10px;
@@ -786,6 +797,7 @@ body {
 @media (min-width: 1024px) and (max-width: 1200px) {
   .main_container {
     .header {
+
       .header_logo,
       .header_icon {
         width: 100%;
@@ -861,6 +873,19 @@ body {
     .merath_page {
       .input_span {
         text-align: right;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 1200px) {
+  .main_container {
+    .inner_page {
+      .socail_media {
+        .shear_div {
+          padding-right: 0;
+        }
       }
     }
   }
