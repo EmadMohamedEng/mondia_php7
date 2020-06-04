@@ -91,6 +91,12 @@ body {
 .main_container .inner_page .socail_media .shear_div {
   padding-right: 1rem;
 }
+.main_container .inner_page .socail_media .shear_div .facebook,
+.main_container .inner_page .socail_media .shear_div .twitter,
+.main_container .inner_page .socail_media .shear_div .messenger,
+.main_container .inner_page .socail_media .shear_div .whatsapp {
+  margin-right: 1.5rem;
+}
 .main_container .inner_page .section_content .pa_Videos {
   text-align: right;
 }
@@ -527,6 +533,11 @@ body {
   }
   .main_container .merath_page .input_span {
     text-align: right;
+  }
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .main_container .inner_page .socail_media .shear_div {
+    padding-right: 0;
   }
 }
 
