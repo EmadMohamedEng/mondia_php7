@@ -280,6 +280,14 @@ select:active {
 .main_container .content_carousel .owl_content_one .item .card .card-body .card-text i {
   color: #adadad;
 }
+.main_container .content_carousel .owl_content_two.owl-rtl {
+  direction: ltr;
+}
+.main_container .content_carousel .owl_content_two .item {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+}
 .main_container .content_carousel .owl_content_two .item .card {
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -289,6 +297,7 @@ select:active {
   height: 20.5rem;
 }
 .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
+  direction: rtl;
   height: 16rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
