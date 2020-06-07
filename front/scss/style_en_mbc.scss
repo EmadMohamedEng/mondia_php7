@@ -284,6 +284,10 @@ select {
     .owl_content_one {
       .item {
         .card {
+          margin: 0 auto;
+          display: block;
+          text-align: center;
+          width: 50%;
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
@@ -293,7 +297,7 @@ select {
 
           .owl_content_img {
             img {
-              height: 20rem;
+              height: 14rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -329,7 +333,7 @@ select {
 
           .owl_content_img {
             img {
-              height: 20rem;
+              height: 14rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -365,7 +369,7 @@ select {
 
           .owl_content_img {
             img {
-              height: 20rem;
+              height: 14rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -401,7 +405,7 @@ select {
 
           .owl_content_img {
             img {
-              height: 20rem;
+              height: 14rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -437,7 +441,7 @@ select {
 
           .owl_content_img {
             img {
-              height: 20rem;
+              height: 14rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -1654,10 +1658,11 @@ select {
 
           .card {
             height: 15rem;
+            width: 100%;
 
             .owl_content_img {
               img {
-                height: 10rem;
+                height: 10rem !important;
               }
             }
           }
@@ -1670,7 +1675,7 @@ select {
 
           .owl_content_img {
             img {
-              height: 7.188rem;
+              height: 7.75rem !important;
             }
           }
 
@@ -2169,10 +2174,11 @@ select {
 
           .card {
             height: 15rem;
+            width: 100%;
 
             .owl_content_img {
               img {
-                height: 10rem;
+                height: 10rem !important;
               }
             }
           }
@@ -2181,7 +2187,7 @@ select {
 
       .item {
         .card {
-          // height: 13rem;
+          height: 15rem;
 
           .owl_content_img {
             img {
@@ -2671,10 +2677,11 @@ select {
 
           .card {
             height: 16.5rem;
+            width: 100%;
 
             .owl_content_img {
               img {
-                height: 11.5rem;
+                height: 11.5rem !important;
               }
             }
           }
@@ -2683,11 +2690,11 @@ select {
 
       .item {
         .card {
-          height: 13rem;
+          height: 15rem;
 
           .owl_content_img {
             img {
-              height: 7.188rem;
+              height: 9.5rem !important;
             }
           }
 
@@ -3224,10 +3231,11 @@ select {
 
           .card {
             height: 16.5rem;
+            width: 100%;
 
             .owl_content_img {
               img {
-                height: 11.5rem;
+                height: 11.5rem !important;
               }
             }
           }
@@ -3236,11 +3244,11 @@ select {
 
       .item {
         .card {
-          height: 13rem;
+          height: 14rem;
 
           .owl_content_img {
             img {
-              height: 7.188rem;
+              height: 9rem !important;
             }
           }
 
