@@ -283,16 +283,13 @@ select {
 
     .owl_content_one {
       .item {
-        width: 65%;
-        margin: 0 auto;
-
         .card {
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 24.625rem;
+          // height: 24.625rem;
 
           .owl_content_img {
             img {
@@ -328,11 +325,11 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 20.5rem;
+          // height: 20.5rem;
 
           .owl_content_img {
             img {
-              height: 16rem;
+              height: 20rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -364,11 +361,11 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
+          // height: 16rem;
 
           .owl_content_img {
             img {
-              height: 9.375rem;
+              height: 20rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -400,11 +397,11 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
+          // height: 16rem;
 
           .owl_content_img {
             img {
-              height: 9.375rem;
+              height: 20rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -436,11 +433,11 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
+          // height: 16rem;
 
           .owl_content_img {
             img {
-              height: 9.375rem;
+              height: 20rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -1291,6 +1288,10 @@ select {
         border-top: 0;
         border-right: 0;
         border-left: 0;
+
+        &::placeholder {
+          color: $text_color;
+        }
 
         &.input-middle {
           &+.bord {
@@ -2180,11 +2181,11 @@ select {
 
       .item {
         .card {
-          height: 13rem;
+          // height: 13rem;
 
           .owl_content_img {
             img {
-              height: 7.188rem;
+              height: 10rem !important;
             }
           }
 

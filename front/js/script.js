@@ -29,7 +29,7 @@ $('.owl_one').owlCarousel({
   animateOut: 'fadeOut',
   nav: false,
   dots: true,
-  center: true,
+  // center: true,
   responsive: {
     0: {
       items: 1
@@ -55,13 +55,13 @@ $('.owl_content_one').owlCarousel({
   center: false,
   responsive: {
     0: {
-      items: 1
+      items: 2
     },
     600: {
-      items: 1
+      items: 2
     },
     1000: {
-      items: 1
+      items: 2
     }
   }
 });
@@ -101,13 +101,13 @@ $('.owl_content_three').owlCarousel({
   center: false,
   responsive: {
     0: {
-      items: 3
+      items: 2
     },
     600: {
-      items: 3
+      items: 2
     },
     1000: {
-      items: 3
+      items: 2
     }
   }
 });
@@ -124,13 +124,13 @@ $('.owl_content_four').owlCarousel({
   center: false,
   responsive: {
     0: {
-      items: 3
+      items: 2
     },
     600: {
-      items: 3
+      items: 2
     },
     1000: {
-      items: 4
+      items: 2
     }
   }
 });
@@ -143,16 +143,16 @@ $('.owl_content_five').owlCarousel({
   autoplayTimeout: 3000,
   nav: false,
   dots: false,
-  center: true,
+  // center: true,
   responsive: {
     0: {
-      items: 3
+      items: 2
     },
     600: {
-      items: 3
+      items: 2
     },
     1000: {
-      items: 5
+      items: 2
     }
   }
 });
