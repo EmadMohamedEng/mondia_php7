@@ -60,7 +60,7 @@ select {
 }
 
 .border-bottom {
-  border-bottom: 2px solid #aa662073  !important;
+  border-bottom: 2px solid #aa662073 !important;
   width: 100%;
 }
 
@@ -292,7 +292,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          // height: 24.625rem;
+          height: 18.75rem;
 
           .owl_content_img {
             img {
@@ -328,7 +328,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          // height: 20.5rem;
+          height: 18.75rem;
 
           .owl_content_img {
             img {
@@ -364,7 +364,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          // height: 16rem;
+          height: 18.75rem;
 
           .owl_content_img {
             img {
@@ -436,7 +436,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          // height: 16rem;
+          height: 18.5rem;
 
           .owl_content_img {
             img {
@@ -1789,9 +1789,8 @@ select {
           margin-top: 0.75rem;
         }
 
-        .p_content,
-        .p_content_2 {
-          // margin-top:2.25rem;
+        .p_content {
+          font-size: 9px;
         }
       }
     }
@@ -2305,9 +2304,8 @@ select {
           margin-top: 0.75rem;
         }
 
-        .p_content,
-        .p_content_2 {
-          // margin-top:2.5rem;
+        .p_content {
+          font-size: 10px;
         }
       }
     }
@@ -2820,7 +2818,7 @@ select {
         .p_content,
         .p_content_2 {
           // margin-top:2.5rem;
-          font-size: 21px;
+          font-size: 11px;
         }
       }
     }
@@ -3374,7 +3372,7 @@ select {
         .p_content,
         .p_content_2 {
           // margin-top:2.5rem;
-          font-size: 20px;
+          font-size: 11px;
         }
       }
     }
@@ -4110,7 +4108,7 @@ select {
         .p_content_2 {
           // margin-top: 6rem;
           // margin-left: 0.75rem;
-          font-size: 30px;
+          font-size: 16px;
         }
       }
     }
@@ -4814,7 +4812,7 @@ select {
         .p_content_2 {
           // margin-top: 9rem;
           // margin-left: 1rem;
-          font-size: 35px;
+          font-size: 20px;
         }
       }
     }
