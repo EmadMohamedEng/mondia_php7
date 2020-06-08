@@ -94,17 +94,21 @@ $('.owl_content_three').owlCarousel({
   // loop: true,
   margin: 5,
   autoplay: false,
-  // autoplayTimeout: 3000,
+  autoplayTimeout: 3000,
   animateOut: 'fadeOut',
   nav: false,
   dots: false,
   center: false,
   responsive: {
     0: {
-      items: 2
+      items: 2,
+      loop:true,
+      autoplay: true,
     },
     600: {
-      items: 2
+      items: 2,
+      loop:true,
+      autoplay: true,
     },
     1000: {
       items: 3
