@@ -279,20 +279,20 @@ select {
 
     .owl_content_one {
       .item {
-        width: 65%;
-        margin: 0 auto;
-
         .card {
+          margin: 0 auto;
+          display: block;
+          width: 50%;
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 24.625rem;
+          height: 18rem;
 
           .owl_content_img {
             img {
-              height: 20rem;
+              height: 14rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -325,11 +325,11 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
+          height: 18rem;
 
           .owl_content_img {
             img {
-              height: 9.375rem;
+              height: 14rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -362,11 +362,11 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
+          height: 18rem;
 
           .owl_content_img {
             img {
-              height: 9.375rem;
+              height: 14rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -435,7 +435,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
+          height: 14.5rem;
 
           .owl_content_img {
             img {
@@ -1670,11 +1670,12 @@ select {
 
       .item {
         .card {
-          height: 13rem;
+          height: 14rem !important;
+          width: 100% !important;
 
           .owl_content_img {
             img {
-              height: 7.188rem;
+              height: 10rem !important;
             }
           }
 
@@ -2175,6 +2176,7 @@ select {
 
           .card {
             height: 15rem;
+            width: 100%;
 
             .owl_content_img {
               img {
@@ -2187,11 +2189,11 @@ select {
 
       .item {
         .card {
-          height: 13rem;
+          height: 17rem !important;
 
           .owl_content_img {
             img {
-              height: 7.188rem;
+              height: 12rem !important;
             }
           }
 
@@ -2677,11 +2679,12 @@ select {
           width: 100%;
 
           .card {
-            height: 16.5rem;
+            height: 16.5rem !important;
+            width: 100%;
 
             .owl_content_img {
               img {
-                height: 11.5rem;
+                height: 11.5rem !important;
               }
             }
           }
@@ -2690,11 +2693,11 @@ select {
 
       .item {
         .card {
-          height: 13rem;
+          height: 17rem !important;
 
           .owl_content_img {
             img {
-              height: 7.188rem;
+              height: 12rem !important;
             }
           }
 
@@ -3232,11 +3235,12 @@ select {
           width: 100%;
 
           .card {
-            height: 16.5rem;
+            height: 16.5rem !important;
+            width: 100%;
 
             .owl_content_img {
               img {
-                height: 11.5rem;
+                height: 11.5rem !important;
               }
             }
           }
@@ -3245,11 +3249,11 @@ select {
 
       .item {
         .card {
-          height: 13rem;
+          height: 14rem !important;
 
           .owl_content_img {
             img {
-              height: 7.188rem;
+              height: 9rem !important;
             }
           }
 
@@ -3810,18 +3814,12 @@ select {
       .owl_content_one {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            height: 23rem;
+            height: 25rem !important;
+            width: 100%;
 
             .owl_content_img {
               img {
-                height: 17rem;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                height: 19rem !important;
               }
             }
 
@@ -3847,18 +3845,11 @@ select {
       .owl_content_two {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            height: 16rem;
+            height: 19rem !important;
 
             .owl_content_img {
               img {
-                height: 9.375rem;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                height: 14rem !important;
               }
             }
 
@@ -3884,18 +3875,11 @@ select {
       .owl_content_three {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            height: 16rem;
+            height: 19rem !important;
 
             .owl_content_img {
               img {
-                height: 9.375rem;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                height: 14rem !important;
               }
             }
 
@@ -3921,18 +3905,11 @@ select {
       .owl_content_four {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
             height: 16rem;
 
             .owl_content_img {
               img {
                 height: 9.375rem;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
               }
             }
 
@@ -3958,18 +3935,11 @@ select {
       .owl_content_five {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            height: 16rem;
+            height: 17rem !important;
 
             .owl_content_img {
               img {
-                height: 9.375rem;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                height: 12rem !important;
               }
             }
 
@@ -4643,6 +4613,7 @@ select {
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
             height: 33rem;
+            width: 100%;
 
             .owl_content_img {
               img {
