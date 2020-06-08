@@ -256,13 +256,13 @@ select:active {
 .main_container .content_carousel .owl_content_one .item .card {
   margin: 0 auto;
   display: block;
-  text-align: center;
   width: 50%;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  height: 18.75rem;
 }
 .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
   height: 14rem;
@@ -285,6 +285,7 @@ select:active {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  height: 18.75rem;
 }
 .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
   height: 14rem;
@@ -307,6 +308,7 @@ select:active {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  height: 18.75rem;
 }
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
   height: 14rem;
@@ -351,6 +353,7 @@ select:active {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  height: 18.5rem;
 }
 .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
   height: 14rem;
@@ -1353,6 +1356,9 @@ select:active {
   .main_container .inner_page .section_content .pa_Videos {
     margin-top: 0.75rem;
   }
+  .main_container .inner_page .section_content .p_content {
+    font-size: 9px;
+  }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
   }
@@ -1688,6 +1694,9 @@ select:active {
   }
   .main_container .inner_page .section_content .pa_Videos {
     margin-top: 0.75rem;
+  }
+  .main_container .inner_page .section_content .p_content {
+    font-size: 10px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
@@ -2028,7 +2037,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    font-size: 21px;
+    font-size: 11px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
@@ -2397,7 +2406,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    font-size: 20px;
+    font-size: 11px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
@@ -2891,7 +2900,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    font-size: 30px;
+    font-size: 16px;
   }
   .main_container .modal_cover .modal-dialog {
     max-width: 90%;
@@ -3380,7 +3389,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    font-size: 35px;
+    font-size: 20px;
   }
   .main_container .modal_cover .modal-dialog {
     max-width: 90%;
