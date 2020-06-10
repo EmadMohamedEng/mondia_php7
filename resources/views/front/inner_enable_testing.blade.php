@@ -34,7 +34,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           @endif
           @if($content->type == 4)
           <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
-            <h4 style="{{$text}}">{!!$content->getTranslation('content_text',getCode())!!}</h4>
+            <h4>{!!$content->getTranslation('content_text',getCode())!!}</h4>
           </div>
           @endif
 
