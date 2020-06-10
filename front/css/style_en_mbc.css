@@ -1661,6 +1661,7 @@ select:active {
     margin-top: 0;
   }
   .main_container .inner_page .cover h4 {
+    color: #FFF;
     font-size: 1.35rem;
     padding: 0 0.35rem;
   }
