@@ -1283,7 +1283,7 @@ select:active {
     height: 10rem !important;
   }
   .main_container .content_carousel .item .card {
-    height: 13rem;
+    height: 13rem !important;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
     height: 7.75rem !important;
@@ -1622,7 +1622,7 @@ select:active {
     height: 10rem !important;
   }
   .main_container .content_carousel .item .card {
-    height: 15rem;
+    height: 15rem !important;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
     height: 10rem !important;
@@ -1956,7 +1956,7 @@ select:active {
     height: 11.5rem !important;
   }
   .main_container .content_carousel .item .card {
-    height: 15rem;
+    height: 15rem !important;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
     height: 9.5rem !important;
@@ -2325,7 +2325,7 @@ select:active {
     height: 11.5rem !important;
   }
   .main_container .content_carousel .item .card {
-    height: 14rem;
+    height: 14rem !important;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
     height: 9rem !important;
