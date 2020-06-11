@@ -205,6 +205,13 @@ $enable = get_setting('enable_testing');
                 </a>
                 <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
                   @foreach($provider->services as $value)
+
+                  <?php
+                  if($provider->id == 23 && $value->id == 40  && request()->get("OpID") == 12  ){// The Holy Quran and TIMWE
+                     continue ;
+                  }
+                  ?>
+
                   <a class="dropdown-item text-capitalize link_href" href="{{route('front.list',['service_id' => $value->id])}}">{{$value->getTranslation('title',getCode())}}</a>
                   @endforeach
                 </div>

@@ -293,10 +293,21 @@
                     if(count($item->services)  >= 5){
                       $owl = 'owl_content_five';
                     }
+
+                    if($item->id == 23  && request()->get("OpID") == 12  ){// The Holy Quran and TIMWE
+
+                      $owl = 'owl_content_one';
+                    }
+
                 @endphp
 
                 <div class="{{$owl}} owl-carousel owl-theme" dir="ltr">
                     @foreach ($item->services as $service)
+
+                    @if (request()->get("OpID") == 12 && $service->id == 40)
+                    <?php continue ; ?>
+
+                    @endif
                         <div class="item">
                             <div class="card ovf-hidden">
                                 <a class="owl_content_img view overlay link_href" href="{{route('front.list',['service_id' => $service->id])}}">
