@@ -635,6 +635,10 @@ select {
     .cover {
       position: relative;
 
+      h4 {
+        color: $white_color;
+      }
+
       video {
         padding: 0 2rem;
       }
@@ -2253,7 +2257,6 @@ select {
 
       .cover {
         h4 {
-          color: $white_color;
           font-size: 1.35rem;
           padding: 0 0.35rem;
         }
