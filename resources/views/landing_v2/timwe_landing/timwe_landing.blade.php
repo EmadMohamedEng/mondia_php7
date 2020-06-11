@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!--Mobile Meta-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mondia TimeWe landing page</title>
+  <title>Ooredoo Qatar landing page</title>
   <link rel="stylesheet" href='{{url('front/stc')}}/css/bootstrap.min.css'>
   <link rel="stylesheet" href='{{url('front/stc')}}/css/all.min.css'>
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
@@ -26,6 +26,7 @@
       <div class="shbka">
         <div class="container">
           <h3 class="text-dark">اشترك الان</h3>
+          <h3 class="text-dark">قيمة الاشتراك 10 ريال / الاسبوع    </h3>
           <div class="zain_viva">
             @if(Session::has('success'))
             <div class="alert alert-success alert-dismissible">
@@ -65,9 +66,9 @@
         </div>
       </div>
 
-      <ul class="terms text-right text-white" dir="rtl">
+      <ul class="terms text-right text-white" dir="rtl" style="font-size: 17px;color:#000 !important;font-weight:500">
         <li>تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 10 ريال فى الاسبوع</li>
-        <li>يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال SUB RF الى 92842</li>
+        <li>يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال UNSUB ISL  الى 92842</li>
         <li>يجب ان يكون عمرك 18 عاماً أو أكثر أو لديك الإذن من والديك أو الشخص المسؤول عن دفع فاتورتك حتى تستطيع الاشتراك هذه الخدمة</li>
       </ul>
 
