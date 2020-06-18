@@ -145,29 +145,31 @@
                 </div>
 
 
-                @if (request()->get("OpID") != 9)
+                @if (request()->get("OpID") == 9)
 
-                    <div class="item">
-                        <div class="card ovf-hidden">
-                            <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
-                                @if (request()->get("OpID") == 9)
-                                    <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/04.png')}}" alt="Card image cap">
-                                @elseif (request()->get("OpID") == mbc)
-                                    <img class="w-100" src="{{asset('front/images/mbc/04.png')}}" alt="Card image cap">
-                                @else
-                                    <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/04.png')}}" alt="Card image cap">
-                                @endif
-                                <a>
-                                    <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                                </a>
-                            </a>
+                @elseif(request()->get("OpID") == ooredoo)
+                  
+              @else
+                <div class="item">
+                  <div class="card ovf-hidden">
+                    <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
+                      @if (request()->get("OpID") == 9)
+                        <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/04.png')}}" alt="Card image cap">
+                      @elseif (request()->get("OpID") == mbc)
+                        <img class="w-100" src="{{asset('front/images/mbc/04.png')}}" alt="Card image cap">
+                      @else
+                        <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/04.png')}}" alt="Card image cap">
+                      @endif
+                      <a>
+                        <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                      </a>
+                    </a>
 
-                            <div class="card-body">
-                                <h4 class="card-title text-capitalize">@lang('front.merath')</h4>
-                            </div>
-                        </div>
+                    <div class="card-body">
+                      <h4 class="card-title text-capitalize">@lang('front.merath')</h4>
                     </div>
-
+                  </div>
+                </div>
                 @endif
 
                 <div class="item">
