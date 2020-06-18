@@ -25,8 +25,7 @@
 
             <div class="shbka">
                 <div class="container">
-                    <h3 class="">اشترك الان</h3>
-                    <h3 class="" style="font-size: 12px;">قيمة الاشتراك 10 ريال / الاسبوع</h3>
+                    <h3 class="">الغاء الاشتراك</h3>
                     <div class="zain_viva">
                         @if(Session::has('success'))
                         <div class="alert alert-success alert-dismissible">
@@ -56,7 +55,7 @@
                             <input type="hidden" name="prev_url"
                                 value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
                             <input type="tel" class="form-control" @if(session()->has('userIdentifier'))  @endif id="phone"
-                                placeholder="ادخل رقم تليفونك"
+                                placeholder="أدخل رقم هاتفك الجوال"
                                 oninvalid="setCustomValidity('يجب ان تدخل 8 ارقام')" name="number" required
                                 pattern="[0-9]{8}">
                             <span class="validity"></span>
