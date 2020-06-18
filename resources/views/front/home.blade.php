@@ -148,7 +148,7 @@
                 @if (request()->get("OpID") == 9)
 
                 @elseif(request()->get("OpID") == ooredoo)
-                  
+
               @else
                 <div class="item">
                   <div class="card ovf-hidden">
