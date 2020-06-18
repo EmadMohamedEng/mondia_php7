@@ -41,7 +41,7 @@
         <div class="field_result">
           <li class="field">
             <div class="field-value">
-              <label id="result"></label>
+              <label id="result" class="float-none"></label>
             </div>
           </li>
         </div>

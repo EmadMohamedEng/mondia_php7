@@ -31,7 +31,7 @@
             <div class="container pt-2">
                 <div class="form_content">
                     <!--<h5>ادخل رقم الهاتف</h5>-->
-                    {!! Form::open(['url'=>'subscription/confirm/'.partnerRoleId,'method'=>'post','class'=>'form mt-5']) !!}
+                    {!! Form::open(['url'=>'subscription/confirm/'.partnerRoleId,'method'=>'post','class'=>'form mt-3']) !!}
                     <div class="form-group">
                           <input style="width: 100% !important" type="tel" style="font-family: cursive" name="pincode" class="form-control" id="pincode" required pattern="[0-9]{4}">
                     </div>
@@ -48,9 +48,9 @@
       </div>
     </div>
 
-    <ul class="terms text-right text-white" dir="rtl" style="font-size: 17px;color:#000 !important;font-weight:500">
+    <ul class="terms text-right text-white" dir="rtl" style="font-size: 17px;color:#fff !important;font-weight:500">
       <li>تجديد الاشتراك سيكون تلقائي وفعال بتكلفة  10 ريال فى الاسبوع</li>
-      <li>يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال  UNSUB ISL الى 92842</li>
+      <li>يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال  Unsub ISL الى 92842</li>
       <li>يجب ان يكون عمرك 18 عاماً أو أكثر أو لديك الإذن من والديك أو الشخص المسؤول عن دفع فاتورتك حتى تستطيع الاشتراك هذه الخدمة</li>
     </ul>
 
