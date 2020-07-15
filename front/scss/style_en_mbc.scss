@@ -121,7 +121,7 @@ select {
   }
 
   .nav_nav {
-    background-color: $bg_color;
+    // background: transparent;
     width: 85%;
     margin-top: 1.5rem;
     margin-left: 1rem;
@@ -142,7 +142,7 @@ select {
         padding: 0.25rem 0.5rem;
 
         .nav-link {
-          color: $text_color;
+          color: $text_color !important;
           cursor: pointer;
 
           svg {
@@ -168,7 +168,7 @@ select {
           position: static;
           border: 0;
           min-width: 55%;
-          background-color: $bg_color2;
+          background-color: transparent;
 
 
           &.dropdown-menu2 {
