@@ -19,6 +19,10 @@
       width: 25%;
       margin: 0 auto;
     }
+
+    .copy {
+      left: 45%;
+    }
   }
 
   .main_container {
