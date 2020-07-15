@@ -11,8 +11,33 @@
   <link rel="stylesheet" href='{{url('front/stc')}}/css/bootstrap.min.css'>
   <link rel="stylesheet" href='{{url('front/stc')}}/css/all.min.css'>
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
-
 </head>
+
+<style>
+  @media (min-width: 1025px) {
+    .main_container {
+      width: 25%;
+      margin: 0 auto;
+    }
+  }
+
+  .main_container {
+    /* background: #f2f2f2;
+    background-image: unset !important;
+    background-size: unset !important;
+    background-position: unset !important;
+    background-repeat: unset !important;
+    background-attachment: unset !important;*/
+    position: unset !important;
+    overflow-y: hidden !important;
+  }
+
+  .landing_page .form_content form .btn,
+  .landing_page .form_content form .form-group label {
+    background-color: #ffffffa1;
+    color: #000;
+  }
+</style>
 
 <body>
   <div class="main_container">

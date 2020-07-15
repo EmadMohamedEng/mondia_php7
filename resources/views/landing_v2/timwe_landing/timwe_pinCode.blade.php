@@ -13,6 +13,20 @@
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
 </head>
 
+<style>
+  @media (min-width: 1025px) {
+    .main_container {
+      width: 25%;
+      margin: 0 auto;
+    }
+  }
+
+  .main_container {
+    position: unset !important;
+    overflow-y: hidden !important;
+  }
+</style>
+
 <body>
   <div class="main_container">
     <div class="landing_page">
@@ -45,12 +59,14 @@
       </div>
     </div>
 
-    <ul class="terms text-right text-white" dir="rtl" style="font-size: 17px;color:#fff !important;font-weight:500">
-      <li>تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 10 ريال فى الاسبوع</li>
-      <li>يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال Unsub ISL الى 92842</li>
-      <li>يجب ان يكون عمرك 18 عاماً أو أكثر أو لديك الإذن من والديك أو الشخص المسؤول عن دفع فاتورتك حتى تستطيع الاشتراك
-        هذه الخدمة</li>
-    </ul>
+    <div class="container">
+      <ul class="terms text-right text-white" dir="rtl" style="font-size: 17px;color:#fff !important;font-weight:500">
+        <li>تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 10 ريال فى الاسبوع</li>
+        <li>يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال Unsub ISL الى 92842</li>
+        <li>يجب ان يكون عمرك 18 عاماً أو أكثر أو لديك الإذن من والديك أو الشخص المسؤول عن دفع فاتورتك حتى تستطيع الاشتراك
+          هذه الخدمة</li>
+      </ul>
+    </div>
 
     <!-- copyright -->
     <div class="copy">
