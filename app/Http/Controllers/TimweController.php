@@ -454,7 +454,7 @@ class TimweController extends Controller
     {
 
         $check = $this->checkStatus($request->number);
-        
+
         if($check['subscriptionResult'] == 'GET_STATUS_OK'){
 
             $this->checksub('subscribe', '974' . $request->number, $check['timweId']);
@@ -602,9 +602,9 @@ class TimweController extends Controller
 
             $this->checksub('subscribe', session('userIdentifier') , $timewe->id);
             session(['MSISDN' => session('userIdentifier'),'status' => 'active' , 'ooredoo_op_id' => ooredoo]);
-            $sendMT = new Request();
-            $sendMT->msisdn = session('userIdentifier');
-            $sendMT->sms = url('/?OpID='.ooredoo);
+            // $sendMT = new Request();
+            // $sendMT->msisdn = session('userIdentifier');
+            // $sendMT->sms = url('/?OpID='.ooredoo);
             //send mt with link
             // $this->sendMt($sendMT); // should be fire after receive first charging success
 
@@ -781,7 +781,7 @@ class TimweController extends Controller
     public function checksub($state, $msisdn, $timeweId){
         if($state == 'subscribe'){
             $subscribe = timweSubscriber::where('msisdn', $msisdn)->where('serviceId', productId)->first();
-    
+
             if (empty($subscribe)) {
                 timweSubscriber::create([
                     'msisdn' => $msisdn,
