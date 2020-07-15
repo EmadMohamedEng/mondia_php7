@@ -13,6 +13,11 @@ use App\timweSubscriber;
 class TimweController extends Controller
 {
 
+    public function login()
+    {
+        return view('landing_v2.timwe_landing.timwe_login');
+    }
+
     public function index()
     {
         return view('landing_v2.timwe_landing.timwe_landing');
@@ -447,80 +452,86 @@ class TimweController extends Controller
 
     public function subscriptionOptIn(Request $request, $partnerRole)
     {
-        date_default_timezone_set('Asia/Qatar');
 
-        $partnerRoleId = $partnerRole;
+        $check = $this->checkStatus($request->number);
+        
+        if($check['subscriptionResult'] == 'GET_STATUS_OK'){
 
-        require_once('uuid/UUID.php');
-        $trxid = \UUID::v4();
+            $this->checksub('subscribe', '974' . $request->number, $check['timweId']);
 
-        $headers = array(
-            "Content-Type: application/json",
-            "apikey: ".apikeysubscription,
-            "authentication: ".$this->generateKey(presharedkeysubscription),
-            "external-tx-id: ".$trxid
-        );
-
-        $now = strtotime(now());
-        $sendDate = gmdate(DATE_W3C, $now);
-
-        $vars["userIdentifier"] = '974'.$request->number;
-        session()->put('userIdentifier', '974'.$request->number);
-        $vars["userIdentifierType"] = "MSISDN";
-        $vars["productId"] = productId;
-        $vars["mcc"] = "427";
-        $vars["mnc"] = "01";
-        $vars["entryChannel"] = "WEB";
-        $vars["largeAccount"] = largeAccount;
-        $vars["subKeyword"] = "";
-        // $vars["trackingId"] = "12637414527";
-        // $vars["clientIP"] = "127.0.0.1";
-        // $vars["campaignUrl"] = "";
-        // $vars["optionalParams"] = "";
-
-        $JSON = json_encode($vars);
-
-        $actionName = "Timwe Subscription OptIn";
-        $URL = url()->current();
-
-        $URL = "https://qao.timwe.com/external/v2/subscription/optin/".$partnerRoleId;
-        $ReqResponse = $this->SendRequest($URL, $JSON, $headers);
-        $ReqResponse = json_decode($ReqResponse, true);
-
-        //log request and response
-        $result = [];
-        $result['request'] = $vars;
-        $result['headers'] = $headers;
-        $result['response'] = $ReqResponse;
-        $result['date'] = date('Y-m-d H:i:s');
-
-        $this->log($actionName, $URL, $result);
-
-        $timewe = TimWe::create([
-          'api_request' => $URL,
-          'payload' => json_encode($vars),
-          'response' => json_encode($ReqResponse),
-          'header' => json_encode($headers),
-          'type'  =>$actionName
-        ]);
-
-        if($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_ALREADY_ACTIVE'){
-            $subscribe = timweSubscriber::where('msisdn', session('userIdentifier'))->where('serviceId', productId)->first();
-
-            if(empty($unsubscribe)){
-                timweSubscriber::create([
-                    'msisdn' => session('userIdentifier'),
-                    'serviceId' => productId,
-                    'requestId' => $timewe->id,
-                ]);
-            }
             session(['MSISDN' => session('userIdentifier'),'status' => 'active' , 'ooredoo_op_id' => ooredoo]);
             return redirect(url('/?OpID='.ooredoo)) ;
+
         }else{
-            if($ReqResponse['code'] == 'SUCCESS'){
-                return view('landing_v2.timwe_landing.timwe_pinCode');
+
+            date_default_timezone_set('Asia/Qatar');
+
+            $partnerRoleId = $partnerRole;
+
+            require_once('uuid/UUID.php');
+            $trxid = \UUID::v4();
+
+            $headers = array(
+                "Content-Type: application/json",
+                "apikey: ".apikeysubscription,
+                "authentication: ".$this->generateKey(presharedkeysubscription),
+                "external-tx-id: ".$trxid
+            );
+
+            $now = strtotime(now());
+            $sendDate = gmdate(DATE_W3C, $now);
+
+            $vars["userIdentifier"] = '974'.$request->number;
+            session()->put('userIdentifier', '974'.$request->number);
+            $vars["userIdentifierType"] = "MSISDN";
+            $vars["productId"] = productId;
+            $vars["mcc"] = "427";
+            $vars["mnc"] = "01";
+            $vars["entryChannel"] = "WEB";
+            $vars["largeAccount"] = largeAccount;
+            $vars["subKeyword"] = "";
+            // $vars["trackingId"] = "12637414527";
+            // $vars["clientIP"] = "127.0.0.1";
+            // $vars["campaignUrl"] = "";
+            // $vars["optionalParams"] = "";
+
+            $JSON = json_encode($vars);
+
+            $actionName = "Timwe Subscription OptIn";
+            $URL = url()->current();
+
+            $URL = "https://qao.timwe.com/external/v2/subscription/optin/".$partnerRoleId;
+            $ReqResponse = $this->SendRequest($URL, $JSON, $headers);
+            $ReqResponse = json_decode($ReqResponse, true);
+
+            //log request and response
+            $result = [];
+            $result['request'] = $vars;
+            $result['headers'] = $headers;
+            $result['response'] = $ReqResponse;
+            $result['date'] = date('Y-m-d H:i:s');
+
+            $this->log($actionName, $URL, $result);
+
+            $timewe = TimWe::create([
+            'api_request' => $URL,
+            'payload' => json_encode($vars),
+            'response' => json_encode($ReqResponse),
+            'header' => json_encode($headers),
+            'type'  =>$actionName
+            ]);
+
+            if($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_ALREADY_ACTIVE'){
+                $this->checksub('subscribe', '974' . $request->number, $timewe->id);
+
+                session(['MSISDN' => session('userIdentifier'),'status' => 'active' , 'ooredoo_op_id' => ooredoo]);
+                return redirect(url('/?OpID='.ooredoo)) ;
             }else{
-                return redirect('ooredoo_qatar_landing')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
+                if($ReqResponse['code'] == 'SUCCESS'){
+                    return view('landing_v2.timwe_landing.timwe_pinCode');
+                }else{
+                    return redirect('ooredoo_qatar_landing')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
+                }
             }
         }
     }
@@ -584,24 +595,20 @@ class TimweController extends Controller
         ]);
 
         if($ReqResponse['code'] == 'SUCCESS'){
+
+            if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_CONF_WRONG_PIN') {
+                return redirect('ooredoo_qatar_pin')->with('failed', 'رقم التحقق خاطئ يرجي المحاولة مرة اخري');
+            }
+
+            $this->checksub('subscribe', session('userIdentifier') , $timewe->id);
             session(['MSISDN' => session('userIdentifier'),'status' => 'active' , 'ooredoo_op_id' => ooredoo]);
             $sendMT = new Request();
             $sendMT->msisdn = session('userIdentifier');
             $sendMT->sms = url('/?OpID='.ooredoo);
-             //send mt with link
-           // $this->sendMt($sendMT); // should be fire after receive first charging success
-           $subscribe = timweSubscriber::where('msisdn', session('userIdentifier'))->where('serviceId', productId)->first();
+            //send mt with link
+            // $this->sendMt($sendMT); // should be fire after receive first charging success
 
-           if(empty($subscribe)){
-               timweSubscriber::create([
-                   'msisdn' => session('userIdentifier'),
-                   'serviceId' => productId,
-                   'requestId' => $timewe->id,
-               ]);
-           }
             return redirect(url('/?OpID='.ooredoo)) ;
-
-
         }else{
             return redirect('ooredoo_qatar_pin')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
         }
@@ -670,14 +677,8 @@ class TimweController extends Controller
 
         // dd($ReqResponse['responseData']['subscriptionResult']);
         if($ReqResponse['responseData']['subscriptionResult'] == 'OPTOUT_CANCELED_OK'){
-            $subscribe = timweSubscriber::where('msisdn', '974'.$request->number)->where('serviceId', productId)->first();
-            $subscribe->delete();
+            $this->checksub('unsubscribe', '974' . $request->number, $timewe->id);
 
-            timweUnsubscriber::create([
-                'msisdn' => '974'.$request->number,
-                'serviceId' => productId,
-                'requestId' => $timewe->id,
-            ]);
             return redirect('ooredoo_qatar_unsub')->with('success', 'تم الغاء الاشتراك بنجاح');
         }else{
             return redirect('ooredoo_qatar_unsub')->with('failed', 'هذا الرقم غير مشترك بالخدمة');
@@ -703,11 +704,108 @@ class TimweController extends Controller
         return $sOutput;
     }
 
+    public function checkStatus($number)
+    {
+        $partnerRoleId = partnerRoleId;
+
+        require_once 'uuid/UUID.php';
+        $trxid = \UUID::v4();
+
+        $headers = array(
+            "Content-Type: application/json",
+            "apikey: " . apikeysubscription,
+            "authentication: " . $this->generateKey(presharedkeysubscription),
+            "external-tx-id: " . $trxid,
+        );
+
+        $vars["userIdentifier"] = '974' . $number;
+        $vars["userIdentifierType"] = 'MSISDN';
+        $vars["productId"] = productId;
+        $vars["mcc"] = "427";
+        $vars["mnc"] = "01";
+        $vars["entryChannel"] = 'WEB';
+
+        $JSON = json_encode($vars);
+
+        $actionName = "Check Status";
+
+        $URL = "https://qao.timwe.com/external/v2/subscription/status/" . $partnerRoleId . "/";
+        $ReqResponse = $this->SendRequest($URL, $JSON, $headers);
+        $ReqResponse = json_decode($ReqResponse, true);
+
+        //log request and response
+        $result = [];
+        $result['request'] = $vars;
+        $result['headers'] = $headers;
+        $result['response'] = $ReqResponse;
+        $result['date'] = date('Y-m-d H:i:s');
+
+        $this->log($actionName, $URL, $result);
+
+        $timewe = TimWe::create([
+            'api_request' => $URL,
+            'payload' => json_encode($vars),
+            'response' => json_encode($ReqResponse),
+            'header' => json_encode($headers),
+            'type' => $actionName,
+        ]);
+
+        $response['subscriptionResult'] = $ReqResponse['responseData']['subscriptionResult'];
+        $response['timweId'] = $timewe->id;
+        return $response;
+    }
+
+    public function checkStatusLogin(Request $request){
+
+        $check = $this->checkStatus($request->number);
+
+        if($check['subscriptionResult'] == 'GET_STATUS_SUB_NOT_EXIST'){
+
+            return redirect('ooredoo_qatar_landing')->with('failed', 'انت غير مشترك حاليا, برجاء الاشتراك');
+
+        }elseif($check['subscriptionResult'] == 'GET_STATUS_OK'){
+
+            $this->checksub('subscribe', $request->number, $check['timweId']);
+
+            session(['MSISDN' => session('userIdentifier'),'status' => 'active' , 'ooredoo_op_id' => ooredoo]);
+
+            return redirect(url('/?OpID='.ooredoo)) ;
+
+        }else{
+            return redirect('ooredoo_qatar_login')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
+        }
+
+    }
+
+    public function checksub($state, $msisdn, $timeweId){
+        if($state == 'subscribe'){
+            $subscribe = timweSubscriber::where('msisdn', $msisdn)->where('serviceId', productId)->first();
+    
+            if (empty($subscribe)) {
+                timweSubscriber::create([
+                    'msisdn' => $msisdn,
+                    'serviceId' => productId,
+                    'requestId' => $timeweId,
+                ]);
+            }
+        }elseif($state == 'unsubscribe'){
+            $subscribe = timweSubscriber::where('msisdn', '974' . $msisdn)->where('serviceId', productId)->first();
+            $subscribe->delete();
+
+            timweUnsubscriber::create([
+                'msisdn' => '974' . $msisdn,
+                'serviceId' => productId,
+                'requestId' => $timeweId,
+            ]);
+        }
+        return 'success';
+    }
+
     public function logout(){
         session()->forget('userIdentifier');
         session()->forget('status');
         session()->forget('ooredoo_op_id');
 
-        return redirect('ooredoo_qatar_landing');
+        return redirect('ooredoo_qatar_login');
     }
 }

@@ -211,7 +211,7 @@ class FrontController extends Controller
           if($enable || (session()->get('ooredoo_op_id') == ooredoo && session()->get('status') == 'active' && session()->has('MSISDN'))){
             return view('front.inner_enable_testing', compact('content','contents'));
           }
-          return redirect('ooredoo_qatar_landing');
+          return redirect('ooredoo_qatar_login');
         }
 
         if($request->has('OpID') && $request->OpID == imi_op_id()){  // enable testing from backend
