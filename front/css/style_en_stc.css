@@ -365,6 +365,17 @@ select:active {
 .main_container .list_page {
   margin-top: 1.5rem;
 }
+.main_container .list_page .coming_soon {
+  color: #FFF;
+  background: #4f008c;
+  width: 20%;
+  cursor: not-allowed;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
 .main_container .list_page .content_carousel_head .link_title {
   color: #000;
 }

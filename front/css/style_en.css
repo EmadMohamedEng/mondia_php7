@@ -104,7 +104,7 @@ select:active {
 }
 .main_container .header .header_logo .link_href img,
 .main_container .header .header_icon .link_href img {
-  width: 4%;
+  width: 3%;
   margin-top: -0.5rem;
 }
 .main_container .header .header_logo .arrow_back,
@@ -367,6 +367,17 @@ select:active {
 }
 .main_container .list_page {
   margin-top: 1.5rem;
+}
+.main_container .list_page .coming_soon {
+  color: #FFF;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
+  width: 20%;
+  cursor: not-allowed;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 .main_container .list_page .content_carousel_head .link_title {
   color: #000;

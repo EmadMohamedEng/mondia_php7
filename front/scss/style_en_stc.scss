@@ -466,6 +466,18 @@ select {
   .list_page {
     margin-top: 1.5rem;
 
+    .coming_soon {
+      color: $white_color;
+      background: $bg_color2;
+      width: 20%;
+      cursor: not-allowed;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+    }
+
     .content_carousel_head {
       .link_title {
         color: $black_color;

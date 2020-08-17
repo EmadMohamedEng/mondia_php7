@@ -31,7 +31,7 @@
 
     <div class="row m-0 list_load">
       @if(!count($contents))
-      <div>
+      <div class="coming_soon text-center border-0 d-block m-auto p-2">
         @lang('front.coming_soon')
       </div>
       @else
