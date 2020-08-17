@@ -76,4 +76,5 @@ return [
     'sister_share' => "Sister's Share",
     'the_remain' => 'The Remaining',
     'Daleel Al Muslim' => 'Daleel Al Muslim',
+    'coming_soon' => 'Coming Soon...',
 ];

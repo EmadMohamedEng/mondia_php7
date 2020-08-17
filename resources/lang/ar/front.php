@@ -76,4 +76,5 @@ return [
     'sister_share' => "نصيب الاخوات",
     'the_remain' => 'المتبقية' ,
     'Daleel Al Muslim' => 'دليل المسلم',
+    'coming_soon' => 'لايوجد محتوى',
 ];
