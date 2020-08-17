@@ -1315,6 +1315,10 @@ select:active {
   .main_container .content_carousel .item .card .card-body .card-title {
     font-size: 1rem;
   }
+  .main_container .list_page .coming_soon {
+    width: 50%;
+    margin-top: 30% !important;
+  }
   .main_container .list_page .item .card {
     height: 14.5rem;
   }
@@ -1662,6 +1666,10 @@ select:active {
   .main_container .content_carousel .item .card .card-body .card-title {
     font-size: 1rem;
   }
+  .main_container .list_page .coming_soon {
+    width: 50%;
+    margin-top: 30% !important;
+  }
   .main_container .list_page .item .card {
     height: 16rem;
   }
@@ -2003,6 +2011,10 @@ select:active {
   }
   .main_container .content_carousel .item .card .card-body .card-title {
     font-size: 1rem;
+  }
+  .main_container .list_page .coming_soon {
+    width: 50%;
+    margin-top: 30% !important;
   }
   .main_container .list_page .item .card {
     height: 16.5rem;
@@ -2380,6 +2392,10 @@ select:active {
   }
   .main_container .content_carousel .item .card .card-body .card-title {
     font-size: 1.25rem;
+  }
+  .main_container .list_page .coming_soon {
+    width: 50%;
+    margin-top: 30% !important;
   }
   .main_container .list_page .item .card {
     height: 17.5rem;
@@ -2876,6 +2892,11 @@ select:active {
   .main_container .content_carousel .owl_content_five .item .card .card-body .card-text i {
     color: #adadad;
   }
+  .main_container .list_page .coming_soon {
+    width: 40%;
+    margin-top: 30% !important;
+    font-size: 1.5rem;
+  }
   .main_container .list_page .content_carousel_head .link_title h6 {
     font-size: 2rem;
     font-weight: bold;
@@ -3369,6 +3390,11 @@ select:active {
   }
   .main_container .list_page {
     margin: 3.5rem auto;
+  }
+  .main_container .list_page .coming_soon {
+    width: 40%;
+    margin-top: 30% !important;
+    font-size: 1.5rem;
   }
   .main_container .list_page .content_carousel_head .link_title h6 {
     font-size: 2.35rem;

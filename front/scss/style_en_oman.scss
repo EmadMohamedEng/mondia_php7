@@ -1669,6 +1669,11 @@ select {
     }
 
     .list_page {
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
+
       .item {
         .card {
           height: 14.5rem;
@@ -2188,6 +2193,11 @@ select {
     }
 
     .list_page {
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
+
       .item {
         .card {
           height: 16rem;
@@ -2712,6 +2722,11 @@ select {
             }
           }
         }
+      }
+
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
       }
     }
 
@@ -3252,6 +3267,11 @@ select {
     }
 
     .list_page {
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
+
       .item {
         .card {
           height: 17.5rem;
@@ -3952,6 +3972,12 @@ select {
     }
 
     .list_page {
+      .coming_soon {
+        width: 40%;
+        margin-top: 30% !important;
+        font-size: 1.5rem;
+      }
+
       .content_carousel_head {
         .link_title {
           h6 {
@@ -4648,6 +4674,12 @@ select {
 
     .list_page {
       margin: 3.5rem auto;
+
+      .coming_soon {
+        width: 40%;
+        margin-top: 30% !important;
+        font-size: 1.5rem;
+      }
 
       .content_carousel_head {
         .link_title {

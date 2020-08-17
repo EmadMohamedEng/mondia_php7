@@ -277,6 +277,7 @@ select {
       .item {
         width: 65%;
         margin: 0 auto;
+
         .card {
           border-radius: 10px;
           -webkit-border-radius: 10px;
@@ -1176,7 +1177,7 @@ select {
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
-}
+      }
 
       .btn-bar {
         button {
@@ -1637,6 +1638,7 @@ select {
 
           .card {
             height: 15rem;
+
             .owl_content_img {
               img {
                 height: 10rem;
@@ -1668,6 +1670,12 @@ select {
     }
 
     .list_page {
+
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
+
       .item {
         .card {
           height: 14.5rem;
@@ -1863,6 +1871,7 @@ select {
       #sebhaModal {
         .modal-dialog {
           position: relative;
+
           .modal-content {
             position: fixed;
             top: 57%;
@@ -2155,6 +2164,7 @@ select {
 
           .card {
             height: 15rem;
+
             .owl_content_img {
               img {
                 height: 10rem;
@@ -2186,6 +2196,11 @@ select {
     }
 
     .list_page {
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
+
       .item {
         .card {
           height: 16rem;
@@ -2661,6 +2676,7 @@ select {
 
           .card {
             height: 16.5rem;
+
             .owl_content_img {
               img {
                 height: 11.5rem;
@@ -2692,6 +2708,11 @@ select {
     }
 
     .list_page {
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
+
       .item {
         .card {
           height: 16rem;
@@ -3218,6 +3239,7 @@ select {
 
           .card {
             height: 16.5rem;
+
             .owl_content_img {
               img {
                 height: 11.5rem;
@@ -3249,6 +3271,11 @@ select {
     }
 
     .list_page {
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
+
       .item {
         .card {
           height: 17.5rem;
@@ -3976,6 +4003,12 @@ select {
     }
 
     .list_page {
+      .coming_soon {
+        width: 40%;
+        margin-top: 30% !important;
+        font-size: 1.5rem;
+      }
+
       .content_carousel_head {
         .link_title {
           h6 {
@@ -4195,6 +4228,7 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 4.5rem;
+
         .input_span {
           padding: 0 !important;
         }
@@ -4679,6 +4713,12 @@ select {
     .list_page {
       margin: 3.5rem auto;
 
+      .coming_soon {
+        width: 40%;
+        margin-top: 30% !important;
+        font-size: 1.5rem;
+      }
+
       .content_carousel_head {
         .link_title {
           h6 {
@@ -4903,6 +4943,7 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 5.5rem;
+
         .input_span {
           padding: 0 !important;
         }
@@ -5403,4 +5444,5 @@ select {
     transform: scale(1);
   }
 }
+
 /* End Animation */
