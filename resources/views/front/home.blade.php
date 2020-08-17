@@ -59,10 +59,6 @@
             </div>
         </section>
 
-
-
-
-
         <section class="content_carousel">
             <div class="content_carousel_head text-capitalize">
                 <div class="row m-0">
@@ -77,14 +73,12 @@
 
             <div class="owl_content owl_content_five owl-carousel owl-theme" dir="ltr">
                 <div class="item">
-                    <div class="card ovf-hidden">
-
+                    <div class="card card_muslim_guid ovf-hidden">
                         <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
-
                             @if (request()->get("OpID") == 9)
                                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/01.png')}}" alt="Card image cap">
                             @elseif (request()->get("OpID") == mbc)
-                                <img class="w-100" src="{{asset('front/images/mbc/01.png')}}" alt="Card image cap">
+                                <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/01.png')}}" alt="Card image cap">
                             @else
                                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/01.png')}}" alt="Card image cap">
                             @endif
@@ -101,13 +95,12 @@
                 </div>
 
                 <div class="item">
-                    <div class="card ovf-hidden">
-
+                    <div class="card card_muslim_guid ovf-hidden">
                         <a class="owl_content_img view overlay link_href" href="{{url('mosque')}}">
                             @if (request()->get("OpID") == 9)
                                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/02.png')}}" alt="Card image cap">
                             @elseif (request()->get("OpID") == mbc)
-                                <img class="w-100" src="{{asset('front/images/mbc/02.png')}}" alt="Card image cap">
+                                <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/02.png')}}" alt="Card image cap">
                             @else
                                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/02.png')}}" alt="Card image cap">
                             @endif
@@ -123,13 +116,12 @@
                 </div>
 
                 <div class="item">
-                    <div class="card ovf-hidden">
-
+                    <div class="card card_muslim_guid ovf-hidden">
                         <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
                             @if (request()->get("OpID") == 9)
                                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/07.png')}}" alt="Card image cap">
                             @elseif (request()->get("OpID") == mbc)
-                                <img class="w-100" src="{{asset('front/images/mbc/07.png')}}" alt="Card image cap">
+                                <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/07.png')}}" alt="Card image cap">
                             @else
                                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/07.png')}}" alt="Card image cap">
                             @endif
@@ -144,19 +136,18 @@
                     </div>
                 </div>
 
-
                 @if (request()->get("OpID") == 9)
 
                 @elseif(request()->get("OpID") == ooredoo)
 
               @else
                 <div class="item">
-                  <div class="card ovf-hidden">
+                  <div class="card card_muslim_guid ovf-hidden">
                     <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
                       @if (request()->get("OpID") == 9)
                         <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/04.png')}}" alt="Card image cap">
                       @elseif (request()->get("OpID") == mbc)
-                        <img class="w-100" src="{{asset('front/images/mbc/04.png')}}" alt="Card image cap">
+                        <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/04.png')}}" alt="Card image cap">
                       @else
                         <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/04.png')}}" alt="Card image cap">
                       @endif
@@ -173,12 +164,12 @@
                 @endif
 
                 <div class="item">
-                    <div class="card ovf-hidden">
+                    <div class="card card_muslim_guid ovf-hidden">
                         <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
                             @if (request()->get("OpID") == 9)
                                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/03.png')}}" alt="Card image cap">
                             @elseif (request()->get("OpID") == mbc)
-                                <img class="w-100" src="{{asset('front/images/mbc/03.png')}}" alt="Card image cap">
+                                <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/03.png')}}" alt="Card image cap">
                             @else
                                 <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/03.png')}}" alt="Card image cap">
                             @endif

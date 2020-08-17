@@ -1676,9 +1676,19 @@ select {
         .card {
           height: 13rem !important;
 
+          &.card_muslim_guid {
+            height: 10.625rem !important;
+          }
+
           .owl_content_img {
             img {
               height: 7.75rem !important;
+
+              &.img_muslim_guid {
+                height: 6rem !important;
+                width: 70% !important;
+                margin: 0 auto;
+              }
             }
           }
 
@@ -2191,9 +2201,19 @@ select {
         .card {
           height: 15rem !important;
 
+          &.card_muslim_guid {
+            height: 11.625rem !important;
+          }
+
           .owl_content_img {
             img {
               height: 10rem !important;
+
+              &.img_muslim_guid {
+                height: 7rem !important;
+                width: 75% !important;
+                margin: 0 auto;
+              }
             }
           }
 
@@ -2693,9 +2713,20 @@ select {
         .card {
           height: 15rem !important;
 
+          &.card_muslim_guid {
+            height: 10.625rem !important;
+          }
+
           .owl_content_img {
             img {
               height: 9.5rem !important;
+
+
+              &.img_muslim_guid {
+                height: 6rem !important;
+                width: 70% !important;
+                margin: 0 auto;
+              }
             }
           }
 
@@ -3247,9 +3278,19 @@ select {
         .card {
           height: 14rem !important;
 
+          &.card_muslim_guid {
+            height: 10.625rem !important;
+          }
+
           .owl_content_img {
             img {
               height: 9rem !important;
+
+              &.img_muslim_guid {
+                height: 6rem !important;
+                width: 70% !important;
+                margin: 0 auto;
+              }
             }
           }
 
@@ -3670,6 +3711,7 @@ select {
 
         img {
           width: 9% !important;
+          margin-top: 0.75rem !important;
         }
 
         &.header_icon {
@@ -3958,11 +4000,22 @@ select {
             -o-border-radius: 10px;
             height: 16rem;
 
+            &.card_muslim_guid {
+              height: 11.625rem !important;
+            }
+
             .owl_content_img {
               img {
                 height: 9.375rem;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
+
+
+                &.img_muslim_guid {
+                  height: 7rem !important;
+                  width: 50% !important;
+                  margin: 0 auto;
+                }
               }
             }
 
@@ -4491,6 +4544,7 @@ select {
 
         img {
           width: 8% !important;
+          margin-top: 0.75rem !important;
         }
 
         &.header_icon {
@@ -4665,9 +4719,19 @@ select {
         .card {
           height: 27.188rem;
 
+          &.card_muslim_guid {
+            height: 11.625rem !important;
+          }
+
           .owl_content_img {
             img {
               height: 20.938rem;
+
+              &.img_muslim_guid {
+                height: 7rem !important;
+                width: 75% !important;
+                margin: 0 auto;
+              }
             }
           }
 
