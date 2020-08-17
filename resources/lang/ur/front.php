@@ -76,4 +76,5 @@ return [
     'sister_share' => "بہن کا حصہ",
     'the_remain' => 'بقایہ',
     'Daleel Al Muslim' => 'Daleel Al Muslim',
+    'coming_soon' => 'Coming Soon...',
 ];

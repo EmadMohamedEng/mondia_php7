@@ -30,6 +30,11 @@
     </div>
 
     <div class="row m-0 list_load">
+      @if(!count($contents))
+      <div>
+        @lang('front.coming_soon')
+      </div>
+      @else
         @foreach ($contents as $item)
         <div class="col-md-4 col-lg-4 col-xl-2 col-6 p-0">
             <div class="item">
@@ -60,6 +65,7 @@
             </div>
         </div>
         @endforeach
+      @endif
     </div>
   </section>
 </div>
