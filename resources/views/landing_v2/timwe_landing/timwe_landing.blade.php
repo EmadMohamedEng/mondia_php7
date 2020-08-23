@@ -72,7 +72,7 @@
               <span class="validity"></span>
             </div>
 
-            <h3 style="color:#fff;font-size:25px;">قيمة الاشتراك 10 ريال / الاسبوع </h3>
+            <h3 style="color:#fff;font-size:25px;font-weight:bold">قيمة الاشتراك 10 ريال / الاسبوع </h3>
             <button id="zain_submit" class="btn" type="submit" style="width: 100%">اشترك</button>
           </form>
           <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
