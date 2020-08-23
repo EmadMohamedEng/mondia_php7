@@ -40,8 +40,6 @@
         <h3>ادخل كود التفعيل</h3>
       </div>
 
-      <h2 style="color: aliceblue;font-size:25px;text-align:center;margin-top:5px;">قيمة الاشتراك 10 ريال / الاسبوع
-      </h2>
 
       <div class="container pt-2">
         <div class="form_content">
@@ -50,7 +48,10 @@
           <div class="form-group">
             <input style="width: 100% !important" type="tel" style="font-family: cursive" name="pincode" class="form-control text-center" id="pincode" placeholder="أدخل رمز التأكيد" required pattern="[0-9]{4}">
           </div>
-          <button class="btn" type="submit">تاكيد</button>
+          <h2 style="color: aliceblue;font-size:25px;text-align:center;margin-top:5px;">قيمة الاشتراك 10 ريال / الاسبوع
+          </h2>
+
+          <button class="btn" type="submit" style="width: 100%">تاكيد</button>
           {!! Form::close() !!}
         </div>
       </div>

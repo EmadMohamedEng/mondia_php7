@@ -40,7 +40,7 @@
       <div class="shbka">
         <div class="container">
           <h3 class="text-dark">اشترك الان</h3>
-          <h3 class="text-dark">قيمة الاشتراك 10 ريال / الاسبوع </h3>
+
           <div class="zain_viva">
             @if(Session::has('success'))
             <div class="alert alert-success alert-dismissible">
@@ -72,8 +72,8 @@
               <span class="validity"></span>
             </div>
 
-            <!--<button class="btn back">رجوع</button>-->
-            <button id="zain_submit" class="btn" type="submit">اشترك</button>
+            <h3 style="color:#fff;font-size:25px;">قيمة الاشتراك 10 ريال / الاسبوع </h3>
+            <button id="zain_submit" class="btn" type="submit" style="width: 100%">اشترك</button>
           </form>
           <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
                 <h5>الى <span>965</span><span> STOP1 </span>لالغاء الاشتراك ارسل</h5>-->
