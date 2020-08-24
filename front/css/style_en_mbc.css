@@ -436,6 +436,9 @@ select:active {
   color: #efc049;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main_container .list_page .item .card .card-body .card-title {
   text-align: center;
@@ -1348,7 +1351,7 @@ select:active {
     margin-top: 30% !important;
   }
   .main_container .list_page .item .card {
-    height: 14.5rem;
+    height: 15.313rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 9.875rem;
@@ -1699,7 +1702,7 @@ select:active {
     margin-top: 30% !important;
   }
   .main_container .list_page .item .card {
-    height: 16rem;
+    height: 15.313rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 11.25rem;
@@ -2045,7 +2048,7 @@ select:active {
     margin-top: 30% !important;
   }
   .main_container .list_page .item .card {
-    height: 16.5rem;
+    height: 15.313rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 11.6rem;
@@ -2426,7 +2429,7 @@ select:active {
     margin-top: 30% !important;
   }
   .main_container .list_page .item .card {
-    height: 17.5rem;
+    height: 15.5rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 12.719rem;
@@ -2826,7 +2829,7 @@ select:active {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    height: 16rem;
+    height: 14rem;
   }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
     height: 9.375rem;
@@ -2844,12 +2847,7 @@ select:active {
     color: #adadad;
   }
   .main_container .content_carousel .owl_content_three .item .card {
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    height: 16rem;
+    height: 14rem;
   }
   .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
     height: 9.375rem;
@@ -2895,7 +2893,7 @@ select:active {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    height: 16rem;
+    height: 14rem;
   }
   .main_container .content_carousel .owl_content_five .item .card.card_muslim_guid {
     height: 11.625rem !important;
@@ -2930,7 +2928,7 @@ select:active {
     font-weight: bold;
   }
   .main_container .list_page .item .card {
-    height: 23.5rem;
+    height: 20.063rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 17.625rem;
@@ -3429,7 +3427,7 @@ select:active {
     font-weight: bold;
   }
   .main_container .list_page .item .card {
-    height: 28.75rem;
+    height: 20.813rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 21.25rem;

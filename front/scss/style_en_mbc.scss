@@ -542,9 +542,12 @@ select {
         .card-body {
           padding: 1.25rem 0.25rem;
           background-color: $bg_color2;
-            color: $text_color;
-            border-bottom-right-radius: 10px;
-            border-bottom-left-radius: 10px;
+          color: $text_color;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           .card-title {
             text-align: center;
@@ -1754,7 +1757,7 @@ select {
 
       .item {
         .card {
-          height: 14.5rem;
+          height: 15.313rem;
 
           .owl_content_img {
             img {
@@ -2284,7 +2287,7 @@ select {
 
       .item {
         .card {
-          height: 16rem;
+          height: 15.313rem;
 
           .owl_content_img {
             img {
@@ -2802,7 +2805,7 @@ select {
 
       .item {
         .card {
-          height: 16.5rem;
+          height: 15.313rem;
 
           .owl_content_img {
             img {
@@ -3371,7 +3374,7 @@ select {
 
       .item {
         .card {
-          height: 17.5rem;
+          height: 15.5rem;
 
           .owl_content_img {
             img {
@@ -3953,7 +3956,7 @@ select {
             -moz-border-radius: 10px;
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
-            height: 16rem;
+            height: 14rem;
 
             .owl_content_img {
               img {
@@ -3984,12 +3987,7 @@ select {
       .owl_content_three {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            height: 16rem;
+            height: 14rem;
 
             .owl_content_img {
               img {
@@ -4061,7 +4059,7 @@ select {
             -moz-border-radius: 10px;
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
-            height: 16rem;
+            height: 14rem;
 
             &.card_muslim_guid {
               height: 11.625rem !important;
@@ -4119,7 +4117,7 @@ select {
 
       .item {
         .card {
-          height: 23.5rem;
+          height: 20.063rem;
 
           .owl_content_img {
             img {
@@ -4835,7 +4833,7 @@ select {
 
       .item {
         .card {
-          height: 28.75rem;
+          height: 20.813rem;
 
           .owl_content_img {
             img {

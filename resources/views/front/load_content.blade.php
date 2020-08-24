@@ -20,9 +20,12 @@
             </a>
         </a>
         {{--  @if($item->service_id != 33)  --}}
+
+        <a class="owl_content_img view overlay link_href" href="{{route('front.inner',['id' => $item->id])}}">
         <div class="card-body">
             <h4 class="card-title text-capitalize">{{$item->getTranslation('title',getCode())}}</h4>
         </div>
+        </a>
         {{--  @endif  --}}
         </div>
     </div>
