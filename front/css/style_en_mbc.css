@@ -278,6 +278,10 @@ select:active {
 .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 .main_container .content_carousel .owl_content_one .item .card .card-body .card-text i {
   color: #adadad;
@@ -305,6 +309,10 @@ select:active {
 .main_container .content_carousel .owl_content_two .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 .main_container .content_carousel .owl_content_two .item .card .card-body .card-text i {
   color: #adadad;
@@ -332,6 +340,10 @@ select:active {
 .main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 .main_container .content_carousel .owl_content_three .item .card .card-body .card-text i {
   color: #adadad;
@@ -358,6 +370,10 @@ select:active {
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-text i {
   color: #adadad;
@@ -385,6 +401,10 @@ select:active {
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-text i {
   color: #adadad;
@@ -439,6 +459,10 @@ select:active {
 .main_container .list_page .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 .main_container .list_page .item .card .card-body .card-text i {
   color: #adadad;
@@ -1323,7 +1347,7 @@ select:active {
     height: 10rem !important;
   }
   .main_container .content_carousel .item .card {
-    height: 13rem !important;
+    height: 12.375rem !important;
   }
   .main_container .content_carousel .item .card.card_muslim_guid {
     height: 10.625rem !important;
@@ -2020,7 +2044,7 @@ select:active {
     height: 11.5rem !important;
   }
   .main_container .content_carousel .item .card {
-    height: 15rem !important;
+    height: 14.125rem !important;
   }
   .main_container .content_carousel .item .card.card_muslim_guid {
     height: 10.625rem !important;
@@ -2401,7 +2425,7 @@ select:active {
     height: 11.5rem !important;
   }
   .main_container .content_carousel .item .card {
-    height: 14rem !important;
+    height: 13.625rem !important;
   }
   .main_container .content_carousel .item .card.card_muslim_guid {
     height: 10.625rem !important;
@@ -3391,7 +3415,7 @@ select:active {
     color: #adadad;
   }
   .main_container .content_carousel .item .card {
-    height: 27.188rem;
+    height: 18.063rem !important;
   }
   .main_container .content_carousel .item .card.card_muslim_guid {
     height: 11.625rem !important;

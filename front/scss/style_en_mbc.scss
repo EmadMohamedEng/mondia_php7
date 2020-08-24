@@ -312,6 +312,10 @@ select {
             .card-title {
               text-align: center;
               font-size: 1.05rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -352,6 +356,10 @@ select {
             .card-title {
               text-align: center;
               font-size: 1.05rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -392,6 +400,10 @@ select {
             .card-title {
               text-align: center;
               font-size: 1.05rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -432,6 +444,10 @@ select {
             .card-title {
               text-align: center;
               font-size: 1.05rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -469,9 +485,14 @@ select {
             border-bottom-right-radius: 10px;
             border-bottom-left-radius: 10px;
 
+
             .card-title {
               text-align: center;
               font-size: 1.05rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -545,6 +566,10 @@ select {
           .card-title {
             text-align: center;
             font-size: 1.05rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            direction: ltr;
           }
 
           .card-text {
@@ -1713,7 +1738,7 @@ select {
 
       .item {
         .card {
-          height: 13rem !important;
+          height: 12.375rem !important;
 
           &.card_muslim_guid {
             height: 10.625rem !important;
@@ -2760,7 +2785,7 @@ select {
 
       .item {
         .card {
-          height: 15rem !important;
+          height: 14.125rem !important;
 
           &.card_muslim_guid {
             height: 10.625rem !important;
@@ -3330,7 +3355,7 @@ select {
 
       .item {
         .card {
-          height: 14rem !important;
+          height: 13.625rem !important;
 
           &.card_muslim_guid {
             height: 10.625rem !important;
@@ -4777,7 +4802,7 @@ select {
 
       .item {
         .card {
-          height: 27.188rem;
+          height: 18.063rem !important;
 
           &.card_muslim_guid {
             height: 11.625rem !important;
