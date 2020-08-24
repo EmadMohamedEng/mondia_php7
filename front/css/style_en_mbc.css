@@ -370,10 +370,6 @@ select:active {
   -o-border-radius: 10px;
   height: 18.5rem;
 }
-.main_container .content_carousel .owl_content_five .item .card.card_muslim_guid .card-body {
-  background-color: #FFF;
-  color: #0f1218;
-}
 .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
   height: 14rem;
   border-top-left-radius: 10px;
