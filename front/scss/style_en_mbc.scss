@@ -292,7 +292,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 18.75rem;
+          height: 18.625rem;
 
           .owl_content_img {
             img {
@@ -304,6 +304,10 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
+            background-color: $bg_color2;
+            color: $text_color;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
 
             .card-title {
               text-align: center;
@@ -340,6 +344,10 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
+            background-color: $bg_color2;
+            color: $text_color;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
 
             .card-title {
               text-align: center;
@@ -376,6 +384,10 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
+            background-color: $bg_color2;
+            color: $text_color;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
 
             .card-title {
               text-align: center;
@@ -412,6 +424,10 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
+            background-color: $bg_color2;
+            color: $text_color;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
 
             .card-title {
               text-align: center;
@@ -448,6 +464,10 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
+            background-color: $bg_color2;
+            color: $text_color;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
 
             .card-title {
               text-align: center;
@@ -1672,7 +1692,7 @@ select {
           width: 100%;
 
           .card {
-            height: 15rem;
+            height: 14.625rem !important;
             width: 100%;
 
             .owl_content_img {
@@ -2216,7 +2236,7 @@ select {
 
       .item {
         .card {
-          height: 15rem !important;
+          height: 14.625rem !important;
 
           &.card_muslim_guid {
             height: 11.625rem !important;
@@ -2719,7 +2739,7 @@ select {
           width: 100%;
 
           .card {
-            height: 16.5rem;
+            height: 16.125rem !important;
             width: 100%;
 
             .owl_content_img {
@@ -3289,7 +3309,7 @@ select {
           width: 100%;
 
           .card {
-            height: 16.5rem;
+            height: 16.125rem !important;
             width: 100%;
 
             .owl_content_img {
@@ -3886,7 +3906,7 @@ select {
             -moz-border-radius: 10px;
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
-            height: 23rem;
+            height: 22.625rem;
 
             .owl_content_img {
               img {
@@ -4725,7 +4745,7 @@ select {
             -moz-border-radius: 10px;
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
-            height: 33rem;
+            height: 32.063rem;
 
             .owl_content_img {
               img {
