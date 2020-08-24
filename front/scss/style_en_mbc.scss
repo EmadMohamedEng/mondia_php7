@@ -454,6 +454,13 @@ select {
           -o-border-radius: 10px;
           height: 18.5rem;
 
+          &.card_muslim_guid {
+            .card-body {
+              background-color: $white_color;
+              color: $bg_color2;
+            }
+          }
+
           .owl_content_img {
             img {
               height: 14rem;
@@ -534,6 +541,10 @@ select {
 
         .card-body {
           padding: 1.25rem 0.25rem;
+          background-color: $bg_color2;
+            color: $text_color;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
 
           .card-title {
             text-align: center;

@@ -17,8 +17,6 @@
             </div>
         @endif
 
-
-
         @if(session()->has('unsub_fail') && session()->get('unsub_fail') != '')
             <div class="alert alert-danger" role="alert">
                 @lang('front.unsub_fail')
