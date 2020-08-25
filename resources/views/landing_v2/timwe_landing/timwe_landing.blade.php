@@ -19,6 +19,7 @@
     .main_container {
       width: 25%;
       margin: 0 auto;
+      position: unset;
     }
   }
 
