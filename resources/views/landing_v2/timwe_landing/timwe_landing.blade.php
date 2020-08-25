@@ -23,18 +23,18 @@
   }
 
   .main_container {
-    position: unset !important;
-    overflow-y: hidden !important;
+    /* position: unset !important;
+    overflow-y: hidden !important; */
   }
 </style>
 
 <body>
-  <div class="main_container">
+  <div class="main_container ">
     <div class="landing_page">
 
       <div class="strip text-dark">
         <h4>استمتع بوقتك مع خدمه</h4>
-        <h2>دليل مسلم</h2>
+        <h2>دليل المسلم</h2>
       </div>
 
       <div class="shbka">
@@ -72,7 +72,7 @@
               <span class="validity"></span>
             </div>
 
-            <h3 style="color:#fff;font-size:25px;font-weight:bold">قيمة الاشتراك 10 ريال / الاسبوع </h3>
+            <h3 class="text-white font-weight-bold mb-3" style="font-size:20px">قيمة الاشتراك 10 ريال / الاسبوع </h3>
             <button id="zain_submit" class="btn" type="submit" style="width: 100%">اشترك</button>
           </form>
           <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
@@ -81,14 +81,14 @@
       </div>
 
       <div class="container">
-        <ul class="terms text-right text-white" dir="rtl" style="font-size: 17px;color:#fff !important;font-weight:500">
+        <ul class="terms text-right text-white font-weight-bold" dir="rtl">
           <li>تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 10 ريال فى الاسبوع</li>
           <li>يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال Unsub ISL الى 92842</li>
           <li>يجب ان يكون عمرك 18 عاماً أو أكثر أو لديك الإذن من والديك أو الشخص المسؤول عن دفع فاتورتك حتى تستطيع الاشتراك هذه الخدمة</li>
         </ul>
       </div>
 
-      <div class="cancel text-center mt-3 text-dark">
+      <div class="cancel text-center mt-3 text-white">
         <p>لالغاء الاشتراك يرجي الضغط علي هذا <a href="{{url('ooredoo_qatar_unsub' )}}">الرابط</a></p>
       </div>
 
