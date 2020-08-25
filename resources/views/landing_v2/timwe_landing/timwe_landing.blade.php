@@ -22,16 +22,21 @@
     }
   }
 
-  .main_container {
-    /* position: unset !important;
-    overflow-y: hidden !important; */
-  }
+  /* .main_container {
+    position: unset !important;
+    overflow-y: hidden !important;
+  } */
 </style>
 
 <body>
   <div class="main_container ">
-    <div class="landing_page">
+    <input type="checkbox" id="on-off" name="on-off" class="switch-input">
+    <label for="on-off" class="switch-label">
+      <span class="toggle--on toggle--option">EN</span>
+      <span class="toggle--off toggle--option">AR</span>
+    </label>
 
+    <div class="landing_page">
       <div class="strip text-dark">
         <h4>استمتع بوقتك مع خدمه</h4>
         <h2>دليل المسلم</h2>

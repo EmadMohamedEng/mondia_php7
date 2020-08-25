@@ -25,10 +25,10 @@
     }
   }
 
-  .main_container {
+  /* .main_container {
     position: unset !important;
     overflow-y: hidden !important;
-  }
+  } */
 </style>
 
 <body>
@@ -36,7 +36,7 @@
     <div class="landing_page">
       <div class="strip text-dark">
         <h4>استمتع بوقتك مع خدمه</h4>
-        <h2>دليل مسلم</h2>
+        <h2>دليل المسلم</h2>
         <h3>ادخل كود التفعيل</h3>
       </div>
 
@@ -48,7 +48,7 @@
           <div class="form-group">
             <input style="width: 100% !important" type="tel" style="font-family: cursive" name="pincode" class="form-control text-center" id="pincode" placeholder="أدخل رمز التأكيد" required pattern="[0-9]{4}">
           </div>
-          <h2 style="color: aliceblue;font-size:25px;text-align:center;margin-top:5px;font-weight:bold">قيمة الاشتراك 10 ريال / الاسبوع
+          <h2 class="text-white font-weight-bold mb-3" style="font-size:20px">قيمة الاشتراك 10 ريال / الاسبوع
           </h2>
 
           <button class="btn" type="submit" style="width: 100%">تاكيد</button>
@@ -65,7 +65,7 @@
     </div>
 
     <div class="container">
-      <ul class="terms text-right text-white" dir="rtl" style="font-size: 17px;color:#fff !important;font-weight:500">
+      <ul class="terms text-right text-white font-weight-bold" dir="rtl">
         <li>تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 10 ريال فى الاسبوع</li>
         <li>يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال Unsub ISL الى 92842</li>
         <li>يجب ان يكون عمرك 18 عاماً أو أكثر أو لديك الإذن من والديك أو الشخص المسؤول عن دفع فاتورتك حتى تستطيع الاشتراك
