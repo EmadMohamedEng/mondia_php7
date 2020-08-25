@@ -137,9 +137,11 @@ body {
 
 .landing_page .form_content form .form-group label {
   background: linear-gradient(135deg, rgba(243, 226, 199, 1) 0%, rgba(193, 158, 103, 1) 50%, rgba(182, 141, 76, 1) 51%, rgba(233, 212, 179, 1) 100%);
-  color: #fff;
+  color: #000;
   padding: 6px;
   margin-bottom: 0;
+  border-bottom-left-radius: .25rem;
+  border-top-left-radius: .25rem;
 }
 
 .landing_page .form_content form .form-group label span {
@@ -149,6 +151,13 @@ body {
 .landing_page .form_content form .form-group input {
   width: 70%;
   font-family: serif;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.landing_page .form_content form .form-group input:focus {
+  box-shadow: 0 0 0 0.2rem rgb(206 175 127);
+  border-color: #000;
 }
 
 .landing_page .form_content form .btn {

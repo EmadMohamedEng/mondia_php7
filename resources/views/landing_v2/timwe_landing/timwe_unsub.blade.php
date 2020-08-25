@@ -22,9 +22,13 @@
     }
   }
 
-  .main_container {
+  /* .main_container {
     position: unset !important;
     overflow-y: hidden !important;
+  } */
+
+  .landing_page .form_content form .btn {
+    width: 85%;
   }
 </style>
 

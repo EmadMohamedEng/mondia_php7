@@ -26,6 +26,10 @@
     position: unset !important;
     overflow-y: hidden !important;
   } */
+
+  .main_container .landing_page  {
+    margin-top: 0;
+  }
 </style>
 
 <body>
