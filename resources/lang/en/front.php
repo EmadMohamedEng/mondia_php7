@@ -11,7 +11,7 @@ return [
     'azan' => 'Azan',
     'merath' => 'Inheritance account',
     'mosque' => 'nearest mosque',
-    'sebha' => 'Electronic rosary',
+    'sebha' => 'E Tasbeeh',
     'prayer' => 'Prayer Time',
     'zakah' => 'Zakat Calculate',
     'call_tone' => 'Call Tone',
