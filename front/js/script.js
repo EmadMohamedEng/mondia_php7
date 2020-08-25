@@ -141,9 +141,9 @@ $('.owl_content_four').owlCarousel({
 
 $('.owl_content_five').owlCarousel({
   rtl: true,
-  loop: true,
+  loop: false,
   margin: 5,
-  autoplay: true,
+  autoplay: false,
   autoplayTimeout: 3000,
   nav: false,
   dots: false,
