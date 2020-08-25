@@ -22,19 +22,24 @@
     }
   }
 
-  .main_container {
+  /* .main_container {
     position: unset !important;
     overflow-y: hidden !important;
-  }
+  } */
 </style>
 @php
 App::setLocale($lang);
 @endphp
 
 <body>
-  <div class="main_container">
-    <div class="landing_page">
+  <div class="main_container ">
+    <input type="checkbox" id="on-off" name="on-off" class="switch-input">
+    <label for="on-off" class="switch-label">
+      <span class="toggle--on toggle--option">EN</span>
+      <span class="toggle--off toggle--option">AR</span>
+    </label>
 
+    <div class="landing_page">
       <div class="strip text-dark">
         <h4>@lang('messages.enjoy_time')</h4>
         <h2>@lang('messages.Muslim_guide')</h2>
@@ -50,6 +55,7 @@ App::setLocale($lang);
         @else
           <a href="{{url('ooredoo_qatar_landing/ar')}}" class="btn btn-primary" style="margin: 10px;">AR</a>
         @endif
+
           <div class="zain_viva">
             @if(Session::has('success'))
             <div class="alert alert-success alert-dismissible">
@@ -81,7 +87,7 @@ App::setLocale($lang);
               <span class="validity"></span>
             </div>
 
-            <h3 style="color:#fff;font-size:25px;font-weight:bold">@lang('messages.subscription_Riyals') </h3>
+<h3 class="text-white font-weight-bold mb-3" style="font-size:20px">@lang('messages.subscription_Riyals') </h3>
             <button id="zain_submit" class="btn" type="submit" style="width: 100%"> @lang('messages.Subsc') </button>
           </form>
           <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
@@ -90,14 +96,14 @@ App::setLocale($lang);
       </div>
 
       <div class="container">
-        <ul class="terms text-right text-white" dir="rtl" style="font-size: 17px;color:#fff !important;font-weight:500">
+<ul class="terms text-right text-white font-weight-bold" dir="rtl">
           <li> @lang('messages.Subscription_renewal')</li>
           <li> @lang('messages.stop_service')</li>
           <li> @lang('messages.years_service')</li>
         </ul>
       </div>
 
-      <div class="cancel text-center mt-3 text-dark">
+      <div class="cancel text-center mt-3 text-white">
         <p>@lang('messages.unsubscribe') <a href="{{url('ooredoo_qatar_unsub' )}}">@lang('messages.Link')</a></p>
       </div>
 
