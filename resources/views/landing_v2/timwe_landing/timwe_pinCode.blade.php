@@ -30,14 +30,30 @@
     overflow-y: hidden !important;
   }
 </style>
+@php
+App::setLocale($lang);
+@endphp
 
 <body>
   <div class="main_container">
     <div class="landing_page">
       <div class="strip text-dark">
-        <h4>استمتع بوقتك مع خدمه</h4>
-        <h2>دليل مسلم</h2>
-        <h3>ادخل كود التفعيل</h3>
+        <h4>@lang('messages.enjoy_time')</h4>
+        <h2>@lang('messages.Muslim_guide')</h2>
+        <h3>@lang('messages.activation_code')</h3>
+        <div class="zain_viva">
+        @if(Session::has('success'))
+        <div class="alert alert-success alert-dismissible">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          {{ Session::get('success')}}
+        </div>
+        @elseif(Session::has('failed'))
+        <div class="alert alert-danger alert-dismissible">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          {{ Session::get('failed')}}
+        </div>
+        @endif
+      </div>
       </div>
 
 
@@ -46,19 +62,20 @@
           <!--<h5>ادخل رقم الهاتف</h5>-->
           {!! Form::open(['url'=>'subscription/confirm/'.partnerRoleId,'method'=>'post','class'=>'form mt-3']) !!}
           <div class="form-group">
-            <input style="width: 100% !important" type="tel" style="font-family: cursive" name="pincode" class="form-control text-center" id="pincode" placeholder="أدخل رمز التأكيد" required pattern="[0-9]{4}">
+            <input style="width: 100% !important" type="tel" style="font-family: cursive" name="pincode" class="form-control text-center" id="pincode" placeholder="@lang('messages.confirmation_code')" required pattern="[0-9]{4}">
           </div>
-          <h2 style="color: aliceblue;font-size:25px;text-align:center;margin-top:5px;font-weight:bold">قيمة الاشتراك 10 ريال / الاسبوع
+          <h2 style="color: aliceblue;font-size:25px;text-align:center;margin-top:5px;font-weight:bold">
+            @lang('messages.subscription_Riyals')
           </h2>
 
-          <button class="btn" type="submit" style="width: 100%">تاكيد</button>
+          <button class="btn" type="submit" style="width: 100%">@lang('messages.confirmation')</button>
           {!! Form::close() !!}
         </div>
       </div>
       <div class="cancel text-center">
         {!! Form::open(['url'=>'subscription/optin/'.partnerRoleId,'method'=>'post','class'=>'form']) !!}
         <div class="form-group">
-          <input type="submit" value=" اضغط لارسال رمز التاكيد مرة اخري">
+          <input type="submit" value="@lang('messages.click_confirmation')">
         </div>
         {!! Form::close() !!}
       </div>
@@ -66,10 +83,9 @@
 
     <div class="container">
       <ul class="terms text-right text-white" dir="rtl" style="font-size: 17px;color:#fff !important;font-weight:500">
-        <li>تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 10 ريال فى الاسبوع</li>
-        <li>يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال Unsub ISL الى 92842</li>
-        <li>يجب ان يكون عمرك 18 عاماً أو أكثر أو لديك الإذن من والديك أو الشخص المسؤول عن دفع فاتورتك حتى تستطيع الاشتراك
-          هذه الخدمة</li>
+        <li> @lang('messages.Subscription_renewal')</li>
+        <li> @lang('messages.stop_service')</li>
+        <li> @lang('messages.years_service')</li>
       </ul>
     </div>
 

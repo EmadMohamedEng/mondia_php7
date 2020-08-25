@@ -27,19 +27,21 @@
     overflow-y: hidden !important;
   }
 </style>
-
+@php
+App::setLocale($lang);
+@endphp
 <body>
   <div class="main_container">
     <div class="landing_page">
 
       <div class="strip text-dark">
-        <h4>استمتع بوقتك مع خدمه</h4>
-        <h2>دليل مسلم</h2>
+      <h4>@lang('messages.enjoy_time')</h4>
+        <h2>@lang('messages.Muslim_guide')</h2>
       </div>
 
       <div class="shbka">
         <div class="container">
-          <h3 class="">الغاء الاشتراك</h3>
+          <h3 class="">@lang('messages.unsubscribe')</h3>
           <div class="zain_viva">
             @if(Session::has('success'))
             <div class="alert alert-success alert-dismissible">
@@ -68,14 +70,14 @@
               <label for="phone"><span>974</span></label>
               <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
               <input type="tel" class="form-control" @if(session()->has('userIdentifier')) @endif id="phone"
-              placeholder="أدخل رقم هاتفك الجوال"
+              placeholder="@lang('messages.Enter_your')"
               oninvalid="setCustomValidity('يجب ان تدخل 8 ارقام')" name="number" required
               pattern="[0-9]{8}">
               <span class="validity"></span>
             </div>
 
             <!--<button class="btn back">رجوع</button>-->
-            <button id="zain_submit" class="btn" type="submit">الغاء الاشتراك</button>
+            <button id="zain_submit" class="btn" type="submit">@lang('messages.unsubscribe')</button>
           </form>
           <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
                 <h5>الى <span>965</span><span> STOP1 </span>لالغاء الاشتراك ارسل</h5>-->

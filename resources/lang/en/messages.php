@@ -26,6 +26,23 @@ return [
     'edit' => 'Edit',
     'save' => 'Save',
     'cancel' => 'Cancel',
+    'enjoy_time' => 'Enjoy your time with the service',
+    'Muslim_guide' => 'Muslim guide',
+    'Subscribe_Now' => 'Subscribe Now',
+    'Enter_your' => 'Enter your mobile phone number',
+    'subscription_Riyals' => 'The Subscription 10 Riyals / Week',
+    'Subsc' => 'Subscribe',
+    'Subscription_renewal' => 'Subscription renewal will be automatic and effective at a cost of 10 riyals per week',
+    'stop_service' => 'You can stop this service at any time by sending Unsub ISL to 92842',
+    'years_service' => 'You must be 18 years of age or over or have permission from your parents or the person responsible for paying your bill in order to be able to subscribe to this service',
+    'unsubscribe' => 'To unsubscribe, please click on this',
+    'Link' => 'Link',
+    'activation_code' => 'Enter the activation code',
+    'confirmation_code' => 'Enter the confirmation code',
+    'confirmation' => 'Confirmation',
+    'unsubscribe' => 'Unsubscribe',
+    'click_confirmation' => 'Click to send the confirmation code again',
+
     'roles' => [
         'edit-role' => 'Edit Role',
         'role-name' => 'Role name',
@@ -66,7 +83,7 @@ return [
         'fatch_dlr' => 'Fatch Dlr',
         'count' => 'Count',
         'subscribed' => 'subscribed',
-        
+
     ],
     'repeat' => [
         'daily' => 'daily',
@@ -176,10 +193,10 @@ return [
         'quota-error' => 'user quota can not be greater then or equal to message sent',
         'updated' => 'updated successfuly',
         'no_selected_item' => 'No items selected',
-        'deleted' => 'Deleted Successfully' 
+        'deleted' => 'Deleted Successfully'
     ],
      'notification' => 'Notifications' ,
-    
+
       'reports' => 'Reports' ,
       'direct-message' => 'Direct Message' ,
       'template' => [
