@@ -28,17 +28,27 @@
     overflow-y: hidden !important;
   } */
 
-  .main_container .landing_page  {
+  .main_container .landing_page {
     margin-top: 0;
   }
 </style>
 @php
 App::setLocale($lang);
 @endphp
-
+<?php
+if ($lang == 'ar') {
+    $text = "text-align: right";
+    $float = "float: right;";
+    $left = "left: 51%";
+} else {
+    $text = "text-align: left";
+    $float = "float: left;";
+    $left = "left: 41%";
+}
+?>
 <body>
   <div class="main_container ">
-    <input type="checkbox" id="on-off" name="on-off" class="switch-input">
+    <input type="checkbox" id="on-off" name="on-off" onclick="toggle_lang()" class="switch-input" {{ $lang == 'ar' ? 'checked' : '' }}>
     <label for="on-off" class="switch-label">
       <span class="toggle--on toggle--option">EN</span>
       <span class="toggle--off toggle--option">AR</span>
@@ -53,13 +63,6 @@ App::setLocale($lang);
       <div class="shbka">
         <div class="container">
           <h3 class="text-dark">@lang('messages.Subscribe_Now')</h3>
-
-
-          @if ($lang == 'ar')
-          <a href="{{url('ooredoo_qatar_landing/en')}}" class="btn btn-primary" style="margin: 10px;">EN</a>
-        @else
-          <a href="{{url('ooredoo_qatar_landing/ar')}}" class="btn btn-primary" style="margin: 10px;">AR</a>
-        @endif
 
           <div class="zain_viva">
             @if(Session::has('success'))
@@ -92,7 +95,7 @@ App::setLocale($lang);
               <span class="validity"></span>
             </div>
 
-<h3 class="text-white font-weight-bold mb-3" style="font-size:20px">@lang('messages.subscription_Riyals') </h3>
+            <h3 class="text-white font-weight-bold mb-3" style="font-size:20px">@lang('messages.subscription_Riyals') </h3>
             <button id="zain_submit" class="btn" type="submit" style="width: 100%"> @lang('messages.Subsc') </button>
           </form>
           <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
@@ -101,7 +104,7 @@ App::setLocale($lang);
       </div>
 
       <div class="container">
-<ul class="terms text-right text-white font-weight-bold" dir="rtl">
+        <ul class="terms text-right text-white font-weight-bold" dir="rtl">
           <li> @lang('messages.Subscription_renewal')</li>
           <li> @lang('messages.stop_service')</li>
           <li> @lang('messages.years_service')</li>
@@ -109,7 +112,7 @@ App::setLocale($lang);
       </div>
 
       <div class="cancel text-center mt-3 text-white">
-        <p>@lang('messages.unsubscribe') <a href="{{url('ooredoo_qatar_unsub' )}}">@lang('messages.Link')</a></p>
+        <p>@lang('messages.unsubscribelink') <a href="{{url('ooredoo_qatar_unsub' )}}">@lang('messages.Link')</a></p>
       </div>
 
     </div>
@@ -134,6 +137,19 @@ App::setLocale($lang);
     $('#zain_submit').focusin(function() {
       $('#viva_form').submit()
     });
+
+    function toggle_lang() {
+      const checkbox = document.getElementById("on-off");
+      checkbox.addEventListener('change', (event) => {
+        if (event.target.checked) {
+          location.href = "{{url('ooredoo_qatar_landing/ar')}}";
+        } else {
+          location.href = "{{url('ooredoo_qatar_landing/en')}}";
+        }
+      })
+
+
+    }
   </script>
 
 </body>

@@ -35,7 +35,7 @@ return [
     'Subscription_renewal' => 'Subscription renewal will be automatic and effective at a cost of 10 riyals per week',
     'stop_service' => 'You can stop this service at any time by sending Unsub ISL to 92842',
     'years_service' => 'You must be 18 years of age or over or have permission from your parents or the person responsible for paying your bill in order to be able to subscribe to this service',
-    'unsubscribe' => 'To unsubscribe, please click on this',
+    'unsubscribelink' => 'To unsubscribe, please click on this',
     'Link' => 'Link',
     'activation_code' => 'Enter the activation code',
     'confirmation_code' => 'Enter the confirmation code',
