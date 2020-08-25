@@ -460,12 +460,13 @@ class TimweController extends Controller
 
   public function subscriptionOptIn(Request $request, $partnerRole)
   {
+    $msisdn = $request->number ?? session('pinMsisdn');
 
-    $check = $this->checkStatus($request->number);
-
+    $check = $this->checkStatus($msisdn);
+    //dd($check);
+    //dd(['MSISDN' => session('userIdentifier')]);
     if ($check['subscriptionResult'] == 'GET_STATUS_OK') {
-
-      $this->checksub('subscribe', '974' . $request->number, $check['timweId']);
+      $this->checksub('subscribe', '974' . $msisdn, $check['timweId']);
 
       session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
       return redirect(url('/?OpID=' . ooredoo));
@@ -488,8 +489,9 @@ class TimweController extends Controller
       $now = strtotime(now());
       $sendDate = gmdate(DATE_W3C, $now);
 
-      $vars["userIdentifier"] = '974' . $request->number;
-      session()->put('userIdentifier', '974' . $request->number);
+      $vars["userIdentifier"] = '974' . $msisdn;
+      session()->put('userIdentifier', '974' . $msisdn);
+      session()->put('pinMsisdn',  $msisdn);
       $vars["userIdentifierType"] = "MSISDN";
       $vars["productId"] = productId;
       $vars["mcc"] = "427";
@@ -527,9 +529,9 @@ class TimweController extends Controller
         'header' => json_encode($headers),
         'type'  => $actionName
       ]);
-
+      //dd($ReqResponse);
       if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_ALREADY_ACTIVE') {
-        $this->checksub('subscribe', '974' . $request->number, $timewe->id);
+        $this->checksub('subscribe', '974' . $msisdn, $timewe->id);
 
         session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
         return redirect(url('/?OpID=' . ooredoo));

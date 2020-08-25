@@ -39,9 +39,9 @@ return [
     'Link' => 'Link',
     'activation_code' => 'Enter the activation code',
     'confirmation_code' => 'Enter the confirmation code',
-    'confirmation' => 'Confirmation',
+    'confirmation' => 'Confirm',
     'unsubscribe' => 'Unsubscribe',
-    'click_confirmation' => 'Click to send the confirmation code again',
+    'click_confirmation' => 'Click to send the confirm code again',
 
     'roles' => [
         'edit-role' => 'Edit Role',

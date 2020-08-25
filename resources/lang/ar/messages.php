@@ -25,7 +25,7 @@ return [
     'save' => 'حفظ',
     'cancel' => 'ألغاء',
     'enjoy_time' => 'استمتع بوقتك مع خدمه',
-    'Muslim_guide' => 'دليل مسلم',
+    'Muslim_guide' => 'دليل المسلم',
     'Subscribe_Now' => 'اشترك الان',
     'Enter_your' => 'أدخل رقم هاتفك الجوال',
     'subscription_Riyals' => 'قيمة الاشتراك 10 ريال / الاسبوع',
