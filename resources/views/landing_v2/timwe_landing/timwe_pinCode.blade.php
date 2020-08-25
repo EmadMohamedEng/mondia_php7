@@ -35,6 +35,20 @@
 App::setLocale($lang);
 @endphp
 
+<?php
+if ($lang == 'ar') {
+  $text = "text-right";
+  $left = "rtl";
+  $bottom = "bottom: 0%;";
+  $font = "font-size: 20px;";
+} else {
+  $text = "text-left";
+  $left = "ltr";
+  $bottom = "bottom: -10%;";
+  $font = "font-size: 16px;";
+}
+?>
+
 <body>
   <div class="main_container">
     <div class="landing_page">
@@ -43,18 +57,18 @@ App::setLocale($lang);
         <h2>@lang('messages.Muslim_guide')</h2>
         <h3>@lang('messages.activation_code')</h3>
         <div class="zain_viva">
-        @if(Session::has('success'))
-        <div class="alert alert-success alert-dismissible">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          {{ Session::get('success')}}
+          @if(Session::has('success'))
+          <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            {{ Session::get('success')}}
+          </div>
+          @elseif(Session::has('failed'))
+          <div class="alert alert-danger alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            {{ Session::get('failed')}}
+          </div>
+          @endif
         </div>
-        @elseif(Session::has('failed'))
-        <div class="alert alert-danger alert-dismissible">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          {{ Session::get('failed')}}
-        </div>
-        @endif
-      </div>
       </div>
 
 
@@ -65,7 +79,7 @@ App::setLocale($lang);
           <div class="form-group">
             <input style="width: 100% !important" type="tel" style="font-family: cursive" name="pincode" class="form-control text-center" id="pincode" placeholder="@lang('messages.confirmation_code')" required pattern="[0-9]{4}">
           </div>
-<h2 class="text-white font-weight-bold mb-3" style="font-size:20px">
+          <h2 class="text-white font-weight-bold mb-3" style="{{$font}}">
             @lang('messages.subscription_Riyals')
           </h2>
 
@@ -83,7 +97,7 @@ App::setLocale($lang);
     </div>
 
     <div class="container">
-<ul class="terms text-right text-white font-weight-bold" dir="rtl">
+      <ul class="terms {{$text}} text-white" dir="{{$left}}">
         <li> @lang('messages.Subscription_renewal')</li>
         <li> @lang('messages.stop_service')</li>
         <li> @lang('messages.years_service')</li>
@@ -91,7 +105,7 @@ App::setLocale($lang);
     </div>
 
     <!-- copyright -->
-    <div class="copy">
+<div class="copy" style="{{$bottom}}">
       <p>copyright @ <span>{{date('Y')}}</span> Digizone, all rights reserved.</p>
     </div>
     <!-- copyright -->

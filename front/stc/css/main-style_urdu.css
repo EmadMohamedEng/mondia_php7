@@ -174,6 +174,17 @@ body {
 
 .landing_page .cancel {
   padding: 20px 8px 0 8px;
+  font-size: 0.75rem;
+}
+
+.alert.alert-danger {
+  padding: .75rem .5rem;
+  padding-right: 1rem;
+  font-size: 0.8rem;
+}
+
+.alert.alert-danger .close {
+  top: -11%;
 }
 
 /*----------------------------------------- confirm page -----------------------------------------*/
@@ -274,44 +285,6 @@ body {
 .terms li {
   margin-bottom: 0.75rem;
 }
-
-.main_container {
-  -webkit-animation: kenburns-bottom 4s ease-in-out alternate-reverse both;
-  animation: kenburns-bottom 4s ease-in-out alternate-reverse both;
-}
-
-@-webkit-keyframes kenburns-bottom {
-  0% {
-    -webkit-transform: scale(1) translateY(0);
-    transform: scale(1) translateY(0);
-    -webkit-transform-origin: 50% 84%;
-    transform-origin: 50% 84%;
-  }
-
-  100% {
-    -webkit-transform: scale(1.25) translateY(15px);
-    transform: scale(1.25) translateY(15px);
-    -webkit-transform-origin: bottom;
-    transform-origin: bottom;
-  }
-}
-
-@keyframes kenburns-bottom {
-  0% {
-    -webkit-transform: scale(1) translateY(0);
-    transform: scale(1) translateY(0);
-    -webkit-transform-origin: 50% 84%;
-    transform-origin: 50% 84%;
-  }
-
-  100% {
-    -webkit-transform: scale(1.25) translateY(15px);
-    transform: scale(1.25) translateY(15px);
-    -webkit-transform-origin: bottom;
-    transform-origin: bottom;
-  }
-}
-
 
 /*  */
 

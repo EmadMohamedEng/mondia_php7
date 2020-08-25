@@ -29,7 +29,7 @@ return [
     'enjoy_time' => 'Enjoy your time with the service',
     'Muslim_guide' => 'Muslim guide',
     'Subscribe_Now' => 'Subscribe Now',
-    'Enter_your' => 'Enter your mobile phone number',
+    'Enter_your' => 'Enter your mobile phone',
     'subscription_Riyals' => 'The Subscription 10 Riyals / Week',
     'Subsc' => 'Subscribe',
     'Subscription_renewal' => 'Subscription renewal will be automatic and effective at a cost of 10 riyals per week',

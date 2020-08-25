@@ -37,13 +37,15 @@ App::setLocale($lang);
 @endphp
 <?php
 if ($lang == 'ar') {
-    $text = "text-align: right";
-    $float = "float: right;";
-    $left = "left: 51%";
+    $text = "text-right";
+    $left = "rtl";
+    $bottom = "bottom: 0%;";
+    $font = "font-size: 20px;";
 } else {
-    $text = "text-align: left";
-    $float = "float: left;";
-    $left = "left: 41%";
+    $text = "text-left";
+    $left = "ltr";
+
+    $font = "font-size: 16px;";
 }
 ?>
 <body>
@@ -95,7 +97,7 @@ if ($lang == 'ar') {
               <span class="validity"></span>
             </div>
 
-            <h3 class="text-white font-weight-bold mb-3" style="font-size:20px">@lang('messages.subscription_Riyals') </h3>
+            <h3 class="text-white font-weight-bold mb-3" style="{{$font}}">@lang('messages.subscription_Riyals') </h3>
             <button id="zain_submit" class="btn" type="submit" style="width: 100%"> @lang('messages.Subsc') </button>
           </form>
           <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
@@ -104,7 +106,7 @@ if ($lang == 'ar') {
       </div>
 
       <div class="container">
-        <ul class="terms text-right text-white font-weight-bold" dir="rtl">
+        <ul class="terms {{$text}} text-white" dir="{{$left}}">
           <li> @lang('messages.Subscription_renewal')</li>
           <li> @lang('messages.stop_service')</li>
           <li> @lang('messages.years_service')</li>
