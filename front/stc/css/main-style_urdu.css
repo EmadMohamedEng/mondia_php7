@@ -142,6 +142,7 @@ body {
   margin-bottom: 0;
   border-bottom-left-radius: .25rem;
   border-top-left-radius: .25rem;
+  font-weight: bold;
 }
 
 .landing_page .form_content form .form-group label span {
