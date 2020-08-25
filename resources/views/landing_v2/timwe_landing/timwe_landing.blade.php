@@ -19,6 +19,7 @@
     .main_container {
       width: 25%;
       margin: 0 auto;
+      position: unset;
     }
   }
 
@@ -26,6 +27,10 @@
     position: unset !important;
     overflow-y: hidden !important;
   } */
+
+  .main_container .landing_page  {
+    margin-top: 0;
+  }
 </style>
 @php
 App::setLocale($lang);
