@@ -538,7 +538,12 @@ class TimweController extends Controller
       } else {
         if ($ReqResponse['code'] == 'SUCCESS') {
           $lang =  session::get('lang');
-          return view('landing_v2.timwe_landing.timwe_pinCode', compact('lang'));
+          if ($request->has('prev_url'))
+            return redirect('ooredoo_qatar_pin');
+          if ($lang == 'ar')
+            return redirect('ooredoo_qatar_pin')->with('success', '!تم ارسال رمز التحقق');
+
+          return redirect('ooredoo_qatar_pin')->with('success', 'Pincode Sent!');
         } else {
           $lang =  session::get('lang');
           if ($lang == "ar") {
