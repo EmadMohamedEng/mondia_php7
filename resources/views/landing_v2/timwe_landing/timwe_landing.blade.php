@@ -149,8 +149,6 @@ if ($lang == 'ar') {
           location.href = "{{url('ooredoo_qatar_landing/en')}}";
         }
       })
-
-
     }
   </script>
 

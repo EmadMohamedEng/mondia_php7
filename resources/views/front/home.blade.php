@@ -68,7 +68,6 @@ $menu = provider_menu();
       </div>
     </div>
 
-
     <div class="owl_content owl_content_five owl-carousel owl-theme" dir="ltr">
       <div class="item">
         <div class="card card_muslim_guid ovf-hidden">
@@ -76,7 +75,7 @@ $menu = provider_menu();
             @if (request()->get("OpID") == 9)
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/01.png')}}" alt="Card image cap">
             @elseif (request()->get("OpID") == mbc)
-            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/01.png')}}" alt="Card image cap">
+            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/01.png')}}" alt="Card image cap">
             @else
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/01.png')}}" alt="Card image cap">
             @endif
@@ -100,7 +99,7 @@ $menu = provider_menu();
             @if (request()->get("OpID") == 9)
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/02.png')}}" alt="Card image cap">
             @elseif (request()->get("OpID") == mbc)
-            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/02.png')}}" alt="Card image cap">
+            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/02.png')}}" alt="Card image cap">
             @else
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/02.png')}}" alt="Card image cap">
             @endif
@@ -123,7 +122,7 @@ $menu = provider_menu();
             @if (request()->get("OpID") == 9)
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/07.png')}}" alt="Card image cap">
             @elseif (request()->get("OpID") == mbc)
-            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/07.png')}}" alt="Card image cap">
+            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/07.png')}}" alt="Card image cap">
             @else
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/07.png')}}" alt="Card image cap">
             @endif
@@ -151,7 +150,7 @@ $menu = provider_menu();
             @if (request()->get("OpID") == 9)
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/04.png')}}" alt="Card image cap">
             @elseif (request()->get("OpID") == mbc)
-            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/04.png')}}" alt="Card image cap">
+            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/04.png')}}" alt="Card image cap">
             @else
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/04.png')}}" alt="Card image cap">
             @endif
@@ -175,7 +174,7 @@ $menu = provider_menu();
             @if (request()->get("OpID") == 9)
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/03.png')}}" alt="Card image cap">
             @elseif (request()->get("OpID") == mbc)
-            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/03.png')}}" alt="Card image cap">
+            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/03.png')}}" alt="Card image cap">
             @else
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/03.png')}}" alt="Card image cap">
             @endif
@@ -199,13 +198,13 @@ $menu = provider_menu();
   <section class="content_carousel">
     <div class="content_carousel_head text-capitalize">
       <div class="row m-0">
-        <div class="col-6 p-0 padding_phones">
+        <div class="col-8 p-0 padding_phones">
           <a class="link_title link_href" href="{{route('front.service',['provider_id' => $item->id])}}">
             <h6 class="">{{$item->getTranslation('title',getCode())}}</h6>
           </a>
         </div>
 
-        <div class="col-6 padding_phones">
+        <div class="col-4 padding_phones">
           <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
         </div>
       </div>
@@ -258,19 +257,17 @@ $menu = provider_menu();
   </section>
   @endforeach
 
-
-
   @foreach ($menu->slice($count,count($menu)) as $item)
   <section class="content_carousel">
     <div class="content_carousel_head text-capitalize">
       <div class="row m-0">
-        <div class="col-6 p-0 padding_phones">
+        <div class="col-8 p-0 padding_phones">
           <a class="link_title link_href" href="{{route('front.service',['provider_id' => $item->id])}}">
             <h6 class="">{{$item->getTranslation('title',getCode())}}</h6>
           </a>
         </div>
 
-        <div class="col-6 padding_phones">
+        <div class="col-4 padding_phones">
           <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href">@lang('front.more')</a>
         </div>
       </div>

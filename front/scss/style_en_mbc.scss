@@ -284,6 +284,8 @@ select {
     .owl_content_one {
       .item {
         .card {
+          background: #0f1218;
+          border: 1px solid $text_color;
           margin: 0 auto;
           display: block;
           width: 50%;
@@ -331,6 +333,8 @@ select {
     .owl_content_two {
       .item {
         .card {
+          background: #0f1218;
+          border: 1px solid $text_color;
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
@@ -375,6 +379,8 @@ select {
     .owl_content_three {
       .item {
         .card {
+          background: #0f1218;
+          border: 1px solid $text_color;
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
@@ -419,6 +425,8 @@ select {
     .owl_content_four {
       .item {
         .card {
+          background: #0f1218;
+          border: 1px solid $text_color;
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
@@ -463,6 +471,8 @@ select {
     .owl_content_five {
       .item {
         .card {
+          background: #0f1218;
+          border: 1px solid $text_color;
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
@@ -538,6 +548,7 @@ select {
       margin-bottom: 1rem;
 
       .card {
+        border: 1px solid $text_color;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
