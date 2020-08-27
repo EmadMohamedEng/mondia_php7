@@ -252,7 +252,6 @@ select:active {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  height: 18rem;
 }
 .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
   height: 14rem;
@@ -261,10 +260,15 @@ select:active {
 }
 .main_container .content_carousel .owl_content_one .item .card .card-body {
   padding: 1.25rem 0.25rem;
+  color: #000;
 }
 .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 .main_container .content_carousel .owl_content_one .item .card .card-body .card-text i {
   color: #adadad;
@@ -275,7 +279,6 @@ select:active {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  height: 18rem;
 }
 .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
   height: 14rem;
@@ -288,6 +291,7 @@ select:active {
 .main_container .content_carousel .owl_content_two .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
+  color: #000;
 }
 .main_container .content_carousel .owl_content_two .item .card .card-body .card-text i {
   color: #adadad;
@@ -311,6 +315,7 @@ select:active {
 .main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
+  color: #000;
 }
 .main_container .content_carousel .owl_content_three .item .card .card-body .card-text i {
   color: #adadad;
@@ -334,6 +339,7 @@ select:active {
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
+  color: #000;
 }
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-text i {
   color: #adadad;
@@ -357,6 +363,7 @@ select:active {
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
+  color: #000;
 }
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-text i {
   color: #adadad;
@@ -404,6 +411,7 @@ select:active {
 .main_container .list_page .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
+  color: #000;
 }
 .main_container .list_page .item .card .card-body .card-text i {
   color: #adadad;
