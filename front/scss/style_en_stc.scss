@@ -284,7 +284,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 24.625rem;
+          // height: 24.625rem;
 
           .owl_content_img {
             img {
@@ -301,6 +301,10 @@ select {
             .card-title {
               text-align: center;
               font-size: 1.05rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -322,7 +326,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
+          // height: 16rem;
 
           .owl_content_img {
             img {
@@ -339,6 +343,10 @@ select {
             .card-title {
               text-align: center;
               font-size: 1.05rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -360,7 +368,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
+          // height: 16rem;
 
           .owl_content_img {
             img {
@@ -377,6 +385,10 @@ select {
             .card-title {
               text-align: center;
               font-size: 1.05rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -397,7 +409,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
+          // height: 16rem;
 
           .owl_content_img {
             img {
@@ -414,6 +426,10 @@ select {
             .card-title {
               text-align: center;
               font-size: 1.05rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -435,7 +451,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
+          // height: 16rem;
 
           .owl_content_img {
             img {
@@ -452,6 +468,10 @@ select {
             .card-title {
               text-align: center;
               font-size: 1.05rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -504,7 +524,7 @@ select {
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
-        height: 16rem;
+        // height: 16rem;
 
         .owl_content_img {
           img {
@@ -517,10 +537,17 @@ select {
         .card-body {
           padding: 1.25rem 0.25rem;
           color: $black_color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           .card-title {
             text-align: center;
             font-size: 1.05rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            direction: ltr;
           }
 
           .card-text {
@@ -1643,7 +1670,7 @@ select {
           width: 100%;
 
           .card {
-            height: 15rem;
+            // height: 15rem;
 
             .owl_content_img {
               img {
@@ -1656,7 +1683,7 @@ select {
 
       .item {
         .card {
-          height: 13rem;
+          // height: 13rem;
 
           .owl_content_img {
             img {
@@ -1684,7 +1711,7 @@ select {
 
       .item {
         .card {
-          height: 14.5rem;
+          // height: 14.5rem;
 
           .owl_content_img {
             img {
@@ -2169,7 +2196,7 @@ select {
           width: 100%;
 
           .card {
-            height: 15rem;
+            // height: 15rem;
 
             .owl_content_img {
               img {
@@ -2182,7 +2209,7 @@ select {
 
       .item {
         .card {
-          height: 13rem;
+          // height: 13rem;
 
           .owl_content_img {
             img {
@@ -2209,7 +2236,7 @@ select {
 
       .item {
         .card {
-          height: 16rem;
+          // height: 16rem;
 
           .owl_content_img {
             img {
@@ -2681,7 +2708,7 @@ select {
           width: 100%;
 
           .card {
-            height: 16.5rem;
+            // height: 16.5rem;
 
             .owl_content_img {
               img {
@@ -2694,7 +2721,7 @@ select {
 
       .item {
         .card {
-          height: 13rem;
+          // height: 13rem;
 
           .owl_content_img {
             img {
@@ -2721,7 +2748,7 @@ select {
 
       .item {
         .card {
-          height: 16rem;
+          // height: 16rem;
 
           .owl_content_img {
             img {
@@ -3244,7 +3271,7 @@ select {
           width: 100%;
 
           .card {
-            height: 16.5rem;
+            // height: 16.5rem;
 
             .owl_content_img {
               img {
@@ -3257,7 +3284,7 @@ select {
 
       .item {
         .card {
-          height: 13rem;
+          // height: 13rem;
 
           .owl_content_img {
             img {
@@ -3284,7 +3311,7 @@ select {
 
       .item {
         .card {
-          height: 17.5rem;
+          // height: 17.5rem;
 
           .owl_content_img {
             img {
@@ -3825,12 +3852,7 @@ select {
       .owl_content_one {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            height: 23rem;
+            // height: 23rem;
 
             .owl_content_img {
               img {
@@ -3862,12 +3884,7 @@ select {
       .owl_content_two {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            height: 16rem;
+            // height: 16rem;
 
             .owl_content_img {
               img {
@@ -3899,12 +3916,7 @@ select {
       .owl_content_three {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            height: 16rem;
+            // height: 16rem;
 
             .owl_content_img {
               img {
@@ -3936,12 +3948,7 @@ select {
       .owl_content_four {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            height: 16rem;
+            // height: 16rem;
 
             .owl_content_img {
               img {
@@ -3973,12 +3980,7 @@ select {
       .owl_content_five {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            height: 16rem;
+            // height: 16rem;
 
             .owl_content_img {
               img {
@@ -4026,7 +4028,7 @@ select {
 
       .item {
         .card {
-          height: 23.5rem;
+          // height: 23.5rem;
 
           .owl_content_img {
             img {
@@ -4661,12 +4663,7 @@ select {
       .owl_content_one {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            height: 33rem;
+            // height: 33rem;
 
             .owl_content_img {
               img {
@@ -4697,7 +4694,7 @@ select {
 
       .item {
         .card {
-          height: 27.188rem;
+          // height: 27.188rem;
 
           .owl_content_img {
             img {
@@ -4736,7 +4733,7 @@ select {
 
       .item {
         .card {
-          height: 28.75rem;
+          // height: 28.75rem;
 
           .owl_content_img {
             img {
