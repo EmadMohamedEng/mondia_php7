@@ -337,11 +337,15 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
+            color: $black_color;
 
             .card-title {
               text-align: center;
               font-size: 1.05rem;
-              color: $black_color;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -363,7 +367,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 18rem;
+          // height: 18rem;
 
           .owl_content_img {
             img {
@@ -375,11 +379,15 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
+            color: $black_color;
 
             .card-title {
               text-align: center;
               font-size: 1.05rem;
-              color: $black_color;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -412,11 +420,15 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
+            color: $black_color;
 
             .card-title {
               text-align: center;
               font-size: 1.05rem;
-              color: $black_color;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -438,7 +450,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 14.5rem;
+          // height: 14.5rem;
 
           .owl_content_img {
             img {
@@ -450,11 +462,15 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
+            color: $black_color;
 
             .card-title {
               text-align: center;
               font-size: 1.05rem;
-              color: $black_color;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
             }
 
             .card-text {
@@ -507,7 +523,7 @@ select {
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
-        height: 16rem;
+        // height: 16rem;
 
         .owl_content_img {
           img {
@@ -519,11 +535,18 @@ select {
 
         .card-body {
           padding: 1.25rem 0.25rem;
+          color: $black_color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           .card-title {
             text-align: center;
             font-size: 1.05rem;
-            color: $black_color;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            direction: ltr;
           }
 
           .card-text {
@@ -1186,7 +1209,7 @@ select {
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
-}
+      }
 
       .btn-bar {
         button {
@@ -1646,8 +1669,9 @@ select {
           width: 100%;
 
           .card {
-            height: 14rem !important;
+            // height: 14rem !important;
             width: 100%;
+
             .owl_content_img {
               img {
                 height: 10rem !important;
@@ -1659,7 +1683,7 @@ select {
 
       .item {
         .card {
-          height: 14rem !important;
+          // height: 14rem !important;
 
           .owl_content_img {
             img {
@@ -1669,9 +1693,10 @@ select {
 
           .card-body {
             padding: 1rem 0.25rem;
+            color: $black_color;
 
             .card-title {
-              font-size: 1rem;
+              font-size: 1rem
             }
           }
         }
@@ -1686,7 +1711,7 @@ select {
 
       .item {
         .card {
-          height: 14.5rem;
+          // height: 14.5rem;
 
           .owl_content_img {
             img {
@@ -1879,6 +1904,7 @@ select {
       #sebhaModal {
         .modal-dialog {
           position: relative;
+
           .modal-content {
             position: fixed;
             top: 57%;
@@ -2170,8 +2196,9 @@ select {
           width: 100%;
 
           .card {
-            height: 15rem;
+            // height: 15rem;
             width: 100%;
+
             .owl_content_img {
               img {
                 height: 10rem;
@@ -2183,7 +2210,7 @@ select {
 
       .item {
         .card {
-          height: 17rem !important;
+          // height: 17rem !important;
 
           .owl_content_img {
             img {
@@ -2210,7 +2237,7 @@ select {
 
       .item {
         .card {
-          height: 16rem;
+          // height: 16rem;
 
           .owl_content_img {
             img {
@@ -2682,8 +2709,9 @@ select {
           width: 100%;
 
           .card {
-            height: 16.5rem;
+            // height: 16.5rem;
             width: 100%;
+
             .owl_content_img {
               img {
                 height: 11.5rem;
@@ -2695,7 +2723,8 @@ select {
 
       .item {
         .card {
-          height: 17rem !important;
+
+          // height: 17rem !important;
           .owl_content_img {
             img {
               height: 12rem !important;
@@ -2716,7 +2745,7 @@ select {
     .list_page {
       .item {
         .card {
-          height: 16rem;
+          // height: 16rem;
 
           .owl_content_img {
             img {
@@ -3244,8 +3273,9 @@ select {
           width: 100%;
 
           .card {
-            height: 16.5rem !important;
+            // height: 16.5rem !important;
             width: 100%;
+
             .owl_content_img {
               img {
                 height: 11.5rem !important;
@@ -3257,7 +3287,7 @@ select {
 
       .item {
         .card {
-          height: 14rem !important;
+          // height: 14rem !important;
 
           .owl_content_img {
             img {
@@ -3284,7 +3314,7 @@ select {
 
       .item {
         .card {
-          height: 17.5rem;
+          // height: 17.5rem;
 
           .owl_content_img {
             img {
@@ -3825,7 +3855,7 @@ select {
       .owl_content_one {
         .item {
           .card {
-            height: 25rem !important;
+            // height: 25rem !important;
             width: 100%;
 
             .owl_content_img {
@@ -3856,7 +3886,7 @@ select {
       .owl_content_two {
         .item {
           .card {
-            height: 19rem !important;
+            // height: 19rem !important;
 
             .owl_content_img {
               img {
@@ -3886,7 +3916,7 @@ select {
       .owl_content_three {
         .item {
           .card {
-            height: 19rem !important;
+            // height: 19rem !important;
 
             .owl_content_img {
               img {
@@ -3916,12 +3946,7 @@ select {
       .owl_content_four {
         .item {
           .card {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            height: 16rem;
+            // height: 16rem;
 
             .owl_content_img {
               img {
@@ -3953,7 +3978,7 @@ select {
       .owl_content_five {
         .item {
           .card {
-            height: 17rem !important;
+            // height: 17rem !important;
 
             .owl_content_img {
               img {
@@ -3999,7 +4024,7 @@ select {
 
       .item {
         .card {
-          height: 23.5rem;
+          // height: 23.5rem;
 
           .owl_content_img {
             img {
@@ -4207,6 +4232,7 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 4.5rem;
+
         .input_span {
           padding: 0 !important;
         }
@@ -4633,7 +4659,7 @@ select {
       .owl_content_one {
         .item {
           .card {
-            height: 33rem !important;
+            // height: 33rem !important;
             width: 100%;
 
             .owl_content_img {
@@ -4663,7 +4689,7 @@ select {
 
       .item {
         .card {
-          height: 27.188rem;
+          // height: 27.188rem;
 
           .owl_content_img {
             img {
@@ -4702,7 +4728,7 @@ select {
 
       .item {
         .card {
-          height: 28.75rem;
+          // height: 28.75rem;
 
           .owl_content_img {
             img {
@@ -4915,6 +4941,7 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 5.5rem;
+
         .input_span {
           padding: 0 !important;
         }
@@ -5415,4 +5442,5 @@ select {
     transform: scale(1);
   }
 }
+
 /* End Animation */

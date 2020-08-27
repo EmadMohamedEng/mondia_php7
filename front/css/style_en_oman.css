@@ -287,11 +287,15 @@ select:active {
 }
 .main_container .content_carousel .owl_content_two .item .card .card-body {
   padding: 1.25rem 0.25rem;
+  color: #000;
 }
 .main_container .content_carousel .owl_content_two .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
-  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 .main_container .content_carousel .owl_content_two .item .card .card-body .card-text i {
   color: #adadad;
@@ -302,7 +306,6 @@ select:active {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  height: 18rem;
 }
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
   height: 14rem;
@@ -311,11 +314,15 @@ select:active {
 }
 .main_container .content_carousel .owl_content_three .item .card .card-body {
   padding: 1.25rem 0.25rem;
+  color: #000;
 }
 .main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
-  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 .main_container .content_carousel .owl_content_three .item .card .card-body .card-text i {
   color: #adadad;
@@ -335,11 +342,15 @@ select:active {
 }
 .main_container .content_carousel .owl_content_four .item .card .card-body {
   padding: 1.25rem 0.25rem;
+  color: #000;
 }
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
-  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-text i {
   color: #adadad;
@@ -350,7 +361,6 @@ select:active {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  height: 14.5rem;
 }
 .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
   height: 9.375rem;
@@ -359,11 +369,15 @@ select:active {
 }
 .main_container .content_carousel .owl_content_five .item .card .card-body {
   padding: 1.25rem 0.25rem;
+  color: #000;
 }
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
-  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-text i {
   color: #adadad;
@@ -398,7 +412,6 @@ select:active {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  height: 16rem;
 }
 .main_container .list_page .item .card .owl_content_img img {
   height: 11rem;
@@ -407,11 +420,18 @@ select:active {
 }
 .main_container .list_page .item .card .card-body {
   padding: 1.25rem 0.25rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main_container .list_page .item .card .card-body .card-title {
   text-align: center;
   font-size: 1.05rem;
-  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 .main_container .list_page .item .card .card-body .card-text i {
   color: #adadad;
@@ -1244,20 +1264,17 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card {
-    height: 14rem !important;
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 10rem !important;
-  }
-  .main_container .content_carousel .item .card {
-    height: 14rem !important;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
     height: 10rem !important;
   }
   .main_container .content_carousel .item .card .card-body {
     padding: 1rem 0.25rem;
+    color: #000;
   }
   .main_container .content_carousel .item .card .card-body .card-title {
     font-size: 1rem;
@@ -1265,9 +1282,6 @@ select:active {
   .main_container .list_page .coming_soon {
     width: 50%;
     margin-top: 30% !important;
-  }
-  .main_container .list_page .item .card {
-    height: 14.5rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 9.875rem;
@@ -1595,14 +1609,10 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card {
-    height: 15rem;
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 10rem;
-  }
-  .main_container .content_carousel .item .card {
-    height: 17rem !important;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
     height: 12rem !important;
@@ -1616,9 +1626,6 @@ select:active {
   .main_container .list_page .coming_soon {
     width: 50%;
     margin-top: 30% !important;
-  }
-  .main_container .list_page .item .card {
-    height: 16rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 11.25rem;
@@ -1942,14 +1949,10 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card {
-    height: 16.5rem;
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 11.5rem;
-  }
-  .main_container .content_carousel .item .card {
-    height: 17rem !important;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
     height: 12rem !important;
@@ -1959,9 +1962,6 @@ select:active {
   }
   .main_container .content_carousel .item .card .card-body .card-title {
     font-size: 1rem;
-  }
-  .main_container .list_page .item .card {
-    height: 16rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 11.6rem;
@@ -2324,14 +2324,10 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card {
-    height: 16.5rem !important;
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 11.5rem !important;
-  }
-  .main_container .content_carousel .item .card {
-    height: 14rem !important;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
     height: 9rem !important;
@@ -2345,9 +2341,6 @@ select:active {
   .main_container .list_page .coming_soon {
     width: 50%;
     margin-top: 30% !important;
-  }
-  .main_container .list_page .item .card {
-    height: 17.5rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 12.719rem;
@@ -2724,7 +2717,6 @@ select:active {
     font-size: 1.85rem;
   }
   .main_container .content_carousel .owl_content_one .item .card {
-    height: 25rem !important;
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
@@ -2740,9 +2732,6 @@ select:active {
   .main_container .content_carousel .owl_content_one .item .card .card-body .card-text i {
     color: #adadad;
   }
-  .main_container .content_carousel .owl_content_two .item .card {
-    height: 19rem !important;
-  }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
     height: 14rem !important;
   }
@@ -2756,9 +2745,6 @@ select:active {
   .main_container .content_carousel .owl_content_two .item .card .card-body .card-text i {
     color: #adadad;
   }
-  .main_container .content_carousel .owl_content_three .item .card {
-    height: 19rem !important;
-  }
   .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
     height: 14rem !important;
   }
@@ -2771,14 +2757,6 @@ select:active {
   }
   .main_container .content_carousel .owl_content_three .item .card .card-body .card-text i {
     color: #adadad;
-  }
-  .main_container .content_carousel .owl_content_four .item .card {
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    height: 16rem;
   }
   .main_container .content_carousel .owl_content_four .item .card .owl_content_img img {
     height: 9.375rem;
@@ -2794,9 +2772,6 @@ select:active {
   }
   .main_container .content_carousel .owl_content_four .item .card .card-body .card-text i {
     color: #adadad;
-  }
-  .main_container .content_carousel .owl_content_five .item .card {
-    height: 17rem !important;
   }
   .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
     height: 12rem !important;
@@ -2819,9 +2794,6 @@ select:active {
   .main_container .list_page .content_carousel_head .link_title h6 {
     font-size: 2rem;
     font-weight: bold;
-  }
-  .main_container .list_page .item .card {
-    height: 23.5rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 16.625rem;
@@ -3273,7 +3245,6 @@ select:active {
     font-size: 2.5rem;
   }
   .main_container .content_carousel .owl_content_one .item .card {
-    height: 33rem !important;
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
@@ -3288,9 +3259,6 @@ select:active {
   }
   .main_container .content_carousel .owl_content_one .item .card .card-body .card-text i {
     color: #adadad;
-  }
-  .main_container .content_carousel .item .card {
-    height: 27.188rem;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
     height: 20.938rem;
@@ -3312,9 +3280,6 @@ select:active {
   .main_container .list_page .content_carousel_head .link_title h6 {
     font-size: 2.35rem;
     font-weight: bold;
-  }
-  .main_container .list_page .item .card {
-    height: 28.75rem;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 21.25rem;
