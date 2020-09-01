@@ -17,7 +17,7 @@ class CreateMbcNotificationsTable extends Migration
             $table->bigIncrements('id');
             $table->string('msisdn', 20);
             $table->string('action', 50);
-            $table->string('url', 140);
+            $table->string('url', 300);
             $table->timestamps();
         });
     }
