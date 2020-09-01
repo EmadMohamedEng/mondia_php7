@@ -40,13 +40,13 @@ if (session()->get('applocale') == 'ar') {
         <div class="cover">
           @if(session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
             @if($content->type == 1)
-            <video style="object-fit: cover;width:100%" poster="{{$src}}" controls>
+            <video style="object-fit: cover;width:100%" poster="{{$src}}" controls controlsList="nodownload">
               <source src="{{url($content->video)}}" />
             </video>
             @endif
             @if($content->type == 2)
                 <img src="{{$src}}" alt="Video Cover" style="opacity: 1 !important;height:auto">
-                <audio src="{{url($content->video)}}" controls style="width: 94%;"></audio>
+                <audio src="{{url($content->video)}}" controls style="width: 94%;" controlsList="nodownload"></audio>
             @endif
             @if($content->type == 3)
             <img src="{{url($content->video)}}" alt="Video Cover">
