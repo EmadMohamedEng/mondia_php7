@@ -92,7 +92,7 @@ define('SNAP_VIVA_CHANNEL_ID', 4493);
 ///////////////////////// stc Kuwait /////////////////////////////
 
 /**************** mbc notification*************** */
-Route::get('mbc_notifications', 'StcController@mbc_notifications');
+Route::get('mbc_notifications', 'MbcController@mbc_notifications');
 /********************************* */
 
 /******timwe_op_id******* Start config Timwe******************/

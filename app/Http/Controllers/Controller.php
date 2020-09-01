@@ -57,14 +57,16 @@ abstract class Controller extends BaseController
     public function log_action($actionName, $Url, $parameters_arr)
     {
         date_default_timezone_set("Africa/Cairo");
-        $date = date("Y-m-d");
+        $year = date("Y");
+        $month = date("m");
+        $day = date("d");
         $log = new Logger($actionName);
         // to create new folder with current date  // if folder is not found create new one
-        if (!File::exists(storage_path('logs/' . $date . '/' . $actionName))) {
-            File::makeDirectory(storage_path('logs/' . $date . '/' . $actionName), 0775, true, true);
+        if (!File::exists(storage_path('logs/' . $year . '/' . $month . '/' . $day . '/' . $actionName))) {
+            File::makeDirectory(storage_path('logs/' . $year . '/' . $month . '/' . $day . '/' . $actionName), 0775, true, true);
         }
 
-        $log->pushHandler(new StreamHandler(storage_path('logs/' . $date . '/' . $actionName . '/logFile.log', Logger::INFO)));
+        $log->pushHandler(new StreamHandler(storage_path('logs/' . $year . '/' . $month . '/' . $day . '/' . $actionName . '/logFile.log', Logger::INFO)));
         $log->addInfo($Url, $parameters_arr);
     }
 
