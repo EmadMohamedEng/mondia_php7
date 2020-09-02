@@ -14,6 +14,11 @@
 </head>
 
 <style>
+  .landing_page .form_content form .form-group input {
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+  }
+
   @media (min-width: 1025px) {
     .main_container {
       width: 25%;
@@ -90,7 +95,7 @@ if ($lang == 'ar') {
       <div class="cancel text-center">
         {!! Form::open(['url'=>'subscription/optin/'.partnerRoleId,'method'=>'post','class'=>'form']) !!}
         <div class="form-group">
-          <input type="submit" value="@lang('messages.click_confirmation')">
+          <input type="submit" id="reSendPin" class="border-0 rounded p-2 font-weight-bold" value="@lang('messages.click_confirmation')">
         </div>
         {!! Form::close() !!}
       </div>
@@ -105,7 +110,7 @@ if ($lang == 'ar') {
     </div>
 
     <!-- copyright -->
-<div class="copy" style="{{$bottom}}">
+    <div class="copy" style="{{$bottom}}">
       <p>copyright @ <span>{{date('Y')}}</span> Digizone, all rights reserved.</p>
     </div>
     <!-- copyright -->
