@@ -21,9 +21,14 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
         <div class="cover">
 
           @if($content->type == 1)
-          <video style="object-fit: cover;width:100%" poster="{{$src}}" controls controlsList="nodownload">
-            <source src="{{url($content->video)}}" />
+          <video id="video" style="object-fit: cover;width:100%" poster="{{$src}}" controls controlsList="nodownload">
+            <source src="{{url('teststream/'.$content->id)}}" />
           </video>
+        {{-- <img id="image" style="display: none" src="{{$src}}" alt="">
+          <canvas style="width:90%;" id="canvas"></canvas>
+          <div class="custom_controls" style="position: absolute;bottom: 10px;left: 10px;">
+            <a id="play_vid" class="btn btn btn-warning rounded-circle"><i class="fa fa-play" aria-hidden="true"></i></a>
+          </div> --}}
           @endif
           @if($content->type == 2)
               <img src="{{$src}}" alt="Video Cover">
@@ -184,3 +189,40 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 </div>
 </div>
 @stop
+@section('script')
+{{-- <script>
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  var video = document.createElement("video");
+  video.setAttribute("src", "{{url('teststream/'.$content->id)}}");
+  var img = document.getElementById('image');
+
+  // set canvas size = video size when known
+  video.addEventListener('loadedmetadata', function() {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    ctx.drawImage(img, 0, 0);
+  });
+
+  video.addEventListener('play', function() {
+    var $this = this; //cache
+    (function loop() {
+      if (!$this.paused && !$this.ended) {
+        ctx.drawImage($this, 0, 0);
+        setTimeout(loop, 1000 / 30); // drawing at 30fps
+      }
+    })();
+  }, 0);
+
+  $('#play_vid').click(function (e) {
+    $(this).children('i').toggleClass('fa-play');
+    $(this).children('i').toggleClass('fa-pause');
+    if(video.paused){
+      video.play();
+    }else{
+      video.pause();
+    }
+  });
+
+</script> --}}
+@endsection

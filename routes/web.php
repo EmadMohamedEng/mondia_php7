@@ -208,3 +208,6 @@ Route::get('timwe_test', function(){
 
     return redirect(url('/?OpID='.timwe_op_id()));
 });
+
+
+Route::get('teststream/{id}', 'FrontController@testStream');

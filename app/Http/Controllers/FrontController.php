@@ -12,6 +12,7 @@ use App\Audio;
 use App\Post;
 use App\MondiaSubscriber;
 use App\MondiaUnsubscriber;
+use App\Classes\VideoStream;
 
 use Monolog\Logger;
 use Carbon\Carbon;
@@ -22,7 +23,6 @@ use App\DuIntgration;
 
 class FrontController extends Controller
 {
-
     public function index(Request $request)
     {
 
@@ -1527,6 +1527,13 @@ class FrontController extends Controller
         } else {
             return view('errors.404');
         }
+    }
+
+    public function testStream($id)
+    {
+      $content = video::find($id);
+      $stream = new VideoStream(base_path($content->video));
+      $stream->start();
     }
 
 }

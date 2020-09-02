@@ -40,9 +40,10 @@ if (session()->get('applocale') == 'ar') {
         <div class="cover">
           @if(session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
             @if($content->type == 1)
-            <video style="object-fit: cover;width:100%" poster="{{$src}}" controls controlsList="nodownload">
+            <video id="video" style="object-fit: cover;width:100%" poster="{{$src}}" controls controlsList="nodownload">
               <source src="{{url($content->video)}}" />
             </video>
+            <canvas id="canvas"></canvas>
             @endif
             @if($content->type == 2)
                 <img src="{{$src}}" alt="Video Cover" style="opacity: 1 !important;height:auto">
@@ -216,3 +217,26 @@ if (session()->get('applocale') == 'ar') {
 </div>
 </div>
 @stop
+@section('script')
+<script>
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  var video = document.getElementById('video');
+
+  // set canvas size = video size when known
+  video.addEventListener('loadedmetadata', function() {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+  });
+
+  video.addEventListener('play', function() {
+    var $this = this; //cache
+    (function loop() {
+      if (!$this.paused && !$this.ended) {
+        ctx.drawImage($this, 0, 0);
+        setTimeout(loop, 1000 / 30); // drawing at 30fps
+      }
+    })();
+  }, 0);
+</script>
+@endsection
