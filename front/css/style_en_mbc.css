@@ -73,6 +73,8 @@ select:active {
   /* End Subscribe Page */
   /* Start Zakkah Page */
   /* End Zakkah Page */
+  /* Start Zakkah Page */
+  /* End Zakkah Page */
   /* Start Merath Page */
   /* End Merath Page */
   /* Start Sebha Page */
@@ -863,6 +865,31 @@ select:active {
 .main_container .zakkah_page .zakah_zakah .form_zakah .actions button.button:hover {
   box-shadow: none;
   color: white;
+}
+.main_container .zakkah_v2_page {
+  margin: 2rem auto;
+  width: 100%;
+  color: #FFF;
+}
+.main_container .zakkah_v2_page .currency_title {
+  color: #efc049;
+}
+.main_container .zakkah_v2_page .currency_bg {
+  background: #00000054;
+}
+.main_container .zakkah_v2_page .currency_bg .currency_text {
+  text-align: right;
+}
+.main_container .zakkah_v2_page .currency_bg .currency_symbol select {
+  text-align-last: center;
+  background: transparent;
+  color: #efc049;
+}
+.main_container .zakkah_v2_page .currency_bg .currency_symbol select:focus {
+  box-shadow: 0 0 0 0.2rem transparent !important;
+}
+.main_container .zakkah_v2_page .currency_bg .currency_symbol select option {
+  background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
 }
 .main_container .merath_page {
   width: 70%;

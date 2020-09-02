@@ -30,6 +30,7 @@ Route::get('loadcontent','FrontController@load_contents')->name('front.load');
 Route::get('view_content/{id}','FrontController@view_content')->name('front.inner');
 Route::get('sebha','FrontController@sebha')->name('front.sebha');
 Route::get('zakah','FrontController@zakah')->name('front.zakah');
+Route::get('zakah_v2','FrontController@zakah_v2')->name('front.zakah_v2');
 Route::get('merath','FrontController@merath')->name('front.merath');
 Route::get('merath_calc','FrontController@merath_calc');
 Route::get('salah_time','FrontController@salah_time3')->name('front.salah');  // working good

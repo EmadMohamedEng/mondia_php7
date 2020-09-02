@@ -1056,8 +1056,8 @@ select {
       }
     }
   }
-
   /* End Subscribe Page */
+
   /* Start Zakkah Page */
   .zakkah_page {
     margin: 2rem auto;
@@ -1131,8 +1131,44 @@ select {
       }
     }
   }
-
   /* End Zakkah Page */
+
+  /* Start Zakkah Page */
+  .zakkah_v2_page {
+    margin: 2rem auto;
+    width: 100%;
+    color: $white_color;
+
+    .currency_title {
+      color: $text_color;
+    }
+
+    .currency_bg {
+      background: #00000054;
+      .currency_text {
+        text-align: right;
+      }
+
+      .currency_symbol {
+        select {
+          text-align-last: center;
+          background: transparent;
+          color: $text_color;
+          
+
+          &:focus {
+            box-shadow: 0 0 0 0.2rem transparent !important;
+          }
+
+          option {
+            background: $bg_color;
+          }
+        }
+      }
+    }
+  }
+  /* End Zakkah Page */
+
   /* Start Merath Page */
   .merath_page {
     width: 70%;
