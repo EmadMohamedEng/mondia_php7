@@ -22,8 +22,8 @@
 
                     @else
                         {!! Form::open(['method' => 'POST', 'url'=>'language' , 'class' => 'form-horizontal', 'files'=>'true' ]) !!}
-                        
-                           
+
+
                     @endif
                         @include('language._form')
                         {!! Form::close() !!}

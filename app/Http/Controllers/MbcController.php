@@ -2,14 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\MbcNotification;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class MbcController extends Controller
 {
     public function mbc_notifications(Request $request)
     {
+
+        $validator = Validator::make($request->all(), [
+            "msisdn" => "required",
+            "action" => "required",
+        ]);
+
+        if ($validator->fails()) {
+          $response['status'] = 'FAILED';
+          $response['errors'] = $validator->messages();
+          return response()->json($response, 200);
+        }
 
         $notification['msisdn'] = $request->msisdn;
         $notification['action'] = $request->action;
@@ -23,9 +34,10 @@ class MbcController extends Controller
 
         $MbcNotification = MbcNotification::create($notification);
 
-        $response = json_encode(['response' => 'success']);
-        
-        return $response;
+        $response['status'] = 'SUCCESS';
+        $response['notification_id'] = $MbcNotification->id;
+
+        return json_encode($response);
 
     }
 }
