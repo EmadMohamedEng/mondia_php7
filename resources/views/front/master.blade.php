@@ -71,7 +71,7 @@ $enable = get_setting('enable_testing');
     font-size: 14px;
   }
 </style>
-<body>
+<body oncontextmenu="return {{get_setting('inspector_debug') == '1' ? 'true' : 'false'}};">
   <main class="main_container">
     <header class="header w-100">
       <div class="row">
@@ -343,6 +343,34 @@ $enable = get_setting('enable_testing');
     //     $(this).children('.fa-play').removeClass('fa-pause').addClass('fa-play')
     //   }
     // })
+
+    document.addEventListener('contextmenu', function(e) {
+      if("{{get_setting('inspector_debug')}}" == "0")
+      e.preventDefault();
+    });
+
+    document.onkeydown = function(e) {
+      if(event.keyCode == 123) {
+      if("{{get_setting('inspector_debug')}}" == "0")
+        return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+      if("{{get_setting('inspector_debug')}}" == "0")
+        return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+      if("{{get_setting('inspector_debug')}}" == "0")
+        return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+      if("{{get_setting('inspector_debug')}}" == "0")
+        return false;
+      }
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+      if("{{get_setting('inspector_debug')}}" == "0")
+        return false;
+      }
+    }
   </script>
 
   @yield('script')
