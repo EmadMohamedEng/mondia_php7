@@ -13,6 +13,7 @@ class AddOperatorAndCountry extends Migration
      */
     public function up()
     {
+      /*
         \DB::table('countries')->insert(
             array(
                 'id' => 9,
@@ -26,6 +27,7 @@ class AddOperatorAndCountry extends Migration
                 'country_id' => 9
             )
         );
+        */
     }
 
     /**

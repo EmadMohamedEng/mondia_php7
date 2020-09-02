@@ -24,7 +24,7 @@ class MbcController extends Controller
         $MbcNotification = MbcNotification::create($notification);
 
         $response = json_encode(['response' => 'success']);
-        
+
         return $response;
 
     }

@@ -71,7 +71,7 @@ $enable = get_setting('enable_testing');
   }
 </style>
 
-<body oncontextmenu="return {{get_setting('inspector_debug') == '1' ? 'true' : 'false'}};">
+<body>
   <main class="main_container">
     <header class="header w-100">
       <div class="row">
