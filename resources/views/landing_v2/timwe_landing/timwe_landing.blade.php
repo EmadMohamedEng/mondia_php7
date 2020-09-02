@@ -114,7 +114,7 @@ if ($lang == 'ar') {
       </div>
 
       <div class="cancel text-center mt-3 text-white">
-        <p>@lang('messages.unsubscribelink') <a href="{{url('ooredoo_qatar_unsub' )}}">@lang('messages.Link')</a></p>
+        <p>@lang('messages.unsubscribelink') <a href="{{url('ooredoo_q_unsub' )}}">@lang('messages.Link')</a></p>
       </div>
 
     </div>
@@ -144,9 +144,9 @@ if ($lang == 'ar') {
       const checkbox = document.getElementById("on-off");
       checkbox.addEventListener('change', (event) => {
         if (event.target.checked) {
-          location.href = "{{url('ooredoo_qatar_landing/ar')}}";
+          location.href = "{{url('ooredoo_q/ar')}}";
         } else {
-          location.href = "{{url('ooredoo_qatar_landing/en')}}";
+          location.href = "{{url('ooredoo_q/en')}}";
         }
       })
     }
