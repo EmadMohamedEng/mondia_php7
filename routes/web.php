@@ -116,11 +116,11 @@ define('presharedkeysubscription', 'cutfvCPZrlzMo6t8');
 /************* end config Timwe******************/
 
 Route::get('testMT', 'TimweController@testMT');
-Route::get('ooredoo_qatar_login', 'TimweController@login');
-Route::get('ooredoo_qatar_landing/{lang?}', 'TimweController@index');
-Route::get('ooredoo_qatar_pin/{lang?}', 'TimweController@pincode');
-Route::get('ooredoo_qatar_unsub/{lang?}', 'TimweController@unsubscribe');
-Route::get('ooredoo_qatar_logout', 'TimweController@logout');
+Route::get('ooredoo_q_login', 'TimweController@login');
+Route::get('ooredoo_q/{lang?}', 'TimweController@index');
+Route::get('ooredoo_q_pin/{lang?}', 'TimweController@pincode');
+Route::get('ooredoo_q_unsub/{lang?}', 'TimweController@unsubscribe');
+Route::get('ooredoo_q_logout', 'TimweController@logout');
 
 //Timwe Api
 Route::post('generateKey', 'TimweController@generateKey');

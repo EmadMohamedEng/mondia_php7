@@ -316,7 +316,7 @@ $enable = get_setting('enable_testing');
               <li class="nav-item ">
                 @if(request()->get('OpID') == ooredoo && session()->has('ooredoo_op_id') && session()->get('status') ==
                 'active' )
-                <a class="nav-link text-capitalize" href="{{url('ooredoo_qatar_unsub')}}"><i
+                <a class="nav-link text-capitalize" href="{{url('ooredoo_q_unsub')}}"><i
                     class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
                 @elseif(request()->get('OpID') == imi_op_id() && session()->has('imi_op_id') && session()->get('status')
                 == 'active' )
@@ -327,7 +327,7 @@ $enable = get_setting('enable_testing');
               <li class="nav-item ">
                 @if(request()->get('OpID') == ooredoo && session()->has('ooredoo_op_id') && session()->get('status') ==
                 'active' )
-                <a class="nav-link text-capitalize" href="{{url('ooredoo_qatar_logout')}}"><i
+                <a class="nav-link text-capitalize" href="{{url('ooredoo_q_logout')}}"><i
                     class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
                 @elseif(request()->get('OpID') == imi_op_id() && session()->has('imi_op_id') && session()->get('status')
                 == 'active' )
