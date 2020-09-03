@@ -123,11 +123,31 @@ body {
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value {
   float: right;
 }
+.main_container .zakkah_v2_page #accordion .card .card-header button span {
+  float: left;
+  margin-left: 1rem;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header button .up_down {
+  float: left;
+}
 .main_container .zakkah_v2_page .currency_title {
   float: right;
 }
-.main_container .zakkah_v2_page .currency_bg .currency_text {
+.main_container .zakkah_v2_page .currency_icon {
+  float: left;
+}
+.main_container .zakkah_v2_page .currency_bg .flex_center .currency_text {
   text-align: right;
+}
+.main_container .zakkah_v2_page .currency_bg .result {
+  float: left;
+  margin-left: 1rem;
+}
+.main_container .zakkah_v2_page .zakah_result .zakah_result_right {
+  text-align: center;
+}
+.main_container .zakkah_v2_page .zakah_result .zakah_result_left {
+  text-align: center;
 }
 .main_container .merath_page {
   direction: rtl;
