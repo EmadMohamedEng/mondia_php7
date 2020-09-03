@@ -867,29 +867,137 @@ select:active {
   color: white;
 }
 .main_container .zakkah_v2_page {
-  margin: 2rem auto;
+  margin: 0 auto;
   width: 100%;
   color: #FFF;
 }
+.main_container .zakkah_v2_page #accordion {
+  margin-top: 0.5rem;
+}
+.main_container .zakkah_v2_page #accordion .card {
+  background: #00000054;
+  border-radius: 1.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header {
+  border-bottom: none;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header button {
+  color: #FFF;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header button .currency_title {
+  color: #FFF;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header button span {
+  float: right;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  color: #efc049;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header button span.red_result {
+  color: #F00;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header button .up_down {
+  float: right;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.main_container .zakkah_v2_page #accordion .card .card-body {
+  border-top: 1px solid #efc049;
+}
+.main_container .zakkah_v2_page #accordion .card .card-body .currency_bg {
+  background: transparent;
+}
 .main_container .zakkah_v2_page .currency_title {
   color: #efc049;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  float: left;
+}
+.main_container .zakkah_v2_page .currency_icon {
+  color: #efc049;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  float: right;
 }
 .main_container .zakkah_v2_page .currency_bg {
   background: #00000054;
+  border-radius: 1.5rem;
 }
-.main_container .zakkah_v2_page .currency_bg .currency_text {
-  text-align: right;
+.main_container .zakkah_v2_page .currency_bg .flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
-.main_container .zakkah_v2_page .currency_bg .currency_symbol select {
+.main_container .zakkah_v2_page .currency_bg .flex_center .currency_text {
+  text-align: left;
+  font-size: 0.75rem;
+}
+.main_container .zakkah_v2_page .currency_bg .currency_selectBox select {
   text-align-last: center;
   background: transparent;
   color: #efc049;
 }
-.main_container .zakkah_v2_page .currency_bg .currency_symbol select:focus {
+.main_container .zakkah_v2_page .currency_bg .currency_selectBox select:focus {
   box-shadow: 0 0 0 0.2rem transparent !important;
 }
-.main_container .zakkah_v2_page .currency_bg .currency_symbol select option {
+.main_container .zakkah_v2_page .currency_bg .currency_selectBox select option {
   background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
+}
+.main_container .zakkah_v2_page .currency_bg .result {
+  float: right;
+  margin-right: 1rem;
+}
+.main_container .zakkah_v2_page .currency_bg .form_input {
+  position: relative;
+}
+.main_container .zakkah_v2_page .currency_bg .form_input .textbox {
+  outline: 0;
+  height: 3rem;
+  padding: 0 1rem;
+  background: transparent;
+  border-bottom: 1px solid #adadad;
+  color: #adadad;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+.main_container .zakkah_v2_page .currency_bg .form_input .textbox::placeholder {
+  color: #adadad;
+}
+.main_container .zakkah_v2_page .currency_bg .form_input .textbox.input-middle + .bord {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
+  width: 0;
+  height: 2px;
+  transition: all 0.4s ease-in-out;
+  left: 50%;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.main_container .zakkah_v2_page .currency_bg .form_input .textbox.input-middle:focus + .bord {
+  width: 100%;
+  left: 0;
+}
+.main_container .zakkah_v2_page .currency_bg .form_input .textbox:focus, .main_container .zakkah_v2_page .currency_bg .form_input .textbox:active {
+  box-shadow: none !important;
+}
+.main_container .zakkah_v2_page .zakah_result {
+  background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
+  position: fixed;
+  bottom: 0;
+}
+.main_container .zakkah_v2_page .zakah_result .zakah_result_right {
+  text-align: center;
+}
+.main_container .zakkah_v2_page .zakah_result .zakah_result_left {
+  text-align: center;
 }
 .main_container .merath_page {
   width: 70%;

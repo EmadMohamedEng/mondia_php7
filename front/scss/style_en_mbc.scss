@@ -1056,6 +1056,7 @@ select {
       }
     }
   }
+
   /* End Subscribe Page */
 
   /* Start Zakkah Page */
@@ -1131,30 +1132,99 @@ select {
       }
     }
   }
+
   /* End Zakkah Page */
 
   /* Start Zakkah Page */
   .zakkah_v2_page {
-    margin: 2rem auto;
+    margin: 0 auto;
     width: 100%;
     color: $white_color;
 
+    #accordion {
+      margin-top: 0.5rem;
+
+      .card {
+        background: #00000054;
+        border-radius: 1.5rem;
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.75rem;
+
+        .card-header {
+          border-bottom: none;
+          button {
+            color: $white_color;
+
+            .currency_title {
+              color: $white_color;
+            }
+
+            span {
+              float: right;
+              margin-top: 0.5rem;
+              margin-bottom: 0.5rem;
+              margin-right: 1rem;
+              color: $text_color;
+
+              &.red_result {
+                color: #F00;
+              }
+            }
+
+            .up_down {
+              float: right;
+              margin-top: 0.75rem;
+              margin-bottom: 0.75rem;
+
+            }
+          }
+        }
+
+        .card-body {
+          border-top: 1px solid $text_color;
+          .currency_bg {
+            background: transparent;
+          }
+        }
+      }
+    }
+
     .currency_title {
       color: $text_color;
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+      float: left;
+    }
+
+    .currency_icon {
+      color: $text_color;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      float: right;
     }
 
     .currency_bg {
       background: #00000054;
-      .currency_text {
-        text-align: right;
+      border-radius: 1.5rem;
+
+      .flex_center {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .currency_text {
+          text-align: left;
+          font-size: 0.75rem;
+        }
       }
 
-      .currency_symbol {
+      .currency_selectBox {
         select {
           text-align-last: center;
           background: transparent;
           color: $text_color;
-          
+
 
           &:focus {
             box-shadow: 0 0 0 0.2rem transparent !important;
@@ -1165,8 +1235,74 @@ select {
           }
         }
       }
+
+      .result {
+        float: right;
+        margin-right: 1rem;
+      }
+
+      .form_input {
+        position: relative;
+
+        .textbox {
+          outline: 0;
+          height: 3rem;
+          padding: 0 1rem;
+          background: transparent;
+          border-bottom: 1px solid $grey_color;
+          color: $grey_color;
+          border-top: 0;
+          border-right: 0;
+          border-left: 0;
+
+          &::placeholder {
+            color: $grey_color;
+          }
+
+          &.input-middle {
+            &+.bord {
+              position: absolute;
+              bottom: 0;
+              background: $bg_color;
+              width: 0;
+              height: 2px;
+              transition: all .4s ease-in-out;
+              left: 50%;
+              -webkit-transition: all .4s ease-in-out;
+              -moz-transition: all .4s ease-in-out;
+              -ms-transition: all .4s ease-in-out;
+              -o-transition: all .4s ease-in-out;
+            }
+
+            &:focus+.bord {
+              width: 100%;
+              left: 0;
+            }
+          }
+
+          &:focus,
+          &:active {
+            box-shadow: none !important;
+          }
+        }
+      }
+    }
+
+    .zakah_result {
+      background: $bg_color;
+      position: fixed;
+      bottom: 0;
+
+      .zakah_result_right {
+        text-align: center;
+      }
+
+      .zakah_result_left {
+        text-align: center;
+      }
     }
   }
+
   /* End Zakkah Page */
 
   /* Start Merath Page */

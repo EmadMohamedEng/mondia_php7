@@ -246,13 +246,63 @@ body {
   }
 
   .zakkah_v2_page {
+    #accordion {
+
+      .card {
+
+        .card-header {
+          button {
+            span {
+              float: left;
+              margin-left: 1rem;
+            }
+
+            .up_down {
+              float: left;
+            }
+          }
+        }
+      }
+    }
+
     .currency_title {
       float: right;
     }
 
+    .currency_icon {
+      float: left;
+    }
+
     .currency_bg {
-      .currency_text {
-        text-align: right;
+      .flex_center {
+        .currency_text {
+          text-align: right;
+        }
+      }
+
+      .currency_selectBox {
+        select {
+          &:focus {
+          }
+
+          option {
+          }
+        }
+      }
+
+      .result {
+        float: left;
+        margin-left: 1rem;
+      }
+    }
+
+    .zakah_result {
+      .zakah_result_right {
+        text-align: center;
+      }
+
+      .zakah_result_left {
+        text-align: center;
       }
     }
   }

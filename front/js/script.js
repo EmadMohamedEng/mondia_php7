@@ -21,6 +21,19 @@ $(window).on('load', function () {
   });
 });
 
+$(document).ready(function () {
+  $(document).on('click', '.card-header button', function () {
+    $(this).children('i').toggleClass("fa-chevron-down");
+  });
+});
+
+// changes from plus to minus In Mobile View
+$(document).ready(function () {
+  $(document).on('click', '.card-header button', function () {
+    $(this).children('i').toggleClass("fa-chevron-up");
+  });
+});
+
 $('.owl_one').owlCarousel({
   loop: true,
   margin: 0,
