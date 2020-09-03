@@ -3223,6 +3223,12 @@ select:active {
   .main_container .zakkah_page .zakah_zakah .form_zakah .field {
     font-size: 1.5rem;
   }
+  .main_container .zakkah_v2_page {
+    margin: 4% auto;
+  }
+  .main_container .zakkah_v2_page .container {
+    max-width: 100%;
+  }
   .main_container .merath_page {
     width: 90%;
     margin: 2.5rem auto;
@@ -3717,6 +3723,12 @@ select:active {
   }
   .main_container .zakkah_page .zakah_zakah .form_zakah .actions button.button {
     font-size: 2.5rem;
+  }
+  .main_container .zakkah_v2_page {
+    margin: 4% auto;
+  }
+  .main_container .zakkah_v2_page .container {
+    max-width: 100%;
   }
   .main_container .merath_page {
     width: 90%;
