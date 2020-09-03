@@ -123,6 +123,12 @@ body {
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value {
   float: right;
 }
+.main_container .zakkah_v2_page .currency_title {
+  float: right;
+}
+.main_container .zakkah_v2_page .currency_bg .currency_text {
+  text-align: right;
+}
 .main_container .merath_page {
   direction: rtl;
 }

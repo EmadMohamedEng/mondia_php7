@@ -156,7 +156,9 @@ body {
   border-top-left-radius: 0;
 }
 
-.landing_page .form_content form .form-group input:focus {
+.landing_page .form_content form .form-group input:focus,
+.landing_page .form_content form .btn:focus,
+.landing_page .cancel #reSendPin:focus {
   box-shadow: 0 0 0 0.2rem rgb(206 175 127);
   border-color: #000;
 }
@@ -175,6 +177,10 @@ body {
 .landing_page .cancel {
   padding: 20px 8px 0 8px;
   font-size: 0.75rem;
+}
+
+.landing_page .cancel #reSendPin {
+  background: linear-gradient(135deg, rgba(243, 226, 199, 1) 0%, rgba(193, 158, 103, 1) 50%, rgba(182, 141, 76, 1) 51%, rgba(233, 212, 179, 1) 100%);
 }
 
 .alert.alert-danger {

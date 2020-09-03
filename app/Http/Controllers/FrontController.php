@@ -398,6 +398,12 @@ class FrontController extends Controller
 
     }
 
+    public function zakah_v2(Request $request)
+    {
+        return view('front.zakah_v2');
+
+    }
+
     public function merath(Request $request)
     {
         return view('front.merath');
