@@ -2,24 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Video;
-use App\Provider;
-use App\Service;
-use App\Audio;
 use App\Post;
+use App\Audio;
+use App\Video;
+use App\Service;
+use App\Provider;
+use Carbon\Carbon;
+use Monolog\Logger;
+use App\DuIntgration;
+use App\Http\Requests;
 use App\MondiaSubscriber;
 use App\MondiaUnsubscriber;
-use App\Classes\VideoStream;
 
-use Monolog\Logger;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\File;
+use App\Classes\VideoStream;
+use Illuminate\Http\Request;
 use Monolog\Handler\StreamHandler;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Session;
-use App\DuIntgration;
 
 class FrontController extends Controller
 {
@@ -200,6 +201,8 @@ class FrontController extends Controller
         }
         $contents = $contents->orderBy('contents.index', 'asc')->limit(4)->get();
 
+        $encryptedUrl = base64_encode(url("teststream/$id"));
+
         if($request->has('OpID') && $request->OpID == stc){  // enable testing from backend
           if($enable || (session()->get('stc_op_id') == stc && session()->get('status') == 'active' && session()->has('MSISDN'))){
             return view('front.inner_enable_testing', compact('content','contents'));
@@ -225,7 +228,7 @@ class FrontController extends Controller
 
         if($request->has('OpID') && $request->OpID == mbc){  //mbc
           if($enable ){
-            return view('front.inner_enable_testing', compact('content','contents'));
+            return view('front.inner_enable_testing', compact('content','contents', 'encryptedUrl'));
           }
           return redirect('?OpID='.mbc);
         }

@@ -21,18 +21,20 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
         <div class="cover">
 
           @if($content->type == 1)
-          <video id="video" style="object-fit: cover;width:100%" poster="{{$src}}" controls controlsList="nodownload">
-            <source src="{{url('teststream/'.$content->id)}}" />
-          </video>
-        {{-- <img id="image" style="display: none" src="{{$src}}" alt="">
+          {{-- <video id="video" style="object-fit: cover;width:100%" poster="{{$src}}" controls
+          controlsList="nodownload">
+          <source src="{{url('teststream/'.$content->id)}}" />
+          </video> --}}
+          <img id="image" style="display: none" src="{{$src}}" alt="">
           <canvas style="width:90%;" id="canvas"></canvas>
           <div class="custom_controls" style="position: absolute;bottom: 10px;left: 10px;">
-            <a id="play_vid" class="btn btn btn-warning rounded-circle"><i class="fa fa-play" aria-hidden="true"></i></a>
-          </div> --}}
+            <a id="play_vid" class="btn btn btn-warning rounded-circle"><i class="fa fa-play"
+                aria-hidden="true"></i></a>
+          </div>
           @endif
           @if($content->type == 2)
-              <img src="{{$src}}" alt="Video Cover">
-              <audio src="{{url($content->video)}}" controls style="width: 94%;" controlsList="nodownload"></audio>
+          <img src="{{$src}}" alt="Video Cover">
+          <audio src="{{url($content->video)}}" controls style="width: 94%;" controlsList="nodownload"></audio>
           @endif
           @if($content->type == 3)
           <img src="{{url($content->video)}}" alt="Video Cover">
@@ -76,7 +78,8 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 
           <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
             <div class="shear_div">
-              <button class="btn facebook" onclick="location.href='https://www.facebook.com/sharer/sharer.php?{{urldecode(url()->current())}}'">
+              <button class="btn facebook"
+                onclick="location.href='https://www.facebook.com/sharer/sharer.php?{{urldecode(url()->current())}}'">
                 <i class="fab fa-facebook-f"></i>
               </button>
             </div>
@@ -84,7 +87,8 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 
           <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
             <div class="shear_div">
-              <button class="btn twitter" onclick="location.href='https://www.twitter.com/intent/tweet?text={{urldecode(url()->current())}}'">
+              <button class="btn twitter"
+                onclick="location.href='https://www.twitter.com/intent/tweet?text={{urldecode(url()->current())}}'">
                 <i class="fab fa-twitter"></i>
               </button>
             </div>
@@ -100,7 +104,8 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 
       <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
         <div class="shear_div">
-          <button class="btn whatsapp" onclick="location.href='https://api.whatsapp.com/send?text={{urlencode(url()->current())}}'">
+          <button class="btn whatsapp"
+            onclick="location.href='https://api.whatsapp.com/send?text={{urlencode(url()->current())}}'">
             <i class="fab fa-whatsapp"></i>
           </button>
         </div>
@@ -128,7 +133,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           }elseif($item->type == 3){
           $src =url( $item->video );
           }elseif($item->type == 2){
-            $src = $content->image_preview;
+          $src = $content->image_preview;
           }else{
           $src = url('front\images\Cutting\Contnent_Page\004.png');
           }
@@ -149,7 +154,8 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 </div>
 </section>
 
-<div class="modal_cover modal fade" id="exampleModalCover" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal_cover modal fade" id="exampleModalCover" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -180,7 +186,8 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           </div>
 
           <div class="col-6">
-            <button type="button" class="btn btn_2 btn-lg text-center text-capitalize" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn_2 btn-lg text-center text-capitalize"
+              data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -190,11 +197,13 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 </div>
 @stop
 @section('script')
-{{-- <script>
+<script>
+
   var canvas = document.getElementById('canvas');
   var ctx = canvas.getContext('2d');
   var video = document.createElement("video");
-  video.setAttribute("src", "{{url('teststream/'.$content->id)}}");
+  var encryptedUrl = "{{$encryptedUrl}}";
+  video.setAttribute("src", atob(encryptedUrl));
   var img = document.getElementById('image');
 
   // set canvas size = video size when known
@@ -224,5 +233,5 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
     }
   });
 
-</script> --}}
+</script>
 @endsection
