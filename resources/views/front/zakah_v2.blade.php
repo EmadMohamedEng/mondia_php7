@@ -27,14 +27,14 @@
 
               <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                 <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                  <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                  <input type="text" class="textbox search-res input-middle text-center w-100 gram_price" placeholder="أدخل المبلغ">
                   <span class="bord"></span>
                 </form>
               </div>
 
               <br><br><br>
 
-              <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
+              {{-- <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                 <p class="currency_text mb-0">طريقة التحديد</p>
               </div>
 
@@ -49,7 +49,7 @@
                     <option value="word">حنفي ( شام، عبدالعزيز عيون السود ) - 100 جرام</option>
                   </select>
                 </div>
-              </div>
+              </div> --}}
 
               <br><br><br>
 
@@ -58,7 +58,7 @@
               </div>
 
               <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
-                <span class="result">0</span>
+                <span class="result nsap_result">0</span>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -108,7 +108,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -143,7 +143,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -156,7 +156,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -169,7 +169,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -204,7 +204,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -239,7 +239,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -250,7 +250,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -285,7 +285,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -296,7 +296,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -331,7 +331,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -342,7 +342,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -379,7 +379,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -390,7 +390,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -401,7 +401,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -438,7 +438,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res his_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -473,7 +473,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res other_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -484,7 +484,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res other_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -495,7 +495,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res other_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -506,7 +506,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res other_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -517,7 +517,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res other_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -528,7 +528,7 @@
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
                           <form class="form_input from-middle" id="form_search" action="#0" method="get">
-                            <input type="text" class="textbox search-res input-middle text-center w-100" placeholder="أدخل المبلغ">
+                            <input type="text" class="textbox search-res other_money input-middle text-center w-100" placeholder="أدخل المبلغ">
                             <span class="bord"></span>
                           </form>
                         </div>
@@ -548,13 +548,13 @@
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 flex_center">
           <p class="zakah_result_right mb-0">إجمالى الأصول</p>
 
-          <p class="zakah_result_right mb-0">0</p>
+          <p class="zakah_result_right mb-0 all_money">0</p>
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 flex_center">
           <p class="zakah_result_left mb-0">الزكاة المستحقة</p>
 
-          <p class="zakah_result_left mb-0">0</p>
+          <p class="zakah_result_left mb-0 zakah">0</p>
         </div>
       </div>
     </div>
@@ -562,3 +562,34 @@
 </div>
 
 @stop
+
+@section('script')
+<script>
+  var nsapPrice  = 0
+  var hisMoney   = 0
+  var otherMoney = 0
+  var all_money  = 0
+  var zakah      = 0
+
+  $('.gram_price').keyup(function(){
+    nsapPrice = $('.nsap_result').html( $(this).val() * 85 )
+  })
+
+  $('.his_money').keyup(function(){
+    hisMoney+=  $(this).val()
+    all_money = hisMoney - otherMoney
+    $('.all_money').html(all_money)
+    if(all_money > nsapPrice)
+      $('.zakah').html(all_money * 2.5)
+  })
+
+  $('.other_money').keyup(function(){
+    otherMoney+= $(this).val()
+    all_money = hisMoney - otherMoney
+    $('.all_money').html(all_money)
+    if(all_money > nsapPrice)
+      $('.zakah').html(all_money * 2.5)
+  })
+
+</script>
+@endsection
