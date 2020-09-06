@@ -90,7 +90,7 @@
                     <div class="currency_bg w-100 pb-2 px-3">
                       <div class="row m-0">
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
-                          <p class="currency_text mb-0">@lang('front.zakah_page2.liquid_money')</p>
+                          <p class="currency_text mb-0">@lang('front.zakah_page2.cash_money')</p>
                         </div>
 
                         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 flex_center">
@@ -455,7 +455,7 @@
               <div class="card">
                 <div class="card-header p-1" id="headingTen">
                   <button class="btn btn-link w-100" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
-                    <div class="currency_title font-weight-bold">@lang('front.zakah_page2.debts')</div>
+                    <div class="currency_title text-danger font-weight-bold">@lang('front.zakah_page2.debts')</div>
 
                     <i class="up_down fas fa-chevron-down fa-lg"></i>
 

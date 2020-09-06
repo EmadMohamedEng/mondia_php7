@@ -81,7 +81,7 @@ return [
       "nisab" => 'النصاب',
       'original' => 'الاصول',
       'money' => 'المال',
-      'liquid_money' => 'الاموال السائله',
+      'cash_money' => 'الاموال السائله',
       'cash_in_bank_accounts' => 'النقد فى الحسابات البنكية',
       'gold' => 'ذهب',
       '24_karat' => 'عيار 24 قيراط',

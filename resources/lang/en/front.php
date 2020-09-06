@@ -81,7 +81,7 @@ return [
       "nisab" => 'Nisab',
       'original' => 'The Original',
       'money' => 'Money',
-      'liquid_money' => 'Liquid money',
+      'cash_money' => 'Cash money',
       'cash_in_bank_accounts' => 'Cash in bank accounts',
       'gold' => 'Gold',
       '24_karat' => '24 Karat',
