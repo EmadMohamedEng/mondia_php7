@@ -81,7 +81,7 @@
 
                     <i class="up_down fas fa-chevron-down fa-lg"></i>
 
-                    <span class="font-weight-bold">0</span>
+                    {{-- <span class="font-weight-bold">0</span> --}}
                   </button>
                 </div>
 
@@ -129,7 +129,7 @@
 
                     <i class="up_down fas fa-chevron-down fa-lg"></i>
 
-                    <span class="font-weight-bold">0</span>
+                    {{-- <span class="font-weight-bold">0</span> --}}
                   </button>
                 </div>
 
@@ -190,7 +190,7 @@
 
                     <i class="up_down fas fa-chevron-down fa-lg"></i>
 
-                    <span class="font-weight-bold">0</span>
+                    {{-- <span class="font-weight-bold">0</span> --}}
                   </button>
                 </div>
 
@@ -225,7 +225,7 @@
 
                     <i class="up_down fas fa-chevron-down fa-lg"></i>
 
-                    <span class="font-weight-bold">0</span>
+                    {{-- <span class="font-weight-bold">0</span> --}}
                   </button>
                 </div>
 
@@ -271,7 +271,7 @@
 
                     <i class="up_down fas fa-chevron-down fa-lg"></i>
 
-                    <span class="font-weight-bold">0</span>
+                    {{-- <span class="font-weight-bold">0</span> --}}
                   </button>
                 </div>
 
@@ -317,7 +317,7 @@
 
                     <i class="up_down fas fa-chevron-down fa-lg"></i>
 
-                    <span class="font-weight-bold">0</span>
+                    {{-- <span class="font-weight-bold">0</span> --}}
                   </button>
                 </div>
 
@@ -365,7 +365,7 @@
 
                     <i class="up_down fas fa-chevron-down fa-lg"></i>
 
-                    <span class="font-weight-bold">0</span>
+                    {{-- <span class="font-weight-bold">0</span> --}}
                   </button>
                 </div>
 
@@ -424,7 +424,7 @@
 
                     <i class="up_down fas fa-chevron-down fa-lg"></i>
 
-                    <span class="font-weight-bold">0</span>
+                    {{-- <span class="font-weight-bold">0</span> --}}
                   </button>
                 </div>
 
@@ -459,7 +459,7 @@
 
                     <i class="up_down fas fa-chevron-down fa-lg"></i>
 
-                    <span class="red_result font-weight-bold">0</span>
+                    {{-- <span class="red_result font-weight-bold">0</span> --}}
                   </button>
                 </div>
 
@@ -565,31 +565,53 @@
 
 @section('script')
 <script>
-  var nsapPrice  = 0
-  var hisMoney   = 0
-  var otherMoney = 0
-  var all_money  = 0
-  var zakah      = 0
+  var nsapPrice  = 0 // it's calcaulte from price of gold in country (21 gm) now it's 1000*85
+  var hisMoney   = 0 // all money that he have and it's belong to the person
+  var otherMoney = 0 // all money that he shold retrive to people
+  var all_money  = 0 // all money after he retrive money
 
   $('.gram_price').keyup(function(){
-    nsapPrice = $('.nsap_result').html( $(this).val() * 85 )
+    nsapPrice = parseInt($(this).val() * 85)
+    $('.nsap_result').html( nsapPrice )
   })
 
-  $('.his_money').keyup(function(){
-    hisMoney+=  $(this).val()
-    all_money = hisMoney - otherMoney
-    $('.all_money').html(all_money)
-    if(all_money > nsapPrice)
-      $('.zakah').html(all_money * 2.5)
+  $('.his_money, .other_money').keyup(function(){
+    calculateHisMoney()
+    calculateOtherMoney()
+    calculateZakah()
   })
 
-  $('.other_money').keyup(function(){
-    otherMoney+= $(this).val()
+  // calculate zakah it's comming from get 2.5% from all your money if youe money bigget then nasap_price 85gm from gold 21
+  function calculateZakah() {
     all_money = hisMoney - otherMoney
     $('.all_money').html(all_money)
-    if(all_money > nsapPrice)
-      $('.zakah').html(all_money * 2.5)
-  })
+
+    if(all_money > nsapPrice) {
+      $('.zakah').html( (all_money * 2.5) /100 )
+    } else {
+      $('.zakah').html(0)
+    }
+  }
+
+  // calculate all money that you have from all resource that belong to you
+  function calculateHisMoney() {
+    hisMoney = 0
+
+    $(".his_money").each(function(index,element){
+      if($(this).val())
+        hisMoney = parseInt(hisMoney) + parseInt($(this).val())
+    });
+  }
+
+  // calculate money that people needed it from you
+  function calculateOtherMoney() {
+    otherMoney = 0
+
+    $(".other_money").each(function(index,element){
+      if($(this).val())
+      otherMoney = parseInt(otherMoney) + parseInt($(this).val())
+    });
+  }
 
 </script>
 @endsection
