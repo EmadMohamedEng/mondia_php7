@@ -84,7 +84,7 @@ class MbcController extends Controller
 
 
       // $response = $this->SendRequestPost($url, json_encode($parameters), $headers);
-      libxml_disable_entity_loader(false);
+      // libxml_disable_entity_loader(false);
       $opts = array(
           'http' => array(
               'user_agent' => 'PHPSoapClient'
