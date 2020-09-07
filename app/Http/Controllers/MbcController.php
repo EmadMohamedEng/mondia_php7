@@ -99,9 +99,9 @@ class MbcController extends Controller
 
       $client = new SoapClient($url, $soapClientOptions);
 
-      $response = $client->GetSmsIN($parameters['UserName'], $parameters['UserPass'], $parameters['Xmldoc']);
+      $response = $client->GetSmsIN($parameters);
 
-      dd($response);
+      return $response;
 
     }
 }
