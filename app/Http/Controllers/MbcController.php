@@ -14,21 +14,27 @@ class MbcController extends Controller
         $validator = Validator::make($request->all(), [
             "msisdn" => "required",
             "action" => "required",
+            "country" => "required",
+            "operator" => "required",
+            "shortcode" => "required",
         ]);
+
+        $notification['msisdn'] = $request->msisdn;
+        $notification['action'] = $request->action;
+        $notification['country'] = $request->country;
+        $notification['operator'] = $request->operator;
+        $notification['shortcode'] = $request->shortcode;
+
+        $url = $request->fullUrl();
+        $logAction = 'Mbc Notification';
+
+        $this->log_action($logAction, $url, $notification);
 
         if ($validator->fails()) {
           $response['status'] = 'FAILED';
           $response['errors'] = $validator->messages();
           return response()->json($response, 200);
         }
-
-        $notification['msisdn'] = $request->msisdn;
-        $notification['action'] = $request->action;
-
-        $url = $request->fullUrl();
-        $logAction = 'Mbc Notification';
-
-        $this->log_action($logAction, $url, $notification);
 
         $notification['url'] = $url;
 
