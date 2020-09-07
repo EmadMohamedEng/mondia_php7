@@ -2,12 +2,6 @@
 @section('page_title') @lang('front.zakah') @endsection
 @section('content')
 
-<style>
-  .main_container {
-    padding-bottom: 23%;
-  }
-</style>
-
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
   <section class="zakkah_v2_page">
     <div class="container p-0 m-0">
