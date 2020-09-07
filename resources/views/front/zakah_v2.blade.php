@@ -541,20 +541,20 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="zakah_result w-100">
-      <div class="row p-2">
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 flex_center">
-          <p class="zakah_result_right mb-0">@lang('front.zakah_page2.total') @lang('front.zakah_page2.original')</p>
+      <div class="zakah_result">
+        <div class="row p-2">
+          <div class="col-md-6 col-lg-6 col-xl-6 col-6 flex_center">
+            <p class="zakah_result_right mb-0">@lang('front.zakah_page2.total') @lang('front.zakah_page2.original')</p>
 
-          <p class="zakah_result_right mb-0 all_money">0</p>
-        </div>
+            <p class="zakah_result_right mb-0 all_money">0</p>
+          </div>
 
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 flex_center">
-          <p class="zakah_result_left mb-0">@lang('front.zakah_page2.zakat_due')</p>
+          <div class="col-md-6 col-lg-6 col-xl-6 col-6 flex_center">
+            <p class="zakah_result_left mb-0">@lang('front.zakah_page2.zakat_due')</p>
 
-          <p class="zakah_result_left mb-0 zakah">0</p>
+            <p class="zakah_result_left mb-0 zakah">0</p>
+          </div>
         </div>
       </div>
     </div>
@@ -565,17 +565,17 @@
 
 @section('script')
 <script>
-  var nsapPrice  = 0 // it's calcaulte from price of gold in country (21 gm) now it's 1000*85
-  var hisMoney   = 0 // all money that he have and it's belong to the person
+  var nsapPrice = 0 // it's calcaulte from price of gold in country (21 gm) now it's 1000*85
+  var hisMoney = 0 // all money that he have and it's belong to the person
   var otherMoney = 0 // all money that he shold retrive to people
-  var all_money  = 0 // all money after he retrive money
+  var all_money = 0 // all money after he retrive money
 
-  $('.gram_price').keyup(function(){
+  $('.gram_price').keyup(function() {
     nsapPrice = parseInt($(this).val() * 85)
-    $('.nsap_result').html( nsapPrice )
+    $('.nsap_result').html(nsapPrice)
   })
 
-  $('.his_money, .other_money').keyup(function(){
+  $('.his_money, .other_money').keyup(function() {
     calculateHisMoney()
     calculateOtherMoney()
     calculateZakah()
@@ -586,8 +586,8 @@
     all_money = hisMoney - otherMoney
     $('.all_money').html(all_money)
 
-    if(all_money >= nsapPrice) {
-      $('.zakah').html( (all_money * 2.5) /100 )
+    if (all_money >= nsapPrice) {
+      $('.zakah').html((all_money * 2.5) / 100)
     } else {
       $('.zakah').html(0)
     }
@@ -597,8 +597,8 @@
   function calculateHisMoney() {
     hisMoney = 0
 
-    $(".his_money").each(function(index,element){
-      if($(this).val())
+    $(".his_money").each(function(index, element) {
+      if ($(this).val())
         hisMoney = parseInt(hisMoney) + parseInt($(this).val())
     });
   }
@@ -607,11 +607,10 @@
   function calculateOtherMoney() {
     otherMoney = 0
 
-    $(".other_money").each(function(index,element){
-      if($(this).val())
-      otherMoney = parseInt(otherMoney) + parseInt($(this).val())
+    $(".other_money").each(function(index, element) {
+      if ($(this).val())
+        otherMoney = parseInt(otherMoney) + parseInt($(this).val())
     });
   }
-
 </script>
 @endsection
