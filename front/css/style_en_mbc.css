@@ -1395,6 +1395,7 @@ select:active {
 
   .main_container {
     padding-top: 4rem;
+    padding-bottom: 20%;
   }
   .main_container .header {
     position: fixed;
@@ -1730,6 +1731,7 @@ select:active {
 
   .main_container {
     padding-top: 4rem;
+    padding-bottom: 17%;
   }
   .main_container .header {
     position: fixed;
@@ -2077,6 +2079,7 @@ select:active {
 
   .main_container {
     padding-top: 4rem;
+    padding-bottom: 17%;
   }
   .main_container .header {
     position: fixed;
@@ -2438,6 +2441,7 @@ select:active {
 
   .main_container {
     padding-top: 4rem;
+    padding-bottom: 17%;
   }
   .main_container .header {
     position: fixed;
