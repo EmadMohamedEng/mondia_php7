@@ -50,7 +50,7 @@ class MbcController extends Controller
 
     public function MO_SMS_Posting()
     {
-       $url = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx';
+       $url = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL';
 
       // $headers = [
       //   'Content-Type: application/xml',
