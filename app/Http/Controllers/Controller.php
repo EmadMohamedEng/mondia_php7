@@ -71,7 +71,7 @@ abstract class Controller extends BaseController
     }
 
 
-    public function SendRequestPost($URL, $JSON, $headers)
+    public function SendRequestPost($URL, $JSON, $headers, $user, $pass)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $URL);
@@ -82,6 +82,7 @@ abstract class Controller extends BaseController
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_USERPWD, $user.":".$pass); // username and password - declared at the top of the doc
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $JSON);
         $sOutput = curl_exec($ch);

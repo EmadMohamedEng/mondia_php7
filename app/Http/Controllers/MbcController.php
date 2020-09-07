@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\MbcNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use SoapClient;
 
 class MbcController extends Controller
 {
@@ -170,10 +171,12 @@ class MbcController extends Controller
 
     public function MO_SMS_Posting()
     {
-      $url = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx';
+       $url = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL';
 
-      $headers['Content-Type'] = 'application/xml';
-      $headers['charset'] = 'utf-8';
+      // $headers = [
+      //   'Content-Type: application/xml',
+      //   'charset: utf-8'
+      // ];
 
       $Xmldoc['SmsID'] = '3';
       $Xmldoc['MobileNo'] = '966535550107';
@@ -201,7 +204,11 @@ class MbcController extends Controller
 </Packet>";
 
 
-      $response = $this->SendRequestPost($url, json_encode($parameters), $headers);
+      // $response = $this->SendRequestPost($url, json_encode($parameters), $headers);
+
+      $client = new SoapClient($url);
+
+      $response = $client->GetSmsIN($parameters);
 
       dd($response);
 
