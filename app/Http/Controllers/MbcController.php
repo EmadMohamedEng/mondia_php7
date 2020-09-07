@@ -206,4 +206,110 @@ class MbcController extends Controller
       dd($response);
 
     }
+
+
+    public function mbc_sent2(Request $request)
+    {
+        $xml = '<?xml version="1.0" encoding="utf-8"?>
+        <Packet><SMS>
+        <SmsID>3</SmsID>
+        <MobileNo>966535550107</MobileNo>
+        <Country>KSA</Country>
+        <Operator>STC</Operator>
+        <Shortcode>88888</Shortcode>
+        <Msgtxt>text 3</Msgtxt>
+        <ServiceID>2</ServiceID>
+        </SMS>
+        <SMS>
+        <SmsID>2</SmsID>
+        <MobileNo>966535550107</MobileNo>
+        <Country>KSA</Country>
+        <Operator>STC</Operator>
+        <Shortcode>88888</Shortcode>
+        <Msgtxt>text 2</Msgtxt>
+        <Lang>E</Lang>
+        <ServiceID>1</ServiceID>
+        </SMS>
+        </Packet>';
+
+
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => "http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx/GetSmsIN",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => $xml,
+        CURLOPT_HTTPHEADER => array(
+            "Content-Type: application/soap+xml; charset=utf-8",
+            "Accept: text/plain" ,
+            "UserName: webSourceOut",
+            "UserPass: 2015Source@SMS_mbc",
+
+        ),
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+
+        var_dump(  $response ); die;
+
+        /*response result  :
+            <?xml version="1.0" encoding="utf-8"?>
+            <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <soap:Body>
+                    <SMSSubmitResponse xmlns="http://mmdcb.binarywaves.com/">
+                        <SMSSubmitResult>
+                            <transactionDate>5/13/2020 3:26:51 PM</transactionDate>
+                            <responseCode>0</responseCode>
+                            <description>Success</description>
+                            <MSISDN>96512345678</MSISDN>
+                        </SMSSubmitResult>
+                    </SMSSubmitResponse>
+                </soap:Body>
+            </soap:Envelope>
+        */
+
+        $doc = new \DOMDocument('1.0', 'utf-8');
+        $clean_xml = str_ireplace(['SOAP-ENV:', 'SOAP:'], '', $response);
+        $xmlres = simplexml_load_string($clean_xml);
+        $result  = $xmlres;
+ //       $responseCode = $result->Body->SMSSubmitResponse->SMSSubmitResult->responseCode ; // success
+        if(isset($result->Body->SMSSubmitResponse->SMSSubmitResult->responseCode)){
+            $responseCode =  $result->Body->SMSSubmitResponse->SMSSubmitResult->responseCode ;
+        }else{
+            $responseCode = "Failed" ;
+        }
+
+
+        // Log Files
+        $result = array();
+        $result['date'] = Carbon::now()->format('Y-m-d H:i:s');
+        $result['request'] =  $xml;
+        $result['response'] =  $response;
+        $result['responseCode'] =  $responseCode;
+        $actionName = "Binary MO Send";
+        $URL = $request->fullUrl();
+        $this->log($actionName, $URL, $result);  // log in
+
+      // Log DB
+        $Binary = new Binary();
+        $Binary->request =  $xml;
+        $Binary->response =  $response;
+        $Binary->responseCode = $responseCode;
+        $Binary->save();
+
+        return $responseCode;
+
+    }
+
+
+
 }
