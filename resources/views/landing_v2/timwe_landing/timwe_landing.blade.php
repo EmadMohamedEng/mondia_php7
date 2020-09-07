@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!--Mobile Meta-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ooredoo Qatar landing page</title>
+  <title>islamic landing page</title>
   <link rel="stylesheet" href='{{url('front/stc')}}/css/bootstrap.min.css'>
   <link rel="stylesheet" href='{{url('front/stc')}}/css/all.min.css'>
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
@@ -93,7 +93,7 @@ if ($lang == 'ar') {
             <div class="form-group form-inline">
               <label for="phone"><span>974</span></label>
               <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-              <input type="tel" class="form-control" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" oninvalid="setCustomValidity('يجب ان تدخل 8 ارقام')" name="number" required pattern="[0-9]{8}">
+              <input type="tel" class="form-control" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')"  name="number" required pattern="[0-9]{8}">
               <span class="validity"></span>
             </div>
 

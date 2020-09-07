@@ -12,8 +12,8 @@
 */
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route; 
- 
+use Illuminate\Support\Facades\Route;
+
 
 get_static_routes() ;
 get_dynamic_routes();
@@ -72,3 +72,5 @@ Route::get('/landing_v2', function () {
 Route::post('AddSubscriptionContractRequest', 'FrontController@AddSubscriptionContractRequest');
 Route::get('new_landing', 'FrontController@new_landing');
 Route::get('unsub', 'FrontController@unsub');
+
+Route::get('mbc_sent_mt', 'MbcController@mbc_sent_mt');

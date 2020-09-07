@@ -394,8 +394,10 @@ class FrontController extends Controller
 
     public function zakah(Request $request)
     {
-        return view('front.zakah');
-
+      if ( request()->get("OpID") == mbc ) {
+        return view('front.zakah_v2');
+      }
+      return view('front.zakah');
     }
 
     public function zakah_v2(Request $request)
