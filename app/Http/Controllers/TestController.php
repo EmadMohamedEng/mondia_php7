@@ -63,16 +63,34 @@ class TestController extends Controller
     $response = curl_exec($ch);
     curl_close($ch);
 
-
+   print(  $response   ) ;
+   echo "<hr>";
 
     $doc = new \DOMDocument('1.0', 'utf-8');
     $clean_xml = str_ireplace(['SOAP-ENV:', 'SOAP:'], '', $response);
     $xmlres = simplexml_load_string($clean_xml);
     $result  = $xmlres;
 
+    print(  $xmlres  ) ;
+    echo "<hr>";
+
     $xml2 = $xmlres->Body->GetSmsINResponse->GetSmsINResult ;   
+
+
+    print(  $xml2 ) ;
+    echo "<hr>";
+
+
     $xml3 = simplexml_load_string($xml2);
+
+    print(  $xml3  ) ;
+    echo "<hr>";
+
     $code =   $xml3->SMS->Code ;
+
+    
+    print(  $code ) ;
+    echo "<hr>";
 
     if($code  == "Success"){
       $code_status = 1 ;
