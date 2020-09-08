@@ -64,7 +64,7 @@ class MbcController extends Controller
       $Xmldoc['Lang'] = 'E';
       $Xmldoc['ServiceID'] = '2';
 
-      $xml_data = "<soap:Envelope xmlns:soap='http://www.w3.org/2003/05/soap-envelope' xmlns:tem='http://tempuri.org/'>
+      $Xmldoc['Request'] = "<soap:Envelope xmlns:soap='http://www.w3.org/2003/05/soap-envelope' xmlns:tem='http://tempuri.org/'>
       <soap:Header/>
         <soap:Body>
          <tem:GetSmsIN>
@@ -91,17 +91,20 @@ class MbcController extends Controller
         </soap:Body>
       </soap:Envelope>";
 
-
       $ch = curl_init($URL);
       curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
       curl_setopt($ch, CURLOPT_POST, 1);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, "$xml_data");
+      curl_setopt($ch, CURLOPT_POSTFIELDS, $Xmldoc['Request']);
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
       $output = curl_exec($ch);
       curl_close($ch);
 
-      $response = simplexml_load_string($output);
+      $Xmldoc['Response'] = $output;
+      $Xmldoc['ResponseCode'] = $output;
 
-      return $response->children();
+      MbcSendMt::create($Xmldoc);
+
+      return $output;
+
     }
 }
