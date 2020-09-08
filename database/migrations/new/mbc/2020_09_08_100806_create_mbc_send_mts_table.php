@@ -20,11 +20,11 @@ class CreateMbcSendMtsTable extends Migration
             $table->string('Country', 50);
             $table->string('Operator', 50);
             $table->string('Shortcode', 50);
-            $table->string('Msgtxt', 300);
+            $table->text('Msgtxt');
             $table->string('Lang', 10);
             $table->string('ServiceID', 50);
-            $table->string('Request', 500);
-            $table->string('Response', 500);
+            $table->text('Request');
+            $table->text('Response');
             $table->string('ResponseCode', 50);
             $table->timestamps();
         });
