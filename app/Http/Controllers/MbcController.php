@@ -103,6 +103,8 @@ class MbcController extends Controller
 
       $response = simplexml_load_string($output);
 
+      print_r( $response );die;
+
       return $response['response']['sms']['code'];
     }
 
