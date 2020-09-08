@@ -70,29 +70,21 @@ class TestController extends Controller
     $xmlres = simplexml_load_string($clean_xml);
     $result  = $xmlres;
 
-    print_r($result); 
-    echo "<hr>" ;
-    $xml2 = $result->Body->GetSmsINResponse->GetSmsINResult ;
-    print_r($xml2 ); 
-    echo "<hr>" ;
+    $xml2 = $xmlres->Body->GetSmsINResponse->GetSmsINResult ;
+    print_r( $xmlres->Body->GetSmsINResponse->GetSmsINResult->SMS->Code);die;
+   
     $xml3 = simplexml_load_string($xml2);
-    print_r($xml3 );
-    echo "<hr>" ;
-   $code =   $xml3->SMS->Code ;
+    $code =   $xml3->SMS->Code ;
  
 
     if($code  == "Success"){
       $code_status = 1 ;
-
     }else{
       $code_status = 0 ;
     }
 
-
     echo  $code_status ;
 
-
-  
   }
 
 
