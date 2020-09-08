@@ -116,7 +116,7 @@ class MbcController extends Controller
       </soap:Body>
    </soap:Envelope>';
 
-      $URL = "https://test.testserver.com/PriceAvailability";
+      $URL = "http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL";
 
       $ch = curl_init($URL);
       curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
