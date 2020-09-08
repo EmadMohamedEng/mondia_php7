@@ -6,6 +6,7 @@ use SoapClient;
 use App\MbcSendMt;
 use App\MbcNotification;
 use Illuminate\Http\Request;
+use Artisaninweb\SoapWrapper\SoapWrapper;
 use Illuminate\Support\Facades\Validator;
 
 class MbcController extends Controller
@@ -108,7 +109,34 @@ class MbcController extends Controller
 
       MbcSendMt::create($Xmldoc);
 
-      return $output;
+      // return $output;
+
+      $soap = new SoapWrapper;
+      $soap->add('mbc',function ($service) use($URL) {
+        $service->wsdl($URL)->trace(true);
+      });
+
+      $data = [
+        'UserName' => $UserName,
+        'UserPass' => $UserPass,
+        'Xmldoc'   => '<?xml version="1.0" encoding="utf-8"?>
+        <Packet>
+         <SMS>
+         <SmsID>2</SmsID>
+         <MobileNo>966535550107</MobileNo>
+         <Country>KSA</Country>
+         <Operator>STC</Operator>
+         <Shortcode>88888</Shortcode>
+         <Msgtxt>text 2</Msgtxt>
+         <Lang>E</Lang>
+         <ServiceID>1</ServiceID>
+         </SMS>
+        </Packet>'
+      ];
+      // Using the added service
+      $soap->client('mbc', function ($service) use ($data) {
+        dd($service->call('GetSmsIN', [$data]));
+      });
 
     }
 }
