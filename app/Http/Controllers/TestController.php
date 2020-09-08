@@ -78,7 +78,8 @@ class TestController extends Controller
     $xml3 = simplexml_load_string($xml2);
     print_r($xml3 );
     echo "<hr>" ;
-   var_dump(  $xml3->SMS->Code)   ;
+   $code =   $xml3->SMS->Code ;
+   echo   $code ;
     die;
 
 
