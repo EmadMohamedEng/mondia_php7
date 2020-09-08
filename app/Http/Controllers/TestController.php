@@ -12,7 +12,7 @@ class TestController extends Controller
 {
 
 
-  public function emad_mbc(Request $request)
+  public function mbc_sent_mt(Request $request)
   {
     $URL = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL';
 
@@ -72,26 +72,9 @@ class TestController extends Controller
     $xmlres = simplexml_load_string($clean_xml);
     $result  = $xmlres;
 
-    print(  $xmlres  ) ;
-    echo "<hr>";
-
     $xml2 = $xmlres->Body->GetSmsINResponse->GetSmsINResult ;
-
-
-    print(  $xml2 ) ;
-    echo "<hr>";
-
-
     $xml3 = simplexml_load_string($xml2);
-
-    print(  $xml3  ) ;
-    echo "<hr>";
-
     $code =   $xml3->SMS->Code ;
-
-
-    print(  $code ) ;
-    echo "<hr>";
 
     if($code  == "Success"){
       $code_status = 1 ;
@@ -99,10 +82,9 @@ class TestController extends Controller
       $code_status = 0 ;
     }
 
-    echo  $code_status ;
 
 
-    $log_url = url('emad_mbc');
+    $log_url = url('mbc_sent_mt');
     $logAction = 'Mbc Sent Mt Api';
     $log_array=array() ;
     $log_array['response ']= $response;

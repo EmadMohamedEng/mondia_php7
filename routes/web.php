@@ -95,9 +95,7 @@ define('SNAP_VIVA_CHANNEL_ID', 4493);
 /**************** mbc notification*************** */
 Route::get('mbc_notifications', 'MbcController@mbc_notifications');
 Route::get('MO_SMS_Posting', 'MbcController@MO_SMS_Posting');
-Route::get('mbc_sent_mt', 'TestController@mbc_sent_mt');
-Route::get('mbc_sent2', 'TestController@mbc_sent2');
-Route::get('emad_mbc','TestController@emad_mbc');
+Route::get('mbc_sent_mt','TestController@mbc_sent_mt');
 /********************************* */
 
 /******timwe_op_id******* Start config Timwe******************/
