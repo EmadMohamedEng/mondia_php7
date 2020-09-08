@@ -58,10 +58,10 @@ class MbcController extends Controller
       $UserPass = '2015Source@SMS_mbc';
 
       $Xmldoc['SmsID'] = '3';
-      $Xmldoc['MobileNo'] = '966535550107';
-      $Xmldoc['Country'] = 'KSA';
-      $Xmldoc['Operator'] = 'STC';
-      $Xmldoc['Shortcode'] = '88888';
+      $Xmldoc['MobileNo'] = '962782777131';
+      $Xmldoc['Country'] = 'jordan';
+      $Xmldoc['Operator'] = 'umniah';
+      $Xmldoc['Shortcode'] = '94099';
       $Xmldoc['Msgtxt'] = 'text 3';
       $Xmldoc['Lang'] = 'E';
       $Xmldoc['ServiceID'] = '2';
@@ -93,6 +93,7 @@ class MbcController extends Controller
         </soap:Body>
       </soap:Envelope>";
 
+
       $ch = curl_init($URL);
       curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
       curl_setopt($ch, CURLOPT_POST, 1);
@@ -105,9 +106,7 @@ class MbcController extends Controller
 
       $response = simplexml_load_string($output);
 
-      print_r( $response );die;
-
-      return $response['response']['sms']['code'];
+      return $response->children();
     }
 
 
