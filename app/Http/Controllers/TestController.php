@@ -11,6 +11,78 @@ class TestController extends Controller
 {
 
 
+  public function emad_mbc()
+  {
+    $URL = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL';
+
+    $UserName ='webSourceOut';
+    $UserPass = '2015Source@SMS_mbc';
+
+    $Xmldoc['SmsID'] = '3';
+    $Xmldoc['MobileNo'] = '962782777131';
+    $Xmldoc['Country'] = 'jordan';
+    $Xmldoc['Operator'] = 'umniah';
+    $Xmldoc['Shortcode'] = '94099';
+    $Xmldoc['Msgtxt'] = 'text 3';
+    $Xmldoc['Lang'] = 'E';
+    $Xmldoc['ServiceID'] = '2';
+
+    $xml_data = "<soap:Envelope xmlns:soap='http://www.w3.org/2003/05/soap-envelope' xmlns:tem='http://tempuri.org/'>
+    <soap:Header/>
+      <soap:Body>
+       <tem:GetSmsIN>
+          <!--Optional:-->
+          <tem:UserName>$UserName</tem:UserName>
+          <!--Optional:-->
+          <tem:UserPass>$UserPass</tem:UserPass>
+          <!--Optional:-->
+          <tem:xmldoc>
+          <Packet>
+              <SMS>
+                  <SmsID>".$Xmldoc['SmsID']."</SmsID>
+                  <MobileNo>".$Xmldoc['MobileNo']."</MobileNo>
+                  <Country>".$Xmldoc['Country']."</Country>
+                  <Operator>".$Xmldoc['Operator']."</Operator>
+                  <Shortcode>".$Xmldoc['Shortcode']."</Shortcode>
+                  <Msgtxt>".$Xmldoc['Msgtxt']."</Msgtxt>
+                  <Lang>".$Xmldoc['Lang']."</Lang>
+                  <ServiceID>".$Xmldoc['ServiceID']."</ServiceID>
+              </SMS>
+          </Packet>
+          </tem:xmldoc>
+       </tem:GetSmsIN>
+      </soap:Body>
+    </soap:Envelope>";
+
+
+    $ch = curl_init($URL);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, "$xml_data");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+
+
+    $doc = new \DOMDocument('1.0', 'utf-8');
+    $clean_xml = str_ireplace(['SOAP-ENV:', 'SOAP:'], '', $response);
+    $xmlres = simplexml_load_string($clean_xml);
+    $result  = $xmlres;
+
+    print_r($result); die;
+//       $responseCode = $result->Body->SMSSubmitResponse->SMSSubmitResult->responseCode ; // success
+    if(isset($result->Body->SMSSubmitResponse->SMSSubmitResult->responseCode)){
+        $responseCode =  $result->Body->SMSSubmitResponse->SMSSubmitResult->responseCode ;
+    }else{
+        $responseCode = "Failed" ;
+    }
+
+
+  
+  }
+
+
 
     public function mbc_sent_mt(Request $request){
 

@@ -97,7 +97,7 @@ Route::get('mbc_notifications', 'MbcController@mbc_notifications');
 Route::get('MO_SMS_Posting', 'MbcController@MO_SMS_Posting');
 Route::get('mbc_sent_mt', 'TestController@mbc_sent_mt');
 Route::get('mbc_sent2', 'TestController@mbc_sent2');
-Route::get('test_mbc','TestController@test_mbc');
+Route::get('emad_mbc','TestController@emad_mbc');
 /********************************* */
 
 /******timwe_op_id******* Start config Timwe******************/
