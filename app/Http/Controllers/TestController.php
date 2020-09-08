@@ -79,8 +79,17 @@ class TestController extends Controller
     print_r($xml3 );
     echo "<hr>" ;
    $code =   $xml3->SMS->Code ;
-   echo   $code ;
-    die;
+ 
+
+    if($code  == "Success"){
+      $code_status = 1 ;
+
+    }else{
+      $code_status = 0 ;
+    }
+
+
+    echo  $code_status ;
 
 
   
