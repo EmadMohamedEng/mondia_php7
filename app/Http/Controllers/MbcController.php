@@ -101,6 +101,8 @@ class MbcController extends Controller
       $output = curl_exec($ch);
       curl_close($ch);
 
+      print_r(   $output );die;
+
       $response = simplexml_load_string($output);
 
       print_r( $response );die;
