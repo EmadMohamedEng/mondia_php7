@@ -50,7 +50,7 @@ class MbcController extends Controller
 
     public function MO_SMS_Posting()
     {
-       $url = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL';
+      /*$url = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL';
 
       // $headers = [
       //   'Content-Type: application/xml',
@@ -80,16 +80,56 @@ class MbcController extends Controller
 <Lang>{$Xmldoc['Lang']}</Lang>
 <ServiceID>{$Xmldoc['ServiceID']}</ServiceID>
 </SMS>
-</Packet>";
+</Packet>";*/
 
 
       // $response = $this->SendRequestPost($url, json_encode($parameters), $headers);
 
-      $client = new SoapClient($url);
+      // $client = new SoapClient($url);
 
-      $response = $client->GetSmsIN($parameters);
+      // $response = $client->GetSmsIN($parameters);
 
-      dd($response);
+      $xml_data = '<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+      <soap:Header/>
+      <soap:Body>
+         <tem:GetSmsIN>
+            <!--Optional:-->
+            <tem:UserName>webSourceOut</tem:UserName>
+            <!--Optional:-->
+            <tem:UserPass>2015Source@SMS_mbc</tem:UserPass>
+            <!--Optional:-->
+            <tem:xmldoc>
+            <Packet>
+       <SMS>
+           <SmsID>3</SmsID>
+           <MobileNo>962782777131</MobileNo>
+           <Country>jordan</Country>
+           <Operator>umniah</Operator>
+           <Shortcode>94099</Shortcode>
+           <Msgtxt>text 3</Msgtxt>
+           <lang>E</lang>
+           <ServiceID>2</ServiceID>
+       </SMS>
+   </Packet>
+            </tem:xmldoc>
+         </tem:GetSmsIN>
+      </soap:Body>
+   </soap:Envelope>';
+
+      $URL = "https://test.testserver.com/PriceAvailability";
+
+      $ch = curl_init($URL);
+      curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
+      curl_setopt($ch, CURLOPT_POST, 1);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, "$xml_data");
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      $output = curl_exec($ch);
+      curl_close($ch);
+
+
+      print_r($output);
+
+      // dd($response);
 
     }
 }
