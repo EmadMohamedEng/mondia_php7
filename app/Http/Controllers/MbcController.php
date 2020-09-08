@@ -204,6 +204,55 @@ class MbcController extends Controller
 </Packet>";
 
 
+
+$parameters['Packet']= array(
+  "SMS" => array(
+      array(
+          "SmsID" => 3,
+          "MobileNo" => "966535550107",
+          "Country" => "KSA",
+          "Operator" => "STC",
+          "Shortcode" => "88888",
+          "Msgtxt" => "text 3",
+          "ServiceID" => 2,
+
+      )
+
+  )
+);
+
+
+
+$parameters['xmldoc']= array(
+  'Packet' => array(
+
+          'SMS' => array(
+
+              array(
+                "SmsID" => 3,
+                "MobileNo" => "966535550107",
+                "Country" => "KSA",
+                "Operator" => "STC",
+                "Shortcode" => "88888",
+                "Msgtxt" => "text 3",
+                "ServiceID" => 2,
+
+              ),
+              array(
+                "SmsID" => 4,
+                "MobileNo" => "966535550107",
+                "Country" => "jordan",
+                "Operator" => "umniah",
+                "Shortcode" => "88888",
+                "Msgtxt" => "text 3",
+                "ServiceID" => 2,
+
+            )
+          )
+
+  ));
+
+
       // $response = $this->SendRequestPost($url, json_encode($parameters), $headers);
 
       $client = new SoapClient($url);
