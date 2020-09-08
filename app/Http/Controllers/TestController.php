@@ -72,7 +72,11 @@ class TestController extends Controller
 
     print_r($result); 
     echo "<hr>" ;
-    print_r($result->Body->GetSmsINResponse->GetSmsINResult); 
+    $xml2 = $result->Body->GetSmsINResponse->GetSmsINResult ;
+    print_r($xml2 ); 
+    echo "<hr>" ;
+    $xml3 = simplexml_load_string($xml2);
+    print_r($xml3 );
     die;
 //       $responseCode = $result->Body->GetSmsINResponse->GetSmsINResult
     if(isset($result->Body->SMSSubmitResponse->SMSSubmitResult->responseCode)){
