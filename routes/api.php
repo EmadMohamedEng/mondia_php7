@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('man_elkeal_check_status', 'ImiController@man_elkeal_check_status');
+Route::post('mbc_sent_mt_response','TestController@mbc_sent_mt_response');

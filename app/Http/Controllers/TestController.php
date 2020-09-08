@@ -14,7 +14,9 @@ class TestController extends Controller
 
   public function mbc_sent_mt(Request $request)
   {
-    $URL = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL';
+  //  $URL = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL';
+
+    $URL = 'http://localhost/mondia_php7/api/mbc_sent_mt_response';
 
     $UserName ='webSourceOut';
     $UserPass = '2015Source@SMS_mbc';
@@ -64,14 +66,23 @@ class TestController extends Controller
     $response = curl_exec($ch);
     curl_close($ch);
 
-   print(  $response   ) ;
-   echo "<hr>";
-   die;
+  //  print(  $response   ) ;
+  //  echo "<hr>";
+  //  die;
 
     $doc = new \DOMDocument('1.0', 'utf-8');
-    $clean_xml = str_ireplace(['SOAP-ENV:', 'SOAP:'], '', $response);
+    $clean_xml = str_ireplace(['SOAP-ENV:', 'SOAP:','soap:Body','<?xml version="1.0" encoding="utf-8"?>'], '', $response);
+
+    print(     $clean_xml ) ;
+
+    die;
+
+
     $xmlres = simplexml_load_string($clean_xml);
-    $result  = $xmlres;
+
+    // print(      $xmlres  ) ;
+    // echo "<hr>";
+    // die;
 
     $xml2 = $xmlres->Body->GetSmsINResponse->GetSmsINResult ;
     $xml3 = simplexml_load_string($xml2);
@@ -108,6 +119,22 @@ class TestController extends Controller
   }
 
 
+
+
+  public function mbc_sent_mt_response(Request $request)
+  {
+    $response = '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+    <GetSmsINResponse xmlns="http://tempuri.org/">
+    <GetSmsINResult>
+    <?xml version="1.0" encoding="UTF-8"?><Response><SMS><Code>Success</Code></SMS></Response>
+    </GetSmsINResult>
+    </GetSmsINResponse>
+    </soap:Body>
+    </soap:Envelope>' ;
+    return $response  ;
+
+  }
 
 
     public function test_mbc()

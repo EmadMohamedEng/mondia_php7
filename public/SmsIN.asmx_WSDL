@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetSmsIN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmldoc">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSmsINResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSmsINResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSmsINSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSmsIN" />
+  </wsdl:message>
+  <wsdl:message name="GetSmsINSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSmsINResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SmsINSoap">
+    <wsdl:operation name="GetSmsIN">
+      <wsdl:input message="tns:GetSmsINSoapIn" />
+      <wsdl:output message="tns:GetSmsINSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SmsINSoap" type="tns:SmsINSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSmsIN">
+      <soap:operation soapAction="http://tempuri.org/GetSmsIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SmsINSoap12" type="tns:SmsINSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSmsIN">
+      <soap12:operation soapAction="http://tempuri.org/GetSmsIN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SmsIN">
+    <wsdl:port name="SmsINSoap" binding="tns:SmsINSoap">
+      <soap:address location="http://localhost/mondia_php7/mbc_sent_mt_response" />
+    </wsdl:port>
+    <wsdl:port name="SmsINSoap12" binding="tns:SmsINSoap12">
+      <soap12:address location="http://localhost/mondia_php7/mbc_sent_mt_response" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
