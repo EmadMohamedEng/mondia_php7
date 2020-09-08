@@ -52,7 +52,10 @@ class MbcController extends Controller
     {
       $URL = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL';
 
-      /*$Xmldoc['SmsID'] = '3';
+      $UserName ='webSourceOut';
+      $UserPass = '2015Source@SMS_mbc';
+
+      $Xmldoc['SmsID'] = '3';
       $Xmldoc['MobileNo'] = '966535550107';
       $Xmldoc['Country'] = 'KSA';
       $Xmldoc['Operator'] = 'STC';
@@ -61,54 +64,32 @@ class MbcController extends Controller
       $Xmldoc['Lang'] = 'E';
       $Xmldoc['ServiceID'] = '2';
 
-      $parameters = ['UserName' =>'webSourceOut',
-      'UserPass' => '2015Source@SMS_mbc',
-      'Xmldoc' => "<?xml version='1.0' encoding='utf-8'?>
-<Packet>
-<SMS>
-<SmsID>{$Xmldoc['SmsID']}</SmsID>
-<MobileNo>{$Xmldoc['MobileNo']}</MobileNo>
-<Country>{$Xmldoc['Country']}</Country>
-<Operator>{$Xmldoc['Operator']}</Operator>
-<Shortcode>{$Xmldoc['Shortcode']}</Shortcode>
-<Msgtxt>{$Xmldoc['Msgtxt']}</Msgtxt>
-<Lang>{$Xmldoc['Lang']}</Lang>
-<ServiceID>{$Xmldoc['ServiceID']}</ServiceID>
-</SMS>
-</Packet>"];
-
-      $client = new SoapClient($URL);
-
-      $response = $client->GetSmsIN($parameters);
-
-      dd($response);*/
-
-      $xml_data = '<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+      $xml_data = "<soap:Envelope xmlns:soap='http://www.w3.org/2003/05/soap-envelope' xmlns:tem='http://tempuri.org/'>
       <soap:Header/>
-      <soap:Body>
+        <soap:Body>
          <tem:GetSmsIN>
             <!--Optional:-->
-            <tem:UserName>webSourceOut</tem:UserName>
+            <tem:UserName>$UserName</tem:UserName>
             <!--Optional:-->
-            <tem:UserPass>2015Source@SMS_mbc</tem:UserPass>
+            <tem:UserPass>$UserPass</tem:UserPass>
             <!--Optional:-->
             <tem:xmldoc>
             <Packet>
-       <SMS>
-           <SmsID>3</SmsID>
-           <MobileNo>962782777131</MobileNo>
-           <Country>jordan</Country>
-           <Operator>umniah</Operator>
-           <Shortcode>94099</Shortcode>
-           <Msgtxt>text 3</Msgtxt>
-           <lang>E</lang>
-           <ServiceID>2</ServiceID>
-       </SMS>
-   </Packet>
+                <SMS>
+                    <SmsID>".$Xmldoc['SmsID']."</SmsID>
+                    <MobileNo>".$Xmldoc['MobileNo']."</MobileNo>
+                    <Country>".$Xmldoc['Country']."</Country>
+                    <Operator>".$Xmldoc['Operator']."</Operator>
+                    <Shortcode>".$Xmldoc['Shortcode']."</Shortcode>
+                    <Msgtxt>".$Xmldoc['Msgtxt']."</Msgtxt>
+                    <Lang>".$Xmldoc['Lang']."</Lang>
+                    <ServiceID>".$Xmldoc['ServiceID']."</ServiceID>
+                </SMS>
+            </Packet>
             </tem:xmldoc>
          </tem:GetSmsIN>
-      </soap:Body>
-   </soap:Envelope>';
+        </soap:Body>
+      </soap:Envelope>";
 
       $ch = curl_init($URL);
       curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
@@ -118,8 +99,8 @@ class MbcController extends Controller
       $output = curl_exec($ch);
       curl_close($ch);
 
+      $response = simplexml_load_string($output);
 
-      print_r($output);
-
+      return $response['response']['sms']['code'];
     }
 }
