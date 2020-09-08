@@ -102,6 +102,9 @@ class MbcController extends Controller
 
       $Xmldoc['Response'] = $output;
       $Xmldoc['ResponseCode'] = $output;
+      $logAction = 'Mbc Send Mt';
+
+      $this->log_action($logAction, $URL, $Xmldoc);
 
       MbcSendMt::create($Xmldoc);
 
