@@ -66,6 +66,7 @@ class TestController extends Controller
 
    print(  $response   ) ;
    echo "<hr>";
+   die;
 
     $doc = new \DOMDocument('1.0', 'utf-8');
     $clean_xml = str_ireplace(['SOAP-ENV:', 'SOAP:'], '', $response);
