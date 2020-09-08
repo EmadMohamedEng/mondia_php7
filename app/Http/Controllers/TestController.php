@@ -77,13 +77,9 @@ class TestController extends Controller
     echo "<hr>" ;
     $xml3 = simplexml_load_string($xml2);
     print_r($xml3 );
+    echo "<hr>" ;
+   var_dump(  $xml3->SMS->Code)   ;
     die;
-//       $responseCode = $result->Body->GetSmsINResponse->GetSmsINResult
-    if(isset($result->Body->SMSSubmitResponse->SMSSubmitResult->responseCode)){
-        $responseCode =  $result->Body->SMSSubmitResponse->SMSSubmitResult->responseCode ;
-    }else{
-        $responseCode = "Failed" ;
-    }
 
 
   
