@@ -11,7 +11,7 @@ class TestController extends Controller
 {
 
 
-  public function emad_mbc()
+  public function emad_mbc(Request $request)
   {
     $URL = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL';
 
@@ -81,6 +81,19 @@ class TestController extends Controller
     }
 
     echo  $code_status ;
+
+
+    $log_url = url('emad_mbc');
+    $logAction = 'Mbc Sent Mt Api';
+    $log_array=array() ;
+    $log_array['response ']= $response ;
+    $log_array['xmlres ']=  $xmlres ;
+    $log_array['xml2 ']=  $xml2 ;
+    $log_array['xml3 ']= $xml3 ;
+    $log_array['code ']= $code ;
+    $log_array['code_status ']= $code_status ;
+
+    $this->log_action($logAction, $log_url, $log_array);
 
   }
 
