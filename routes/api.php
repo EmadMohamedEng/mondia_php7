@@ -19,3 +19,18 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('man_elkeal_check_status', 'ImiController@man_elkeal_check_status');
 Route::post('mbc_sent_mt_response','TestController@mbc_sent_mt_response');
+
+
+
+
+// define constants
+define('AUTHORIZED',[1,100]);
+define('DECLINE',[2,200]);
+define('REFUNDED',[3,300]);
+define('ALL',[1,100,2,200,3,300]);
+
+
+Route::prefix('v1')->group(function() {
+  Route::get('users', 'TestController@users');
+
+  });
