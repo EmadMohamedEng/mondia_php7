@@ -30,7 +30,7 @@ define('REFUNDED',[3,300]);
 define('ALL',[1,100,2,200,3,300]);
 
 
-// Route::prefix('v1')->group(function() {
-//   Route::get('users', 'TestController@users');
+Route::prefix('v1')->group(function() {
+  Route::get('users', 'TestController@users');
 
-//   });
+  });

@@ -222,55 +222,65 @@ class TestController extends Controller
 
 // some api //
 
-    public function users(Request $request)
-    {
-    $result = array();
-    $providers_data = array();
-    $provider =   $request->get('provider') ?  $request->get('provider').'.json':'';
-    $statusCode =   $request->get('statusCode') ?? '';
-    $balanceMin =   $request->get('balanceMin') ? $request->get('balanceMin'):false;
-    $balanceMax =   $request->get('balanceMax') ? $request->get('balanceMax') : false;
-    $statusCodeArray = $this->action_type( $statusCode) ;
+public function users(Request $request)
+{
+$result = array();
+$providers_data = array();
+$all_providers_data = array();
+$provider =   $request->get('provider') ?  $request->get('provider').'.json':'';
+$statusCode =   $request->get('statusCode') ?? '';
+$balanceMin =   $request->get('balanceMin') ? $request->get('balanceMin'):false;
+$balanceMax =   $request->get('balanceMax') ? $request->get('balanceMax') : false;
+$currency =   $request->get('currency') ? $request->get('currency') : false;
+$statusCodeArray = $this->action_type( $statusCode) ;
 
 
 
-    $provider_path = public_path('json/'.$provider) ;
+$provider_path = public_path('json/'.$provider) ;
 
 
 
-    //Get a list of file paths using the glob function.
-  $allFilesList= glob($provider_path.'*');
-  //Loop through the array that glob returned.
-  foreach($allFilesList as $filename){
+//Get a list of file paths using the glob function.
+$allFilesList= glob($provider_path.'*');
+//Loop through the array that glob returned.
+foreach($allFilesList as $filename){
 
 
-   $provider_data = file_get_contents($filename);
-  $provider_data_object = json_decode(($provider_data) ) ;
-  $provider_users  = $provider_data_object->users ;
-      foreach (  $provider_users as $provider_user) {
-      $status =   isset($provider_user->statusCode) ? $provider_user->statusCode : $provider_user->status ;
+$provider_data = file_get_contents($filename);
+$provider_data_object = json_decode(($provider_data) ) ;
+$provider_users  = $provider_data_object->users ;
+  foreach (  $provider_users as $provider_user) {
+  $status =   isset($provider_user->statusCode) ? $provider_user->statusCode : $provider_user->status ;
+  $provider_currency =   $provider_user->Currency ?? $provider_user->currency ?? false ;
 
-        if(in_array( $status, $statusCodeArray)){
 
-          if(isset($provider_user->parentAmount) && $balanceMin &&  $balanceMax){
-            if($provider_user->parentAmount > $balanceMax || $provider_user->parentAmount <  $balanceMin ){
-              continue;
-            }
+  // escape for not limited values when searrch with min and max
+  if(optional($provider_user)->parentAmount && $balanceMax && $balanceMin  &&  ( $provider_user->parentAmount > $balanceMax  || $provider_user->parentAmount <  $balanceMin) ){
+      continue;
+}
 
-          }
-        $all_providers_data[] =$provider_user ;
+//ecape with not equal currecny when search with currency
+if($currency && $provider_currency && $provider_currency!= $currency ){
+  continue;
+}
 
-        }
 
-      }
+//limit by status
+if(in_array( $status, $statusCodeArray)){
+  $all_providers_data[] =$provider_user ;
+}
+
+
+
+
   }
+}
 
 
-   return  $all_providers_data ;
+return  $all_providers_data ;
 
 
-    }
-
+ }
 
 // get constant
     public function action_type($statusCode)
