@@ -94,10 +94,9 @@ define('SNAP_VIVA_CHANNEL_ID', 4493);
 
 /**************** mbc notification*************** */
 Route::get('mbc_notifications', 'MbcController@mbc_notifications');
-/********************************* */
-
-/**************** mbc notification*************** */
 Route::get('MO_SMS_Posting', 'MbcController@MO_SMS_Posting');
+Route::get('mbc_sent_mt','TestController@mbc_sent_mt');
+
 /********************************* */
 
 /******timwe_op_id******* Start config Timwe******************/
@@ -213,3 +212,8 @@ Route::get('timwe_test', function(){
 
     return redirect(url('/?OpID='.timwe_op_id()));
 });
+
+
+
+
+

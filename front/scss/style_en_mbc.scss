@@ -1153,6 +1153,7 @@ select {
 
         .card-header {
           border-bottom: none;
+
           button {
             color: $white_color;
 
@@ -1183,6 +1184,7 @@ select {
 
         .card-body {
           border-top: 1px solid $text_color;
+
           .currency_bg {
             background: transparent;
           }
@@ -1292,6 +1294,9 @@ select {
       background: $bg_color;
       position: fixed;
       bottom: 0;
+      width: 61%;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
 
       .zakah_result_right {
         text-align: center;
@@ -1785,6 +1790,7 @@ select {
 
   .main_container {
     padding-top: 4rem;
+    padding-bottom: 20%;
 
     .header {
       position: fixed;
@@ -2183,6 +2189,12 @@ select {
       width: 90%;
     }
 
+    .zakkah_v2_page {
+      .zakah_result {
+        width: 100%;
+      }
+    }
+
     .merath_page {
       width: 90%;
 
@@ -2300,6 +2312,7 @@ select {
 
   .main_container {
     padding-top: 4rem;
+    padding-bottom: 17%;
 
     .header {
       position: fixed;
@@ -2712,6 +2725,12 @@ select {
       width: 90%;
     }
 
+    .zakkah_v2_page {
+      .zakah_result {
+        width: 100%;
+      }
+    }
+
     .merath_page {
       width: 90%;
 
@@ -2831,6 +2850,7 @@ select {
 
   .main_container {
     padding-top: 4rem;
+    padding-bottom: 17%;
 
     .header {
       position: fixed;
@@ -3261,6 +3281,12 @@ select {
       width: 90%;
     }
 
+    .zakkah_v2_page {
+      .zakah_result {
+        width: 100%;
+      }
+    }
+
     .merath_page {
       width: 90%;
 
@@ -3382,6 +3408,7 @@ select {
 
   .main_container {
     padding-top: 4rem;
+    padding-bottom: 17%;
 
     .header {
       position: fixed;
@@ -3828,6 +3855,12 @@ select {
 
     .zakkah_page {
       width: 90%;
+    }
+
+    .zakkah_v2_page {
+      .zakah_result {
+        width: 100%;
+      }
     }
 
     .merath_page {
@@ -4623,6 +4656,18 @@ select {
       }
     }
 
+    .zakkah_v2_page {
+      margin: 4% auto;
+
+      .container {
+        max-width: 100%;
+      }
+
+      .zakah_result {
+        width: 100%;
+      }
+    }
+
     .merath_page {
       width: 90%;
       margin: 2.5rem auto;
@@ -5353,6 +5398,19 @@ select {
           }
         }
       }
+    }
+
+    .zakkah_v2_page {
+      margin: 4% auto;
+
+      .container {
+        max-width: 100%;
+      }
+
+      .zakah_result {
+        width: 100%;
+      }
+
     }
 
     .merath_page {

@@ -992,6 +992,9 @@ select:active {
   background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
   position: fixed;
   bottom: 0;
+  width: 61%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 .main_container .zakkah_v2_page .zakah_result .zakah_result_right {
   text-align: center;
@@ -1392,6 +1395,7 @@ select:active {
 
   .main_container {
     padding-top: 4rem;
+    padding-bottom: 20%;
   }
   .main_container .header {
     position: fixed;
@@ -1644,6 +1648,9 @@ select:active {
   .main_container .zakkah_page {
     width: 90%;
   }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 100%;
+  }
   .main_container .merath_page {
     width: 90%;
   }
@@ -1724,6 +1731,7 @@ select:active {
 
   .main_container {
     padding-top: 4rem;
+    padding-bottom: 17%;
   }
   .main_container .header {
     position: fixed;
@@ -1985,6 +1993,9 @@ select:active {
   .main_container .zakkah_page {
     width: 90%;
   }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 100%;
+  }
   .main_container .merath_page {
     width: 90%;
   }
@@ -2068,6 +2079,7 @@ select:active {
 
   .main_container {
     padding-top: 4rem;
+    padding-bottom: 17%;
   }
   .main_container .header {
     position: fixed;
@@ -2340,6 +2352,9 @@ select:active {
   .main_container .zakkah_page {
     width: 90%;
   }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 100%;
+  }
   .main_container .merath_page {
     width: 90%;
   }
@@ -2426,6 +2441,7 @@ select:active {
 
   .main_container {
     padding-top: 4rem;
+    padding-bottom: 17%;
   }
   .main_container .header {
     position: fixed;
@@ -2710,6 +2726,9 @@ select:active {
   }
   .main_container .zakkah_page {
     width: 90%;
+  }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 100%;
   }
   .main_container .merath_page {
     width: 90%;
@@ -3223,6 +3242,15 @@ select:active {
   .main_container .zakkah_page .zakah_zakah .form_zakah .field {
     font-size: 1.5rem;
   }
+  .main_container .zakkah_v2_page {
+    margin: 4% auto;
+  }
+  .main_container .zakkah_v2_page .container {
+    max-width: 100%;
+  }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 100%;
+  }
   .main_container .merath_page {
     width: 90%;
     margin: 2.5rem auto;
@@ -3717,6 +3745,15 @@ select:active {
   }
   .main_container .zakkah_page .zakah_zakah .form_zakah .actions button.button {
     font-size: 2.5rem;
+  }
+  .main_container .zakkah_v2_page {
+    margin: 4% auto;
+  }
+  .main_container .zakkah_v2_page .container {
+    max-width: 100%;
+  }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 100%;
   }
   .main_container .merath_page {
     width: 90%;
