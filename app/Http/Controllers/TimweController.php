@@ -816,7 +816,10 @@ class TimweController extends Controller
       }
     } elseif ($state == 'unsubscribe') {
       $subscribe = timweSubscriber::where('msisdn', '974' . $msisdn)->where('serviceId', productId)->first();
-      $subscribe->delete();
+      if($subscribe){
+        $subscribe->delete();
+      }
+
 
       timweUnsubscriber::create([
         'msisdn' => '974' . $msisdn,
