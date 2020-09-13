@@ -98,6 +98,7 @@ if ($lang == 'ar') {
             </div>
 
             <h3 class="text-white font-weight-bold mb-3" style="{{$font}}">@lang('messages.subscription_Riyals') </h3>
+            <p class="text-white font-weight-bold mb-3" style="{{$font}}">@lang('messages.renew') </p>
             <button id="zain_submit" class="btn" type="submit" style="width: 100%"> @lang('messages.Subsc') </button>
           </form>
           <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>

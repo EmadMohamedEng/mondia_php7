@@ -1,6 +1,7 @@
 <?php
 return [
     'title' => 'ألرسائل النصيه',
+    'renew' => 'تجدد تلقائيا',
     'language' => 'english',
     'role' => 'الادوار',
     'create-role' => 'انشاء دور',

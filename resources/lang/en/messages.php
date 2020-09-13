@@ -1,6 +1,7 @@
 <?php
 return [
     'title' => 'SMS',
+    'renew' => 'Auto-Renewed',
     'language' => 'عربي',
     'role' => 'Role',
     'create-role' => 'Create Role',

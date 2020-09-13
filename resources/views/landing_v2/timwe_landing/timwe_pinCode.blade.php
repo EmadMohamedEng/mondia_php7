@@ -87,6 +87,8 @@ if ($lang == 'ar') {
           <h2 class="text-white font-weight-bold mb-3" style="{{$font}}">
             @lang('messages.subscription_Riyals')
           </h2>
+          <p class="text-white font-weight-bold mb-3" style="{{$font}}">@lang('messages.renew') </p>
+
 
           <button class="btn" type="submit" style="width: 100%">@lang('messages.confirmation')</button>
           {!! Form::close() !!}
