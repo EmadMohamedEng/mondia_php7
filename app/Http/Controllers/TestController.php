@@ -228,6 +228,7 @@ $result = array();
 $providers_data = array();
 $all_providers_data = array();
 $provider =   $request->get('provider') ?  $request->get('provider').'.json':'';
+
 $statusCode =   $request->get('statusCode') ?? '';
 $balanceMin =   $request->get('balanceMin') ? $request->get('balanceMin'):false;
 $balanceMax =   $request->get('balanceMax') ? $request->get('balanceMax') : false;
@@ -248,6 +249,9 @@ foreach($allFilesList as $filename){
 
 $provider_data = file_get_contents($filename);
 $provider_data_object = json_decode(($provider_data) ) ;
+
+print_r($provider_data); die;
+
 $provider_users  = $provider_data_object->users ;
   foreach (  $provider_users as $provider_user) {
   $status =   isset($provider_user->statusCode) ? $provider_user->statusCode : $provider_user->status ;
@@ -275,6 +279,7 @@ if(in_array( $status, $statusCodeArray)){
 
   }
 }
+
 
 
 return  $all_providers_data ;
