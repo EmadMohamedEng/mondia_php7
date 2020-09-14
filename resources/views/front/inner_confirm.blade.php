@@ -199,7 +199,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 
 
           <div class="col-12 modal_club">
-            <strong class="d-block text-center"><span>2.1</span> @lang('front.AED')</strong>
+            <strong class="d-block text-center"><span>3.15</span> @lang('front.AED')</strong>
           </div>
 
           <div class="col-12 modal_club">
