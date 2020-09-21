@@ -12,6 +12,8 @@ return [
     'merath' => 'Inheritance account',
     'mosque' => 'nearest mosque',
     'sebha' => 'E Tasbeeh',
+    'terms' => 'Terms And Conditions',
+    'faq' => 'Questions And Answers',
     'prayer' => 'Prayer Time',
     'zakah' => 'Zakat Calculate',
     'call_tone' => 'Call Tone',
