@@ -278,8 +278,11 @@ $enable = get_setting('enable_testing');
                   @else
                   <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
                   @endif
-                  <a class="dropdown-item text-capitalize link_href"
-                    href="{{url('salah_time')}}">@lang('front.prayer')</a>
+                  @if ( request()->get("OpID") == mbc )
+
+                  @else
+                  <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
+                  @endif
                   <a class="dropdown-item text-capitalize link_href" href="{{url('mosque')}}"> @lang('front.mosque')</a>
 
                 </div>
