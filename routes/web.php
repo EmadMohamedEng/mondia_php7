@@ -136,6 +136,8 @@ Route::post('subscription/optout/{partnerRoleId}', 'TimweController@subscription
 /********************end ******************* */
 
 /***************start mbc portal****************** */
+define('MBC_OP_ID', 14);
+
 Route::get('mbc_portal_login/{lang?}', 'MbcController@login');
 Route::get('mbc_portal_landing/{lang?}', 'MbcController@index');
 Route::get('mbc_portal_pin/{lang?}', 'MbcController@pincode');

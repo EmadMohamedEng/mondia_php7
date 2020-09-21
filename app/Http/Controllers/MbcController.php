@@ -300,15 +300,14 @@ class MbcController extends Controller
     public function subscriptionOptIn(Request $request, $partnerRole)
     {
       $msisdn = $request->number ?? session('pinMsisdn');
+      $service_id = 2;
 
-      $check = $this->checkStatus($msisdn);
-      //dd($check);
-      //dd(['MSISDN' => session('userIdentifier')]);
-      if ($check['subscriptionResult'] == 'GET_STATUS_OK') {
-        $this->checksub('subscribe', '974' . $msisdn, $check['timweId']);
+      $check = $this->checkStatus($msisdn, $service_id);
+      if ($check == "true") {
 
-        session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
-        return redirect(url('/?OpID=' . ooredoo));
+        session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+        return redirect(url('/?OpID=' . MBC_OP_ID));
+
       } else {
 
         date_default_timezone_set('Asia/Qatar');
@@ -569,62 +568,34 @@ class MbcController extends Controller
       return $sOutput;
     }
 
-    public function checkStatus($number)
+    public function checkStatus($msisdn, $service_id)
     {
-      $partnerRoleId = partnerRoleId;
 
-      require_once 'uuid/UUID.php';
-      $trxid = \UUID::v4();
-
-      $headers = array(
-        "Content-Type: application/json",
-        "apikey: " . apikeysubscription,
-        "authentication: " . $this->generateKey(presharedkeysubscription),
-        "external-tx-id: " . $trxid,
-      );
-
-      $vars["userIdentifier"] = '974' . $number;
-      session()->put('landing_msisdn', $number);
-      $vars["userIdentifierType"] = 'MSISDN';
-      $vars["productId"] = productId;
-      $vars["mcc"] = "427";
-      $vars["mnc"] = "01";
-      $vars["entryChannel"] = 'WEB';
+      $vars["msisdn"] = $msisdn;
+      $vars["service_id"] = $service_id;
 
       $JSON = json_encode($vars);
 
-      $actionName = "Check Status";
+      $actionName = "MBC Check Status";
 
-      $URL = "https://qao.timwe.com/external/v2/subscription/status/" . $partnerRoleId . "/";
-      $ReqResponse = $this->SendRequest($URL, $JSON, $headers);
+      $URL = "http://localhost:8080/mbc_system/api/checksub";
+      $ReqResponse = $this->SendRequest($URL, $vars, ["Accept: application/json"]);
       $ReqResponse = json_decode($ReqResponse, true);
 
       //log request and response
-      $result = [];
       $result['request'] = $vars;
-      $result['headers'] = $headers;
       $result['response'] = $ReqResponse;
       $result['date'] = date('Y-m-d H:i:s');
 
       $this->log($actionName, $URL, $result);
 
-      $timewe = TimWe::create([
-        'api_request' => $URL,
-        'payload' => json_encode($vars),
-        'response' => json_encode($ReqResponse),
-        'header' => json_encode($headers),
-        'type' => $actionName,
-      ]);
-
-      $response['subscriptionResult'] = $ReqResponse['responseData']['subscriptionResult'];
-      $response['timweId'] = $timewe->id;
-      return $response;
+      return $ReqResponse;
     }
 
     public function checkStatusLogin(Request $request)
     {
 
-      $check = $this->checkStatus($request->number);
+      $check = $this->checkStatus($request->msisdn, $request->service_id);
 
       if ($check['subscriptionResult'] == 'GET_STATUS_SUB_NOT_EXIST') {
 
@@ -639,34 +610,6 @@ class MbcController extends Controller
       } else {
         return redirect('mbc_portal_landing')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
       }
-    }
-
-    public function checksub($state, $msisdn, $timeweId)
-    {
-      if ($state == 'subscribe') {
-        $subscribe = timweSubscriber::where('msisdn', $msisdn)->where('serviceId', productId)->first();
-
-        if (empty($subscribe)) {
-          timweSubscriber::create([
-            'msisdn' => $msisdn,
-            'serviceId' => productId,
-            'requestId' => $timeweId,
-          ]);
-        }
-      } elseif ($state == 'unsubscribe') {
-        $subscribe = timweSubscriber::where('msisdn', '974' . $msisdn)->where('serviceId', productId)->first();
-        if($subscribe){
-          $subscribe->delete();
-        }
-
-
-        timweUnsubscriber::create([
-          'msisdn' => '974' . $msisdn,
-          'serviceId' => productId,
-          'requestId' => $timeweId,
-        ]);
-      }
-      return 'success';
     }
 
     public function logout()
