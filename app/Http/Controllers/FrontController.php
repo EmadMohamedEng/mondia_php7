@@ -221,13 +221,11 @@ class FrontController extends Controller
           return redirect('imi/login');
         }
 
-
-
-        if($request->has('OpID') && $request->OpID == mbc){  //mbc
-          if($enable ){
+        if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
+          if($enable || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
             return view('front.inner_enable_testing', compact('content','contents'));
           }
-          return redirect('?OpID='.mbc);
+          return redirect('mbc_portal_landing');
         }
 
         if($request->has('userToken')){ // subscribe for the first time

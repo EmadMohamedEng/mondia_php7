@@ -578,7 +578,7 @@ class MbcController extends Controller
 
       $actionName = "MBC Check Status";
 
-      $URL = "http://localhost:8080/mbc_system/api/checksub";
+      $URL = CHECKSUB_URL;
       $ReqResponse = $this->SendRequest($URL, $vars, ["Accept: application/json"]);
       $ReqResponse = json_decode($ReqResponse, true);
 

@@ -37,6 +37,10 @@ App::setLocale($lang);
 @endphp
 <body>
   <div class="main_container">
+    <div class="img-fluid text-center p-3">
+      <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
+    </div>
+
     <div class="landing_page">
 
       <div class="strip text-dark">

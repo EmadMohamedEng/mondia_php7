@@ -50,11 +50,15 @@ if ($lang == 'ar') {
 ?>
 <body>
   <div class="main_container ">
+
     <input type="checkbox" id="on-off" name="on-off" onclick="toggle_lang()" class="switch-input" {{ $lang == 'ar' ? 'checked' : '' }}>
     <label for="on-off" class="switch-label">
       <span class="toggle--on toggle--option">EN</span>
       <span class="toggle--off toggle--option">AR</span>
     </label>
+    <div class="img-fluid text-center p-3">
+      <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
+    </div>
 
     <div class="landing_page">
       <div class="strip text-dark">
