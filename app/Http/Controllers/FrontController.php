@@ -1521,4 +1521,13 @@ class FrontController extends Controller
       return view('errors.404');
     }
   }
+
+  public function profile(Request $request)
+  {
+    if (request()->get('OpID') == mbc_op_id()) {
+      return view('front.profile');
+    } else {
+      return view('errors.404');
+    }
+  }
 }

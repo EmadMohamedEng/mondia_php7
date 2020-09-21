@@ -17,11 +17,11 @@ class AddSetting extends Migration
       0 =>
       array(
         'key' => 'terms_ar',
-        'value' => '<ul class="terms text-right text-white" dir="rtl" style="box-sizing: border-box; margin-top: 1rem; margin-bottom: 1rem; font-size: 16px; padding-right: 1.5rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot; text-align: right !important; color: rgb(255, 255, 255) !important;">
-              <li style="box-sizing: border-box; margin-bottom: 0.75rem;">تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 10 ريال فى الاسبوع</li>
-              <li style="box-sizing: border-box; margin-bottom: 0.75rem;">يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال Unsub ISL الى 92842</li>
-              <li style="box-sizing: border-box; margin-bottom: 0.75rem;">يجب ان يكون عمرك 18 عاماً أو أكثر أو لديك الإذن من والديك أو الشخص المسؤول عن دفع فاتورتك حتى تستطيع الاشتراك هذه الخدمة</li>
-            </ul>',
+        'value' => '<ul class="terms text-right text-white" dir="rtl" style="box-sizing: border-box; margin-top: 1rem; margin-bottom: 1rem; font-size: 16px; padding-right: 1.5rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot; color: rgb(255, 255, 255) !important;">
+        <li style="box-sizing: border-box; margin-bottom: 0.75rem;">تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 10 ريال فى الاسبوع</li>
+        <li style="box-sizing: border-box; margin-bottom: 0.75rem;">يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال Unsub ISL الى 92842</li>
+        <li style="box-sizing: border-box; margin-bottom: 0.75rem;">يجب ان يكون عمرك 18 عاماً أو أكثر أو لديك الإذن من والديك أو الشخص المسؤول عن دفع فاتورتك حتى تستطيع الاشتراك هذه الخدمة</li>
+      </ul>',
         'created_at' => '2020-09-21 09:10:41',
         'updated_at' => '2020-09-21 09:26:11',
         'type_id' => 1,
@@ -56,11 +56,11 @@ class AddSetting extends Migration
       3 =>
       array(
         'key' => 'f_q_ar',
-        'value' => '<ul class="terms text-right text-white" dir="rtl" style="box-sizing: border-box; margin-top: 1rem; margin-bottom: 1rem; font-size: 16px; padding-right: 1.5rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot; text-align: right !important; color: rgb(255, 255, 255) !important;">
-              <li style="box-sizing: border-box; margin-bottom: 0.75rem;">تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 10 ريال فى الاسبوع</li>
-              <li style="box-sizing: border-box; margin-bottom: 0.75rem;">يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال Unsub ISL الى 92842</li>
-              <li style="box-sizing: border-box; margin-bottom: 0.75rem;">يجب ان يكون عمرك 18 عاماً أو أكثر أو لديك الإذن من والديك أو الشخص المسؤول عن دفع فاتورتك حتى تستطيع الاشتراك هذه الخدمة</li>
-            </ul>',
+        'value' => '<ul class="terms text-right text-white" dir="rtl" style="box-sizing: border-box; margin-top: 1rem; margin-bottom: 1rem; font-size: 16px; padding-right: 1.5rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot; color: rgb(255, 255, 255) !important;">
+        <li style="box-sizing: border-box; margin-bottom: 0.75rem;">تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 10 ريال فى الاسبوع</li>
+        <li style="box-sizing: border-box; margin-bottom: 0.75rem;">يمكنك إيقاف هذه الخدمة في أي وقت عن طريق إرسال Unsub ISL الى 92842</li>
+        <li style="box-sizing: border-box; margin-bottom: 0.75rem;">يجب ان يكون عمرك 18 عاماً أو أكثر أو لديك الإذن من والديك أو الشخص المسؤول عن دفع فاتورتك حتى تستطيع الاشتراك هذه الخدمة</li>
+      </ul>',
         'created_at' => '2020-09-21 09:10:41',
         'updated_at' => '2020-09-21 09:26:11',
         'type_id' => 1,

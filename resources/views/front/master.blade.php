@@ -49,7 +49,17 @@
       ;
     }
   </style>
-
+@if(request()->get('OpID') == mbc)
+<style>
+  @media (min-width: 1025px) {
+    .main_container {
+      width: 41%;
+      margin: 0 auto;
+      position: unset;
+    }
+  }
+</style>
+@endif
   <script>
     window.base_url = '{{url("/")}}';
   </script>
@@ -109,7 +119,11 @@ $enable = get_setting('enable_testing');
     </header>
 
     <div class="row m-0">
+    @if(request()->get('OpID') == mbc)
+      <div class="" style="z-index: 9999999999">
+      @else
       <div class="col-md-0 col-lg-0 col-xl-3 col-0 p-0" style="z-index: 9999999999">
+      @endif
         <nav class="nav_nav navbar navbar-expand-xl primary-color">
           <button id="menu_toggle" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false"
@@ -356,7 +370,11 @@ $enable = get_setting('enable_testing');
   <script src="{{asset('front/js/jquery-3.3.1.min.js')}}"></script>
   <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
   <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
+  @if(request()->get('OpID') == mbc)
+  <script src="{{asset('front/js/scriptmbc.js')}}"></script>
+  @else
   <script src="{{asset('front/js/script.js')}}"></script>
+  @endif
   <script src="{{asset('front/js/js_PrayTimes.js')}}"></script>
   <script>
     op_id = {{isset($_REQUEST['OpID']) ? 1 : 0}}
