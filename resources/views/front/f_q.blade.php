@@ -9,7 +9,7 @@
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
 @endif
 <div>
-    <h2 style="color: white;text-align: center; padding-top: 2%;">@lang('front.faq')</h2>
+    <h2 style="color: white;text-align: center; padding-top: 2%;color: #efc049;">@lang('front.faq')</h2>
   </div>
   @if (getCode() == 'ar')
   <div style="padding: 4%;">
