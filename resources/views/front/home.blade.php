@@ -5,7 +5,13 @@
 $count = (int)(count(provider_menu())/2);
 $menu = provider_menu();
 @endphp
+
+@if(request()->get('OpID') == mbc)
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
+@else
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+@endif
+
   @include('front.search')
 
   @if(session()->has('unsub_success') && session()->get('unsub_success') != '')

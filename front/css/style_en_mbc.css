@@ -110,7 +110,7 @@ select:active {
 }
 .main_container .header .header_logo .link_href img,
 .main_container .header .header_icon .link_href img {
-  width: 6%;
+  width: 14%;
   margin-top: -0.75rem;
 }
 .main_container .header .header_logo .arrow_back,

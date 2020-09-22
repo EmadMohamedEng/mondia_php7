@@ -3,7 +3,11 @@
 @section('content')
 
 
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
+@if(request()->get('OpID') == mbc)
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
+@else
+<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+@endif
   <div>
     <h2 style="color: white;text-align: center; padding-top: 2%;">@lang('front.profile')</h2>
   </div>

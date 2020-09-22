@@ -120,7 +120,7 @@ $enable = get_setting('enable_testing');
 
     <div class="row m-0">
     @if(request()->get('OpID') == mbc)
-      <div class="" style="z-index: 9999999999">
+      <div class="" style="z-index: 9999999999;">
       @else
       <div class="col-md-0 col-lg-0 col-xl-3 col-0 p-0" style="z-index: 9999999999">
       @endif

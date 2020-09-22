@@ -1,7 +1,11 @@
 @extends('front.master')
 @section('page_title') PinCode @endsection
 @section('content')
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
+@if(request()->get('OpID') == mbc)
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
+@else
+<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+@endif
     <section class="subscribe_page">
       <div class="row m-0">
         <div class="col-md-12 col-lg-12 col-xl-9 col-12">

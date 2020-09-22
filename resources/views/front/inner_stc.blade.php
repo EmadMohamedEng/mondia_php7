@@ -4,7 +4,11 @@
     <?php
     $imgUrl = "http://quranlive.digizone.com.kw/front/images/img_1.png";
     ?>
-    <div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
+    @if(request()->get('OpID') == mbc)
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
+@else
+<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+@endif
         @include('front.search')
         <section class="inner_page">
             <div class="row m-0">
