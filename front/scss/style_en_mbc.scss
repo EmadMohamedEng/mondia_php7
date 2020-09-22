@@ -69,7 +69,7 @@ select {
 
   /* Start Header */
   .header {
-    position: sticky;
+    position: unset;
     background: $bg_color2;
     height: 4rem;
     padding: 1.10rem 1.75rem;
@@ -92,7 +92,7 @@ select {
         text-align: center;
 
         img {
-          width: 6%;
+          width: 18%;
           margin-top: -.75rem;
         }
       }
@@ -128,6 +128,7 @@ select {
     padding: 0.5rem 0;
     position: sticky;
     border: 1px solid #bfbfbf;
+    display: none;
 
     .navbar_ul {
       display: block;
@@ -1762,7 +1763,7 @@ select {
 .active_menu {
   margin-top: 0.25rem;
   background: $bg_color;
-  color: $white_color !important;
+  color: $white_color ;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -1782,6 +1783,12 @@ select {
   .padding_phones {
     padding-left: 0.75rem !important;
     padding-right: 0.75rem !important;
+  }
+  .open_icon_nav_mbc {
+    display: none;
+  }
+  .lang_show{
+    display: none;
   }
 
   .no_padding {
@@ -1817,6 +1824,7 @@ select {
       position: fixed;
       top: 0;
       border: 0;
+      display: unset;
 
       button {
         outline: 0;
@@ -2305,7 +2313,12 @@ select {
     padding-left: 0.75rem !important;
     padding-right: 0.75rem !important;
   }
-
+  .open_icon_nav_mbc {
+    display: none;
+  }
+  .lang_show{
+    display: none;
+  }
   .no_padding {
     padding: 0;
   }
@@ -2339,6 +2352,7 @@ select {
       position: fixed;
       top: 0;
       border: 0;
+      display: unset;
 
       button {
         outline: 0;
@@ -2843,6 +2857,12 @@ select {
     padding-left: 0.75rem !important;
     padding-right: 0.75rem !important;
   }
+  .open_icon_nav_mbc {
+    display: none;
+  }
+  .lang_show{
+    display: none;
+  }
 
   .no_padding {
     padding: 0;
@@ -2877,6 +2897,7 @@ select {
       position: fixed;
       top: 0;
       border: 0;
+      display: unset;
 
       button {
         outline: 0;
@@ -3401,7 +3422,12 @@ select {
     padding-left: 0.75rem !important;
     padding-right: 0.75rem !important;
   }
-
+  .open_icon_nav_mbc {
+    display: none;
+  }
+  .lang_show{
+    display: none;
+  }
   .no_padding {
     padding: 0;
   }
@@ -3440,6 +3466,7 @@ select {
       position: fixed;
       top: 0;
       border: 0;
+      display: unset;
 
       button {
         outline: 0;
@@ -3978,6 +4005,12 @@ select {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
+  .open_icon_nav_mbc {
+    display: none;
+  }
+  .lang_show{
+    display: none;
+  }
 
   .no_padding {
     padding: 0;
@@ -4031,6 +4064,7 @@ select {
       position: fixed;
       top: 0;
       border: 0;
+      display: unset;
 
       button {
         outline: 0;
@@ -4805,6 +4839,13 @@ select {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
+  .open_icon_nav_mbc {
+    display: none;
+  }
+
+  .lang_show{
+    display: none;
+  }
 
   .no_padding {
     padding: 0;
@@ -4857,6 +4898,7 @@ select {
       position: fixed;
       top: 0;
       border: 0;
+      display: unset;
 
       button {
         outline: 0;

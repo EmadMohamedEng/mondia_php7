@@ -12,7 +12,11 @@
     /* min-height: 700px; */
   }
 </style>
+@if(request()->get('OpID') == mbc)
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
+@else
 <div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+@endif
   @include('front.search')
   <section class="list_page">
     <div class="content_carousel_head text-capitalize">
@@ -36,7 +40,12 @@
       </div>
       @else
       @foreach ($contents as $item)
+      @if(request()->get('OpID') == mbc)
+      <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
+      @else
       <div class="col-md-4 col-lg-4 col-xl-2 col-6 p-0">
+      @endif
+
         <div class="item">
           <div class="card ovf-hidden">
             <a class="owl_content_img view overlay link_href" href="{{route('front.inner',['id' => $item->content_id])}}">
