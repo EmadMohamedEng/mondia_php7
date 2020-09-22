@@ -138,6 +138,26 @@ Route::post('subscription/confirm/{partnerRoleId}', 'TimweController@subscriptio
 Route::post('subscription/optout/{partnerRoleId}', 'TimweController@subscriptionOptOut');
 /********************end ******************* */
 
+/***************start mbc portal****************** */
+define('MBC_OP_ID', 14);
+define('CHECKSUB_URL', 14);
+
+Route::get('mbc_portal_login/{lang?}', 'MbcController@login');
+Route::get('mbc_portal_landing/{lang?}', 'MbcController@index');
+Route::get('mbc_portal_pin/{lang?}', 'MbcController@pincode');
+Route::get('mbc_portal_unsub/{lang?}', 'MbcController@unsubscribe');
+Route::get('mbc_portal_logout', 'MbcController@logout');
+
+
+
+//Timwe Api
+Route::post('mbcGenerateKey', 'MbcController@generateKey');
+Route::post('{channel}/mt/{partnerRoleId}', 'MbcController@sendMt');
+Route::post('mbc_checkstatus', 'MbcController@checkStatusLogin');
+Route::post('mbc_subscription/optin/{partnerRoleId}/{lang?}', 'MbcController@subscriptionOptIn');
+Route::post('mbc_subscription/confirm/{partnerRoleId}', 'MbcController@subscriptionConfirm');
+Route::post('mbc_subscription/optout/{partnerRoleId}', 'MbcController@subscriptionOptOut');
+/***************end mbc portal****************** */
 
 /********************Quran live  ********************/
 define('encrypt_key',"Affasy00!");
