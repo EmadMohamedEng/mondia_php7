@@ -116,12 +116,14 @@ $enable = get_setting('enable_testing');
                                 <div class="col-6 p-0 lang_show">
                                   <a class="nav-link nav-link2  slide_toggle text-capitalize"
                                     id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
-
+                                    aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}
+                                  </a>
+                                  
                                     <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent lang_color"
                                     aria-labelledby="navbarDropdownMenuLink1">
                                     @foreach(Config::get('languages') as $key=>$lang)
                                     <a class="dropdown-item dropdown-item2 text-capitalize" href="{{url('lang/'.$key)}}">{{$lang}}</a>
+                                    
                                     @endforeach
                                   </div>
                                 </div>
@@ -129,9 +131,14 @@ $enable = get_setting('enable_testing');
 
 
             </div>
-            @else
+           
+          <div class="row m-0">
+             <div class="col-6 p-0 angle_show">
+             <i class="fas fa-angle-down"></i>
+              </div>
+           </div>
+           @else
           @endif
-
           </div>
         </div>
 

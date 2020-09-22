@@ -89,6 +89,9 @@ svg {
 .lang_show{
   cursor: pointer;
 }
+.angle_show{
+  margin: 10px -10px 0 -13px;
+}
 @media (min-width: 1025px) {
   .main_container {
     width: 41%;
