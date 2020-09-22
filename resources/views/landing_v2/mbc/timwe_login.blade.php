@@ -47,7 +47,7 @@
 
     <div class="landing_page pt-5">
 
-      <div class="strip text-dark pt-5">
+      <div class="strip text-dark pt-3">
         <h4>@lang('messages.enjoy_time')</h4>
         <h2>@lang('messages.Mbc_Muslim_guide')</h2>
       </div>

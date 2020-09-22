@@ -452,6 +452,11 @@ class MbcController extends Controller
         'type'  => $actionName
       ]);
 
+
+
+
+
+
       if ($ReqResponse['code'] == 'SUCCESS') {
 
         if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_CONF_WRONG_PIN') {
