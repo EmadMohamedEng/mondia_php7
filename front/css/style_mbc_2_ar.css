@@ -14,7 +14,7 @@
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   color: #efc049;
   cursor: pointer;
   display: block;
@@ -88,10 +88,21 @@ svg {
 }
 .lang_show{
   cursor: pointer;
+  color: #efc049;
+  margin: -10% 0 0 0;
+
 }
 .angle_show{
-  margin: 10px -10px 0 -13px;
+  margin: 0 -10px 0 -13px;
+  color: #efc049;
+
 }
+
+.navbar-nav .nav-link {
+
+  font-size: 13px;
+}
+
 @media (min-width: 1025px) {
   .main_container {
     width: 41%;

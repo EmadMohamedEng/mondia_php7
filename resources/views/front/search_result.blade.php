@@ -27,7 +27,7 @@
     <div class="row m-0">
         @foreach ($services as $service)
         @if(request()->get('OpID') == mbc)
-      <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
+      <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-3">
       @else
       <div class="col-md-4 col-lg-4 col-xl-2 col-6 p-0">
       @endif
@@ -62,7 +62,7 @@
     <div class="row m-0">
         @foreach ($contents as $content)
         @if(request()->get('OpID') == mbc)
-      <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
+      <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-3">
       @else
       <div class="col-md-4 col-lg-4 col-xl-2 col-6 p-0">
       @endif

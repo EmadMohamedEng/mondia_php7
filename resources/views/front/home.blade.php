@@ -174,13 +174,15 @@ $menu = provider_menu();
       </div>
       @endif
 
+      @if (request()->get("OpID") == mbc)
+      @else
       <div class="item">
         <div class="card card_muslim_guid ovf-hidden">
           <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
             @if (request()->get("OpID") == 9)
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/03.png')}}" alt="Card image cap">
             @elseif (request()->get("OpID") == mbc)
-            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/03.png')}}" alt="Card image cap">
+             <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/03.png')}}" alt="Card image cap"> 
             @else
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/03.png')}}" alt="Card image cap">
             @endif
@@ -196,6 +198,9 @@ $menu = provider_menu();
           </a>
         </div>
       </div>
+      @endif
+      
+
     </div>
   </section>
 
