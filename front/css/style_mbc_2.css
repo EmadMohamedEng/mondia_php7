@@ -54,6 +54,12 @@ svg {
   margin-top: 0.75rem;
   margin-right: 10px;
 }
+/* .dropdown-toggle::after {
+  float: unset;
+    margin-top: 1px;
+    margin-right:-11px;
+    margin-left: 1px;
+} */
 
 .ul_menu {
   background-color: #111;
@@ -77,6 +83,7 @@ svg {
 }
 .lang_color{
   background-color: #111;
+  z-index: 2147483647;
 }
 .lang_color a{
   color: #FFF;
@@ -105,3 +112,12 @@ svg {
     position: unset;
   }
 }
+
+
+
+
+/* start menu 3 */
+
+
+
+/* end menu 3 */

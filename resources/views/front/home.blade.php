@@ -182,7 +182,7 @@ $menu = provider_menu();
             @if (request()->get("OpID") == 9)
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/03.png')}}" alt="Card image cap">
             @elseif (request()->get("OpID") == mbc)
-             <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/03.png')}}" alt="Card image cap"> 
+             <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/03.png')}}" alt="Card image cap">
             @else
             <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/03.png')}}" alt="Card image cap">
             @endif
@@ -199,7 +199,7 @@ $menu = provider_menu();
         </div>
       </div>
       @endif
-      
+
 
     </div>
   </section>

@@ -4,7 +4,7 @@ return [
     'welcome' => 'welcome',
     'profile' => 'Profile',
     'more' => 'more',
-    'search' => 'search',
+    'search' => 'Search',
     'release' => 'Release date',
     'related_video' => 'Related Content',
     'watch_now' => 'watch Now',

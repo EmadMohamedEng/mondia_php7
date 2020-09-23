@@ -24,143 +24,185 @@ body {
   /* Start Merath Page */
   /* End Merath Page */
 }
+
 .main_container .header .header_logo.header_logo,
 .main_container .header .header_icon.header_logo {
   float: right;
 }
+
 .main_container .header .header_logo.header_logo h6,
 .main_container .header .header_icon.header_logo h6 {
   padding-right: 0;
   padding-left: unset;
 }
+
 .main_container .header .header_logo.header_logo .arrow_back,
 .main_container .header .header_icon.header_logo .arrow_back {
   top: 1rem;
   right: 100%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
+
 .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
   text-align: left;
   float: left;
 }
+
 .main_container .nav_nav .navbar_ul {
   padding-right: 0;
 }
+
 .main_container .nav_nav .navbar_ul .nav_item_welc {
   text-align: right;
 }
+
 .main_container .nav_nav .navbar_ul .nav-item .nav-link {
   text-align: right;
 }
+
 .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
   float: right;
   padding-left: 0.5rem;
 }
+
 .main_container .nav_nav .navbar_ul .nav-item .nav-link.nav-link2 {
   text-align: left;
 }
+
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-toggle::after {
   float: left;
 }
+
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu.dropdown-menu2 {
   float: left;
 }
+
 .main_container .content_carousel .content_carousel_head .link_title {
   text-align: right;
 }
+
 .main_container .content_carousel .content_carousel_head .btn_more {
   float: left;
 }
+
 .main_container .list_page .content_carousel_head {
   text-align: right;
 }
+
 .main_container .inner_page .cover {
   text-align: right;
 }
+
 .main_container .inner_page .cover button {
   left: 40%;
 }
+
 .main_container .inner_page .poster {
   text-align: right;
 }
+
 .main_container .inner_page .socail_media .pa_share {
   margin-top: 1rem;
   text-align: right;
 }
+
 .main_container .inner_page .socail_media .shear_div {
   padding-right: 1rem;
 }
+
 .main_container .inner_page .socail_media .shear_div .facebook,
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
   margin-right: 1.5rem;
 }
+
 .main_container .inner_page .section_content .pa_Videos {
   text-align: right;
 }
+
 .main_container .inner_page .section_content .p_content {
   text-align: right;
   margin-right: 0.5rem;
   margin-left: 0;
 }
+
 .main_container .modal_cover .modal-dialog .modal-content .modal-header .close {
   margin: -1rem -1rem -1rem 0;
 }
+
 .main_container .salah_time_page .time_btn .h4_time_2 {
   text-align: left;
 }
+
 .main_container .salah_time_page .time_btn .h4_time {
   text-align: right;
 }
+
 .main_container .subscribe_page .subscribe_bg .form-signin .buttons button {
   margin-bottom: 1rem;
 }
+
 .main_container .zakkah_page .zakah_zakah .form_zakah .field label {
   float: right;
 }
+
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value {
   float: right;
 }
+
 .main_container .zakkah_v2_page #accordion .card .card-header button span {
   float: left;
   margin-left: 1rem;
 }
+
 .main_container .zakkah_v2_page #accordion .card .card-header button .up_down {
   float: left;
 }
+
 .main_container .zakkah_v2_page .currency_title {
   float: right;
 }
+
 .main_container .zakkah_v2_page .currency_icon {
   float: left;
 }
+
 .main_container .zakkah_v2_page .currency_bg .flex_center .currency_text {
   text-align: right;
 }
+
 .main_container .zakkah_v2_page .currency_bg .result {
   float: left;
   margin-left: 1rem;
 }
+
 .main_container .zakkah_v2_page .zakah_result .zakah_result_right {
   text-align: center;
 }
+
 .main_container .zakkah_v2_page .zakah_result .zakah_result_left {
   text-align: center;
 }
+
 .main_container .merath_page {
   direction: rtl;
 }
+
 .main_container .merath_page .input_text .merath_input {
   float: left;
 }
+
 .main_container .merath_page .input_span {
   text-align: right;
 }
+
 .main_container .merath_page .input_span h4 {
   float: right;
 }
+
 .main_container .merath_page .table_table .table {
   direction: rtl;
 }
@@ -170,22 +212,21 @@ body {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
-
   .main_container .header .header_logo,
-.main_container .header .header_icon {
+  .main_container .header .header_icon {
     float: left !important;
   }
   .main_container .header .header_logo.header_icon,
-.main_container .header .header_icon.header_icon {
+  .main_container .header .header_icon.header_icon {
     margin: 0.35rem 0 0 -1rem;
   }
   .main_container .header .header_logo h6,
-.main_container .header .header_icon h6 {
+  .main_container .header .header_icon h6 {
     padding-right: 0;
     padding-left: unset;
   }
   .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
+  .main_container .header .header_icon .arrow_back {
     right: 100% !important;
     left: unset !important;
     top: 1rem !important;
@@ -223,32 +264,31 @@ body {
   .main_container .merath_page .input_span h4 {
     font-size: 1.09rem;
   }
-
   .loading-overlay .spinner-large {
     right: 31%;
   }
 }
+
 @media (min-width: 360px) and (max-width: 374.9px) {
   .padding_phones {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
-
   .main_container .header .header_logo,
-.main_container .header .header_icon {
+  .main_container .header .header_icon {
     float: left !important;
   }
   .main_container .header .header_logo.header_icon,
-.main_container .header .header_icon.header_icon {
+  .main_container .header .header_icon.header_icon {
     margin: 0.35rem 0 0 -1rem;
   }
   .main_container .header .header_logo h6,
-.main_container .header .header_icon h6 {
+  .main_container .header .header_icon h6 {
     padding-right: 0;
     padding-left: unset;
   }
   .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
+  .main_container .header .header_icon .arrow_back {
     right: 100% !important;
     left: unset !important;
     top: 1rem !important;
@@ -269,7 +309,7 @@ body {
     float: left;
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
-    font-size: 14px;
+    font-size: 1.5rem;
   }
   .main_container .salah_time_page {
     width: 95%;
@@ -281,7 +321,7 @@ body {
     float: right;
     padding-right: 8px;
     padding-left: 0;
-    font-size: 1.2rem;
+    font-size: 1.20rem;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     float: left;
@@ -292,32 +332,31 @@ body {
   .main_container .merath_page .input_span {
     text-align: right;
   }
-
   .loading-overlay .spinner-large {
     right: 31%;
   }
 }
+
 @media (min-width: 375px) and (max-width: 410.9px) {
   .padding_phones {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
-
   .main_container .header .header_logo,
-.main_container .header .header_icon {
+  .main_container .header .header_icon {
     float: left !important;
   }
   .main_container .header .header_logo.header_icon,
-.main_container .header .header_icon.header_icon {
+  .main_container .header .header_icon.header_icon {
     margin: 0.35rem 0 0 -1rem;
   }
   .main_container .header .header_logo h6,
-.main_container .header .header_icon h6 {
+  .main_container .header .header_icon h6 {
     padding-right: 0;
     padding-left: unset;
   }
   .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
+  .main_container .header .header_icon .arrow_back {
     right: 100% !important;
     left: unset !important;
     top: 1rem !important;
@@ -349,7 +388,7 @@ body {
     font-size: 1.25rem;
   }
   .main_container .inner_page .section_content .p_content,
-.main_container .inner_page .section_content .p_content_2 {
+  .main_container .inner_page .section_content .p_content_2 {
     font-size: 21px;
   }
   .main_container .salah_time_page .time_btn {
@@ -359,13 +398,13 @@ body {
     float: right;
     padding-right: 8px;
     padding-left: 0;
-    font-size: 1.3rem;
+    font-size: 1.30rem;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     float: left;
     padding-left: 8px;
     padding-right: 0;
-    font-size: 1.3rem;
+    font-size: 1.30rem;
   }
   .main_container .sebha_page #sebhaModal .close {
     font-size: 2rem;
@@ -383,27 +422,27 @@ body {
     font-size: 1.5rem;
   }
 }
+
 @media (min-width: 411px) and (max-width: 415px) {
   .padding_phones {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
-
   .main_container .header .header_logo,
-.main_container .header .header_icon {
+  .main_container .header .header_icon {
     float: left !important;
   }
   .main_container .header .header_logo.header_icon,
-.main_container .header .header_icon.header_icon {
+  .main_container .header .header_icon.header_icon {
     margin: 0.35rem 0 0 -1rem;
   }
   .main_container .header .header_logo h6,
-.main_container .header .header_icon h6 {
+  .main_container .header .header_icon h6 {
     padding-right: 0;
     padding-left: unset;
   }
   .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
+  .main_container .header .header_icon .arrow_back {
     right: 100% !important;
     left: unset !important;
     top: 1rem !important;
@@ -430,13 +469,13 @@ body {
     float: right;
     padding-right: 8px;
     padding-left: 0;
-    font-size: 1.3rem;
+    font-size: 1.30rem;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     float: left;
     padding-left: 8px;
     padding-right: 0;
-    font-size: 1.3rem;
+    font-size: 1.30rem;
   }
   .main_container .merath_page .input_span {
     text-align: right;
@@ -445,16 +484,17 @@ body {
     font-size: 1.5rem;
   }
 }
+
 @media (min-width: 768px) and (max-width: 1023.9px) {
   .main_container .header .header_logo,
-.main_container .header .header_icon {
+  .main_container .header .header_icon {
     width: 100%;
     text-align: center;
     display: block;
     float: left !important;
   }
   .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
+  .main_container .header .header_icon .arrow_back {
     right: 99% !important;
     left: unset !important;
     top: 1.5rem !important;
@@ -462,13 +502,13 @@ body {
     width: 0;
   }
   .main_container .header .header_logo h6,
-.main_container .header .header_icon h6 {
+  .main_container .header .header_icon h6 {
     font-size: 2rem;
     padding-left: 7rem !important;
     text-align: left;
   }
   .main_container .header .header_logo.header_icon i,
-.main_container .header .header_icon.header_icon i {
+  .main_container .header .header_icon.header_icon i {
     font-size: 2rem;
     margin-top: 1rem;
   }
@@ -477,7 +517,7 @@ body {
     width: 0;
     height: 0;
     top: 1.5rem;
-    right: -0.5rem;
+    right: -.5rem;
     left: unset;
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
@@ -503,16 +543,17 @@ body {
     text-align: right;
   }
 }
+
 @media (min-width: 1024px) and (max-width: 1200px) {
   .main_container .header .header_logo,
-.main_container .header .header_icon {
+  .main_container .header .header_icon {
     width: 100%;
     text-align: center;
     display: block;
     float: left !important;
   }
   .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
+  .main_container .header .header_icon .arrow_back {
     right: 98% !important;
     left: unset !important;
     top: 1.85rem !important;
@@ -520,13 +561,13 @@ body {
     width: 0;
   }
   .main_container .header .header_logo h6,
-.main_container .header .header_icon h6 {
+  .main_container .header .header_icon h6 {
     font-size: 2.5rem;
     padding-left: 10rem !important;
     text-align: left;
   }
   .main_container .header .header_logo.header_icon i,
-.main_container .header .header_icon.header_icon i {
+  .main_container .header .header_icon.header_icon i {
     font-size: 2rem;
     margin-top: 1rem;
   }
@@ -561,10 +602,10 @@ body {
     text-align: right;
   }
 }
+
 @media (min-width: 320px) and (max-width: 1200px) {
   .main_container .inner_page .socail_media .shear_div {
     padding-right: 0;
   }
 }
-
 /*# sourceMappingURL=style_ar.css.map */
