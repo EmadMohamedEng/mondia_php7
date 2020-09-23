@@ -29,7 +29,7 @@ return [
     'cancel' => 'Cancel',
     'enjoy_time' => 'Enjoy your time with the service',
     'Muslim_guide' => 'Muslim guide',
-    'Mbc_Muslim_guide' => 'MBC Islamic',
+    'Mbc_Muslim_guide' => 'Alkanz',
     'Subscribe_Now' => 'Subscribe Now',
     'Enter_your' => 'Enter your mobile phone',
     'subscription_Riyals' => 'The Subscription 10 Riyals / Week',

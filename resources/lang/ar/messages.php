@@ -27,7 +27,7 @@ return [
     'cancel' => 'ألغاء',
     'enjoy_time' => 'استمتع بوقتك مع خدمه',
     'Muslim_guide' => 'دليل المسلم',
-    'Mbc_Muslim_guide' => 'MBC الاسلامية',
+    'Mbc_Muslim_guide' => 'الكنز',
     'Subscribe_Now' => 'اشترك الان',
     'Enter_your' => 'أدخل رقم هاتفك الجوال',
     'subscription_Riyals' => 'قيمة الاشتراك 10 ريال / الاسبوع',

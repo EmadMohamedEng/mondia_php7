@@ -1526,10 +1526,11 @@ class FrontController extends Controller
 
   public function profile(Request $request)
   {
-    if (request()->get('OpID') == mbc_op_id()) {
-      return view('front.profile');
-    } else {
-      return view('errors.404');
+    if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
+      if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
+        return view('front.profile');
+      }
+      return redirect('mbc_portal_landing');
     }
   }
 }

@@ -452,35 +452,33 @@ class MbcController extends Controller
         'type'  => $actionName
       ]);
 
+      session(['MSISDN' => $vars["userIdentifier"], 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+      return redirect(url('profile/?OpID=' . MBC_OP_ID));
 
+      // if ($ReqResponse['code'] == 'SUCCESS') {
 
+      //   if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_CONF_WRONG_PIN') {
+      //     return redirect('mbc_portal_pin')->with('failed', 'رقم التحقق خاطئ يرجي المحاولة مرة اخري');
+      //   }
 
-
-
-      if ($ReqResponse['code'] == 'SUCCESS') {
-
-        if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_CONF_WRONG_PIN') {
-          return redirect('mbc_portal_pin')->with('failed', 'رقم التحقق خاطئ يرجي المحاولة مرة اخري');
-        }
-
-        $this->checksub('subscribe', session('userIdentifier'), $timewe->id);
-        session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
+        // $this->checksub('subscribe', session('userIdentifier'), $timewe->id);
+        // session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
         // $sendMT = new Request();
         // $sendMT->msisdn = session('userIdentifier');
         // $sendMT->sms = url('/?OpID='.ooredoo);
         //send mt with link
         // $this->sendMt($sendMT); // should be fire after receive first charging success
 
-        return redirect(url('/?OpID=' . ooredoo));
-      } else {
+        // return redirect(url('/?OpID=' . ooredoo));
+      // } else {
 
-        $lang =  session::get('lang');
-        if ($lang == "ar") {
-          return redirect('mbc_portal_pin')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
-        } else {
-          return redirect('mbc_portal_pin')->with('failed', 'An error has occurred, please try again later');
-        }
-      }
+      //   $lang =  session::get('lang');
+      //   if ($lang == "ar") {
+      //     return redirect('mbc_portal_pin')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
+      //   } else {
+      //     return redirect('mbc_portal_pin')->with('failed', 'An error has occurred, please try again later');
+      //   }
+      // }
     }
 
     public function subscriptionOptOut(Request $request, $partnerRole)
@@ -600,18 +598,16 @@ class MbcController extends Controller
     public function checkStatusLogin(Request $request)
     {
 
-      $check = $this->checkStatus($request->msisdn, $request->service_id);
+      $msisdn = $request->number;
+      $service_id = 2;
 
-      if ($check['subscriptionResult'] == 'GET_STATUS_SUB_NOT_EXIST') {
+      $check = $this->checkStatus($msisdn, $service_id);
 
-        return redirect('mbc_portal_landing')->with('failed', 'انت غير مشترك حاليا, برجاء الاشتراك');
-      } elseif ($check['subscriptionResult'] == 'GET_STATUS_OK') {
+      if ($check == "true") {
 
-        $this->checksub('subscribe', $request->number, $check['timweId']);
+        session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+        return redirect(url('profile/?OpID=' . MBC_OP_ID));
 
-        session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
-
-        return redirect(url('/?OpID=' . ooredoo));
       } else {
         return redirect('mbc_portal_landing')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
       }
