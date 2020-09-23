@@ -21,32 +21,34 @@
   <div>
     <h2 style="color: white;text-align: center; padding-top: 2%;color: #efc049;">@lang('front.profile')</h2>
   </div>
-
+  @php
+      $style_align = session()->get('applocale') == 'en' ? 'color: white;text-align: left' : 'color: white;text-align: right';
+  @endphp
   <div style="padding: 4%;">
     <table class="table table-striped table-bordered ">
-    <tbody style="color: white;text-align: right;">
+    <tbody style="{{$style_align}}">
         <tr>
-          <td width='30%' class='label-view text-right color_table'>@lang('messages.users.phone')</td>
-          <td>{{session()->get('MSISDN')}}</td>
+          <td width='30%' class="label-view color_table">@lang('messages.users.phone')</td>
+          <td style="{{$style_align}}">{{session()->get('MSISDN')}}</td>
         </tr>
 
         <tr>
-          <td width='30%' class='label-view text-right color_table'> @lang('messages.users.date')</td>
+          <td width='30%' class="label-view color_table"> @lang('messages.users.date')</td>
           <td>{{date('Y-M-d')}}</td>
         </tr>
 
         <tr>
-          <td width='30%' class='label-view text-right color_table'>@lang('messages.service_name')</td>
+          <td width='30%' class="label-view color_table">@lang('messages.service_name')</td>
           <td>@lang('messages.Mbc_Muslim_guide')</td>
         </tr>
 
         <tr>
-          <td width='30%' class='label-view text-right color_table'>@lang('messages.service_type')</td>
+          <td width='30%' class="label-view color_table">@lang('messages.service_type')</td>
           <td>@lang('messages.repeat.weekly')</td>
         </tr>
 
         <tr>
-          <td width='30%' class='label-view text-right color_table'>@lang('messages.description')</td>
+          <td width='30%' class="label-view color_table">@lang('messages.description')</td>
           <td>@lang('messages.discription_weekly')</td>
         </tr>
 

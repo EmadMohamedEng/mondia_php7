@@ -637,6 +637,19 @@ $enable = get_setting('enable_testing');
           </div>
         </nav>
       </div>
+      <div class="container text-center p-2">
+        @if(Session::has('success'))
+        <div class="alert alert-success alert-dismissible">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          {{ Session::get('success')}}
+        </div>
+        @elseif(Session::has('failed'))
+        <div class="alert alert-danger alert-dismissible">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          {{ Session::get('failed')}}
+        </div>
+        @endif
+      </div>
       @yield('content')
     </div>
   </main>

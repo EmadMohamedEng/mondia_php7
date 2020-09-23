@@ -454,7 +454,7 @@ class MbcController extends Controller
 
       session(['MSISDN' => $vars["userIdentifier"], 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
 
-      $lang =  session::get('lang');
+      $lang =  session::get('applocale');
       if($lang == 'ar'){
         $message = 'تم الاشتراك بنجاح';
       }else{
@@ -614,7 +614,7 @@ class MbcController extends Controller
       if ($check == "true") {
 
         session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-        $lang =  session::get('lang');
+        $lang =  session::get('applocale');
         if($lang == 'ar'){
           $message = 'تم تسجيل الدخول بنجاح';
         }else{
@@ -623,7 +623,14 @@ class MbcController extends Controller
         return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
 
       } else {
-        return redirect('mbc_portal_landing')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
+        $lang =  session::get('applocale');
+        if($lang == 'ar'){
+          $message = 'انت غير مشترك, برجاء الاشتراك';
+        }else{
+          $message = 'you are not a subscriber Please subscribe Now';
+        }
+
+        return redirect('mbc_portal_landing')->with(['failed' => $message]);
       }
     }
 
@@ -661,7 +668,7 @@ class MbcController extends Controller
         if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
           return view('front.profile');
         }
-        return redirect('mbc_portal_landing');
+        return redirect('mbc_portal_login');
       }
     }
 
