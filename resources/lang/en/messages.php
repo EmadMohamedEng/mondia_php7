@@ -2,6 +2,10 @@
 return [
     'title' => 'SMS',
     'renew' => 'Auto-Renewed',
+    'service_type' => 'Service Plan',
+    'service_name' => 'Service Name',
+    'discription_weekly' => 'Auto Renewal of the subscription is considered to be 10 Rials per month',
+    'description' => 'Description',
     'language' => 'عربي',
     'role' => 'Role',
     'create-role' => 'Create Role',
@@ -176,7 +180,8 @@ return [
         'message_quota' => 'Message Quota',
         'message_sent' => 'Message Sent',
         'role' => 'Role',
-        'phone' => 'Phone'
+        'date' => 'Date',
+        'phone' => 'Phone Number'
       ],
       'helps' => [
         'head' => 'How can we help you ?',

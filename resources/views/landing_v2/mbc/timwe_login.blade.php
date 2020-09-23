@@ -79,10 +79,9 @@
           <form method="post" action="{{url('mbc_checkstatus')}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
             {{ csrf_field() }}
             <div class="form-group form-inline">
-              <label for="phone"><span>974</span></label>
+              <label for="phone"><span>966</span></label>
               <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
               <input type="tel" class="form-control" value="" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
-              <span class="validity"></span>
             </div>
 
             <!--<button class="btn back">رجوع</button>-->

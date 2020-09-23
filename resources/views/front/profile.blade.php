@@ -21,72 +21,37 @@
   <div>
     <h2 style="color: white;text-align: center; padding-top: 2%;color: #efc049;">@lang('front.profile')</h2>
   </div>
-  @if (getCode() == 'ar')
+
   <div style="padding: 4%;">
     <table class="table table-striped table-bordered ">
     <tbody style="color: white;text-align: right;">
         <tr>
-          <td width='30%' class='label-view text-right color_table'>رقم الهاتف</td>
+          <td width='30%' class='label-view text-right color_table'>@lang('messages.users.phone')</td>
           <td>{{session()->get('MSISDN')}}</td>
         </tr>
 
         <tr>
-          <td width='30%' class='label-view text-right color_table'> تاريخ الاشنراك</td>
-          <td>2020/9/21</td>
+          <td width='30%' class='label-view text-right color_table'> @lang('messages.users.date')</td>
+          <td>{{date('Y-M-d')}}</td>
         </tr>
 
         <tr>
-          <td width='30%' class='label-view text-right color_table'>اسم الخدمة</td>
-          <td>MBC</td>
+          <td width='30%' class='label-view text-right color_table'>@lang('messages.service_name')</td>
+          <td>@lang('messages.Mbc_Muslim_guide')</td>
         </tr>
 
         <tr>
-          <td width='30%' class='label-view text-right color_table'>نوع الخدمة</td>
-          <td>يومية</td>
+          <td width='30%' class='label-view text-right color_table'>@lang('messages.service_type')</td>
+          <td>@lang('messages.repeat.weekly')</td>
         </tr>
 
         <tr>
-          <td width='30%' class='label-view text-right color_table'>وصف الخدمة</td>
-          <td>تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 2 ريال فى اليوم</td>
+          <td width='30%' class='label-view text-right color_table'>@lang('messages.description')</td>
+          <td>@lang('messages.discription_weekly')</td>
         </tr>
 
       </tbody>
     </table>
   </div>
-
-  @else
-  <div style="padding: 4%;">
-    <table class="table table-striped table-bordered ">
-      <tbody style="color: white;">
-        <tr>
-          <td width='30%' class='label-view text-right color_table'>رقم الهاتف</td>
-          <td>{{session()->get('MSISDN')}}</td>
-        </tr>
-
-        <tr>
-          <td width='30%' class='label-view text-right color_table'> تاريخ الاشنراك</td>
-          <td>2020/9/21</td>
-        </tr>
-
-        <tr>
-          <td width='30%' class='label-view text-right color_table'>اسم الخدمة</td>
-          <td>MBC</td>
-        </tr>
-
-        <tr>
-          <td width='30%' class='label-view text-right color_table'>نوع الخدمة</td>
-          <td>يومية</td>
-        </tr>
-
-        <tr>
-          <td width='30%' class='label-view text-right color_table'>وصف الخدمة</td>
-          <td>تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 2 ريال فى اليوم</td>
-        </tr>
-
-      </tbody>
-    </table>
-  </div>
-  @endif
-
 
   @stop

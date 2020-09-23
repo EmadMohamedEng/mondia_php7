@@ -45,9 +45,9 @@ Route::get('test2','FrontController@test');
 Route::get('search','FrontController@search')->name('front.search');
 Route::get('muslim_inner_confirm','FrontController@muslim_inner')->name('front.muslim_inner');
 Route::get('test','FrontController@prayTimesCal_v2');
-Route::get('terms','FrontController@terms');
-Route::get('faq','FrontController@faq');
-Route::get('profile','FrontController@profile');
+Route::get('terms','MbcController@terms');
+Route::get('faq','MbcController@faq');
+Route::get('profile','MbcController@profile');
 
 //OmanTel
 define('omantel',9);

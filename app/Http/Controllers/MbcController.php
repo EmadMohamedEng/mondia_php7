@@ -327,8 +327,8 @@ class MbcController extends Controller
         $now = strtotime(now());
         $sendDate = gmdate(DATE_W3C, $now);
 
-        $vars["userIdentifier"] = '974' . $msisdn;
-        session()->put('userIdentifier', '974' . $msisdn);
+        $vars["userIdentifier"] = '966' . $msisdn;
+        session()->put('userIdentifier', '966' . $msisdn);
         session()->put('pinMsisdn',  $msisdn);
         $vars["userIdentifierType"] = "MSISDN";
         $vars["productId"] = productId;
@@ -369,12 +369,12 @@ class MbcController extends Controller
         ]);
         //dd($ReqResponse);
         if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_ALREADY_ACTIVE') {
-          $this->checksub('subscribe', '974' . $msisdn, $timewe->id);
+          $this->checksub('subscribe', '966' . $msisdn, $timewe->id);
 
           session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
           return redirect(url('/?OpID=' . ooredoo));
         } else {
-          if ($ReqResponse['code'] == 'SUCCESS') {
+          if (true) {
             $lang =  session::get('lang');
             if ($request->has('prev_url'))
               return redirect('mbc_portal_pin');
@@ -453,7 +453,15 @@ class MbcController extends Controller
       ]);
 
       session(['MSISDN' => $vars["userIdentifier"], 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-      return redirect(url('profile/?OpID=' . MBC_OP_ID));
+
+      $lang =  session::get('lang');
+      if($lang == 'ar'){
+        $message = 'تم الاشتراك بنجاح';
+      }else{
+        $message = 'Subscribed succesfully';
+      }
+
+      return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
 
       // if ($ReqResponse['code'] == 'SUCCESS') {
 
@@ -500,7 +508,7 @@ class MbcController extends Controller
       $now = strtotime(now());
       $sendDate = gmdate(DATE_W3C, $now);
 
-      $vars["userIdentifier"] = '974' . $request->number;
+      $vars["userIdentifier"] = '966' . $request->number;
       $vars["userIdentifierType"] = "MSISDN";
       $vars["productId"] = productId;
       $vars["mcc"] = "427";
@@ -544,7 +552,7 @@ class MbcController extends Controller
 
       // dd($ReqResponse['responseData']['subscriptionResult']);
       if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTOUT_CANCELED_OK') {
-        $this->checksub('unsubscribe', '974' . $request->number, $timewe->id);
+        $this->checksub('unsubscribe', '966' . $request->number, $timewe->id);
 
         return redirect('mbc_portal_unsub')->with('success', 'تم الغاء الاشتراك بنجاح');
       } else {
@@ -606,7 +614,13 @@ class MbcController extends Controller
       if ($check == "true") {
 
         session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-        return redirect(url('?OpID=' . MBC_OP_ID));
+        $lang =  session::get('lang');
+        if($lang == 'ar'){
+          $message = 'تم تسجيل الدخول بنجاح';
+        }else{
+          $message = 'Login succesfully';
+        }
+        return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
 
       } else {
         return redirect('mbc_portal_landing')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
@@ -622,5 +636,33 @@ class MbcController extends Controller
       return redirect('mbc_portal_landing');
     }
 
+
+    public function terms(Request $request)
+    {
+      if (request()->get('OpID') == mbc_op_id()) {
+        return view('front.terms');
+      } else {
+        return view('errors.404');
+      }
+    }
+
+    public function faq(Request $request)
+    {
+      if (request()->get('OpID') == mbc_op_id()) {
+        return view('front.f_q');
+      } else {
+        return view('errors.404');
+      }
+    }
+
+    public function profile(Request $request)
+    {
+      if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
+        if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
+          return view('front.profile');
+        }
+        return redirect('mbc_portal_landing');
+      }
+    }
 
 }

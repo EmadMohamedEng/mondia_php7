@@ -358,8 +358,8 @@ $enable = get_setting('enable_testing');
                 == 'active' )
                 <a class="nav-link text-capitalize" href="{{url('imi/logout')}}"><i
                     class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
-                @endif
-              </li>
+                @elseif(request()->get('OpID') == mbc_op_id() && session()->has('mbc_op_id') && session()->get('status')
+                == 'active' )
 
               <li class="nav-item">
                 <a class="nav-link text-capitalize link_href" href="{{url('/terms')}}"
@@ -379,6 +379,24 @@ $enable = get_setting('enable_testing');
                   @lang('front.faq')
                   <span class="sr-only">(current)</span>
                 </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-capitalize link_href" href="{{url('/profile')}}" style=" <?php echo $style ?>">
+                  <i class="fa fa-user p-1 fa-2x" aria-hidden="true"></i>
+                  @lang('front.profile')
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-capitalize link_href" href="{{url('/mbc_portal_logout')}}" style=" <?php echo $style ?>">
+                  <i class="fa fa-key p-1 fa-2x" aria-hidden="true"></i>
+                  @lang('front.logout')
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+                @endif
               </li>
 
             </ul>

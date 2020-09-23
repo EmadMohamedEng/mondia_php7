@@ -1,8 +1,12 @@
 <?php
 return [
     'title' => 'ألرسائل النصيه',
+    'service_name' => 'اسم الخدمة',
+    'service_type' => 'نوع الخدمة',
     'renew' => 'تجدد تلقائيا',
     'language' => 'english',
+    'discription' => 'وصف الخدمة',
+    'discription_weekly' => 'تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 10 ريال فى اسبوعياً',
     'role' => 'الادوار',
     'create-role' => 'انشاء دور',
     'dashboard' => 'لوحة التحكم',
@@ -161,7 +165,8 @@ return [
         'message_quota' => 'رصيد الرسائل',
         'message_sent' => 'الرسائل المرسله',
         'role' => 'ألدور',
-        'phone' => 'التليفون'
+        'phone' => 'رقم الهاتف',
+        'date' => 'تاريخ اليوم',
     ],
     'helps' => [
         'head' => 'كيف نستطيع مساعدتك ؟',
