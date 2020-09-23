@@ -41,7 +41,7 @@
       @else
       @foreach ($contents as $item)
       @if(request()->get('OpID') == mbc)
-      <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-3">
+      <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-1">
       @else
       <div class="col-md-4 col-lg-4 col-xl-2 col-6 p-0">
       @endif

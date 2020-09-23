@@ -438,7 +438,7 @@ select:active {
 .main_container .list_page .content_carousel_head .link_title h6 {
   margin-bottom: 1rem;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
 }
 .main_container .list_page .item {
   margin-bottom: 1rem;
@@ -668,7 +668,7 @@ select:active {
 }
 .main_container .inner_page .section_content .p_content {
   margin-left: 0.5rem;
-  font-size: 14px;
+  font-size: 16px;
   color: #FFF;
 }
 .main_container .inner_page .section_content .p_content_2 {
@@ -1831,6 +1831,7 @@ select:active {
     color: #efc049;
     font-size: 16px;
     float: right;
+    margin-top: 7%;
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo img {
     width: 30%;
@@ -1942,7 +1943,7 @@ select:active {
     margin-top: 0.75rem;
   }
   .main_container .inner_page .section_content .p_content {
-    font-size: 10px;
+    font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
