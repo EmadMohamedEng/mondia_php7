@@ -78,6 +78,8 @@ svg {
 }
 .lang_color{
   background-color: #111;
+  z-index: 2147483647;
+
 }
 .lang_color a{
   color: #FFF;
