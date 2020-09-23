@@ -606,7 +606,7 @@ class MbcController extends Controller
       if ($check == "true") {
 
         session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-        return redirect(url('profile/?OpID=' . MBC_OP_ID));
+        return redirect(url('?OpID=' . MBC_OP_ID));
 
       } else {
         return redirect('mbc_portal_landing')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
