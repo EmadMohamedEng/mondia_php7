@@ -451,7 +451,7 @@ select:active {
   -o-border-radius: 10px;
 }
 .main_container .list_page .item .card .owl_content_img img {
-  height: 11rem;
+  height: 18.25rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -563,7 +563,7 @@ select:active {
   padding: 0 2rem;
 }
 .main_container .inner_page .cover img {
-  height: 55rem;
+  height: 33rem;
   width: 92%;
 }
 .main_container .inner_page .cover button {
@@ -993,7 +993,7 @@ select:active {
   background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
   position: fixed;
   bottom: 0;
-  width: 61%;
+  width: 39.5%;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
