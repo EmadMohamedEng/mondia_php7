@@ -564,14 +564,20 @@ $enable = get_setting('enable_testing');
                       <div class="nav_item_welc text-capitalize font-weight-bolder" href="#0">@lang('front.welcome')</div>
                     </div>
 
-                    <!-- <div class="col-6 p-0">
+
+                    @if(request()->get('OpID') == mbc)
+
+                    @else
+                    <div class="col-6 p-0">
                       <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
                       <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
                         @foreach(Config::get('languages') as $key=>$lang)
                         <a class="dropdown-item dropdown-item2 text-capitalize" href="{{url('lang/'.$key)}}">{{$lang}}</a>
                         @endforeach
                       </div>
-                    </div> -->
+                    </div>
+                    @endif
+
                   </div>
                 </li>
 
@@ -705,6 +711,7 @@ $enable = get_setting('enable_testing');
                 </li>
                 @endif
 
+                @if ( request()->get("OpID") == mbc )
                 <li class="nav-item">
                   <a class="nav-link text-capitalize link_href" href="{{url('/terms')}}" style=" <?php echo $style ?>">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 27 22" style="enable-background:new 0 0 27 22;" xml:space="preserve">
@@ -806,6 +813,8 @@ $enable = get_setting('enable_testing');
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
+                @else
+                @endif
 
                 @if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN')))
 
