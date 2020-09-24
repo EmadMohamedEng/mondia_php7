@@ -83,7 +83,7 @@ $enable = get_setting('enable_testing');
 
 
 @if(request()->get('OpID') == mbc)
-<!-- <style>
+<style>
   .navbar {
     z-index: 9999;
     width: 100%;
@@ -100,7 +100,8 @@ $enable = get_setting('enable_testing');
 
   .navbar-light .navbar-nav .nav-link {
     color: #efc049;
-    font-size: 12px;
+    font-size: 16px;
+    text-indent: -5px;
   }
 
   .navbar-light .navbar-nav .nav-link:focus,
@@ -131,7 +132,7 @@ $enable = get_setting('enable_testing');
   .navbar-nav .dropdown-menu{
     background-color: #0f1218;
   }
-</style> -->
+</style>
 @endif
 
 
@@ -863,7 +864,7 @@ $enable = get_setting('enable_testing');
         </div>
         @if(request()->get('OpID') == mbc)
         <!-- start menu 3  -->
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -872,27 +873,20 @@ $enable = get_setting('enable_testing');
 
 
             <div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
-              <ul class="navbar_ul navbar-nav mr-auto">
-                <div class="border-bottom"></div>
+              <div class="navbar navbar-nav mr-auto">
                 <?php
-                if (request()->get('OpID') == 9 || request()->get('OpID') == 10 || request()->get('OpID') == 11 || request()->get('OpID') == 12 || request()->get('OpID') == 13) {
-                  $style = "background: #FFF;";
-                } else {
-                  $style = "background: transparent;";
-                }
+                $style = "background: transparent;";
                 ?>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link text-capitalize active_menu link_href" href="{{route('front.index')}}" style=" <?php echo $style ?>color:#efc049!important;margin-top: 0px;">
-
                     @lang('front.home')
                     <span class="sr-only">(current)</span>
                   </a>
-                </li>
+                </li> -->
                 @foreach(provider_menu() as $provider)
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     @if($provider->image)
-
                     @else
                     <i class="icon_before fas fa-mosque fa-lg"></i>
                     @endif
@@ -900,63 +894,17 @@ $enable = get_setting('enable_testing');
                   </a>
                   <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
                     @foreach($provider->services as $value)
-
                     <?php
                     if ($provider->id == 23 && $value->id == 40  && request()->get("OpID") == 12) { // The Holy Quran and TIMWE
                       continue;
                     }
                     ?>
-
                     <a class="dropdown-item text-capitalize link_href ul_menu" href="{{route('front.list',['service_id' => $value->id])}}">{{$value->getTranslation('title',getCode())}}</a>
                     @endforeach
                   </div>
                 </li>
                 @endforeach
 
-
-                @if(session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
-                <li class="nav-item ">
-                  @if(request()->get('OpID') == omantel && session()->has('menu_unsub_omantel') &&
-                  session()->get('menu_unsub_omantel') == 'active' )
-                  <a class="nav-link text-capitalize" href="{{route('front.unsub')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
-                  @elseif(request()->get('OpID') == du && session()->has('menu_unsub_du') &&
-                  session()->get('menu_unsub_du') == 'active' )
-                  <a class="nav-link text-capitalize" href="{{route('front.du_unsub')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
-                  @endif
-                </li>
-                <li class="nav-item ">
-                  @if(request()->get('OpID') == omantel && session()->has('menu_unsub_omantel') &&
-                  session()->get('menu_unsub_omantel') == 'active' )
-                  <a class="nav-link text-capitalize" href="{{route('front.logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
-                  @elseif(request()->get('OpID') == du && session()->has('menu_unsub_du') &&
-                  session()->get('menu_unsub_du') == 'active' )
-                  <a class="nav-link text-capitalize" href="{{route('front.du_logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
-                  @endif
-                </li>
-                @endif
-
-                <li class="nav-item ">
-                  @if(request()->get('OpID') == ooredoo && session()->has('ooredoo_op_id') && session()->get('status') ==
-                  'active' )
-                  <a class="nav-link text-capitalize" href="{{url('ooredoo_q_unsub')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
-                  @elseif(request()->get('OpID') == imi_op_id() && session()->has('imi_op_id') && session()->get('status')
-                  == 'active' )
-                  <a class="nav-link text-capitalize" href="{{url('imi/unsubscribe')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
-                  @endif
-                </li>
-
-                <li class="nav-item ">
-                  @if(request()->get('OpID') == ooredoo && session()->has('ooredoo_op_id') && session()->get('status') ==
-                  'active' )
-                  <a class="nav-link text-capitalize" href="{{url('ooredoo_q_logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
-                  @elseif(request()->get('OpID') == imi_op_id() && session()->has('imi_op_id') && session()->get('status')
-                  == 'active' )
-                  <a class="nav-link text-capitalize" href="{{url('imi/logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
-                  @endif
-                </li>
-
-              </ul>
-              <ul class="navbar_ul navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
@@ -983,20 +931,15 @@ $enable = get_setting('enable_testing');
                     </div>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link text-capitalize link_href" href="{{url('/terms')}}" style=" <?php echo $style ?>">
-                      @lang('front.terms')
-                      <span class="sr-only">(current)</span>
-                    </a>
+                  <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Terms and Faq
+                  </a>
+                  <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+                    <a class="dropdown-item text-capitalize link_href ul_menu" href="{{url('/terms')}}">@lang('front.terms')</a>
+                    <a class="dropdown-item text-capitalize link_href ul_menu" href="{{url('/faq')}}">@lang('front.faq')</a>
+                  </div>
                 </li>
-
-                  <li class="nav-item">
-                    <a class="nav-link text-capitalize link_href" href="{{url('/faq')}}" style=" <?php echo $style ?>">
-                      @lang('front.faq')
-                      <span class="sr-only">(current)</span>
-                    </a>
-                  </li>
-
                   <li class="nav-item">
                     <a class="nav-link text-capitalize link_href" href="{{url('/profile')}}" style=" <?php echo $style ?>">
                       @lang('front.profile')
@@ -1005,9 +948,9 @@ $enable = get_setting('enable_testing');
                   </li>
 
 
-              </ul>
+              </div>
             </div>
-        </nav> -->
+        </nav>
         <!-- end menu 3  -->
         @else
         @endif
