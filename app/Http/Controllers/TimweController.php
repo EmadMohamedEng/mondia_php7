@@ -24,8 +24,12 @@ class TimweController extends Controller
   {
     $lang =  isset($request->lang) ? $request->lang : "ar";
     session::put('lang', $lang);
-    //dd(Session::get('lang', $lang));
-    return view('landing_v2.timwe_landing.timwe_landing', compact("lang"));
+    //dd(Session::get('lang', $lang));\
+
+    $msisdn = $_SERVER['cli '] ?? session()->get('userIdentifier');
+    $msisdn = str_replace("974", "", $msisdn);
+
+    return view('landing_v2.timwe_landing.timwe_landing', compact("lang", "msisdn"));
   }
 
   public function pincode()
@@ -460,7 +464,7 @@ class TimweController extends Controller
 
   public function subscriptionOptIn(Request $request, $partnerRole)
   {
-    $msisdn = $_SERVER['cli'] ?? $request->number ?? session('pinMsisdn');
+    $msisdn = $request->number ?? session('pinMsisdn');
 
     $check = $this->checkStatus($msisdn);
     //dd($check);
