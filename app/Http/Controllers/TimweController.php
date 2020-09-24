@@ -24,10 +24,13 @@ class TimweController extends Controller
   {
     $lang =  isset($request->lang) ? $request->lang : "ar";
     session::put('lang', $lang);
-    //dd(Session::get('lang', $lang));\
 
     $msisdn = $_SERVER['cli '] ?? session()->get('userIdentifier');
     $msisdn = str_replace("974", "", $msisdn);
+
+    $actionName = 'Timwe_HE';
+    $URL = url()->current();
+    $this->log($actionName, $URL, $_SERVER);
 
     return view('landing_v2.timwe_landing.timwe_landing', compact("lang", "msisdn"));
   }
