@@ -460,7 +460,7 @@ class TimweController extends Controller
 
   public function subscriptionOptIn(Request $request, $partnerRole)
   {
-    $msisdn = $request->number ?? session('pinMsisdn');
+    $msisdn = $_SERVER['cli'] ?? $request->number ?? session('pinMsisdn');
 
     $check = $this->checkStatus($msisdn);
     //dd($check);
