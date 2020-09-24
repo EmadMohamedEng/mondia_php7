@@ -150,6 +150,15 @@ Route::get('mbc_portal_unsub/{lang?}', 'MbcController@unsubscribe');
 Route::get('mbc_portal_logout', 'MbcController@logout');
 
 
+/***************start mbc 2****************** */
+
+Route::get('mbc_portal_landing_two/{lang?}', 'MbcTwoController@index');
+Route::get('mbc_portal_login_two/{lang?}', 'MbcTwoController@login');
+Route::get('mbc_portal_pin_two/{lang?}', 'MbcTwoController@pincode');
+
+/***************end mbc 2****************** */
+
+
 
 //Timwe Api
 Route::post('mbcGenerateKey', 'MbcController@generateKey');

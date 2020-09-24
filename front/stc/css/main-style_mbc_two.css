@@ -1,0 +1,29 @@
+.main_container {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../front/images/mbc_landing/BG.png);
+  background-size: cover;
+  background-attachment: fixed;
+  position: fixed;
+  overflow-y: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.best_features{
+  color: #906b37;
+    font-size: 26px;
+    padding: 0 3%;
+}
+
+.div_size{
+  margin-bottom: 10%;
+}
+
+
+@media (min-width: 1025px) {
+  .main_container {
+    width: 25%;
+    margin: 0 auto;
+    position: unset;
+  }
+}

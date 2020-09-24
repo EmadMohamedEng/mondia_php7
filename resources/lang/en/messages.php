@@ -239,4 +239,6 @@ return [
     'add_user' => 'Add User',
     'action' => 'Action',
 
+    'enjoy_time_landing' => 'Alkanz Gate',
+    'enjoy_time_landing' => 'Get the best features that interest a Muslim in his daily life',
 ];
