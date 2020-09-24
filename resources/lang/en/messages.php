@@ -240,5 +240,8 @@ return [
     'action' => 'Action',
 
     'enjoy_time_landing' => 'Alkanz Gate',
-    'enjoy_time_landing' => 'Get the best features that interest a Muslim in his daily life',
+    'Mbc_Muslim_guide_landing' => 'Get the best features that interest a Muslim in his daily life',
+    'Are_you_a_subscriber' => 'Existing subscriber? Login',
+    'click_sub_landing' => 'By clicking on Subscribe now, you agree to the terms and conditions',
+
 ];

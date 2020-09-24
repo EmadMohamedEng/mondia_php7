@@ -11,33 +11,11 @@
   <link rel="stylesheet" href='{{url('front/stc')}}/css/bootstrap.min.css'>
   <link rel="stylesheet" href='{{url('front/stc')}}/css/all.min.css'>
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
+  <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_mbc_two.css">
 </head>
-
-<style>
-  @media (min-width: 1025px) {
-    .main_container {
-      width: 25%;
-      margin: 0 auto;
-    }
-  }
-
-  .main_container {
-    /* background: #f2f2f2;
-    background-image: unset !important;
-    background-size: unset !important;
-    background-position: unset !important;
-    background-repeat: unset !important;
-    background-attachment: unset !important;*/
-    position: unset !important;
-    overflow-y: hidden !important;
-  }
-
-  .landing_page .form_content form .btn,
-  .landing_page .form_content form .form-group label {
-    background-color: #ffffffa1;
-    color: #000;
-  }
-</style>
+@php
+App::setLocale($lang);
+@endphp
 
 <body>
   <div class="main_container pt-5">
@@ -47,9 +25,10 @@
 
     <div class="landing_page pt-5">
 
-      <div class="strip text-dark pt-3">
-        <h4>@lang('messages.enjoy_time')</h4>
-        <h2>@lang('messages.Mbc_Muslim_guide')</h2>
+    <div class="landing_page">
+      <div class="strip text-dark">
+        <h2>@lang('messages.enjoy_time_landing')</h2>
+        <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
       </div>
 
       <div class="shbka">

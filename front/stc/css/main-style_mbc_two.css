@@ -19,6 +19,32 @@
   margin-bottom: 10%;
 }
 
+.landing_page .form_content form .form-group label{
+  background:#a5a5a5;
+  padding: 7px;
+}
+.landing_page .form_content form .form-group input{
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 75%;
+}
+.landing_page .form_content form .btn{
+  background:#ad844a;
+  width: 60%;
+  font-size: 17px;
+  border-radius: 15px;
+  margin-top: 10%;
+}
+
+.Are_you_a_subscriber{
+  color: #906b37;
+  font-size: 20px;
+}
+
+a:hover {
+  color: #906b37;
+  text-decoration: unset;
+}
 
 @media (min-width: 1025px) {
   .main_container {

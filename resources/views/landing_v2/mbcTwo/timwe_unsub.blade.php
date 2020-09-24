@@ -11,27 +11,11 @@
   <link rel="stylesheet" href='{{url('front/stc')}}/css/bootstrap.min.css'>
   <link rel="stylesheet" href='{{url('front/stc')}}/css/all.min.css'>
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
+  <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_mbc_two.css">
 
 </head>
 
-<style>
-  @media (min-width: 1025px) {
-    .main_container {
-      width: 25%;
-      margin: 0 auto;
-      position: unset;
-    }
-  }
 
-  /* .main_container {
-    position: unset !important;
-    overflow-y: hidden !important;
-  } */
-
-  .landing_page .form_content form .btn {
-    width: 85%;
-  }
-</style>
 @php
 App::setLocale($lang);
 @endphp
@@ -44,8 +28,8 @@ App::setLocale($lang);
     <div class="landing_page">
 
       <div class="strip text-dark">
-      <h4>@lang('messages.enjoy_time')</h4>
-        <h2>@lang('messages.Mbc_Muslim_guide')</h2>
+      <h2>@lang('messages.enjoy_time_landing')</h2>
+        <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
       </div>
 
       <div class="shbka">
