@@ -354,8 +354,8 @@ class FrontController extends Controller
       });
     }
 
-    $services = $services->get();
-    $contents = $contents->get();
+    $services = $services->groupBy('service_id')->get();
+    $contents = $contents->groupBy('content_id')->get();
     return view('front.search_result', compact('services', 'contents'));
   }
 
