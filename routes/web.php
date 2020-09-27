@@ -142,6 +142,7 @@ Route::post('subscription/optout/{partnerRoleId}', 'TimweController@subscription
 /***************start mbc portal****************** */
 define('MBC_OP_ID', 14);
 define('CHECKSUB_URL', "https://mbc.digizone.com.kw/api/checksub");
+// define('CHECKUNSUB_URL', "http://localhost/mbc_system/api/unsub");
 
 Route::get('mbc_portal_login_old/{lang?}', 'MbcController@login');
 Route::get('mbc_portal_landing_old/{lang?}', 'MbcController@index');

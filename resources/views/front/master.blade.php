@@ -85,7 +85,7 @@ $enable = get_setting('enable_testing');
 @if(request()->get('OpID') == mbc)
 <style>
   .navbar {
-    z-index: 9999;
+    z-index: 999;
     width: 100%;
     margin-top: 0;
     background: #0f1218 !important;
