@@ -160,20 +160,19 @@ class MbcTwoController extends Controller
     public function pincode()
     {
       $lang =  session::get('lang');
-      return view('landing_v2.mbc.timwe_pinCode', compact("lang"));
+      return view('landing_v2.mbcTwo.timwe_pinCode', compact("lang"));
     }
 
     public function unsubscribe()
     {
       $lang =  session::get('lang');
-      return view('landing_v2.mbc.timwe_unsub', compact("lang"));
+      return view('landing_v2.mbcTwo.timwe_unsub', compact("lang"));
     }
 
     public function login(Request $request)
     {
-      $lang =  isset($request->lang) ? $request->lang : "en";
-      session::put('lang', $lang);
-      return view('landing_v2.mbc.timwe_login', compact('lang'));
+      $lang =  session::get('lang');
+      return view('landing_v2.mbcTwo.timwe_login', compact('lang'));
     }
 
     public function gen_uuid()
@@ -454,7 +453,7 @@ class MbcTwoController extends Controller
 
       session(['MSISDN' => $vars["userIdentifier"], 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
 
-      $lang =  session::get('applocale');
+      $lang =  session::get('lang');
       if($lang == 'ar'){
         $message = 'تم الاشتراك بنجاح';
       }else{
@@ -614,7 +613,7 @@ class MbcTwoController extends Controller
       if ($check == "true") {
 
         session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-        $lang =  session::get('applocale');
+        $lang =  session::get('lang');
         if($lang == 'ar'){
           $message = 'تم تسجيل الدخول بنجاح';
         }else{
@@ -623,7 +622,7 @@ class MbcTwoController extends Controller
         return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
 
       } else {
-        $lang =  session::get('applocale');
+        $lang =  session::get('lang');
         if($lang == 'ar'){
           $message = 'انت غير مشترك, برجاء الاشتراك';
         }else{

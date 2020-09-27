@@ -62,11 +62,8 @@ if ($lang == 'ar') {
 
       <div class="shbka">
         <div class="container">
-
-
-
-
           <div class="row div_size">
+            @if($lang == 'ar')
             <div class="col-md-6 col-lg-6 col-xl-6 col-6">
               <img src='{{asset("front/images/mbc_landing/02.png")}}' style="width:89%">
             </div>
@@ -74,18 +71,16 @@ if ($lang == 'ar') {
             <div class="col-md-6 col-lg-6 col-xl-6 col-6">
               <img src='{{asset("front/images/mbc_landing/01.png")}}' style="width:89%">
             </div>
+            @else
+            <div class="col-md-6 col-lg-6 col-xl-6 col-6">
+              <img src='{{asset("front/images/mbc_landing/04.png")}}' style="width:89%">
+            </div>
+
+            <div class="col-md-6 col-lg-6 col-xl-6 col-6">
+              <img src='{{asset("front/images/mbc_landing/03.png")}}' style="width:89%">
+            </div>
+            @endif
           </div>
-
-
-
-
-
-
-
-
-
-
-
 
           <div class="zain_viva">
             @if(Session::has('success'))
@@ -117,25 +112,21 @@ if ($lang == 'ar') {
               <input type="tel" class="form-control" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
             </div>
 
-            <h3 class="text-white font-weight-bold mb-3" style="{{$font}}">@lang('messages.subscription_Riyals') </h3>
-            <p class="text-white font-weight-bold mb-3" style="{{$font}}">@lang('messages.renew') </p>
-            <button id="zain_submit" class="btn" type="submit" style="width: 100%"> @lang('messages.Subsc') </button>
+
+            <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subscribe_Now') </button>
           </form>
           <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
                 <h5>الى <span>965</span><span> STOP1 </span>لالغاء الاشتراك ارسل</h5>-->
         </div>
       </div>
 
-      <div class="container">
-        <ul class="terms {{$text}} text-white" dir="{{$left}}">
-          <li> @lang('messages.Subscription_renewal')</li>
-          <li> @lang('messages.stop_service')</li>
-          <li> @lang('messages.years_service')</li>
-        </ul>
-      </div>
+
 
       <div class="cancel text-center mt-3 text-white">
+         <a href="{{url('mbc_portal_login' )}}" class="Are_you_a_subscriber"><p>@lang('messages.Are_you_a_subscriber')</p></a>
+        <p style="font-size: 9px;">@lang('messages.click_sub_landing')</p>
         <p>@lang('messages.unsubscribelink') <a href="{{url('mbc_portal_unsub' )}}">@lang('messages.Link')</a></p>
+
       </div>
 
     </div>
@@ -165,9 +156,9 @@ if ($lang == 'ar') {
       const checkbox = document.getElementById("on-off");
       checkbox.addEventListener('change', (event) => {
         if (event.target.checked) {
-          location.href = "{{url('mbc_portal_landing_two/ar')}}";
+          location.href = "{{url('mbc_portal_landing/ar')}}";
         } else {
-          location.href = "{{url('mbc_portal_landing_two/en')}}";
+          location.href = "{{url('mbc_portal_landing/en')}}";
         }
       })
     }

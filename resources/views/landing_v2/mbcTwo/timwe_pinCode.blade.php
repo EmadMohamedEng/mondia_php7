@@ -11,31 +11,15 @@
   <link rel="stylesheet" href='{{url('front/stc')}}/css/bootstrap.min.css'>
   <link rel="stylesheet" href='{{url('front/stc')}}/css/all.min.css'>
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
+  <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_mbc_two.css">
 </head>
-
 <style>
-  .landing_page .form_content form .form-group input {
-    border-bottom-left-radius: 0.25rem;
-    border-top-left-radius: 0.25rem;
+  .landing_page .form_content form .form-group input{
+    border-bottom-right-radius: unset;
+    border-top-right-radius: unset;
   }
-
-  @media (min-width: 1025px) {
-    .main_container {
-      width: 25%;
-      margin: 0 auto;
-      position: unset;
-    }
-
-    .copy {
-      left: 45%;
-    }
-  }
-
-  /* .main_container {
-    position: unset !important;
-    overflow-y: hidden !important;
-  } */
 </style>
+
 @php
 App::setLocale($lang);
 @endphp
@@ -62,8 +46,8 @@ if ($lang == 'ar') {
 
     <div class="landing_page">
       <div class="strip text-dark">
-        <h4>@lang('messages.enjoy_time')</h4>
-        <h2>@lang('messages.Mbc_Muslim_guide')</h2>
+      <h2>@lang('messages.enjoy_time_landing')</h2>
+        <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
         <h3>@lang('messages.activation_code')</h3>
         <div class="zain_viva">
           @if(Session::has('success'))
@@ -94,14 +78,14 @@ if ($lang == 'ar') {
           <p class="text-white font-weight-bold mb-3" style="{{$font}}">@lang('messages.renew') </p>
 
 
-          <button class="btn" type="submit" style="width: 100%">@lang('messages.confirmation')</button>
+          <button class="btn" type="submit" >@lang('messages.confirmation')</button>
           {!! Form::close() !!}
         </div>
       </div>
       <div class="cancel text-center">
         {!! Form::open(['url'=>'mbc_subscription/optin/'.partnerRoleId,'method'=>'post','class'=>'form']) !!}
         <div class="form-group">
-          <input type="submit" id="reSendPin" class="border-0 rounded p-2 font-weight-bold" value="@lang('messages.click_confirmation')">
+          <input  type="submit" id="reSendPin" class="border-0 rounded p-2 font-weight-bold " value="@lang('messages.click_confirmation')">
         </div>
         {!! Form::close() !!}
       </div>
