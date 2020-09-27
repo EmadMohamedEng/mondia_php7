@@ -1138,7 +1138,7 @@ select:active {
   outline: 0;
 }
 .main_container .sebha_page .modal.show .modal-dialog {
-  margin-top: 80px;
+  margin-top: 13%;
 }
 .main_container .sebha_page #sebhaModal .modal-content {
   background-color: white;
