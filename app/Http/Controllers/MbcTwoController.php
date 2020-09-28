@@ -297,6 +297,7 @@ class MbcTwoController extends Controller
   public function subscriptionOptIn(Request $request, $partnerRole)
   {
     $msisdn = $request->number ?? session('pinMsisdn');
+    $msisdn = trim($msisdn,"+");
     $service_id = 2;
 
     $check = $this->checkStatus($msisdn, $service_id);

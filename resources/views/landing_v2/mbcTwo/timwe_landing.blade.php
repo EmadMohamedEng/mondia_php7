@@ -25,6 +25,7 @@
   .main_container .landing_page {
     margin-top: 0;
   }
+
 </style>
 @php
 App::setLocale($lang);
@@ -120,35 +121,23 @@ if ($lang == 'ar') {
               <div class="col-3 p-0">
                 <div class="dropdown">
                   <button class="btn btn_select dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-
                   <div class="dropdown-menu dropdown-primary">
-                    <a class="dropdown-item select_option " href="#" data-select="<img src='{{asset('front/stc/img/egy.png')}}'>">   <img src="{{asset('front/stc/img/egy.png')}}"> <span>+02 EGY</span></a>
-                    <a class="dropdown-item select_option " href="#" data-select="<img src='{{asset('front/stc/img/ksa.png')}}'>"><img src="{{asset('front/stc/img/ksa.png')}}"> <span>+966 KSA</span></a>
+                    <a class="dropdown-item select_option " href="#" data-select="<img src='{{asset('front/stc/img/egy.png')}}'>">
+                    <img src="{{asset('front/stc/img/egy.png')}}">
+                      <span id="+02" >+02 EGY </span>
+                      </a>
+                    <a class="dropdown-item select_option " href="#" data-select="<img src='{{asset('front/stc/img/ksa.png')}}'>">
+                    <img src="{{asset('front/stc/img/ksa.png')}}">
+                    <span id="+966">+966 KSA </span>
+                    </a>
                   </div>
                 </div>
               </div>
 
               <div class="col-9 p-0">
                 <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-                <input type="tel" class="form-control" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
+                <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>
-
-              <!-- <button class="btn btn_select btn-md m-0 px-3 py-2 z-depth-0 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  <span ></span>
-                </button> -->
-
-              <!-- <div  class="dropdown-menu testtt">
-
-                  <a id="select_value" class="dropdown-item" href="#">+973 <span class="mr-2 {{$float}}">البحرين</span></a>
-                  <a class="dropdown-item" href="#">+20 <span class="mr-2 {{$float}}">مصر</span></a>
-                  <a class="dropdown-item" href="#">+964 <span class="mr-2 {{$float}}">العراق</span></a>
-                  <a class="dropdown-item" href="#">+972 <span class="mr-2 {{$float}}">فلسطين</span></a>
-                  <a class="dropdown-item" href="#">+962 <span class="mr-2 {{$float}}">الأردن</span></a>
-                  <a class="dropdown-item" href="#">+965 <span class="mr-2 {{$float}}">الكويت</span></a>
-                  <a class="dropdown-item" href="#">+966 <span class="mr-2 {{$float}}">المملكة العربية السعودية</span></a>
-                  <a class="dropdown-item" href="#">+971 <span class="mr-2 {{$float}}">الإمارات العربية المتحدة</span></a>
-                </div> -->
-
             </div>
 
             {{--<div class="form-group input-group form-inline">
@@ -188,6 +177,14 @@ if ($lang == 'ar') {
     $('.select_option').click(function () {
       var x= $(this).data('select');
       $('#dropdownMenu1').html(x);
+    })
+
+    // $('.select_option').click(function (e) {
+    // document.getElementById("county_code").innerHTML = e.target.id
+    // })
+
+    $('.select_option').click(function (e) {
+    document.getElementById("phone").value = e.target.id
     })
 
     $(document).ready(function() {

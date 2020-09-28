@@ -57,6 +57,30 @@ App::setLocale($lang);
           <!--<h5>ادخل رقم الهاتف</h5>-->
           <form method="post" action="{{url('mbc_checkstatus')}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
             {{ csrf_field() }}
+
+            <div class="row m-0">
+              <div class="col-3 p-0">
+                <div class="dropdown">
+                  <button class="btn btn_select dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                  <div class="dropdown-menu dropdown-primary">
+                    <a class="dropdown-item select_option " href="#" data-select="<img src='{{asset('front/stc/img/egy.png')}}'>">
+                    <img src="{{asset('front/stc/img/egy.png')}}">
+                      <span id="+02" >+02 EGY </span>
+                      </a>
+                    <a class="dropdown-item select_option " href="#" data-select="<img src='{{asset('front/stc/img/ksa.png')}}'>">
+                    <img src="{{asset('front/stc/img/ksa.png')}}">
+                    <span id="+966">+966 KSA </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-9 p-0">
+                <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
+                <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
+              </div>
+            </div>
+
             <div class="form-group form-inline">
               <label for="phone"><span>966</span></label>
               <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
