@@ -50,9 +50,9 @@ svg {
 }
 
 .dropdown-toggle::after {
-  float: right;
+  /* float: right;
   margin-top: 0.75rem;
-  margin-right: 10px;
+  margin-right: 10px; */
 }
 /* .dropdown-toggle::after {
   float: unset;

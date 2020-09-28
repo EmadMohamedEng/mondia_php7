@@ -14,9 +14,17 @@
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_mbc_two.css">
 </head>
 <style>
-  .landing_page .form_content form .form-group input{
+  .landing_page .form_content form .form-group input {
     border-bottom-right-radius: unset;
     border-top-right-radius: unset;
+  }
+
+  .main_container .img-fluid img {
+    width: 20%;
+  }
+
+  .landing_page {
+    margin-top: 0;
   }
 </style>
 
@@ -28,25 +36,25 @@ App::setLocale($lang);
 if ($lang == 'ar') {
   $text = "text-right";
   $left = "rtl";
-  $bottom = "bottom: 0%;";
+  $bottom = "bottom: -1%;";
   $font = "font-size: 20px;";
 } else {
   $text = "text-left";
   $left = "ltr";
-  $bottom = "bottom: -10%;";
+  $bottom = "bottom: -12%;";
   $font = "font-size: 16px;";
 }
 ?>
 
 <body>
   <div class="main_container">
-    <div class="img-fluid text-center p-3">
+    <div class="img-fluid text-center p-2 d-flex justify-content-center">
       <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
     </div>
 
     <div class="landing_page">
       <div class="strip text-dark">
-      <h2>@lang('messages.enjoy_time_landing')</h2>
+        <h2>@lang('messages.enjoy_time_landing')</h2>
         <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
         <h3>@lang('messages.activation_code')</h3>
         <div class="zain_viva">
@@ -68,9 +76,9 @@ if ($lang == 'ar') {
       <div class="container pt-2">
         <div class="form_content">
           <!--<h5>ادخل رقم الهاتف</h5>-->
-          {!! Form::open(['url'=>'mbc_subscription/confirm/'.partnerRoleId,'method'=>'post','class'=>'form mt-3']) !!}
+          {!! Form::open(['url'=>'mbc_subscription/confirm/'.partnerRoleId,'method'=>'post','class'=>'form']) !!}
           <div class="form-group">
-            <input style="width: 100% !important" type="tel" style="font-family: cursive" name="pincode" class="form-control text-center" id="pincode" placeholder="@lang('messages.confirmation_code')">
+            <input type="tel" style="font-family: cursive" name="pincode" class="form-control text-center w-100 rounded" id="pincode" placeholder="@lang('messages.confirmation_code')">
           </div>
           <h2 class="text-white font-weight-bold mb-3" style="{{$font}}">
             @lang('messages.subscription_Riyals')
@@ -78,14 +86,14 @@ if ($lang == 'ar') {
           <p class="text-white font-weight-bold mb-3" style="{{$font}}">@lang('messages.renew') </p>
 
 
-          <button class="btn" type="submit" >@lang('messages.confirmation')</button>
+          <button class="btn" type="submit">@lang('messages.confirmation')</button>
           {!! Form::close() !!}
         </div>
       </div>
       <div class="cancel text-center">
         {!! Form::open(['url'=>'mbc_subscription/optin/'.partnerRoleId,'method'=>'post','class'=>'form']) !!}
         <div class="form-group">
-          <input  type="submit" id="reSendPin" class="border-0 rounded p-2 font-weight-bold " value="@lang('messages.click_confirmation')">
+          <input type="submit" id="reSendPin" class="border-0 rounded p-2 font-weight-bold mt-3 " value="@lang('messages.click_confirmation')">
         </div>
         {!! Form::close() !!}
       </div>

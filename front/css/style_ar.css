@@ -69,6 +69,9 @@ body {
 .main_container .content_carousel .content_carousel_head .link_title {
   text-align: right;
 }
+.main_container .content_carousel .content_carousel_head .link_title h6 {
+  margin-right: 3%;
+}
 .main_container .content_carousel .content_carousel_head .btn_more {
   float: left;
 }
@@ -175,6 +178,10 @@ body {
 .main_container .header .header_icon {
     float: left !important;
   }
+  .main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href img {
+    margin-right: 45%;
+  }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
     margin: 0.35rem 0 0 -1rem;
@@ -237,6 +244,10 @@ body {
   .main_container .header .header_logo,
 .main_container .header .header_icon {
     float: left !important;
+  }
+  .main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href img {
+    margin-right: 45%;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -306,6 +317,10 @@ body {
   .main_container .header .header_logo,
 .main_container .header .header_icon {
     float: left !important;
+  }
+  .main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href img {
+    margin-right: 45%;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -392,6 +407,10 @@ body {
   .main_container .header .header_logo,
 .main_container .header .header_icon {
     float: left !important;
+  }
+  .main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href img {
+    margin-right: 45%;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
