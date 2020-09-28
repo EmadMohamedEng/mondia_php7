@@ -143,14 +143,6 @@ $enable = get_setting('enable_testing');
       <div class="row">
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 d-flex justify-content-center">
           <div class="header_logo">
-            @if(request()->get('OpID') == mbc)
-            <span class="open_icon_nav_mbc" onclick="openNav()">&#9776;</span>
-            @else
-            <a class="arrow_back back" href="#0">
-              <i class="fas fa-angle-left fa-lg"></i>
-            </a>
-            @endif
-
             <a href="{{route('front.index')}}" class="link_href">
               <!-- {{request()->get('OpID') == omantel ? '<img src="front/images/Du_header.png" alt="Logo">':'<img src="front/images/Du_header.png" alt="Logo">'}} -->
               @if(request()->get('OpID') == omantel)
@@ -168,20 +160,25 @@ $enable = get_setting('enable_testing');
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-6 d-flex justify-content-end">
-        @if(request()->get('OpID') == mbc)
-              <div class="lang_mbc">
-                <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize p-0" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
-                <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
-                  @foreach(Config::get('languages') as $key=>$lang)
-                  <a class="dropdown-item dropdown-item2 text-capitalize" href="{{url('lang/'.$key)}}">{{$lang}}</a>
-                  @endforeach
-                </div>
-              </div>
-            @endif
+          @if(request()->get('OpID') == mbc)
+          <span class="open_icon_nav_mbc" onclick="openNav()">&#9776;</span>
+          @else
+          <a class="arrow_back back" href="#0">
+            <i class="fas fa-angle-left fa-lg"></i>
+          </a>
+          @endif
+
+          @if(request()->get('OpID') == mbc)
+          <div class="lang_mbc">
+            <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize p-0" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
+            <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+              @foreach(Config::get('languages') as $key=>$lang)
+              <a class="dropdown-item dropdown-item2 text-capitalize" href="{{url('lang/'.$key)}}">{{$lang}}</a>
+              @endforeach
+            </div>
+          </div>
+          @endif
         </div>
-
-        
-
 
         {{-- <div class="col-md-2 col-lg-2 col-xl-6 col-4">
           <a href="#0">
@@ -998,7 +995,6 @@ $enable = get_setting('enable_testing');
       e.preventDefault();
     });
 
-
 // Disable debuging by setting flag
     document.onkeydown = function(e) {
       if("{{get_setting('inspector_debug')}}" == "0"){  // debuging is disable
@@ -1009,17 +1005,11 @@ $enable = get_setting('enable_testing');
         || e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)
         || e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)  // CTRL+u
 
-         ) {
+        ) {
           return false;
-
         }
-
       }
-
-
     }
-
-
   </script>
 
 

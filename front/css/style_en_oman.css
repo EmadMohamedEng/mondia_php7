@@ -100,7 +100,7 @@ select:active {
 .main_container .header .header_logo .link_href,
 .main_container .header .header_icon .link_href {
   width: 100%;
-  text-align: center;
+  text-align: right;
 }
 .main_container .header .header_logo .link_href img,
 .main_container .header .header_icon .link_href img {

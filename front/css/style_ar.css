@@ -33,6 +33,10 @@ body {
   padding-right: 0;
   padding-left: unset;
 }
+.main_container .header .header_logo.header_logo .link_href,
+.main_container .header .header_icon.header_logo .link_href {
+  text-align: left;
+}
 .main_container .header .header_logo.header_logo .arrow_back,
 .main_container .header .header_icon.header_logo .arrow_back {
   top: 1rem;
