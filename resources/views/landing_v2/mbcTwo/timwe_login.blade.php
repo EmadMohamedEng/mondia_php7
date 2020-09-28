@@ -80,14 +80,7 @@ App::setLocale($lang);
                 <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>
             </div>
-
-            <div class="form-group form-inline">
-              <label for="phone"><span>966</span></label>
-              <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-              <input type="tel" class="form-control" value="" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
-            </div>
-
-            <!--<button class="btn back">رجوع</button>-->
+          <!--<button class="btn back">رجوع</button>-->
             <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subsc')</button>
           </form>
           <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
@@ -100,9 +93,8 @@ App::setLocale($lang);
   </div>
   <!-- script -->
   <script src="{{url('front/stc')}}/js/jquery-3.4.0.min.js"></script>
-  <script src="{{url('front/stc')}}/js/bootstrap.min.js"></script>
-
   <script src="{{ url('front/stc')}}/js/popper.min.js"></script>
+  <script src="{{url('front/stc')}}/js/bootstrap.min.js"></script>
   <script src="{{ url('front/stc')}}/js/script_viva.js"></script>
 
 
@@ -117,6 +109,19 @@ App::setLocale($lang);
     $('#zain_submit').focusin(function() {
       $('#viva_form').submit()
     });
+
+    $('.select_option').click(function () {
+      var x= $(this).data('select');
+      $('#dropdownMenu1').html(x);
+    })
+
+    // $('.select_option').click(function (e) {
+    // document.getElementById("county_code").innerHTML = e.target.id
+    // })
+
+    $('.select_option').click(function (e) {
+    document.getElementById("phone").value = e.target.id
+    })
 
   </script>
 

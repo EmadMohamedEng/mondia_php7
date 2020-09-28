@@ -297,8 +297,10 @@ class MbcTwoController extends Controller
   public function subscriptionOptIn(Request $request, $partnerRole)
   {
     $msisdn = $request->number ?? session('pinMsisdn');
+    $msisdn = str_replace("+0","",$msisdn);
     $msisdn = trim($msisdn,"+");
     $service_id = 2;
+
 
     $check = $this->checkStatus($msisdn, $service_id);
     if ($check == "true") {
@@ -324,8 +326,9 @@ class MbcTwoController extends Controller
       $now = strtotime(now());
       $sendDate = gmdate(DATE_W3C, $now);
 
-      $vars["userIdentifier"] = '966' . $msisdn;
-      session()->put('userIdentifier', '966' . $msisdn);
+      $vars["userIdentifier"] = $msisdn;
+
+      session()->put('userIdentifier', $msisdn);
       session()->put('pinMsisdn',  $msisdn);
       $vars["userIdentifierType"] = "MSISDN";
       $vars["productId"] = productId;
@@ -366,7 +369,7 @@ class MbcTwoController extends Controller
       ]);
       //dd($ReqResponse);
       if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_ALREADY_ACTIVE') {
-        $this->checksub('subscribe', '966' . $msisdn, $timewe->id);
+        $this->checksub('subscribe', $msisdn, $timewe->id);
 
         session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
         return redirect(url('/?OpID=' . ooredoo));
@@ -538,9 +541,12 @@ class MbcTwoController extends Controller
   {
 
     $msisdn = $request->number;
+    $msisdn = str_replace("+0","",$msisdn);
+    $msisdn = trim($msisdn,"+");
     $service_id = 2;
 
     $check = $this->checkStatus($msisdn, $service_id);
+    //dd($check);
 
     if ($check == "true") {
 
