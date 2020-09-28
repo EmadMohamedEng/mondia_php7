@@ -29,14 +29,13 @@
 }
 
 .landing_page .form_content form .form-group label {
-  background: #a5a5a5;
-  padding: 7px;
+  padding: 6.5px;
 }
 
 .landing_page .form_content form .form-group input {
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
-  width: 75%;
+  width: 85%;
 }
 
 .landing_page .form_content form .btn {
@@ -50,9 +49,8 @@
   color: #000;
   font-size: 1rem;
   font-weight: normal;
-  width: 70%;
+  width: 99%;
   height: 38px;
-  margin-left: 1.6rem;
   margin-top: 0;
   padding: 0;
   border-top-right-radius: 0;
@@ -64,11 +62,11 @@
 }
 
 .btn_select img {
-  width: 50%;
+  width: 40%;
 }
 
 .dropdown-item.select_option img {
-  width: 10%;
+  width: 17%;
 }
 
 .landing_page .form_content form #phone {
@@ -100,6 +98,20 @@ a:hover {
   -moz-transform: translateX(0%) !important;
   -ms-transform: translateX(0%) !important;
   -o-transform: translateX(0%) !important;
+}
+
+.copy {
+  left: 20%;
+}
+
+.terms {
+  font-size: 0.7rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024.9px) {
+  .btn_select img {
+    width: 25%;
+  }
 }
 
 @media (min-width: 1025px) {

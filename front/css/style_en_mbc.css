@@ -246,6 +246,7 @@ select:active {
 }
 .main_container .content_carousel .content_carousel_head .link_title h6 {
   font-weight: bold;
+  margin-left: 3%;
 }
 .main_container .content_carousel .content_carousel_head .btn_more {
   background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
@@ -439,6 +440,7 @@ select:active {
   margin-bottom: 1rem;
   font-weight: bold;
   font-size: 16px;
+  margin-left: 3%;
 }
 .main_container .list_page .item {
   margin-bottom: 1rem;
@@ -1423,6 +1425,8 @@ select:active {
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 25% !important;
+    margin-top: 0.5rem !important;
+    margin-left: 31%;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1772,6 +1776,8 @@ select:active {
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 25% !important;
+    margin-top: 0.5rem !important;
+    margin-left: 31%;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -2135,6 +2141,8 @@ select:active {
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 25% !important;
+    margin-top: 0.5rem !important;
+    margin-left: 31%;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -2511,6 +2519,8 @@ select:active {
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 25% !important;
+    margin-top: 0.5rem !important;
+    margin-left: 31%;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -2911,8 +2921,9 @@ select:active {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 9% !important;
+    width: 12% !important;
     margin-top: 0.75rem !important;
+    margin-left: 8%;
   }
   .main_container .header .header_logo.header_icon i,
 .main_container .header .header_icon.header_icon i {
@@ -3467,8 +3478,9 @@ select:active {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 8% !important;
+    width: 10% !important;
     margin-top: 0.75rem !important;
+    margin-left: 8%;
   }
   .main_container .header .header_logo.header_icon i,
 .main_container .header .header_icon.header_icon i {

@@ -56,7 +56,7 @@ if ($lang == 'ar') {
       </div>
 
       <div class="col-7 p-0">
-        <div class="img-fluid text-center p-3 d-flex justify-content-start">
+        <div class="img-fluid text-center p-2 d-flex justify-content-start">
           <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
         </div>
       </div>
@@ -110,30 +110,25 @@ if ($lang == 'ar') {
         </div>
       </div>
 
-      <div class="container">
+      <div class="container p-0">
         <div class="form_content">
           <!--<h5>ادخل رقم الهاتف</h5>-->
           <form method="post" action="{{url('mbc_subscription/optin/'.partnerRoleId)}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
             {{ csrf_field() }}
 
             <div class="row m-0">
-              <div class="col-4 p-0">
-
+              <div class="col-3 p-0">
                 <div class="dropdown">
-
-                  <!--Trigger-->
                   <button class="btn btn_select dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
 
-                  <!--Menu-->
                   <div class="dropdown-menu dropdown-primary">
-                    <a class="dropdown-item select_option " href="#" data-select="<img src='../front/stc/img/egypt.svg'>">+03 مصر <img src="../front/stc/img/egypt.svg"></a>
-                    <a class="dropdown-item select_option " href="#" data-select="<img src='../front/stc/img/ksa.png'>">+966 المملكة العربية السعودية <img src="../front/stc/img/ksa.png"></a>
+                    <a class="dropdown-item select_option " href="#" data-select="<img src='{{asset('front/stc/img/egy.png')}}'>">   <img src="{{asset('front/stc/img/egy.png')}}"> <span>+02 EGY</span></a>
+                    <a class="dropdown-item select_option " href="#" data-select="<img src='{{asset('front/stc/img/ksa.png')}}'>"><img src="{{asset('front/stc/img/ksa.png')}}"> <span>+966 KSA</span></a>
                   </div>
                 </div>
-                <!--/Dropdown primary-->
               </div>
 
-              <div class="col-8 p-0">
+              <div class="col-9 p-0">
                 <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
                 <input type="tel" class="form-control" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>

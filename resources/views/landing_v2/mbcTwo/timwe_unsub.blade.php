@@ -15,10 +15,17 @@
 
 </head>
 
+<style>
+  .main_container .img-fluid img {
+    width: 20%;
+  }
+</style>
+
 
 @php
 App::setLocale($lang);
 @endphp
+
 <body>
   <div class="main_container">
     <div class="img-fluid text-center p-3">
@@ -28,7 +35,7 @@ App::setLocale($lang);
     <div class="landing_page">
 
       <div class="strip text-dark">
-      <h2>@lang('messages.enjoy_time_landing')</h2>
+        <h2>@lang('messages.enjoy_time_landing')</h2>
         <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
       </div>
 
