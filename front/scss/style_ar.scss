@@ -18,7 +18,7 @@ body {
     .header_logo,
     .header_icon {
       &.header_logo {
-        float: right;
+        text-align: center;
 
         h6 {
           padding-right: 0;
@@ -286,11 +286,9 @@ body {
 
       .currency_selectBox {
         select {
-          &:focus {
-          }
+          &:focus {}
 
-          option {
-          }
+          option {}
         }
       }
 
@@ -356,7 +354,7 @@ body {
 
         .link_href {
           img {
-            margin-right: 45%;
+            margin-right: 82%;
           }
         }
 
@@ -375,6 +373,10 @@ body {
           top: 1rem !important;
           width: 0;
         }
+      }
+
+      .lang_mbc {
+        margin-left: -17%;
       }
     }
 
@@ -460,7 +462,7 @@ body {
 
         .link_href {
           img {
-            margin-right: 45%;
+            margin-right: 82%;
           }
         }
 
@@ -479,6 +481,10 @@ body {
           top: 1rem !important;
           width: 0;
         }
+      }
+
+      .lang_mbc {
+        margin-left: -17%;
       }
     }
 
@@ -567,7 +573,7 @@ body {
 
         .link_href {
           img {
-            margin-right: 45%;
+            margin-right: 82%;
           }
         }
 
@@ -587,6 +593,10 @@ body {
           font-size: 1.35rem;
           width: 0;
         }
+      }
+
+      .lang_mbc {
+        margin-left: -13%;
       }
     }
 
@@ -708,7 +718,7 @@ body {
 
         .link_href {
           img {
-            margin-right: 45%;
+            margin-right: 82%;
           }
         }
 
@@ -727,6 +737,10 @@ body {
           top: 1rem !important;
           width: 0;
         }
+      }
+
+      .lang_mbc {
+        margin-left: -13%;
       }
     }
 
@@ -804,6 +818,12 @@ body {
         display: block;
         float: left !important;
 
+        .link_href {
+          img {
+            margin-right: 88%;
+          }
+        }
+
         .arrow_back {
           right: 99% !important;
           left: unset !important;
@@ -823,6 +843,15 @@ body {
             font-size: 2rem;
             margin-top: 1rem;
           }
+        }
+      }
+
+      .lang_mbc {
+        margin-left: -6%;
+
+        .dropdown-menu2 {
+          right: unset !important;
+          left: 0% !important
         }
       }
     }
@@ -895,6 +924,12 @@ body {
         display: block;
         float: left !important;
 
+        .link_href {
+          img {
+            margin-right: 88%;
+          }
+        }
+
         .arrow_back {
           right: 98% !important;
           left: unset !important;
@@ -914,6 +949,15 @@ body {
             font-size: 2rem;
             margin-top: 1rem;
           }
+        }
+      }
+
+      .lang_mbc {
+        margin-left: -4%;
+
+        .dropdown-menu2 {
+          right: unset !important;
+          left: 0% !important
         }
       }
     }
@@ -967,7 +1011,6 @@ body {
     }
   }
 }
-
 
 @media (min-width: 320px) and (max-width: 1200px) {
   .main_container {

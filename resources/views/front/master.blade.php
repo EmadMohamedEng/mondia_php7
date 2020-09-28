@@ -129,7 +129,8 @@ $enable = get_setting('enable_testing');
     background-color: unset;
     font-size: 13px;
   }
-  .navbar-nav .dropdown-menu{
+
+  .navbar-nav .dropdown-menu {
     background-color: #0f1218;
   }
 </style>
@@ -140,7 +141,7 @@ $enable = get_setting('enable_testing');
   <main class="main_container">
     <header class="header w-100">
       <div class="row">
-        <div class="col-md-12 col-lg-12 col-xl-12 col-12">
+        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 d-flex justify-content-center">
           <div class="header_logo">
             @if(request()->get('OpID') == mbc)
             <span class="open_icon_nav_mbc" onclick="openNav()">&#9776;</span>
@@ -149,7 +150,6 @@ $enable = get_setting('enable_testing');
               <i class="fas fa-angle-left fa-lg"></i>
             </a>
             @endif
-
 
             <a href="{{route('front.index')}}" class="link_href">
               <!-- {{request()->get('OpID') == omantel ? '<img src="front/images/Du_header.png" alt="Logo">':'<img src="front/images/Du_header.png" alt="Logo">'}} -->
@@ -164,41 +164,23 @@ $enable = get_setting('enable_testing');
               @lang('front.Daleel Al Muslim')
               @endif
             </a>
-
-            @if(request()->get('OpID') == mbc)
-            <div>
-
-              <div class="row m-0">
-                <div class="col-6 p-0 lang_show">
-                  <a class="nav-link nav-link2  slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}
-                  </a>
-
-                  <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent lang_color" aria-labelledby="navbarDropdownMenuLink1">
-                    @foreach(Config::get('languages') as $key=>$lang)
-                    <a class="dropdown-item dropdown-item2 text-capitalize" href="{{url('lang/'.$key)}}">{{$lang}}</a>
-
-                    @endforeach
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-
-            <div class="row m-0">
-              <div class="col-6 p-0 angle_show">
-                <i class="fas fa-angle-down"></i>
-              </div>
-            </div>
-            @else
-            @endif
-
-
           </div>
         </div>
 
+        <div class="col-md-6 col-lg-6 col-xl-6 col-6 d-flex justify-content-end">
+        @if(request()->get('OpID') == mbc)
+              <div class="lang_mbc">
+                <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize p-0" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
+                <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+                  @foreach(Config::get('languages') as $key=>$lang)
+                  <a class="dropdown-item dropdown-item2 text-capitalize" href="{{url('lang/'.$key)}}">{{$lang}}</a>
+                  @endforeach
+                </div>
+              </div>
+            @endif
+        </div>
 
-
+        
 
 
         {{-- <div class="col-md-2 col-lg-2 col-xl-6 col-4">
@@ -318,15 +300,15 @@ $enable = get_setting('enable_testing');
               <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
                   <g>
-                                    <path d="M344.94,154.96L344.94,154.96c-18.11-53.29-58.53-80.54-81.01-92.04c-8.72-4.46-19.13-4.46-27.85,0
+                    <path d="M344.94,154.96L344.94,154.96c-18.11-53.29-58.53-80.54-81.01-92.04c-8.72-4.46-19.13-4.46-27.85,0
                     c-22.48,11.5-62.91,38.74-81.01,92.04c-3.83,11.25-6.04,23.16-6.6,35.38c-0.14,3.08,2.25,5.7,5.33,5.83
                     c3.08,0.12,5.7-2.25,5.83-5.33c0.51-11.17,2.52-22.04,6.01-32.29c16.85-49.56,54.55-74.96,75.53-85.69
                     c5.54-2.83,12.15-2.83,17.68,0c20.97,10.72,58.68,36.12,75.53,85.69c4.08,11.98,6.13,24.7,6.13,37.82v233.52h-22.98
                     c-3.08,0-5.59,2.5-5.59,5.59s2.5,5.59,5.59,5.59h28.57c3.08,0,5.59-2.5,5.59-5.59V196.37C351.67,182.02,349.4,168.1,344.94,154.96z
                     " />
-                                    <path d="M291.47,429.88H159.49V216.29c0-3.08-2.5-5.59-5.59-5.59s-5.59,2.5-5.59,5.59v219.18c0,3.08,2.5,5.59,5.59,5.59h137.56
+                    <path d="M291.47,429.88H159.49V216.29c0-3.08-2.5-5.59-5.59-5.59s-5.59,2.5-5.59,5.59v219.18c0,3.08,2.5,5.59,5.59,5.59h137.56
                     c3.08,0,5.59-2.5,5.59-5.59S294.56,429.88,291.47,429.88z" />
-                                    <path d="M197.2,235.31c-3.04,1.95-5.82,4.05-8.47,6.5c-8.03,7.44-12.63,18.16-12.63,29.38v131.13c0,6.46,5.26,11.71,11.71,11.71
+                    <path d="M197.2,235.31c-3.04,1.95-5.82,4.05-8.47,6.5c-8.03,7.44-12.63,18.16-12.63,29.38v131.13c0,6.46,5.26,11.71,11.71,11.71
                     h124.36c6.46,0,11.71-5.26,11.71-11.71V271.21c0-11.45-4.82-22.35-13.22-29.93c-1.65-1.48-3.4-2.89-5.22-4.16
                     c-1.24-0.87-3.07-1.46-3.68-2.98c-0.43-1.07-0.14-2.28,0.72-2.99c15.28-12.88,21.7-30.49,21.4-50.07
                     c-0.37-23.71-12.27-43.88-30.14-58.75c-9.76-8.13-21-14.42-31.98-20.7c-3.24-1.85-8.01-3.13-11.78-3.13
@@ -354,7 +336,7 @@ $enable = get_setting('enable_testing');
                     C210.57,132.44,218.62,126.4,226.29,121.51z M196.91,149.01l10.67,7.98l-19.45,14.55C189.48,163.5,192.4,156.02,196.91,149.01z
                     M196.87,214.46c-6.59-8.53-7.88-15.9-7.94-16.27c-0.01-0.09-0.03-0.17-0.05-0.26c-0.42-2.11-0.76-4.18-1.01-6.23l19.72,14.75
                     L196.87,214.46z M207.59,255.92l-20.32,15.19c0.03-8.09,3.32-15.77,9.05-21.1c0.5-0.46,1-0.91,1.54-1.36L207.59,255.92z" />
-                                  </g>
+                  </g>
                 </svg>
                 @lang('front.muslim_guide')</a>
               <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
@@ -435,11 +417,11 @@ $enable = get_setting('enable_testing');
                         c-16.15,0-31.35,0.17-46.54-0.04c-26.63-0.36-43.82-17.4-44.2-43.87C272.83,122.72,273.01,107.49,273.01,90.2z M296.12,104.42
                         c0,12.15-1.88,25.25,0.76,37.37c1.42,6.53,9.86,14.81,16.44,16.23c12.09,2.62,25.14,0.75,37.32,0.75
                         C332.39,140.59,314.65,122.9,296.12,104.42z" />
-                                        <path d="M181.97,249.62c0-7.46,0-13.97,0-21.2c45.61,0,90.61,0,136.24,0c0,7.2,0,13.71,0,21.2
+                    <path d="M181.97,249.62c0-7.46,0-13.97,0-21.2c45.61,0,90.61,0,136.24,0c0,7.2,0,13.71,0,21.2
                         C273.17,249.62,228.17,249.62,181.97,249.62z" />
-                                        <path d="M318.21,274.47c0,7.48,0,13.98,0,21.21c-45.62,0-90.62,0-136.24,0c0-7.23,0-13.73,0-21.21
+                    <path d="M318.21,274.47c0,7.48,0,13.98,0,21.21c-45.62,0-90.62,0-136.24,0c0-7.23,0-13.73,0-21.21
                         C227.04,274.47,272.04,274.47,318.21,274.47z" />
-                                        <path d="M181.6,341.39c0-7.49,0-13.66,0-20.94c29.91,0,59.62,0,90.37,0c0,6.41,0,13.23,0,20.94
+                    <path d="M181.6,341.39c0-7.49,0-13.66,0-20.94c29.91,0,59.62,0,90.37,0c0,6.41,0,13.23,0,20.94
                         C242.34,341.39,212.62,341.39,181.6,341.39z" />
                   </g>
                 </svg>
@@ -456,13 +438,13 @@ $enable = get_setting('enable_testing');
                         c-0.05-96.66,78.91-175.7,175.63-175.79C346.56,79.12,425.63,158.13,425.71,254.85z M249.81,398.64
                         c78.34,0.51,143.21-63.73,143.89-142.51c0.69-79.51-63.51-144.43-143.33-144.92c-78.61-0.49-143.46,63.74-144.08,142.69
                         C105.67,333.37,169.88,398.12,249.81,398.64z" />
-                                        <path d="M234.13,296.79c0.49-26.33,12.27-46.83,32.86-62.5c10.73-8.16,16.2-18.33,14.54-31.92c-1.86-15.16-15.51-27.04-31.32-27.29
+                    <path d="M234.13,296.79c0.49-26.33,12.27-46.83,32.86-62.5c10.73-8.16,16.2-18.33,14.54-31.92c-1.86-15.16-15.51-27.04-31.32-27.29
                         c-15.35-0.24-29.4,11.51-31.63,26.49c-0.31,2.09-0.47,4.21-0.63,6.33c-0.67,8.97-7.48,15.21-16.37,15
                         c-8.55-0.2-15.17-6.93-15.38-15.64c-0.74-30.37,22.59-58.32,52.65-63.08c36.53-5.78,69.14,17.6,74.27,54.23
                         c3.31,23.62-5.11,43.27-23.43,58.73c-5.49,4.63-10.92,9.53-15.43,15.07c-6.07,7.47-8.42,16.54-8.39,26.21
                         c0.01,2.86,0.13,5.81-0.52,8.55c-1.86,7.74-9.14,12.51-17.28,11.68c-7.65-0.77-13.59-7.18-13.94-15.12
                         C234.05,301.28,234.13,299.03,234.13,296.79z" />
-                                        <path d="M250.01,334.87c8.92,0.01,15.87,6.96,15.86,15.89c-0.01,8.91-6.98,15.87-15.9,15.86c-8.92-0.01-15.86-6.98-15.85-15.91
+                    <path d="M250.01,334.87c8.92,0.01,15.87,6.96,15.86,15.89c-0.01,8.91-6.98,15.87-15.9,15.86c-8.92-0.01-15.86-6.98-15.85-15.91
                         C234.14,341.74,241.03,334.86,250.01,334.87z" />
                   </g>
                 </svg>
@@ -475,16 +457,16 @@ $enable = get_setting('enable_testing');
               <a class="nav-link text-capitalize link_href" href="{{url('/profile')}}" style=" <?php echo $style ?>">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
                   <g>
-                                      <path d="M429.66,250.5c-0.73,99.14-78.96,176.9-174.87,179.36c-101.62,2.6-183.95-78.67-184.46-178.78
+                    <path d="M429.66,250.5c-0.73,99.14-78.96,176.9-174.87,179.36c-101.62,2.6-183.95-78.67-184.46-178.78
                       c-0.5-98.69,78.5-179.81,178.02-180.52C348.98,69.84,429.24,149.88,429.66,250.5z M378.82,337.26
                       c41.8-59.58,37.17-151.57-29.65-207.2C283.62,75.49,185.2,84.6,130.55,150.41c-52.64,63.39-40.87,144.61-8.93,186.64
                       C192.26,265.29,308.68,265.41,378.82,337.26z M363.41,356.23c-62.47-67.34-168.84-63.48-226.38,0.21
                       C197.26,423.21,305.84,421.15,363.41,356.23z" />
-                                      <path d="M321.95,190.49c0.02,39.34-32.36,71.69-71.7,71.65c-39.6-0.04-72.01-32.14-72.04-71.34
+                    <path d="M321.95,190.49c0.02,39.34-32.36,71.69-71.7,71.65c-39.6-0.04-72.01-32.14-72.04-71.34
                       c-0.03-40.35,32.07-72.43,72.48-72.42C289.85,118.38,321.93,150.84,321.95,190.49z M202.18,190.01
                       c-0.05,26.6,21.36,48.11,47.93,48.15c26.28,0.04,47.8-21.47,47.89-47.86c0.08-26.29-21.5-47.96-47.76-47.96
                       C223.78,142.35,202.23,163.73,202.18,190.01z" />
-                                    </g>
+                  </g>
                 </svg>
                 @lang('front.profile')
                 <span class="sr-only">(current)</span>
@@ -495,23 +477,22 @@ $enable = get_setting('enable_testing');
 
             <li class="nav-item">
               <a class="nav-link text-capitalize link_href" href="{{url('/mbc_portal_logout')}}" style=" <?php echo $style ?>">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
-              <g>
-                <path d="M410.58,235.55c0.04-0.05,0.07-0.1,0.11-0.14c0.16-0.21,0.32-0.42,0.47-0.64c0.09-0.14,0.17-0.28,0.26-0.42
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+                  <g>
+                    <path d="M410.58,235.55c0.04-0.05,0.07-0.1,0.11-0.14c0.16-0.21,0.32-0.42,0.47-0.64c0.09-0.14,0.17-0.28,0.26-0.42
                   c0.08-0.14,0.17-0.27,0.24-0.41c0.1-0.19,0.19-0.38,0.27-0.57c0.05-0.1,0.1-0.2,0.14-0.31c0.1-0.23,0.18-0.47,0.26-0.71
                   c0.02-0.07,0.05-0.14,0.07-0.21c0.09-0.31,0.17-0.61,0.24-0.92c0-0.01,0-0.01,0-0.02c0.67-3.24-0.25-6.74-2.76-9.25l-50.79-50.79
                   c-3.97-3.97-10.4-3.97-14.37,0c-3.97,3.97-3.97,10.4,0,14.37l33.47,33.47H274.04c-5.61,0-10.16,4.55-10.16,10.16
                   c0,5.61,4.55,10.16,10.16,10.16h104.14l-33.44,33.44c-3.97,3.97-3.97,10.4,0,14.37c1.98,1.99,4.58,2.98,7.18,2.98
-                  c2.6,0,5.2-0.99,7.19-2.99l50.7-50.7C410.08,236.13,410.34,235.85,410.58,235.55z"/>
-                <path d="M294.36,263c-5.61,0-10.16,4.55-10.16,10.16v60.94c0,9.33-7.6,16.93-16.93,16.93h-44.02V141.12
+                  c2.6,0,5.2-0.99,7.19-2.99l50.7-50.7C410.08,236.13,410.34,235.85,410.58,235.55z" />
+                    <path d="M294.36,263c-5.61,0-10.16,4.55-10.16,10.16v60.94c0,9.33-7.6,16.93-16.93,16.93h-44.02V141.12
                   c0-11.55-7.35-21.88-18.45-25.76l-81.5-27.15c-2.75-0.85-5.5-1.26-8.4-1.26c-14.94,0-27.09,12.15-27.09,27.09v243.78
                   c0,11.55,7.36,21.88,18.45,25.76l81.51,27.15c2.75,0.85,5.5,1.26,8.4,1.26c14.94,0,27.08-12.15,27.08-27.09v-13.54h44.02
                   c20.55,0,37.24-16.7,37.24-37.24v-60.94C304.52,267.55,299.97,263,294.36,263z M202.94,384.89c0,3.72-3.05,6.77-6.77,6.77
                   c-0.87,0-1.63-0.11-2.21-0.3l-81.12-27.03c-2.76-0.96-4.7-3.64-4.7-6.53V114.03c0-3.72,3.05-6.77,6.77-6.77
-                  c0.87,0,1.62,0.11,2.21,0.3l81.12,27.03c2.76,0.96,4.7,3.64,4.7,6.53V384.89z"/>
-              </g>
-            </svg>
+                  c0.87,0,1.62,0.11,2.21,0.3l81.12,27.03c2.76,0.96,4.7,3.64,4.7,6.53V384.89z" />
+                  </g>
+                </svg>
                 @lang('front.logout')
                 <span class="sr-only">(current)</span>
               </a>
@@ -820,23 +801,22 @@ $enable = get_setting('enable_testing');
 
                 <li class="nav-item">
                   <a class="nav-link text-capitalize link_href" href="{{url('/mbc_portal_logout')}}" style=" <?php echo $style ?>">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
-              <g>
-                <path d="M410.58,235.55c0.04-0.05,0.07-0.1,0.11-0.14c0.16-0.21,0.32-0.42,0.47-0.64c0.09-0.14,0.17-0.28,0.26-0.42
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+                      <g>
+                        <path d="M410.58,235.55c0.04-0.05,0.07-0.1,0.11-0.14c0.16-0.21,0.32-0.42,0.47-0.64c0.09-0.14,0.17-0.28,0.26-0.42
                   c0.08-0.14,0.17-0.27,0.24-0.41c0.1-0.19,0.19-0.38,0.27-0.57c0.05-0.1,0.1-0.2,0.14-0.31c0.1-0.23,0.18-0.47,0.26-0.71
                   c0.02-0.07,0.05-0.14,0.07-0.21c0.09-0.31,0.17-0.61,0.24-0.92c0-0.01,0-0.01,0-0.02c0.67-3.24-0.25-6.74-2.76-9.25l-50.79-50.79
                   c-3.97-3.97-10.4-3.97-14.37,0c-3.97,3.97-3.97,10.4,0,14.37l33.47,33.47H274.04c-5.61,0-10.16,4.55-10.16,10.16
                   c0,5.61,4.55,10.16,10.16,10.16h104.14l-33.44,33.44c-3.97,3.97-3.97,10.4,0,14.37c1.98,1.99,4.58,2.98,7.18,2.98
-                  c2.6,0,5.2-0.99,7.19-2.99l50.7-50.7C410.08,236.13,410.34,235.85,410.58,235.55z"/>
-                <path d="M294.36,263c-5.61,0-10.16,4.55-10.16,10.16v60.94c0,9.33-7.6,16.93-16.93,16.93h-44.02V141.12
+                  c2.6,0,5.2-0.99,7.19-2.99l50.7-50.7C410.08,236.13,410.34,235.85,410.58,235.55z" />
+                        <path d="M294.36,263c-5.61,0-10.16,4.55-10.16,10.16v60.94c0,9.33-7.6,16.93-16.93,16.93h-44.02V141.12
                   c0-11.55-7.35-21.88-18.45-25.76l-81.5-27.15c-2.75-0.85-5.5-1.26-8.4-1.26c-14.94,0-27.09,12.15-27.09,27.09v243.78
                   c0,11.55,7.36,21.88,18.45,25.76l81.51,27.15c2.75,0.85,5.5,1.26,8.4,1.26c14.94,0,27.08-12.15,27.08-27.09v-13.54h44.02
                   c20.55,0,37.24-16.7,37.24-37.24v-60.94C304.52,267.55,299.97,263,294.36,263z M202.94,384.89c0,3.72-3.05,6.77-6.77,6.77
                   c-0.87,0-1.63-0.11-2.21-0.3l-81.12-27.03c-2.76-0.96-4.7-3.64-4.7-6.53V114.03c0-3.72,3.05-6.77,6.77-6.77
-                  c0.87,0,1.62,0.11,2.21,0.3l81.12,27.03c2.76,0.96,4.7,3.64,4.7,6.53V384.89z"/>
-              </g>
-            </svg>
+                  c0.87,0,1.62,0.11,2.21,0.3l81.12,27.03c2.76,0.96,4.7,3.64,4.7,6.53V384.89z" />
+                      </g>
+                    </svg>
                     @lang('front.logout')
                     <span class="sr-only">(current)</span>
                   </a>
@@ -915,32 +895,32 @@ $enable = get_setting('enable_testing');
                 @endforeach
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                      @lang('front.muslim_guide')</a>
-                    <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+                    @lang('front.muslim_guide')</a>
+                  <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
 
 
-                      <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
-                      <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
-                      @if (request()->get("OpID") == 9 )
+                    <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
+                    <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
+                    @if (request()->get("OpID") == 9 )
 
-                      @elseif ( request()->get("OpID") == ooredoo )
+                    @elseif ( request()->get("OpID") == ooredoo )
 
-                      @else
-                      <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
-                      @endif
-                      @if ( request()->get("OpID") == mbc )
+                    @else
+                    <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
+                    @endif
+                    @if ( request()->get("OpID") == mbc )
 
-                      @else
-                      <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
-                      @endif
-                      <a class="dropdown-item text-capitalize link_href" href="{{url('mosque')}}"> @lang('front.mosque')</a>
+                    @else
+                    <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
+                    @endif
+                    <a class="dropdown-item text-capitalize link_href" href="{{url('mosque')}}"> @lang('front.mosque')</a>
 
-                    </div>
+                  </div>
                 </li>
 
-                  <li class="nav-item dropdown">
+                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Terms and Faq
                   </a>
@@ -949,12 +929,12 @@ $enable = get_setting('enable_testing');
                     <a class="dropdown-item text-capitalize link_href ul_menu" href="{{url('/faq')}}">@lang('front.faq')</a>
                   </div>
                 </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-capitalize link_href" href="{{url('/profile')}}" style=" <?php echo $style ?>">
-                      @lang('front.profile')
-                      <span class="sr-only">(current)</span>
-                    </a>
-                  </li>
+                <li class="nav-item">
+                  <a class="nav-link text-capitalize link_href" href="{{url('/profile')}}" style=" <?php echo $style ?>">
+                    @lang('front.profile')
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
 
 
               </div>
@@ -982,6 +962,7 @@ $enable = get_setting('enable_testing');
   <script src="{{asset('front/js/script.js')}}"></script>
   @endif
   <script src="{{asset('front/js/js_PrayTimes.js')}}"></script>
+
 
   <script>
     op_id = {{isset($_REQUEST['OpID']) ? 1 : 0}}
@@ -1051,7 +1032,6 @@ $enable = get_setting('enable_testing');
       document.getElementById("mySidenav").style.width = "0";
     }
   </script>
-
   @yield('script')
 </body>
 

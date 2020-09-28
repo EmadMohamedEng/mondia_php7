@@ -72,12 +72,12 @@ select {
     position: unset;
     background: $bg_color2;
     height: 4rem;
-    padding: 1.10rem 1.75rem;
+    padding: 1.10rem 1rem;
 
     .header_logo,
     .header_icon {
       color: $white_color;
-      display: inline-flex;
+
       position: relative;
       width: 100%;
       text-align: right;
@@ -116,6 +116,16 @@ select {
         i {
           opacity: 0.5;
         }
+      }
+    }
+
+    .lang_mbc {
+      color: $text_color;
+
+      .dropdown-menu2 {
+        right: 0 !important;
+        text-align: center;
+        background-color: $bg_color2;
       }
     }
   }
@@ -1820,9 +1830,8 @@ select {
         }
 
         img {
-          width: 25% !important;
+          width: 30% !important;
           margin-top: 0.5rem !important;
-          margin-left: 31%;
         }
       }
     }
@@ -2356,9 +2365,8 @@ select {
         }
 
         img {
-          width: 25% !important;
+          width: 30% !important;
           margin-top: 0.5rem !important;
-          margin-left: 31%;
         }
       }
     }
@@ -2912,9 +2920,8 @@ select {
         }
 
         img {
-          width: 25% !important;
+          width: 30% !important;
           margin-top: 0.5rem !important;
-          margin-left: 31%;
         }
       }
     }
@@ -3485,9 +3492,8 @@ select {
         }
 
         img {
-          width: 25% !important;
+          width: 30% !important;
           margin-top: 0.5rem !important;
-          margin-left: 31%;
         }
 
         h6 {
@@ -4072,7 +4078,6 @@ select {
       .header_logo,
       .header_icon {
         width: 100%;
-        text-align: center;
 
         .arrow_back {
           left: 100%;
@@ -4097,6 +4102,14 @@ select {
             font-size: 2rem;
             margin-top: 1rem;
           }
+        }
+      }
+
+      .lang_mbc {
+        .dropdown-menu2 {
+          right: 0 !important;
+          left: 58% !important;
+          width: 0;
         }
       }
     }
@@ -4941,6 +4954,14 @@ select {
             font-size: 2.5rem;
             margin-top: 1rem;
           }
+        }
+      }
+
+      .lang_mbc {
+        .dropdown-menu2 {
+          right: 0 !important;
+          left: 68% !important;
+          width: 0;
         }
       }
     }
