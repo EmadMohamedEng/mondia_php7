@@ -222,6 +222,16 @@ class FrontController extends Controller
       return redirect('mbc_portal_landing');
     }
 
+    
+    if($request->has('OpID') && $request->OpID == omantel){  //mbc
+        // return view('front.inner_enable_testing', compact('content','contents'));
+        return view('front.inner', compact('content', 'contents'));
+
+        
+    
+    }
+
+
 
 
 

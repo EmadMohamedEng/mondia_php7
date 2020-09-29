@@ -16,7 +16,7 @@
 @if(request()->get('OpID') == mbc)
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
 @else
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 p-0 no_padding close_nav">
 @endif
   <div>
     <h2 style="color: white;text-align: center; padding-top: 2%;color: #efc049;">@lang('front.profile')</h2>

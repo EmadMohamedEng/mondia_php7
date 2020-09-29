@@ -45,6 +45,8 @@ select:active {
 
 .main_container {
   padding-bottom: 10%;
+  width: 50%;
+  margin: 0 auto;
   /* Start Header */
   /* End Header */
   /* Start Home Page */
@@ -104,7 +106,7 @@ select:active {
 }
 .main_container .header .header_logo .link_href img,
 .main_container .header .header_icon .link_href img {
-  width: 4%;
+  width: 12%;
   margin-top: -0.25rem;
 }
 .main_container .header .header_logo .arrow_back,
@@ -129,9 +131,9 @@ select:active {
 }
 .main_container .nav_nav {
   background-color: #FFF;
-  width: 75%;
+  width: 90%;
   margin-top: 1.5rem;
-  margin-left: 1rem;
+  margin-left: 0;
   padding: 0.5rem 0;
   position: sticky;
   border: 1px solid #bfbfbf;
@@ -198,7 +200,7 @@ select:active {
   position: relative;
 }
 .main_container .img_carousel .owl_one .item .owl_one_img img {
-  height: 19.5rem;
+  height: 14.5rem;
 }
 .main_container .img_carousel .owl_one .item .btn_subscribe {
   height: 3.5rem;
@@ -215,16 +217,19 @@ select:active {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   position: absolute;
-  top: 93.25%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.main_container .img_carousel .owl_one .item .btn_subscribe button:focus {
+  box-shadow: 0 0 0 0.2rem #FFF;
 }
 .main_container .img_carousel .owl-dots button {
   outline: 0;
 }
 .main_container .img_carousel .owl-theme .owl-dots .owl-dot.active span,
 .main_container .img_carousel .owl-theme .owl-dots .owl-dot:hover span {
-  background: #004c97;
+  background: #ff9e1b;
 }
 .main_container .content_carousel .content_carousel_head {
   margin-top: 2rem;
@@ -246,7 +251,7 @@ select:active {
 .main_container .content_carousel .owl_content_one .item .card {
   margin: 0 auto;
   display: block;
-  width: 50%;
+  width: 100%;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -388,7 +393,7 @@ select:active {
 .main_container .list_page .coming_soon {
   color: #FFF;
   background: #ff9e1b;
-  width: 20%;
+  width: 32%;
   cursor: not-allowed;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -617,9 +622,13 @@ select:active {
   border-radius: 5px !important;
   height: 80px;
   width: 80px;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
 }
 .main_container .inner_page .section_content .p_content {
-  margin-top: 21px;
+  margin-left: 2%;
   font-size: 14px;
   color: #6a6060;
 }
@@ -954,7 +963,7 @@ select:active {
 }
 .main_container .search_page {
   margin: 2.5rem auto;
-  width: 75%;
+  width: 100%;
 }
 .main_container .search_page .form_search {
   position: relative;
@@ -1157,16 +1166,12 @@ select:active {
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {
-  .padding_phones {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-  }
-
   .no_padding {
     padding: 0;
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -1260,6 +1265,9 @@ select:active {
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
     top: 92.5%;
   }
+  .main_container .content_carousel .content_carousel_head {
+    margin-top: 1rem;
+  }
   .main_container .content_carousel .owl_content_one .item {
     width: 100%;
   }
@@ -1267,10 +1275,10 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-    height: 10rem !important;
+    height: 9.719rem !important;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
-    height: 10rem !important;
+    height: 9.719rem !important;
   }
   .main_container .content_carousel .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -1493,16 +1501,12 @@ select:active {
   }
 }
 @media (min-width: 360px) and (max-width: 374.9px) {
-  .padding_phones {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-  }
-
   .no_padding {
     padding: 0;
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -1516,7 +1520,7 @@ select:active {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 18% !important;
+    width: 23% !important;
     margin-top: 0 !important;
   }
   .main_container .nav_nav {
@@ -1597,6 +1601,9 @@ select:active {
     top: 93.5%;
     font-size: 1rem;
   }
+  .main_container .content_carousel .content_carousel_head {
+    margin-top: 1rem;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-weight: bold;
     font-size: 1.25rem;
@@ -1615,7 +1622,7 @@ select:active {
     height: 10rem;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
-    height: 12rem !important;
+    height: 10.969rem !important;
   }
   .main_container .content_carousel .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -1685,10 +1692,6 @@ select:active {
   }
   .main_container .inner_page .section_content .pa_Videos {
     margin-top: 0.75rem;
-  }
-  .main_container .inner_page .section_content .p_content,
-.main_container .inner_page .section_content .p_content_2 {
-    margin-left: 2.25rem;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
@@ -1841,16 +1844,12 @@ select:active {
   }
 }
 @media (min-width: 375px) and (max-width: 410.9px) {
-  .padding_phones {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-  }
-
   .no_padding {
     padding: 0;
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -1945,6 +1944,9 @@ select:active {
     top: 93.5%;
     font-size: 1rem;
   }
+  .main_container .content_carousel .content_carousel_head {
+    margin-top: 1rem;
+  }
   .main_container .content_carousel .owl_content_one .item {
     width: 100%;
   }
@@ -1955,7 +1957,7 @@ select:active {
     height: 11.5rem;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
-    height: 12rem !important;
+    height: 11.438rem !important;
   }
   .main_container .content_carousel .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -2203,16 +2205,12 @@ select:active {
   }
 }
 @media (min-width: 411px) and (max-width: 415px) {
-  .padding_phones {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-  }
-
   .no_padding {
     padding: 0;
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -2312,6 +2310,9 @@ select:active {
     top: 94%;
     font-size: 1rem;
   }
+  .main_container .content_carousel .content_carousel_head {
+    margin-top: 1rem;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-weight: bold;
     font-size: 1.25rem;
@@ -2327,10 +2328,10 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-    height: 11.5rem !important;
+    height: 12.563rem !important;
   }
   .main_container .content_carousel .item .card .owl_content_img img {
-    height: 9rem !important;
+    height: 12.563rem !important;
   }
   .main_container .content_carousel .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -2707,6 +2708,9 @@ select:active {
   .main_container .img_carousel .owl-theme .owl-dots .owl-dot span {
     width: 18px;
     height: 18px;
+  }
+  .main_container .content_carousel .content_carousel_head {
+    margin-top: 1rem;
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-size: 2rem;

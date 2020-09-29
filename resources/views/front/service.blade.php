@@ -12,7 +12,7 @@
 @if(request()->get('OpID') == mbc)
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
 @else
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 p-0 no_padding close_nav">
 @endif
     @include('front.search')
   @foreach ($services as $service)
@@ -20,7 +20,7 @@
   <section class="list_page content_carousel">
     <div class="content_carousel_head text-capitalize">
       <div class="row m-0">
-        <div class="col-6 p-0 padding_phones">
+        <div class="col-6 padding_phones">
         <a class="link_title link_href" href="{{route('front.list',['service_id' => $service->id])}}">
             <h6 class="">{{$service->getTranslation('title',getCode())}}</h6>
         </a>
@@ -39,7 +39,7 @@
       @if(request()->get('OpID') == mbc)
       <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-1">
       @else
-      <div class="col-md-4 col-lg-4 col-xl-2 col-6 p-0">
+      <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-0">
       @endif
           <div class="item">
             <div class="card ovf-hidden">

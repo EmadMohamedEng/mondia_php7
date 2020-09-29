@@ -5,7 +5,7 @@
 @if(request()->get('OpID') == mbc)
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
 @else
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 p-0 no_padding close_nav">
 @endif
   <section class="zakkah_v2_page">
     <div class="container p-0 m-0">

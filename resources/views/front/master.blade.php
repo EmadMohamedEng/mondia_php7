@@ -500,7 +500,7 @@ $enable = get_setting('enable_testing');
           <!-- end menu 2  -->
         </div>
         @else
-        <div class="col-md-0 col-lg-0 col-xl-3 col-0 p-0" style="z-index: 9999999999">
+        <div class="col-md-0 col-lg-0 col-xl-4 col-0 p-0" style="z-index: 9999999999">
           @endif
           <!-- start menu 1  -->
           <nav class="nav_nav navbar navbar-expand-xl primary-color">

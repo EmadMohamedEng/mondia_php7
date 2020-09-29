@@ -35,14 +35,49 @@ if (session()->get('applocale') == 'ar') {
 @if(request()->get('OpID') == mbc)
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
 @else
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 p-0 no_padding close_nav">
 @endif
   @include('front.search')
   <section class="inner_page">
     <div class="row m-0">
       <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
         <div class="cover">
-          @if(session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
+        @if($content->type == 1)
+            <video style="object-fit: cover;width:100%" poster="{{$src}}" controls controlsList="nodownload">
+              <source src="{{url($content->video)}}" />
+            </video>
+            @endif
+            @if($content->type == 2)
+                <img src="{{$src}}" alt="Video Cover" style="opacity: 1 !important;height:auto">
+                <audio src="{{url($content->video)}}" controls style="width: 94%;" controlsList="nodownload"></audio>
+            @endif
+            @if($content->type == 3)
+            <img src="{{url($content->video)}}" alt="Video Cover">
+            @endif
+            @if($content->type == 4)
+            <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
+              <h4 style="{{$text}}">{!!$content->getTranslation('content_text',getCode())!!}</h4>
+            </div>
+            @endif
+
+            
+            {{-- <img src="{{$src}}" alt="Video Cover">
+          @if(request()->has('OpID') && request()->get('OpID') == omantel)
+          <button onclick="location.href= '{{route('front.oman',['redirect_url' => url()->full()])}}'" class="btn button_play primary">
+            <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
+          </button>
+          @elseif(request()->has('OpID') && request()->get('OpID') == du)
+          <button onclick="location.href= '{{route('front.du',['redirect_url' => url()->full()])}}'" class="btn button_play primary">
+            <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
+          </button>
+          @else
+          <button data-toggle="modal" data-target="#exampleModalCover" class="btn button_play primary roll-in-top">
+            <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
+          </button>
+          @endif --}}
+
+
+          {{-- @if(session()->has('check_status_id') && session()->has('status') && session()->get('status') == 'active')
             @if($content->type == 1)
             <video style="object-fit: cover;width:100%" poster="{{$src}}" controls controlsList="nodownload">
               <source src="{{url($content->video)}}" />
@@ -75,7 +110,7 @@ if (session()->get('applocale') == 'ar') {
             <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
           @endif
-          @endif
+          @endif --}}
         </div>
       </div>
 
