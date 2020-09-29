@@ -714,33 +714,26 @@ $enable = get_setting('enable_testing');
                 @if ( request()->get("OpID") == mbc )
                 <li class="nav-item">
                   <a class="nav-link text-capitalize link_href" href="{{url('/terms')}}" style=" <?php echo $style ?>">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 27 22" style="enable-background:new 0 0 27 22;" xml:space="preserve">
-                      <g>
-                        <path class="st0" d="M22.8,4.6v13.5h-8.4v0.3c0,0.5-0.4,1-1,1c-0.5,0-1-0.4-1-1v-0.3H4.1V4h0.6v13.5h17.4v-10h-0.6v9.3h-7.7V2.7   h1.6V2.1H4.7v1.3H3.4v15.5h8.4c0.1,0.7,0.8,1.3,1.6,1.3c0.8,0,1.4-0.6,1.6-1.3h8.4V4.6H22.8z M13.1,2.7v14.2H5.4c0,0,0-14.2,0-14.2   H13.1z"></path>
-                        <path class="st0" d="M12.5,3.3H6v5.2h6.4V3.3z M11.8,7.8H6.7V4h5.2V7.8z"></path>
-                        <rect x="11.8" y="15.6" class="st0" width="0.6" height="0.6"></rect>
-                        <rect x="6" y="15.6" class="st0" width="5.2" height="0.6"></rect>
-                        <rect x="6" y="14.3" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="6" y="13" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="6" y="11.7" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="7.3" y="10.4" class="st0" width="5.2" height="0.6"></rect>
-                        <rect x="6" y="10.4" class="st0" width="0.6" height="0.6"></rect>
-                        <rect x="6" y="9.1" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="20.2" y="15.6" class="st0" width="0.6" height="0.6"></rect>
-                        <rect x="14.4" y="15.6" class="st0" width="5.2" height="0.6"></rect>
-                        <rect x="14.4" y="14.3" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="13" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="11.7" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="15.7" y="10.4" class="st0" width="5.2" height="0.6"></rect>
-                        <rect x="14.4" y="10.4" class="st0" width="0.6" height="0.6"></rect>
-                        <rect x="14.4" y="9.1" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="8" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="6.9" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="5.8" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="4.7" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="3.5" class="st0" width="6.4" height="0.6"></rect>
-                      </g>
-                    </svg>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+                  <g>
+                    <path d="M112.62,249.8c0-47.71-0.07-95.43,0.03-143.14c0.05-26.24,13.3-39.3,39.81-39.35c41.99-0.09,84-0.77,125.95,0.53
+                        c9.8,0.3,21.41,5.29,28.71,11.95c23.6,21.51,46.26,44.18,67.79,67.77c6.67,7.31,11.99,18.93,12.13,28.65c1,72.99,0.61,146,0.5,219
+                        c-0.04,25.22-13.62,38.62-39.1,38.66c-65.85,0.09-131.69,0.11-197.54-0.01c-24.46-0.05-38.17-13.7-38.24-38.05
+                        C112.51,347.14,112.62,298.47,112.62,249.8z M273.01,90.2c-40.77,0-79.82-0.06-118.86,0.03c-16.42,0.04-18.6,2.35-18.61,19.48
+                        c-0.04,94.01-0.04,188.02,0,282.03c0.01,16.96,2.21,19.21,18.87,19.23c63.47,0.06,126.94,0.05,190.4,0.01
+                        c17.77-0.01,19.81-2.04,19.83-19.74c0.04-65.38,0.03-130.75-0.02-196.13c0-4.12-0.5-8.24-0.83-13.25
+                        c-16.15,0-31.35,0.17-46.54-0.04c-26.63-0.36-43.82-17.4-44.2-43.87C272.83,122.72,273.01,107.49,273.01,90.2z M296.12,104.42
+                        c0,12.15-1.88,25.25,0.76,37.37c1.42,6.53,9.86,14.81,16.44,16.23c12.09,2.62,25.14,0.75,37.32,0.75
+                        C332.39,140.59,314.65,122.9,296.12,104.42z" />
+                    <path d="M181.97,249.62c0-7.46,0-13.97,0-21.2c45.61,0,90.61,0,136.24,0c0,7.2,0,13.71,0,21.2
+                        C273.17,249.62,228.17,249.62,181.97,249.62z" />
+                    <path d="M318.21,274.47c0,7.48,0,13.98,0,21.21c-45.62,0-90.62,0-136.24,0c0-7.23,0-13.73,0-21.21
+                        C227.04,274.47,272.04,274.47,318.21,274.47z" />
+                    <path d="M181.6,341.39c0-7.49,0-13.66,0-20.94c29.91,0,59.62,0,90.37,0c0,6.41,0,13.23,0,20.94
+                        C242.34,341.39,212.62,341.39,181.6,341.39z" />
+                  </g>
+                </svg>
+                  
                     @lang('front.terms')
                     <span class="sr-only">(current)</span>
                   </a>
@@ -748,33 +741,23 @@ $enable = get_setting('enable_testing');
 
                 <li class="nav-item">
                   <a class="nav-link text-capitalize link_href" href="{{url('/faq')}}" style=" <?php echo $style ?>">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 27 22" style="enable-background:new 0 0 27 22;" xml:space="preserve">
-                      <g>
-                        <path class="st0" d="M22.8,4.6v13.5h-8.4v0.3c0,0.5-0.4,1-1,1c-0.5,0-1-0.4-1-1v-0.3H4.1V4h0.6v13.5h17.4v-10h-0.6v9.3h-7.7V2.7   h1.6V2.1H4.7v1.3H3.4v15.5h8.4c0.1,0.7,0.8,1.3,1.6,1.3c0.8,0,1.4-0.6,1.6-1.3h8.4V4.6H22.8z M13.1,2.7v14.2H5.4c0,0,0-14.2,0-14.2   H13.1z"></path>
-                        <path class="st0" d="M12.5,3.3H6v5.2h6.4V3.3z M11.8,7.8H6.7V4h5.2V7.8z"></path>
-                        <rect x="11.8" y="15.6" class="st0" width="0.6" height="0.6"></rect>
-                        <rect x="6" y="15.6" class="st0" width="5.2" height="0.6"></rect>
-                        <rect x="6" y="14.3" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="6" y="13" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="6" y="11.7" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="7.3" y="10.4" class="st0" width="5.2" height="0.6"></rect>
-                        <rect x="6" y="10.4" class="st0" width="0.6" height="0.6"></rect>
-                        <rect x="6" y="9.1" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="20.2" y="15.6" class="st0" width="0.6" height="0.6"></rect>
-                        <rect x="14.4" y="15.6" class="st0" width="5.2" height="0.6"></rect>
-                        <rect x="14.4" y="14.3" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="13" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="11.7" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="15.7" y="10.4" class="st0" width="5.2" height="0.6"></rect>
-                        <rect x="14.4" y="10.4" class="st0" width="0.6" height="0.6"></rect>
-                        <rect x="14.4" y="9.1" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="8" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="6.9" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="5.8" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="4.7" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="3.5" class="st0" width="6.4" height="0.6"></rect>
-                      </g>
-                    </svg>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+                  <g>
+                    <path d="M425.71,254.85c0.07,96.65-78.89,175.7-175.63,175.8C153.48,430.76,74.34,351.68,74.29,255
+                        c-0.05-96.66,78.91-175.7,175.63-175.79C346.56,79.12,425.63,158.13,425.71,254.85z M249.81,398.64
+                        c78.34,0.51,143.21-63.73,143.89-142.51c0.69-79.51-63.51-144.43-143.33-144.92c-78.61-0.49-143.46,63.74-144.08,142.69
+                        C105.67,333.37,169.88,398.12,249.81,398.64z" />
+                    <path d="M234.13,296.79c0.49-26.33,12.27-46.83,32.86-62.5c10.73-8.16,16.2-18.33,14.54-31.92c-1.86-15.16-15.51-27.04-31.32-27.29
+                        c-15.35-0.24-29.4,11.51-31.63,26.49c-0.31,2.09-0.47,4.21-0.63,6.33c-0.67,8.97-7.48,15.21-16.37,15
+                        c-8.55-0.2-15.17-6.93-15.38-15.64c-0.74-30.37,22.59-58.32,52.65-63.08c36.53-5.78,69.14,17.6,74.27,54.23
+                        c3.31,23.62-5.11,43.27-23.43,58.73c-5.49,4.63-10.92,9.53-15.43,15.07c-6.07,7.47-8.42,16.54-8.39,26.21
+                        c0.01,2.86,0.13,5.81-0.52,8.55c-1.86,7.74-9.14,12.51-17.28,11.68c-7.65-0.77-13.59-7.18-13.94-15.12
+                        C234.05,301.28,234.13,299.03,234.13,296.79z" />
+                    <path d="M250.01,334.87c8.92,0.01,15.87,6.96,15.86,15.89c-0.01,8.91-6.98,15.87-15.9,15.86c-8.92-0.01-15.86-6.98-15.85-15.91
+                        C234.14,341.74,241.03,334.86,250.01,334.87z" />
+                  </g>
+                </svg>
+                  
                     @lang('front.faq')
                     <span class="sr-only">(current)</span>
                   </a>
@@ -782,33 +765,20 @@ $enable = get_setting('enable_testing');
 
                 <li class="nav-item">
                   <a class="nav-link text-capitalize link_href" href="{{url('/profile')}}" style=" <?php echo $style ?>">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 27 22" style="enable-background:new 0 0 27 22;" xml:space="preserve">
-                      <g>
-                        <path class="st0" d="M22.8,4.6v13.5h-8.4v0.3c0,0.5-0.4,1-1,1c-0.5,0-1-0.4-1-1v-0.3H4.1V4h0.6v13.5h17.4v-10h-0.6v9.3h-7.7V2.7   h1.6V2.1H4.7v1.3H3.4v15.5h8.4c0.1,0.7,0.8,1.3,1.6,1.3c0.8,0,1.4-0.6,1.6-1.3h8.4V4.6H22.8z M13.1,2.7v14.2H5.4c0,0,0-14.2,0-14.2   H13.1z"></path>
-                        <path class="st0" d="M12.5,3.3H6v5.2h6.4V3.3z M11.8,7.8H6.7V4h5.2V7.8z"></path>
-                        <rect x="11.8" y="15.6" class="st0" width="0.6" height="0.6"></rect>
-                        <rect x="6" y="15.6" class="st0" width="5.2" height="0.6"></rect>
-                        <rect x="6" y="14.3" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="6" y="13" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="6" y="11.7" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="7.3" y="10.4" class="st0" width="5.2" height="0.6"></rect>
-                        <rect x="6" y="10.4" class="st0" width="0.6" height="0.6"></rect>
-                        <rect x="6" y="9.1" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="20.2" y="15.6" class="st0" width="0.6" height="0.6"></rect>
-                        <rect x="14.4" y="15.6" class="st0" width="5.2" height="0.6"></rect>
-                        <rect x="14.4" y="14.3" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="13" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="11.7" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="15.7" y="10.4" class="st0" width="5.2" height="0.6"></rect>
-                        <rect x="14.4" y="10.4" class="st0" width="0.6" height="0.6"></rect>
-                        <rect x="14.4" y="9.1" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="8" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="6.9" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="5.8" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="4.7" class="st0" width="6.4" height="0.6"></rect>
-                        <rect x="14.4" y="3.5" class="st0" width="6.4" height="0.6"></rect>
-                      </g>
-                    </svg>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+                  <g>
+                    <path d="M429.66,250.5c-0.73,99.14-78.96,176.9-174.87,179.36c-101.62,2.6-183.95-78.67-184.46-178.78
+                      c-0.5-98.69,78.5-179.81,178.02-180.52C348.98,69.84,429.24,149.88,429.66,250.5z M378.82,337.26
+                      c41.8-59.58,37.17-151.57-29.65-207.2C283.62,75.49,185.2,84.6,130.55,150.41c-52.64,63.39-40.87,144.61-8.93,186.64
+                      C192.26,265.29,308.68,265.41,378.82,337.26z M363.41,356.23c-62.47-67.34-168.84-63.48-226.38,0.21
+                      C197.26,423.21,305.84,421.15,363.41,356.23z" />
+                    <path d="M321.95,190.49c0.02,39.34-32.36,71.69-71.7,71.65c-39.6-0.04-72.01-32.14-72.04-71.34
+                      c-0.03-40.35,32.07-72.43,72.48-72.42C289.85,118.38,321.93,150.84,321.95,190.49z M202.18,190.01
+                      c-0.05,26.6,21.36,48.11,47.93,48.15c26.28,0.04,47.8-21.47,47.89-47.86c0.08-26.29-21.5-47.96-47.76-47.96
+                      C223.78,142.35,202.23,163.73,202.18,190.01z" />
+                  </g>
+                </svg>
+                    
                     @lang('front.profile')
                     <span class="sr-only">(current)</span>
                   </a>
