@@ -91,6 +91,10 @@ $enable = get_setting('enable_testing');
     background: #0f1218 !important;
   }
 
+  .navbar .navbar-nav .nav-item {
+    cursor: pointer;
+  }
+
   .navbar-light .navbar-nav .active>.nav-link,
   .navbar-light .navbar-nav .nav-link.active,
   .navbar-light .navbar-nav .nav-link.show,
@@ -108,6 +112,7 @@ $enable = get_setting('enable_testing');
   .navbar-light .navbar-nav .nav-link:hover {
     background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
     color: #FFF;
+    border-radius: 0.25rem;
   }
 
   .dropdown-item:focus,
@@ -141,53 +146,70 @@ $enable = get_setting('enable_testing');
   <main class="main_container">
     <header class="header w-100">
       <div class="row">
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 d-flex justify-content-center">
-          <div class="header_logo">
-            <a href="{{route('front.index')}}" class="link_href">
-              <!-- {{request()->get('OpID') == omantel ? '<img src="front/images/Du_header.png" alt="Logo">':'<img src="front/images/Du_header.png" alt="Logo">'}} -->
-              @if(request()->get('OpID') == omantel)
-              <img class="bounce-top" src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
-              @elseif(request()->get('OpID') == du)
-              <img class="bounce-top" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
-              @elseif(request()->get('OpID') == mbc)
-              <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
-              @else
-              {{-- <img class="bounce-top" src='{{asset("front/images/daleel_elmuslim.png")}}' alt='Logo'> --}}
-              @lang('front.Daleel Al Muslim')
-              @endif
-            </a>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-6 col-xl-6 col-6 d-flex justify-content-end">
-          @if(request()->get('OpID') == mbc)
+        @if(request()->get('OpID') == mbc)
+        <div class="col-md-4 col-lg-4 col-xl-4 col-4 d-flex justify-content-start">
           <span class="open_icon_nav_mbc" onclick="openNav()">&#9776;</span>
-          @else
-          <a class="arrow_back back" href="#0">
-            <i class="fas fa-angle-left fa-lg"></i>
-          </a>
-          @endif
+        </div>
+        @endif
 
-          @if(request()->get('OpID') == mbc)
-          <div class="lang_mbc">
-            <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize p-0" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
-            <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
-              @foreach(Config::get('languages') as $key=>$lang)
-              <a class="dropdown-item dropdown-item2 text-capitalize" href="{{url('lang/'.$key)}}">{{$lang}}</a>
-              @endforeach
+
+        @if(request()->get('OpID') == mbc)
+        <div class="col-md-4 col-lg-4 col-xl-4 col-4 p-0 d-flex justify-content-center">
+          @else
+          <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 d-flex justify-content-center">
+            @endif
+            <div class="header_logo">
+              <a href="{{route('front.index')}}" class="link_href">
+                <!-- {{request()->get('OpID') == omantel ? '<img src="front/images/Du_header.png" alt="Logo">':'<img src="front/images/Du_header.png" alt="Logo">'}} -->
+                @if(request()->get('OpID') == omantel)
+                <img class="bounce-top" src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
+                @elseif(request()->get('OpID') == du)
+                <img class="bounce-top" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
+                @elseif(request()->get('OpID') == mbc)
+                <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
+                @else
+                {{-- <img class="bounce-top" src='{{asset("front/images/daleel_elmuslim.png")}}' alt='Logo'> --}}
+                @lang('front.Daleel Al Muslim')
+                @endif
+              </a>
             </div>
           </div>
-          @endif
-        </div>
 
-        {{-- <div class="col-md-2 col-lg-2 col-xl-6 col-4">
+          @if(request()->get('OpID') == mbc)
+          <div class="col-md-4 col-lg-4 col-xl-4 col-4 d-flex justify-content-end">
+            @else
+            <div class="col-md-6 col-lg-6 col-xl-6 col-6 d-flex justify-content-end">
+              @endif
+
+              @if(request()->get('OpID') == mbc)
+
+              @else
+              <a class="arrow_back back" href="#0">
+                <i class="fas fa-angle-left fa-lg"></i>
+              </a>
+              @endif
+              
+
+              @if(request()->get('OpID') == mbc)
+              <div class="lang_mbc m-md-1 m-lg-1">
+                <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize p-0" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
+                <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+                  @foreach(Config::get('languages') as $key=>$lang)
+                  <a class="dropdown-item text-capitalize" href="{{url('lang/'.$key)}}">{{$lang}}</a>
+                  @endforeach
+                </div>
+              </div>
+              @endif
+            </div>
+
+            {{-- <div class="col-md-2 col-lg-2 col-xl-6 col-4">
           <a href="#0">
             <div class="header_icon">
               <i class="fas fa-search fa-lg"></i>
             </div>
           </a>
         </div> --}}
-      </div>
+          </div>
     </header>
 
     <div class="row m-0">
@@ -953,11 +975,7 @@ $enable = get_setting('enable_testing');
   <script src="{{asset('front/js/jquery-3.3.1.min.js')}}"></script>
   <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
   <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
-  @if(request()->get('OpID') == mbc)
-  <script src="{{asset('front/js/scriptmbc.js')}}"></script>
-  @else
   <script src="{{asset('front/js/script.js')}}"></script>
-  @endif
   <script src="{{asset('front/js/js_PrayTimes.js')}}"></script>
 
 

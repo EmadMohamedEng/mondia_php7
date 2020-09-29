@@ -14,8 +14,12 @@
   width: 35%;
 }
 
+.landing_page .strip h2 {
+  color: #efc049;
+}
+
 .best_features {
-  color: #d8ad53;
+  color: #efc049;
   font-size: 26px;
   padding: 0 3%;
 }
@@ -83,7 +87,7 @@
 }
 
 .Are_you_a_subscriber {
-  color: #d8ad53;
+  color: #efc049;
   font-size: 20px;
 }
 
