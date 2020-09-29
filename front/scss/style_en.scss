@@ -76,7 +76,6 @@ select {
       display: inline-flex;
       position: relative;
       width: 100%;
-      text-align: right;
 
       h6 {
         padding-left: 0;
@@ -85,7 +84,7 @@ select {
 
       .link_href {
         width: 100%;
-        text-align: center;
+        text-align: right;
 
         img {
           width: 3%;

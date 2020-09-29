@@ -9,7 +9,7 @@ $menu = provider_menu();
 @if(request()->get('OpID') == mbc)
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
 @else
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 no_padding close_nav p-0">
 @endif
 
   @include('front.search')
@@ -66,7 +66,7 @@ $menu = provider_menu();
   <section class="content_carousel">
     <div class="content_carousel_head text-capitalize">
       <div class="row m-0">
-        <div class="col-6 p-0 padding_phones">
+        <div class="col-6 padding_phones">
           <a class="link_title" href="#">
             <h6 class="">@lang('front.muslim_guide')</h6>
           </a>
@@ -209,7 +209,7 @@ $menu = provider_menu();
   <section class="content_carousel">
     <div class="content_carousel_head text-capitalize">
       <div class="row m-0">
-        <div class="col-8 p-0 padding_phones">
+        <div class="col-8 padding_phones">
           <a class="link_title link_href" href="{{route('front.service',['provider_id' => $item->id])}}">
             <h6 class="">{{$item->getTranslation('title',getCode())}}</h6>
           </a>
@@ -272,7 +272,7 @@ $menu = provider_menu();
   <section class="content_carousel">
     <div class="content_carousel_head text-capitalize">
       <div class="row m-0">
-        <div class="col-8 p-0 padding_phones">
+        <div class="col-8 padding_phones">
           <a class="link_title link_href" href="{{route('front.service',['provider_id' => $item->id])}}">
             <h6 class="">{{$item->getTranslation('title',getCode())}}</h6>
           </a>

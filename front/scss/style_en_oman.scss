@@ -61,6 +61,8 @@ select {
 
 .main_container {
   padding-bottom: 10%;
+  width: 50%;
+  margin: 0 auto;
 
   /* Start Header */
   .header {
@@ -84,10 +86,10 @@ select {
 
       .link_href {
         width: 100%;
-        text-align: center;
+        text-align: right;
 
         img {
-          width: 4%;
+          width: 12%;
           margin-top: -0.25rem;
         }
       }
@@ -117,9 +119,9 @@ select {
 
   .nav_nav {
     background-color: $white_color;
-    width: 75%;
+    width: 90%;
     margin-top: 1.5rem;
-    margin-left: 1rem;
+    margin-left: 0;
     padding: 0.5rem 0;
     position: sticky;
     border: 1px solid #bfbfbf;
@@ -210,7 +212,7 @@ select {
 
         .owl_one_img {
           img {
-            height: 19.5rem;
+            height: 14.5rem;
           }
         }
 
@@ -229,9 +231,13 @@ select {
             -ms-border-radius: 6px;
             -o-border-radius: 6px;
             position: absolute;
-            top: 93.25%;
+            top: 90%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            &:focus {
+              box-shadow: 0 0 0 0.2rem $white_color;
+            }
           }
         }
       }
@@ -245,12 +251,12 @@ select {
 
     .owl-theme .owl-dots .owl-dot.active span,
     .owl-theme .owl-dots .owl-dot:hover span {
-      background: #004c97;
+      // background: #004c97;
+      background: $bg_color;
     }
   }
 
   .content_carousel {
-
     .content_carousel_head {
       margin-top: 2rem;
 
@@ -277,7 +283,7 @@ select {
         .card {
           margin: 0 auto;
           display: block;
-          width: 50%;
+          width: 100%;
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
@@ -494,7 +500,7 @@ select {
     .coming_soon {
       color: $white_color;
       background: $bg_color;
-      width: 20%;
+      width: 32%;
       cursor: not-allowed;
       border-radius: 8px;
       -webkit-border-radius: 8px;
@@ -810,10 +816,14 @@ select {
         border-radius: 5px !important;
         height: 80px;
         width: 80px;
-      }
+        -webkit-border-radius: 5px !important;
+        -moz-border-radius: 5px !important;
+        -ms-border-radius: 5px !important;
+        -o-border-radius: 5px !important;
+}
 
       .p_content {
-        margin-top: 21px;
+        margin-left: 2%;
         font-size: 14px;
         color: #6a6060;
       }
@@ -1288,7 +1298,7 @@ select {
   /* Start Search Page */
   .search_page {
     margin: 2.5rem auto;
-    width: 75%;
+    width: 100%;
 
     .form_search {
       position: relative;
@@ -1529,16 +1539,17 @@ select {
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {
-  .padding_phones {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-  }
+  // .padding_phones {
+  //   padding-left: 0.75rem !important;
+  //   padding-right: 0.75rem !important;
+  // }
 
   .no_padding {
     padding: 0;
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
 
     .header {
@@ -1664,6 +1675,10 @@ select {
     }
 
     .content_carousel {
+      .content_carousel_head {
+        margin-top: 1rem;
+      }
+
       .owl_content_one {
         .item {
           width: 100%;
@@ -1674,7 +1689,7 @@ select {
 
             .owl_content_img {
               img {
-                height: 10rem !important;
+                height: 9.719rem !important;
               }
             }
           }
@@ -1687,7 +1702,7 @@ select {
 
           .owl_content_img {
             img {
-              height: 10rem !important;
+              height: 9.719rem !important;
             }
           }
 
@@ -2041,16 +2056,17 @@ select {
 }
 
 @media (min-width: 360px) and (max-width: 374.9px) {
-  .padding_phones {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-  }
+  // .padding_phones {
+  //   padding-left: 0.75rem !important;
+  //   padding-right: 0.75rem !important;
+  // }
 
   .no_padding {
     padding: 0;
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
 
     .header {
@@ -2065,7 +2081,7 @@ select {
         }
 
         img {
-          width: 18% !important;
+          width: 23% !important;
           margin-top: 0 !important;
         }
       }
@@ -2178,6 +2194,8 @@ select {
 
     .content_carousel {
       .content_carousel_head {
+        margin-top: 1rem;
+
         .link_title {
           h6 {
             font-weight: bold;
@@ -2214,7 +2232,7 @@ select {
 
           .owl_content_img {
             img {
-              height: 12rem !important;
+              height: 10.969rem !important;
             }
           }
 
@@ -2336,7 +2354,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 2.25rem;
+          // margin-left: 2.25rem;
         }
       }
     }
@@ -2568,16 +2586,17 @@ select {
 }
 
 @media (min-width: 375px) and (max-width: 410.9px) {
-  .padding_phones {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-  }
+  // .padding_phones {
+  //   padding-left: 0.75rem !important;
+  //   padding-right: 0.75rem !important;
+  // }
 
   .no_padding {
     padding: 0;
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
 
     .header {
@@ -2704,6 +2723,10 @@ select {
     }
 
     .content_carousel {
+      .content_carousel_head {
+        margin-top: 1rem;
+      }
+
       .owl_content_one {
         .item {
           width: 100%;
@@ -2727,7 +2750,7 @@ select {
           // height: 17rem !important;
           .owl_content_img {
             img {
-              height: 12rem !important;
+              height: 11.438rem !important;
             }
           }
 
@@ -3113,16 +3136,17 @@ select {
 }
 
 @media (min-width: 411px) and (max-width: 415px) {
-  .padding_phones {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-  }
+  // .padding_phones {
+  //   padding-left: 0.75rem !important;
+  //   padding-right: 0.75rem !important;
+  // }
 
   .no_padding {
     padding: 0;
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
 
     .header {
@@ -3255,6 +3279,7 @@ select {
 
     .content_carousel {
       .content_carousel_head {
+        margin-top: 1rem;
         .link_title {
           h6 {
             font-weight: bold;
@@ -3278,7 +3303,7 @@ select {
 
             .owl_content_img {
               img {
-                height: 11.5rem !important;
+                height: 12.563rem !important;
               }
             }
           }
@@ -3291,7 +3316,7 @@ select {
 
           .owl_content_img {
             img {
-              height: 9rem !important;
+              height: 12.563rem !important;
             }
           }
 
@@ -3839,6 +3864,7 @@ select {
 
     .content_carousel {
       .content_carousel_head {
+        margin-top: 1rem;
         .link_title {
           h6 {
             font-size: 2rem;

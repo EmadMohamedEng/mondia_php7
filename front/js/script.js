@@ -42,7 +42,7 @@ $('.owl_one').owlCarousel({
   animateOut: 'fadeOut',
   nav: false,
   dots: true,
-  center: true,
+  center: false,
   responsive: {
     0: {
       items: 1
@@ -51,6 +51,9 @@ $('.owl_one').owlCarousel({
       items: 1
     },
     1000: {
+      items: 2
+    },
+    1024.9: {
       items: 3
     }
   }
@@ -169,7 +172,7 @@ $('.owl_content_five').owlCarousel({
       items: 2
     },
     1000: {
-      items: 5
+      items: 4
     }
   }
 });

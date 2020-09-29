@@ -26,12 +26,16 @@ body {
 }
 .main_container .header .header_logo.header_logo,
 .main_container .header .header_icon.header_logo {
-  float: right;
+  text-align: center;
 }
 .main_container .header .header_logo.header_logo h6,
 .main_container .header .header_icon.header_logo h6 {
   padding-right: 0;
   padding-left: unset;
+}
+.main_container .header .header_logo.header_logo .link_href,
+.main_container .header .header_icon.header_logo .link_href {
+  text-align: left;
 }
 .main_container .header .header_logo.header_logo .arrow_back,
 .main_container .header .header_icon.header_logo .arrow_back {
@@ -180,7 +184,7 @@ body {
   }
   .main_container .header .header_logo .link_href img,
 .main_container .header .header_icon .link_href img {
-    margin-right: 45%;
+    margin-right: 82%;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -197,6 +201,9 @@ body {
     left: unset !important;
     top: 1rem !important;
     width: 0;
+  }
+  .main_container .header .lang_mbc {
+    margin-left: -17%;
   }
   .main_container .nav_nav button {
     width: 0;
@@ -247,7 +254,7 @@ body {
   }
   .main_container .header .header_logo .link_href img,
 .main_container .header .header_icon .link_href img {
-    margin-right: 45%;
+    margin-right: 82%;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -264,6 +271,9 @@ body {
     left: unset !important;
     top: 1rem !important;
     width: 0;
+  }
+  .main_container .header .lang_mbc {
+    margin-left: -17%;
   }
   .main_container .nav_nav button {
     font-size: 1rem;
@@ -320,7 +330,7 @@ body {
   }
   .main_container .header .header_logo .link_href img,
 .main_container .header .header_icon .link_href img {
-    margin-right: 45%;
+    margin-right: 82%;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -338,6 +348,9 @@ body {
     top: 1rem !important;
     font-size: 1.35rem;
     width: 0;
+  }
+  .main_container .header .lang_mbc {
+    margin-left: -13%;
   }
   .main_container .nav_nav button {
     font-size: 1rem;
@@ -410,7 +423,7 @@ body {
   }
   .main_container .header .header_logo .link_href img,
 .main_container .header .header_icon .link_href img {
-    margin-right: 45%;
+    margin-right: 82%;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -427,6 +440,9 @@ body {
     left: unset !important;
     top: 1rem !important;
     width: 0;
+  }
+  .main_container .header .lang_mbc {
+    margin-left: -13%;
   }
   .main_container .nav_nav button {
     font-size: 1rem;
@@ -472,6 +488,10 @@ body {
     display: block;
     float: left !important;
   }
+  .main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href img {
+    margin-right: 88%;
+  }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
     right: 99% !important;
@@ -490,6 +510,13 @@ body {
 .main_container .header .header_icon.header_icon i {
     font-size: 2rem;
     margin-top: 1rem;
+  }
+  .main_container .header .lang_mbc {
+    margin-left: -6%;
+  }
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    right: unset !important;
+    left: 0% !important;
   }
   .main_container .nav_nav button {
     font-size: 2rem;
@@ -530,6 +557,10 @@ body {
     display: block;
     float: left !important;
   }
+  .main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href img {
+    margin-right: 88%;
+  }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
     right: 98% !important;
@@ -548,6 +579,13 @@ body {
 .main_container .header .header_icon.header_icon i {
     font-size: 2rem;
     margin-top: 1rem;
+  }
+  .main_container .header .lang_mbc {
+    margin-left: -4%;
+  }
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    right: unset !important;
+    left: 0% !important;
   }
   .main_container .nav_nav button {
     font-size: 2rem;

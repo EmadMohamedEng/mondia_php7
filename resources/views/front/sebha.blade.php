@@ -5,7 +5,7 @@
 @if(request()->get('OpID') == mbc)
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
 @else
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 p-0 no_padding close_nav">
 @endif
   <section class="sebha_page">
     <div class="display">
@@ -21,7 +21,7 @@
 
     <!--====================== Modal =================== -->
     <div class="modal fade" id="sebhaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
