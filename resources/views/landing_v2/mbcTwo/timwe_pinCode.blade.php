@@ -80,10 +80,10 @@ if ($lang == 'ar') {
           <div class="form-group">
             <input type="tel" style="font-family: cursive" name="pincode" class="form-control text-center w-100 rounded" id="pincode" placeholder="@lang('messages.confirmation_code')">
           </div>
-          <h2 class="text-white font-weight-bold mb-3" style="{{$font}}">
+          <!-- <h2 class="text-white font-weight-bold mb-3" style="{{$font}}">
             @lang('messages.subscription_Riyals')
           </h2>
-          <p class="text-white font-weight-bold mb-3" style="{{$font}}">@lang('messages.renew') </p>
+          <p class="text-white font-weight-bold mb-3" style="{{$font}}">@lang('messages.renew') </p> -->
 
 
           <button class="btn" type="submit">@lang('messages.confirmation')</button>

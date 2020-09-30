@@ -38,7 +38,7 @@ return [
     'Enter_your' => 'Enter your mobile phone',
     'subscription_Riyals' => 'The Subscription 10 Riyals / Week',
     'Subsc' => 'Subscribe',
-    'Subscription_renewal' => 'Subscription renewal will be automatic and effective at a cost of 10 riyals per week',
+    'Subscription_renewal' => 'Your subscription is auto renewal and price of the service is 10 / SAR weekly',
     'stop_service' => 'You can stop this service at any time by sending Unsub ISL to 92842',
     'years_service' => 'You must be 18 years of age or over or have permission from your parents or the person responsible for paying your bill in order to be able to subscribe to this service',
     'unsubscribelink' => 'To unsubscribe, please click on this',
