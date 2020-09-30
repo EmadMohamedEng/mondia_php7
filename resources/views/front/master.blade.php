@@ -156,7 +156,7 @@ $enable = get_setting('enable_testing');
         @if(request()->get('OpID') == mbc)
         <div class="col-md-4 col-lg-4 col-xl-4 col-4 p-0 d-flex justify-content-center">
           @else
-          <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0 d-flex justify-content-center">
+          <div class="col-md-7 col-lg-7 col-xl-4 col-7 p-0 d-flex justify-content-center">
             @endif
             <div class="header_logo">
               <a href="{{route('front.index')}}" class="link_href">
@@ -178,7 +178,7 @@ $enable = get_setting('enable_testing');
           @if(request()->get('OpID') == mbc)
           <div class="col-md-4 col-lg-4 col-xl-4 col-4 d-flex justify-content-end">
             @else
-            <div class="col-md-6 col-lg-6 col-xl-6 col-6 d-flex justify-content-end">
+            <div class="col-md-5 col-lg-5 col-xl-6 col-5 d-flex justify-content-end">
               @endif
 
               @if(request()->get('OpID') == mbc)
@@ -188,7 +188,7 @@ $enable = get_setting('enable_testing');
                 <i class="fas fa-angle-left fa-lg"></i>
               </a>
               @endif
-              
+
 
               @if(request()->get('OpID') == mbc)
               <div class="lang_mbc m-md-1 m-lg-1">
@@ -733,7 +733,7 @@ $enable = get_setting('enable_testing');
                         C242.34,341.39,212.62,341.39,181.6,341.39z" />
                   </g>
                 </svg>
-                  
+
                     @lang('front.terms')
                     <span class="sr-only">(current)</span>
                   </a>
@@ -757,7 +757,7 @@ $enable = get_setting('enable_testing');
                         C234.14,341.74,241.03,334.86,250.01,334.87z" />
                   </g>
                 </svg>
-                  
+
                     @lang('front.faq')
                     <span class="sr-only">(current)</span>
                   </a>
@@ -778,7 +778,7 @@ $enable = get_setting('enable_testing');
                       C223.78,142.35,202.23,163.73,202.18,190.01z" />
                   </g>
                 </svg>
-                    
+
                     @lang('front.profile')
                     <span class="sr-only">(current)</span>
                   </a>

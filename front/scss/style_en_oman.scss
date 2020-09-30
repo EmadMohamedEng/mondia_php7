@@ -94,18 +94,6 @@ select {
         }
       }
 
-      .arrow_back {
-        opacity: 0.5;
-        position: absolute;
-        top: 47%;
-        left: -0.5rem;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-      }
-
       &.header_icon {
         direction: rtl;
 
@@ -113,7 +101,18 @@ select {
           opacity: 0.5;
         }
       }
+    }
 
+    .arrow_back {
+      opacity: 0.5;
+      position: absolute;
+      top: 47%;
+      left: -0.5rem;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
     }
   }
 
@@ -275,6 +274,10 @@ select {
         float: right;
         padding: 0.25rem .5rem;
         margin-bottom: 1rem;
+
+        &:focus {
+          box-shadow: 0 0 0 0.2rem $white_color;
+        }
       }
     }
 
@@ -820,7 +823,7 @@ select {
         -moz-border-radius: 5px !important;
         -ms-border-radius: 5px !important;
         -o-border-radius: 5px !important;
-}
+      }
 
       .p_content {
         margin-left: 2%;
@@ -3280,6 +3283,7 @@ select {
     .content_carousel {
       .content_carousel_head {
         margin-top: 1rem;
+
         .link_title {
           h6 {
             font-weight: bold;
@@ -3713,6 +3717,7 @@ select {
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
 
     .header {
@@ -3725,11 +3730,6 @@ select {
       .header_icon {
         width: 100%;
 
-        .arrow_back {
-          left: 100%;
-          top: 1.75rem;
-          font-size: 2rem;
-        }
 
         h6 {
           font-size: 2rem;
@@ -3739,7 +3739,7 @@ select {
 
         img {
           width: 15% !important;
-          margin-top: 0 !important;
+          margin-top: 0.5rem !important;
         }
 
         &.header_icon {
@@ -3748,6 +3748,12 @@ select {
             margin-top: 1rem;
           }
         }
+      }
+
+      .arrow_back {
+        left: 94%;
+        top: 1.5rem;
+        font-size: 1.5rem;
       }
     }
 
@@ -3784,7 +3790,7 @@ select {
 
       .navbar_ul {
         background-color: $white_color;
-        width: 18rem;
+        width: 22rem;
         height: 100vh;
         padding: 0 0;
         overflow-y: scroll;
@@ -3807,7 +3813,7 @@ select {
               padding: 0.25rem 0.75rem;
               text-align: center;
               width: 100% !important;
-              font-size: 1.5rem;
+              font-size: 1.2rem !important;
 
               &.dropdown-item2 {
                 width: 100% !important;
@@ -3865,6 +3871,7 @@ select {
     .content_carousel {
       .content_carousel_head {
         margin-top: 1rem;
+
         .link_title {
           h6 {
             font-size: 2rem;
@@ -4163,9 +4170,8 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4.5rem;
-          margin-top: 45px;
-          font-size: 30px;
+          margin-left: 1.25rem;
+          font-size: 1.5rem;
         }
       }
     }
@@ -4239,7 +4245,7 @@ select {
         }
 
         #map {
-          width: 100%;
+          width: 75%;
         }
       }
     }
@@ -4370,6 +4376,10 @@ select {
         .form_zakah {
           .field {
             font-size: 1.5rem;
+
+            label {
+              float: left;
+            }
           }
         }
       }
@@ -4515,6 +4525,7 @@ select {
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
 
     .header {
@@ -4527,12 +4538,6 @@ select {
       .header_icon {
         width: 100%;
 
-        .arrow_back {
-          left: 100%;
-          top: 2rem;
-          font-size: 2.5rem
-        }
-
         h6 {
           font-size: 2.5rem;
           margin-top: 0.25rem;
@@ -4540,8 +4545,8 @@ select {
         }
 
         img {
-          width: 13% !important;
-          margin-top: 0 !important;
+          width: 16% !important;
+          margin-top: 0.25rem !important;
         }
 
         &.header_icon {
@@ -4550,6 +4555,12 @@ select {
             margin-top: 1rem;
           }
         }
+      }
+
+      .arrow_back {
+        left: 94%;
+        top: 2rem;
+        font-size: 1.75rem;
       }
     }
 
@@ -4612,7 +4623,7 @@ select {
               padding: 0.25rem 0.75rem;
               text-align: center;
               width: 100% !important;
-              font-size: 1.75rem;
+              font-size: 1.75rem !important;
 
               &.dropdown-item2 {
                 width: 100% !important;
@@ -4872,8 +4883,8 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4.5rem;
-          margin-top: 55px;
+          margin-left: 1.5rem;
+          margin-top: 0;
           font-size: 35px;
         }
       }
@@ -4948,7 +4959,7 @@ select {
         }
 
         #map {
-          width: 100%;
+          width: 75%;
         }
       }
     }
@@ -5087,6 +5098,10 @@ select {
         .form_zakah {
           .field {
             font-size: 2rem;
+
+            label {
+              float: left;
+            }
           }
 
           .actions {

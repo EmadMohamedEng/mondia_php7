@@ -109,8 +109,15 @@ select:active {
   width: 12%;
   margin-top: -0.25rem;
 }
-.main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
+.main_container .header .header_logo.header_icon,
+.main_container .header .header_icon.header_icon {
+  direction: rtl;
+}
+.main_container .header .header_logo.header_icon i,
+.main_container .header .header_icon.header_icon i {
+  opacity: 0.5;
+}
+.main_container .header .arrow_back {
   opacity: 0.5;
   position: absolute;
   top: 47%;
@@ -120,14 +127,6 @@ select:active {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-}
-.main_container .header .header_logo.header_icon,
-.main_container .header .header_icon.header_icon {
-  direction: rtl;
-}
-.main_container .header .header_logo.header_icon i,
-.main_container .header .header_icon.header_icon i {
-  opacity: 0.5;
 }
 .main_container .nav_nav {
   background-color: #FFF;
@@ -247,6 +246,9 @@ select:active {
   float: right;
   padding: 0.25rem 0.5rem;
   margin-bottom: 1rem;
+}
+.main_container .content_carousel .content_carousel_head .btn_more:focus {
+  box-shadow: 0 0 0 0.2rem #FFF;
 }
 .main_container .content_carousel .owl_content_one .item .card {
   margin: 0 auto;
@@ -2590,6 +2592,7 @@ select:active {
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -2602,12 +2605,6 @@ select:active {
 .main_container .header .header_icon {
     width: 100%;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-    left: 100%;
-    top: 1.75rem;
-    font-size: 2rem;
-  }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
     font-size: 2rem;
@@ -2617,12 +2614,17 @@ select:active {
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 15% !important;
-    margin-top: 0 !important;
+    margin-top: 0.5rem !important;
   }
   .main_container .header .header_logo.header_icon i,
 .main_container .header .header_icon.header_icon i {
     font-size: 2rem;
     margin-top: 1rem;
+  }
+  .main_container .header .arrow_back {
+    left: 94%;
+    top: 1.5rem;
+    font-size: 1.5rem;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -2654,7 +2656,7 @@ select:active {
   }
   .main_container .nav_nav .navbar_ul {
     background-color: #FFF;
-    width: 18rem;
+    width: 22rem;
     height: 100vh;
     padding: 0 0;
     overflow-y: scroll;
@@ -2674,7 +2676,7 @@ select:active {
     padding: 0.25rem 0.75rem;
     text-align: center;
     width: 100% !important;
-    font-size: 1.5rem;
+    font-size: 1.2rem !important;
   }
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
@@ -2870,9 +2872,8 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4.5rem;
-    margin-top: 45px;
-    font-size: 30px;
+    margin-left: 1.25rem;
+    font-size: 1.5rem;
   }
   .main_container .modal_cover .modal-dialog {
     max-width: 90%;
@@ -2918,7 +2919,7 @@ select:active {
     font-size: 2.5rem;
   }
   .main_container .nearmosque_page .nearmosque_title #map {
-    width: 100%;
+    width: 75%;
   }
   .main_container .salah_time_page {
     width: 95%;
@@ -3013,6 +3014,9 @@ select:active {
   }
   .main_container .zakkah_page .zakah_zakah .form_zakah .field {
     font-size: 1.5rem;
+  }
+  .main_container .zakkah_page .zakah_zakah .form_zakah .field label {
+    float: left;
   }
   .main_container .merath_page {
     width: 90%;
@@ -3119,6 +3123,7 @@ select:active {
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -3131,12 +3136,6 @@ select:active {
 .main_container .header .header_icon {
     width: 100%;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-    left: 100%;
-    top: 2rem;
-    font-size: 2.5rem;
-  }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
     font-size: 2.5rem;
@@ -3145,13 +3144,18 @@ select:active {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 13% !important;
-    margin-top: 0 !important;
+    width: 16% !important;
+    margin-top: 0.25rem !important;
   }
   .main_container .header .header_logo.header_icon i,
 .main_container .header .header_icon.header_icon i {
     font-size: 2.5rem;
     margin-top: 1rem;
+  }
+  .main_container .header .arrow_back {
+    left: 94%;
+    top: 2rem;
+    font-size: 1.75rem;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -3205,7 +3209,7 @@ select:active {
     padding: 0.25rem 0.75rem;
     text-align: center;
     width: 100% !important;
-    font-size: 1.75rem;
+    font-size: 1.75rem !important;
   }
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
@@ -3360,8 +3364,8 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4.5rem;
-    margin-top: 55px;
+    margin-left: 1.5rem;
+    margin-top: 0;
     font-size: 35px;
   }
   .main_container .modal_cover .modal-dialog {
@@ -3408,7 +3412,7 @@ select:active {
     font-size: 3rem;
   }
   .main_container .nearmosque_page .nearmosque_title #map {
-    width: 100%;
+    width: 75%;
   }
   .main_container .salah_time_page {
     width: 95%;
@@ -3509,6 +3513,9 @@ select:active {
   }
   .main_container .zakkah_page .zakah_zakah .form_zakah .field {
     font-size: 2rem;
+  }
+  .main_container .zakkah_page .zakah_zakah .form_zakah .field label {
+    float: left;
   }
   .main_container .zakkah_page .zakah_zakah .form_zakah .actions button.button {
     font-size: 2.5rem;
