@@ -156,7 +156,7 @@ $enable = get_setting('enable_testing');
         @if(request()->get('OpID') == mbc)
         <div class="col-md-4 col-lg-4 col-xl-4 col-4 p-0 d-flex justify-content-center">
           @else
-          <div class="col-md-7 col-lg-7 col-xl-4 col-7 p-0 d-flex justify-content-center">
+          <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0 d-flex justify-content-center">
             @endif
             <div class="header_logo">
               <a href="{{route('front.index')}}" class="link_href">
@@ -178,7 +178,7 @@ $enable = get_setting('enable_testing');
           @if(request()->get('OpID') == mbc)
           <div class="col-md-4 col-lg-4 col-xl-4 col-4 d-flex justify-content-end">
             @else
-            <div class="col-md-5 col-lg-5 col-xl-6 col-5 d-flex justify-content-end">
+            <div class="col-md-5 col-lg-5 col-xl-5 col-5 d-flex justify-content-end">
               @endif
 
               @if(request()->get('OpID') == mbc)

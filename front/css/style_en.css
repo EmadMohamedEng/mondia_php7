@@ -45,6 +45,8 @@ select:active {
 
 .main_container {
   padding-bottom: 10%;
+  width: 50%;
+  margin: 0 auto;
   /* Start Header */
   /* End Header */
   /* Start Home Page */
@@ -103,7 +105,7 @@ select:active {
 }
 .main_container .header .header_logo .link_href img,
 .main_container .header .header_icon .link_href img {
-  width: 3%;
+  width: 6%;
   margin-top: -0.5rem;
 }
 .main_container .header .header_logo .arrow_back,
@@ -130,7 +132,7 @@ select:active {
   background-color: #FFF;
   width: 85%;
   margin-top: 1.5rem;
-  margin-left: 1rem;
+  margin-left: 0;
   padding: 0.5rem 0;
   position: sticky;
   border: 1px solid #bfbfbf;
@@ -249,7 +251,7 @@ select:active {
 .main_container .content_carousel .owl_content_one .item .card {
   margin: 0 auto;
   display: block;
-  width: 50%;
+  width: 100%;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -311,7 +313,7 @@ select:active {
   -o-border-radius: 10px;
 }
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
-  height: 14rem;
+  height: 12.881rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -621,7 +623,7 @@ select:active {
   width: 80px;
 }
 .main_container .inner_page .section_content .p_content {
-  margin-top: 21px;
+  margin-left: 0.75rem;
   font-size: 14px;
   color: #6a6060;
 }
@@ -716,8 +718,8 @@ select:active {
   background-clip: content-box, border-box;
 }
 .main_container .salah_time_page {
-  width: 70%;
-  margin: 1.5rem auto;
+  width: 100%;
+  margin: 7.5rem auto;
 }
 .main_container .salah_time_page .salah_time_title h2 {
   text-align: center;
@@ -819,7 +821,7 @@ select:active {
   color: white;
 }
 .main_container .merath_page {
-  width: 70%;
+  width: 100%;
   margin: 1.5rem auto;
 }
 .main_container .merath_page .border-bottom {
@@ -948,6 +950,7 @@ select:active {
 }
 .main_container .sebha_page #sebhaModal .modal-content {
   background-color: white;
+  left: 26%;
 }
 .main_container .sebha_page .modal-header {
   border-bottom: 1px solid #f3e5b8;
@@ -983,7 +986,7 @@ select:active {
 }
 .main_container .search_page {
   margin: 2.5rem auto;
-  width: 75%;
+  width: 100%;
 }
 .main_container .search_page .form_search {
   position: relative;
