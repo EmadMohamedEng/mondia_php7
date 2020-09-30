@@ -3244,7 +3244,7 @@ select:active {
     font-size: 2.5rem;
   }
   .main_container .nearmosque_page .nearmosque_title #map {
-    width: 100%;
+    width: 75%;
   }
   .main_container .salah_time_page {
     width: 95%;
@@ -3785,7 +3785,7 @@ select:active {
     font-size: 3rem;
   }
   .main_container .nearmosque_page .nearmosque_title #map {
-    width: 100%;
+    width: 75%;
   }
   .main_container .salah_time_page {
     width: 95%;
