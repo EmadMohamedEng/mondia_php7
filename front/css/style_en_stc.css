@@ -45,6 +45,8 @@ select:active {
 
 .main_container {
   padding-bottom: 10%;
+  width: 50%;
+  margin: 0 auto;
   /* Start Header */
   /* End Header */
   /* Start Home Page */
@@ -86,6 +88,7 @@ select:active {
 }
 .main_container .header .header_logo,
 .main_container .header .header_icon {
+  margin-right: -23%;
   color: #FFF;
   display: inline-flex;
   position: relative;
@@ -107,18 +110,6 @@ select:active {
   width: 4%;
   margin-top: 0;
 }
-.main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-  opacity: 0.5;
-  position: absolute;
-  top: 47%;
-  left: -0.5rem;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
 .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
   direction: rtl;
@@ -127,11 +118,22 @@ select:active {
 .main_container .header .header_icon.header_icon i {
   opacity: 0.5;
 }
+.main_container .header .arrow_back {
+  opacity: 0.5;
+  position: absolute;
+  top: 47%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
 .main_container .nav_nav {
   background-color: #FFF;
-  width: 75%;
+  width: 90%;
   margin-top: 1.5rem;
-  margin-left: 1rem;
+  margin-left: 0;
   padding: 0.5rem 0;
   position: sticky;
   border: 1px solid #bfbfbf;
@@ -198,13 +200,14 @@ select:active {
   position: relative;
 }
 .main_container .img_carousel .owl_one .item .owl_one_img img {
-  height: 19.5rem;
+  height: 13.215rem;
 }
 .main_container .img_carousel .owl_one .item .btn_subscribe {
   height: 3.5rem;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .main_container .img_carousel .owl_one .item .btn_subscribe button {
+  width: 80%;
   border: 0;
   background: #ff375e;
   color: #FFF;
@@ -215,9 +218,12 @@ select:active {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   position: absolute;
-  top: 93.25%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main_container .img_carousel .owl-dots button {
   outline: 0;
@@ -243,11 +249,8 @@ select:active {
   padding: 0.25rem 0.5rem;
   margin-bottom: 1rem;
 }
-.main_container .content_carousel .owl_content_one .item {
-  width: 65%;
-  margin: 0 auto;
-}
 .main_container .content_carousel .owl_content_one .item .card {
+  width: 100%;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -282,7 +285,7 @@ select:active {
   -o-border-radius: 10px;
 }
 .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
-  height: 9.375rem;
+  height: 14rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -309,7 +312,7 @@ select:active {
   -o-border-radius: 10px;
 }
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
-  height: 9.375rem;
+  height: 12.881rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -388,7 +391,7 @@ select:active {
 .main_container .list_page .coming_soon {
   color: #FFF;
   background: #4f008c;
-  width: 20%;
+  width: 33%;
   cursor: not-allowed;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -619,8 +622,8 @@ select:active {
   width: 80px;
 }
 .main_container .inner_page .section_content .p_content {
-  margin-top: 21px;
-  font-size: 14px;
+  margin-left: 2%;
+  font-size: 15px;
   color: #6a6060;
 }
 .main_container .inner_page .section_content .p_content_2 {
@@ -704,15 +707,15 @@ select:active {
   margin-bottom: 1.5rem;
 }
 .main_container .nearmosque_page .nearmosque_title #map {
-  height: 66vh;
+  height: 55vh;
   width: 90%;
   margin: 0 auto;
   border: 5px solid #ff375e;
   border-radius: 14px;
 }
 .main_container .salah_time_page {
-  width: 70%;
-  margin: 1.5rem auto;
+  width: 100%;
+  margin: 6.5rem auto;
 }
 .main_container .salah_time_page .salah_time_title h2 {
   text-align: center;
@@ -807,7 +810,7 @@ select:active {
   background: #ff375e;
 }
 .main_container .merath_page {
-  width: 70%;
+  width: 100%;
   margin: 1.5rem auto;
 }
 .main_container .merath_page .border-bottom {
@@ -872,7 +875,7 @@ select:active {
 }
 .main_container .sebha_page {
   width: 70%;
-  margin: 3.5rem auto;
+  margin: 7.5rem auto;
 }
 .main_container .sebha_page .display {
   text-align: center;
@@ -925,6 +928,7 @@ select:active {
 }
 .main_container .sebha_page #sebhaModal .modal-content {
   background-color: white;
+  left: 26%;
 }
 .main_container .sebha_page .modal-header {
   border-bottom: 1px solid #f3e5b8;
@@ -957,7 +961,7 @@ select:active {
 }
 .main_container .search_page {
   margin: 2.5rem auto;
-  width: 75%;
+  width: 100%;
 }
 .main_container .search_page .form_search {
   position: relative;
@@ -1170,6 +1174,7 @@ select:active {
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -1177,14 +1182,13 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-    left: 100%;
-  }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 18% !important;
     margin-top: 0 !important;
+  }
+  .main_container .header .arrow_back {
+    left: 90%;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1267,16 +1271,17 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-    height: 10rem;
+    height: 11.5rem;
   }
-  .main_container .content_carousel .item .card .owl_content_img img {
-    height: 7.188rem;
+  .main_container .content_carousel .owl_content_two .item,
+.main_container .content_carousel .owl_content_three .item,
+.main_container .content_carousel .owl_content_five .item {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .card-body {
-    padding: 1rem 0.25rem;
-  }
-  .main_container .content_carousel .item .card .card-body .card-title {
-    font-size: 1rem;
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_three .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 9.719rem;
   }
   .main_container .list_page .coming_soon {
     width: 50%;
@@ -1315,7 +1320,12 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    height: 12.813rem;
+    height: 20rem;
+  }
+  .main_container .inner_page .cover audio {
+    width: 94%;
+    margin-top: -5%;
+    margin-left: 3%;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
     font-size: 1.25rem;
@@ -1343,7 +1353,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 3rem;
+    margin-left: 3%;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
@@ -1367,10 +1377,12 @@ select:active {
     margin: 0.5rem auto;
   }
   .main_container .nearmosque_page .nearmosque_title #map {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
   .main_container .salah_time_page {
-    width: 95%;
+    width: 90%;
+    margin: 1.5rem auto;
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
@@ -1502,6 +1514,7 @@ select:active {
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -1509,14 +1522,13 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-    left: 100%;
-  }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 18% !important;
     margin-top: 0 !important;
+  }
+  .main_container .header .arrow_back {
+    left: 100%;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1548,7 +1560,7 @@ select:active {
   }
   .main_container .nav_nav .navbar_ul {
     background-color: #FFF;
-    width: 15rem;
+    width: 16rem;
     height: 100vh;
     padding: 0 0;
     overflow-y: scroll;
@@ -1598,26 +1610,27 @@ select:active {
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .main_container .content_carousel .content_carousel_head .btn_more {
     padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .main_container .content_carousel .owl_content_one .item {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-    height: 10rem;
+    height: 12rem;
   }
-  .main_container .content_carousel .item .card .owl_content_img img {
-    height: 7.188rem;
+  .main_container .content_carousel .owl_content_two .item,
+.main_container .content_carousel .owl_content_three .item,
+.main_container .content_carousel .owl_content_five .item {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .card-body {
-    padding: 1rem 0.25rem;
-  }
-  .main_container .content_carousel .item .card .card-body .card-title {
-    font-size: 1rem;
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_three .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 10.969rem;
   }
   .main_container .list_page .coming_soon {
     width: 50%;
@@ -1656,7 +1669,12 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    height: 12.813rem;
+    height: 25.25rem;
+  }
+  .main_container .inner_page .cover audio {
+    width: 94%;
+    margin-top: -5%;
+    margin-left: 3%;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
     font-size: 1.25rem;
@@ -1684,7 +1702,8 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 2.25rem;
+    margin-left: 2%;
+    font-size: 14px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
@@ -1708,10 +1727,12 @@ select:active {
     margin: 0.5rem auto;
   }
   .main_container .nearmosque_page .nearmosque_title #map {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
   .main_container .salah_time_page {
-    width: 95%;
+    width: 90%;
+    margin: 1.5rem auto;
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
@@ -1784,7 +1805,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 50%;
+    width: 75%;
     color: #FFF;
     font-size: 1rem;
     font-weight: bold;
@@ -1847,6 +1868,7 @@ select:active {
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -1854,14 +1876,13 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-    left: 100%;
-  }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 18% !important;
     margin-top: 0 !important;
+  }
+  .main_container .header .arrow_back {
+    left: 100%;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -1947,14 +1968,15 @@ select:active {
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 11.5rem;
   }
-  .main_container .content_carousel .item .card .owl_content_img img {
-    height: 7.188rem;
+  .main_container .content_carousel .owl_content_two .item,
+.main_container .content_carousel .owl_content_three .item,
+.main_container .content_carousel .owl_content_five .item {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .card-body {
-    padding: 1rem 0.25rem;
-  }
-  .main_container .content_carousel .item .card .card-body .card-title {
-    font-size: 1rem;
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_three .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 11.438rem;
   }
   .main_container .list_page .coming_soon {
     width: 50%;
@@ -1997,7 +2019,12 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    height: 12.813rem;
+    height: 23.438rem;
+  }
+  .main_container .inner_page .cover audio {
+    width: 94%;
+    margin-top: -5%;
+    margin-left: 3%;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
     font-size: 1.25rem;
@@ -2027,9 +2054,8 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4rem;
-    margin-top: 32px;
-    font-size: 21px;
+    margin-left: 3%;
+    font-size: 17px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
@@ -2053,10 +2079,12 @@ select:active {
     margin: 0.5rem auto;
   }
   .main_container .nearmosque_page .nearmosque_title #map {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
   .main_container .salah_time_page {
-    width: 95%;
+    width: 90%;
+    margin: 1.5rem auto;
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
@@ -2143,7 +2171,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 50%;
+    width: 75%;
     color: #FFF;
     font-size: 1rem;
     font-weight: bold;
@@ -2206,17 +2234,13 @@ select:active {
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
     position: fixed;
     top: 0;
     z-index: 99999999999;
-  }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-    left: 100%;
-    font-size: 1.25rem;
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
@@ -2226,6 +2250,10 @@ select:active {
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
     font-size: 1.5rem;
+  }
+  .main_container .header .arrow_back {
+    left: 100%;
+    font-size: 1.25rem;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -2307,26 +2335,27 @@ select:active {
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .main_container .content_carousel .content_carousel_head .btn_more {
     padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .main_container .content_carousel .owl_content_one .item {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-    height: 11.5rem;
+    height: 12.5rem;
   }
-  .main_container .content_carousel .item .card .owl_content_img img {
-    height: 7.188rem;
+  .main_container .content_carousel .owl_content_two .item,
+.main_container .content_carousel .owl_content_three .item,
+.main_container .content_carousel .owl_content_five .item {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .card-body {
-    padding: 1rem 0.25rem;
-  }
-  .main_container .content_carousel .item .card .card-body .card-title {
-    font-size: 1.25rem;
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_three .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 12.563rem;
   }
   .main_container .list_page .coming_soon {
     width: 50%;
@@ -2339,7 +2368,7 @@ select:active {
     padding: 1rem 0.25rem;
   }
   .main_container .list_page .item .card .card-body .card-title {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
   .main_container .mowdo3t_page .item .card {
     height: 13rem;
@@ -2369,7 +2398,12 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    height: 12.813rem;
+    height: 25.688rem;
+  }
+  .main_container .inner_page .cover audio {
+    width: 94%;
+    margin-top: -5%;
+    margin-left: 3%;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
     font-size: 1.25rem;
@@ -2399,9 +2433,8 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4.25rem;
-    margin-top: 37px;
-    font-size: 20px;
+    margin-left: 3%;
+    font-size: 18px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
@@ -2425,10 +2458,12 @@ select:active {
     margin: 0.5rem auto;
   }
   .main_container .nearmosque_page .nearmosque_title #map {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
   .main_container .salah_time_page {
-    width: 95%;
+    width: 90%;
+    margin: 1.5rem auto;
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
@@ -2515,7 +2550,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 50%;
+    width: 60%;
     color: #FFF;
     font-size: 1rem;
     font-weight: bold;
@@ -2579,6 +2614,7 @@ select:active {
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -2590,12 +2626,12 @@ select:active {
   .main_container .header .header_logo,
 .main_container .header .header_icon {
     width: 100%;
+    margin-right: -13%;
+    font-size: 1.5rem;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-    left: 100%;
-    top: 1.75rem;
-    font-size: 2rem;
+  .main_container .header .header_logo .link_href,
+.main_container .header .header_icon .link_href {
+    margin-top: 3%;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -2612,6 +2648,11 @@ select:active {
 .main_container .header .header_icon.header_icon i {
     font-size: 2rem;
     margin-top: 1rem;
+  }
+  .main_container .header .arrow_back {
+    left: 94%;
+    top: 1.75rem;
+    font-size: 1.5rem;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -2643,7 +2684,7 @@ select:active {
   }
   .main_container .nav_nav .navbar_ul {
     background-color: #FFF;
-    width: 18rem;
+    width: 23rem;
     height: 100vh;
     padding: 0 0;
     overflow-y: scroll;
@@ -2692,7 +2733,8 @@ select:active {
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
     top: 95%;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    width: 50%;
   }
   .main_container .img_carousel .owl-theme .owl-dots .owl-dot span {
     width: 18px;
@@ -2707,7 +2749,7 @@ select:active {
     font-size: 1.85rem;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-    height: 17rem;
+    height: 19rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -2716,13 +2758,13 @@ select:active {
   }
   .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
     text-align: center;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
   .main_container .content_carousel .owl_content_one .item .card .card-body .card-text i {
     color: #adadad;
   }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
-    height: 9.375rem;
+    height: 23.719rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -2731,13 +2773,13 @@ select:active {
   }
   .main_container .content_carousel .owl_content_two .item .card .card-body .card-title {
     text-align: center;
-    font-size: 1.05rem;
+    font-size: 1.5rem;
   }
   .main_container .content_carousel .owl_content_two .item .card .card-body .card-text i {
     color: #adadad;
   }
   .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
-    height: 9.375rem;
+    height: 23.719rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -2746,13 +2788,13 @@ select:active {
   }
   .main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
     text-align: center;
-    font-size: 1.05rem;
+    font-size: 1.5rem;
   }
   .main_container .content_carousel .owl_content_three .item .card .card-body .card-text i {
     color: #adadad;
   }
   .main_container .content_carousel .owl_content_four .item .card .owl_content_img img {
-    height: 9.375rem;
+    height: 23.719rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -2761,13 +2803,13 @@ select:active {
   }
   .main_container .content_carousel .owl_content_four .item .card .card-body .card-title {
     text-align: center;
-    font-size: 1.05rem;
+    font-size: 1.5rem;
   }
   .main_container .content_carousel .owl_content_four .item .card .card-body .card-text i {
     color: #adadad;
   }
   .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
-    height: 9.375rem;
+    height: 23.719rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -2776,7 +2818,7 @@ select:active {
   }
   .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
     text-align: center;
-    font-size: 1.05rem;
+    font-size: 1.5rem;
   }
   .main_container .content_carousel .owl_content_five .item .card .card-body .card-text i {
     color: #adadad;
@@ -2827,7 +2869,12 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    height: 25rem;
+    height: 48rem;
+  }
+  .main_container .inner_page .cover audio {
+    width: 94%;
+    margin-top: -3.5% !important;
+    margin-left: 3%;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
     font-size: 1.65rem;
@@ -2861,9 +2908,8 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4.5rem;
-    margin-top: 45px;
-    font-size: 30px;
+    margin-left: 3%;
+    font-size: 25px;
   }
   .main_container .modal_cover .modal-dialog {
     max-width: 90%;
@@ -2909,10 +2955,11 @@ select:active {
     font-size: 2.5rem;
   }
   .main_container .nearmosque_page .nearmosque_title #map {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
   .main_container .salah_time_page {
-    width: 95%;
+    width: 90%;
     margin: 2.5rem auto;
   }
   .main_container .salah_time_page .salah_time_title h2 {
@@ -3110,6 +3157,7 @@ select:active {
   }
 
   .main_container {
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -3121,12 +3169,12 @@ select:active {
   .main_container .header .header_logo,
 .main_container .header .header_icon {
     width: 100%;
+    margin-right: -13%;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-    left: 100%;
-    top: 2rem;
-    font-size: 2.5rem;
+  .main_container .header .header_logo .link_href,
+.main_container .header .header_icon .link_href {
+    margin-top: 2%;
+    font-size: 1.75rem;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -3143,6 +3191,11 @@ select:active {
 .main_container .header .header_icon.header_icon i {
     font-size: 2.5rem;
     margin-top: 1rem;
+  }
+  .main_container .header .arrow_back {
+    left: 94%;
+    top: 2rem;
+    font-size: 2.5rem;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -3196,10 +3249,11 @@ select:active {
     padding: 0.25rem 0.75rem;
     text-align: center;
     width: 100% !important;
-    font-size: 1.75rem;
+    font-size: 1.75rem !important;
   }
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
+    font-size: 28px;
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo {
     margin-bottom: 3rem;
@@ -3218,14 +3272,15 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 25.938rem;
+    height: 32rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
     height: 6.5rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
     top: 91%;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    width: 60%;
   }
   .main_container .img_carousel .owl-theme .owl-dots .owl-dot span {
     width: 18px;
@@ -3254,14 +3309,50 @@ select:active {
   .main_container .content_carousel .owl_content_one .item .card .card-body .card-text i {
     color: #adadad;
   }
-  .main_container .content_carousel .item .card .owl_content_img img {
-    height: 20.938rem;
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
+    height: 21rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
-  .main_container .content_carousel .item .card .card-body {
-    padding: 1rem 0.25rem;
+  .main_container .content_carousel .owl_content_two .item .card .card-body {
+    padding: 1.25rem 0.25rem;
   }
-  .main_container .content_carousel .item .card .card-body .card-title {
-    font-size: 2.1rem;
+  .main_container .content_carousel .owl_content_two .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .card-body .card-text i {
+    color: #adadad;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+    height: 21rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .card-body {
+    padding: 1.25rem 0.25rem;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .card-body .card-text i {
+    color: #adadad;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 15.641rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .card-body {
+    padding: 1.25rem 0.25rem;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .card-body .card-text i {
+    color: #adadad;
   }
   .main_container .list_page {
     margin: 3.5rem auto;
@@ -3312,7 +3403,12 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    height: 35.938rem;
+    height: 64rem;
+  }
+  .main_container .inner_page .cover audio {
+    width: 94%;
+    margin-top: -2.5% !important;
+    margin-left: 3%;
   }
   .main_container .inner_page .cover .button_play {
     font-size: 2rem;
@@ -3350,9 +3446,8 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4.5rem;
-    margin-top: 55px;
-    font-size: 35px;
+    margin-left: 3%;
+    font-size: 30px;
   }
   .main_container .modal_cover .modal-dialog {
     max-width: 90%;
@@ -3398,10 +3493,11 @@ select:active {
     font-size: 3rem;
   }
   .main_container .nearmosque_page .nearmosque_title #map {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
   .main_container .salah_time_page {
-    width: 95%;
+    width: 90%;
     margin: 3.5rem auto;
   }
   .main_container .salah_time_page .salah_time_title h2 {
