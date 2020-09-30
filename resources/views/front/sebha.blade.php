@@ -43,3 +43,7 @@
 </div>
 
 @stop
+
+@section('script')
+<script src="{{asset('front/js/sebhascript.js')}}"></script>
+@endsection
