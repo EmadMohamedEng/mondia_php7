@@ -144,11 +144,11 @@ define('MBC_OP_ID', 14);
 define('CHECKSUB_URL', "https://mbc.digizone.com.kw/api/checksub");
 // define('CHECKUNSUB_URL', "http://localhost/mbc_system/api/unsub");
 
-Route::get('mbc_portal_login_old/{lang?}', 'MbcController@login');
-Route::get('mbc_portal_landing_old/{lang?}', 'MbcController@index');
-Route::get('mbc_portal_pin_old/{lang?}', 'MbcController@pincode');
-Route::get('mbc_portal_unsub_old/{lang?}', 'MbcController@unsubscribe');
-Route::get('mbc_portal_logout', 'MbcController@logout');
+// Route::get('mbc_portal_login_old/{lang?}', 'MbcController@login');
+// Route::get('mbc_portal_landing_old/{lang?}', 'MbcController@index');
+// Route::get('mbc_portal_pin_old/{lang?}', 'MbcController@pincode');
+// Route::get('mbc_portal_unsub_old/{lang?}', 'MbcController@unsubscribe');
+// Route::get('mbc_portal_logout', 'MbcController@logout');
 
 
 /***************start mbc 2****************** */
@@ -169,10 +169,10 @@ Route::post('mbc_subscription/optout/{partnerRoleId}', 'MbcTwoController@subscri
 //Timwe Api
 Route::post('mbcGenerateKey', 'MbcController@generateKey');
 Route::post('{channel}/mt/{partnerRoleId}', 'MbcController@sendMt');
-Route::post('mbc_checkstatus_old', 'MbcController@checkStatusLogin');
-Route::post('mbc_subscription_old/optin/{partnerRoleId}/{lang?}', 'MbcController@subscriptionOptIn');
-Route::post('mbc_subscription_old/confirm/{partnerRoleId}', 'MbcController@subscriptionConfirm');
-Route::post('mbc_subscription_old/optout/{partnerRoleId}', 'MbcController@subscriptionOptOut');
+// Route::post('mbc_checkstatus_old', 'MbcController@checkStatusLogin');
+// Route::post('mbc_subscription_old/optin/{partnerRoleId}/{lang?}', 'MbcController@subscriptionOptIn');
+// Route::post('mbc_subscription_old/confirm/{partnerRoleId}', 'MbcController@subscriptionConfirm');
+// Route::post('mbc_subscription_old/optout/{partnerRoleId}', 'MbcController@subscriptionOptOut');
 /***************end mbc portal****************** */
 
 /********************Quran live  ********************/
