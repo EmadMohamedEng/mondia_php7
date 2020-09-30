@@ -16,7 +16,11 @@
 @php
 App::setLocale($lang);
 @endphp
-
+<style>
+  .landing_page .form_content{
+    width: 67%;
+  }
+</style>
 <body>
   <div class="main_container pt-5">
     <div class="img-fluid text-center p-3">
@@ -58,7 +62,7 @@ App::setLocale($lang);
           <form method="post" action="{{url('mbc_checkstatus')}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
             {{ csrf_field() }}
 
-            <div class="row m-0">
+            <!-- <div class="row m-0">
               <div class="col-3 p-0">
                 <div class="dropdown">
                   <button class="btn btn_select dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
@@ -79,6 +83,11 @@ App::setLocale($lang);
                 <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
                 <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>
+            </div> -->
+            <div class="form-group input-group form-inline">
+              <label for="phone"><span>966</span></label>
+              <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
+              <input type="tel" class="form-control" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
             </div>
           <!--<button class="btn back">رجوع</button>-->
             <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subsc')</button>
