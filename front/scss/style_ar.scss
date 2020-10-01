@@ -109,9 +109,7 @@ body {
       .link_title {
         text-align: right;
 
-        h6 {
-          margin-right: 3%;
-        }
+        h6 {}
       }
 
       .btn_more {
@@ -357,9 +355,7 @@ body {
         float: left !important;
 
         .link_href {
-          img {
-            margin-right: 82%;
-          }
+          img {}
         }
 
         &.header_icon {
@@ -404,12 +400,31 @@ body {
       }
     }
 
-
     .content_carousel {
       .content_carousel_head {
         .link_title {
           h6 {
-            font-size: 1.25rem;
+            font-size: 0.9rem;
+          }
+        }
+
+        .btn_more {
+          font-size: 0.9rem;
+        }
+      }
+
+      .owl_content_one,
+      .owl_content_two,
+      .owl_content_three,
+      .owl_content_four,
+      .owl_content_five {
+        .item {
+          .card {
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
+              }
+            }
           }
         }
       }
@@ -465,9 +480,7 @@ body {
         float: left !important;
 
         .link_href {
-          img {
-            margin-right: 82%;
-          }
+          img {}
         }
 
         &.header_icon {
@@ -576,9 +589,7 @@ body {
         float: left !important;
 
         .link_href {
-          img {
-            margin-right: 82%;
-          }
+          img {}
         }
 
         &.header_icon {
@@ -631,8 +642,12 @@ body {
       .content_carousel_head {
         .link_title {
           h6 {
-            font-size: 1.5rem;
+            font-size: 1rem;
           }
+        }
+
+        .btn_more {
+          font-size: 1rem;
         }
       }
     }
@@ -652,7 +667,7 @@ body {
 
         .p_content,
         .p_content_2 {
-          font-size: 21px;
+          font-size: 13px;
         }
       }
     }
@@ -721,9 +736,7 @@ body {
         float: left !important;
 
         .link_href {
-          img {
-            margin-right: 82%;
-          }
+          img {}
         }
 
         &.header_icon {
@@ -773,8 +786,22 @@ body {
       .content_carousel_head {
         .link_title {
           h6 {
-            font-size: 1.5rem;
+            font-size: 1rem;
           }
+        }
+
+        .btn_more {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .inner_page {
+      .section_content {
+
+        .p_content,
+        .p_content_2 {
+          font-size: 14px;
         }
       }
     }
@@ -823,9 +850,7 @@ body {
         float: left !important;
 
         .link_href {
-          img {
-            margin-right: 88%;
-          }
+          img {}
         }
 
         .arrow_back {
@@ -885,7 +910,27 @@ body {
       .content_carousel_head {
         .link_title {
           h6 {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
+          }
+        }
+
+        .btn_more {
+          font-size: 1.5rem;
+        }
+      }
+
+      .owl_content_one,
+      .owl_content_two,
+      .owl_content_three,
+      .owl_content_four,
+      .owl_content_five {
+        .item {
+          .card {
+            .card-body {
+              .card-title {
+                font-size: 1.25rem;
+              }
+            }
           }
         }
       }
@@ -929,9 +974,7 @@ body {
         float: left !important;
 
         .link_href {
-          img {
-            margin-right: 88%;
-          }
+          img {}
         }
 
         .arrow_back {
@@ -986,6 +1029,47 @@ body {
               float: left;
             }
           }
+        }
+      }
+    }
+
+    .content_carousel {
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 1.85rem;
+          }
+        }
+
+        .btn_more {
+          font-size: 1.85rem;
+        }
+      }
+
+      .owl_content_one,
+      .owl_content_two,
+      .owl_content_three,
+      .owl_content_four,
+      .owl_content_five {
+        .item {
+          .card {
+            .card-body {
+              .card-title {
+                font-size: 1.75rem !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .inner_page {
+      .section_content {
+
+        .p_content,
+        .p_content_2 {
+          font-size: 26px;
+          margin-right: 0.75rem;
         }
       }
     }

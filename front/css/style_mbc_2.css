@@ -108,9 +108,10 @@ svg {
 .close_nav {
   padding: 0;
 }
-.padding_phones{
+/* .padding_phones{
   padding: 0;
-}
+} */
+
 @media (min-width: 1025px) {
   .main_container {
     /* width: 41%;
@@ -118,12 +119,3 @@ svg {
     position: unset; */
   }
 }
-
-
-
-
-/* start menu 3 */
-
-
-
-/* end menu 3 */
