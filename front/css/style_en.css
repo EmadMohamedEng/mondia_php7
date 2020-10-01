@@ -1409,6 +1409,7 @@ select:active {
   }
   .main_container .salah_time_page {
     width: 95%;
+    margin: 1.5rem auto;
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
@@ -1753,6 +1754,7 @@ select:active {
   }
   .main_container .salah_time_page {
     width: 95%;
+    margin: 1.5rem auto;
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
@@ -2101,6 +2103,7 @@ select:active {
   }
   .main_container .salah_time_page {
     width: 95%;
+    margin: 1.5rem auto;
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
@@ -2477,6 +2480,7 @@ select:active {
   }
   .main_container .salah_time_page {
     width: 95%;
+    margin: 1.5rem auto;
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
@@ -2952,7 +2956,7 @@ select:active {
     width: 100%;
   }
   .main_container .salah_time_page {
-    width: 95%;
+    width: 85%;
     margin: 2.5rem auto;
   }
   .main_container .salah_time_page .salah_time_title h2 {
@@ -3484,7 +3488,7 @@ select:active {
     width: 75%;
   }
   .main_container .salah_time_page {
-    width: 95%;
+    width: 85%;
     margin: 3.5rem auto;
   }
   .main_container .salah_time_page .salah_time_title h2 {
