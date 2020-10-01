@@ -73,9 +73,6 @@ body {
 .main_container .content_carousel .content_carousel_head .link_title {
   text-align: right;
 }
-.main_container .content_carousel .content_carousel_head .link_title h6 {
-  margin-right: 3%;
-}
 .main_container .content_carousel .content_carousel_head .btn_more {
   float: left;
 }
@@ -182,10 +179,6 @@ body {
 .main_container .header .header_icon {
     float: left !important;
   }
-  .main_container .header .header_logo .link_href img,
-.main_container .header .header_icon .link_href img {
-    margin-right: 82%;
-  }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
     margin: 0.35rem 0 0 -1rem;
@@ -216,7 +209,17 @@ body {
     float: left;
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
-    font-size: 1.25rem;
+    font-size: 0.9rem;
+  }
+  .main_container .content_carousel .content_carousel_head .btn_more {
+    font-size: 0.9rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_two .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_three .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+    font-size: 0.9rem;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
@@ -251,10 +254,6 @@ body {
   .main_container .header .header_logo,
 .main_container .header .header_icon {
     float: left !important;
-  }
-  .main_container .header .header_logo .link_href img,
-.main_container .header .header_icon .link_href img {
-    margin-right: 82%;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -328,10 +327,6 @@ body {
 .main_container .header .header_icon {
     float: left !important;
   }
-  .main_container .header .header_logo .link_href img,
-.main_container .header .header_icon .link_href img {
-    margin-right: 82%;
-  }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
     margin: 0.35rem 0 0 -1rem;
@@ -367,7 +362,10 @@ body {
     float: left;
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  .main_container .content_carousel .content_carousel_head .btn_more {
+    font-size: 1rem;
   }
   .main_container .inner_page .section_content .image_inner {
     height: 100px;
@@ -378,7 +376,7 @@ body {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    font-size: 21px;
+    font-size: 13px;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
@@ -421,10 +419,6 @@ body {
 .main_container .header .header_icon {
     float: left !important;
   }
-  .main_container .header .header_logo .link_href img,
-.main_container .header .header_icon .link_href img {
-    margin-right: 82%;
-  }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
     margin: 0.35rem 0 0 -1rem;
@@ -456,7 +450,14 @@ body {
     float: left;
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  .main_container .content_carousel .content_carousel_head .btn_more {
+    font-size: 1rem;
+  }
+  .main_container .inner_page .section_content .p_content,
+.main_container .inner_page .section_content .p_content_2 {
+    font-size: 14px;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
@@ -487,10 +488,6 @@ body {
     text-align: center;
     display: block;
     float: left !important;
-  }
-  .main_container .header .header_logo .link_href img,
-.main_container .header .header_icon .link_href img {
-    margin-right: 88%;
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
@@ -530,7 +527,17 @@ body {
     float: left;
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+  }
+  .main_container .content_carousel .content_carousel_head .btn_more {
+    font-size: 1.5rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_two .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_three .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+    font-size: 1.25rem;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
@@ -556,10 +563,6 @@ body {
     text-align: center;
     display: block;
     float: left !important;
-  }
-  .main_container .header .header_logo .link_href img,
-.main_container .header .header_icon .link_href img {
-    margin-right: 88%;
   }
   .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
@@ -600,6 +603,24 @@ body {
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
+  }
+  .main_container .content_carousel .content_carousel_head .link_title h6 {
+    font-size: 1.85rem;
+  }
+  .main_container .content_carousel .content_carousel_head .btn_more {
+    font-size: 1.85rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_two .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_three .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+    font-size: 1.75rem !important;
+  }
+  .main_container .inner_page .section_content .p_content,
+.main_container .inner_page .section_content .p_content_2 {
+    font-size: 26px;
+    margin-right: 0.75rem;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;

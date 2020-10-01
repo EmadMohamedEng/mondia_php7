@@ -6,7 +6,7 @@
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
 @else
 <div class="col-md-12 col-lg-12 col-xl-8 col-12 p-0 no_padding close_nav">
-@endif>
+@endif
     @include('front.search')
   <section class="nearmosque_page">
     <div class="nearmosque_title text-center roll-in-top">

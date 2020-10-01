@@ -123,6 +123,7 @@ select {
 
     .lang_mbc {
       color: $text_color;
+      cursor: pointer;
 
       .dropdown-menu2 {
         right: 0 !important;
@@ -229,7 +230,7 @@ select {
 
         .owl_one_img {
           img {
-            height: 19.5rem;
+            height: 15.858rem;
           }
         }
 
@@ -238,6 +239,10 @@ select {
           background-color: rgba(0, 0, 0, .7);
 
           button {
+            width: 65%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             border: 0;
             background: $bg_color;
             color: $white_color;
@@ -248,7 +253,7 @@ select {
             -ms-border-radius: 6px;
             -o-border-radius: 6px;
             position: absolute;
-            top: 92.5%;
+            top: 91%;
             left: 50%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
@@ -292,6 +297,10 @@ select {
         float: right;
         padding: 0.25rem .5rem;
         margin-bottom: 1rem;
+
+        &:focus {
+          box-shadow: 0 0 0 0.2rem $bg_color2;
+        }
       }
     }
 
@@ -1563,6 +1572,7 @@ select {
         border-top: 0;
         border-right: 0;
         border-left: 0;
+        text-align: center;
 
         &::placeholder {
           color: $text_color;
@@ -2142,7 +2152,7 @@ select {
 
       .nearmosque_title {
         #map {
-          width: 100%;
+          width: 90%;
         }
       }
     }
@@ -2194,6 +2204,7 @@ select {
           position: relative;
 
           .modal-content {
+            width: 90%;
             position: fixed;
             top: 57%;
             left: 50%;
@@ -2700,7 +2711,7 @@ select {
 
       .nearmosque_title {
         #map {
-          width: 100%;
+          width: 90%;
         }
       }
     }
@@ -2753,6 +2764,7 @@ select {
           margin: 0;
 
           .modal-content {
+            width: 90%;
             position: fixed;
             top: 54%;
             left: 50%;
@@ -3254,7 +3266,7 @@ select {
 
       .nearmosque_title {
         #map {
-          width: 100%;
+          width: 90%;
         }
       }
     }
@@ -3307,6 +3319,7 @@ select {
           margin: 0;
 
           .modal-content {
+            width: 90%;
             position: fixed;
             top: 55%;
             left: 50%;
@@ -3848,7 +3861,7 @@ select {
 
       .nearmosque_title {
         #map {
-          width: 100%;
+          width: 90%;
         }
       }
     }
@@ -3901,6 +3914,7 @@ select {
           margin: 0;
 
           .modal-content {
+            width: 90%;
             position: fixed;
             top: 55%;
             left: 50%;
@@ -4710,6 +4724,7 @@ select {
           margin: 0;
 
           .modal-content {
+            width: 90%;
             position: fixed;
             top: 55%;
             left: 50%;
@@ -4788,6 +4803,11 @@ select {
 
       .zakah_result {
         width: 100%;
+
+        .zakah_result_right,
+        .zakah_result_left {
+          font-size: 1.35rem;
+        }
       }
     }
 
@@ -4923,7 +4943,7 @@ select {
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1030px) {
   .padding_phones {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -4995,6 +5015,7 @@ select {
 
       .lang_mbc {
         font-size: 1.75rem;
+
         .dropdown-menu2 {
           right: 0 !important;
           left: 52% !important;
@@ -5041,12 +5062,14 @@ select {
         height: 100vh;
         padding: 0 0;
         overflow-y: scroll;
+
         .nav-item {
           padding: 0.25rem 0.75rem;
           font-size: 2rem;
 
           .nav-link {
             font-size: 2rem;
+
             .icon_before {
               padding-right: 0.5rem;
               color: $text_color;
@@ -5506,6 +5529,7 @@ select {
           margin: 0;
 
           .modal-content {
+            width: 90%;
             position: fixed;
             top: 55%;
             left: 50%;
@@ -5619,6 +5643,11 @@ select {
 
       .zakah_result {
         width: 100%;
+
+        .zakah_result_right,
+        .zakah_result_left {
+          font-size: 2rem;
+        }
       }
 
     }
@@ -5741,6 +5770,29 @@ select {
         top: -7rem;
         left: 50%;
       }
+    }
+  }
+
+  .loading-overlay {
+    .spinner-large {
+      bottom: 30%;
+      left: 35%;
+    }
+  }
+
+  .alert {
+    font-size: 2.35rem;
+
+    .close {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (min-width: 1031px) and (max-width: 1360px) {
+  .main_container {
+    .search_page {
+      width: 100%
     }
   }
 

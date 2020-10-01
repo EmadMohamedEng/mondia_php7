@@ -14,7 +14,7 @@ $(document).on('click', '.back', function () {
 $(window).on('load', function () {
   'use strict';
   $('.loading-overlay .spinner').fadeOut(500, function () {
-    $(this).parent().fadeOut(800, function () {
+    $(this).parent().fadeOut(500, function () {
       $('body').css('overflow', 'auto');
       $(this).remove();
     });
