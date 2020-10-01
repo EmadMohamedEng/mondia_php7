@@ -20,11 +20,11 @@
   display: block;
   transition: 0.3s;
 }
-
+/* 
 .sidenav a:hover {
   background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
   color: #FFF;
-}
+} */
 
 .sidenav .closebtn_mbc {
   position: absolute;

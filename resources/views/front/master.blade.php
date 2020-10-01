@@ -218,7 +218,7 @@ $enable = get_setting('enable_testing');
 
 
         <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn_mbc" onclick="closeNav()">&times;</a>
+          <a href="javascript:void(0)" class="closebtn_mbc" onclick="closeNav()"><i class="fas fa-times"></i></a>
           <!-- start menu 2  -->
           <ul class="navbar_ul navbar-nav mr-auto">
             <li class="nav-item nav_item_logo d-block d-sm-none d-md-block d-lg-block d-xl-none">
