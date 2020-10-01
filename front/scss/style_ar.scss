@@ -336,6 +336,28 @@ body {
   }
 
   /* End Merath Page */
+
+  /* Start Profile Page */
+  .profile {
+    .profile_title {
+    }
+    .profile_table {
+      table {
+        tbody {
+          tr {
+            .label-view {
+              text-align: right;
+            }
+
+            .label-view2 {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* End Profile Page */
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {

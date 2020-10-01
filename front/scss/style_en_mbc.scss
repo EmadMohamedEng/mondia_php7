@@ -1720,6 +1720,37 @@ select {
   }
 
   /* End Error Page */
+
+  /* Start Profile Page */
+  .profile {
+    margin: 3.5rem auto;
+
+    .profile_title {
+      color: $white_color;
+      margin-bottom: 5% !important;
+    }
+
+    .profile_table {
+      table {
+        tbody {
+          tr {
+            .label-view {
+              width: 25%;
+              color: $text_color;
+              border: 0;
+            }
+
+            .label-view2 {
+              width: 75%;
+              color: $white_color;
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* End Profile Page */
 }
 
 .loading-overlay {
@@ -1821,10 +1852,6 @@ select {
   .dropdown-toggle::after {
     margin-right: unset !important;
   }
-
-  // .lang_show{
-  //   display: none;
-  // }
 
   .no_padding {
     padding: 0;
@@ -2337,6 +2364,29 @@ select {
         left: 50%;
       }
     }
+
+    .profile {
+      width: 90%;
+      margin: 2.5rem auto;
+  
+      .profile_table {
+        table {
+          tbody {
+            tr {
+              .label-view {
+                width: 40%;
+                font-size: 0.75rem;
+              }
+  
+              .label-view2 {
+                width: 60%;
+                font-size: 0.85rem;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .loading-overlay {
@@ -2365,11 +2415,8 @@ select {
     margin-right: unset !important;
   }
 
-  // .lang_show{
-  //   display: none;
-  // }
   .no_padding {
-    padding: 0;
+    // padding: 0;
   }
 
   .main_container {
@@ -2897,6 +2944,29 @@ select {
         left: 50%;
       }
     }
+
+  .profile {
+    width: 90%;
+    margin: 2.5rem auto;
+
+    .profile_table {
+      table {
+        tbody {
+          tr {
+            .label-view {
+              width: 35%;
+              font-size: 0.75rem;
+            }
+
+            .label-view2 {
+              width: 65%;
+              font-size: 0.85rem;
+            }
+          }
+        }
+      }
+    }
+  }
   }
 
   .loading-overlay {
@@ -2921,9 +2991,6 @@ select {
     display: none;
   }
 
-  // .lang_show{
-  //   display: none;
-  // }
   .dropdown-toggle::after {
     margin-right: unset !important;
   }
@@ -3474,6 +3541,29 @@ select {
         left: 50%;
       }
     }
+
+    .profile {
+      width: 90%;
+      margin: 2.5rem auto;
+  
+      .profile_table {
+        table {
+          tbody {
+            tr {
+              .label-view {
+                width: 35%;
+                font-size: 0.75rem;
+              }
+  
+              .label-view2 {
+                width: 65%;
+                font-size: 0.85rem;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .loading-overlay {
@@ -3498,9 +3588,6 @@ select {
     display: none;
   }
 
-  // .lang_show{
-  //   display: none;
-  // }
   .dropdown-toggle::after {
     margin-right: unset !important;
   }
@@ -4070,6 +4157,29 @@ select {
         left: 50%;
       }
     }
+
+    .profile {
+      width: 90%;
+      margin: 2.5rem auto;
+  
+      .profile_table {
+        table {
+          tbody {
+            tr {
+              .label-view {
+                width: 35%;
+                font-size: 0.85rem;
+              }
+  
+              .label-view2 {
+                width: 65%;
+                font-size: 0.95rem;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .loading-overlay {
@@ -4094,9 +4204,6 @@ select {
     display: none;
   }
 
-  // .lang_show{
-  //   display: none;
-  // }
   .dropdown-toggle::after {
     margin-right: unset !important;
   }
@@ -4925,6 +5032,29 @@ select {
         left: 50%;
       }
     }
+
+    .profile {
+      width: 90%;
+      margin: 2.5rem auto;
+  
+      .profile_table {
+        table {
+          tbody {
+            tr {
+              .label-view {
+                width: 35%;
+                font-size: 1rem;
+              }
+  
+              .label-view2 {
+                width: 65%;
+                font-size: 1.35rem;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .loading-overlay {
@@ -4964,10 +5094,6 @@ select {
   .dropdown-toggle::after {
     margin-right: unset !important;
   }
-
-  // .lang_show{
-  //   display: none;
-  // }
 
   .no_padding {
     padding: 0;
@@ -5769,6 +5895,37 @@ select {
         font-size: 3rem;
         top: -7rem;
         left: 50%;
+      }
+    }
+
+    .profile {
+      width: 90%;
+      margin: 4.5rem auto;
+
+      .profile_title {
+        h2 {
+          font-size: 3rem
+        }
+      }
+  
+      .profile_table {
+        table {
+          tbody {
+            tr {
+              .label-view {
+                width: 35%;
+                font-size: 1.75rem;
+                padding: 1.75rem 1rem;
+              }
+  
+              .label-view2 {
+                width: 65%;
+                font-size: 2rem;
+                padding: 1.75rem 1rem;
+              }
+            }
+          }
+        }
       }
     }
   }

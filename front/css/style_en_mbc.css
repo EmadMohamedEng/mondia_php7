@@ -85,6 +85,8 @@ select:active {
   /* End Search Page */
   /* Start Error Page */
   /* End Error Page */
+  /* Start Profile Page */
+  /* End Profile Page */
 }
 .main_container .header {
   position: unset;
@@ -1331,6 +1333,23 @@ select:active {
     transform: translateY(20px);
   }
 }
+.main_container .profile {
+  margin: 3.5rem auto;
+}
+.main_container .profile .profile_title {
+  color: #FFF;
+  margin-bottom: 5% !important;
+}
+.main_container .profile .profile_table table tbody tr .label-view {
+  width: 25%;
+  color: #efc049;
+  border: 0;
+}
+.main_container .profile .profile_table table tbody tr .label-view2 {
+  width: 75%;
+  color: #FFF;
+  border: 0;
+}
 
 .loading-overlay {
   position: relative;
@@ -1751,6 +1770,18 @@ select:active {
     top: -1rem;
     left: 50%;
   }
+  .main_container .profile {
+    width: 90%;
+    margin: 2.5rem auto;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view {
+    width: 40%;
+    font-size: 0.75rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view2 {
+    width: 60%;
+    font-size: 0.85rem;
+  }
 
   .loading-overlay .spinner-large {
     bottom: 30%;
@@ -1773,10 +1804,6 @@ select:active {
 
   .dropdown-toggle::after {
     margin-right: unset !important;
-  }
-
-  .no_padding {
-    padding: 0;
   }
 
   .main_container {
@@ -2116,6 +2143,18 @@ select:active {
   .main_container .error_page .buttons-con {
     top: 3rem;
     left: 50%;
+  }
+  .main_container .profile {
+    width: 90%;
+    margin: 2.5rem auto;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view {
+    width: 35%;
+    font-size: 0.75rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view2 {
+    width: 65%;
+    font-size: 0.85rem;
   }
 
   .loading-overlay .spinner-large {
@@ -2494,6 +2533,18 @@ select:active {
   .main_container .error_page .buttons-con {
     top: -1rem;
     left: 50%;
+  }
+  .main_container .profile {
+    width: 90%;
+    margin: 2.5rem auto;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view {
+    width: 35%;
+    font-size: 0.75rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view2 {
+    width: 65%;
+    font-size: 0.85rem;
   }
 
   .loading-overlay .spinner-large {
@@ -2886,6 +2937,18 @@ select:active {
     font-size: 1.5rem;
     top: 3rem;
     left: 50%;
+  }
+  .main_container .profile {
+    width: 90%;
+    margin: 2.5rem auto;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view {
+    width: 35%;
+    font-size: 0.85rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view2 {
+    width: 65%;
+    font-size: 0.95rem;
   }
 
   .loading-overlay .spinner-large {
@@ -3447,6 +3510,18 @@ select:active {
     font-size: 2.5rem;
     top: -7rem;
     left: 50%;
+  }
+  .main_container .profile {
+    width: 90%;
+    margin: 2.5rem auto;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view {
+    width: 35%;
+    font-size: 1rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view2 {
+    width: 65%;
+    font-size: 1.35rem;
   }
 
   .loading-overlay .spinner-large {
@@ -4019,6 +4094,23 @@ select:active {
     font-size: 3rem;
     top: -7rem;
     left: 50%;
+  }
+  .main_container .profile {
+    width: 90%;
+    margin: 4.5rem auto;
+  }
+  .main_container .profile .profile_title h2 {
+    font-size: 3rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view {
+    width: 35%;
+    font-size: 1.75rem;
+    padding: 1.75rem 1rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view2 {
+    width: 65%;
+    font-size: 2rem;
+    padding: 1.75rem 1rem;
   }
 
   .loading-overlay .spinner-large {

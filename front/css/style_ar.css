@@ -23,6 +23,8 @@ body {
   /* End Zakkah Page */
   /* Start Merath Page */
   /* End Merath Page */
+  /* Start Profile Page */
+  /* End Profile Page */
 }
 .main_container .header .header_logo.header_logo,
 .main_container .header .header_icon.header_logo {
@@ -166,6 +168,12 @@ body {
 }
 .main_container .merath_page .table_table .table {
   direction: rtl;
+}
+.main_container .profile .profile_table table tbody tr .label-view {
+  text-align: right;
+}
+.main_container .profile .profile_table table tbody tr .label-view2 {
+  text-align: right;
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {
