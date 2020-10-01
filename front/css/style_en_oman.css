@@ -3112,7 +3112,7 @@ select:active {
     font-size: 2.15rem;
   }
 }
-@media (min-width: 1024px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1030px) {
   .padding_phones {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -3616,6 +3616,14 @@ select:active {
   }
   .alert .close {
     font-size: 2.5rem;
+  }
+}
+@media (min-width: 1031px) and (max-width: 1360px) {
+  .main_container .inner_page .socail_media .facebook,
+.main_container .inner_page .socail_media .twitter,
+.main_container .inner_page .socail_media .messenger,
+.main_container .inner_page .socail_media .whatsapp {
+    height: 2.5rem !important;
   }
 }
 /* Start Animation */

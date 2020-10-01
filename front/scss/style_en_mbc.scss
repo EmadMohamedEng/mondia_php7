@@ -5791,8 +5791,108 @@ select {
 
 @media (min-width: 1031px) and (max-width: 1360px) {
   .main_container {
+    width: 50%;
     .search_page {
-      width: 100%
+      // width: 100%
+    }
+
+    #mySidenav {
+      &.sidenav {
+        left: 25%;
+
+        .closebtn_mbc {
+          font-size: 1.5rem;
+          top: 0%;
+          right: 5%;
+      
+        }
+      }
+    }
+
+    .navbar {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .img_carousel {
+      .owl_one {
+        .item {
+          .owl_one_img {
+            img {
+              height: 13.989rem;
+            }
+          }
+
+          .btn_subscribe {
+            button {
+              top: 90%;
+              width: 75%;
+            }
+          }
+        }
+      }
+    }
+
+    .content_carousel {
+      .owl_content_three,
+      .owl_content_four,
+      .owl_content_five {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 10rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .content_carousel {
+      .owl_content_one,
+      .owl_content_two {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 14rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .list_page {
+      .item {
+        .card {
+          .owl_content_img {
+            img {
+              height: 13rem;
+            }
+          }
+        }
+      }
+
+      .coming_soon {
+        width: 28%;
+      }
+    }
+
+    .zakkah_v2_page {
+      .zakah_result {
+        width: 50%;
+      }
+    }
+
+    .merath_page {
+      width: 90%;
     }
   }
 
