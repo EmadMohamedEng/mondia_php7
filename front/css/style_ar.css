@@ -37,16 +37,15 @@ body {
 .main_container .header .header_icon.header_logo .link_href {
   text-align: left;
 }
-.main_container .header .header_logo.header_logo .arrow_back,
-.main_container .header .header_icon.header_logo .arrow_back {
-  top: 1rem;
-  right: 100%;
-  transform: translate(-50%, -50%);
-}
 .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
   text-align: left;
   float: left;
+}
+.main_container .header .arrow_back {
+  top: 1rem;
+  right: 100%;
+  transform: translate(-50%, -50%);
 }
 .main_container .nav_nav .navbar_ul {
   padding-right: 0;

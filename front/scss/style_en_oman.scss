@@ -4514,7 +4514,7 @@ select {
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1030px) {
   .padding_phones {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -5245,6 +5245,22 @@ select {
 
     .close {
       font-size: 2.5rem;
+    }
+  }
+}
+
+@media (min-width: 1031px) and (max-width: 1360px) {
+  .main_container {
+    
+    .inner_page {
+      .socail_media {
+        .facebook,
+        .twitter,
+        .messenger,
+        .whatsapp {
+          height: 2.5rem !important;
+        }
+      }
     }
   }
 }

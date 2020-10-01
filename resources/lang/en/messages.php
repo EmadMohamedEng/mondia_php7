@@ -4,7 +4,7 @@ return [
     'renew' => 'Auto-Renewed',
     'service_type' => 'Service Plan',
     'service_name' => 'Service Name',
-    'discription_weekly' => 'Auto Renewal of the subscription is considered to be 10 Rials per month',
+    'discription_weekly' => 'Auto Renewal of the subscription is considered to be 10 SAR per week',
     'description' => 'Description',
     'language' => 'عربي',
     'role' => 'Role',

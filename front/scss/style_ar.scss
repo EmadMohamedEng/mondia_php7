@@ -14,7 +14,6 @@ body {
 
   /* Start Header */
   .header {
-
     .header_logo,
     .header_icon {
       &.header_logo {
@@ -28,20 +27,18 @@ body {
         .link_href {
           text-align: left;
         }
-
-        .arrow_back {
-          top: 1rem;
-          right: 100%;
-          transform: translate(-50%, -50%);
-        }
       }
-
 
       &.header_icon {
         text-align: left;
         float: left;
       }
+    }
 
+    .arrow_back {
+      top: 1rem;
+      right: 100%;
+      transform: translate(-50%, -50%);
     }
   }
 
