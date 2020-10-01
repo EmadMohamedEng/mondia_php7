@@ -722,7 +722,7 @@ select:active {
   border-radius: 14px;
 }
 .main_container .salah_time_page {
-  width: 70%;
+  width: 90%;
   margin: 1.5rem auto;
 }
 .main_container .salah_time_page .salah_time_title h2 {
@@ -933,6 +933,7 @@ select:active {
 }
 .main_container .sebha_page #sebhaModal .modal-content {
   background-color: white;
+  left: 29%;
 }
 .main_container .sebha_page .modal-header {
   border-bottom: 1px solid #f3e5b8;

@@ -23,6 +23,8 @@ body {
   /* End Zakkah Page */
   /* Start Merath Page */
   /* End Merath Page */
+  /* Start Sebha Page */
+  /* End Sebha Page */
   /* Start Profile Page */
   /* End Profile Page */
 }
@@ -173,6 +175,9 @@ body {
 }
 .main_container .merath_page .table_table .table {
   direction: rtl;
+}
+.main_container .sebha_page #sebhaModal .modal-content {
+  left: -29%;
 }
 .main_container .profile .profile_table table tbody tr .label-view {
   text-align: right;
