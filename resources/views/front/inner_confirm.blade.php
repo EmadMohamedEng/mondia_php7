@@ -184,8 +184,6 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
   </div>
 </div>
 
-
-
 <div class="modal_cover modal fade" id="exampleModalCover_du" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">

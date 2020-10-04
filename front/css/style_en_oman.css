@@ -206,6 +206,10 @@ select:active {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .main_container .img_carousel .owl_one .item .btn_subscribe button {
+  width: 65%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   border: 0;
   background: #ff9e1b;
   color: #FFF;
@@ -527,8 +531,10 @@ select:active {
   padding: 0 2rem;
 }
 .main_container .inner_page .cover img {
-  height: 55rem;
+  height: 37rem;
   width: 92%;
+  margin: 0 auto;
+  display: block;
 }
 .main_container .inner_page .cover button {
   border: 0;
@@ -536,12 +542,15 @@ select:active {
   color: #FFF;
   position: absolute;
   top: 49%;
-  left: 35%;
+  left: 40%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+}
+.main_container .inner_page .cover button:focus {
+  box-shadow: 0 0 0 0.2rem #FFF;
 }
 .main_container .inner_page .poster {
   margin-top: 1.5rem;
@@ -640,6 +649,9 @@ select:active {
   margin-bottom: 0;
   margin-top: -0.75rem;
 }
+.main_container .modal_cover .modal-dialog .modal-content {
+  left: 32%;
+}
 .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -733,7 +745,7 @@ select:active {
   width: 100%;
   text-align: center;
   border: 2px solid #ff9e1b;
-  margin-bottom: 1%;
+  margin-bottom: 3%;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -742,9 +754,13 @@ select:active {
 }
 .main_container .salah_time_page .time_btn .h4_time_2 {
   text-align: right;
+  margin-bottom: 0;
+  padding: 0.6rem 0;
 }
 .main_container .salah_time_page .time_btn .h4_time {
   text-align: left;
+  margin-bottom: 0;
+  padding: 0.6rem 0;
 }
 .main_container .subscribe_page {
   width: 70%;
@@ -3620,11 +3636,54 @@ select:active {
   }
 }
 @media (min-width: 1031px) and (max-width: 1360px) {
+  .main_container {
+    width: 60% !important;
+  }
+  .main_container .nav_nav {
+    width: 95%;
+  }
+  .main_container .img_carousel .owl_one .item .owl_one_img img {
+    height: 11.191rem;
+  }
+  .main_container .img_carousel .owl_one .item .btn_subscribe button {
+    width: 70%;
+    top: 88%;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 7.813rem;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+    font-size: 0.9rem;
+  }
+  .main_container .list_page .item .card .card-body .card-title {
+    font-size: 0.9rem;
+  }
+  .main_container .inner_page .cover img {
+    height: 30.888rem;
+  }
   .main_container .inner_page .socail_media .facebook,
 .main_container .inner_page .socail_media .twitter,
 .main_container .inner_page .socail_media .messenger,
 .main_container .inner_page .socail_media .whatsapp {
     height: 2.5rem !important;
+  }
+  .main_container .modal_cover .modal-dialog .modal-content {
+    left: 26%;
+  }
+  .main_container .zakkah_page {
+    width: 90%;
+  }
+  .main_container .zakkah_page .zakah_zakah .form_zakah .field label {
+    float: left;
+  }
+  .main_container .salah_time_page .time_btn {
+    margin-bottom: 4%;
+  }
+  .main_container .salah_time_page .time_btn .h4_time,
+.main_container .salah_time_page .time_btn .h4_time_2 {
+    margin-bottom: 0;
+    padding: 0.6rem 0;
+    font-size: 1.25rem;
   }
 }
 /* Start Animation */
