@@ -701,6 +701,8 @@ select {
       img {
         height: 55rem;
         width: 92%;
+        margin: 0 auto;
+        display: block;
       }
 
       button {
@@ -963,7 +965,7 @@ select {
   /* Start Salah Page */
   .salah_time_page {
     width: 100%;
-    margin: 7.5rem auto;
+    margin: 1.5rem auto;
 
     .salah_time_title {
       h2 {
@@ -978,7 +980,7 @@ select {
       border: 2px solid;
       border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
       border-image-slice: 1;
-      margin-bottom: 1%;
+      margin-bottom: 3%;
       background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
       border-radius: 8px;
       -webkit-border-radius: 8px;
@@ -988,10 +990,14 @@ select {
 
       .h4_time_2 {
         text-align: right;
+        margin-bottom: 0;
+        padding: 0.6rem 0;
       }
 
       .h4_time {
         text-align: left;
+        margin-bottom: 0;
+        padding: 0.6rem 0;
       }
     }
   }
@@ -4588,7 +4594,7 @@ select {
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1030px) {
   .padding_phones {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -4779,6 +4785,7 @@ select {
 
             .card-body {
               padding: 1.25rem 0.25rem;
+
               .card-title {
                 text-align: center;
                 font-size: 2.25rem;
@@ -4810,6 +4817,7 @@ select {
 
             .card-body {
               padding: 1.25rem 0.25rem;
+
               .card-title {
                 text-align: center;
                 font-size: 2rem;
@@ -4841,6 +4849,7 @@ select {
 
             .card-body {
               padding: 1.25rem 0.25rem;
+
               .card-title {
                 text-align: center;
                 font-size: 2rem;
@@ -4872,6 +4881,7 @@ select {
 
             .card-body {
               padding: 1.25rem 0.25rem;
+
               .card-title {
                 text-align: center;
                 font-size: 2rem;
@@ -5406,6 +5416,146 @@ select {
 
     .close {
       font-size: 2.5rem;
+    }
+  }
+}
+
+@media (min-width: 1031px) and (max-width: 1360px) {
+  .main_container {
+    width: 60% !important;
+
+    .nav_nav {
+      width: 95%;
+    }
+
+    .img_carousel {
+      .owl_one {
+        .item {
+          .owl_one_img {
+            img {
+              height: 11.191rem;
+            }
+          }
+
+          .btn_subscribe {
+            button {
+              width: 70%;
+              top: 88%;
+            }
+          }
+        }
+      }
+    }
+
+    .content_carousel {
+      .owl_content_three {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 10.858rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_five {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 7.813rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .list_page {
+      .item {
+        .card {
+          .card-body {
+            .card-title {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    .inner_page {
+      .cover {
+        img {
+          height: 30.888rem;
+        }
+      }
+
+      .socail_media {
+
+        .facebook,
+        .twitter,
+        .messenger,
+        .whatsapp {
+          height: 2.5rem !important;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          left: 26%;
+        }
+      }
+    }
+
+    .zakkah_page {
+      width: 90%;
+
+      .zakah_zakah {
+        .form_zakah {
+          .field {
+            label {
+              float: left;
+            }
+          }
+        }
+      }
+    }
+
+    .salah_time_page {
+      .time_btn {
+        margin-bottom: 4%;
+
+        .h4_time,
+        .h4_time_2 {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    .merath_page {
+      width: 90%;
+
+      .input_span {
+        h4 {
+          font-size: 1.15rem;
+        }
+      }
     }
   }
 }
