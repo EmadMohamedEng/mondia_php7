@@ -74,7 +74,7 @@ select {
 
     .header_logo,
     .header_icon {
-      margin-right: -23%;
+      margin-right: 0;
       color: $white_color;
       display: inline-flex;
       position: relative;
@@ -694,6 +694,12 @@ select {
       img {
         height: 33rem;
         width: 92%;
+        margin: 0 auto;
+        display: block;
+      }
+
+      audio {
+        margin-left: 3%;
       }
 
       button {
@@ -976,10 +982,14 @@ select {
 
       .h4_time_2 {
         text-align: right;
+        margin-bottom: 0;
+        padding: 0.6rem 0;
       }
 
       .h4_time {
         text-align: left;
+        margin-bottom: 0;
+        padding: 0.6rem 0;
       }
     }
   }
@@ -4331,7 +4341,7 @@ select {
 
         #map {
           width: 90%;
-    margin: 0 auto;
+          margin: 0 auto;
         }
       }
     }
@@ -4596,7 +4606,7 @@ select {
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1030px) {
   .padding_phones {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -5138,7 +5148,7 @@ select {
 
         #map {
           width: 90%;
-    margin: 0 auto;
+          margin: 0 auto;
         }
       }
     }
@@ -5420,6 +5430,142 @@ select {
 
     .close {
       font-size: 2.5rem;
+    }
+  }
+}
+
+@media (min-width: 1031px) and (max-width: 1360px) {
+  .main_container {
+    width: 60% !important;
+
+    .nav_nav {
+      width: 95%;
+    }
+
+    .img_carousel {
+      .owl_one {
+        .item {
+          .owl_one_img {
+            img {
+              height: 11.191rem;
+            }
+          }
+
+          .btn_subscribe {
+            button {
+              width: 70%;
+              top: 88%;
+            }
+          }
+        }
+      }
+    }
+
+    .content_carousel {
+      .owl_content_three {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 10.858rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_five {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 7.813rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .list_page {
+      .item {
+        .card {
+          .card-body {
+            .card-title {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    .inner_page {
+      .cover {
+        img {
+          height: 30.888rem;
+        }
+      }
+
+      .socail_media {
+
+        .facebook,
+        .twitter,
+        .messenger,
+        .whatsapp {
+          height: 2.5rem !important;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          left: 26%;
+        }
+      }
+    }
+
+    .zakkah_page {
+      width: 90%;
+
+      .zakah_zakah {
+        .form_zakah {
+          .field {
+            label {
+              float: left;
+            }
+          }
+        }
+      }
+    }
+
+    .salah_time_page {
+      margin: 1.5rem auto;
+
+      .time_btn {
+        margin-bottom: 4%;
+
+        .h4_time,
+        .h4_time_2 {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    .merath_page {
+      width: 90%;
     }
   }
 }
