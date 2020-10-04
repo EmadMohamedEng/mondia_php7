@@ -78,6 +78,25 @@ body {
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu.dropdown-menu2 {
   float: left;
 }
+.main_container #mySidenav.sidenav {
+  left: 55.5%;
+}
+.main_container #mySidenav.sidenav .closebtn_mbc {
+  left: 55%;
+}
+.main_container #mySidenav.sidenav .closebtn_mbc:hover, .main_container #mySidenav.sidenav .closebtn_mbc:focus {
+  background: transparent;
+}
+.main_container #mySidenav.sidenav .navbar_ul {
+  padding: 0 0.75rem;
+}
+.main_container #mySidenav.sidenav .navbar_ul .nav-item .nav-link {
+  text-align: right;
+  direction: rtl;
+}
+.main_container #mySidenav.sidenav .navbar_ul .nav-item .dropdown-menu {
+  text-align: center;
+}
 .main_container .content_carousel .content_carousel_head .link_title {
   text-align: right;
 }
@@ -259,6 +278,9 @@ body {
   .main_container .merath_page .input_span h4 {
     font-size: 1.09rem;
   }
+  .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    left: 50% !important;
+  }
 
   .loading-overlay .spinner-large {
     right: 31%;
@@ -329,6 +351,9 @@ body {
   }
   .main_container .merath_page .input_span {
     text-align: right;
+  }
+  .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    left: 50% !important;
   }
 
   .loading-overlay .spinner-large {
@@ -409,6 +434,9 @@ body {
     padding-left: 8px;
     padding-right: 0;
     font-size: 1.3rem;
+  }
+  .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    left: 50% !important;
   }
   .main_container .sebha_page #sebhaModal .close {
     font-size: 2rem;
@@ -496,6 +524,9 @@ body {
   .main_container .merath_page .input_span h4 {
     font-size: 1.5rem;
   }
+  .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    left: 50% !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023.9px) {
   .main_container .header .header_logo,
@@ -504,6 +535,10 @@ body {
     text-align: left !important;
     display: block;
     margin-left: 12%;
+  }
+  .main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href img {
+    margin-left: 35%;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -570,6 +605,9 @@ body {
   .main_container .merath_page .input_span {
     text-align: right;
   }
+  .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    left: 50% !important;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1030px) {
   .main_container .header .header_logo,
@@ -578,6 +616,10 @@ body {
     text-align: left !important;
     display: block;
     margin-left: 12%;
+  }
+  .main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href img {
+    margin-left: 35%;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -652,8 +694,14 @@ body {
   .main_container .merath_page .input_span {
     text-align: right;
   }
+  .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    left: 50% !important;
+  }
 }
 @media (min-width: 1031px) and (max-width: 1360px) {
+  .main_container .sebha_page #sebhaModal .modal-content {
+    left: 2%;
+  }
   .main_container .modal_cover .modal-dialog .modal-content {
     left: -26%;
   }

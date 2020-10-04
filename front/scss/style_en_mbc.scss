@@ -744,8 +744,15 @@ select {
       }
 
       img {
-        height: 33rem;
+        height: 31rem;
         width: 92%;
+        margin: 0 auto;
+        display: block;
+      }
+
+      audio {
+        margin-left: 4%;
+        width: 92% !important;
       }
 
       button {
@@ -984,7 +991,7 @@ select {
   /* Start Nearmosque Page */
   .nearmosque_page {
     margin: 3rem auto;
-    width: 100%;
+    width: 90%;
 
     .nearmosque_title {
       h2 {
@@ -1337,7 +1344,7 @@ select {
 
   /* Start Merath Page */
   .merath_page {
-    width: 70%;
+    width: 80%;
     margin: 1.5rem auto;
 
     // direction: rtl;
@@ -1750,6 +1757,7 @@ select {
       }
     }
   }
+
   /* End Profile Page */
 }
 
@@ -1998,31 +2006,34 @@ select {
         }
       }
 
-      .item {
-        .card {
-          // height: 12.375rem !important;
+      .owl_content_two,
+      .owl_content_three {
+        .item {
+          width: 100%;
 
-          &.card_muslim_guid {
-            // height: 10.625rem !important;
-          }
+          .card {
+            width: 100%;
 
-          .owl_content_img {
-            img {
-              height: 7.75rem !important;
-
-              &.img_muslim_guid {
-                height: 6rem !important;
-                width: 70% !important;
-                margin: 0 auto;
+            .owl_content_img {
+              img {
+                height: 9.719rem !important;
               }
             }
           }
+        }
+      }
 
-          .card-body {
-            padding: 1rem 0.25rem;
+      .owl_content_five {
+        .item {
+          width: 100%;
 
-            .card-title {
-              font-size: 1rem;
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 9.719rem !important;
+              }
             }
           }
         }
@@ -2577,31 +2588,34 @@ select {
         }
       }
 
-      .item {
-        .card {
-          // height: 14.625rem !important;
+      .owl_content_two,
+      .owl_content_three {
+        .item {
+          width: 100%;
 
-          &.card_muslim_guid {
-            // height: 11.625rem !important;
-          }
+          .card {
+            width: 100%;
 
-          .owl_content_img {
-            img {
-              height: 10rem !important;
-
-              &.img_muslim_guid {
-                height: 7rem !important;
-                width: 75% !important;
-                margin: 0 auto;
+            .owl_content_img {
+              img {
+                height: 10.969rem !important;
               }
             }
           }
+        }
+      }
 
-          .card-body {
-            padding: 1rem 0.25rem;
+      .owl_content_five {
+        .item {
+          width: 100%;
 
-            .card-title {
-              font-size: 1rem;
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 10.969rem !important;
+              }
             }
           }
         }
@@ -2945,28 +2959,28 @@ select {
       }
     }
 
-  .profile {
-    width: 90%;
-    margin: 2.5rem auto;
+    .profile {
+      width: 90%;
+      margin: 2.5rem auto;
 
-    .profile_table {
-      table {
-        tbody {
-          tr {
-            .label-view {
-              width: 35%;
-              font-size: 0.75rem;
-            }
+      .profile_table {
+        table {
+          tbody {
+            tr {
+              .label-view {
+                width: 35%;
+                font-size: 0.75rem;
+              }
 
-            .label-view2 {
-              width: 65%;
-              font-size: 0.85rem;
+              .label-view2 {
+                width: 65%;
+                font-size: 0.85rem;
+              }
             }
           }
         }
       }
     }
-  }
   }
 
   .loading-overlay {
@@ -3140,32 +3154,34 @@ select {
         }
       }
 
-      .item {
-        .card {
-          // height: 14.125rem !important;
+      .owl_content_two,
+      .owl_content_three {
+        .item {
+          width: 100%;
 
-          &.card_muslim_guid {
-            // height: 10.625rem !important;
-          }
+          .card {
+            width: 100%;
 
-          .owl_content_img {
-            img {
-              height: 9.5rem !important;
-
-
-              &.img_muslim_guid {
-                height: 6rem !important;
-                width: 70% !important;
-                margin: 0 auto;
+            .owl_content_img {
+              img {
+                height: 11.438rem !important;
               }
             }
           }
+        }
+      }
 
-          .card-body {
-            padding: 1rem 0.25rem;
+      .owl_content_five {
+        .item {
+          width: 100%;
 
-            .card-title {
-              font-size: 1rem;
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 11.438rem !important;
+              }
             }
           }
         }
@@ -3756,31 +3772,34 @@ select {
         }
       }
 
-      .item {
-        .card {
-          // height: 13.625rem !important;
+      .owl_content_two,
+      .owl_content_three {
+        .item {
+          width: 100%;
 
-          &.card_muslim_guid {
-            // height: 10.625rem !important;
-          }
+          .card {
+            width: 100%;
 
-          .owl_content_img {
-            img {
-              height: 9rem !important;
-
-              &.img_muslim_guid {
-                height: 6rem !important;
-                width: 70% !important;
-                margin: 0 auto;
+            .owl_content_img {
+              img {
+                height: 12.563rem !important;
               }
             }
           }
+        }
+      }
 
-          .card-body {
-            padding: 1rem 0.25rem;
+      .owl_content_five {
+        .item {
+          width: 100%;
 
-            .card-title {
-              font-size: 1.25rem;
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 10.969rem !important;
+              }
             }
           }
         }
@@ -5948,7 +5967,8 @@ select {
 
 @media (min-width: 1031px) and (max-width: 1360px) {
   .main_container {
-    width: 50%;
+    width: 50% !important;
+
     .search_page {
       // width: 100%
     }
@@ -5996,6 +6016,7 @@ select {
     }
 
     .content_carousel {
+
       .owl_content_three,
       .owl_content_four,
       .owl_content_five {
@@ -6012,6 +6033,7 @@ select {
     }
 
     .content_carousel {
+
       .owl_content_one,
       .owl_content_two {
         .item {
@@ -6049,6 +6071,10 @@ select {
     }
 
     .merath_page {
+      width: 90%;
+    }
+
+    .nearmosque_page {
       width: 90%;
     }
   }

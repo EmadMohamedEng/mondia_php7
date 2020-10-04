@@ -91,6 +91,36 @@ body {
 
   /* End Header */
 
+  #mySidenav {
+    &.sidenav {
+      left: 55.5%;
+
+      .closebtn_mbc {
+        left: 55%;
+
+        &:hover,
+        &:focus {
+          background: transparent;
+        }
+      }
+
+      .navbar_ul {
+        padding: 0 0.75rem;
+
+        .nav-item {
+          .nav-link {
+            text-align: right;
+            direction: rtl;
+          }
+
+          .dropdown-menu {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
   /* Start Home Page */
   .img_carousel {
     .owl_one {
@@ -500,6 +530,16 @@ body {
         }
       }
     }
+
+    .sebha_page {
+      #sebhaModal {
+        .modal-dialog {
+          .modal-content {
+            left: 50% !important;
+          }
+        }
+      }
+    }
   }
 
   .loading-overlay {
@@ -606,6 +646,16 @@ body {
     .merath_page {
       .input_span {
         text-align: right;
+      }
+    }
+
+    .sebha_page {
+      #sebhaModal {
+        .modal-dialog {
+          .modal-content {
+            left: 50% !important;
+          }
+        }
       }
     }
   }
@@ -737,6 +787,12 @@ body {
 
     .sebha_page {
       #sebhaModal {
+        .modal-dialog {
+          .modal-content {
+            left: 50% !important;
+          }
+        }
+
         .close {
           font-size: 2rem;
         }
@@ -878,6 +934,16 @@ body {
         }
       }
     }
+
+    .sebha_page {
+      #sebhaModal {
+        .modal-dialog {
+          .modal-content {
+            left: 50% !important;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -893,7 +959,9 @@ body {
         margin-left: 12%;
 
         .link_href {
-          img {}
+          img {
+            margin-left: 35%;
+          }
         }
 
         h6 {
@@ -1002,6 +1070,16 @@ body {
         text-align: right;
       }
     }
+
+    .sebha_page {
+      #sebhaModal {
+        .modal-dialog {
+          .modal-content {
+            left: 50% !important;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1017,7 +1095,9 @@ body {
         margin-left: 12%;
 
         .link_href {
-          img {}
+          img {
+            margin-left: 35%;
+          }
         }
 
         h6 {
@@ -1140,11 +1220,29 @@ body {
         text-align: right;
       }
     }
+
+    .sebha_page {
+      #sebhaModal {
+        .modal-dialog {
+          .modal-content {
+            left: 50% !important;
+          }
+        }
+      }
+    }
   }
 }
 
 @media (min-width: 1031px) and (max-width: 1360px) {
   .main_container {
+    .sebha_page {
+      #sebhaModal {
+        .modal-content {
+          left: 2%;
+        }
+      }
+    }
+
     .modal_cover {
       .modal-dialog {
         .modal-content {

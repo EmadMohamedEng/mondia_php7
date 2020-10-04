@@ -73,28 +73,34 @@ svg {
 .navbar-nav .dropdown-menu {
   background-color: #111;
 }
+
 .active_menu {
-  color: #FFF!important;
+  color: #FFF !important;
 }
-.lang_color{
+
+.lang_color {
   background-color: #111;
   z-index: 2147483647;
 
 }
-.lang_color a{
+
+.lang_color a {
   color: #FFF;
 }
-.lang_color a:hover{
+
+.lang_color a:hover {
   background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
   color: #FFF;
 }
-.lang_show{
+
+.lang_show {
   cursor: pointer;
   color: #efc049;
   margin: -10% 0 0 0;
 
 }
-.angle_show{
+
+.angle_show {
   margin: 0 -10px 0 -13px;
   color: #efc049;
 
@@ -104,12 +110,20 @@ svg {
 
   font-size: 13px;
 }
-.close_nav{
+
+.close_nav {
   padding: 0;
 }
+
 /* .padding_phones{
   padding: 0;
 } */
+
+
+.main_container .sebha_page #sebhaModal .modal-content {
+  left: 0 !important;
+}
+
 @media (min-width: 1025px) {
   .main_container {
     width: 41%;

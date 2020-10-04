@@ -585,8 +585,14 @@ select:active {
   padding: 0 2rem;
 }
 .main_container .inner_page .cover img {
-  height: 33rem;
+  height: 31rem;
   width: 92%;
+  margin: 0 auto;
+  display: block;
+}
+.main_container .inner_page .cover audio {
+  margin-left: 4%;
+  width: 92% !important;
 }
 .main_container .inner_page .cover button {
   border: 0;
@@ -768,7 +774,7 @@ select:active {
 }
 .main_container .nearmosque_page {
   margin: 3rem auto;
-  width: 100%;
+  width: 90%;
 }
 .main_container .nearmosque_page .nearmosque_title h2 {
   margin-bottom: 1.5rem;
@@ -1026,7 +1032,7 @@ select:active {
   text-align: center;
 }
 .main_container .merath_page {
-  width: 70%;
+  width: 80%;
   margin: 1.5rem auto;
 }
 .main_container .merath_page .border-bottom {
@@ -1546,19 +1552,26 @@ select:active {
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 10rem !important;
   }
-  .main_container .content_carousel .item .card .owl_content_img img {
-    height: 7.75rem !important;
+  .main_container .content_carousel .owl_content_two .item,
+.main_container .content_carousel .owl_content_three .item {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .owl_content_img img.img_muslim_guid {
-    height: 6rem !important;
-    width: 70% !important;
-    margin: 0 auto;
+  .main_container .content_carousel .owl_content_two .item .card,
+.main_container .content_carousel .owl_content_three .item .card {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .card-body {
-    padding: 1rem 0.25rem;
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+    height: 9.719rem !important;
   }
-  .main_container .content_carousel .item .card .card-body .card-title {
-    font-size: 1rem;
+  .main_container .content_carousel .owl_content_five .item {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_five .item .card {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 9.719rem !important;
   }
   .main_container .list_page .coming_soon {
     width: 50%;
@@ -1917,19 +1930,26 @@ select:active {
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 10rem !important;
   }
-  .main_container .content_carousel .item .card .owl_content_img img {
-    height: 10rem !important;
+  .main_container .content_carousel .owl_content_two .item,
+.main_container .content_carousel .owl_content_three .item {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .owl_content_img img.img_muslim_guid {
-    height: 7rem !important;
-    width: 75% !important;
-    margin: 0 auto;
+  .main_container .content_carousel .owl_content_two .item .card,
+.main_container .content_carousel .owl_content_three .item .card {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .card-body {
-    padding: 1rem 0.25rem;
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+    height: 10.969rem !important;
   }
-  .main_container .content_carousel .item .card .card-body .card-title {
-    font-size: 1rem;
+  .main_container .content_carousel .owl_content_five .item {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_five .item .card {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 10.969rem !important;
   }
   .main_container .list_page .coming_soon {
     width: 50%;
@@ -2285,19 +2305,26 @@ select:active {
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 11.5rem !important;
   }
-  .main_container .content_carousel .item .card .owl_content_img img {
-    height: 9.5rem !important;
+  .main_container .content_carousel .owl_content_two .item,
+.main_container .content_carousel .owl_content_three .item {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .owl_content_img img.img_muslim_guid {
-    height: 6rem !important;
-    width: 70% !important;
-    margin: 0 auto;
+  .main_container .content_carousel .owl_content_two .item .card,
+.main_container .content_carousel .owl_content_three .item .card {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .card-body {
-    padding: 1rem 0.25rem;
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+    height: 11.438rem !important;
   }
-  .main_container .content_carousel .item .card .card-body .card-title {
-    font-size: 1rem;
+  .main_container .content_carousel .owl_content_five .item {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_five .item .card {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 11.438rem !important;
   }
   .main_container .list_page .coming_soon {
     width: 50%;
@@ -2688,19 +2715,26 @@ select:active {
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 11.5rem !important;
   }
-  .main_container .content_carousel .item .card .owl_content_img img {
-    height: 9rem !important;
+  .main_container .content_carousel .owl_content_two .item,
+.main_container .content_carousel .owl_content_three .item {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .owl_content_img img.img_muslim_guid {
-    height: 6rem !important;
-    width: 70% !important;
-    margin: 0 auto;
+  .main_container .content_carousel .owl_content_two .item .card,
+.main_container .content_carousel .owl_content_three .item .card {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .card-body {
-    padding: 1rem 0.25rem;
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+    height: 12.563rem !important;
   }
-  .main_container .content_carousel .item .card .card-body .card-title {
-    font-size: 1.25rem;
+  .main_container .content_carousel .owl_content_five .item {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_five .item .card {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 10.969rem !important;
   }
   .main_container .list_page .coming_soon {
     width: 50%;
@@ -4127,7 +4161,7 @@ select:active {
 }
 @media (min-width: 1031px) and (max-width: 1360px) {
   .main_container {
-    width: 50%;
+    width: 50% !important;
   }
   .main_container #mySidenav.sidenav {
     left: 25%;
@@ -4166,6 +4200,9 @@ select:active {
     width: 50%;
   }
   .main_container .merath_page {
+    width: 90%;
+  }
+  .main_container .nearmosque_page {
     width: 90%;
   }
 

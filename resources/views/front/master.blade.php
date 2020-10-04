@@ -104,7 +104,7 @@ $enable = get_setting('enable_testing');
 
   .navbar-light .navbar-nav .nav-link {
     color: #efc049;
-    font-size: 16px;
+    font-size: 17px;
     text-indent: -5px;
   }
 
