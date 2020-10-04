@@ -226,7 +226,7 @@ return [
     'add_user' => 'أضافة مستخدم جديد',
     'action' => 'إجراء',
 
-    'enjoy_time_landing' => 'بوابة الكنز',
+    'enjoy_time_landing' => 'الكنز',
     'Mbc_Muslim_guide_landing' => 'احصل علي أفضل الميزات التي تهم المسلم في حياته اليومية',
     'Are_you_a_subscriber' => 'مشترك حالي؟تسيجيل الدخول',
     'click_sub_landing' => 'من خلال الضغط علي اشتراك الان فأنت توافق علي الشروط والاحكام',

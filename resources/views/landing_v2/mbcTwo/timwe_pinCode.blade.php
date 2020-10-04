@@ -26,6 +26,10 @@
   .landing_page {
     margin-top: 0;
   }
+
+  .main_container .landing_page .strip h3 {
+    font-size: 1.35rem;
+  }
 </style>
 
 @php
@@ -36,12 +40,12 @@ App::setLocale($lang);
 if ($lang == 'ar') {
   $text = "text-right";
   $left = "rtl";
-  $bottom = "bottom: -1%;";
+  $bottom = "bottom: 0%;";
   $font = "font-size: 20px;";
 } else {
   $text = "text-left";
   $left = "ltr";
-  $bottom = "bottom: -12%;";
+  $bottom = "bottom: 0%;";
   $font = "font-size: 16px;";
 }
 ?>
