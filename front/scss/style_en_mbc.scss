@@ -744,10 +744,15 @@ select {
       }
 
       img {
-        height: 31rem;
+        height: 43.75rem;
         width: 92%;
         margin: 0 auto;
         display: block;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
       }
 
       audio {
@@ -2104,7 +2109,7 @@ select {
 
         img {
           width: 100%;
-          height: 12.813rem;
+          height: 19rem;
         }
       }
 
@@ -2277,6 +2282,7 @@ select {
     .zakkah_v2_page {
       .zakah_result {
         width: 100%;
+        left: 0;
       }
     }
 
@@ -2292,6 +2298,7 @@ select {
         h2 {
           text-align: center;
           margin-bottom: 1rem;
+          font-size: 1.3rem;
         }
       }
 
@@ -2302,7 +2309,7 @@ select {
       .input_span {
         h4 {
           line-height: 2.25rem;
-          font-size: 1rem;
+          font-size: 0.85rem;
         }
       }
 
@@ -2311,7 +2318,7 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          width: 50%;
+          width: 70%;
           color: $white_color;
           font-size: 1rem;
           font-weight: bold;
@@ -2330,6 +2337,10 @@ select {
       }
 
       .table_table {
+        .thead2_h4 {
+          font-size: 1rem;
+        }
+
         .table {
           border: 2px $text_color solid;
           border-radius: 7px;
@@ -2341,6 +2352,7 @@ select {
               // td {}
               .td_1 {
                 text-align: right;
+                font-size: 0.85rem;
               }
             }
           }
@@ -2686,7 +2698,7 @@ select {
 
         img {
           width: 100%;
-          height: 12.813rem;
+          height: 21.5rem;
         }
       }
 
@@ -2858,6 +2870,7 @@ select {
     .zakkah_v2_page {
       .zakah_result {
         width: 100%;
+        left: 0;
       }
     }
 
@@ -2873,6 +2886,7 @@ select {
         h2 {
           text-align: center;
           margin-bottom: 1rem;
+          font-size: 1.35rem;
         }
       }
 
@@ -2883,7 +2897,7 @@ select {
       .input_span {
         h4 {
           line-height: 2.5rem;
-          font-size: 1.15rem;
+          font-size: 0.85rem;
         }
       }
 
@@ -2892,7 +2906,7 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          width: 50%;
+          width: 65%;
           color: $white_color;
           font-size: 1rem;
           font-weight: bold;
@@ -2911,6 +2925,10 @@ select {
       }
 
       .table_table {
+        .thead2_h4 {
+          font-size: 1rem;
+        }
+
         .table {
           border: 2px $text_color solid;
           border-radius: 7px;
@@ -2919,7 +2937,7 @@ select {
           tbody {
             tr {
               td {
-                font-size: 1.38rem;
+                font-size: 0.85rem;
               }
 
               .td_1 {
@@ -3259,7 +3277,7 @@ select {
 
         img {
           width: 100%;
-          height: 12.813rem;
+          height: 22.438rem;
         }
       }
 
@@ -3455,6 +3473,7 @@ select {
     .zakkah_v2_page {
       .zakah_result {
         width: 100%;
+        left: 0;
       }
     }
 
@@ -3470,19 +3489,20 @@ select {
         h2 {
           text-align: center;
           margin-bottom: 1rem;
+          font-size: 1.3rem;
         }
       }
 
       .input_text {
         .merath_input {
-          font-size: 1.5rem;
+          font-size: 1rem;
         }
       }
 
       .input_span {
         h4 {
           line-height: 3rem;
-          font-size: 1.25rem;
+          font-size: 0.85rem;
         }
       }
 
@@ -3491,7 +3511,7 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          width: 50%;
+          width: 65%;
           color: $white_color;
           font-size: 1rem;
           font-weight: bold;
@@ -3510,6 +3530,10 @@ select {
       }
 
       .table_table {
+        .thead2_h4 {
+          font-size: 1rem
+        }
+
         .table {
           border: 2px $text_color solid;
           border-radius: 7px;
@@ -3518,7 +3542,7 @@ select {
           tbody {
             tr {
               td {
-                font-size: 1.5rem;
+                font-size: 0.85rem;
               }
 
               .td_1 {
@@ -3877,7 +3901,7 @@ select {
 
         img {
           width: 100%;
-          height: 12.813rem;
+          height: 24.875rem;
         }
       }
 
@@ -4073,6 +4097,7 @@ select {
     .zakkah_v2_page {
       .zakah_result {
         width: 100%;
+        left: 0;
       }
     }
 
@@ -4088,19 +4113,20 @@ select {
         h2 {
           text-align: center;
           margin-bottom: 1rem;
+          font-size: 1.35rem;
         }
       }
 
       .input_text {
         .merath_input {
-          font-size: 1.5rem;
+          // font-size: 1.10rem;
         }
       }
 
       .input_span {
         h4 {
           line-height: 3rem;
-          font-size: 1.25rem;
+          font-size: 0.85rem;
         }
       }
 
@@ -4109,7 +4135,7 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          width: 50%;
+          width: 60%;
           color: $white_color;
           font-size: 1rem;
           font-weight: bold;
@@ -4128,6 +4154,10 @@ select {
       }
 
       .table_table {
+        .thead2_h4 {
+          font-size: 1rem;
+        }
+
         .table {
           border: 2px $text_color solid;
           border-radius: 7px;
@@ -4136,7 +4166,7 @@ select {
           tbody {
             tr {
               td {
-                font-size: 1.5rem;
+                font-size: 0.85rem;
               }
 
               .td_1 {
@@ -4657,7 +4687,7 @@ select {
 
         img {
           width: 100%;
-          height: 25rem;
+          height: 43.75rem;
         }
       }
 
@@ -4929,6 +4959,7 @@ select {
 
       .zakah_result {
         width: 100%;
+        left: 0;
 
         .zakah_result_right,
         .zakah_result_left {
@@ -4950,20 +4981,20 @@ select {
         h2 {
           text-align: center;
           margin-bottom: 1.5rem;
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
       }
 
       .input_text {
         .merath_input {
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
       }
 
       .input_span {
         h4 {
           line-height: 4rem;
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
       }
 
@@ -4972,7 +5003,7 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          width: 50%;
+          width: 60%;
           color: $white_color;
           font-size: 2rem;
           font-weight: bold;
@@ -4992,7 +5023,7 @@ select {
 
       .table_table {
         .thead2_h4 {
-          font-size: 2.25rem;
+          font-size: 1.75rem;
           margin-bottom: 1rem;
         }
 
@@ -5004,7 +5035,7 @@ select {
           tbody {
             tr {
               td {
-                font-size: 2.10rem;
+                font-size: 1.35rem;
                 padding: 1rem 1rem;
               }
 
@@ -5472,7 +5503,7 @@ select {
 
         img {
           width: 100%;
-          height: 35.938rem;
+          height: 56.25rem;
         }
 
         .button_play {
@@ -5788,6 +5819,7 @@ select {
 
       .zakah_result {
         width: 100%;
+        left: 0;
 
         .zakah_result_right,
         .zakah_result_left {
@@ -5810,20 +5842,20 @@ select {
         h2 {
           text-align: center;
           margin-bottom: 1.5rem;
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
       }
 
       .input_text {
         .merath_input {
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
       }
 
       .input_span {
         h4 {
           line-height: 4.5rem;
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
       }
 
@@ -5832,8 +5864,8 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          width: 50%;
-          height: 4rem;
+          width: 60%;
+          height: 4.5rem;
           color: $white_color;
           font-size: 2.5rem;
           font-weight: bold;
@@ -5853,7 +5885,7 @@ select {
 
       .table_table {
         .thead2_h4 {
-          font-size: 3rem;
+          font-size: 2rem;
           margin-bottom: 1rem;
         }
 
@@ -5865,7 +5897,7 @@ select {
           tbody {
             tr {
               td {
-                font-size: 2.75rem;
+                font-size: 1.75rem;
                 padding: 1rem 1.25rem;
               }
 

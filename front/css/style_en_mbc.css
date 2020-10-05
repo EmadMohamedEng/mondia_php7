@@ -585,10 +585,15 @@ select:active {
   padding: 0 2rem;
 }
 .main_container .inner_page .cover img {
-  height: 31rem;
+  height: 43.75rem;
   width: 92%;
   margin: 0 auto;
   display: block;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 .main_container .inner_page .cover audio {
   margin-left: 4%;
@@ -1610,7 +1615,7 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    height: 12.813rem;
+    height: 19rem;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
     font-size: 1.25rem;
@@ -1720,6 +1725,7 @@ select:active {
   }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
+    left: 0;
   }
   .main_container .merath_page {
     width: 90%;
@@ -1730,17 +1736,18 @@ select:active {
   .main_container .merath_page .merath_title h2 {
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 1.3rem;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 50%;
+    width: 70%;
     color: #FFF;
     font-size: 1rem;
     font-weight: bold;
@@ -1753,6 +1760,9 @@ select:active {
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
   }
+  .main_container .merath_page .table_table .thead2_h4 {
+    font-size: 1rem;
+  }
   .main_container .merath_page .table_table .table {
     border: 2px #efc049 solid;
     border-radius: 7px;
@@ -1760,6 +1770,7 @@ select:active {
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
+    font-size: 0.85rem;
   }
   .main_container .search_page {
     width: 95%;
@@ -1988,7 +1999,7 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    height: 12.813rem;
+    height: 21.5rem;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
     font-size: 1.25rem;
@@ -2098,6 +2109,7 @@ select:active {
   }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
+    left: 0;
   }
   .main_container .merath_page {
     width: 90%;
@@ -2108,17 +2120,18 @@ select:active {
   .main_container .merath_page .merath_title h2 {
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 1.35rem;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.5rem;
-    font-size: 1.15rem;
+    font-size: 0.85rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 50%;
+    width: 65%;
     color: #FFF;
     font-size: 1rem;
     font-weight: bold;
@@ -2131,13 +2144,16 @@ select:active {
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
   }
+  .main_container .merath_page .table_table .thead2_h4 {
+    font-size: 1rem;
+  }
   .main_container .merath_page .table_table .table {
     border: 2px #efc049 solid;
     border-radius: 7px;
     direction: rtl;
   }
   .main_container .merath_page .table_table .table tbody tr td {
-    font-size: 1.38rem;
+    font-size: 0.85rem;
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
@@ -2367,7 +2383,7 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    height: 12.813rem;
+    height: 22.438rem;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
     font-size: 1.25rem;
@@ -2492,6 +2508,7 @@ select:active {
   }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
+    left: 0;
   }
   .main_container .merath_page {
     width: 90%;
@@ -2502,20 +2519,21 @@ select:active {
   .main_container .merath_page .merath_title h2 {
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 1.3rem;
   }
   .main_container .merath_page .input_text .merath_input {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 3rem;
-    font-size: 1.25rem;
+    font-size: 0.85rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 50%;
+    width: 65%;
     color: #FFF;
     font-size: 1rem;
     font-weight: bold;
@@ -2528,13 +2546,16 @@ select:active {
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
   }
+  .main_container .merath_page .table_table .thead2_h4 {
+    font-size: 1rem;
+  }
   .main_container .merath_page .table_table .table {
     border: 2px #efc049 solid;
     border-radius: 7px;
     direction: rtl;
   }
   .main_container .merath_page .table_table .table tbody tr td {
-    font-size: 1.5rem;
+    font-size: 0.85rem;
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
@@ -2777,7 +2798,7 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    height: 12.813rem;
+    height: 24.875rem;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
     font-size: 1.25rem;
@@ -2902,6 +2923,7 @@ select:active {
   }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
+    left: 0;
   }
   .main_container .merath_page {
     width: 90%;
@@ -2912,20 +2934,18 @@ select:active {
   .main_container .merath_page .merath_title h2 {
     text-align: center;
     margin-bottom: 1rem;
-  }
-  .main_container .merath_page .input_text .merath_input {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 3rem;
-    font-size: 1.25rem;
+    font-size: 0.85rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 50%;
+    width: 60%;
     color: #FFF;
     font-size: 1rem;
     font-weight: bold;
@@ -2938,13 +2958,16 @@ select:active {
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
   }
+  .main_container .merath_page .table_table .thead2_h4 {
+    font-size: 1rem;
+  }
   .main_container .merath_page .table_table .table {
     border: 2px #efc049 solid;
     border-radius: 7px;
     direction: rtl;
   }
   .main_container .merath_page .table_table .table tbody tr td {
-    font-size: 1.5rem;
+    font-size: 0.85rem;
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
@@ -3274,7 +3297,7 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    height: 25rem;
+    height: 43.75rem;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
     font-size: 1.65rem;
@@ -3459,6 +3482,7 @@ select:active {
   }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
+    left: 0;
   }
   .main_container .zakkah_v2_page .zakah_result .zakah_result_right,
 .main_container .zakkah_v2_page .zakah_result .zakah_result_left {
@@ -3474,21 +3498,21 @@ select:active {
   .main_container .merath_page .merath_title h2 {
     text-align: center;
     margin-bottom: 1.5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .main_container .merath_page .input_text .merath_input {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 4rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 50%;
+    width: 60%;
     color: #FFF;
     font-size: 2rem;
     font-weight: bold;
@@ -3502,7 +3526,7 @@ select:active {
     -o-border-radius: 8px;
   }
   .main_container .merath_page .table_table .thead2_h4 {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
   }
   .main_container .merath_page .table_table .table {
@@ -3511,7 +3535,7 @@ select:active {
     direction: rtl;
   }
   .main_container .merath_page .table_table .table tbody tr td {
-    font-size: 2.1rem;
+    font-size: 1.35rem;
     padding: 1rem 1rem;
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
@@ -3828,7 +3852,7 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    height: 35.938rem;
+    height: 56.25rem;
   }
   .main_container .inner_page .cover .button_play {
     font-size: 2rem;
@@ -4039,6 +4063,7 @@ select:active {
   }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
+    left: 0;
   }
   .main_container .zakkah_v2_page .zakah_result .zakah_result_right,
 .main_container .zakkah_v2_page .zakah_result .zakah_result_left {
@@ -4054,22 +4079,22 @@ select:active {
   .main_container .merath_page .merath_title h2 {
     text-align: center;
     margin-bottom: 1.5rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .main_container .merath_page .input_text .merath_input {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 4.5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 50%;
-    height: 4rem;
+    width: 60%;
+    height: 4.5rem;
     color: #FFF;
     font-size: 2.5rem;
     font-weight: bold;
@@ -4083,7 +4108,7 @@ select:active {
     -o-border-radius: 8px;
   }
   .main_container .merath_page .table_table .thead2_h4 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
   }
   .main_container .merath_page .table_table .table {
@@ -4092,7 +4117,7 @@ select:active {
     direction: rtl;
   }
   .main_container .merath_page .table_table .table tbody tr td {
-    font-size: 2.75rem;
+    font-size: 1.75rem;
     padding: 1rem 1.25rem;
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
