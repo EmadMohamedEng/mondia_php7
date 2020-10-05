@@ -3,14 +3,6 @@ $white_color: #FFF;
 $black_color: #000;
 $grey_color: #adadad;
 
-// ::-webkit-scrollbar {
-//   display: none;
-// }
-
-html {
-  height: 100%;
-}
-
 @font-face {
   font-family: DuCoHeadline200;
   src: url('../font/DuCoHeadline200.ttf')
@@ -19,45 +11,7 @@ html {
 body {
   font-family: DuCoHeadline200;
   // font-family: DuCoHeadline, Arial, sans-serif;
-  direction: ltr;
-  width: 100%;
-  height: 100%;
   background: #f2f2f2;
-  overflow-x: hidden;
-}
-
-* {
-  outline: 0;
-}
-
-a {
-  color: $white_color;
-  text-decoration: none;
-  outline: 0;
-  border: 0;
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: $white_color;
-    text-decoration: none;
-    outline: 0;
-    border: 0;
-  }
-}
-
-input,
-select {
-
-  &:focus,
-  &:active {
-    box-shadow: 0 0 0 0.2rem #FFF !important;
-  }
-}
-
-.border-bottom {
-  border-bottom: 2px solid #0000001f !important;
-  width: 100%;
 }
 
 .main_container {
@@ -722,7 +676,7 @@ select {
 
       audio {
         margin: -4% auto;
-    display: block;
+        display: block;
       }
     }
 
