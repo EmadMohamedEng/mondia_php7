@@ -331,50 +331,8 @@ class MbcTwoController extends Controller
 
       session()->put('userIdentifier', '966' . $msisdn);
       session()->put('pinMsisdn',  $msisdn);
-      $vars["userIdentifierType"] = "MSISDN";
-      $vars["productId"] = productId;
-      $vars["mcc"] = "427";
-      $vars["mnc"] = "01";
-      $vars["entryChannel"] = "WEB";
-      $vars["largeAccount"] = largeAccount;
-      $vars["subKeyword"] = "";
-      // $vars["trackingId"] = "12637414527";
-      // $vars["clientIP"] = "127.0.0.1";
-      // $vars["campaignUrl"] = "";
-      // $vars["optionalParams"] = "";
 
-      $JSON = json_encode($vars);
 
-      $actionName = "Timwe Subscription OptIn";
-      $URL = url()->current();
-
-      $URL = "https://qao.timwe.com/external/v2/subscription/optin/" . $partnerRoleId;
-      $ReqResponse = $this->SendRequest($URL, $JSON, $headers);
-      $ReqResponse = json_decode($ReqResponse, true);
-
-      //log request and response
-      $result = [];
-      $result['request'] = $vars;
-      $result['headers'] = $headers;
-      $result['response'] = $ReqResponse;
-      $result['date'] = date('Y-m-d H:i:s');
-
-      $this->log($actionName, $URL, $result);
-
-      $timewe = TimWe::create([
-        'api_request' => $URL,
-        'payload' => json_encode($vars),
-        'response' => json_encode($ReqResponse),
-        'header' => json_encode($headers),
-        'type'  => $actionName
-      ]);
-      //dd($ReqResponse);
-      if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_ALREADY_ACTIVE') {
-        $this->checksub('subscribe', '966' . $msisdn, $timewe->id);
-
-        session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
-        return redirect(url('/?OpID=' . ooredoo));
-      } else {
         if (true) {
           $lang =  session::get('lang');
           if ($request->has('prev_url'))
@@ -383,111 +341,28 @@ class MbcTwoController extends Controller
             return redirect('mbc_portal_pin')->with('success', '!تم ارسال رمز التحقق');
 
           return redirect('mbc_portal_pin')->with('success', 'Pincode Sent!');
-        } else {
-          $lang =  session::get('lang');
-          if ($lang == "ar") {
-            return redirect('mbc_portal_landing/' . $lang)->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
-          } else {
-            return redirect('mbc_portal_landing/' . $lang)->with('failed', 'An error has occurred, please try again later');
-          }
         }
-      }
+
     }
   }
 
   public function subscriptionConfirm(Request $request, $partnerRole)
   {
-    date_default_timezone_set('Asia/Qatar');
 
-    $partnerRoleId = $partnerRole;
-
-    require_once('uuid/UUID.php');
-    $trxid = \UUID::v4();
-
-    $headers = array(
-      "Content-Type: application/json",
-      "apikey: " . apikeysubscription,
-      "authentication: " . $this->generateKey(presharedkeysubscription),
-      "external-tx-id: " . $trxid
-    );
-
-    $now = strtotime(now());
-    $sendDate = gmdate(DATE_W3C, $now);
 
     if (session()->has('userIdentifier')) {
       $vars["userIdentifier"] = session('userIdentifier');
     } else {
       $vars["userIdentifier"] = 'no session found';
     }
-    $vars["userIdentifierType"] = "MSISDN";
-    $vars["productId"] = productId;
-    $vars["mcc"] = "427";
-    $vars["mnc"] = "01";
-    $vars["entryChannel"] = "WEB";
-    $vars["clientIp"] = "";
-    $vars["transactionAuthCode"] = $request->pincode;
-
-    $JSON = json_encode($vars);
-
-    $actionName = "Timwe subscription Confirm";
-    $URL = url()->current();
-
-    $URL = "https://qao.timwe.com/external/v2/subscription/optin/confirm/" . $partnerRoleId;
-    $ReqResponse = $this->SendRequest($URL, $JSON, $headers);
-    $ReqResponse = json_decode($ReqResponse, true);
-
-    //log request and response
-    $result = [];
-    $result['request'] = $vars;
-    $result['headers'] = $headers;
-    $result['response'] = $ReqResponse;
-    $result['date'] = date('Y-m-d H:i:s');
-
-    $this->log($actionName, $URL, $result);
-
-    $timewe = TimWe::create([
-      'api_request' => $URL,
-      'payload' => json_encode($vars),
-      'response' => json_encode($ReqResponse),
-      'header' => json_encode($headers),
-      'type'  => $actionName
-    ]);
-
     session(['MSISDN' => $vars["userIdentifier"], 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-
     $lang =  session::get('lang');
     if ($lang == 'ar') {
       $message = 'تم الاشتراك بنجاح';
     } else {
       $message = 'Subscribed succesfully';
     }
-
     return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
-
-    // if ($ReqResponse['code'] == 'SUCCESS') {
-
-    //   if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_CONF_WRONG_PIN') {
-    //     return redirect('mbc_portal_pin')->with('failed', 'رقم التحقق خاطئ يرجي المحاولة مرة اخري');
-    //   }
-
-    // $this->checksub('subscribe', session('userIdentifier'), $timewe->id);
-    // session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
-    // $sendMT = new Request();
-    // $sendMT->msisdn = session('userIdentifier');
-    // $sendMT->sms = url('/?OpID='.ooredoo);
-    //send mt with link
-    // $this->sendMt($sendMT); // should be fire after receive first charging success
-
-    // return redirect(url('/?OpID=' . ooredoo));
-    // } else {
-
-    //   $lang =  session::get('lang');
-    //   if ($lang == "ar") {
-    //     return redirect('mbc_portal_pin')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
-    //   } else {
-    //     return redirect('mbc_portal_pin')->with('failed', 'An error has occurred, please try again later');
-    //   }
-    // }
   }
 
 
@@ -513,25 +388,18 @@ class MbcTwoController extends Controller
 
   public function checkStatus($msisdn, $service_id)
   {
-
     $vars["msisdn"] = $msisdn;
     $vars["service_id"] = $service_id;
-
     $JSON = json_encode($vars);
-
     $actionName = "MBC Check Status";
-
     $URL = CHECKSUB_URL;
     $ReqResponse = $this->SendRequest($URL, $vars, ["Accept: application/json"]);
     $ReqResponse = json_decode($ReqResponse, true);
-
     //log request and response
     $result['request'] = $vars;
     $result['response'] = $ReqResponse;
     $result['date'] = date('Y-m-d H:i:s');
-
     $this->log($actionName, $URL, $result);
-
     return $ReqResponse;
   }
 
@@ -579,44 +447,12 @@ class MbcTwoController extends Controller
 
   public function subscriptionOptOut(Request $request, $partnerRole)
   {
-    $msisdn = $request->number;
-    $service_id = 2;
-    $URL = "https://mbc.digizone.com.kw/api/unsub?service_id=$service_id&msisdn=$msisdn";
- //dd($URL);
-    $ch = curl_init();
-    $timeout = 500;
-    curl_setopt($ch, CURLOPT_URL, $URL);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-    curl_setopt($ch, CURLOPT_POSTREDIR, 3);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-    $data = curl_exec($ch);
-    curl_close($ch);
-
-
-     //log request and response
-     $actionName = "MBC Unsub Status";
-     $result['request'] = $msisdn."/".$service_id;
-     $result['response'] = $data;
-     $result['date'] = date('Y-m-d H:i:s');
-     $this->log($actionName, $URL, $result);
-
-    if ($data == "true") {
-      $lang =  session::get('lang');
+        $lang =  session::get('lang');
           if ($lang == "ar") {
             return redirect('mbc_portal_landing/' . $lang)->with('success', 'تم الغاء الاشتراك بنجاح');
           } else {
             return redirect('mbc_portal_landing/' . $lang)->with('success', 'The service has been canceled successfully');
           }
-    }else{
-      $lang =  session::get('lang');
-          if ($lang == "ar") {
-            return redirect('mbc_portal_landing/' . $lang)->with('failed', 'هذا الرقم غير مشترك بالخدمة');
-          } else {
-            return redirect('mbc_portal_landing/' . $lang)->with('failed', 'This number is not subscribed to the service');
-          }
-    }
   }
 
 
