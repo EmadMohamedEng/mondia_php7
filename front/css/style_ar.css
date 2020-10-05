@@ -110,7 +110,7 @@ body {
   text-align: right;
 }
 .main_container .inner_page .cover button {
-  left: 40%;
+  left: 40% !important;
 }
 .main_container .inner_page .poster {
   text-align: right;

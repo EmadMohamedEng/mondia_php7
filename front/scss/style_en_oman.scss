@@ -700,7 +700,7 @@ select {
       }
 
       img {
-        height: 37rem;
+        height: 36.438rem;
         width: 92%;
         margin: 0 auto;
         display: block;
@@ -1809,7 +1809,12 @@ select {
 
         img {
           width: 100%;
-          height: 12.813rem;
+          height: 20rem;
+        }
+
+        button {
+          top: 45%;
+          left: 30%;      
         }
       }
 
@@ -1852,7 +1857,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 3rem;
+          margin-left: 4%;
         }
       }
     }
@@ -2868,7 +2873,12 @@ select {
 
         img {
           width: 100%;
-          height: 12.813rem;
+          height: 23.438rem;
+        }
+
+        button {
+          top: 45%;
+    left: 35%;
         }
       }
 
@@ -2913,9 +2923,8 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4rem;
-          margin-top: 32px;
-          font-size: 21px;
+          margin-left: 4%;
+          font-size: 16px;
         }
       }
     }
@@ -3435,7 +3444,12 @@ select {
 
         img {
           width: 100%;
-          height: 12.813rem;
+          height: 25.688rem;
+        }
+
+        button {
+          top: 45%;
+    left: 35%;
         }
       }
 
@@ -3480,9 +3494,8 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4.25rem;
-          margin-top: 37px;
-          font-size: 20px;
+          margin-left: 4%;
+          font-size: 13px;
         }
       }
     }
@@ -4150,7 +4163,12 @@ select {
 
         img {
           width: 100%;
-          height: 25rem;
+          height: 45rem;
+        }
+
+        button {
+          font-size: 1.75rem;
+          left: 35%;
         }
       }
 
@@ -4201,7 +4219,7 @@ select {
         .p_content,
         .p_content_2 {
           margin-left: 1.25rem;
-          font-size: 1.5rem;
+          font-size: 1.25rem;
         }
       }
     }
@@ -4858,12 +4876,13 @@ select {
 
         img {
           width: 100%;
-          height: 35.938rem;
+          height: 60rem;
         }
 
         .button_play {
-          font-size: 2rem;
+          font-size: 2.25rem;
           padding: 0.5rem 2rem;
+          left: 35%;
         }
       }
 
@@ -4915,7 +4934,7 @@ select {
         .p_content_2 {
           margin-left: 1.5rem;
           margin-top: 0;
-          font-size: 35px;
+          font-size: 30px;
         }
       }
     }
