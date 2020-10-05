@@ -704,6 +704,7 @@ select {
         width: 92%;
         margin: 0 auto;
         display: block;
+        border-radius: 0.5rem;
       }
 
       button {
@@ -1070,7 +1071,7 @@ select {
       .form_zakah {
         .field {
           label {
-            // margin-right: 30px;
+            float: left;
           }
 
           .field-value {
@@ -1315,7 +1316,7 @@ select {
     }
 
     a:hover {
-      color: #bd0ce9;
+      color: $bg_color;
     }
   }
 
@@ -2337,7 +2338,12 @@ select {
 
         img {
           width: 100%;
-          height: 12.813rem;
+          height: 22.5rem;
+        }
+
+        button {
+          top: 45%;
+          left: 33%;
         }
       }
 
@@ -3573,6 +3579,7 @@ select {
           margin: 0;
 
           .modal-content {
+            width: 90%;
             position: fixed;
             top: 55%;
             left: 50%;

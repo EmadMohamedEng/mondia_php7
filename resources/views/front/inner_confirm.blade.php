@@ -23,8 +23,6 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
     <div class="row m-0">
       <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
         <div class="cover">
-
-
           <img src="{{$src}}" alt="Video Cover">
           @if(request()->has('OpID') && request()->get('OpID') == omantel)
 
@@ -37,15 +35,11 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           <button data-toggle="modal" data-target="#exampleModalCover_du" class="btn button_play primary roll-in-top">
             <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
-
           @endif
-
-
-
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0 padding_phones">
+      <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones">
         <div class="poster">
           <div class="poster-details">
             <div class="title-wrapper">
@@ -64,7 +58,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
       <div class="socail_media padding_phones">
         <div class="row m-0">
 
-          <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
+          <div class="col-md-12 col-lg-12 col-xl-12 col-12">
             <div class="pa_share">
               <div>@lang('front.share'): </div>
             </div>
@@ -108,14 +102,14 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 
 <section class="section_content padding_phones">
   <div class="row m-0">
-    <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
+    <div class="col-md-12 col-lg-12 col-xl-12 col-12">
       <div class="pa_Videos">
         <span>@lang('front.related_video'): </span>
       </div>
     </div>
 
     @foreach ($contents as $item)
-    <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
+    <div class="col-md-12 col-lg-12 col-xl-12 col-12">
       <a class="row link_href m-0" href="{{route('front.inner',['id' => $item->content_id])}}">
         <div class="col-md-4 col-lg-4 col-xl-2 col-4 p-0">
           @php
