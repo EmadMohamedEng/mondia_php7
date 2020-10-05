@@ -47,10 +47,6 @@ select:active {
   /* End Home Page */
   /* Start List Page */
   /* End List Page */
-  /* Start mowdo3t Page */
-  /* End mowdo3t Page */
-  /* Start shakih Page */
-  /* End shakih Page */
   /* Start Inner Page */
   /* Start Modal For InnerPager */
   /* End Modal For InnerPager */
@@ -96,11 +92,6 @@ select:active {
 .main_container .header .header_icon .link_href {
   width: 100%;
   text-align: right;
-}
-.main_container .header .header_logo .link_href img,
-.main_container .header .header_icon .link_href img {
-  width: 12%;
-  margin-top: -0.25rem;
 }
 .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -173,7 +164,6 @@ select:active {
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:active, .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:focus, .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:hover {
   margin-top: 0.5rem;
-  color: #FFF;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -200,7 +190,6 @@ select:active {
   overflow: hidden;
   text-overflow: ellipsis;
   border: 0;
-  color: #FFF;
   margin: 0;
   border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -221,14 +210,10 @@ select:active {
 .main_container .content_carousel .content_carousel_head {
   margin-top: 2rem;
 }
-.main_container .content_carousel .content_carousel_head .link_title {
-  color: #000;
-}
 .main_container .content_carousel .content_carousel_head .link_title h6 {
   font-weight: bold;
 }
 .main_container .content_carousel .content_carousel_head .btn_more {
-  color: #FFF;
   border: 0;
   float: right;
   padding: 0.25rem 0.5rem;
@@ -254,7 +239,8 @@ select:active {
 }
 .main_container .content_carousel .owl_content_one .item .card .card-body {
   padding: 1.25rem 0.25rem;
-  color: #000;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
   text-align: center;
@@ -281,7 +267,6 @@ select:active {
 }
 .main_container .content_carousel .owl_content_two .item .card .card-body {
   padding: 1.25rem 0.25rem;
-  color: #000;
 }
 .main_container .content_carousel .owl_content_two .item .card .card-body .card-title {
   text-align: center;
@@ -308,7 +293,6 @@ select:active {
 }
 .main_container .content_carousel .owl_content_three .item .card .card-body {
   padding: 1.25rem 0.25rem;
-  color: #000;
 }
 .main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
   text-align: center;
@@ -327,7 +311,6 @@ select:active {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  height: 16rem;
 }
 .main_container .content_carousel .owl_content_four .item .card .owl_content_img img {
   height: 9.375rem;
@@ -336,7 +319,6 @@ select:active {
 }
 .main_container .content_carousel .owl_content_four .item .card .card-body {
   padding: 1.25rem 0.25rem;
-  color: #000;
 }
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-title {
   text-align: center;
@@ -363,7 +345,6 @@ select:active {
 }
 .main_container .content_carousel .owl_content_five .item .card .card-body {
   padding: 1.25rem 0.25rem;
-  color: #000;
 }
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
   text-align: center;
@@ -380,17 +361,13 @@ select:active {
   margin-top: 1.5rem;
 }
 .main_container .list_page .coming_soon {
-  color: #FFF;
-  width: 32%;
+  width: 33%;
   cursor: not-allowed;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
-}
-.main_container .list_page .content_carousel_head .link_title {
-  color: #000;
 }
 .main_container .list_page .content_carousel_head .link_title h6 {
   margin-bottom: 1rem;
@@ -412,8 +389,6 @@ select:active {
   border-top-right-radius: 10px;
 }
 .main_container .list_page .item .card .card-body {
-  padding: 1.25rem 0.25rem;
-  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,79 +402,6 @@ select:active {
   direction: ltr;
 }
 .main_container .list_page .item .card .card-body .card-text i {
-  color: #adadad;
-}
-.main_container .mowdo3t_page {
-  margin-top: 1.5rem;
-}
-.main_container .mowdo3t_page .content_carousel_head .link_title {
-  color: #000;
-}
-.main_container .mowdo3t_page .content_carousel_head .link_title h6 {
-  margin-bottom: 1rem;
-}
-.main_container .mowdo3t_page .item .card {
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  height: 16rem;
-}
-.main_container .mowdo3t_page .item .card .owl_content_img img {
-  height: 9.375rem;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-.main_container .mowdo3t_page .item .card .card-body {
-  padding: 1.25rem 0.25rem;
-}
-.main_container .mowdo3t_page .item .card .card-body .card-title {
-  text-align: center;
-  font-size: 1.05rem;
-  line-height: 3.5rem;
-}
-.main_container .mowdo3t_page .item .card .card-body .card-text i {
-  color: #adadad;
-}
-.main_container .shakih_page {
-  margin-top: 1.5rem;
-}
-.main_container .shakih_page .content_carousel_head {
-  margin-top: 2rem;
-}
-.main_container .shakih_page .content_carousel_head .link_title {
-  color: #000;
-}
-.main_container .shakih_page .content_carousel_head .btn_more {
-  color: #FFF;
-  border: 0;
-  float: right;
-  padding: 0.25rem 0.5rem;
-  margin-bottom: 1rem;
-}
-.main_container .shakih_page .item .card {
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  height: 16rem;
-}
-.main_container .shakih_page .item .card .owl_content_img img {
-  height: 9.375rem;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-.main_container .shakih_page .item .card .card-body {
-  padding: 1.25rem 0.25rem;
-}
-.main_container .shakih_page .item .card .card-body .card-title {
-  text-align: center;
-  font-size: 1.05rem;
-  line-height: 3.5rem;
-}
-.main_container .shakih_page .item .card .card-body .card-text i {
   color: #adadad;
 }
 .main_container .inner_page {

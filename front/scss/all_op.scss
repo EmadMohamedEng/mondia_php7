@@ -80,8 +80,6 @@ select {
         text-align: right;
 
         img {
-          width: 12%;
-          margin-top: -0.25rem;
         }
       }
 
@@ -171,7 +169,6 @@ select {
             &:focus,
             &:hover {
               margin-top: 0.5rem;
-              color: $white_color;
               border-radius: 8px;
               -webkit-border-radius: 8px;
               -moz-border-radius: 8px;
@@ -190,7 +187,6 @@ select {
   .img_carousel {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
-
 
     .owl_one {
       .item {
@@ -212,7 +208,6 @@ select {
             overflow: hidden;
             text-overflow: ellipsis;
             border: 0;
-            color: $white_color;
             margin: 0;
             border-radius: 6px;
             -webkit-border-radius: 6px;
@@ -237,11 +232,6 @@ select {
         outline: 0;
       }
     }
-
-    .owl-theme .owl-dots .owl-dot.active span,
-    .owl-theme .owl-dots .owl-dot:hover span {
-      // background: #004c97;
-    }
   }
 
   .content_carousel {
@@ -249,15 +239,12 @@ select {
       margin-top: 2rem;
 
       .link_title {
-        color: $black_color;
-
         h6 {
           font-weight: bold;
         }
       }
 
       .btn_more {
-        color: $white_color;
         border: 0;
         float: right;
         padding: 0.25rem .5rem;
@@ -292,7 +279,8 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
-            color: $black_color;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
 
             .card-title {
               text-align: center;
@@ -334,8 +322,6 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
-            color: $black_color;
-
             .card-title {
               text-align: center;
               font-size: 1.05rem;
@@ -376,7 +362,6 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
-            color: $black_color;
 
             .card-title {
               text-align: center;
@@ -405,7 +390,6 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
 
           .owl_content_img {
             img {
@@ -417,7 +401,6 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
-            color: $black_color;
 
             .card-title {
               text-align: center;
@@ -459,7 +442,6 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
-            color: $black_color;
 
             .card-title {
               text-align: center;
@@ -489,8 +471,7 @@ select {
     margin-top: 1.5rem;
 
     .coming_soon {
-      color: $white_color;
-      width: 32%;
+      width: 33%;
       cursor: not-allowed;
       border-radius: 8px;
       -webkit-border-radius: 8px;
@@ -501,8 +482,6 @@ select {
 
     .content_carousel_head {
       .link_title {
-        color: $black_color;
-
         h6 {
           margin-bottom: 1rem;
           font-weight: bold;
@@ -530,8 +509,6 @@ select {
         }
 
         .card-body {
-          padding: 1.25rem 0.25rem;
-          color: $black_color;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -558,117 +535,6 @@ select {
 
   /* End List Page */
 
-  /* Start mowdo3t Page */
-  .mowdo3t_page {
-    margin-top: 1.5rem;
-
-    .content_carousel_head {
-      .link_title {
-        color: $black_color;
-
-        h6 {
-          margin-bottom: 1rem;
-        }
-      }
-    }
-
-    .item {
-      .card {
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-        height: 16rem;
-
-        .owl_content_img {
-          img {
-            height: 9.375rem;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-          }
-        }
-
-        .card-body {
-          padding: 1.25rem 0.25rem;
-
-          .card-title {
-            text-align: center;
-            font-size: 1.05rem;
-            line-height: 3.5rem;
-          }
-
-          .card-text {
-            i {
-              color: $grey_color;
-            }
-          }
-        }
-      }
-
-    }
-  }
-
-  /* End mowdo3t Page */
-
-  /* Start shakih Page */
-  .shakih_page {
-    margin-top: 1.5rem;
-
-    .content_carousel_head {
-      margin-top: 2rem;
-
-      .link_title {
-        color: $black_color;
-      }
-
-      .btn_more {
-        color: $white_color;
-        border: 0;
-        float: right;
-        padding: 0.25rem .5rem;
-        margin-bottom: 1rem;
-      }
-    }
-
-    .item {
-      .card {
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-        height: 16rem;
-
-        .owl_content_img {
-          img {
-            height: 9.375rem;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-          }
-        }
-
-        .card-body {
-          padding: 1.25rem 0.25rem;
-
-          .card-title {
-            text-align: center;
-            font-size: 1.05rem;
-            line-height: 3.5rem;
-          }
-
-          .card-text {
-            i {
-              color: $grey_color;
-            }
-          }
-        }
-      }
-
-    }
-  }
-
-  /* End shakih Page */
 
   /* Start Inner Page */
   .inner_page {
