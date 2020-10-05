@@ -79,7 +79,7 @@ App::setLocale($lang);
               <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
               <input type="tel" class="form-control" @if(session()->has('userIdentifier')) @endif id="phone"
               placeholder="@lang('messages.Enter_your')" name="number" required>
-              <span class="validity"></span>
+              {{-- <span class="validity"></span> --}}
             </div>
 
             <!--<button class="btn back">رجوع</button>-->
@@ -102,12 +102,12 @@ App::setLocale($lang);
 
 
   <script>
-    $(document).ready(function() {
-      var msisdn = $("#phone").val();
-      if (msisdn != "" && msisdn.length == 8 && msisdn != "@_MSISDN") {
-        $("#viva_form").submit();
-      }
-    });
+    // $(document).ready(function() {
+    //   var msisdn = $("#phone").val();
+    //   if (msisdn != "" && msisdn.length == 8 && msisdn != "@_MSISDN") {
+    //     $("#viva_form").submit();
+    //   }
+    // });
 
     $('#zain_submit').focusin(function() {
       $('#viva_form').submit()
