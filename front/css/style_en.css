@@ -528,10 +528,11 @@ select:active {
   padding: 0 2rem;
 }
 .main_container .inner_page .cover img {
-  height: 55rem;
-  width: 92%;
+  height: 36.438rem;
+  width: 95%;
   margin: 0 auto;
   display: block;
+  border-radius: 0.5rem;
 }
 .main_container .inner_page .cover button {
   border: 0;
@@ -545,6 +546,10 @@ select:active {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+}
+.main_container .inner_page .cover audio {
+  margin: -4% auto;
+  display: block;
 }
 .main_container .inner_page .poster {
   margin-top: 1.5rem;

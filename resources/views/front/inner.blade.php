@@ -13,14 +13,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
 @endphp
 <style>
-  @media (max-width: 374.9px) and (min-width: 360px){
-    .main_container .inner_page .cover img {
-      width: 100%;
-      height: unset;
-    }
-  }
   .main_container .inner_page .cover img {
-    height: 32rem;
     width: 92%;
     opacity: 0.7;
   }
@@ -49,7 +42,7 @@ if (session()->get('applocale') == 'ar') {
             </video>
             @endif
             @if($content->type == 2)
-                <img src="{{$src}}" alt="Video Cover" style="opacity: 1 !important;height:auto">
+                <img src="{{$src}}" alt="Video Cover" style="opacity: 1 !important;">
                 <audio src="{{url($content->video)}}" controls style="width: 94%;" controlsList="nodownload"></audio>
             @endif
             @if($content->type == 3)

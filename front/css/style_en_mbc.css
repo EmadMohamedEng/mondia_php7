@@ -87,6 +87,8 @@ select:active {
   /* End Error Page */
   /* Start Profile Page */
   /* End Profile Page */
+  /* Start Terms Page */
+  /* End Terms Page */
 }
 .main_container .header {
   position: unset;
@@ -625,7 +627,7 @@ select:active {
 }
 .main_container .inner_page .poster .poster-details .outside-cover {
   margin-bottom: 2rem;
-  color: #FFF;
+  color: #efc049;
 }
 .main_container .inner_page .socail_media {
   width: 50%;
@@ -701,7 +703,7 @@ select:active {
 .main_container .inner_page .section_content .p_content {
   margin-left: 0.5rem;
   font-size: 16px;
-  color: #FFF;
+  color: #efc049;
 }
 .main_container .inner_page .section_content .p_content_2 {
   font-size: 14px;
@@ -1348,7 +1350,7 @@ select:active {
   margin: 3.5rem auto;
 }
 .main_container .profile .profile_title {
-  color: #FFF;
+  color: #efc049;
   margin-bottom: 5% !important;
 }
 .main_container .profile .profile_table table tbody tr .label-view {
@@ -1358,8 +1360,21 @@ select:active {
 }
 .main_container .profile .profile_table table tbody tr .label-view2 {
   width: 75%;
-  color: #FFF;
+  color: #efc049;
   border: 0;
+}
+.main_container .terms_page {
+  margin: 1.5rem auto;
+}
+.main_container .terms_page .terms_title {
+  color: #efc049;
+}
+.main_container .terms_page .terms_title h2 {
+  font-size: 1.25rem;
+}
+.main_container .terms_page .ul_terms {
+  font-size: 0.85rem !important;
+  color: #efc049 !important;
 }
 
 .loading-overlay {
