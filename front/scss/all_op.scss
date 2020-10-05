@@ -1,4 +1,4 @@
-$bg_color: #ff9e1b;
+$bg_color: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
 $white_color: #FFF;
 $black_color: #000;
 $grey_color: #adadad;
@@ -12,12 +12,13 @@ html {
 }
 
 @font-face {
-  font-family: FSAlvar-Regular;
-  src: url('../font/FSAlvar-Regular.otf')
+  font-family: DuCoHeadline200;
+  src: url('../font/DuCoHeadline200.ttf')
 }
 
 body {
-  font-family: FSAlvar-Regular;
+  font-family: DuCoHeadline200;
+  // font-family: DuCoHeadline, Arial, sans-serif;
   direction: ltr;
   width: 100%;
   height: 100%;
@@ -77,7 +78,6 @@ select {
       display: inline-flex;
       position: relative;
       width: 100%;
-      text-align: center;
 
       h6 {
         padding-left: 0;
@@ -89,8 +89,9 @@ select {
         text-align: right;
 
         img {
-          width: 12%;
-          margin-top: -0.25rem;
+          width: 6%;
+          margin-top: -0.5rem;
+          margin-right: 4%;
         }
       }
 
@@ -131,18 +132,18 @@ select {
 
       .nav_item_welc {
         margin-bottom: 0.25rem;
-        color: $bg_color;
+        color: $black_color !important;
       }
 
       .nav-item {
         padding: 0.25rem 0.5rem;
 
         .nav-link {
-          color: $bg_color !important;
+          color: #000 !important;
           cursor: pointer;
 
           svg {
-            fill: $bg_color;
+            fill: #00a9ce;
             width: 15%;
           }
 
@@ -182,7 +183,7 @@ select {
             &:active,
             &:focus,
             &:hover {
-              margin-top: 0.5rem;
+              margin-top: 0.25rem;
               background: $bg_color;
               color: $white_color;
               border-radius: 8px;
@@ -220,10 +221,7 @@ select {
           background-color: rgba(0, 0, 0, .7);
 
           button {
-            width: 65%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            width: 90%;
             border: 0;
             background: $bg_color;
             color: $white_color;
@@ -234,13 +232,17 @@ select {
             -ms-border-radius: 6px;
             -o-border-radius: 6px;
             position: absolute;
-            top: 90%;
+            top: 89.5%;
             left: 50%;
             transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
 
-            &:focus {
-              box-shadow: 0 0 0 0.2rem $white_color;
-            }
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
         }
       }
@@ -254,12 +256,12 @@ select {
 
     .owl-theme .owl-dots .owl-dot.active span,
     .owl-theme .owl-dots .owl-dot:hover span {
-      // background: #004c97;
-      background: $bg_color;
+      background: #c39;
     }
   }
 
   .content_carousel {
+
     .content_carousel_head {
       margin-top: 2rem;
 
@@ -278,10 +280,6 @@ select {
         float: right;
         padding: 0.25rem .5rem;
         margin-bottom: 1rem;
-
-        &:focus {
-          box-shadow: 0 0 0 0.2rem $white_color;
-        }
       }
     }
 
@@ -384,7 +382,7 @@ select {
 
           .owl_content_img {
             img {
-              height: 14rem;
+              height: 12.881rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -421,7 +419,7 @@ select {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-          height: 16rem;
+          // height: 16rem;
 
           .owl_content_img {
             img {
@@ -507,7 +505,7 @@ select {
     .coming_soon {
       color: $white_color;
       background: $bg_color;
-      width: 32%;
+      width: 33%;
       cursor: not-allowed;
       border-radius: 8px;
       -webkit-border-radius: 8px;
@@ -644,6 +642,7 @@ select {
         color: $white_color;
         border: 0;
         float: right;
+
         padding: 0.25rem .5rem;
         margin-bottom: 1rem;
       }
@@ -700,8 +699,8 @@ select {
       }
 
       img {
-        max-height: 36.438rem;
-        width: 92%;
+        height: 36.438rem;
+        width: 95%;
         margin: 0 auto;
         display: block;
         border-radius: 0.5rem;
@@ -713,16 +712,17 @@ select {
         color: $white_color;
         position: absolute;
         top: 49%;
-        left: 40%;
+        left: 35%;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
+      }
 
-        &:focus {
-          box-shadow: 0 0 0 0.2rem $white_color;
-        }
+      audio {
+        margin: -4% auto;
+    display: block;
       }
     }
 
@@ -830,14 +830,10 @@ select {
         border-radius: 5px !important;
         height: 80px;
         width: 80px;
-        -webkit-border-radius: 5px !important;
-        -moz-border-radius: 5px !important;
-        -ms-border-radius: 5px !important;
-        -o-border-radius: 5px !important;
       }
 
       .p_content {
-        margin-left: 2%;
+        margin-left: 0.75rem;
         font-size: 14px;
         color: #6a6060;
       }
@@ -847,14 +843,6 @@ select {
         color: #c39;
         margin-bottom: 0;
         margin-top: -0.75rem;
-      }
-    }
-  }
-
-  .modal_cover {
-    .modal-dialog {
-      .modal-content {
-        left: 32%;
       }
     }
   }
@@ -902,14 +890,6 @@ select {
   /* End Inner Page */
 
   /* Start Azan Page */
-  #chooseAudio table {
-    border: 2px solid $bg_color;
-
-    th {
-      border-color: $bg_color;
-    }
-  }
-
   .azan_page {
     margin-top: 3rem;
 
@@ -926,7 +906,10 @@ select {
         height: 3rem;
         text-align: center;
         text-align-last: center;
-        border: 2px solid $bg_color;
+        border: 2px solid;
+        border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+        border-image-slice: 1;
+        background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #753bbd, #00a9ce);
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -944,7 +927,10 @@ select {
         width: 100%;
         height: 3rem;
         text-align: center;
-        border: 2px solid $bg_color;
+        border: 2px solid;
+        border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+        border-image-slice: 1;
+        background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #753bbd, #00a9ce);
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -970,8 +956,12 @@ select {
         height: 66vh;
         width: 90%;
         margin: 0 auto;
-        border: 5px solid $bg_color;
-        border-radius: 14px;
+        border: double 5px transparent;
+        border-radius: 30px;
+        background-image: linear-gradient(#00a9ce, #753bbd),
+          linear-gradient(to right, #753bbd, #00a9ce);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
       }
     }
   }
@@ -980,7 +970,7 @@ select {
 
   /* Start Salah Page */
   .salah_time_page {
-    width: 90%;
+    width: 100%;
     margin: 1.5rem auto;
 
     .salah_time_title {
@@ -993,8 +983,11 @@ select {
     .time_btn {
       width: 100%;
       text-align: center;
-      border: 2px solid $bg_color;
+      border: 2px solid;
+      border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+      border-image-slice: 1;
       margin-bottom: 3%;
+      background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
       border-radius: 8px;
       -webkit-border-radius: 8px;
       -moz-border-radius: 8px;
@@ -1071,16 +1064,20 @@ select {
       .form_zakah {
         .field {
           label {
+            // margin-right: 30px;
             float: left;
           }
 
           .field-value {
-            float: left;
+            float: right;
 
             input {
               padding: 0.25rem 0.5rem;
               width: 100%;
-              border: solid 2px $bg_color;
+              border: solid 2px transparent;
+              background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #753bbd, #00a9ce);
+              background-origin: border-box;
+              background-clip: content-box, border-box;
               box-shadow: 2px 1000px 1px #fff inset;
               border-radius: 8px;
               -webkit-border-radius: 8px;
@@ -1109,14 +1106,15 @@ select {
               font-weight: bold;
               border-radius: 10px;
               padding: 7px 40px;
-              border: solid 2px $bg_color;
+              border: solid 2px transparent;
+              background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #753bbd, #00a9ce);
+              background-origin: border-box;
+              background-clip: content-box, border-box;
               box-shadow: 2px 1000px 1px #fff inset;
-              outline: 0;
 
               &:hover {
                 box-shadow: none;
                 color: white;
-                background: $bg_color;
               }
             }
           }
@@ -1129,8 +1127,9 @@ select {
 
   /* Start Merath Page */
   .merath_page {
-    width: 70%;
+    width: 100%;
     margin: 1.5rem auto;
+    // direction: rtl;
 
     .border-bottom {
       // margin-top: 0.25rem;
@@ -1150,7 +1149,10 @@ select {
         width: 90%;
         text-align: center;
         text-align-last: center;
-        border: 2px solid $bg_color;
+        border: 2px solid;
+        border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+        border-image-slice: 1;
+        background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #753bbd, #00a9ce);
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -1184,6 +1186,9 @@ select {
         font-weight: bold;
         text-align: center;
         border: 0;
+        // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+        // border-image-slice: 1;
+        // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
         background: $bg_color;
         border-radius: 8px;
         -webkit-border-radius: 8px;
@@ -1232,7 +1237,9 @@ select {
       }
 
       #tally {
-        border: 2px solid $bg_color;
+        border: 2px solid;
+        border-image-source: linear-gradient(50deg, #bd0ce9 40%, #00a9ce 60%);
+        border-image-slice: 1;
         border-radius: 50%;
         width: 150px;
         height: 150px;
@@ -1241,10 +1248,10 @@ select {
         font-size: 50px;
         margin-bottom: 20px;
         color: black;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
+        background-image: linear-gradient(#f2f2f2, #f2f2f2),
+          linear-gradient(to right, #753bbd, #00a9ce);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
       }
 
       .btn-bar {
@@ -1257,13 +1264,20 @@ select {
           border-radius: 4px;
           margin: 2rem auto;
           font-size: 27px;
-          border: 2px solid $bg_color;
+          border: 2px solid;
+          border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+          border-image-slice: 1;
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
           transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
 
           i {
             font-size: 2.75rem;
@@ -1282,7 +1296,7 @@ select {
 
     #sebhaModal .modal-content {
       background-color: white;
-      left: 29%;
+      left: 26%;
     }
 
     .modal-header {
@@ -1307,7 +1321,10 @@ select {
       text-align: center;
       margin-bottom: 15px;
       padding: 9px;
-      border: 2px solid $bg_color;
+      border: 2px solid;
+      border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+      background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+      border-image-slice: 1;
       border-radius: 10px;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
@@ -1316,7 +1333,7 @@ select {
     }
 
     a:hover {
-      color: $bg_color;
+      color: #bd0ce9;
     }
   }
 
@@ -1351,6 +1368,10 @@ select {
             height: 2px;
             transition: all .4s ease-in-out;
             left: 50%;
+            -webkit-transition: all .4s ease-in-out;
+            -moz-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
           }
 
           &:focus+.bord {
@@ -1517,11 +1538,11 @@ select {
 
   .spinner-large {
     z-index: 99999999;
-    width: 7rem;
-    height: 7rem;
+    width: 5rem;
+    height: 5rem;
     border-width: 6px;
     position: fixed;
-    bottom: 3rem;
+    bottom: 15rem;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -1535,8 +1556,8 @@ select {
   }
 
   .spinner-blue {
-    border-top-color: $bg_color;
-    border-left-color: $bg_color;
+    border-top-color: #09d;
+    border-left-color: #09d;
   }
 }
 
@@ -1566,10 +1587,10 @@ select {
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {
-  // .padding_phones {
-  //   padding-left: 0.75rem !important;
-  //   padding-right: 0.75rem !important;
-  // }
+  .padding_phones {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
 
   .no_padding {
     padding: 0;
@@ -1591,8 +1612,7 @@ select {
         }
 
         img {
-          width: 18% !important;
-          margin-top: 0 !important;
+          width: 13% !important;
         }
       }
     }
@@ -1638,15 +1658,10 @@ select {
         .nav-item {
           padding: 0.25rem 0.75rem;
 
-          .nav_item_welc {
-            color: $bg_color;
-          }
-
           .nav-link {
-            color: $bg_color;
-
             .icon_before {
               padding-right: 0.5rem;
+              color: #00a9ce;
             }
           }
 
@@ -1666,7 +1681,7 @@ select {
             margin-bottom: 1rem;
 
             .arrow_back {
-              color: $bg_color;
+              color: #00a9ce;
               font-size: 1.5rem;
               float: right;
             }
@@ -1702,16 +1717,29 @@ select {
     }
 
     .content_carousel {
-      .content_carousel_head {
-        margin-top: 1rem;
-      }
-
       .owl_content_one {
         .item {
           width: 100%;
 
           .card {
-            // height: 14rem !important;
+            // height: 15rem;
+
+            .owl_content_img {
+              img {
+                height: 10rem;
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_two,
+      .owl_content_three,
+      .owl_content_five {
+        .item {
+          width: 100%;
+
+          .card {
             width: 100%;
 
             .owl_content_img {
@@ -1723,26 +1751,26 @@ select {
         }
       }
 
-      .item {
-        .card {
-          // height: 14rem !important;
+      // .item {
+      //   .card {
+      //     // height: 14rem !important;
+      //     width: 100% !important;
 
-          .owl_content_img {
-            img {
-              height: 9.719rem !important;
-            }
-          }
+      //     .owl_content_img {
+      //       img {
+      //         height: 10rem !important;
+      //       }
+      //     }
 
-          .card-body {
-            padding: 1rem 0.25rem;
-            color: $black_color;
+      //     .card-body {
+      //       padding: 1rem 0.25rem;
 
-            .card-title {
-              font-size: 1rem
-            }
-          }
-        }
-      }
+      //       .card-title {
+      //         font-size: 1rem;
+      //       }
+      //     }
+      //   }
+      // }
     }
 
     .list_page {
@@ -1809,12 +1837,7 @@ select {
 
         img {
           width: 100%;
-          max-height: 20rem;
-        }
-
-        button {
-          top: 45%;
-          left: 30%;
+          height: 12.813rem;
         }
       }
 
@@ -1857,7 +1880,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-left: 3rem;
         }
       }
     }
@@ -1908,6 +1931,7 @@ select {
 
     .salah_time_page {
       width: 95%;
+      margin: 1.5rem auto;
 
       .salah_time_title {
         h2 {
@@ -2022,6 +2046,9 @@ select {
           font-weight: bold;
           text-align: center;
           border: 0;
+          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          // border-image-slice: 1;
+          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -2088,10 +2115,10 @@ select {
 }
 
 @media (min-width: 360px) and (max-width: 374.9px) {
-  // .padding_phones {
-  //   padding-left: 0.75rem !important;
-  //   padding-right: 0.75rem !important;
-  // }
+  .padding_phones {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
 
   .no_padding {
     padding: 0;
@@ -2113,8 +2140,7 @@ select {
         }
 
         img {
-          width: 23% !important;
-          margin-top: 0 !important;
+          width: 13% !important;
         }
       }
     }
@@ -2160,15 +2186,10 @@ select {
         .nav-item {
           padding: 0.25rem 0.75rem;
 
-          .nav_item_welc {
-            color: $bg_color;
-          }
-
           .nav-link {
-            color: $bg_color;
-
             .icon_before {
               padding-right: 0.5rem;
+              color: #00a9ce;
             }
           }
 
@@ -2188,8 +2209,8 @@ select {
             margin-bottom: 1rem;
 
             .arrow_back {
-              color: $bg_color;
-              font-size: 1.5rem;
+              color: #00a9ce;
+              font-size: 1.15rem;
               float: right;
             }
 
@@ -2216,7 +2237,7 @@ select {
 
           .btn_subscribe {
             button {
-              top: 93.5%;
+              top: 93%;
               font-size: 1rem;
             }
           }
@@ -2226,8 +2247,6 @@ select {
 
     .content_carousel {
       .content_carousel_head {
-        margin-top: 1rem;
-
         .link_title {
           h6 {
             font-weight: bold;
@@ -2251,7 +2270,21 @@ select {
 
             .owl_content_img {
               img {
-                height: 10rem;
+                height: 11.5rem !important;
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_two,
+      .owl_content_three,
+      .owl_content_five {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 10.969rem !important;
               }
             }
           }
@@ -2264,7 +2297,7 @@ select {
 
           .owl_content_img {
             img {
-              height: 10.969rem !important;
+              height: 9.375rem !important;
             }
           }
 
@@ -2343,12 +2376,7 @@ select {
 
         img {
           width: 100%;
-          max-height: 22.5rem;
-        }
-
-        button {
-          top: 45%;
-          left: 33%;
+          height: 12.813rem;
         }
       }
 
@@ -2391,7 +2419,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          // margin-left: 2.25rem;
+          margin-left: 2.25rem;
         }
       }
     }
@@ -2442,6 +2470,7 @@ select {
 
     .salah_time_page {
       width: 95%;
+      margin: 1.5rem auto;
 
       .salah_time_title {
         h2 {
@@ -2452,7 +2481,6 @@ select {
       .time_btn {
         margin-bottom: 4%;
         height: 3.5rem;
-        direction: rtl;
 
         .input_span {
           padding: 0 !important;
@@ -2539,8 +2567,8 @@ select {
 
       .input_span {
         h4 {
-          line-height: 2.25rem;
-          font-size: 1rem
+          line-height: 2.5rem;
+          font-size: 1.15rem;
         }
       }
 
@@ -2555,6 +2583,9 @@ select {
           font-weight: bold;
           text-align: center;
           border: 0;
+          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          // border-image-slice: 1;
+          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -2623,10 +2654,10 @@ select {
 }
 
 @media (min-width: 375px) and (max-width: 410.9px) {
-  // .padding_phones {
-  //   padding-left: 0.75rem !important;
-  //   padding-right: 0.75rem !important;
-  // }
+  .padding_phones {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
 
   .no_padding {
     padding: 0;
@@ -2648,8 +2679,7 @@ select {
         }
 
         img {
-          width: 18% !important;
-          margin-top: 0 !important;
+          width: 12% !important;
         }
       }
     }
@@ -2695,15 +2725,10 @@ select {
         .nav-item {
           padding: 0.25rem 0.75rem;
 
-          .nav_item_welc {
-            color: $bg_color;
-          }
-
           .nav-link {
-            color: $bg_color;
-
             .icon_before {
               padding-right: 0.5rem;
+              color: #00a9ce;
             }
           }
 
@@ -2723,7 +2748,7 @@ select {
             margin-bottom: 1rem;
 
             .arrow_back {
-              color: $bg_color;
+              color: #00a9ce;
               font-size: 1.5rem;
               float: right;
             }
@@ -2760,52 +2785,71 @@ select {
     }
 
     .content_carousel {
-      .content_carousel_head {
-        margin-top: 1rem;
-      }
-
       .owl_content_one {
         .item {
           width: 100%;
 
           .card {
-            // height: 16.5rem;
+            // height: 16.5rem !important;
             width: 100%;
 
             .owl_content_img {
               img {
-                height: 11.5rem;
+                height: 11.5rem !important;
               }
             }
           }
         }
       }
 
-      .item {
-        .card {
+      .owl_content_two,
+      .owl_content_three,
+      .owl_content_five {
+        .item {
+          width: 100%;
 
-          // height: 17rem !important;
-          .owl_content_img {
-            img {
-              height: 11.438rem !important;
-            }
-          }
+          .card {
+            width: 100%;
 
-          .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1rem;
+            .owl_content_img {
+              img {
+                height: 11.438rem !important;
+              }
             }
           }
         }
       }
+
+      // .item {
+      //   .card {
+      //     // height: 17rem !important;
+
+      //     .owl_content_img {
+      //       img {
+      //         height: 12rem !important;
+      //       }
+      //     }
+
+      //     .card-body {
+      //       padding: 1rem 0.25rem;
+
+      //       .card-title {
+      //         font-size: 1rem;
+      //       }
+      //     }
+      //   }
+      // }
     }
 
     .list_page {
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
+
       .item {
         .card {
-          // height: 16rem;
+          // height: 16.5rem;
 
           .owl_content_img {
             img {
@@ -2821,11 +2865,6 @@ select {
             }
           }
         }
-      }
-
-      .coming_soon {
-        width: 50%;
-        margin-top: 30% !important;
       }
     }
 
@@ -2873,12 +2912,7 @@ select {
 
         img {
           width: 100%;
-          max-height: 23.438rem;
-        }
-
-        button {
-          top: 45%;
-          left: 35%;
+          height: 12.813rem;
         }
       }
 
@@ -2923,8 +2957,9 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
-          font-size: 16px;
+          margin-left: 4rem;
+          margin-top: 32px;
+          font-size: 21px;
         }
       }
     }
@@ -2975,6 +3010,7 @@ select {
 
     .salah_time_page {
       width: 95%;
+      margin: 1.5rem auto;
 
       .salah_time_title {
         h2 {
@@ -3109,6 +3145,9 @@ select {
           font-weight: bold;
           text-align: center;
           border: 0;
+          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          // border-image-slice: 1;
+          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -3177,10 +3216,10 @@ select {
 }
 
 @media (min-width: 411px) and (max-width: 415px) {
-  // .padding_phones {
-  //   padding-left: 0.75rem !important;
-  //   padding-right: 0.75rem !important;
-  // }
+  .padding_phones {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
 
   .no_padding {
     padding: 0;
@@ -3203,8 +3242,7 @@ select {
         }
 
         img {
-          width: 18% !important;
-          margin-top: 0 !important;
+          width: 12% !important;
         }
 
         h6 {
@@ -3254,15 +3292,10 @@ select {
         .nav-item {
           padding: 0.25rem 0.75rem;
 
-          .nav_item_welc {
-            color: $bg_color;
-          }
-
           .nav-link {
-            color: $bg_color;
-
             .icon_before {
               padding-right: 0.5rem;
+              color: #00a9ce;
             }
           }
 
@@ -3282,7 +3315,7 @@ select {
             margin-bottom: 1rem;
 
             .arrow_back {
-              color: $bg_color;
+              color: #00a9ce;
               font-size: 1.5rem;
               float: right;
             }
@@ -3320,8 +3353,6 @@ select {
 
     .content_carousel {
       .content_carousel_head {
-        margin-top: 1rem;
-
         .link_title {
           h6 {
             font-weight: bold;
@@ -3340,7 +3371,24 @@ select {
           width: 100%;
 
           .card {
-            // height: 16.5rem !important;
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 11.5rem !important;
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_two,
+      .owl_content_three,
+      .owl_content_five {
+        .item {
+          width: 100%;
+
+          .card {
             width: 100%;
 
             .owl_content_img {
@@ -3352,25 +3400,25 @@ select {
         }
       }
 
-      .item {
-        .card {
-          // height: 14rem !important;
+      // .item {
+      //   .card {
+      //     // height: 14rem !important;
 
-          .owl_content_img {
-            img {
-              height: 12.563rem !important;
-            }
-          }
+      //     .owl_content_img {
+      //       img {
+      //         height: 9rem !important;
+      //       }
+      //     }
 
-          .card-body {
-            padding: 1rem 0.25rem;
+      //     .card-body {
+      //       padding: 1rem 0.25rem;
 
-            .card-title {
-              font-size: 1.25rem;
-            }
-          }
-        }
-      }
+      //       .card-title {
+      //         font-size: 1.25rem;
+      //       }
+      //     }
+      //   }
+      // }
     }
 
     .list_page {
@@ -3444,12 +3492,7 @@ select {
 
         img {
           width: 100%;
-          max-height: 25.688rem;
-        }
-
-        button {
-          top: 45%;
-          left: 35%;
+          height: 12.813rem;
         }
       }
 
@@ -3494,8 +3537,9 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
-          font-size: 13px;
+          margin-left: 4.25rem;
+          margin-top: 37px;
+          font-size: 20px;
         }
       }
     }
@@ -3546,6 +3590,7 @@ select {
 
     .salah_time_page {
       width: 95%;
+      margin: 1.5rem auto;
 
       .salah_time_title {
         h2 {
@@ -3592,7 +3637,6 @@ select {
           margin: 0;
 
           .modal-content {
-            width: 90%;
             position: fixed;
             top: 55%;
             left: 50%;
@@ -3664,6 +3708,7 @@ select {
       }
 
       .input_span {
+
         h4 {
           line-height: 3rem;
           font-size: 1.25rem;
@@ -3681,6 +3726,9 @@ select {
           font-weight: bold;
           text-align: center;
           border: 0;
+          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          // border-image-slice: 1;
+          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -3772,7 +3820,7 @@ select {
       .header_logo,
       .header_icon {
         width: 100%;
-
+        text-align: center;
 
         h6 {
           font-size: 2rem;
@@ -3781,7 +3829,7 @@ select {
         }
 
         img {
-          width: 15% !important;
+          width: 9% !important;
           margin-top: 0.5rem !important;
         }
 
@@ -3794,9 +3842,9 @@ select {
       }
 
       .arrow_back {
-        left: 94%;
+        left: 95%;
         top: 1.5rem;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
       }
     }
 
@@ -3833,21 +3881,19 @@ select {
 
       .navbar_ul {
         background-color: $white_color;
-        width: 22rem;
+        width: 18rem;
         height: 100vh;
         padding: 0 0;
         overflow-y: scroll;
 
         .nav-item {
-          color: $bg_color;
           padding: 0.25rem 0.75rem;
           font-size: 1.5rem;
 
           .nav-link {
-            color: $bg_color;
-
             .icon_before {
               padding-right: 0.5rem;
+              color: #00a9ce;
             }
           }
 
@@ -3856,7 +3902,7 @@ select {
               padding: 0.25rem 0.75rem;
               text-align: center;
               width: 100% !important;
-              font-size: 1.2rem !important;
+              font-size: 1.5rem;
 
               &.dropdown-item2 {
                 width: 100% !important;
@@ -3868,7 +3914,7 @@ select {
             margin-bottom: 1rem;
 
             .arrow_back {
-              color: $bg_color;
+              color: #00a9ce;
               font-size: 1.5rem;
               float: right;
             }
@@ -3898,8 +3944,9 @@ select {
             height: 5rem;
 
             button {
+              width: 50%;
               top: 95%;
-              font-size: 1.75rem;
+              font-size: 1.5rem;
             }
           }
         }
@@ -3913,8 +3960,6 @@ select {
 
     .content_carousel {
       .content_carousel_head {
-        margin-top: 1rem;
-
         .link_title {
           h6 {
             font-size: 2rem;
@@ -3966,7 +4011,7 @@ select {
 
             .owl_content_img {
               img {
-                height: 14rem !important;
+                height: 17rem !important;
               }
             }
 
@@ -3975,7 +4020,7 @@ select {
 
               .card-title {
                 text-align: center;
-                font-size: 1.05rem;
+                font-size: 1.5rem;
               }
 
               .card-text {
@@ -3996,7 +4041,7 @@ select {
 
             .owl_content_img {
               img {
-                height: 14rem !important;
+                height: 17rem !important;
               }
             }
 
@@ -4005,7 +4050,7 @@ select {
 
               .card-title {
                 text-align: center;
-                font-size: 1.05rem;
+                font-size: 1.5rem;
               }
 
               .card-text {
@@ -4026,9 +4071,7 @@ select {
 
             .owl_content_img {
               img {
-                height: 9.375rem;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                height: 17rem;
               }
             }
 
@@ -4037,7 +4080,7 @@ select {
 
               .card-title {
                 text-align: center;
-                font-size: 1.05rem;
+                font-size: 1.5rem;
               }
 
               .card-text {
@@ -4058,7 +4101,7 @@ select {
 
             .owl_content_img {
               img {
-                height: 12rem !important;
+                height: 17rem !important;
               }
             }
 
@@ -4067,7 +4110,7 @@ select {
 
               .card-title {
                 text-align: center;
-                font-size: 1.05rem;
+                font-size: 1.5rem;
               }
 
               .card-text {
@@ -4104,7 +4147,7 @@ select {
 
           .owl_content_img {
             img {
-              height: 16.625rem;
+              height: 17.625rem;
             }
           }
 
@@ -4163,12 +4206,7 @@ select {
 
         img {
           width: 100%;
-          height: 45rem;
-        }
-
-        button {
-          font-size: 1.75rem;
-          left: 35%;
+          height: 25rem;
         }
       }
 
@@ -4218,8 +4256,9 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 1.25rem;
-          font-size: 1.25rem;
+          margin-left: 4.5rem;
+          margin-top: 45px;
+          font-size: 30px;
         }
       }
     }
@@ -4293,13 +4332,13 @@ select {
         }
 
         #map {
-          width: 75%;
+          width: 100%;
         }
       }
     }
 
     .salah_time_page {
-      width: 95%;
+      width: 85%;
       margin: 2.5rem auto;
 
       .salah_time_title {
@@ -4424,10 +4463,6 @@ select {
         .form_zakah {
           .field {
             font-size: 1.5rem;
-
-            label {
-              float: left;
-            }
           }
         }
       }
@@ -4474,6 +4509,9 @@ select {
           font-weight: bold;
           text-align: center;
           border: 0;
+          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          // border-image-slice: 1;
+          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -4593,8 +4631,8 @@ select {
         }
 
         img {
-          width: 16% !important;
-          margin-top: 0.25rem !important;
+          width: 9% !important;
+          margin-top: 0.5rem !important;
         }
 
         &.header_icon {
@@ -4608,7 +4646,7 @@ select {
       .arrow_back {
         left: 94%;
         top: 2rem;
-        font-size: 1.75rem;
+        font-size: 2rem;
       }
     }
 
@@ -4623,7 +4661,7 @@ select {
 
       button {
         outline: 0;
-        font-size: 2.5rem;
+        font-size: 2rem;
         opacity: 0.5;
         position: fixed;
         top: 3.25rem;
@@ -4654,15 +4692,10 @@ select {
           padding: 0.25rem 0.75rem;
           font-size: 2rem;
 
-          .nav_item_welc {
-            color: $bg_color;
-          }
-
           .nav-link {
-            color: $bg_color;
-
             .icon_before {
               padding-right: 0.5rem;
+              color: #00a9ce;
             }
           }
 
@@ -4683,7 +4716,7 @@ select {
             margin-bottom: 3rem;
 
             .arrow_back {
-              color: $bg_color;
+              color: #00a9ce;
               font-size: 1.5rem;
               float: right;
             }
@@ -4705,7 +4738,7 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 25.938rem;
+              height: 32rem;
             }
           }
 
@@ -4713,8 +4746,9 @@ select {
             height: 6.5rem;
 
             button {
+              width: 65%;
               top: 91%;
-              font-size: 1.2rem;
+              font-size: 1.75rem;
             }
           }
         }
@@ -4744,12 +4778,14 @@ select {
       .owl_content_one {
         .item {
           .card {
-            // height: 33rem !important;
+            // height: 33rem;
             width: 100%;
 
             .owl_content_img {
               img {
-                height: 26rem !important;
+                height: 26rem;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
               }
             }
 
@@ -4768,29 +4804,124 @@ select {
               }
             }
           }
-
         }
       }
 
-      .item {
-        .card {
-          // height: 27.188rem;
+      .owl_content_two {
+        .item {
+          .card {
+            // height: 33rem;
+            width: 100%;
 
-          .owl_content_img {
-            img {
-              height: 20.938rem;
+            .owl_content_img {
+              img {
+                height: 25rem;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              }
             }
-          }
 
-          .card-body {
-            padding: 1rem 0.25rem;
+            .card-body {
+              padding: 1.25rem 0.25rem;
 
-            .card-title {
-              font-size: 2.10rem;
+              .card-title {
+                text-align: center;
+                font-size: 2rem;
+              }
+
+              .card-text {
+                i {
+                  color: $grey_color;
+                }
+              }
             }
           }
         }
       }
+
+      .owl_content_three {
+        .item {
+          .card {
+            // height: 33rem;
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 21rem;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              }
+            }
+
+            .card-body {
+              padding: 1.25rem 0.25rem;
+
+              .card-title {
+                text-align: center;
+                font-size: 2rem;
+              }
+
+              .card-text {
+                i {
+                  color: $grey_color;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_five {
+        .item {
+          .card {
+            // height: 33rem;
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 15.641rem;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              }
+            }
+
+            .card-body {
+              padding: 1.25rem 0.25rem;
+
+              .card-title {
+                text-align: center;
+                font-size: 2rem;
+              }
+
+              .card-text {
+                i {
+                  color: $grey_color;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // .item {
+      //   .card {
+      //     // height: 27.188rem;
+
+      //     .owl_content_img {
+      //       img {
+      //         height: 20.938rem;
+      //       }
+      //     }
+
+      //     .card-body {
+      //       padding: 1rem 0.25rem;
+
+      //       .card-title {
+      //         font-size: 2.10rem;
+      //       }
+      //     }
+      //   }
+      // }
     }
 
     .list_page {
@@ -4876,13 +5007,12 @@ select {
 
         img {
           width: 100%;
-          height: 60rem;
+          height: 35.938rem;
         }
 
         .button_play {
-          font-size: 2.25rem;
+          font-size: 2rem;
           padding: 0.5rem 2rem;
-          left: 35%;
         }
       }
 
@@ -4932,9 +5062,8 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 1.5rem;
-          margin-top: 0;
-          font-size: 30px;
+          margin-left: 3%;
+          font-size: 35px;
         }
       }
     }
@@ -5014,7 +5143,7 @@ select {
     }
 
     .salah_time_page {
-      width: 95%;
+      width: 85%;
       margin: 3.5rem auto;
 
       .salah_time_title {
@@ -5147,10 +5276,6 @@ select {
         .form_zakah {
           .field {
             font-size: 2rem;
-
-            label {
-              float: left;
-            }
           }
 
           .actions {
@@ -5206,6 +5331,9 @@ select {
           font-weight: bold;
           text-align: center;
           border: 0;
+          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+          // border-image-slice: 1;
+          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
           border-radius: 8px;
           -webkit-border-radius: 8px;
@@ -5326,6 +5454,24 @@ select {
     }
 
     .content_carousel {
+      .owl_content_three {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 10.858rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+
       .owl_content_five {
         .item {
           .card {
@@ -5403,9 +5549,17 @@ select {
 
         .h4_time,
         .h4_time_2 {
-          margin-bottom: 0;
-          padding: 0.6rem 0;
           font-size: 1.25rem;
+        }
+      }
+    }
+
+    .merath_page {
+      width: 90%;
+
+      .input_span {
+        h4 {
+          font-size: 1.15rem;
         }
       }
     }
@@ -5617,10 +5771,7 @@ select {
   0% {
     -webkit-transform: scale(1);
     transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-}
+  }
 
   50% {
     -webkit-transform: scale(0.9);
