@@ -29,6 +29,16 @@
     width: 67%;
   }
 
+  .switch-label:before,
+  .switch-label:after {
+    background: linear-gradient(135deg, rgba(243, 226, 199, 1) 0%, rgba(193, 158, 103, 1) 50%, rgba(182, 141, 76, 1) 51%, rgba(233, 212, 179, 1) 100%);
+  }
+
+  .switch-label .toggle--off,
+  .switch-input:checked+.switch-label .toggle--option {
+    color: #efc049;
+  }
+
 </style>
 @php
 App::setLocale($lang);
