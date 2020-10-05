@@ -32,6 +32,11 @@
   width: 90%;
 }
 
+.landing_page .shbka h3 {
+  color: #efc049 !important;
+  font-size: 1.25rem;
+}
+
 .landing_page .form_content form .form-group label {
   padding: 6.5px;
 }
@@ -40,7 +45,14 @@
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   width: 80%;
+  color: #efc049;
+  /* background: #e6e6e6; */
 }
+
+/* .landing_page .form_content form .form-group input::placeholder {
+  color: #efc049;
+  background: #e6e6e6;
+} */
 
 .landing_page .form_content form .btn {
   font-size: 15px;
@@ -109,8 +121,13 @@ a:hover {
   left: 20%;
 }
 
+.copy p {
+  color: #efc049;
+}
+
 .terms {
   font-size: 0.7rem;
+  color: #efc049;
 }
 
 @media (min-width: 768px) and (max-width: 1024.9px) {
@@ -129,6 +146,10 @@ a:hover {
 
 .landing_page .cancel {
   padding: 0px 8px 0 8px;
+}
+
+.landing_page .cancel p {
+  color: #efc049;
 }
 
 .bounce-top {

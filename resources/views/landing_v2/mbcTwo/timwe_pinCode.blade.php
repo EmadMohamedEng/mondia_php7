@@ -29,6 +29,7 @@
 
   .main_container .landing_page .strip h3 {
     font-size: 1.35rem;
+    color: #efc049;
   }
 </style>
 
@@ -104,7 +105,7 @@ if ($lang == 'ar') {
     </div>
 
     <div class="container">
-      <ul class="terms {{$text}} text-white" dir="{{$left}}">
+      <ul class="terms {{$text}}" dir="{{$left}}">
         <li> @lang('messages.Subscription_renewal')</li>
         <li> @lang('messages.stop_service')</li>
         <li> @lang('messages.years_service')</li>

@@ -19,6 +19,14 @@
   .main_container .img-fluid img {
     width: 20%;
   }
+
+  .landing_page .form_content .validity {
+    margin: 4px;
+  }
+
+  .landing_page .form_content form .form-group input {
+    width: 78%;
+  }
 </style>
 
 
