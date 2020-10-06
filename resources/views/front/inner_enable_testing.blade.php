@@ -31,7 +31,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           @endif
           @if($content->type == 2)
               <img src="{{$src}}" alt="Video Cover">
-              <audio src="{{url($content->video)}}" controls style="width: 94%;margin-top: -5%;" controlsList="nodownload"></audio>
+              <audio src="{{url($content->video)}}" controls style="width: 94%;" controlsList="nodownload"></audio>
           @endif
           @if($content->type == 3)
           <img src="{{url($content->video)}}" alt="Video Cover">

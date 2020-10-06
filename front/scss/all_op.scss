@@ -79,8 +79,7 @@ select {
         width: 100%;
         text-align: right;
 
-        img {
-        }
+        img {}
       }
 
       &.header_icon {
@@ -322,6 +321,7 @@ select {
 
           .card-body {
             padding: 1.25rem 0.25rem;
+
             .card-title {
               text-align: center;
               font-size: 1.05rem;
@@ -485,6 +485,7 @@ select {
         h6 {
           margin-bottom: 1rem;
           font-weight: bold;
+          font-size: 16px;
         }
       }
     }
@@ -553,11 +554,20 @@ select {
         margin: 0 auto;
         display: block;
         border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+      }
+
+      audio {
+        margin-left: 4%;
+        margin-top: -4%;
+        width: 92% !important;
       }
 
       button {
         border: 0;
-        color: $white_color;
         position: absolute;
         top: 49%;
         left: 40%;
@@ -608,7 +618,6 @@ select {
         .twitter,
         .messenger,
         .whatsapp {
-          color: $white_color;
           width: 100%;
           height: 3.5rem;
           font-size: 1.2em;
@@ -640,7 +649,6 @@ select {
         .messenger {
           background: #0080FF;
           border-color: #0080FF;
-
         }
 
         .messenger:hover {
@@ -674,9 +682,9 @@ select {
       }
 
       .image_inner {
-        border-radius: 5px !important;
         height: 80px;
         width: 80px;
+        border-radius: 5px !important;
         -webkit-border-radius: 5px !important;
         -moz-border-radius: 5px !important;
         -ms-border-radius: 5px !important;
@@ -686,7 +694,7 @@ select {
       .p_content {
         margin-left: 2%;
         font-size: 14px;
-        color: #6a6060;
+        color: $black_color;
       }
 
       .p_content_2 {
@@ -698,18 +706,11 @@ select {
     }
   }
 
-  .modal_cover {
-    .modal-dialog {
-      .modal-content {
-        left: 32%;
-      }
-    }
-  }
-
   /* Start Modal For InnerPager */
   .modal_cover {
     .modal-dialog {
       .modal-content {
+        left: 32%;
         .modal-body {
           .modal_club {
             margin-top: 0.5rem;
@@ -747,12 +748,6 @@ select {
   /* End Inner Page */
 
   /* Start Azan Page */
-  #chooseAudio table {
-
-    th {
-    }
-  }
-
   .azan_page {
     margin-top: 3rem;
 
@@ -782,7 +777,7 @@ select {
       width: 50%;
 
       .call_tone {
-        background: #fff;
+        background: $white_color;
         width: 100%;
         height: 3rem;
         text-align: center;
@@ -800,7 +795,7 @@ select {
   /* Start Nearmosque Page */
   .nearmosque_page {
     margin: 3rem auto;
-    width: 100%;
+    width: 90%;
 
     .nearmosque_title {
       h2 {
@@ -914,7 +909,7 @@ select {
           }
 
           .field-value {
-            float: left;
+            float: right;
 
             input {
               padding: 0.25rem 0.5rem;
@@ -965,7 +960,7 @@ select {
 
   /* Start Merath Page */
   .merath_page {
-    width: 70%;
+    width: 90%;
     margin: 1.5rem auto;
 
     .border-bottom {
@@ -1058,7 +1053,7 @@ select {
 
     .display {
       text-align: center;
-      color: #fff;
+      color: $white_color;
 
       #wordSebha {
         margin-bottom: 1rem;
@@ -1096,6 +1091,10 @@ select {
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
           transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
 
           i {
             font-size: 2.75rem;
@@ -1145,9 +1144,6 @@ select {
       -ms-border-radius: 10px;
       -o-border-radius: 10px;
     }
-
-    a:hover {
-    }
   }
 
   /* End Sebha Page */
@@ -1171,15 +1167,20 @@ select {
         border-top: 0;
         border-right: 0;
         border-left: 0;
+        text-align: center;
 
         &.input-middle {
           &+.bord {
             position: absolute;
             bottom: 0;
+            left: 50%;
             width: 0;
             height: 2px;
             transition: all .4s ease-in-out;
-            left: 50%;
+            -webkit-transition: all .4s ease-in-out;
+            -moz-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
           }
 
           &:focus+.bord {
@@ -1362,8 +1363,7 @@ select {
     animation: spinner 1s linear infinite;
   }
 
-  .spinner-blue {
-  }
+  .spinner-blue {}
 }
 
 .alert {
@@ -1391,17 +1391,17 @@ select {
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {
-  // .padding_phones {
-  //   padding-left: 0.75rem !important;
-  //   padding-right: 0.75rem !important;
-  // }
+  .padding_phones {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
 
   .no_padding {
     padding: 0;
   }
 
   .main_container {
-    width: 100%;
+    width: 100% !important;
     padding-top: 4rem;
 
     .header {
@@ -1411,14 +1411,12 @@ select {
 
       .header_logo,
       .header_icon {
-        .arrow_back {
-          left: 100%;
-        }
-
         img {
-          width: 18% !important;
-          margin-top: 0 !important;
         }
+      }
+
+      .arrow_back {
+        left: 95%;
       }
     }
 
@@ -1463,11 +1461,7 @@ select {
         .nav-item {
           padding: 0.25rem 0.75rem;
 
-          .nav_item_welc {
-          }
-
           .nav-link {
-
             .icon_before {
               padding-right: 0.5rem;
             }
@@ -1525,7 +1519,6 @@ select {
 
     .content_carousel {
       .content_carousel_head {
-        margin-top: 1rem;
       }
 
       .owl_content_one {
@@ -1533,7 +1526,23 @@ select {
           width: 100%;
 
           .card {
-            // height: 14rem !important;
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 10rem;
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_two,
+      .owl_content_three {
+        .item {
+          width: 100%;
+
+          .card {
             width: 100%;
 
             .owl_content_img {
@@ -1545,22 +1554,18 @@ select {
         }
       }
 
-      .item {
-        .card {
-          // height: 14rem !important;
+      .owl_content_four,
+      .owl_content_five {
+        .item {
+          width: 100%;
 
-          .owl_content_img {
-            img {
-              height: 9.719rem !important;
-            }
-          }
+          .card {
+            width: 100%;
 
-          .card-body {
-            padding: 1rem 0.25rem;
-            color: $black_color;
-
-            .card-title {
-              font-size: 1rem
+            .owl_content_img {
+              img {
+                height: 9.719rem !important;
+              }
             }
           }
         }
@@ -1568,6 +1573,18 @@ select {
     }
 
     .list_page {
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 14px;
+          }
+        }
+
+        .btn_more {
+          font-size: 14px;
+        }
+      }
+
       .coming_soon {
         width: 50%;
         margin-top: 30% !important;
@@ -1575,33 +1592,9 @@ select {
 
       .item {
         .card {
-          // height: 14.5rem;
-
           .owl_content_img {
             img {
-              height: 9.875rem;
-            }
-          }
-
-          .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1rem;
-            }
-          }
-        }
-      }
-    }
-
-    .mowdo3t_page {
-      .item {
-        .card {
-          height: 13rem;
-
-          .owl_content_img {
-            img {
-              height: 7.188rem;
+              height: 9.375rem;
             }
           }
 
@@ -1981,8 +1974,7 @@ select {
         .nav-item {
           padding: 0.25rem 0.75rem;
 
-          .nav_item_welc {
-          }
+          .nav_item_welc {}
 
           .nav-link {
 
@@ -2512,8 +2504,7 @@ select {
         .nav-item {
           padding: 0.25rem 0.75rem;
 
-          .nav_item_welc {
-          }
+          .nav_item_welc {}
 
           .nav-link {
 
@@ -3067,8 +3058,7 @@ select {
         .nav-item {
           padding: 0.25rem 0.75rem;
 
-          .nav_item_welc {
-          }
+          .nav_item_welc {}
 
           .nav-link {
 
@@ -4459,8 +4449,7 @@ select {
           padding: 0.25rem 0.75rem;
           font-size: 2rem;
 
-          .nav_item_welc {
-          }
+          .nav_item_welc {}
 
           .nav-link {
 
