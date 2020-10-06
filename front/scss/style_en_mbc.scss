@@ -1107,63 +1107,46 @@ body {
     }
 
     .inner_page {
-      margin-top: 0;
-
       .cover {
         h4 {
-          font-size: 1.15rem;
-          padding: 0 0.35rem;
         }
 
         video {
-          padding: 0 0;
         }
 
         img {
-          width: 100%;
-          height: 19rem;
         }
+
+        button {}
       }
 
       .poster {
         .poster-details {
           .title-wrapper {
             h2 {
-              font-size: 1.25rem;
             }
           }
         }
       }
 
       .socail_media {
-        width: 100%;
-
         .pa_share {
-          margin-top: 0.75rem;
         }
 
         .shear_div {
-          padding-right: 0;
-
           .facebook,
           .twitter,
           .messenger,
           .whatsapp {
-            width: 90%;
-            height: 2.75rem;
-            margin-left: 0.5rem;
-            margin-top: 0.75rem;
           }
         }
       }
 
       .section_content {
         .pa_Videos {
-          margin-top: 0.75rem;
         }
 
         .p_content {
-          font-size: 9px;
         }
       }
     }
@@ -1171,19 +1154,13 @@ body {
     .modal_cover {
       .modal-dialog {
         .modal-content {
-          top: 2rem;
-
           .modal-header {
             h5 {
-              font-size: 1.15rem;
             }
           }
 
           .modal-footer {
-            justify-content: center;
-
             .btn {
-              font-size: 1rem;
             }
           }
         }
@@ -1193,54 +1170,34 @@ body {
     .azan_page {
       .azan_title {
         h2 {
-          font-size: 1.5rem;
         }
       }
 
       .input_text {
-        width: 85%;
       }
     }
 
     .nearmosque_page {
-      margin: 0.5rem auto;
-
       .nearmosque_title {
         #map {
-          width: 90%;
         }
       }
     }
 
     .salah_time_page {
-      width: 95%;
-
       .salah_time_title {
         h2 {
-          margin-bottom: 0.5rem;
         }
       }
 
       .time_btn {
-        margin-bottom: 4%;
-        height: 3.5rem;
-
         .input_span {
-          padding: 0 !important;
         }
 
         .h4_time {
-          float: left;
-          padding-left: 8px;
-          line-height: 3rem;
-          font-size: 1rem;
         }
 
         .h4_time_2 {
-          float: right;
-          padding-right: 8px;
-          line-height: 3rem;
-          font-size: 1rem;
         }
       }
     }
@@ -1249,46 +1206,28 @@ body {
       .display {
         .btn-bar {
           button {
-            width: 100%;
           }
         }
       }
 
       #sebhaModal {
         .modal-dialog {
-          position: relative;
-
           .modal-content {
-            width: 90%;
-            position: fixed;
-            top: 57%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
           }
-
-          margin-top: 0;
         }
 
         .modal-title {
-          font-size: 1.25rem;
         }
 
         .choose_sebha {
-          font-size: 1.09rem;
         }
       }
     }
 
     .subscribe_page {
-      width: 100%;
     }
 
     .zakkah_page {
-      width: 90%;
     }
 
     .zakkah_v2_page {
@@ -1299,18 +1238,11 @@ body {
     }
 
     .merath_page {
-      width: 90%;
-
       .border-bottom {
-        // margin-top: 0.25rem;
-        margin-bottom: 0.75rem;
       }
 
       .merath_title {
         h2 {
-          text-align: center;
-          margin-bottom: 1rem;
-          font-size: 1.3rem;
         }
       }
 
@@ -1320,51 +1252,28 @@ body {
 
       .input_span {
         h4 {
-          line-height: 2.25rem;
-          font-size: 0.85rem;
         }
       }
 
       .button_merath {
-        text-align: center;
-        margin: 5% auto;
-
         .merath_btn {
-          width: 70%;
-          color: $white_color;
-          font-size: 1rem;
-          font-weight: bold;
-          text-align: center;
-          border: 0;
-          // border-image-source: linear-gradient(45deg, $text_color 40%, $text_color 60%);
-          // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, $text_color);
           background: $bg_color;
-          border-radius: 8px;
-          -webkit-border-radius: 8px;
-          -moz-border-radius: 8px;
-          -ms-border-radius: 8px;
-          -o-border-radius: 8px;
         }
       }
 
       .table_table {
         .thead2_h4 {
-          font-size: 1rem;
         }
 
         .table {
           border: 2px $text_color solid;
-          border-radius: 7px;
-          direction: rtl;
 
           tbody {
             tr {
 
               // td {}
               .td_1 {
-                text-align: right;
-                font-size: 0.85rem;
+
               }
             }
           }
@@ -1373,30 +1282,18 @@ body {
     }
 
     .search_page {
-      width: 95%;
-      margin: 0.5rem auto;
-
       .textbox {
-        text-align: center;
       }
     }
 
     .error_page {
-      margin: 0 auto 0 0;
-
       svg {
-        height: 85%;
       }
 
       .message-box {
-        font-size: 1.5rem;
-        top: -18rem;
-        left: 42%;
       }
 
       .buttons-con {
-        top: -1rem;
-        left: 50%;
       }
     }
 

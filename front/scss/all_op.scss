@@ -1623,8 +1623,14 @@ select {
         }
 
         img {
-          width: 100%;
+          width: 95%;
           max-height: 20rem;
+        }
+
+        audio {
+          width: 94% !important;
+          margin-top: -5%;
+          margin-left: 3%;
         }
 
         button {
@@ -1634,11 +1640,16 @@ select {
       }
 
       .poster {
+        padding: 0 0.75rem;
         .poster-details {
           .title-wrapper {
             h2 {
               font-size: 1.25rem;
             }
+          }
+
+          .outside-cover {
+            font-size: 0.7rem;
           }
         }
       }
@@ -1673,6 +1684,7 @@ select {
         .p_content,
         .p_content_2 {
           margin-left: 4%;
+          font-size: 12px;
         }
       }
     }
@@ -1739,17 +1751,15 @@ select {
         }
 
         .h4_time {
-          float: left;
-          padding-left: 8px;
           line-height: 3rem;
           font-size: 1rem;
+          padding:0 8px;
         }
 
         .h4_time_2 {
-          float: right;
-          padding-right: 8px;
           line-height: 3rem;
           font-size: 1rem;
+          padding:0 8px;
         }
       }
     }
@@ -1766,20 +1776,19 @@ select {
       #sebhaModal {
         .modal-dialog {
           position: relative;
+          margin-top: 0;
 
           .modal-content {
+            width: 95%;
             position: fixed;
             top: 57%;
-            left: 50%;
+            left: 50% !important;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             -o-transform: translate(-50%, -50%);
           }
-
-          margin-top: 0;
-
         }
 
         .modal-title {
@@ -1812,6 +1821,7 @@ select {
         h2 {
           text-align: center;
           margin-bottom: 1rem;
+          font-size: 1.3rem;
         }
       }
 
@@ -1822,7 +1832,7 @@ select {
       .input_span {
         h4 {
           line-height: 2.25rem;
-          font-size: 1rem;
+          font-size: 0.85rem;
         }
       }
 
@@ -1831,7 +1841,7 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          width: 50%;
+          width: 70%;
           color: $white_color;
           font-size: 1rem;
           font-weight: bold;
@@ -1846,8 +1856,11 @@ select {
       }
 
       .table_table {
+        .thead2_h4 {
+          font-size: 1rem;
+        }
+
         .table {
-          border: 2px #00a9ce solid;
           border-radius: 7px;
           direction: rtl;
 
@@ -1857,6 +1870,7 @@ select {
 
               .td_1 {
                 text-align: right;
+                font-size: 0.85rem;
               }
             }
           }

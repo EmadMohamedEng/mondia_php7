@@ -1211,15 +1211,26 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 100%;
+    width: 95%;
     max-height: 20rem;
+  }
+  .main_container .inner_page .cover audio {
+    width: 94% !important;
+    margin-top: -5%;
+    margin-left: 3%;
   }
   .main_container .inner_page .cover button {
     top: 45%;
     left: 30%;
   }
+  .main_container .inner_page .poster {
+    padding: 0 0.75rem;
+  }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
     font-size: 1.25rem;
+  }
+  .main_container .inner_page .poster .poster-details .outside-cover {
+    font-size: 0.7rem;
   }
   .main_container .inner_page .socail_media {
     width: 100%;
@@ -1245,6 +1256,7 @@ select:active {
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
     margin-left: 4%;
+    font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
@@ -1284,16 +1296,14 @@ select:active {
     padding: 0 !important;
   }
   .main_container .salah_time_page .time_btn .h4_time {
-    float: left;
-    padding-left: 8px;
     line-height: 3rem;
     font-size: 1rem;
+    padding: 0 8px;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
-    float: right;
-    padding-right: 8px;
     line-height: 3rem;
     font-size: 1rem;
+    padding: 0 8px;
   }
   .main_container .sebha_page .display .btn-bar button {
     width: 100%;
@@ -1303,9 +1313,10 @@ select:active {
     margin-top: 0;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    width: 95%;
     position: fixed;
     top: 57%;
-    left: 50%;
+    left: 50% !important;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1333,17 +1344,18 @@ select:active {
   .main_container .merath_page .merath_title h2 {
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 1.3rem;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 50%;
+    width: 70%;
     color: #FFF;
     font-size: 1rem;
     font-weight: bold;
@@ -1355,13 +1367,16 @@ select:active {
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
   }
+  .main_container .merath_page .table_table .thead2_h4 {
+    font-size: 1rem;
+  }
   .main_container .merath_page .table_table .table {
-    border: 2px #00a9ce solid;
     border-radius: 7px;
     direction: rtl;
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
+    font-size: 0.85rem;
   }
   .main_container .search_page {
     width: 95%;
