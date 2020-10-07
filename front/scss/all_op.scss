@@ -2571,6 +2571,7 @@ select {
             .arrow_back {
               font-size: 1rem;
               float: right;
+              margin-top: 0.5rem;
             }
 
             img {
@@ -2671,10 +2672,13 @@ select {
     }
 
     .list_page {
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
+
       .item {
         .card {
-          // height: 16rem;
-
           .owl_content_img {
             img {
               height: 11.6rem;
@@ -2685,34 +2689,7 @@ select {
             padding: 1rem 0.25rem;
 
             .card-title {
-              font-size: 1rem;
-            }
-          }
-        }
-      }
-
-      .coming_soon {
-        width: 50%;
-        margin-top: 30% !important;
-      }
-    }
-
-    .mowdo3t_page {
-      .item {
-        .card {
-          height: 13rem;
-
-          .owl_content_img {
-            img {
-              height: 7.188rem;
-            }
-          }
-
-          .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1rem;
+              font-size: 0.9rem;
             }
           }
         }
@@ -2720,8 +2697,6 @@ select {
     }
 
     .inner_page {
-      margin-top: 0;
-
       .section_content {
         .image_inner {
           height: 100px;
@@ -2731,7 +2706,7 @@ select {
 
       .cover {
         h4 {
-          font-size: 1.35rem;
+          font-size: 1rem;
           padding: 0 0.35rem;
         }
 
@@ -2741,7 +2716,13 @@ select {
 
         img {
           width: 100%;
-          max-height: 23.438rem;
+          max-height: 22.438rem;
+        }
+
+        audio {
+          width: 94% !important;
+          margin-top: -5%;
+          margin-left: 3%;
         }
 
         button {
@@ -2754,8 +2735,12 @@ select {
         .poster-details {
           .title-wrapper {
             h2 {
-              font-size: 1.25rem;
+              font-size: 1rem;
             }
+          }
+
+          .outside-cover {
+            font-size: 0.7rem;
           }
         }
       }
@@ -2765,7 +2750,7 @@ select {
 
         .pa_share {
           margin-top: 0.75rem;
-          font-size: 1.25rem;
+          font-size: 1rem;
         }
 
         .shear_div {
@@ -2786,13 +2771,13 @@ select {
       .section_content {
         .pa_Videos {
           margin-top: 0.75rem;
-          font-size: 1.25rem;
+          font-size: 1rem;
         }
 
         .p_content,
         .p_content_2 {
           margin-left: 4%;
-          font-size: 16px;
+          font-size: 12px;
         }
       }
     }
@@ -2804,7 +2789,7 @@ select {
 
           .modal-header {
             h5 {
-              font-size: 1.15rem;
+              font-size: 1rem;
             }
           }
 
@@ -2822,7 +2807,7 @@ select {
     .azan_page {
       .azan_title {
         h2 {
-          font-size: 1.5rem;
+          font-size: 1rem;
         }
       }
 
@@ -2836,7 +2821,7 @@ select {
 
       .nearmosque_title {
         #map {
-          width: 100%;
+          width: 95%;
         }
       }
     }
@@ -2847,6 +2832,7 @@ select {
       .salah_time_title {
         h2 {
           margin-bottom: 0.5rem;
+          font-size: 1rem;
         }
       }
 
@@ -2859,17 +2845,15 @@ select {
         }
 
         .h4_time {
-          float: left;
-          padding-left: 8px;
+          padding: 0 8px;
           line-height: 3rem;
-          font-size: 1.15rem;
+          font-size: 0.85rem;
         }
 
         .h4_time_2 {
-          float: right;
-          padding-right: 8px;
+          padding: 0 8px;
           line-height: 3rem;
-          font-size: 1.15rem;
+          font-size: 0.85rem;
         }
       }
     }
@@ -2889,9 +2873,10 @@ select {
           margin: 0;
 
           .modal-content {
+            width: 90%;
             position: fixed;
             top: 55%;
-            left: 50%;
+            left: 50% !important;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -2901,15 +2886,15 @@ select {
         }
 
         .close {
-          font-size: 2rem;
+          // font-size: 1rem;
         }
 
         .modal-title {
-          font-size: 1.5rem;
+          font-size: 1rem;
         }
 
         .choose_sebha {
-          font-size: 1.25rem;
+          font-size: 0.9rem;
         }
       }
     }
@@ -2918,16 +2903,16 @@ select {
       width: 100%;
 
       .subscribe_bg {
-        font-size: 1.25rem;
+        font-size: 1rem;
 
         .form-signin {
           .account-wall input {
-            font-size: 1.5rem;
+            font-size: 1rem;
           }
 
           .buttons {
             button {
-              font-size: 1.5rem;
+              font-size: 1rem;
             }
           }
         }
@@ -2939,7 +2924,7 @@ select {
     }
 
     .merath_page {
-      width: 90%;
+      width: 95%;
 
       .border-bottom {
         // margin-top: 0.25rem;
@@ -2950,19 +2935,20 @@ select {
         h2 {
           text-align: center;
           margin-bottom: 1rem;
+          font-size: 1rem;
         }
       }
 
       .input_text {
         .merath_input {
-          font-size: 1.5rem;
+          font-size: 1rem;
         }
       }
 
       .input_span {
         h4 {
           line-height: 3rem;
-          font-size: 1.25rem;
+          font-size: 0.85rem;
         }
       }
 
@@ -2971,7 +2957,7 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          width: 50%;
+          width: 65%;
           color: $white_color;
           font-size: 1rem;
           font-weight: bold;
@@ -2986,15 +2972,18 @@ select {
       }
 
       .table_table {
+        .thead2_h4 {
+          font-size: 1rem
+        }
+
         .table {
-          border: 2px #00a9ce solid;
           border-radius: 7px;
           direction: rtl;
 
           tbody {
             tr {
               td {
-                font-size: 1.5rem;
+                font-size: 0.85rem;
               }
 
               .td_1 {
@@ -3007,7 +2996,7 @@ select {
     }
 
     .search_page {
-      width: 95%;
+      width: 100%;
       margin: 0.75rem auto;
 
       .textbox {
