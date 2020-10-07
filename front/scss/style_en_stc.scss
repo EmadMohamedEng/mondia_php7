@@ -591,7 +591,6 @@ body {
 
   .main_container {
     .header {
-
       .header_logo,
       .header_icon {
         margin-right: -40%;
@@ -872,9 +871,11 @@ body {
 
   .main_container {
     .header {
+
       .header_logo,
       .header_icon {
         margin-right: -35%;
+
         img {
           width: 18% !important;
           margin-top: 0 !important;
@@ -1015,6 +1016,7 @@ body {
         .pa_share {}
 
         .shear_div {
+
           .facebook,
           .twitter,
           .messenger,
@@ -1046,119 +1048,63 @@ body {
 
     .azan_page {
       .azan_title {
-        h2 {
-          font-size: 1.5rem;
-        }
+        h2 {}
       }
 
-      .input_text {
-        width: 85%;
-      }
+      .input_text {}
     }
 
     .nearmosque_page {
-      margin: 0.5rem auto;
-
       .nearmosque_title {
-        #map {
-          width: 90%;
-          margin: 0 auto;
-        }
+        #map {}
       }
     }
 
     .salah_time_page {
-      width: 90%;
-      margin: 1.5rem auto;
-
       .salah_time_title {
-        h2 {
-          margin-bottom: 0.5rem;
-        }
+        h2 {}
       }
 
       .time_btn {
-        margin-bottom: 4%;
-        height: 3.5rem;
-        direction: rtl;
+        .input_span {}
 
-        .input_span {
-          padding: 0 !important;
-        }
+        .h4_time {}
 
-        .h4_time {
-          float: left;
-          padding-left: 8px;
-          line-height: 3rem;
-          font-size: 1.09rem;
-        }
-
-        .h4_time_2 {
-          float: right;
-          padding-right: 8px;
-          line-height: 3rem;
-          font-size: 1.09rem;
-        }
+        .h4_time_2 {}
       }
     }
 
     .sebha_page {
       .display {
         .btn-bar {
-          button {
-            width: 100%;
-          }
+          button {}
         }
       }
 
       #sebhaModal {
         .modal-dialog {
-          position: relative;
-          margin: 0;
-
-          .modal-content {
-            position: fixed;
-            top: 54%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-          }
+          .modal-content {}
         }
 
         .modal-title {
-          font-size: 1.5rem;
+          font-size: 1rem;
         }
 
         .choose_sebha {
-          font-size: 1.25rem;
+          font-size: 0.9rem;
         }
       }
     }
 
-    .subscribe_page {
-      width: 100%;
-    }
+    .subscribe_page {}
 
-    .zakkah_page {
-      width: 90%;
-    }
+    .zakkah_page {}
 
     .merath_page {
-      width: 90%;
-
-      .border-bottom {
-        // margin-top: 0.25rem;
-        margin-bottom: 0.75rem;
-      }
+      .border-bottom {}
 
       .merath_title {
-        h2 {
-          text-align: center;
-          margin-bottom: 1rem;
-        }
+        h2 {}
       }
 
       .input_text {
@@ -1166,47 +1112,24 @@ body {
       }
 
       .input_span {
-        h4 {
-          line-height: 2.25rem;
-          font-size: 1rem
-        }
+        h4 {}
       }
 
       .button_merath {
-        text-align: center;
-        margin: 5% auto;
-
         .merath_btn {
-          width: 75%;
-          color: $white_color;
-          font-size: 1rem;
-          font-weight: bold;
-          text-align: center;
-          border: 0;
           background: $bg_color;
-          border-radius: 8px;
-          -webkit-border-radius: 8px;
-          -moz-border-radius: 8px;
-          -ms-border-radius: 8px;
-          -o-border-radius: 8px;
         }
       }
 
       .table_table {
         .table {
           border: 2px #00a9ce solid;
-          border-radius: 7px;
-          direction: rtl;
 
           tbody {
             tr {
-              td {
-                font-size: 1.38rem;
-              }
+              td {}
 
-              .td_1 {
-                text-align: right;
-              }
+              .td_1 {}
             }
           }
         }
@@ -1214,61 +1137,33 @@ body {
     }
 
     .search_page {
-      width: 95%;
-      margin: 0.75rem auto;
-
-      .textbox {
-        text-align: center;
-      }
+      .textbox {}
     }
 
     .error_page {
-      margin: 2rem auto 0 0;
+      svg {}
 
-      svg {
-        height: 100%;
-      }
+      .message-box {}
 
-      .message-box {
-        font-size: 2rem;
-        top: -19rem;
-        left: 42%;
-      }
-
-      .buttons-con {
-        top: 3rem;
-        left: 50%;
-      }
+      .buttons-con {}
     }
   }
 
   .loading-overlay {
-    .spinner-large {
-    }
+    .spinner-large {}
   }
 }
 
 @media (min-width: 375px) and (max-width: 410.9px) {
-  .padding_phones {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-  }
+  .padding_phones {}
 
-  .no_padding {
-    padding: 0;
-  }
+  .no_padding {}
 
   .main_container {
-    width: 100%;
-    padding-top: 4rem;
-
     .header {
-      position: fixed;
-      top: 0;
-      z-index: 99999999999;
-
       .header_logo,
       .header_icon {
+        margin-right: -30%;
         img {
           width: 18% !important;
           margin-top: 0 !important;
@@ -1281,46 +1176,17 @@ body {
     }
 
     .nav_nav {
-      background-color: transparent;
-      width: 0;
-      padding: 0;
-      margin: 0;
-      position: fixed;
-      top: 0;
-      border: 0;
-
       button {
-        outline: 0;
-        font-size: 1rem;
-        opacity: 0.5;
-        position: fixed;
-        top: 2.15rem;
-        left: 2.5rem;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
 
         .icon_before {
           color: $white_color;
         }
       }
 
-      .navbar-collapse {
-        z-index: 9999999;
-      }
+      .navbar-collapse {}
 
       .navbar_ul {
-        background-color: $white_color;
-        width: 15rem;
-        height: 100vh;
-        padding: 0 0;
-        overflow-y: scroll;
-
         .nav-item {
-          padding: 0.25rem 0.75rem;
-
           .nav_item_welc {
             color: $bg_color;
           }
@@ -1328,58 +1194,35 @@ body {
           .nav-link {
             color: $bg_color;
 
-            .icon_before {
-              padding-right: 0.5rem;
-            }
+            .icon_before {}
           }
 
           .dropdown-menu {
             .dropdown-item {
-              padding: 0.25rem 0;
-              text-align: center;
-              width: 100% !important;
-
-              &.dropdown-item2 {
-                width: 100% !important;
-              }
+              &.dropdown-item2 {}
             }
           }
 
           &.nav_item_logo {
-            margin-bottom: 1rem;
-
             .arrow_back {
               color: $bg_color;
-              font-size: 1.5rem;
-              float: right;
             }
 
-            img {
-              width: 30%;
-              display: block;
-              margin: 0 auto;
-            }
+            img {}
           }
         }
       }
     }
 
     .img_carousel {
-      margin-top: 0;
-
       .owl_one {
         .item {
           .owl_one_img {
-            img {
-              height: 23.438rem;
-            }
+            img {}
           }
 
           .btn_subscribe {
-            button {
-              top: 93.5%;
-              font-size: 1rem;
-            }
+            button {}
           }
         }
       }
@@ -1388,14 +1231,9 @@ body {
     .content_carousel {
       .owl_content_one {
         .item {
-          width: 100%;
-
           .card {
-            // height: 16.5rem;
-
             .owl_content_img {
               img {
-                height: 11.5rem;
               }
             }
           }
@@ -1403,40 +1241,26 @@ body {
       }
 
       .owl_content_two,
-      .owl_content_three,
-      .owl_content_five {
+      .owl_content_three {
         .item {
-          width: 100%;
-
           .card {
             .owl_content_img {
-              img {
-                height: 11.438rem;
-              }
+              img {}
             }
           }
         }
       }
 
-      // .item {
-      //   .card {
-      //     // height: 13rem;
-
-      //     .owl_content_img {
-      //       img {
-      //         height: 7.188rem;
-      //       }
-      //     }
-
-      //     .card-body {
-      //       padding: 1rem 0.25rem;
-
-      //       .card-title {
-      //         font-size: 1rem;
-      //       }
-      //     }
-      //   }
-      // }
+      .owl_content_four,
+      .owl_content_five {
+        .item {
+          .card {
+            .owl_content_img {
+              img {}
+            }
+          }
+        }
+      }
     }
 
     .list_page {

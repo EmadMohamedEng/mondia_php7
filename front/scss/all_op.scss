@@ -1940,8 +1940,7 @@ select {
 
       .header_logo,
       .header_icon {
-        img {
-        }
+        img {}
       }
 
       .arrow_back {
@@ -1994,6 +1993,7 @@ select {
 
           .nav-link {
             font-size: 14px;
+
             .icon_before {
               padding-right: 0.5rem;
             }
@@ -2265,7 +2265,7 @@ select {
     .azan_page {
       .azan_title {
         h2 {
-          font-size: 1.5rem;
+          font-size: 0.9rem;
         }
       }
 
@@ -2278,8 +2278,13 @@ select {
       margin: 0.5rem auto;
 
       .nearmosque_title {
+        h2 {
+          font-size: 1rem;
+        }
+
         #map {
-          width: 100%;
+          width: 95%;
+          height: 60vh;
         }
       }
     }
@@ -2290,6 +2295,7 @@ select {
       .salah_time_title {
         h2 {
           margin-bottom: 0.5rem;
+          font-size: 1rem;
         }
       }
 
@@ -2303,17 +2309,15 @@ select {
         }
 
         .h4_time {
-          float: left;
-          padding-left: 8px;
+          padding: 0 8px;
           line-height: 3rem;
-          font-size: 1.09rem;
+          font-size: 0.9rem;
         }
 
         .h4_time_2 {
-          float: right;
-          padding-right: 8px;
+          padding: 0 8px;
           line-height: 3rem;
-          font-size: 1.09rem;
+          font-size: 0.9rem;
         }
       }
     }
@@ -2333,9 +2337,10 @@ select {
           margin: 0;
 
           .modal-content {
+            width: 90%;
             position: fixed;
             top: 54%;
-            left: 50%;
+            left: 50% !important;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -2345,11 +2350,11 @@ select {
         }
 
         .modal-title {
-          font-size: 1.5rem;
+          font-size: 1rem;
         }
 
         .choose_sebha {
-          font-size: 1.25rem;
+          font-size: 0.9rem;
         }
       }
     }
@@ -2374,6 +2379,7 @@ select {
         h2 {
           text-align: center;
           margin-bottom: 1rem;
+          font-size: 1rem
         }
       }
 
@@ -2384,7 +2390,7 @@ select {
       .input_span {
         h4 {
           line-height: 2.25rem;
-          font-size: 1rem
+          font-size: 0.9rem;
         }
       }
 
@@ -2393,7 +2399,7 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          width: 50%;
+          width: 65%;
           color: $white_color;
           font-size: 1rem;
           font-weight: bold;
@@ -2408,15 +2414,18 @@ select {
       }
 
       .table_table {
+        .thead2_h4 {
+          font-size: 1rem;
+        }
+
         .table {
-          border: 2px #00a9ce solid;
           border-radius: 7px;
           direction: rtl;
 
           tbody {
             tr {
               td {
-                font-size: 1.38rem;
+                font-size: 0.9rem;
               }
 
               .td_1 {
@@ -2429,7 +2438,7 @@ select {
     }
 
     .search_page {
-      width: 95%;
+      width: 100%;
       margin: 0.75rem auto;
 
       .textbox {
@@ -2466,17 +2475,17 @@ select {
 }
 
 @media (min-width: 375px) and (max-width: 410.9px) {
-  // .padding_phones {
-  //   padding-left: 0.75rem !important;
-  //   padding-right: 0.75rem !important;
-  // }
+  .padding_phones {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
 
   .no_padding {
     padding: 0;
   }
 
   .main_container {
-    width: 100%;
+    width: 100% !important;
     padding-top: 4rem;
 
     .header {
@@ -2486,14 +2495,12 @@ select {
 
       .header_logo,
       .header_icon {
-        .arrow_back {
-          left: 100%;
-        }
 
-        img {
-          width: 18% !important;
-          margin-top: 0 !important;
-        }
+        img {}
+      }
+
+      .arrow_back {
+        left: 95%;
       }
     }
 
@@ -2541,7 +2548,6 @@ select {
           .nav_item_welc {}
 
           .nav-link {
-
             .icon_before {
               padding-right: 0.5rem;
             }
@@ -2563,7 +2569,7 @@ select {
             margin-bottom: 1rem;
 
             .arrow_back {
-              font-size: 1.5rem;
+              font-size: 1rem;
               float: right;
             }
 
@@ -2590,7 +2596,7 @@ select {
 
           .btn_subscribe {
             button {
-              top: 93.5%;
+              top: 93%;
               font-size: 1rem;
             }
           }
@@ -2599,16 +2605,13 @@ select {
     }
 
     .content_carousel {
-      .content_carousel_head {
-        margin-top: 1rem;
-      }
+      .content_carousel_head {}
 
       .owl_content_one {
         .item {
           width: 100%;
 
           .card {
-            // height: 16.5rem;
             width: 100%;
 
             .owl_content_img {
@@ -2620,21 +2623,47 @@ select {
         }
       }
 
-      .item {
-        .card {
+      .owl_content_two,
+      .owl_content_three {
+        .item {
+          width: 100%;
 
-          // height: 17rem !important;
-          .owl_content_img {
-            img {
-              height: 11.438rem !important;
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 11.438rem !important;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem
+              }
             }
           }
+        }
+      }
 
-          .card-body {
-            padding: 1rem 0.25rem;
+      .owl_content_four,
+      .owl_content_five {
+        .item {
+          width: 100%;
 
-            .card-title {
-              font-size: 1rem;
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 11.438rem !important;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem
+              }
             }
           }
         }

@@ -1278,8 +1278,7 @@ body {
 }
 
 @media (min-width: 360px) and (max-width: 374.9px) {
-  .padding_phones {
-  }
+  .padding_phones {}
 
   .open_icon_nav_mbc {
     display: none;
@@ -1293,13 +1292,13 @@ body {
     margin-right: unset !important;
   }
 
-  .no_padding {
-  }
+  .no_padding {}
 
   .main_container {
     padding-bottom: 17%;
 
     .header {
+
       .header_logo,
       .header_icon {
 
@@ -1334,8 +1333,7 @@ body {
         }
       }
 
-      .navbar-collapse {
-      }
+      .navbar-collapse {}
 
       .navbar_ul {
         background-color: $bg_color2 !important;
@@ -1349,8 +1347,7 @@ body {
 
           .dropdown-menu {
             .dropdown-item {
-              &.dropdown-item2 {
-              }
+              &.dropdown-item2 {}
             }
           }
 
@@ -1459,6 +1456,7 @@ body {
         .pa_share {}
 
         .shear_div {
+
           .facebook,
           .twitter,
           .messenger,
@@ -1491,103 +1489,57 @@ body {
 
     .azan_page {
       .azan_title {
-        h2 {
-          font-size: 1.5rem;
-        }
+        h2 {}
       }
 
-      .input_text {
-        width: 85%;
-      }
+      .input_text {}
     }
 
     .nearmosque_page {
-      margin: 0.5rem auto;
-
       .nearmosque_title {
-        #map {
-          width: 90%;
-        }
+        #map {}
       }
     }
 
     .salah_time_page {
-      width: 95%;
-
       .salah_time_title {
-        h2 {
-          margin-bottom: 0.5rem;
-        }
+        h2 {}
       }
 
       .time_btn {
-        margin-bottom: 4%;
-        height: 3.5rem;
+        .input_span {}
 
-        .input_span {
-          padding: 0 !important;
-        }
+        .h4_time {}
 
-        .h4_time {
-          float: left;
-          padding-left: 8px;
-          line-height: 3rem;
-          font-size: 1.09rem;
-        }
-
-        .h4_time_2 {
-          float: right;
-          padding-right: 8px;
-          line-height: 3rem;
-          font-size: 1.09rem;
-        }
+        .h4_time_2 {}
       }
     }
 
     .sebha_page {
       .display {
         .btn-bar {
-          button {
-            width: 100%;
-          }
+          button {}
         }
       }
 
       #sebhaModal {
         .modal-dialog {
-          position: relative;
-          margin: 0;
-
-          .modal-content {
-            width: 90%;
-            position: fixed;
-            top: 54%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-          }
+          .modal-content {}
         }
 
         .modal-title {
-          font-size: 1.5rem;
+          font-size: 1rem;
         }
 
         .choose_sebha {
-          font-size: 1.25rem;
+          font-size: 0.9rem;
         }
       }
     }
 
-    .subscribe_page {
-      width: 100%;
-    }
+    .subscribe_page {}
 
-    .zakkah_page {
-      width: 90%;
-    }
+    .zakkah_page {}
 
     .zakkah_v2_page {
       .zakah_result {
@@ -1597,19 +1549,10 @@ body {
     }
 
     .merath_page {
-      width: 90%;
-
-      .border-bottom {
-        // margin-top: 0.25rem;
-        margin-bottom: 0.75rem;
-      }
+      .border-bottom {}
 
       .merath_title {
-        h2 {
-          text-align: center;
-          margin-bottom: 1rem;
-          font-size: 1.35rem;
-        }
+        h2 {}
       }
 
       .input_text {
@@ -1617,54 +1560,26 @@ body {
       }
 
       .input_span {
-        h4 {
-          line-height: 2.5rem;
-          font-size: 0.85rem;
-        }
+        h4 {}
       }
 
       .button_merath {
-        text-align: center;
-        margin: 5% auto;
-
         .merath_btn {
-          width: 65%;
-          color: $white_color;
-          font-size: 1rem;
-          font-weight: bold;
-          text-align: center;
-          border: 0;
-          // border-image-source: linear-gradient(45deg, $text_color 40%, $text_color 60%);
-          // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, $text_color);
           background: $bg_color;
-          border-radius: 8px;
-          -webkit-border-radius: 8px;
-          -moz-border-radius: 8px;
-          -ms-border-radius: 8px;
-          -o-border-radius: 8px;
         }
       }
 
       .table_table {
-        .thead2_h4 {
-          font-size: 1rem;
-        }
+        .thead2_h4 {}
 
         .table {
           border: 2px $text_color solid;
-          border-radius: 7px;
-          direction: rtl;
 
           tbody {
             tr {
-              td {
-                font-size: 0.85rem;
-              }
+              td {}
 
-              .td_1 {
-                text-align: right;
-              }
+              .td_1 {}
             }
           }
         }
@@ -1672,31 +1587,15 @@ body {
     }
 
     .search_page {
-      width: 95%;
-      margin: 0.75rem auto;
-
-      .textbox {
-        text-align: center;
-      }
+      .textbox {}
     }
 
     .error_page {
-      margin: 2rem auto 0 0;
+      svg {}
 
-      svg {
-        height: 100%;
-      }
+      .message-box {}
 
-      .message-box {
-        font-size: 2rem;
-        top: -19rem;
-        left: 42%;
-      }
-
-      .buttons-con {
-        top: 3rem;
-        left: 50%;
-      }
+      .buttons-con {}
     }
 
     .profile {
@@ -1724,16 +1623,14 @@ body {
   }
 
   .loading-overlay {
-    .spinner-large {
-    }
+    .spinner-large {}
   }
 }
 
 @media (min-width: 375px) and (max-width: 410.9px) {
-  .padding_phones {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-  }
+  .padding_phones {}
+
+  .no_padding {}
 
   .open_icon_nav_mbc {
     display: none;
@@ -1747,128 +1644,69 @@ body {
     margin-right: unset !important;
   }
 
-  .no_padding {
-    padding: 0;
-  }
-
   .main_container {
-    width: 100%;
-    padding-top: 4rem;
     padding-bottom: 17%;
 
     .header {
-      position: fixed;
-      top: 0;
-      z-index: 99999999999;
-
       .header_logo,
       .header_icon {
-        .arrow_back {
-          left: 100%;
-        }
-
         img {
           width: 45% !important;
           margin-top: 0rem !important;
         }
       }
+
+      .arrow_back {}
     }
 
     .nav_nav {
-      background-color: transparent;
-      width: 0;
-      padding: 0;
-      margin: 0;
-      position: fixed;
-      top: 0;
-      border: 0;
       display: unset;
 
       button {
-        outline: 0;
-        font-size: 1rem;
-        position: fixed;
-        top: 2.15rem;
-        left: 2.5rem;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-
+        opacity: 1;
         .icon_before {
           color: $text_color
         }
       }
 
-      .navbar-collapse {
-        z-index: 9999999;
-      }
+      .navbar-collapse {}
 
       .navbar_ul {
-        background-color: $bg_color2;
-        width: 15rem;
-        height: 100vh;
-        padding: 0 0;
-        overflow-y: scroll;
+        background-color: $bg_color2 !important;
 
         .nav-item {
-          padding: 0.25rem 0.75rem;
-
           .nav-link {
             .icon_before {
-              padding-right: 0.5rem;
               color: $text_color;
             }
           }
 
           .dropdown-menu {
             .dropdown-item {
-              padding: 0.25rem 0;
-              text-align: center;
-              width: 100% !important;
-
-              &.dropdown-item2 {
-                width: 100% !important;
-              }
+              &.dropdown-item2 {}
             }
           }
 
           &.nav_item_logo {
-            margin-bottom: 1rem;
-
             .arrow_back {
               color: $text_color;
-              font-size: 1.5rem;
-              float: right;
             }
 
-            img {
-              width: 30%;
-              display: block;
-              margin: 0 auto;
-            }
+            img {}
           }
         }
       }
     }
 
     .img_carousel {
-      margin-top: 0;
-
       .owl_one {
         .item {
           .owl_one_img {
-            img {
-              height: 23.438rem;
-            }
+            img {}
           }
 
           .btn_subscribe {
-            button {
-              top: 93.5%;
-              font-size: 1rem;
-            }
+            button {}
           }
         }
       }
@@ -1877,15 +1715,9 @@ body {
     .content_carousel {
       .owl_content_one {
         .item {
-          width: 100%;
-
           .card {
-            // height: 16.125rem !important;
-            width: 100%;
-
             .owl_content_img {
               img {
-                height: 11.5rem !important;
               }
             }
           }
@@ -1895,31 +1727,20 @@ body {
       .owl_content_two,
       .owl_content_three {
         .item {
-          width: 100%;
-
           .card {
-            width: 100%;
-
             .owl_content_img {
-              img {
-                height: 11.438rem !important;
-              }
+              img {}
             }
           }
         }
       }
 
+      .owl_content_four,
       .owl_content_five {
         .item {
-          width: 100%;
-
           .card {
-            width: 100%;
-
             .owl_content_img {
-              img {
-                height: 11.438rem !important;
-              }
+              img {}
             }
           }
         }
