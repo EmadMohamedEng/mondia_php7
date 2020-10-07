@@ -2154,12 +2154,17 @@ select:active {
   }
 }
 @media (min-width: 411px) and (max-width: 415px) {
+  .padding_phones {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
   .no_padding {
     padding: 0;
   }
 
   .main_container {
-    width: 100%;
+    width: 100% !important;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -2167,19 +2172,12 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-    left: 100%;
-    font-size: 1.25rem;
-  }
-  .main_container .header .header_logo img,
-.main_container .header .header_icon img {
-    width: 18% !important;
-    margin-top: 0 !important;
-  }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
     font-size: 1.5rem;
+  }
+  .main_container .header .arrow_back {
+    left: 95%;
   }
   .main_container .nav_nav {
     background-color: transparent;
@@ -2246,22 +2244,19 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 25.688rem;
+    height: 24.688rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
     top: 94%;
     font-size: 1rem;
   }
-  .main_container .content_carousel .content_carousel_head {
-    margin-top: 1rem;
-  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .main_container .content_carousel .content_carousel_head .btn_more {
     padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .main_container .content_carousel .owl_content_one .item {
     width: 100%;
@@ -2270,41 +2265,55 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-    height: 12.563rem !important;
+    height: 11.5rem !important;
   }
-  .main_container .content_carousel .item .card .owl_content_img img {
-    height: 12.563rem !important;
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
+    font-size: 0.9rem;
   }
-  .main_container .content_carousel .item .card .card-body {
-    padding: 1rem 0.25rem;
+  .main_container .content_carousel .owl_content_two .item,
+.main_container .content_carousel .owl_content_three .item {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .card-body .card-title {
-    font-size: 1.25rem;
+  .main_container .content_carousel .owl_content_two .item .card,
+.main_container .content_carousel .owl_content_three .item .card {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+    height: 12.063rem !important;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
+    font-size: 0.9rem;
+  }
+  .main_container .content_carousel .owl_content_four .item,
+.main_container .content_carousel .owl_content_five .item {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_four .item .card,
+.main_container .content_carousel .owl_content_five .item .card {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .owl_content_img img,
+.main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 12.063rem !important;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+    font-size: 0.9rem;
   }
   .main_container .list_page .coming_soon {
     width: 50%;
     margin-top: 30% !important;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 12.719rem;
+    height: 12.219rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
   }
   .main_container .list_page .item .card .card-body .card-title {
-    font-size: 1.15rem;
-  }
-  .main_container .mowdo3t_page .item .card {
-    height: 13rem;
-  }
-  .main_container .mowdo3t_page .item .card .owl_content_img img {
-    height: 7.188rem;
-  }
-  .main_container .mowdo3t_page .item .card .card-body {
-    padding: 1rem 0.25rem;
-  }
-  .main_container .mowdo3t_page .item .card .card-body .card-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .main_container .inner_page {
     margin-top: 0;
@@ -2314,7 +2323,7 @@ select:active {
     width: 110px;
   }
   .main_container .inner_page .cover h4 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 0 0.35rem;
   }
   .main_container .inner_page .cover video {
@@ -2322,21 +2331,29 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    max-height: 25.688rem;
+    max-height: 24.875rem;
+  }
+  .main_container .inner_page .cover audio {
+    width: 94% !important;
+    margin-top: -5%;
+    margin-left: 3%;
   }
   .main_container .inner_page .cover button {
     top: 45%;
     left: 35%;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
-    font-size: 1.25rem;
+    font-size: 1rem;
+  }
+  .main_container .inner_page .poster .poster-details .outside-cover {
+    font-size: 0.8rem;
   }
   .main_container .inner_page .socail_media {
-    width: 100%;
+    width: 75%;
   }
   .main_container .inner_page .socail_media .pa_share {
     margin-top: 0.75rem;
-    font-size: 1.35rem;
+    font-size: 1rem;
   }
   .main_container .inner_page .socail_media .shear_div {
     padding-right: 0;
@@ -2352,7 +2369,7 @@ select:active {
   }
   .main_container .inner_page .section_content .pa_Videos {
     margin-top: 0.75rem;
-    font-size: 1.35rem;
+    font-size: 1rem;
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
@@ -2361,9 +2378,10 @@ select:active {
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
+    left: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-footer {
     justify-content: center;
@@ -2380,14 +2398,19 @@ select:active {
   .main_container .nearmosque_page {
     margin: 0.5rem auto;
   }
+  .main_container .nearmosque_page .nearmosque_title h2 {
+    font-size: 1rem;
+  }
   .main_container .nearmosque_page .nearmosque_title #map {
     width: 100%;
+    height: 55vh;
   }
   .main_container .salah_time_page {
     width: 95%;
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
+    font-size: 1rem;
   }
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
@@ -2397,16 +2420,14 @@ select:active {
     padding: 0 !important;
   }
   .main_container .salah_time_page .time_btn .h4_time {
-    float: left;
-    padding-left: 8px;
+    padding: 0 8px;
     line-height: 3rem;
-    font-size: 1.25rem;
+    font-size: 0.8rem;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
-    float: right;
-    padding-right: 8px;
+    padding: 0 8px;
     line-height: 3rem;
-    font-size: 1.25rem;
+    font-size: 0.8rem;
   }
   .main_container .sebha_page .display .btn-bar button {
     width: 100%;
@@ -2416,10 +2437,10 @@ select:active {
     margin: 0;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
-    width: 90%;
+    width: 95%;
     position: fixed;
     top: 55%;
-    left: 50%;
+    left: 50% !important;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2427,13 +2448,13 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .sebha_page #sebhaModal .close {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .main_container .sebha_page #sebhaModal .modal-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .main_container .sebha_page #sebhaModal .choose_sebha {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .main_container .subscribe_page {
     width: 100%;
@@ -2459,20 +2480,21 @@ select:active {
   .main_container .merath_page .merath_title h2 {
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 1rem;
   }
   .main_container .merath_page .input_text .merath_input {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 3rem;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 50%;
+    width: 60%;
     color: #FFF;
     font-size: 1rem;
     font-weight: bold;
@@ -2484,19 +2506,21 @@ select:active {
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
   }
+  .main_container .merath_page .table_table .thead2_h4 {
+    font-size: 1rem;
+  }
   .main_container .merath_page .table_table .table {
-    border: 2px #00a9ce solid;
     border-radius: 7px;
     direction: rtl;
   }
   .main_container .merath_page .table_table .table tbody tr td {
-    font-size: 1.5rem;
+    font-size: 0.85rem;
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
   }
   .main_container .search_page {
-    width: 95%;
+    width: 100%;
     margin: 0.75rem auto;
   }
   .main_container .search_page .textbox {

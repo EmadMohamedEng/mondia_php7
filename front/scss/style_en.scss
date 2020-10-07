@@ -1202,6 +1202,7 @@ body {
 
   .main_container {
     .header {
+
       .header_logo,
       .header_icon {
         img {
@@ -1263,8 +1264,7 @@ body {
         .item {
           .card {
             .owl_content_img {
-              img {
-              }
+              img {}
             }
           }
         }
@@ -1334,6 +1334,7 @@ body {
         .pa_share {}
 
         .shear_div {
+
           .facebook,
           .twitter,
           .messenger,
@@ -1480,136 +1481,65 @@ body {
 }
 
 @media (min-width: 411px) and (max-width: 415px) {
-  .padding_phones {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-  }
+  .padding_phones {}
 
-  .no_padding {
-    padding: 0;
-  }
+  .no_padding {}
 
   .main_container {
-    width: 100%;
-    padding-top: 4rem;
-
     .header {
-      position: fixed;
-      top: 0;
-      z-index: 99999999999;
-
       .header_logo,
       .header_icon {
-        .arrow_back {
-          left: 100%;
-          font-size: 1.25rem;
-        }
-
         img {
           width: 12% !important;
         }
 
-        h6 {
-          font-size: 1.5rem;
-        }
+        h6 {}
       }
+
+      .arrow_back {}
     }
 
     .nav_nav {
-      background-color: transparent;
-      width: 0;
-      padding: 0;
-      margin: 0;
-      position: fixed;
-      top: 0;
-      border: 0;
-
       button {
-        outline: 0;
-        font-size: 1.2rem;
-        opacity: 0.5;
-        position: fixed;
-        top: 2.15rem;
-        left: 3rem;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-
-        .icon_before {
-          color: $white_color;
-        }
+        .icon_before {}
       }
 
-      .navbar-collapse {
-        z-index: 9999999;
-      }
+      .navbar-collapse {}
 
       .navbar_ul {
-        background-color: $white_color;
-        width: 15rem;
-        height: 100vh;
-        padding: 0 0;
-        overflow-y: scroll;
-
         .nav-item {
-          padding: 0.25rem 0.75rem;
-
           .nav-link {
             .icon_before {
-              padding-right: 0.5rem;
               color: #00a9ce;
             }
           }
 
           .dropdown-menu {
             .dropdown-item {
-              padding: 0.25rem 0;
-              text-align: center;
-              width: 100% !important;
-
-              &.dropdown-item2 {
-                width: 100% !important;
-              }
+              &.dropdown-item2 {}
             }
           }
 
           &.nav_item_logo {
-            margin-bottom: 1rem;
-
             .arrow_back {
               color: #00a9ce;
-              font-size: 1.5rem;
-              float: right;
             }
 
-            img {
-              width: 30%;
-              display: block;
-              margin: 0 auto;
-            }
+            img {}
           }
         }
       }
     }
 
     .img_carousel {
-      margin-top: 0;
-
       .owl_one {
         .item {
           .owl_one_img {
-            img {
-              height: 25.688rem;
-            }
+            img {}
           }
 
           .btn_subscribe {
-            button {
-              top: 94%;
-              font-size: 1rem;
-            }
+            button {}
           }
         }
       }
@@ -1618,213 +1548,111 @@ body {
     .content_carousel {
       .content_carousel_head {
         .link_title {
-          h6 {
-            font-weight: bold;
-            font-size: 1.25rem;
-          }
+          h6 {}
         }
 
-        .btn_more {
-          padding: 0.25rem 0.75rem;
-          font-size: 1.25rem;
-        }
+        .btn_more {}
       }
 
       .owl_content_one {
         .item {
-          width: 100%;
-
           .card {
-            width: 100%;
-
             .owl_content_img {
-              img {
-                height: 11.5rem !important;
-              }
+              img {}
             }
           }
         }
       }
 
       .owl_content_two,
-      .owl_content_three,
-      .owl_content_five {
+      .owl_content_three {
         .item {
-          width: 100%;
-
           .card {
-            width: 100%;
-
             .owl_content_img {
-              img {
-                height: 12.563rem !important;
-              }
+              img {}
             }
           }
         }
       }
 
-      // .item {
-      //   .card {
-      //     // height: 14rem !important;
-
-      //     .owl_content_img {
-      //       img {
-      //         height: 9rem !important;
-      //       }
-      //     }
-
-      //     .card-body {
-      //       padding: 1rem 0.25rem;
-
-      //       .card-title {
-      //         font-size: 1.25rem;
-      //       }
-      //     }
-      //   }
-      // }
+      .owl_content_four,
+      .owl_content_five {
+        .item {
+          .card {
+            .owl_content_img {
+              img {}
+            }
+          }
+        }
+      }
     }
 
     .list_page {
-      .coming_soon {
-        width: 50%;
-        margin-top: 30% !important;
-      }
+      .coming_soon {}
 
       .item {
         .card {
-          // height: 17.5rem;
-
           .owl_content_img {
-            img {
-              height: 12.719rem;
-            }
+            img {}
           }
 
           .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1.15rem;
-            }
-          }
-        }
-      }
-    }
-
-    .mowdo3t_page {
-      .item {
-        .card {
-          height: 13rem;
-
-          .owl_content_img {
-            img {
-              height: 7.188rem;
-            }
-          }
-
-          .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1rem;
-            }
+            .card-title {}
           }
         }
       }
     }
 
     .inner_page {
-      margin-top: 0;
-
       .section_content {
-        .image_inner {
-          height: 110px;
-          width: 110px;
-        }
+        .image_inner {}
       }
 
       .cover {
-        h4 {
-          font-size: 1.5rem;
-          padding: 0 0.35rem;
-        }
+        h4 {}
 
-        video {
-          padding: 0 0;
-        }
+        video {}
 
-        img {
-          width: 100%;
-          height: 12.813rem;
-        }
+        img {}
       }
 
       .poster {
         .poster-details {
           .title-wrapper {
-            h2 {
-              font-size: 1.25rem;
-            }
+            h2 {}
           }
         }
       }
 
       .socail_media {
-        width: 100%;
-
-        .pa_share {
-          margin-top: 0.75rem;
-          font-size: 1.35rem;
-        }
+        .pa_share {}
 
         .shear_div {
-          padding-right: 0;
-
           .facebook,
           .twitter,
           .messenger,
-          .whatsapp {
-            width: 90%;
-            height: 2.75rem;
-            margin-left: 0.5rem;
-            margin-top: 0.75rem;
-          }
+          .whatsapp {}
         }
       }
 
       .section_content {
-        .pa_Videos {
-          margin-top: 0.75rem;
-          font-size: 1.35rem;
-        }
+        .pa_Videos {}
 
         .p_content,
-        .p_content_2 {
-          margin-left: 4.25rem;
-          margin-top: 37px;
-          font-size: 20px;
-        }
+        .p_content_2 {}
       }
     }
 
     .modal_cover {
       .modal-dialog {
         .modal-content {
-          top: 2rem;
 
           .modal-header {
-            h5 {
-              font-size: 1.15rem;
-            }
+            h5 {}
           }
 
           .modal-footer {
-            justify-content: center;
-
-            .btn {
-              font-size: 1rem;
-            }
+            .btn {}
           }
         }
       }
@@ -1832,191 +1660,98 @@ body {
 
     .azan_page {
       .azan_title {
-        h2 {
-          font-size: 1.5rem;
-        }
+        h2 {}
       }
 
-      .input_text {
-        width: 85%;
-      }
+      .input_text {}
     }
 
     .nearmosque_page {
-      margin: 0.5rem auto;
-
       .nearmosque_title {
-        #map {
-          width: 100%;
-        }
+        #map {}
       }
     }
 
     .salah_time_page {
-      width: 95%;
-      margin: 1.5rem auto;
-
       .salah_time_title {
-        h2 {
-          margin-bottom: 0.5rem;
-        }
+        h2 {}
       }
 
       .time_btn {
-        margin-bottom: 4%;
-        height: 3.5rem;
+        .input_span {}
 
-        .input_span {
-          padding: 0 !important;
-        }
+        .h4_time {}
 
-        .h4_time {
-          float: left;
-          padding-left: 8px;
-          line-height: 3rem;
-          font-size: 1.25rem;
-        }
-
-        .h4_time_2 {
-          float: right;
-          padding-right: 8px;
-          line-height: 3rem;
-          font-size: 1.25rem;
-        }
+        .h4_time_2 {}
       }
     }
 
     .sebha_page {
       .display {
         .btn-bar {
-          button {
-            width: 100%;
-          }
+          button {}
         }
       }
 
       #sebhaModal {
         .modal-dialog {
-          position: relative;
-          margin: 0;
-
-          .modal-content {
-            position: fixed;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-          }
+          .modal-content {}
         }
 
-        .close {
-          font-size: 2.25rem;
-        }
+        .close {}
 
-        .modal-title {
-          font-size: 1.75rem;
-        }
+        .modal-title {}
 
-        .choose_sebha {
-          font-size: 1.5rem;
-        }
+        .choose_sebha {}
       }
     }
 
     .subscribe_page {
-      width: 100%;
-
       .subscribe_bg {
-        font-size: 1.25rem;
-
         .form-signin {
-          .account-wall input {
-            font-size: 1.5rem;
-          }
+          .account-wall input {}
 
           .buttons {
-            button {
-              font-size: 1.5rem;
-            }
+            button {}
           }
         }
       }
     }
 
-    .zakkah_page {
-      width: 90%;
-    }
+    .zakkah_page {}
 
     .merath_page {
-      width: 90%;
-
-      .border-bottom {
-        // margin-top: 0.25rem;
-        margin-bottom: 0.75rem;
-      }
+      .border-bottom {}
 
       .merath_title {
-        h2 {
-          text-align: center;
-          margin-bottom: 1rem;
-        }
+        h2 {}
       }
 
       .input_text {
-        .merath_input {
-          font-size: 1.5rem;
-        }
+        .merath_input {}
       }
 
       .input_span {
-
-        h4 {
-          line-height: 3rem;
-          font-size: 1.25rem;
-        }
+        h4 {}
       }
 
       .button_merath {
-        text-align: center;
-        margin: 5% auto;
-
         .merath_btn {
-          width: 50%;
-          color: $white_color;
-          font-size: 1rem;
-          font-weight: bold;
-          text-align: center;
-          border: 0;
-          // border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
-          // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
           background: $bg_color;
-          border-radius: 8px;
-          -webkit-border-radius: 8px;
-          -moz-border-radius: 8px;
-          -ms-border-radius: 8px;
-          -o-border-radius: 8px;
         }
       }
 
       .table_table {
+        .thead2_h4 {}
+
         .table {
           border: 2px #00a9ce solid;
-          border-radius: 7px;
-          direction: rtl;
 
           tbody {
             tr {
-              td {
-                font-size: 1.5rem;
-              }
+              td {}
 
-              .td_1 {
-                text-align: right;
-              }
+              .td_1 {}
             }
           }
         }
@@ -2024,40 +1759,20 @@ body {
     }
 
     .search_page {
-      width: 95%;
-      margin: 0.75rem auto;
-
-      .textbox {
-        text-align: center;
-      }
+      .textbox {}
     }
 
     .error_page {
-      margin: 2rem auto 0 0;
+      svg {}
 
-      svg {
-        height: 100%;
-      }
+      .message-box {}
 
-      .message-box {
-        font-size: 2.5rem;
-        top: -22rem;
-        left: 42%;
-      }
-
-      .buttons-con {
-        font-size: 1.5rem;
-        top: 3rem;
-        left: 50%;
-      }
+      .buttons-con {}
     }
   }
 
   .loading-overlay {
-    .spinner-large {
-      bottom: 30%;
-      left: 35%;
-    }
+    .spinner-large {}
   }
 }
 
