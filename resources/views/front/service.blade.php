@@ -10,9 +10,9 @@
 @section('content')
 
 @if(request()->get('OpID') == mbc)
-<div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
 @else
-<div class="col-md-12 col-lg-12 col-xl-8 col-12 p-0 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
 @endif
     @include('front.search')
   @foreach ($services as $service)

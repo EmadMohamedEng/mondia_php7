@@ -253,19 +253,17 @@ body {
 
     .poster {
       .poster-details {
-        .title-wrapper {
-        }
+        .title-wrapper {}
 
-        .outside-cover {
-        }
+        .outside-cover {}
       }
     }
 
     .socail_media {
-      .pa_share {
-      }
+      .pa_share {}
 
       .shear_div {
+
         .facebook,
         .twitter,
         .messenger,
@@ -273,48 +271,36 @@ body {
           color: $white_color;
         }
 
-        .facebook {
-        }
+        .facebook {}
 
-        .facebook:hover {
-        }
+        .facebook:hover {}
 
-        .twitter {
-        }
+        .twitter {}
 
-        .twitter:hover {
-        }
+        .twitter:hover {}
 
-        .messenger {
-        }
+        .messenger {}
 
-        .messenger:hover {
-        }
+        .messenger:hover {}
 
-        .whatsapp {
-        }
+        .whatsapp {}
 
-        .whatsapp:hover {
-        }
+        .whatsapp:hover {}
       }
     }
 
     .section_content {
-      .border-bottom {
-      }
+      .border-bottom {}
 
-      .pa_Videos {
-      }
+      .pa_Videos {}
 
-      .image_inner {
-      }
+      .image_inner {}
 
       .p_content {
         color: #6a6060;
       }
 
-      .p_content_2 {
-      }
+      .p_content_2 {}
     }
   }
 
@@ -328,8 +314,7 @@ body {
               background: $bg_color;
             }
 
-            p {
-            }
+            p {}
           }
         }
 
@@ -337,8 +322,7 @@ body {
           .btn {
             background: $bg_color;
 
-            &.btn_2 {
-            }
+            &.btn_2 {}
           }
         }
       }
@@ -359,8 +343,7 @@ body {
   }
 
   .azan_page {
-    .azan_title {
-    }
+    .azan_title {}
 
     .input_text {
       .azan_input {
@@ -380,8 +363,7 @@ body {
   /* Start Nearmosque Page */
   .nearmosque_page {
     .nearmosque_title {
-      h2 {
-      }
+      h2 {}
 
       #map {
         border: 5px solid $bg_color;
@@ -395,18 +377,15 @@ body {
   .salah_time_page {
 
     .salah_time_title {
-      h2 {
-      }
+      h2 {}
     }
 
     .time_btn {
       border: 2px solid $bg_color;
 
-      .h4_time_2 {
-      }
+      .h4_time_2 {}
 
-      .h4_time {
-      }
+      .h4_time {}
     }
   }
 
@@ -414,22 +393,18 @@ body {
 
   /* Start Subscribe Page */
   .subscribe_page {
-    .login_title {
-    }
+    .login_title {}
 
     .subscribe_bg {
-      .subtitle {
-      }
+      .subtitle {}
 
       .form-signin {
         .account-wall {
-          input {
-          }
+          input {}
         }
 
         .buttons {
-          button {
-          }
+          button {}
         }
       }
     }
@@ -440,13 +415,11 @@ body {
   /* Start Zakkah Page */
   .zakkah_page {
     .zakah_zakah {
-      .border-bottom {
-      }
+      .border-bottom {}
 
       .form_zakah {
         .field {
-          label {
-          }
+          label {}
 
           .field-value {
             input {
@@ -457,8 +430,7 @@ body {
 
         .field_result {
           .field {
-            .field-value {
-            }
+            .field-value {}
           }
         }
 
@@ -468,7 +440,7 @@ body {
               border: solid 2px $bg_color;
 
               &:hover {
-              background: $bg_color;
+                background: $bg_color;
               }
             }
           }
@@ -481,12 +453,10 @@ body {
 
   /* Start Merath Page */
   .merath_page {
-    .border-bottom {
-    }
+    .border-bottom {}
 
     .merath_title {
-      h2 {
-      }
+      h2 {}
     }
 
     .input_text {
@@ -497,8 +467,7 @@ body {
 
     .input_span {
       h4 {
-        .span_req {
-        }
+        .span_req {}
       }
     }
 
@@ -512,11 +481,9 @@ body {
       .table {
         tbody {
           tr {
-            td {
-            }
+            td {}
 
-            .td_1 {
-            }
+            .td_1 {}
           }
         }
       }
@@ -529,8 +496,7 @@ body {
   .sebha_page {
     .display {
 
-      #wordSebha {
-      }
+      #wordSebha {}
 
       #tally {
         border: 2px solid $bg_color;
@@ -543,20 +509,15 @@ body {
       }
     }
 
-    .modal.show .modal-dialog {
-    }
+    .modal.show .modal-dialog {}
 
-    #sebhaModal .modal-content {
-    }
+    #sebhaModal .modal-content {}
 
-    .modal-header {
-    }
+    .modal-header {}
 
-    .modal-header .close {
-    }
+    .modal-header .close {}
 
-    #sebhaModal .modal-title {
-    }
+    #sebhaModal .modal-title {}
 
     .choose_sebha {
       border: 2px solid $bg_color;
@@ -580,8 +541,7 @@ body {
         }
       }
 
-      .btn_search {
-      }
+      .btn_search {}
     }
   }
 
@@ -589,11 +549,9 @@ body {
 
   /* Start Error Page */
   .error_page {
-    svg {
-    }
+    svg {}
 
-    .message-box {
-    }
+    .message-box {}
 
     .buttons-con {
       .action-link-wrap {
@@ -608,14 +566,11 @@ body {
 }
 
 .loading-overlay {
-  .spinner {
-  }
+  .spinner {}
 
-  .spinner-large {
-  }
+  .spinner-large {}
 
-  .spinner-slow {
-  }
+  .spinner-slow {}
 
   .spinner-blue {
     border-top-color: $bg_color;
@@ -624,8 +579,7 @@ body {
 }
 
 .alert {
-  .close {
-  }
+  .close {}
 }
 
 .active_menu {
@@ -633,20 +587,19 @@ body {
 
 }
 
-.active_menu_parent {
-}
+.active_menu_parent {}
 
 @media (min-width: 320px) and (max-width: 359.9px) {
   .padding_phones {
     padding-left: 0 !important;
     padding-right: 0 !important;
-}
-
-  .no_padding {
   }
+
+  .no_padding {}
 
   .main_container {
     .header {
+
       .header_logo,
       .header_icon {
         img {
@@ -660,12 +613,10 @@ body {
 
     .nav_nav {
       button {
-        .icon_before {
-        }
+        .icon_before {}
       }
 
-      .navbar-collapse {
-      }
+      .navbar-collapse {}
 
       .navbar_ul {
         .nav-item {
@@ -676,6 +627,283 @@ body {
           .nav-link {
             color: $bg_color;
 
+            .icon_before {}
+          }
+
+          .dropdown-menu {
+            .dropdown-item {
+              &.dropdown-item2 {}
+            }
+          }
+
+          &.nav_item_logo {
+            .arrow_back {
+              color: $bg_color;
+            }
+
+            img {}
+          }
+        }
+      }
+    }
+
+    .img_carousel {
+      .owl_one {
+        .item {
+          .owl_one_img {
+            img {}
+          }
+
+          .btn_subscribe {
+            button {}
+          }
+        }
+      }
+    }
+
+    .content_carousel {
+      .content_carousel_head {}
+
+      .owl_content_one {
+        .item {
+          .card {
+
+            .owl_content_img {
+              img {}
+            }
+          }
+        }
+      }
+
+      .owl_content_two,
+      .owl_content_three {
+        .item {
+          .card {
+            .owl_content_img {
+              img {}
+            }
+          }
+        }
+      }
+
+      .owl_content_four,
+      .owl_content_five {
+        .item {
+          .card {
+            .owl_content_img {
+              img {}
+            }
+          }
+        }
+      }
+    }
+
+    .list_page {
+      .coming_soon {}
+
+      .item {
+        .card {
+          .owl_content_img {
+            img {}
+          }
+
+          .card-body {
+            .card-title {}
+          }
+        }
+      }
+    }
+
+    .inner_page {
+      .cover {
+        h4 {}
+
+        video {}
+
+        img {}
+
+        button {}
+      }
+
+      .poster {
+        .poster-details {
+          .title-wrapper {
+            h2 {}
+          }
+        }
+      }
+
+      .socail_media {
+        .pa_share {}
+
+        .shear_div {
+
+          .facebook,
+          .twitter,
+          .messenger,
+          .whatsapp {}
+        }
+      }
+
+      .section_content {
+        .pa_Videos {}
+
+        .p_content,
+        .p_content_2 {}
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          .modal-header {
+            h5 {}
+          }
+
+          .modal-footer {
+            .btn {}
+          }
+        }
+      }
+    }
+
+    .azan_page {
+      .azan_title {
+        h2 {}
+      }
+
+      .input_text {}
+    }
+
+    .nearmosque_page {
+      .nearmosque_title {
+        #map {}
+      }
+    }
+
+    .salah_time_page {
+      .salah_time_title {
+        h2 {}
+      }
+
+      .time_btn {
+        .input_span {}
+
+        .h4_time {}
+
+        .h4_time_2 {}
+      }
+    }
+
+    .sebha_page {
+      .display {
+        .btn-bar {
+          button {}
+        }
+      }
+
+      #sebhaModal {
+        .modal-dialog {
+          .modal-content {}
+        }
+
+        .modal-title {}
+
+        .choose_sebha {}
+      }
+    }
+
+    .subscribe_page {}
+
+    .zakkah_page {}
+
+    .merath_page {
+      .border-bottom {}
+
+      .merath_title {
+        h2 {}
+      }
+
+      .input_text {
+        // .merath_input {}
+      }
+
+      .input_span {
+        h4 {}
+      }
+
+      .button_merath {
+        .merath_btn {
+          background: $bg_color;
+        }
+      }
+
+      .table_table {
+        .table {
+          border: 2px #00a9ce solid;
+
+          tbody {
+            tr {
+              // td {}
+
+              .td_1 {}
+            }
+          }
+        }
+      }
+    }
+
+    .search_page {
+      .textbox {}
+    }
+
+    .error_page {
+      svg {}
+
+      .message-box {}
+
+      .buttons-con {}
+    }
+  }
+
+  .loading-overlay {
+    .spinner-large {}
+  }
+}
+
+@media (min-width: 360px) and (max-width: 374.9px) {
+  .padding_phones {}
+
+  .no_padding {}
+
+  .main_container {
+    .header {
+      .header_logo,
+      .header_icon {
+        img {
+          width: 23% !important;
+          margin-top: 0 !important;
+        }
+      }
+
+      .arrow_back {}
+    }
+
+    .nav_nav {
+      button {
+        .icon_before {
+        }
+      }
+
+      .navbar-collapse {}
+
+      .navbar_ul {
+        .nav-item {
+          .nav_item_welc {
+            color: $bg_color;
+          }
+
+          .nav-link {
             .icon_before {
             }
           }
@@ -692,8 +920,7 @@ body {
               color: $bg_color;
             }
 
-            img {
-            }
+            img {}
           }
         }
       }
@@ -703,13 +930,11 @@ body {
       .owl_one {
         .item {
           .owl_one_img {
-            img {
-            }
+            img {}
           }
 
           .btn_subscribe {
-            button {
-            }
+            button {}
           }
         }
       }
@@ -717,15 +942,18 @@ body {
 
     .content_carousel {
       .content_carousel_head {
+        .link_title {
+          h6 {}
+        }
+
+        .btn_more {}
       }
 
       .owl_content_one {
         .item {
           .card {
-
             .owl_content_img {
-              img {
-              }
+              img {}
             }
           }
         }
@@ -748,8 +976,7 @@ body {
         .item {
           .card {
             .owl_content_img {
-              img {
-              }
+              img {}
             }
           }
         }
@@ -757,19 +984,16 @@ body {
     }
 
     .list_page {
-      .coming_soon {
-      }
+      .coming_soon {}
 
       .item {
         .card {
           .owl_content_img {
-            img {
-            }
+            img {}
           }
 
           .card-body {
-            .card-title {
-            }
+            .card-title {}
           }
         }
       }
@@ -777,451 +1001,11 @@ body {
 
     .inner_page {
       .cover {
-        h4 {
-        }
+        h4 {}
 
-        video {
-        }
+        video {}
 
-        img {
-        }
-
-        button {
-        }
-      }
-
-      .poster {
-        .poster-details {
-          .title-wrapper {
-            h2 {
-            }
-          }
-        }
-      }
-
-      .socail_media {
-        .pa_share {
-        }
-
-        .shear_div {
-          .facebook,
-          .twitter,
-          .messenger,
-          .whatsapp {
-          }
-        }
-      }
-
-      .section_content {
-        .pa_Videos {
-        }
-
-        .p_content,
-        .p_content_2 {
-        }
-      }
-    }
-
-    .modal_cover {
-      .modal-dialog {
-        .modal-content {
-          .modal-header {
-            h5 {
-            }
-          }
-
-          .modal-footer {
-            .btn {
-            }
-          }
-        }
-      }
-    }
-
-    .azan_page {
-      .azan_title {
-        h2 {
-        }
-      }
-
-      .input_text {
-      }
-    }
-
-    .nearmosque_page {
-      .nearmosque_title {
-        #map {
-        }
-      }
-    }
-
-    .salah_time_page {
-      .salah_time_title {
-        h2 {
-        }
-      }
-
-      .time_btn {
-        .input_span {
-        }
-
-        .h4_time {
-        }
-
-        .h4_time_2 {
-        }
-      }
-    }
-
-    .sebha_page {
-      .display {
-        .btn-bar {
-          button {
-          }
-        }
-      }
-
-      #sebhaModal {
-        .modal-dialog {
-          .modal-content {
-          }
-        }
-
-        .modal-title {
-        }
-
-        .choose_sebha {
-        }
-      }
-    }
-
-    .subscribe_page {
-    }
-
-    .zakkah_page {
-    }
-
-    .merath_page {
-      .border-bottom {
-      }
-
-      .merath_title {
-        h2 {
-        }
-      }
-
-      .input_text {
-        // .merath_input {}
-      }
-
-      .input_span {
-        h4 {
-        }
-      }
-
-      .button_merath {
-        .merath_btn {
-          background: $bg_color;
-        }
-      }
-
-      .table_table {
-        .table {
-          border: 2px #00a9ce solid;
-
-          tbody {
-            tr {
-              // td {}
-
-              .td_1 {
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .search_page {
-      .textbox {
-      }
-    }
-
-    .error_page {
-      svg {
-      }
-
-      .message-box {
-      }
-
-      .buttons-con {
-      }
-    }
-  }
-
-  .loading-overlay {
-    .spinner-large {
-    }
-  }
-}
-
-@media (min-width: 360px) and (max-width: 374.9px) {
-  // .padding_phones {
-  //   padding-left: 0.75rem !important;
-  //   padding-right: 0.75rem !important;
-  // }
-
-  .no_padding {
-    padding: 0;
-  }
-
-  .main_container {
-    width: 100%;
-    padding-top: 4rem;
-
-    .header {
-      position: fixed;
-      top: 0;
-      z-index: 99999999999;
-
-      .header_logo,
-      .header_icon {
-        .arrow_back {
-          left: 100%;
-        }
-
-        img {
-          width: 23% !important;
-          margin-top: 0 !important;
-        }
-      }
-    }
-
-    .nav_nav {
-      background-color: transparent;
-      width: 0;
-      padding: 0;
-      margin: 0;
-      position: fixed;
-      top: 0;
-      border: 0;
-
-      button {
-        outline: 0;
-        font-size: 1.2rem;
-        opacity: 0.5;
-        position: fixed;
-        top: 2.15rem;
-        left: 3rem;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-
-        .icon_before {
-          color: $white_color;
-        }
-      }
-
-      .navbar-collapse {
-        z-index: 9999999;
-      }
-
-      .navbar_ul {
-        background-color: $white_color;
-        width: 15rem;
-        height: 100vh;
-        padding: 0 0;
-        overflow-y: scroll;
-
-        .nav-item {
-          padding: 0.25rem 0.75rem;
-
-          .nav_item_welc {
-            color: $bg_color;
-          }
-
-          .nav-link {
-            color: $bg_color;
-
-            .icon_before {
-              padding-right: 0.5rem;
-            }
-          }
-
-          .dropdown-menu {
-            .dropdown-item {
-              padding: 0.25rem 0;
-              text-align: center;
-              width: 100% !important;
-
-              &.dropdown-item2 {
-                width: 100% !important;
-              }
-            }
-          }
-
-          &.nav_item_logo {
-            margin-bottom: 1rem;
-
-            .arrow_back {
-              color: $bg_color;
-              font-size: 1.5rem;
-              float: right;
-            }
-
-            img {
-              width: 30%;
-              display: block;
-              margin: 0 auto;
-            }
-          }
-        }
-      }
-    }
-
-    .img_carousel {
-      margin-top: 0;
-
-      .owl_one {
-        .item {
-          .owl_one_img {
-            img {
-              height: 22.5rem;
-            }
-          }
-
-          .btn_subscribe {
-            button {
-              top: 93.5%;
-              font-size: 1rem;
-            }
-          }
-        }
-      }
-    }
-
-    .content_carousel {
-      .content_carousel_head {
-        margin-top: 1rem;
-
-        .link_title {
-          h6 {
-            font-weight: bold;
-            font-size: 1.25rem;
-          }
-        }
-
-        .btn_more {
-          padding: 0.25rem 0.75rem;
-          font-size: 1.25rem;
-        }
-      }
-
-      .owl_content_one {
-        .item {
-          width: 100%;
-
-          .card {
-            // height: 15rem;
-            width: 100%;
-
-            .owl_content_img {
-              img {
-                height: 10rem;
-              }
-            }
-          }
-        }
-      }
-
-      .item {
-        .card {
-          // height: 17rem !important;
-
-          .owl_content_img {
-            img {
-              height: 10.969rem !important;
-            }
-          }
-
-          .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1rem;
-            }
-          }
-        }
-      }
-    }
-
-    .list_page {
-      .coming_soon {
-        width: 50%;
-        margin-top: 30% !important;
-      }
-
-      .item {
-        .card {
-          // height: 16rem;
-
-          .owl_content_img {
-            img {
-              height: 11.25rem;
-            }
-          }
-
-          .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1rem;
-            }
-          }
-        }
-      }
-    }
-
-    .mowdo3t_page {
-      .item {
-        .card {
-          height: 13rem;
-
-          .owl_content_img {
-            img {
-              height: 7.188rem;
-            }
-          }
-
-          .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1rem;
-            }
-          }
-        }
-      }
-    }
-
-    .inner_page {
-      margin-top: 0;
-
-      .cover {
-        h4 {
-          font-size: 1.35rem;
-          padding: 0 0.35rem;
-        }
-
-        video {
-          padding: 0 0;
-        }
-
-        img {
-          width: 100%;
-          max-height: 22.5rem;
-        }
+        img {}
 
         button {
           top: 45%;
@@ -1232,64 +1016,39 @@ body {
       .poster {
         .poster-details {
           .title-wrapper {
-            h2 {
-              font-size: 1.25rem;
-            }
+            h2 {}
           }
         }
       }
 
       .socail_media {
-        width: 100%;
-
-        .pa_share {
-          margin-top: 0.75rem;
-        }
+        .pa_share {}
 
         .shear_div {
-          padding-right: 0;
-
           .facebook,
           .twitter,
           .messenger,
-          .whatsapp {
-            width: 90%;
-            height: 2.75rem;
-            margin-left: 0.5rem;
-            margin-top: 0.75rem;
-          }
+          .whatsapp {}
         }
       }
 
       .section_content {
-        .pa_Videos {
-          margin-top: 0.75rem;
-        }
+        .pa_Videos {}
 
         .p_content,
-        .p_content_2 {
-          // margin-left: 2.25rem;
-        }
+        .p_content_2 {}
       }
     }
 
     .modal_cover {
       .modal-dialog {
         .modal-content {
-          top: 2rem;
-
           .modal-header {
-            h5 {
-              font-size: 1.15rem;
-            }
+            h5 {}
           }
 
           .modal-footer {
-            justify-content: center;
-
-            .btn {
-              font-size: 1rem;
-            }
+            .btn {}
           }
         }
       }

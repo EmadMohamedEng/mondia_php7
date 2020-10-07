@@ -848,11 +848,9 @@ body {
   /* End Search Page */
   /* Start Error Page */
   .error_page {
-    svg {
-    }
+    svg {}
 
-    .message-box {
-    }
+    .message-box {}
 
     .buttons-con {
       .action-link-wrap {
@@ -924,14 +922,11 @@ body {
 }
 
 .loading-overlay {
-  .spinner {
-  }
+  .spinner {}
 
-  .spinner-large {
-  }
+  .spinner-large {}
 
-  .spinner-slow {
-  }
+  .spinner-slow {}
 
   .spinner-blue {
     border-top-color: $text_color;
@@ -940,8 +935,7 @@ body {
 }
 
 .alert {
-  .close {
-  }
+  .close {}
 }
 
 .active_menu {
@@ -957,11 +951,9 @@ body {
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {
-  .padding_phones {
-  }
+  .padding_phones {}
 
-  .no_padding {
-  }
+  .no_padding {}
 
   .open_icon_nav_mbc {
     display: none;
@@ -979,6 +971,7 @@ body {
     padding-bottom: 20%;
 
     .header {
+
       .header_logo,
       .header_icon {
         img {
@@ -986,6 +979,7 @@ body {
           margin-top: 0rem !important;
         }
       }
+
       .arrow_back {}
 
       .lang_mbc {
@@ -1002,8 +996,7 @@ body {
         }
       }
 
-      .navbar-collapse {
-      }
+      .navbar-collapse {}
 
       .navbar_ul {
         background-color: $bg_color2 !important;
@@ -1017,8 +1010,7 @@ body {
 
           .dropdown-menu {
             .dropdown-item {
-              &.dropdown-item2 {
-              }
+              &.dropdown-item2 {}
             }
           }
 
@@ -1027,8 +1019,7 @@ body {
               color: $text_color;
             }
 
-            img {
-            }
+            img {}
           }
         }
       }
@@ -1038,13 +1029,11 @@ body {
       .owl_one {
         .item {
           .owl_one_img {
-            img {
-            }
+            img {}
           }
 
           .btn_subscribe {
-            button {
-            }
+            button {}
           }
         }
       }
@@ -1055,8 +1044,7 @@ body {
         .item {
           .card {
             .owl_content_img {
-              img {
-              }
+              img {}
             }
           }
         }
@@ -1067,8 +1055,7 @@ body {
         .item {
           .card {
             .owl_content_img {
-              img {
-              }
+              img {}
             }
           }
         }
@@ -1079,8 +1066,7 @@ body {
         .item {
           .card {
             .owl_content_img {
-              img {
-              }
+              img {}
             }
           }
         }
@@ -1088,19 +1074,16 @@ body {
     }
 
     .list_page {
-      .coming_soon {
-      }
+      .coming_soon {}
 
       .item {
         .card {
           .owl_content_img {
-            img {
-            }
+            img {}
           }
 
           .card-body {
-            .card-title {
-            }
+            .card-title {}
           }
         }
       }
@@ -1108,14 +1091,11 @@ body {
 
     .inner_page {
       .cover {
-        h4 {
-        }
+        h4 {}
 
-        video {
-        }
+        video {}
 
-        img {
-        }
+        img {}
 
         button {}
       }
@@ -1123,31 +1103,27 @@ body {
       .poster {
         .poster-details {
           .title-wrapper {
-            h2 {
-            }
+            h2 {}
           }
         }
       }
 
       .socail_media {
-        .pa_share {
-        }
+        .pa_share {}
 
         .shear_div {
+
           .facebook,
           .twitter,
           .messenger,
-          .whatsapp {
-          }
+          .whatsapp {}
         }
       }
 
       .section_content {
-        .pa_Videos {
-        }
+        .pa_Videos {}
 
-        .p_content {
-        }
+        .p_content {}
       }
     }
 
@@ -1155,13 +1131,11 @@ body {
       .modal-dialog {
         .modal-content {
           .modal-header {
-            h5 {
-            }
+            h5 {}
           }
 
           .modal-footer {
-            .btn {
-            }
+            .btn {}
           }
         }
       }
@@ -1169,66 +1143,53 @@ body {
 
     .azan_page {
       .azan_title {
-        h2 {
-        }
+        h2 {}
       }
 
-      .input_text {
-      }
+      .input_text {}
     }
 
     .nearmosque_page {
       .nearmosque_title {
-        #map {
-        }
+        #map {}
       }
     }
 
     .salah_time_page {
       .salah_time_title {
-        h2 {
-        }
+        h2 {}
       }
 
       .time_btn {
-        .input_span {
-        }
+        .input_span {}
 
-        .h4_time {
-        }
+        .h4_time {}
 
-        .h4_time_2 {
-        }
+        .h4_time_2 {}
       }
     }
 
     .sebha_page {
       .display {
         .btn-bar {
-          button {
-          }
+          button {}
         }
       }
 
       #sebhaModal {
         .modal-dialog {
-          .modal-content {
-          }
+          .modal-content {}
         }
 
-        .modal-title {
-        }
+        .modal-title {}
 
-        .choose_sebha {
-        }
+        .choose_sebha {}
       }
     }
 
-    .subscribe_page {
-    }
+    .subscribe_page {}
 
-    .zakkah_page {
-    }
+    .zakkah_page {}
 
     .zakkah_v2_page {
       .zakah_result {
@@ -1238,12 +1199,10 @@ body {
     }
 
     .merath_page {
-      .border-bottom {
-      }
+      .border-bottom {}
 
       .merath_title {
-        h2 {
-        }
+        h2 {}
       }
 
       .input_text {
@@ -1251,8 +1210,7 @@ body {
       }
 
       .input_span {
-        h4 {
-        }
+        h4 {}
       }
 
       .button_merath {
@@ -1262,8 +1220,7 @@ body {
       }
 
       .table_table {
-        .thead2_h4 {
-        }
+        .thead2_h4 {}
 
         .table {
           border: 2px $text_color solid;
@@ -1272,9 +1229,7 @@ body {
             tr {
 
               // td {}
-              .td_1 {
-
-              }
+              .td_1 {}
             }
           }
         }
@@ -1282,19 +1237,15 @@ body {
     }
 
     .search_page {
-      .textbox {
-      }
+      .textbox {}
     }
 
     .error_page {
-      svg {
-      }
+      svg {}
 
-      .message-box {
-      }
+      .message-box {}
 
-      .buttons-con {
-      }
+      .buttons-con {}
     }
 
     .profile {
@@ -1322,15 +1273,12 @@ body {
   }
 
   .loading-overlay {
-    .spinner-large {
-    }
+    .spinner-large {}
   }
 }
 
 @media (min-width: 360px) and (max-width: 374.9px) {
   .padding_phones {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
   }
 
   .open_icon_nav_mbc {
@@ -1346,129 +1294,87 @@ body {
   }
 
   .no_padding {
-    // padding: 0;
   }
 
   .main_container {
-    width: 100%;
-    padding-top: 4rem;
     padding-bottom: 17%;
 
     .header {
-      position: fixed;
-      top: 0;
-      z-index: 99999999999;
-
       .header_logo,
       .header_icon {
-        .arrow_back {
-          left: 100%;
-        }
 
         img {
           width: 40% !important;
           margin-top: 0.5rem !important;
         }
       }
+
+      .arrow_back {}
+
+      .lang_mbc {
+        margin-right: -18%;
+
+        .dropdown-menu2 {
+          left: -4%;
+          min-width: 8rem;
+        }
+      }
     }
 
     .nav_nav {
-      background-color: transparent;
-      width: 0;
-      padding: 0;
-      margin: 0;
-      position: fixed;
-      top: 0;
-      border: 0;
       display: unset;
 
       button {
-        outline: 0;
-        font-size: 1.2rem;
-        position: fixed;
-        top: 2.15rem;
-        left: 3rem;
+        opacity: 1 !important;
         z-index: -1;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
+
 
         .icon_before {
-          color: $text_color;
+          color: $text_color !important;
         }
       }
 
       .navbar-collapse {
-        z-index: 9999999;
       }
 
       .navbar_ul {
-        background-color: $bg_color2;
-        width: 15rem;
-        height: 100vh;
-        padding: 0 0;
-        overflow-y: scroll;
+        background-color: $bg_color2 !important;
 
         .nav-item {
-          padding: 0.25rem 0.75rem;
-
           .nav-link {
             .icon_before {
-              padding-right: 0.5rem;
               color: $text_color;
             }
           }
 
           .dropdown-menu {
             .dropdown-item {
-              padding: 0.25rem 0;
-              text-align: center;
-              width: 100% !important;
-
               &.dropdown-item2 {
-                width: 100% !important;
               }
             }
           }
 
           &.nav_item_logo {
-            margin-bottom: 1rem;
 
             .arrow_back {
               color: $text_color;
-              font-size: 16px;
-              float: right;
-              margin-top: 7%;
             }
 
-            img {
-              width: 30%;
-              display: block;
-              margin: 0 auto;
-            }
+            img {}
           }
         }
       }
     }
 
     .img_carousel {
-      margin-top: 0;
-
       .owl_one {
         .item {
           .owl_one_img {
-            img {
-              height: 22.5rem;
-            }
+            img {}
           }
 
           .btn_subscribe {
-            button {
-              top: 93.5%;
-              font-size: 1rem;
-            }
+            button {}
           }
         }
       }
@@ -1477,31 +1383,17 @@ body {
     .content_carousel {
       .content_carousel_head {
         .link_title {
-          h6 {
-            font-weight: bold;
-            font-size: 14px;
-
-          }
+          h6 {}
         }
 
-        .btn_more {
-          padding: 0.25rem 0.75rem;
-          font-size: 14px;
-        }
+        .btn_more {}
       }
 
       .owl_content_one {
         .item {
-          width: 100%;
-
           .card {
-            // height: 15rem;
-            width: 100%;
-
             .owl_content_img {
-              img {
-                height: 10rem !important;
-              }
+              img {}
             }
           }
         }
@@ -1510,31 +1402,20 @@ body {
       .owl_content_two,
       .owl_content_three {
         .item {
-          width: 100%;
-
           .card {
-            width: 100%;
-
             .owl_content_img {
-              img {
-                height: 10.969rem !important;
-              }
+              img {}
             }
           }
         }
       }
 
+      .owl_content_four,
       .owl_content_five {
         .item {
-          width: 100%;
-
           .card {
-            width: 100%;
-
             .owl_content_img {
-              img {
-                height: 10.969rem !important;
-              }
+              img {}
             }
           }
         }
@@ -1542,109 +1423,51 @@ body {
     }
 
     .list_page {
-      .coming_soon {
-        width: 50%;
-        margin-top: 30% !important;
-      }
+      .coming_soon {}
 
       .item {
         .card {
-          // height: 15.313rem;
-
           .owl_content_img {
-            img {
-              height: 11.25rem;
-            }
+            img {}
           }
 
           .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1rem;
-            }
-          }
-        }
-      }
-    }
-
-    .mowdo3t_page {
-      .item {
-        .card {
-          height: 13rem;
-
-          .owl_content_img {
-            img {
-              height: 7.188rem;
-            }
-          }
-
-          .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1rem;
-            }
+            .card-title {}
           }
         }
       }
     }
 
     .inner_page {
-      margin-top: 0;
-
       .cover {
-        h4 {
-          font-size: 1.35rem;
-          padding: 0 0.35rem;
-        }
+        h4 {}
 
-        video {
-          padding: 0 0;
-        }
+        video {}
 
-        img {
-          width: 100%;
-          height: 21.5rem;
-        }
+        img {}
       }
 
       .poster {
         .poster-details {
           .title-wrapper {
-            h2 {
-              font-size: 1.25rem;
-            }
+            h2 {}
           }
         }
       }
 
       .socail_media {
-        width: 100%;
-
-        .pa_share {
-          margin-top: 0.75rem;
-        }
+        .pa_share {}
 
         .shear_div {
-          padding-right: 0;
-
           .facebook,
           .twitter,
           .messenger,
-          .whatsapp {
-            width: 90%;
-            height: 2.75rem;
-            margin-left: 0.5rem;
-            margin-top: 0.75rem;
-          }
+          .whatsapp {}
         }
       }
 
       .section_content {
-        .pa_Videos {
-          margin-top: 0.75rem;
-        }
+        .pa_Videos {}
 
         .p_content {
           font-size: 12px;
@@ -1655,20 +1478,12 @@ body {
     .modal_cover {
       .modal-dialog {
         .modal-content {
-          top: 2rem;
-
           .modal-header {
-            h5 {
-              font-size: 1.15rem;
-            }
+            h5 {}
           }
 
           .modal-footer {
-            justify-content: center;
-
-            .btn {
-              font-size: 1rem;
-            }
+            .btn {}
           }
         }
       }
@@ -1910,8 +1725,6 @@ body {
 
   .loading-overlay {
     .spinner-large {
-      bottom: 30%;
-      left: 31%;
     }
   }
 }
