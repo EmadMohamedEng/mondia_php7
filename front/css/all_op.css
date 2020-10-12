@@ -3044,7 +3044,7 @@ select:active {
     text-align: right;
   }
   .main_container .search_page {
-    width: 95%;
+    width: 100%;
     margin: 1.5rem auto;
   }
   .main_container .search_page .btn_search {
