@@ -29,7 +29,7 @@
 
   .main_container .landing_page .strip h3 {
     font-size: 1.35rem;
-    color: #efc049;
+    color: #e0c26c;
   }
 </style>
 
