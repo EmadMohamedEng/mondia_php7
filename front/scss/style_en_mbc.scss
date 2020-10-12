@@ -1988,6 +1988,7 @@ body {
     padding-bottom: 17%;
 
     .header {
+
       .header_logo,
       .header_icon {
         img {
@@ -2142,6 +2143,7 @@ body {
         .pa_share {}
 
         .shear_div {
+
           .facebook,
           .twitter,
           .messenger,
@@ -2321,10 +2323,9 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1023.9px) {
-  .padding_phones {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
+  .padding_phones {}
+
+  .no_padding {}
 
   .open_icon_nav_mbc {
     display: none;
@@ -2338,39 +2339,12 @@ body {
     margin-right: unset !important;
   }
 
-  .no_padding {
-    padding: 0;
-  }
-
   .main_container {
-    width: 100%;
-    padding-top: 4rem;
-
     .header {
-      position: fixed;
-      top: 0;
-      z-index: 99999999999;
-      height: 5.5rem;
-
-      .lang_mbc {
-        font-size: 1.5rem;
-      }
 
       .header_logo,
       .header_icon {
-        width: 100%;
-
-        .arrow_back {
-          left: 100%;
-          top: 1.75rem;
-          font-size: 2rem;
-        }
-
-        h6 {
-          font-size: 2rem;
-          margin-top: 0.25rem;
-          padding-left: 0;
-        }
+        h6 {}
 
         img {
           width: 30% !important;
@@ -2379,14 +2353,13 @@ body {
         }
 
         &.header_icon {
-          i {
-            font-size: 2rem;
-            margin-top: 1rem;
-          }
+          i {}
         }
       }
 
       .lang_mbc {
+        font-size: 1.5rem;
+
         .dropdown-menu2 {
           right: 0 !important;
           left: 37% !important;
@@ -2394,157 +2367,90 @@ body {
           font-size: 1.5rem;
         }
       }
+
+      .arrow_back {}
     }
 
     .nav_nav {
-      background-color: transparent;
-      width: 0;
-      padding: 0;
-      margin: 0;
-      position: fixed;
-      top: 0;
-      border: 0;
       display: unset;
 
       button {
-        outline: 0;
-        font-size: 1.5rem;
-        position: fixed;
-        top: 2.85rem;
-        left: 4rem;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
+        opacity: 1 !important;
 
         .icon_before {
-          color: $text_color
+          color: $text_color !important;
         }
       }
 
-      .navbar-collapse {
-        z-index: 9999999;
-      }
+      .navbar-collapse {}
 
       .navbar_ul {
-        background-color: $bg_color2;
-        width: 23rem;
-        height: 100vh;
-        padding: 0 0;
-        overflow-y: scroll;
+        background-color: $bg_color2 !important;
 
         .nav-item {
-          padding: 0.25rem 0.75rem;
-          font-size: 1.5rem;
-
           .nav-link {
             .icon_before {
-              padding-right: 0.5rem;
               color: $text_color;
             }
           }
 
           .dropdown-menu {
             .dropdown-item {
-              padding: 0.25rem 0.75rem;
-              text-align: center;
-              width: 100% !important;
-              font-size: 1.5rem;
-
-              &.dropdown-item2 {
-                width: 100% !important;
-              }
+              &.dropdown-item2 {}
             }
           }
 
           &.nav_item_logo {
-            margin-bottom: 1rem;
-
             .arrow_back {
               color: $text_color;
-              font-size: 1.5rem;
-              float: right;
             }
 
-            img {
-              width: 30%;
-              display: block;
-              margin: 0 auto;
-            }
+            img {}
           }
         }
       }
     }
 
     .img_carousel {
-      margin-top: 0;
-
       .owl_one {
         .item {
           .owl_one_img {
-            img {
-              height: 48rem;
-            }
+            img {}
           }
 
           .btn_subscribe {
-            height: 5rem;
-
-            button {
-              top: 95%;
-              font-size: 1.75rem;
-            }
+            button {}
           }
         }
       }
 
-      .owl-theme .owl-dots .owl-dot span {
-        width: 18px;
-        height: 18px;
-      }
+      .owl-theme .owl-dots .owl-dot span {}
     }
 
     .content_carousel {
       .content_carousel_head {
         .link_title {
-          h6 {
-            font-size: 2rem;
-            font-weight: bold;
-          }
+          h6 {}
         }
 
-        .btn_more {
-          padding: 0.25rem 1rem;
-          font-size: 1.85rem;
-        }
+        .btn_more {}
       }
 
       .owl_content_one {
         .item {
           .card {
-            // height: 22.625rem;
-
             .owl_content_img {
               img {
-                height: 20rem;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
               }
             }
 
             .card-body {
-              padding: 1.25rem 0.25rem;
-
-              .card-title {
-                text-align: center;
-                font-size: 1.9rem;
-              }
+              .card-title {}
 
               .card-text {
-                i {
-                  color: $grey_color;
-                }
+                i {}
               }
             }
           }
@@ -2554,28 +2460,18 @@ body {
       .owl_content_two {
         .item {
           .card {
-            // height: 14rem;
-
             .owl_content_img {
               img {
-                height: 20rem;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
               }
             }
 
             .card-body {
-              padding: 1.25rem 0.25rem;
-
-              .card-title {
-                text-align: center;
-                font-size: 1.05rem;
-              }
+              .card-title {}
 
               .card-text {
-                i {
-                  color: $grey_color;
-                }
+                i {}
               }
             }
           }
@@ -2585,28 +2481,18 @@ body {
       .owl_content_three {
         .item {
           .card {
-            // height: 14rem;
-
             .owl_content_img {
               img {
-                height: 20rem;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
               }
             }
 
             .card-body {
-              padding: 1.25rem 0.25rem;
-
-              .card-title {
-                text-align: center;
-                font-size: 1.35rem;
-              }
+              .card-title {}
 
               .card-text {
-                i {
-                  color: $grey_color;
-                }
+                i {}
               }
             }
           }
@@ -2616,28 +2502,18 @@ body {
       .owl_content_four {
         .item {
           .card {
-            // height: 16rem;
-
             .owl_content_img {
               img {
-                height: 9.375rem;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
               }
             }
 
             .card-body {
-              padding: 1.25rem 0.25rem;
-
-              .card-title {
-                text-align: center;
-                font-size: 1.05rem;
-              }
+              .card-title {}
 
               .card-text {
-                i {
-                  color: $grey_color;
-                }
+                i {}
               }
             }
           }
@@ -2647,39 +2523,22 @@ body {
       .owl_content_five {
         .item {
           .card {
-            // height: 14rem;
-
-            &.card_muslim_guid {
-              // height: 11.625rem !important;
-            }
+            &.card_muslim_guid {}
 
             .owl_content_img {
               img {
-                height: 20rem;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
 
-
-                &.img_muslim_guid {
-                  height: 11.859rem !important;
-                  width: 50% !important;
-                  margin: 0 auto;
-                }
+                &.img_muslim_guid {}
               }
             }
 
             .card-body {
-              padding: 1.25rem 0.25rem;
-
-              .card-title {
-                text-align: center;
-                font-size: 1.35rem;
-              }
+              .card-title {}
 
               .card-text {
-                i {
-                  color: $grey_color;
-                }
+                i {}
               }
             }
           }
@@ -2688,158 +2547,77 @@ body {
     }
 
     .list_page {
-      .coming_soon {
-        width: 40%;
-        margin-top: 30% !important;
-        font-size: 1.5rem;
-      }
+      .coming_soon {}
 
       .content_carousel_head {
         .link_title {
-          h6 {
-            font-size: 2rem;
-            font-weight: bold;
-          }
+          h6 {}
         }
       }
 
       .item {
         .card {
-          // height: 22.438rem;
-
           .owl_content_img {
-            img {
-              height: 17.625rem;
-            }
+            img {}
           }
 
           .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1.65rem;
-            }
-          }
-        }
-      }
-    }
-
-    .mowdo3t_page {
-      .item {
-        .card {
-          height: 13rem;
-
-          .owl_content_img {
-            img {
-              height: 7.188rem;
-            }
-          }
-
-          .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1rem;
-            }
+            .card-title {}
           }
         }
       }
     }
 
     .inner_page {
-      margin-top: 0;
-
       .section_content {
-        .image_inner {
-          height: 170px;
-          width: 170px;
-        }
+        .image_inner {}
       }
 
       .cover {
-        h4 {
-          font-size: 2rem;
-          padding: 0 1rem;
-        }
+        h4 {}
 
-        video {
-          padding: 0 0;
-        }
+        video {}
 
-        img {
-          width: 100%;
-          height: 43.75rem;
-        }
+        img {}
       }
 
       .poster {
         .poster-details {
           .title-wrapper {
-            h2 {
-              font-size: 1.65rem;
-            }
+            h2 {}
           }
 
-          .outside-cover {
-            font-size: 1.25rem
-          }
+          .outside-cover {}
         }
       }
 
       .socail_media {
-        width: 100%;
-
-        .pa_share {
-          margin-top: 0.75rem;
-          font-size: 1.65rem;
-        }
+        .pa_share {}
 
         .shear_div {
-          padding-right: 0;
 
           .facebook,
           .twitter,
           .messenger,
-          .whatsapp {
-            width: 90%;
-            height: 3.5rem;
-            margin-left: 4.5rem;
-            margin-top: 0.75rem;
-            font-size: 1.75rem;
-          }
+          .whatsapp {}
         }
       }
 
       .section_content {
-        .pa_Videos {
-          margin-top: 0.75rem;
-          font-size: 1.65rem;
-        }
+        .pa_Videos {}
 
         .p_content,
-        .p_content_2 {
-          // margin-top: 6rem;
-          // margin-left: 0.75rem;
-          font-size: 16px;
-        }
+        .p_content_2 {}
       }
     }
 
     .modal_cover {
       .modal-dialog {
-        max-width: 90%;
-
         .modal-content {
           .modal-header {
-            h5 {
-              font-size: 1.85rem;
-              width: 100%;
-            }
+            h5 {}
 
-            .close {
-              margin: -0.75rem -1rem -1rem auto;
-              font-size: 2.5rem;
-            }
+            .close {}
           }
 
           .modal-body {
@@ -2847,186 +2625,91 @@ body {
 
               .btn,
               strong,
-              p {
-                font-size: 2rem;
-              }
+              p {}
             }
           }
 
           .modal-footer {
-            padding: 1rem;
-
-            .btn {
-              font-size: 2rem;
-              padding: 0.5rem 4rem;
-              margin: 0 1rem;
-            }
+            .btn {}
           }
         }
       }
     }
 
     .azan_page {
-      margin: 2.5rem auto;
-
       .azan_title {
-        h2 {
-          font-size: 2.25rem;
-        }
+        h2 {}
       }
 
       .input_text {
-        width: 85%;
-
-        .azan_input {
-          height: 4rem;
-          font-size: 2.5rem;
-        }
+        .azan_input {}
       }
     }
 
     .nearmosque_page {
-      margin: 2.5rem auto;
-
       .nearmosque_title {
-        h2 {
-          font-size: 2.5rem;
-        }
+        h2 {}
 
-        #map {
-          width: 75%;
-        }
+        #map {}
       }
     }
 
     .salah_time_page {
-      width: 95%;
-      margin: 2.5rem auto;
-
       .salah_time_title {
-        h2 {
-          margin-bottom: 1rem;
-          font-size: 2.5rem;
-        }
+        h2 {}
       }
 
       .time_btn {
-        margin-bottom: 4%;
-        height: 4.5rem;
+        .input_span {}
 
-        .input_span {
-          padding: 0 !important;
-        }
+        .h4_time {}
 
-        .h4_time {
-          float: left;
-          padding-left: 10px;
-          line-height: 4rem;
-          font-size: 2rem;
-        }
-
-        .h4_time_2 {
-          float: right;
-          padding-right: 10px;
-          line-height: 4rem;
-          font-size: 2rem;
-        }
+        .h4_time_2 {}
       }
     }
 
     .sebha_page {
-      margin: 11rem auto;
-
       .display {
-        #tally {
-          width: 200px;
-          height: 200px;
-          line-height: 200px;
-          font-size: 80px;
-        }
+        #tally {}
 
         .btn-bar {
-          margin-top: 3rem;
-
-          button {
-            width: 100%;
-            height: 6.5rem;
-          }
+          button {}
         }
       }
 
       #sebhaModal {
         .modal-dialog {
-          position: relative;
-          margin: 0;
-
-          .modal-content {
-            width: 90%;
-            position: fixed;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-          }
+          .modal-content {}
         }
 
-        .close {
-          font-size: 2.5rem;
-        }
+        .close {}
 
-        .modal-title {
-          font-size: 2.25rem;
-        }
+        .modal-title {}
 
-        .choose_sebha {
-          font-size: 2.10rem;
-          height: 4.5rem;
-        }
+        .choose_sebha {}
       }
     }
 
     .subscribe_page {
-      width: 100%;
-      margin: 2.5rem auto;
-
       .subscribe_bg {
-        font-size: 1.85rem;
-
         .form-signin {
-          .account-wall input {
-            font-size: 2rem;
-          }
+          .account-wall input {}
 
           .buttons {
-            button {
-              font-size: 2rem;
-            }
+            button {}
           }
         }
       }
     }
 
     .zakkah_page {
-      width: 90%;
-      margin: 2.5rem auto;
+      h4 {}
 
-      h4 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        font-size: 2rem;
-      }
+      p {}
 
       .zakah_zakah {
         .form_zakah {
-          .field {
-            font-size: 1.5rem;
-          }
+          .field {}
         }
       }
     }
@@ -3050,79 +2733,37 @@ body {
     }
 
     .merath_page {
-      width: 90%;
-      margin: 2.5rem auto;
-
-      .border-bottom {
-        // margin-top: 0.25rem;
-        margin-bottom: 0.75rem;
-      }
+      .border-bottom {}
 
       .merath_title {
-        h2 {
-          text-align: center;
-          margin-bottom: 1.5rem;
-          font-size: 2rem;
-        }
+        h2 {}
       }
 
       .input_text {
-        .merath_input {
-          font-size: 1.5rem;
-        }
+        .merath_input {}
       }
 
       .input_span {
-        h4 {
-          line-height: 4rem;
-          font-size: 1.5rem;
-        }
+        h4 {}
       }
 
       .button_merath {
-        text-align: center;
-        margin: 5% auto;
-
         .merath_btn {
-          width: 60%;
-          color: $white_color;
-          font-size: 2rem;
-          font-weight: bold;
-          text-align: center;
-          border: 0;
-          // border-image-source: linear-gradient(45deg, $text_color 40%, $text_color 60%);
-          // border-image-slice: 1;
-          // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, $text_color);
           background: $bg_color;
-          border-radius: 8px;
-          -webkit-border-radius: 8px;
-          -moz-border-radius: 8px;
-          -ms-border-radius: 8px;
-          -o-border-radius: 8px;
         }
       }
 
       .table_table {
-        .thead2_h4 {
-          font-size: 1.75rem;
-          margin-bottom: 1rem;
-        }
+        .thead2_h4 {}
 
         .table {
           border: 2px $text_color solid;
-          border-radius: 7px;
-          direction: rtl;
 
           tbody {
             tr {
-              td {
-                font-size: 1.35rem;
-                padding: 1rem 1rem;
-              }
+              td {}
 
-              .td_1 {
-                text-align: right;
-              }
+              .td_1 {}
             }
           }
         }
@@ -3130,38 +2771,17 @@ body {
     }
 
     .search_page {
-      width: 95%;
-      margin: 1.5rem auto;
+      .btn_search {}
 
-      .btn_search {
-        font-size: 1.5rem
-      }
-
-      .textbox {
-        text-align: center;
-        height: 4.5rem !important;
-        font-size: 2rem;
-      }
+      .textbox {}
     }
 
     .error_page {
-      margin: 2rem auto 0 0;
+      svg {}
 
-      svg {
-        height: 80%;
-      }
+      .message-box {}
 
-      .message-box {
-        font-size: 2.5rem;
-        top: -45rem;
-        left: 43%;
-      }
-
-      .buttons-con {
-        font-size: 2.5rem;
-        top: -7rem;
-        left: 50%;
-      }
+      .buttons-con {}
     }
 
     .profile {
@@ -3189,18 +2809,11 @@ body {
   }
 
   .loading-overlay {
-    .spinner-large {
-      bottom: 30%;
-      left: 35%;
-    }
+    .spinner-large {}
   }
 
   .alert {
-    font-size: 2.15rem;
-
-    .close {
-      font-size: 2.15rem;
-    }
+    .close {}
   }
 }
 

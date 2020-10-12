@@ -3329,6 +3329,7 @@ select {
 
       .socail_media {
         width: 75%;
+
         .pa_share {
           margin-top: 0.75rem;
           font-size: 1rem;
@@ -3631,7 +3632,7 @@ select {
   }
 
   .main_container {
-    width: 100%;
+    width: 100% !important;
     padding-top: 4rem;
 
     .header {
@@ -3644,17 +3645,13 @@ select {
       .header_icon {
         width: 100%;
 
-
         h6 {
           font-size: 2rem;
           margin-top: 0.25rem;
           padding-left: 0;
         }
 
-        img {
-          width: 15% !important;
-          margin-top: 0.5rem !important;
-        }
+        img {}
 
         &.header_icon {
           i {
@@ -3714,6 +3711,7 @@ select {
           font-size: 1.5rem;
 
           .nav-link {
+            font-size: 1rem;
 
             .icon_before {
               padding-right: 0.5rem;
@@ -3725,7 +3723,7 @@ select {
               padding: 0.25rem 0.75rem;
               text-align: center;
               width: 100% !important;
-              font-size: 1.2rem !important;
+              font-size: 0.9rem !important;
 
               &.dropdown-item2 {
                 width: 100% !important;
@@ -3758,7 +3756,7 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 48rem;
+              height: 46rem;
             }
           }
 
@@ -3766,6 +3764,7 @@ select {
             height: 5rem;
 
             button {
+              width: 50%;
               top: 95%;
               font-size: 1.75rem;
             }
@@ -3781,11 +3780,9 @@ select {
 
     .content_carousel {
       .content_carousel_head {
-        margin-top: 1rem;
-
         .link_title {
           h6 {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
           }
         }
@@ -3799,12 +3796,11 @@ select {
       .owl_content_one {
         .item {
           .card {
-            // height: 25rem !important;
             width: 100%;
 
             .owl_content_img {
               img {
-                height: 19rem !important;
+                height: 22.719rem !important;
               }
             }
 
@@ -3813,7 +3809,7 @@ select {
 
               .card-title {
                 text-align: center;
-                font-size: 1.9rem;
+                font-size: 1.25rem;
               }
 
               .card-text {
@@ -3830,11 +3826,11 @@ select {
       .owl_content_two {
         .item {
           .card {
-            // height: 19rem !important;
+            width: 100%;
 
             .owl_content_img {
               img {
-                height: 14rem !important;
+                height: 22.719rem !important;
               }
             }
 
@@ -3843,7 +3839,7 @@ select {
 
               .card-title {
                 text-align: center;
-                font-size: 1.05rem;
+                font-size: 1.25rem;
               }
 
               .card-text {
@@ -3860,11 +3856,11 @@ select {
       .owl_content_three {
         .item {
           .card {
-            // height: 19rem !important;
+            width: 100%;
 
             .owl_content_img {
               img {
-                height: 14rem !important;
+                height: 22.719rem !important;
               }
             }
 
@@ -3873,7 +3869,7 @@ select {
 
               .card-title {
                 text-align: center;
-                font-size: 1.05rem;
+                font-size: 1.25rem;
               }
 
               .card-text {
@@ -3890,7 +3886,7 @@ select {
       .owl_content_four {
         .item {
           .card {
-            // height: 16rem;
+            width: 100%;
 
             .owl_content_img {
               img {
@@ -3905,7 +3901,7 @@ select {
 
               .card-title {
                 text-align: center;
-                font-size: 1.05rem;
+                font-size: 1.25rem;
               }
 
               .card-text {
@@ -3922,11 +3918,17 @@ select {
       .owl_content_five {
         .item {
           .card {
-            // height: 17rem !important;
+            width: 100%;
 
             .owl_content_img {
               img {
-                height: 12rem !important;
+                height: 22.719rem !important;
+
+                &.img_muslim_guid {
+                  height: 11.859rem !important;
+                  width: 50% !important;
+                  margin: 0 auto;
+                }
               }
             }
 
@@ -3935,7 +3937,7 @@ select {
 
               .card-title {
                 text-align: center;
-                font-size: 1.05rem;
+                font-size: 1.25rem;
               }
 
               .card-text {
@@ -3960,7 +3962,7 @@ select {
       .content_carousel_head {
         .link_title {
           h6 {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
           }
         }
@@ -3968,33 +3970,9 @@ select {
 
       .item {
         .card {
-          // height: 23.5rem;
-
           .owl_content_img {
             img {
-              height: 16.625rem;
-            }
-          }
-
-          .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1.65rem;
-            }
-          }
-        }
-      }
-    }
-
-    .mowdo3t_page {
-      .item {
-        .card {
-          height: 13rem;
-
-          .owl_content_img {
-            img {
-              height: 7.188rem;
+              height: 15.208rem;
             }
           }
 
@@ -4021,7 +3999,7 @@ select {
 
       .cover {
         h4 {
-          font-size: 2rem;
+          font-size: 1rem;
           padding: 0 1rem;
         }
 
@@ -4031,7 +4009,13 @@ select {
 
         img {
           width: 100%;
-          height: 45rem;
+          height: 43.75rem;
+        }
+
+        audio {
+          width: 94% !important;
+          margin-top: -3.5% !important;
+          margin-left: 3%;
         }
 
         button {
@@ -4044,12 +4028,12 @@ select {
         .poster-details {
           .title-wrapper {
             h2 {
-              font-size: 1.65rem;
+              font-size: 1rem;
             }
           }
 
           .outside-cover {
-            font-size: 1.25rem
+            font-size: 0.85rem
           }
         }
       }
@@ -4059,7 +4043,7 @@ select {
 
         .pa_share {
           margin-top: 0.75rem;
-          font-size: 1.65rem;
+          font-size: 1rem;
         }
 
         .shear_div {
@@ -4069,7 +4053,7 @@ select {
           .twitter,
           .messenger,
           .whatsapp {
-            width: 90%;
+            width: 50%;
             height: 3.5rem;
             margin-left: 4.5rem;
             margin-top: 0.75rem;
@@ -4081,25 +4065,27 @@ select {
       .section_content {
         .pa_Videos {
           margin-top: 0.75rem;
-          font-size: 1.65rem;
+          font-size: 1rem;
         }
 
         .p_content,
         .p_content_2 {
           margin-left: 1.25rem;
-          font-size: 1.25rem;
+          font-size: 1rem;
         }
       }
     }
 
     .modal_cover {
       .modal-dialog {
-        max-width: 90%;
+        max-width: 95%;
 
         .modal-content {
+          left: 0;
+
           .modal-header {
             h5 {
-              font-size: 1.85rem;
+              font-size: 1.5rem;
               width: 100%;
             }
 
@@ -4115,7 +4101,7 @@ select {
               .btn,
               strong,
               p {
-                font-size: 2rem;
+                font-size: 1.5rem;
               }
             }
           }
@@ -4124,7 +4110,7 @@ select {
             padding: 1rem;
 
             .btn {
-              font-size: 2rem;
+              font-size: 1.5rem;
               padding: 0.5rem 4rem;
               margin: 0 1rem;
             }
@@ -4157,11 +4143,11 @@ select {
 
       .nearmosque_title {
         h2 {
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
 
         #map {
-          width: 75%;
+          width: 90%;
         }
       }
     }
@@ -4173,7 +4159,7 @@ select {
       .salah_time_title {
         h2 {
           margin-bottom: 1rem;
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
       }
 
@@ -4186,17 +4172,15 @@ select {
         }
 
         .h4_time {
-          float: left;
-          padding-left: 10px;
+          padding: 0 10px;
           line-height: 4rem;
-          font-size: 2rem;
+          font-size: 1.25rem;
         }
 
         .h4_time_2 {
-          float: right;
-          padding-right: 10px;
+          padding: 0 10px;
           line-height: 4rem;
-          font-size: 2rem;
+          font-size: 1.25rem;
         }
       }
     }
@@ -4228,9 +4212,10 @@ select {
           margin: 0;
 
           .modal-content {
+            width: 95%;
             position: fixed;
             top: 55%;
-            left: 50%;
+            left: 50% !important;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -4244,11 +4229,11 @@ select {
         }
 
         .modal-title {
-          font-size: 2.25rem;
+          font-size: 2rem;
         }
 
         .choose_sebha {
-          font-size: 2.10rem;
+          font-size: 1.75rem;
           height: 4.5rem;
         }
       }
@@ -4276,22 +4261,22 @@ select {
     }
 
     .zakkah_page {
-      width: 90%;
+      width: 95%;
       margin: 2.5rem auto;
 
       h4 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin-bottom: 1rem;
       }
 
       p {
-        font-size: 2rem;
+        font-size: 1.25rem;
       }
 
       .zakah_zakah {
         .form_zakah {
           .field {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
 
             label {
               float: left;
@@ -4302,7 +4287,7 @@ select {
     }
 
     .merath_page {
-      width: 90%;
+      width: 95%;
       margin: 2.5rem auto;
 
       .border-bottom {
@@ -4314,20 +4299,20 @@ select {
         h2 {
           text-align: center;
           margin-bottom: 1.5rem;
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
       }
 
       .input_text {
         .merath_input {
-          font-size: 2rem;
+          font-size: 1.25rem;
         }
       }
 
       .input_span {
         h4 {
           line-height: 4rem;
-          font-size: 2rem;
+          font-size: 1.25rem;
         }
       }
 
@@ -4336,9 +4321,9 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          width: 50%;
+          width: 60%;
           color: $white_color;
-          font-size: 2rem;
+          font-size: 1.5rem;
           font-weight: bold;
           text-align: center;
           border: 0;
@@ -4352,19 +4337,18 @@ select {
 
       .table_table {
         .thead2_h4 {
-          font-size: 2.25rem;
+          font-size: 1.75rem;
           margin-bottom: 1rem;
         }
 
         .table {
-          border: 2px #00a9ce solid;
           border-radius: 7px;
           direction: rtl;
 
           tbody {
             tr {
               td {
-                font-size: 2.10rem;
+                font-size: 1.35rem;
                 padding: 1rem 1rem;
               }
 
