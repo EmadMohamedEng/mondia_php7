@@ -25,7 +25,7 @@ body {
 
   /* Start Header */
   .header {
-    position: unset;
+    position: unset !important;
     background: $bg_color2;
 
     .header_logo,
@@ -57,6 +57,10 @@ body {
         background-color: $bg_color2;
       }
     }
+  }
+
+  .navbar {
+    // z-index: -999;
   }
 
   .nav_nav {
@@ -974,7 +978,7 @@ body {
     padding-bottom: 20%;
 
     .header {
-
+      position: fixed !important;
       .header_logo,
       .header_icon {
         img {
@@ -1301,7 +1305,7 @@ body {
     padding-bottom: 17%;
 
     .header {
-
+      position: fixed !important;
       .header_logo,
       .header_icon {
 
@@ -1651,7 +1655,7 @@ body {
     padding-bottom: 17%;
 
     .header {
-
+      position: fixed !important;
       .header_logo,
       .header_icon {
         img {
@@ -1991,7 +1995,7 @@ body {
     padding-bottom: 17%;
 
     .header {
-
+      position: fixed !important;
       .header_logo,
       .header_icon {
         img {
@@ -2344,7 +2348,7 @@ body {
 
   .main_container {
     .header {
-
+      position: fixed !important;
       .header_logo,
       .header_icon {
         h6 {}
@@ -2843,7 +2847,7 @@ body {
 
   .main_container {
     .header {
-
+      position: fixed !important;
       .header_logo,
       .header_icon {
         h6 {}

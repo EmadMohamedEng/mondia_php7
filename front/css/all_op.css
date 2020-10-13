@@ -416,11 +416,11 @@ select:active {
   position: relative;
 }
 .main_container .inner_page .cover video {
-  padding: 0 2rem;
+  border-radius: 10px;
 }
 .main_container .inner_page .cover img {
   max-height: 36.438rem;
-  width: 92%;
+  width: 100% !important;
   margin: 0 auto;
   display: block;
   border-radius: 0.5rem;
@@ -430,9 +430,9 @@ select:active {
   -o-border-radius: 0.5rem;
 }
 .main_container .inner_page .cover audio {
-  margin-left: 4%;
+  margin-left: 0;
   margin-top: -4%;
-  width: 92% !important;
+  width: 100% !important;
 }
 .main_container .inner_page .cover button {
   border: 0;
@@ -606,7 +606,7 @@ select:active {
 }
 .main_container .nearmosque_page {
   margin: 3rem auto;
-  width: 90%;
+  width: 95%;
 }
 .main_container .nearmosque_page .nearmosque_title h2 {
   margin-bottom: 1.5rem;
@@ -618,7 +618,7 @@ select:active {
   border-radius: 14px;
 }
 .main_container .salah_time_page {
-  width: 90%;
+  width: 95%;
   margin: 1.5rem auto;
 }
 .main_container .salah_time_page .salah_time_title h2 {
@@ -672,7 +672,7 @@ select:active {
 }
 .main_container .zakkah_page {
   margin: 2rem auto;
-  width: 70%;
+  width: 95%;
 }
 .main_container .zakkah_page .zakah_zakah .border-bottom {
   margin-top: 1rem;
@@ -714,7 +714,7 @@ select:active {
   color: white;
 }
 .main_container .merath_page {
-  width: 90%;
+  width: 95%;
   margin: 1.5rem auto;
 }
 .main_container .merath_page .border-bottom {
@@ -2804,9 +2804,9 @@ select:active {
     height: 43.75rem;
   }
   .main_container .inner_page .cover audio {
-    width: 94% !important;
+    width: 100% !important;
     margin-top: -3.5% !important;
-    margin-left: 3%;
+    margin-left: 0%;
   }
   .main_container .inner_page .cover button {
     font-size: 1.75rem;

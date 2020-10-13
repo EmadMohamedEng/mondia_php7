@@ -549,12 +549,13 @@ select {
       position: relative;
 
       video {
-        padding: 0 2rem;
+        // padding: 0 2rem;
+        border-radius: 10px;
       }
 
       img {
         max-height: 36.438rem;
-        width: 92%;
+        width: 100% !important;
         margin: 0 auto;
         display: block;
         border-radius: 0.5rem;
@@ -565,9 +566,9 @@ select {
       }
 
       audio {
-        margin-left: 4%;
+        margin-left: 0;
         margin-top: -4%;
-        width: 92% !important;
+        width: 100% !important;
       }
 
       button {
@@ -800,7 +801,7 @@ select {
   /* Start Nearmosque Page */
   .nearmosque_page {
     margin: 3rem auto;
-    width: 90%;
+    width: 95%;
 
     .nearmosque_title {
       h2 {
@@ -820,7 +821,7 @@ select {
 
   /* Start Salah Page */
   .salah_time_page {
-    width: 90%;
+    width: 95%;
     margin: 1.5rem auto;
 
     .salah_time_title {
@@ -899,7 +900,7 @@ select {
   /* Start Zakkah Page */
   .zakkah_page {
     margin: 2rem auto;
-    width: 70%;
+    width: 95%;
 
     .zakah_zakah {
       .border-bottom {
@@ -965,7 +966,7 @@ select {
 
   /* Start Merath Page */
   .merath_page {
-    width: 90%;
+    width: 95%;
     margin: 1.5rem auto;
 
     .border-bottom {
@@ -4013,9 +4014,9 @@ select {
         }
 
         audio {
-          width: 94% !important;
+          width: 100% !important;
           margin-top: -3.5% !important;
-          margin-left: 3%;
+          margin-left: 0%;
         }
 
         button {
