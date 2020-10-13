@@ -3095,7 +3095,7 @@ select:active {
   }
 
   .main_container {
-    width: 100%;
+    width: 100% !important;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -3113,11 +3113,6 @@ select:active {
     font-size: 2.5rem;
     margin-top: 0.25rem;
     padding-left: 0;
-  }
-  .main_container .header .header_logo img,
-.main_container .header .header_icon img {
-    width: 16% !important;
-    margin-top: 0.25rem !important;
   }
   .main_container .header .header_logo.header_icon i,
 .main_container .header .header_icon.header_icon i {
@@ -3168,6 +3163,9 @@ select:active {
     padding: 0.25rem 0.75rem;
     font-size: 2rem;
   }
+  .main_container .nav_nav .navbar_ul .nav-item .nav-link {
+    font-size: 1.75rem;
+  }
   .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     padding-right: 0.5rem;
   }
@@ -3175,7 +3173,7 @@ select:active {
     padding: 0.25rem 0.75rem;
     text-align: center;
     width: 100% !important;
-    font-size: 1.75rem !important;
+    font-size: 1.5rem !important;
   }
   .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
@@ -3196,51 +3194,106 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 25.938rem;
+    height: 31rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
     height: 6.5rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
     top: 91%;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .main_container .img_carousel .owl-theme .owl-dots .owl-dot span {
     width: 18px;
     height: 18px;
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
-    font-size: 2.35rem;
+    font-size: 1.75rem;
     font-weight: bold;
   }
   .main_container .content_carousel .content_carousel_head .btn_more {
     padding: 0.25rem 1.5rem;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   .main_container .content_carousel .owl_content_one .item .card {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-    height: 26rem !important;
+    height: 28rem;
   }
   .main_container .content_carousel .owl_content_one .item .card .card-body {
     padding: 1.25rem 0.25rem;
   }
   .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
     text-align: center;
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
   .main_container .content_carousel .owl_content_one .item .card .card-body .card-text i {
     color: #adadad;
   }
-  .main_container .content_carousel .item .card .owl_content_img img {
-    height: 20.938rem;
+  .main_container .content_carousel .owl_content_two .item .card {
+    width: 100%;
   }
-  .main_container .content_carousel .item .card .card-body {
-    padding: 1rem 0.25rem;
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
+    height: 25rem;
   }
-  .main_container .content_carousel .item .card .card-body .card-title {
-    font-size: 2.1rem;
+  .main_container .content_carousel .owl_content_two .item .card .card-body {
+    padding: 1.25rem 0.25rem;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .card-body .card-text i {
+    color: #adadad;
+  }
+  .main_container .content_carousel .owl_content_three .item .card {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+    height: 20.333rem;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .card-body {
+    padding: 1.25rem 0.25rem;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .card-body .card-text i {
+    color: #adadad;
+  }
+  .main_container .content_carousel .owl_content_four .item .card {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .owl_content_img img {
+    height: 15.141rem;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .card-body {
+    padding: 1.25rem 0.25rem;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .card-body .card-text i {
+    color: #adadad;
+  }
+  .main_container .content_carousel .owl_content_five .item .card {
+    width: 100%;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 15.141rem;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .card-body {
+    padding: 1.25rem 0.25rem;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .card-body .card-text i {
+    color: #adadad;
   }
   .main_container .list_page {
     margin: 3.5rem auto;
@@ -3251,29 +3304,17 @@ select:active {
     font-size: 1.5rem;
   }
   .main_container .list_page .content_carousel_head .link_title h6 {
-    font-size: 2.35rem;
+    font-size: 1.75rem;
     font-weight: bold;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 21.25rem;
+    height: 20.5rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
   }
   .main_container .list_page .item .card .card-body .card-title {
-    font-size: 2.25rem;
-  }
-  .main_container .mowdo3t_page .item .card {
-    height: 13rem;
-  }
-  .main_container .mowdo3t_page .item .card .owl_content_img img {
-    height: 7.188rem;
-  }
-  .main_container .mowdo3t_page .item .card .card-body {
-    padding: 1rem 0.25rem;
-  }
-  .main_container .mowdo3t_page .item .card .card-body .card-title {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .main_container .inner_page {
     margin-top: 0;
@@ -3283,33 +3324,38 @@ select:active {
     width: 200px;
   }
   .main_container .inner_page .cover h4 {
-    font-size: 2.35rem;
+    font-size: 2rem;
     padding: 0 1rem;
   }
   .main_container .inner_page .cover video {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 100%;
-    height: 60rem;
+    width: 100% !important;
+    max-height: 62rem;
+  }
+  .main_container .inner_page .cover audio {
+    width: 100% !important;
+    margin-top: -2.5% !important;
+    margin-left: 0%;
   }
   .main_container .inner_page .cover .button_play {
-    font-size: 2.25rem;
+    font-size: 2rem;
     padding: 0.5rem 2rem;
     left: 35%;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
   .main_container .inner_page .poster .poster-details .outside-cover {
-    font-size: 1.75rem;
+    font-size: 1.2rem;
   }
   .main_container .inner_page .socail_media {
     width: 100%;
   }
   .main_container .inner_page .socail_media .pa_share {
     margin-top: 0.75rem;
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .main_container .inner_page .socail_media .shear_div {
     padding-right: 0;
@@ -3318,7 +3364,7 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
-    width: 90%;
+    width: 60%;
     height: 5rem;
     margin-left: 5.5rem;
     margin-top: 0.75rem;
@@ -3326,19 +3372,22 @@ select:active {
   }
   .main_container .inner_page .section_content .pa_Videos {
     margin-top: 0.75rem;
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 1.5rem;
+    margin-left: 4%;
     margin-top: 0;
-    font-size: 30px;
+    font-size: 20px;
   }
   .main_container .modal_cover .modal-dialog {
-    max-width: 90%;
+    max-width: 95%;
+  }
+  .main_container .modal_cover .modal-dialog .modal-content {
+    left: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     width: 100%;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header .close {
@@ -3348,13 +3397,13 @@ select:active {
   .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club .btn,
 .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club strong,
 .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club p {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-footer {
     padding: 1.25rem;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin: 0 1rem;
     padding: 0.5rem 6rem;
   }
@@ -3375,10 +3424,10 @@ select:active {
     margin: 3.5rem auto;
   }
   .main_container .nearmosque_page .nearmosque_title h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .main_container .nearmosque_page .nearmosque_title #map {
-    width: 75%;
+    width: 95%;
   }
   .main_container .salah_time_page {
     width: 95%;
@@ -3386,7 +3435,7 @@ select:active {
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
@@ -3396,16 +3445,14 @@ select:active {
     padding: 0 !important;
   }
   .main_container .salah_time_page .time_btn .h4_time {
-    float: left;
-    padding-left: 12px;
+    padding: 0 12px;
     line-height: 5rem;
-    font-size: 2.85rem;
+    font-size: 1.5rem;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
-    float: right;
-    padding-right: 12px;
+    padding: 0 12px;
     line-height: 5rem;
-    font-size: 2.85rem;
+    font-size: 1.5rem;
   }
   .main_container .sebha_page {
     margin: 11rem auto;
@@ -3424,16 +3471,17 @@ select:active {
     height: 7.5rem;
   }
   .main_container .sebha_page .display .btn-bar button i {
-    font-size: 3.75 rem;
+    font-size: 3.75rem;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
     margin: 0;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    max-width: 95%;
     position: fixed;
     top: 55%;
-    left: 50%;
+    left: 50% !important;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -3441,13 +3489,13 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .sebha_page #sebhaModal .close {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .main_container .sebha_page #sebhaModal .modal-title {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
   .main_container .sebha_page #sebhaModal .choose_sebha {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     height: 4.5rem;
   }
   .main_container .subscribe_page {
@@ -3467,27 +3515,27 @@ select:active {
     font-size: 3rem;
   }
   .main_container .zakkah_page {
-    width: 90%;
-    margin: 3.5rem auto;
+    width: 95%;
+    margin: 4.5rem auto;
   }
   .main_container .zakkah_page h4 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
   }
   .main_container .zakkah_page p {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
   .main_container .zakkah_page .zakah_zakah .form_zakah .field {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   .main_container .zakkah_page .zakah_zakah .form_zakah .field label {
     float: left;
   }
   .main_container .zakkah_page .zakah_zakah .form_zakah .actions button.button {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .main_container .merath_page {
-    width: 90%;
+    width: 95%;
     margin: 3.5rem auto;
   }
   .main_container .merath_page .border-bottom {
@@ -3496,21 +3544,21 @@ select:active {
   .main_container .merath_page .merath_title h2 {
     text-align: center;
     margin-bottom: 1.5rem;
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .main_container .merath_page .input_text .merath_input {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 4.5rem;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 50%;
+    width: 60%;
     height: 4rem;
     color: #FFF;
     font-size: 2.5rem;
@@ -3524,23 +3572,22 @@ select:active {
     -o-border-radius: 8px;
   }
   .main_container .merath_page .table_table .thead2_h4 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #00a9ce solid;
     border-radius: 7px;
     direction: rtl;
   }
   .main_container .merath_page .table_table .table tbody tr td {
-    font-size: 2.75rem;
+    font-size: 1.75rem;
     padding: 1rem 1.25rem;
   }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
   }
   .main_container .search_page {
-    width: 95%;
+    width: 100%;
     margin: 3rem auto;
   }
   .main_container .search_page .btn_search {
@@ -3585,29 +3632,55 @@ select:active {
 }
 @media (min-width: 1031px) and (max-width: 1360px) {
   .main_container {
-    width: 60% !important;
+    width: 60%;
   }
   .main_container .nav_nav {
     width: 95%;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 11.191rem;
+    height: 10.566rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
-    width: 70%;
     top: 88%;
+    width: 70%;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
+    height: 18rem;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
+    height: 15.313rem;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+    height: 10.233rem;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .owl_content_img img {
+    height: 10rem;
   }
   .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
-    height: 7.813rem;
+    height: 7.594rem;
   }
-  .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
-    font-size: 0.9rem;
+  .main_container .list_page .coming_soon {
+    width: 28%;
+  }
+  .main_container .list_page .item .card .owl_content_img img {
+    height: 10.441rem;
   }
   .main_container .list_page .item .card .card-body .card-title {
     font-size: 0.9rem;
   }
   .main_container .inner_page .cover img {
-    height: 30.888rem;
+    max-height: 40.969rem;
+    width: 100% !important;
+  }
+  .main_container .inner_page .cover audio {
+    margin-left: 0%;
+    width: 100% !important;
+  }
+  .main_container .inner_page .poster .poster-details .title-wrapper h2 {
+    font-size: 1.25rem;
+  }
+  .main_container .inner_page .poster .poster-details .outside-cover {
+    font-size: 0.75rem;
   }
   .main_container .inner_page .socail_media .facebook,
 .main_container .inner_page .socail_media .twitter,
@@ -3619,10 +3692,13 @@ select:active {
     left: 26%;
   }
   .main_container .zakkah_page {
-    width: 90%;
+    width: 95%;
   }
   .main_container .zakkah_page .zakah_zakah .form_zakah .field label {
     float: left;
+  }
+  .main_container .salah_time_page {
+    width: 100%;
   }
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
@@ -3632,6 +3708,27 @@ select:active {
     margin-bottom: 0;
     padding: 0.6rem 0;
     font-size: 1.25rem;
+  }
+  .main_container .merath_page {
+    width: 100%;
+  }
+  .main_container .merath_page .input_span h4 {
+    font-size: 1.15rem;
+  }
+  .main_container .nearmosque_page {
+    width: 100%;
+  }
+
+  .loading-overlay .spinner-large {
+    bottom: 30%;
+    left: 55%;
+  }
+
+  .alert {
+    font-size: 2.35rem;
+  }
+  .alert .close {
+    font-size: 2.5rem;
   }
 }
 /* Start Animation */
