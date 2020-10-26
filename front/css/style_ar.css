@@ -103,6 +103,31 @@ body {
 .main_container .content_carousel .content_carousel_head .btn_more {
   float: left !important;
 }
+.main_container .content_carousel .owl_content_one .item .card .owl_content_img .content_free {
+  top: 9%;
+  right: 88%;
+  transform: rotate(-45deg);
+}
+.main_container .content_carousel .owl_content_two .item .card .owl_content_img .content_free {
+  top: 10%;
+  right: 80%;
+  transform: rotate(-45deg);
+}
+.main_container .content_carousel .owl_content_three .item .card .owl_content_img .content_free {
+  top: 9%;
+  right: 70%;
+  transform: rotate(-45deg);
+}
+.main_container .content_carousel .owl_content_four .item .card .owl_content_img .content_free {
+  top: 9%;
+  right: 70%;
+  transform: rotate(-45deg);
+}
+.main_container .content_carousel .owl_content_five .item .card .owl_content_img .content_free {
+  top: 9%;
+  right: 67%;
+  transform: rotate(-45deg);
+}
 .main_container .list_page .content_carousel_head {
   text-align: right;
 }

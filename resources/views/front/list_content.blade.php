@@ -61,6 +61,11 @@
               }
               @endphp
               <img class="w-100" src="{{$src}}" alt="Card image cap">
+
+              <div class="content_free text-center py-1">
+                <span class="text-capitalize">free</span>
+              </div>
+
               <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
               </a>
