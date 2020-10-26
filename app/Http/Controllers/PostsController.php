@@ -112,6 +112,7 @@ class PostsController extends Controller
             $post->operator_id = $request['operator_id'][$i];
             $post->show_date = \Carbon\Carbon::createFromFormat('d/m/Y', $request->show_date)->format('Y-m-d');
             $post->slider = $request->slider;
+            $post->free = $request->free;
             $post->save();
         }
         if (isset($request->video))
@@ -169,6 +170,7 @@ class PostsController extends Controller
         $post->operator_id = $request['operator_id'][0];
         $post->show_date = \Carbon\Carbon::createFromFormat('d/m/Y', $request->show_date)->format('Y-m-d');
         $post->slider = $request->slider;
+        $post->free = $request->free;
         $post->save();
         \Session::flash('success', 'Post Updated successfully');
         if (isset($request->video))

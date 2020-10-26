@@ -106,9 +106,9 @@ class FrontController extends Controller
 
   public function contents(Request $request)
   {
-    $service = '';
-    $contents = Video::select('*', 'contents.id as content_id');
-    if ($request->has('service_id') && $request->service_id != '') {
+      $service = '';
+      $contents = Video::select('*', 'contents.id as content_id', 'posts.free');
+      if ($request->has('service_id') && $request->service_id != '') {
       $contents = $contents->where('service_id', $request->service_id);
       $service = Service::find($request->service_id);
     }
@@ -171,6 +171,7 @@ class FrontController extends Controller
       $content = $content->whereId($id)->first();
     } else {
       if ($request->has('OpID') && $request->OpID != '') {
+        $content = Video::select('contents.*', 'contents.id as content_id', 'posts.free');
         $content = $content->join('posts', 'posts.video_id', '=', 'contents.id')
           ->where('posts.show_date', '<=', Carbon::now()->toDateString())
           ->where('posts.operator_id', $request->OpID)
@@ -216,7 +217,7 @@ class FrontController extends Controller
 
 
     if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
-      if($enable || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
+      if($enable || $content->free || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
         return view('front.inner_enable_testing', compact('content','contents'));
       }
       return redirect('mbc_portal_landing');
