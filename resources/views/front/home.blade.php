@@ -40,9 +40,11 @@ $menu = provider_menu();
             <img class="m-auto d-block" src="{{$content->type == 1 ? $content->image_preview : $content->video}}" alt="banner_slider">
           </a>
 
+          @if ($content->free == 1)
           <div class="content_free text-center py-1">
             <span class="text-capitalize">free</span>
           </div>
+          @endif
 
           <div class="btn_subscribe w-100">
             <button onclick="" class="btn btn-sm text-capitalize">
@@ -57,9 +59,11 @@ $menu = provider_menu();
             <img class="m-auto d-block" src="{{url($content->service->image)}}" alt="banner_slider">
           </a>
 
+          @if ($content->free == 1)
           <div class="content_free text-center py-1">
             <span class="text-capitalize">free</span>
           </div>
+          @endif
 
           <div class="btn_subscribe w-100">
             <button onclick="" class="btn btn-sm text-capitalize">

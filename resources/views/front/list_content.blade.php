@@ -62,9 +62,11 @@
               @endphp
               <img class="w-100" src="{{$src}}" alt="Card image cap">
 
+              @if ($item->free == 1)
               <div class="content_free text-center py-1">
                 <span class="text-capitalize">free</span>
               </div>
+              @endif
 
               <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
