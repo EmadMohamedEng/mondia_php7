@@ -171,7 +171,7 @@ if ($lang == 'ar') {
         <p>@lang('messages.Are_you_a_subscriber')</p>
       </a>
       <p style="font-size: 9px;">@lang('messages.click_sub_landing')</p>
-      <p>@lang('messages.unsubscribelink') <a href="{{url('mbc_portal_unsub' )}}">@lang('messages.Link')</a></p>
+      {{-- <p>@lang('messages.unsubscribelink') <a href="{{url('mbc_portal_unsub' )}}">@lang('messages.Link')</a></p> --}}
 
     </div>
 
