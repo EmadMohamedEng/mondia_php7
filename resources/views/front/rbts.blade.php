@@ -39,7 +39,7 @@ switch ($os) {
       }
     @endif
 </style>
-<div class="col-md-12 col-lg-12 col-xl-8 col-12 p-0 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
     @include('front.search')
   <section class="azan_page">
     <div class="row m-0">

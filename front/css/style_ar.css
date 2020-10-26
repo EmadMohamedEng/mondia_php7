@@ -1,5 +1,5 @@
 body {
-  direction: rtl;
+  direction: rtl !important;
 }
 
 .row {
@@ -48,8 +48,8 @@ body {
 }
 .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
-  text-align: left;
-  float: left;
+  text-align: left !important;
+  float: left !important;
 }
 .main_container .header .arrow_back {
   top: 1rem;
@@ -60,29 +60,29 @@ body {
   padding-right: 0;
 }
 .main_container .nav_nav .navbar_ul .nav_item_welc {
-  text-align: right;
+  text-align: right !important;
 }
 .main_container .nav_nav .navbar_ul .nav-item .nav-link {
-  text-align: right;
+  text-align: right !important;
 }
 .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
-  float: right;
+  float: right !important;
   padding-left: 0.5rem;
 }
 .main_container .nav_nav .navbar_ul .nav-item .nav-link.nav-link2 {
-  text-align: left;
+  text-align: left !important;
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-toggle::after {
-  float: left;
+  float: left !important;
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu.dropdown-menu2 {
-  float: left;
+  float: left !important;
 }
 .main_container #mySidenav.sidenav {
-  left: 55.5%;
+  left: 56%;
 }
 .main_container #mySidenav.sidenav .closebtn_mbc {
-  left: 55%;
+  left: 55% !important;
 }
 .main_container #mySidenav.sidenav .closebtn_mbc:hover, .main_container #mySidenav.sidenav .closebtn_mbc:focus {
   background: transparent;
@@ -91,17 +91,17 @@ body {
   padding: 0 0.75rem;
 }
 .main_container #mySidenav.sidenav .navbar_ul .nav-item .nav-link {
-  text-align: right;
-  direction: rtl;
+  text-align: right !important;
+  direction: rtl !important;
 }
 .main_container #mySidenav.sidenav .navbar_ul .nav-item .dropdown-menu {
   text-align: center;
 }
 .main_container .content_carousel .content_carousel_head .link_title {
-  text-align: right;
+  text-align: right !important;
 }
 .main_container .content_carousel .content_carousel_head .btn_more {
-  float: left;
+  float: left !important;
 }
 .main_container .list_page .content_carousel_head {
   text-align: right;
@@ -129,30 +129,30 @@ body {
   margin-right: 1.5rem;
 }
 .main_container .inner_page .section_content .pa_Videos {
-  text-align: right;
+  text-align: right !important;
 }
 .main_container .inner_page .section_content .p_content {
-  text-align: right;
+  text-align: right !important;
   margin-right: 0.5rem;
   margin-left: 0;
 }
 .main_container .modal_cover .modal-dialog .modal-content {
-  left: -32%;
+  left: -32% !important;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-header .close {
   margin: -1rem -1rem -1rem 0;
 }
 .main_container .salah_time_page .time_btn .h4_time_2 {
-  text-align: left;
+  text-align: left !important;
 }
 .main_container .salah_time_page .time_btn .h4_time {
-  text-align: right;
+  text-align: right !important;
 }
 .main_container .subscribe_page .subscribe_bg .form-signin .buttons button {
   margin-bottom: 1rem;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field label {
-  float: right;
+  float: right !important;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value {
   float: right;
@@ -190,16 +190,16 @@ body {
   float: left;
 }
 .main_container .merath_page .input_span {
-  text-align: right;
+  text-align: right !important;
 }
 .main_container .merath_page .input_span h4 {
-  float: right;
+  float: right !important;
 }
 .main_container .merath_page .table_table .table {
   direction: rtl;
 }
 .main_container .sebha_page #sebhaModal .modal-content {
-  left: -29%;
+  left: -29% !important;
 }
 .main_container .profile .profile_table table tbody tr .label-view {
   text-align: right;
@@ -239,7 +239,7 @@ body {
   .main_container .nav_nav button {
     width: 0;
     height: 0;
-    top: 1.5rem;
+    top: 1.5rem !important;
     right: -1rem;
     left: unset;
   }
@@ -312,13 +312,13 @@ body {
     width: 0;
   }
   .main_container .header .lang_mbc {
-    margin-left: -17%;
+    margin-left: -38%;
   }
   .main_container .nav_nav button {
     font-size: 1rem;
     width: 0;
     height: 0;
-    top: 1.5rem;
+    top: 1.5rem !important;
     right: -0.75rem;
     left: unset;
   }
@@ -393,7 +393,7 @@ body {
     font-size: 1rem;
     width: 0;
     height: 0;
-    top: 1.5rem;
+    top: 1.5rem !important;
     right: -0.75rem;
     left: unset;
   }
@@ -486,7 +486,7 @@ body {
     font-size: 1rem;
     width: 0;
     height: 0;
-    top: 1.5rem;
+    top: 1.5rem !important;
     right: -0.75rem;
     left: unset;
   }
@@ -534,11 +534,7 @@ body {
     width: 100%;
     text-align: left !important;
     display: block;
-    margin-left: 12%;
-  }
-  .main_container .header .header_logo .link_href img,
-.main_container .header .header_icon .link_href img {
-    margin-left: 35%;
+    margin-left: 0 !important;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -569,7 +565,7 @@ body {
     font-size: 2rem;
     width: 0;
     height: 0;
-    top: 1.5rem;
+    top: 1.5rem !important;
     right: -0.5rem;
     left: unset;
   }
@@ -588,6 +584,12 @@ body {
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
     font-size: 1.25rem;
+  }
+  .main_container .inner_page .cover audio {
+    width: 100% !important;
+  }
+  .main_container .modal_cover .modal-dialog .modal-content {
+    left: 0 !important;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
@@ -615,11 +617,6 @@ body {
     width: 100%;
     text-align: left !important;
     display: block;
-    margin-left: 12%;
-  }
-  .main_container .header .header_logo .link_href img,
-.main_container .header .header_icon .link_href img {
-    margin-left: 35%;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -650,7 +647,7 @@ body {
     font-size: 2rem;
     width: 0;
     height: 0;
-    top: 2rem;
+    top: 2rem !important;
     right: 0;
     left: unset;
   }
@@ -677,6 +674,9 @@ body {
 .main_container .inner_page .section_content .p_content_2 {
     font-size: 26px;
     margin-right: 0.75rem;
+  }
+  .main_container .modal_cover .modal-dialog .modal-content {
+    left: 0 !important;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
