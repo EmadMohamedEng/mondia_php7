@@ -118,12 +118,12 @@ $('.owl_content_three').owlCarousel({
   responsive: {
     0: {
       items: 2,
-      loop:true,
+      loop: true,
       autoplay: true,
     },
     600: {
       items: 2,
-      loop:true,
+      loop: true,
       autoplay: true,
     },
     1000: {

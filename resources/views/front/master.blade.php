@@ -45,6 +45,7 @@
   @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
   <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
   @endif
+  <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}">
 
   <style>
     .active_menu {

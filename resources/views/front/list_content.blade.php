@@ -13,9 +13,9 @@
   }
 </style>
 @if(request()->get('OpID') == mbc)
-<div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
 @else
-<div class="col-md-12 col-lg-12 col-xl-8 col-12 p-0 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
 @endif
   @include('front.search')
   <section class="list_page">
@@ -61,6 +61,11 @@
               }
               @endphp
               <img class="w-100" src="{{$src}}" alt="Card image cap">
+
+              <div class="content_free text-center py-1">
+                <span class="text-capitalize">free</span>
+              </div>
+
               <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
               </a>

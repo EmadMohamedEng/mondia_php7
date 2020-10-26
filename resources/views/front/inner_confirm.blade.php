@@ -14,9 +14,9 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 @endphp
 
 @if(request()->get('OpID') == mbc)
-<div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
 @else
-<div class="col-md-12 col-lg-12 col-xl-8 col-12 p-0 no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
 @endif
   @include('front.search')
   <section class="inner_page">
@@ -58,7 +58,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
       <div class="socail_media padding_phones">
         <div class="row m-0">
 
-          <div class="col-md-12 col-lg-12 col-xl-12 col-12">
+          <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
             <div class="pa_share">
               <div>@lang('front.share'): </div>
             </div>
@@ -102,14 +102,14 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 
 <section class="section_content padding_phones">
   <div class="row m-0">
-    <div class="col-md-12 col-lg-12 col-xl-12 col-12">
+    <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
       <div class="pa_Videos">
         <span>@lang('front.related_video'): </span>
       </div>
     </div>
 
     @foreach ($contents as $item)
-    <div class="col-md-12 col-lg-12 col-xl-12 col-12">
+    <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
       <a class="row link_href m-0" href="{{route('front.inner',['id' => $item->content_id])}}">
         <div class="col-md-4 col-lg-4 col-xl-2 col-4 p-0">
           @php

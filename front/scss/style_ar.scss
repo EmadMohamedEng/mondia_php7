@@ -3,7 +3,7 @@ $black_color: #000;
 $grey_color: #adadad;
 
 body {
-  direction: rtl;
+  direction: rtl !important;
 }
 
 .row {
@@ -36,8 +36,8 @@ body {
       }
 
       &.header_icon {
-        text-align: left;
-        float: left;
+        text-align: left !important;
+        float: left !important;
       }
     }
 
@@ -53,32 +53,32 @@ body {
       padding-right: 0;
 
       .nav_item_welc {
-        text-align: right;
+        text-align: right !important;
       }
 
       .nav-item {
         .nav-link {
-          text-align: right;
+          text-align: right !important;
 
           .icon_before {
-            float: right;
+            float: right !important;
             padding-left: 0.5rem;
           }
 
           &.nav-link2 {
-            text-align: left;
+            text-align: left !important;
           }
         }
 
         .dropdown-toggle {
           &::after {
-            float: left;
+            float: left !important;
           }
         }
 
         .dropdown-menu {
           &.dropdown-menu2 {
-            float: left;
+            float: left !important;
           }
 
           .dropdown-item {
@@ -93,10 +93,10 @@ body {
 
   #mySidenav {
     &.sidenav {
-      left: 55.5%;
+      left: 56%;
 
       .closebtn_mbc {
-        left: 55%;
+        left: 55% !important;
 
         &:hover,
         &:focus {
@@ -109,8 +109,8 @@ body {
 
         .nav-item {
           .nav-link {
-            text-align: right;
-            direction: rtl;
+            text-align: right !important;
+            direction: rtl !important;
           }
 
           .dropdown-menu {
@@ -140,25 +140,84 @@ body {
   .content_carousel {
     .content_carousel_head {
       .link_title {
-        text-align: right;
+        text-align: right !important;
 
         h6 {}
       }
 
       .btn_more {
-        float: left;
+        float: left !important;
       }
     }
 
-    .owl_content_one,
-    .owl_content_two,
-    .owl_content_three,
+    .owl_content_one {
+      .item {
+        .card {
+          .owl_content_img {
+            .content_free {
+              top: 9%;
+              right: 88%;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+
+    .owl_content_two {
+      .item {
+        .card {
+          .owl_content_img {
+            .content_free {
+              top: 10%;
+              right: 80%;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+
+    .owl_content_three {
+      .item {
+        .card {
+          .owl_content_img {
+            .content_free {
+              top: 9%;
+              right: 70%;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+
     .owl_content_four {
-      // direction: rtl !important;
+      .item {
+        .card {
+          .owl_content_img {
+            .content_free {
+              top: 9%;
+              right: 70%;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
     }
 
     .owl_content_five {
-      // direction: ltr !important;
+      .item {
+        .card {
+          .owl_content_img {
+            .content_free {
+              top: 9%;
+              right: 67%;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
     }
   }
 
@@ -177,6 +236,8 @@ body {
       text-align: right;
 
       img {}
+
+      audio {}
 
       button {
         left: 40% !important;
@@ -208,11 +269,11 @@ body {
 
     .section_content {
       .pa_Videos {
-        text-align: right;
+        text-align: right !important;
       }
 
       .p_content {
-        text-align: right;
+        text-align: right !important;
         margin-right: 0.5rem;
         margin-left: 0;
       }
@@ -222,7 +283,7 @@ body {
   .modal_cover {
     .modal-dialog {
       .modal-content {
-        left: -32%;
+        left: -32% !important;
       }
     }
   }
@@ -249,11 +310,11 @@ body {
 
     .time_btn {
       .h4_time_2 {
-        text-align: left;
+        text-align: left !important;
       }
 
       .h4_time {
-        text-align: right;
+        text-align: right !important;
       }
     }
   }
@@ -281,7 +342,7 @@ body {
       .form_zakah {
         .field {
           label {
-            float: right;
+            float: right !important;
           }
 
           .field-value {
@@ -365,10 +426,10 @@ body {
     }
 
     .input_span {
-      text-align: right;
+      text-align: right !important;
 
       h4 {
-        float: right;
+        float: right !important;
       }
     }
 
@@ -384,7 +445,7 @@ body {
   /* Start Sebha Page */
   .sebha_page {
     #sebhaModal .modal-content {
-      left: -29%;
+      left: -29% !important;
     }
   }
 
@@ -457,7 +518,7 @@ body {
       button {
         width: 0;
         height: 0;
-        top: 1.5rem;
+        top: 1.5rem !important;
         right: -1rem;
         left: unset;
       }
@@ -584,7 +645,7 @@ body {
       }
 
       .lang_mbc {
-        margin-left: -17%;
+        margin-left: -38%;
       }
     }
 
@@ -593,7 +654,7 @@ body {
         font-size: 1rem;
         width: 0;
         height: 0;
-        top: 1.5rem;
+        top: 1.5rem !important;
         right: -0.75rem;
         left: unset;
       }
@@ -713,7 +774,7 @@ body {
         font-size: 1rem;
         width: 0;
         height: 0;
-        top: 1.5rem;
+        top: 1.5rem !important;
         right: -0.75rem;
         left: unset;
       }
@@ -865,7 +926,7 @@ body {
         font-size: 1rem;
         width: 0;
         height: 0;
-        top: 1.5rem;
+        top: 1.5rem !important;
         right: -0.75rem;
         left: unset;
       }
@@ -956,11 +1017,11 @@ body {
         width: 100%;
         text-align: left !important;
         display: block;
-        margin-left: 12%;
+        margin-left: 0 !important;
 
         .link_href {
           img {
-            margin-left: 35%;
+            // margin-left: 35%;
           }
         }
 
@@ -1001,7 +1062,7 @@ body {
         font-size: 2rem;
         width: 0;
         height: 0;
-        top: 1.5rem;
+        top: 1.5rem !important;
         right: -.5rem;
         left: unset;
       }
@@ -1043,6 +1104,22 @@ body {
               }
             }
           }
+        }
+      }
+    }
+
+    .inner_page {
+      .cover {
+        audio {
+          width: 100% !important;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          left: 0 !important;
         }
       }
     }
@@ -1092,11 +1169,11 @@ body {
         width: 100%;
         text-align: left !important;
         display: block;
-        margin-left: 12%;
+        // margin-left: 12%;
 
         .link_href {
           img {
-            margin-left: 35%;
+            // margin-left: 35%;
           }
         }
 
@@ -1137,7 +1214,7 @@ body {
         font-size: 2rem;
         width: 0;
         height: 0;
-        top: 2rem;
+        top: 2rem !important;
         right: 0;
         left: unset;
       }
@@ -1193,6 +1270,14 @@ body {
         .p_content_2 {
           font-size: 26px;
           margin-right: 0.75rem;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          left: 0 !important;
         }
       }
     }
