@@ -125,6 +125,11 @@ body {
   .img_carousel {
     .owl_one {
       .item {
+        .content_free {
+          top: 7%;
+          right: 74%;
+          transform: rotate(-45deg);
+        }
 
         .btn_subscribe {
           button {}
@@ -153,13 +158,7 @@ body {
     .owl_content_one {
       .item {
         .card {
-          .owl_content_img {
-            .content_free {
-              top: 9%;
-              right: 88%;
-              transform: rotate(-45deg);
-            }
-          }
+          .owl_content_img {}
         }
       }
     }
@@ -167,13 +166,7 @@ body {
     .owl_content_two {
       .item {
         .card {
-          .owl_content_img {
-            .content_free {
-              top: 10%;
-              right: 80%;
-              transform: rotate(-45deg);
-            }
-          }
+          .owl_content_img {}
         }
       }
     }
@@ -181,13 +174,7 @@ body {
     .owl_content_three {
       .item {
         .card {
-          .owl_content_img {
-            .content_free {
-              top: 9%;
-              right: 70%;
-              transform: rotate(-45deg);
-            }
-          }
+          .owl_content_img {}
         }
       }
     }
@@ -195,13 +182,7 @@ body {
     .owl_content_four {
       .item {
         .card {
-          .owl_content_img {
-            .content_free {
-              top: 9%;
-              right: 70%;
-              transform: rotate(-45deg);
-            }
-          }
+          .owl_content_img {}
         }
       }
     }
@@ -209,13 +190,7 @@ body {
     .owl_content_five {
       .item {
         .card {
-          .owl_content_img {
-            .content_free {
-              top: 9%;
-              right: 67%;
-              transform: rotate(-45deg);
-            }
-          }
+          .owl_content_img {}
         }
       }
     }
@@ -227,6 +202,18 @@ body {
   .list_page {
     .content_carousel_head {
       text-align: right;
+    }
+
+    .item {
+      .card {
+        .owl_content_img {
+          .content_free {
+            top: 9%;
+            right: 75%;
+            transform: rotate(-45deg);
+          }
+        }
+      }
     }
   }
 
@@ -534,6 +521,17 @@ body {
       }
     }
 
+    .img_carousel {
+      .owl_one {
+        .item {
+          .content_free {
+            top: 5%;
+            right: 76%;
+          }
+        }
+      }
+    }
+
     .content_carousel {
       .content_carousel_head {
         .link_title {
@@ -558,6 +556,21 @@ body {
               .card-title {
                 font-size: 0.9rem;
               }
+            }
+          }
+        }
+      }
+    }
+
+    .list_page {
+      .content_carousel_head {}
+
+      .item {
+        .card {
+          .owl_content_img {
+            .content_free {
+              top: 7% !important;
+              right: 64% !important;
             }
           }
         }
@@ -672,11 +685,37 @@ body {
       }
     }
 
+    .img_carousel {
+      .owl_one {
+        .item {
+          .content_free {
+            top: 5%;
+            right: 80%;
+          }
+        }
+      }
+    }
+
     .content_carousel {
       .content_carousel_head {
         .link_title {
           h6 {
             font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .list_page {
+      .content_carousel_head {}
+
+      .item {
+        .card {
+          .owl_content_img {
+            .content_free {
+              top: 8% !important;
+              right: 65% !important;
+            }
           }
         }
       }
@@ -735,7 +774,6 @@ body {
   }
 
   .main_container {
-
     .header {
 
       .header_logo,
@@ -792,6 +830,17 @@ body {
       }
     }
 
+    .img_carousel {
+      .owl_one {
+        .item {
+          .content_free {
+            top: 5%;
+            right: 80%;
+          }
+        }
+      }
+    }
+
     .content_carousel {
       .content_carousel_head {
         .link_title {
@@ -802,6 +851,21 @@ body {
 
         .btn_more {
           font-size: 1rem;
+        }
+      }
+    }
+
+    .list_page {
+      .content_carousel_head {}
+
+      .item {
+        .card {
+          .owl_content_img {
+            .content_free {
+              top: 8% !important;
+              right: 65% !important;
+            }
+          }
         }
       }
     }
@@ -942,6 +1006,17 @@ body {
       }
     }
 
+    .img_carousel {
+      .owl_one {
+        .item {
+          .content_free {
+            top: 5%;
+            right: 80%;
+          }
+        }
+      }
+    }
+
     .content_carousel {
       .content_carousel_head {
         .link_title {
@@ -952,6 +1027,21 @@ body {
 
         .btn_more {
           font-size: 1rem;
+        }
+      }
+    }
+
+    .list_page {
+      .content_carousel_head {}
+
+      .item {
+        .card {
+          .owl_content_img {
+            .content_free {
+              top: 8% !important;
+              right: 65% !important;
+            }
+          }
         }
       }
     }
@@ -1011,7 +1101,6 @@ body {
 @media (min-width: 768px) and (max-width: 1023.9px) {
   .main_container {
     .header {
-
       .header_logo,
       .header_icon {
         width: 100%;
@@ -1078,6 +1167,17 @@ body {
       }
     }
 
+    .img_carousel {
+      .owl_one {
+        .item {
+          .content_free {
+            top: 4%;
+            right: 85%;
+          }
+        }
+      }
+    }
+
     .content_carousel {
       .content_carousel_head {
         .link_title {
@@ -1102,6 +1202,21 @@ body {
               .card-title {
                 font-size: 1.25rem;
               }
+            }
+          }
+        }
+      }
+    }
+
+    .list_page {
+      .content_carousel_head {}
+
+      .item {
+        .card {
+          .owl_content_img {
+            .content_free {
+              top: 8% !important;
+              right: 69% !important;
             }
           }
         }
@@ -1233,6 +1348,17 @@ body {
       }
     }
 
+    .img_carousel {
+      .owl_one {
+        .item {
+          .content_free {
+            top: 5.5%;
+            right: 77%;
+          }
+        }
+      }
+    }
+
     .content_carousel {
       .content_carousel_head {
         .link_title {
@@ -1257,6 +1383,21 @@ body {
               .card-title {
                 font-size: 1.75rem !important;
               }
+            }
+          }
+        }
+      }
+    }
+
+    .list_page {
+      .content_carousel_head {}
+
+      .item {
+        .card {
+          .owl_content_img {
+            .content_free {
+              top: 8% !important;
+              right: 69% !important;
             }
           }
         }

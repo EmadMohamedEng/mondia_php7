@@ -86,7 +86,7 @@ if ($lang == 'ar') {
       <div class="shbka">
         <div class="container">
           <div class="row div_size m-0">
-            @if($lang == 'ar')
+            {{-- @if($lang == 'ar')
             <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
               <img src='{{asset("front/images/mbc_landing/02.png")}}'>
             </div>
@@ -102,7 +102,15 @@ if ($lang == 'ar') {
             <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
               <img src='{{asset("front/images/mbc_landing/03.png")}}'>
             </div>
-            @endif
+            @endif --}}
+
+            <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
+              <img src='{{asset("front/images/mbc_landing/02.png")}}'>
+            </div>
+
+            <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
+              <img src='{{asset("front/images/mbc_landing/01.png")}}'>
+            </div>
           </div>
 
           <div class="zain_viva">

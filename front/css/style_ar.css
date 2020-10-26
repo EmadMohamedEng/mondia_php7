@@ -97,39 +97,24 @@ body {
 .main_container #mySidenav.sidenav .navbar_ul .nav-item .dropdown-menu {
   text-align: center;
 }
+.main_container .img_carousel .owl_one .item .content_free {
+  top: 7%;
+  right: 74%;
+  transform: rotate(-45deg);
+}
 .main_container .content_carousel .content_carousel_head .link_title {
   text-align: right !important;
 }
 .main_container .content_carousel .content_carousel_head .btn_more {
   float: left !important;
 }
-.main_container .content_carousel .owl_content_one .item .card .owl_content_img .content_free {
-  top: 9%;
-  right: 88%;
-  transform: rotate(-45deg);
-}
-.main_container .content_carousel .owl_content_two .item .card .owl_content_img .content_free {
-  top: 10%;
-  right: 80%;
-  transform: rotate(-45deg);
-}
-.main_container .content_carousel .owl_content_three .item .card .owl_content_img .content_free {
-  top: 9%;
-  right: 70%;
-  transform: rotate(-45deg);
-}
-.main_container .content_carousel .owl_content_four .item .card .owl_content_img .content_free {
-  top: 9%;
-  right: 70%;
-  transform: rotate(-45deg);
-}
-.main_container .content_carousel .owl_content_five .item .card .owl_content_img .content_free {
-  top: 9%;
-  right: 67%;
-  transform: rotate(-45deg);
-}
 .main_container .list_page .content_carousel_head {
   text-align: right;
+}
+.main_container .list_page .item .card .owl_content_img .content_free {
+  top: 9%;
+  right: 75%;
+  transform: rotate(-45deg);
 }
 .main_container .inner_page .cover {
   text-align: right;
@@ -271,6 +256,10 @@ body {
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
   }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 5%;
+    right: 76%;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-size: 0.9rem;
   }
@@ -283,6 +272,10 @@ body {
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
     font-size: 0.9rem;
+  }
+  .main_container .list_page .item .card .owl_content_img .content_free {
+    top: 7% !important;
+    right: 64% !important;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
@@ -353,8 +346,16 @@ body {
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
   }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 5%;
+    right: 80%;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-size: 14px;
+  }
+  .main_container .list_page .item .card .owl_content_img .content_free {
+    top: 8% !important;
+    right: 65% !important;
   }
   .main_container .salah_time_page {
     width: 95%;
@@ -428,11 +429,19 @@ body {
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
   }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 5%;
+    right: 80%;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-size: 1rem;
   }
   .main_container .content_carousel .content_carousel_head .btn_more {
     font-size: 1rem;
+  }
+  .main_container .list_page .item .card .owl_content_img .content_free {
+    top: 8% !important;
+    right: 65% !important;
   }
   .main_container .inner_page .section_content .image_inner {
     height: 100px;
@@ -518,11 +527,19 @@ body {
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
   }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 5%;
+    right: 80%;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-size: 1rem;
   }
   .main_container .content_carousel .content_carousel_head .btn_more {
     font-size: 1rem;
+  }
+  .main_container .list_page .item .card .owl_content_img .content_free {
+    top: 8% !important;
+    right: 65% !important;
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
@@ -597,6 +614,10 @@ body {
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
   }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 4%;
+    right: 85%;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-size: 1.5rem;
   }
@@ -609,6 +630,10 @@ body {
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
     font-size: 1.25rem;
+  }
+  .main_container .list_page .item .card .owl_content_img .content_free {
+    top: 8% !important;
+    right: 69% !important;
   }
   .main_container .inner_page .cover audio {
     width: 100% !important;
@@ -682,6 +707,10 @@ body {
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
   }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 5.5%;
+    right: 77%;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-size: 1.85rem;
   }
@@ -694,6 +723,10 @@ body {
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
     font-size: 1.75rem !important;
+  }
+  .main_container .list_page .item .card .owl_content_img .content_free {
+    top: 8% !important;
+    right: 69% !important;
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {

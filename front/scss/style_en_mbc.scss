@@ -120,10 +120,11 @@ body {
 
         .content_free {
           background: $bg_color;
-          width: 12%;
+          color: $white_color;
+          width: 25%;
           position: absolute;
-          top: 9%;
-          right: 0%;
+          top: 6%;
+          right: 1%;
           transform: rotate(45deg);
           border-radius: 10px;
         }
@@ -303,6 +304,7 @@ body {
 
         .owl_content_img {
           position: relative;
+
           img {}
 
           .content_free {
@@ -1071,6 +1073,11 @@ body {
             img {}
           }
 
+          .content_free {
+            top: 5%;
+            right: -1%;
+          }
+
           .btn_subscribe {
             button {}
           }
@@ -1084,12 +1091,6 @@ body {
           .card {
             .owl_content_img {
               img {}
-
-              .content_free {
-                width: 25%;
-                top: 8%;
-                right: 0%;
-              }
             }
           }
         }
@@ -1101,12 +1102,6 @@ body {
           .card {
             .owl_content_img {
               img {}
-
-              .content_free {
-                width: 35%;
-                top: 9%;
-                right: 1%;
-              }
             }
           }
         }
@@ -1118,12 +1113,6 @@ body {
           .card {
             .owl_content_img {
               img {}
-
-              .content_free {
-                width: 35%;
-                top: 8%;
-                right: 2%;
-              }
             }
           }
         }
@@ -1137,6 +1126,12 @@ body {
         .card {
           .owl_content_img {
             img {}
+          }
+
+          .content_free {
+            width: 35% !important;
+            top: 8% !important;
+            right: 1% !important;
           }
 
           .card-body {
@@ -1428,6 +1423,12 @@ body {
             img {}
           }
 
+          .content_free {
+            width: 20%;
+            top: 5%;
+            right: 0%;
+          }
+
           .btn_subscribe {
             button {}
           }
@@ -1449,12 +1450,6 @@ body {
           .card {
             .owl_content_img {
               img {}
-
-              .content_free {
-                width: 20%;
-                top: 7.5%;
-                right: 0%;
-              }
             }
           }
         }
@@ -1466,12 +1461,6 @@ body {
           .card {
             .owl_content_img {
               img {}
-
-              .content_free {
-                width: 35%;
-                top: 9%;
-                right: 1%;
-              }
             }
           }
         }
@@ -1483,12 +1472,6 @@ body {
           .card {
             .owl_content_img {
               img {}
-
-              .content_free {
-                width: 35%;
-                top: 9%;
-                right: 1%;
-              }
             }
           }
         }
@@ -1502,6 +1485,12 @@ body {
         .card {
           .owl_content_img {
             img {}
+          }
+
+          .content_free {
+            width: 35% !important;
+            top: 8% !important;
+            right: 1% !important;
           }
 
           .card-body {
@@ -1784,6 +1773,12 @@ body {
             img {}
           }
 
+          .content_free {
+            width: 20%;
+            top: 5%;
+            right: 0%;
+          }
+
           .btn_subscribe {
             button {}
           }
@@ -1797,12 +1792,6 @@ body {
           .card {
             .owl_content_img {
               img {}
-
-              .content_free {
-                width: 20%;
-                top: 7.5%;
-                right: 0%;
-              }
             }
           }
         }
@@ -1814,12 +1803,6 @@ body {
           .card {
             .owl_content_img {
               img {}
-
-              .content_free {
-                width: 35%;
-                top: 8.5%;
-                right: 1%;
-              }
             }
           }
         }
@@ -1831,12 +1814,6 @@ body {
           .card {
             .owl_content_img {
               img {}
-
-              .content_free {
-                width: 35%;
-                top: 8.5%;
-                right: 1%;
-              }
             }
           }
         }
@@ -1850,6 +1827,12 @@ body {
         .card {
           .owl_content_img {
             img {}
+          }
+
+          .content_free {
+            width: 35% !important;
+            top: 8% !important;
+            right: 1% !important;
           }
 
           .card-body {
@@ -2149,6 +2132,12 @@ body {
             img {}
           }
 
+          .content_free {
+            width: 20%;
+            top: 5%;
+            right: 0%;
+          }
+
           .btn_subscribe {
             button {}
           }
@@ -2205,6 +2194,12 @@ body {
         .card {
           .owl_content_img {
             img {}
+          }
+
+          .content_free {
+            width: 35% !important;
+            top: 8% !important;
+            right: 0 !important;
           }
 
           .card-body {
@@ -2515,6 +2510,13 @@ body {
             img {}
           }
 
+          .content_free {
+            font-size: 1.5rem;
+            width: 15%;
+            top: 4%;
+            right: 0%;
+          }
+
           .btn_subscribe {
             button {}
           }
@@ -2656,6 +2658,13 @@ body {
         .card {
           .owl_content_img {
             img {}
+          }
+
+          .content_free {
+            width: 30% !important;
+            font-size: 1.35rem;
+            top: 8% !important;
+            right: 1% !important;
           }
 
           .card-body {
@@ -3015,6 +3024,13 @@ body {
             img {}
           }
 
+          .content_free {
+            font-size: 1.75rem;
+            width: 23%;
+            top: 6%;
+            right: 1%;
+          }
+
           .btn_subscribe {
             button {}
           }
@@ -3156,6 +3172,13 @@ body {
         .card {
           .owl_content_img {
             img {}
+          }
+
+          .content_free {
+            width: 30% !important;
+            font-size: 1.5rem;
+            top: 8% !important;
+            right: 1% !important;
           }
 
           .card-body {
