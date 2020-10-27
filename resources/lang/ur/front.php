@@ -4,6 +4,7 @@ return [
     'welcome' => 'خوش آمدید',
     'more' => 'مزید',
     'search' => 'تلاش',
+    'free' => 'مجاني',
     'release' =>  'شائع ھونے کی تاریخ',
     'related_video' => 'متعلقہ مواد',
     'watch_now' => 'اب دیکھیے',

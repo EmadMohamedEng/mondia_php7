@@ -4,6 +4,7 @@ return [
     'welcome' => 'مرحبا',
     'profile' => 'الصفحه الشخصية',
     'more' => 'المزيد',
+    'free' => 'مجاني',
     'search' => 'بحث',
     'release' =>  'تم التحرير في',
     'related_video' => 'محتوي ذات صلة',
