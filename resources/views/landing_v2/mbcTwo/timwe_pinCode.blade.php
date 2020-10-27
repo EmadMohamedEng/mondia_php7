@@ -53,11 +53,11 @@ if ($lang == 'ar') {
 
 <body>
   <div class="main_container">
-    <div class="img-fluid text-center p-2 d-flex justify-content-center">
+    <div class="img-fluid text-center py-3 d-flex justify-content-center">
       <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
     </div>
 
-    <div class="landing_page">
+    <div class="landing_page py-3">
       <div class="strip text-dark">
         <h2>@lang('messages.enjoy_time_landing')</h2>
         <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
@@ -78,7 +78,7 @@ if ($lang == 'ar') {
       </div>
 
 
-      <div class="container pt-2">
+      <div class="container py-3">
         <div class="form_content">
           <!--<h5>ادخل رقم الهاتف</h5>-->
           {!! Form::open(['url'=>'mbc_subscription/confirm/'.partnerRoleId,'method'=>'post','class'=>'form']) !!}
@@ -95,7 +95,7 @@ if ($lang == 'ar') {
           {!! Form::close() !!}
         </div>
       </div>
-      <div class="cancel text-center">
+      <div class="cancel text-center py-4">
         {!! Form::open(['url'=>'mbc_subscription/optin/'.partnerRoleId,'method'=>'post','class'=>'form']) !!}
         <div class="form-group">
           <input type="submit" id="reSendPin" class="border-0 rounded p-2 font-weight-bold mt-3 " value="@lang('messages.click_confirmation')">
@@ -104,18 +104,18 @@ if ($lang == 'ar') {
       </div>
     </div>
 
-    <div class="container">
+    {{-- <div class="container">
       <ul class="terms {{$text}}" dir="{{$left}}">
         <li> @lang('messages.Subscription_renewal')</li>
         <li> @lang('messages.stop_service')</li>
         <li> @lang('messages.years_service')</li>
       </ul>
-    </div>
+    </div> --}}
 
     <!-- copyright -->
-    <div class="copy" style="{{$bottom}}">
+    {{-- <div class="copy" style="{{$bottom}}">
       <p>copyright @ <span>{{date('Y')}}</span> Digizone, all rights reserved.</p>
-    </div>
+    </div> --}}
     <!-- copyright -->
   </div>
   <!-- script -->
