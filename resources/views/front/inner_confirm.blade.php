@@ -13,14 +13,16 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
 @endphp
 
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
+@if(request()->get('OpID') == mbc)
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
+@else
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
+@endif
   @include('front.search')
   <section class="inner_page">
     <div class="row m-0">
       <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
         <div class="cover">
-
-
           <img src="{{$src}}" alt="Video Cover">
           @if(request()->has('OpID') && request()->get('OpID') == omantel)
 
@@ -33,15 +35,11 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           <button data-toggle="modal" data-target="#exampleModalCover_du" class="btn button_play primary roll-in-top">
             <i class="fas fa-play play_icon"></i> @lang('front.watch_now')
           </button>
-
           @endif
-
-
-
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0 padding_phones">
+      <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones">
         <div class="poster">
           <div class="poster-details">
             <div class="title-wrapper">
@@ -125,7 +123,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           $src = url('front\images\Cutting\Contnent_Page\004.png');
           }
           @endphp
-          <img class="w-100 h-100" src="{{$src}}"   style="opacity: 1 !important;height:auto" class="image_inner" alt="Card image cap">
+          <img class="w-100 h-100" src="{{$src}}"   style="opacity: 1 !important;" class="image_inner" alt="Card image cap">
         </div>
 
         <div class="col-md-8 col-lg-8 col-xl-10 col-8 p-0">
@@ -179,8 +177,6 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
     </div>
   </div>
 </div>
-
-
 
 <div class="modal_cover modal fade" id="exampleModalCover_du" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">

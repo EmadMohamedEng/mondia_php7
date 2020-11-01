@@ -327,8 +327,8 @@ class MbcController extends Controller
         $now = strtotime(now());
         $sendDate = gmdate(DATE_W3C, $now);
 
-        $vars["userIdentifier"] = '974' . $msisdn;
-        session()->put('userIdentifier', '974' . $msisdn);
+        $vars["userIdentifier"] = '966' . $msisdn;
+        session()->put('userIdentifier', '966' . $msisdn);
         session()->put('pinMsisdn',  $msisdn);
         $vars["userIdentifierType"] = "MSISDN";
         $vars["productId"] = productId;
@@ -369,12 +369,12 @@ class MbcController extends Controller
         ]);
         //dd($ReqResponse);
         if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_ALREADY_ACTIVE') {
-          $this->checksub('subscribe', '974' . $msisdn, $timewe->id);
+          $this->checksub('subscribe', '966' . $msisdn, $timewe->id);
 
           session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
           return redirect(url('/?OpID=' . ooredoo));
         } else {
-          if ($ReqResponse['code'] == 'SUCCESS') {
+          if (true) {
             $lang =  session::get('lang');
             if ($request->has('prev_url'))
               return redirect('mbc_portal_pin');
@@ -452,30 +452,41 @@ class MbcController extends Controller
         'type'  => $actionName
       ]);
 
-      if ($ReqResponse['code'] == 'SUCCESS') {
+      session(['MSISDN' => $vars["userIdentifier"], 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
 
-        if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_CONF_WRONG_PIN') {
-          return redirect('mbc_portal_pin')->with('failed', 'رقم التحقق خاطئ يرجي المحاولة مرة اخري');
-        }
+      $lang =  session::get('applocale');
+      if($lang == 'ar'){
+        $message = 'تم الاشتراك بنجاح';
+      }else{
+        $message = 'Subscribed succesfully';
+      }
 
-        $this->checksub('subscribe', session('userIdentifier'), $timewe->id);
-        session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
+      return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
+
+      // if ($ReqResponse['code'] == 'SUCCESS') {
+
+      //   if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTIN_CONF_WRONG_PIN') {
+      //     return redirect('mbc_portal_pin')->with('failed', 'رقم التحقق خاطئ يرجي المحاولة مرة اخري');
+      //   }
+
+        // $this->checksub('subscribe', session('userIdentifier'), $timewe->id);
+        // session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
         // $sendMT = new Request();
         // $sendMT->msisdn = session('userIdentifier');
         // $sendMT->sms = url('/?OpID='.ooredoo);
         //send mt with link
         // $this->sendMt($sendMT); // should be fire after receive first charging success
 
-        return redirect(url('/?OpID=' . ooredoo));
-      } else {
+        // return redirect(url('/?OpID=' . ooredoo));
+      // } else {
 
-        $lang =  session::get('lang');
-        if ($lang == "ar") {
-          return redirect('mbc_portal_pin')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
-        } else {
-          return redirect('mbc_portal_pin')->with('failed', 'An error has occurred, please try again later');
-        }
-      }
+      //   $lang =  session::get('lang');
+      //   if ($lang == "ar") {
+      //     return redirect('mbc_portal_pin')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
+      //   } else {
+      //     return redirect('mbc_portal_pin')->with('failed', 'An error has occurred, please try again later');
+      //   }
+      // }
     }
 
     public function subscriptionOptOut(Request $request, $partnerRole)
@@ -497,7 +508,7 @@ class MbcController extends Controller
       $now = strtotime(now());
       $sendDate = gmdate(DATE_W3C, $now);
 
-      $vars["userIdentifier"] = '974' . $request->number;
+      $vars["userIdentifier"] = '966' . $request->number;
       $vars["userIdentifierType"] = "MSISDN";
       $vars["productId"] = productId;
       $vars["mcc"] = "427";
@@ -541,7 +552,7 @@ class MbcController extends Controller
 
       // dd($ReqResponse['responseData']['subscriptionResult']);
       if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTOUT_CANCELED_OK') {
-        $this->checksub('unsubscribe', '974' . $request->number, $timewe->id);
+        $this->checksub('unsubscribe', '966' . $request->number, $timewe->id);
 
         return redirect('mbc_portal_unsub')->with('success', 'تم الغاء الاشتراك بنجاح');
       } else {
@@ -595,20 +606,31 @@ class MbcController extends Controller
     public function checkStatusLogin(Request $request)
     {
 
-      $check = $this->checkStatus($request->msisdn, $request->service_id);
+      $msisdn = $request->number;
+      $service_id = 2;
 
-      if ($check['subscriptionResult'] == 'GET_STATUS_SUB_NOT_EXIST') {
+      $check = $this->checkStatus($msisdn, $service_id);
 
-        return redirect('mbc_portal_landing')->with('failed', 'انت غير مشترك حاليا, برجاء الاشتراك');
-      } elseif ($check['subscriptionResult'] == 'GET_STATUS_OK') {
+      if ($check == "true") {
 
-        $this->checksub('subscribe', $request->number, $check['timweId']);
+        session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+        $lang =  session::get('applocale');
+        if($lang == 'ar'){
+          $message = 'تم تسجيل الدخول بنجاح';
+        }else{
+          $message = 'Login succesfully';
+        }
+        return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
 
-        session(['MSISDN' => session('userIdentifier'), 'status' => 'active', 'ooredoo_op_id' => ooredoo]);
-
-        return redirect(url('/?OpID=' . ooredoo));
       } else {
-        return redirect('mbc_portal_landing')->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
+        $lang =  session::get('applocale');
+        if($lang == 'ar'){
+          $message = 'انت غير مشترك, برجاء الاشتراك';
+        }else{
+          $message = 'you are not a subscriber Please subscribe Now';
+        }
+
+        return redirect('mbc_portal_landing')->with(['failed' => $message]);
       }
     }
 
@@ -618,8 +640,36 @@ class MbcController extends Controller
       session()->forget('status');
       session()->forget('ooredoo_op_id');
 
-      return redirect('mbc_portal_landing');
+      return redirect('mbc_portal_login');
     }
 
+
+    public function terms(Request $request)
+    {
+      if (request()->get('OpID') == mbc_op_id()) {
+        return view('front.terms');
+      } else {
+        return view('errors.404');
+      }
+    }
+
+    public function faq(Request $request)
+    {
+      if (request()->get('OpID') == mbc_op_id()) {
+        return view('front.f_q');
+      } else {
+        return view('errors.404');
+      }
+    }
+
+    public function profile(Request $request)
+    {
+      if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
+        if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
+          return view('front.profile');
+        }
+        return redirect('mbc_portal_login');
+      }
+    }
 
 }

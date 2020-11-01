@@ -13,7 +13,11 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
 @endphp
 
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
+@if(request()->get('OpID') == mbc)
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
+@else
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
+@endif
   @include('front.search')
   <section class="inner_page">
     <div class="row m-0">
@@ -68,6 +72,8 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
               <div>@lang('front.share'): </div>
             </div>
           </div>
+          <br>
+          <br>
 
           <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
             <div class="shear_div">

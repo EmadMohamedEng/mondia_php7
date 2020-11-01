@@ -95,10 +95,9 @@ if ($lang == 'ar') {
           <form method="post" action="{{url('mbc_subscription/optin/'.partnerRoleId)}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
             {{ csrf_field() }}
             <div class="form-group form-inline">
-              <label for="phone"><span>974</span></label>
+              <label for="phone"><span>966</span></label>
               <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-              <input type="tel" class="form-control" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')"  name="number" required pattern="[0-9]{8}">
-              <span class="validity"></span>
+              <input type="tel" class="form-control" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')"  name="number" required >
             </div>
 
             <h3 class="text-white font-weight-bold mb-3" style="{{$font}}">@lang('messages.subscription_Riyals') </h3>

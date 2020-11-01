@@ -76,12 +76,10 @@ App::setLocale($lang);
           <form method="post" action="{{url('mbc_subscription/optout/'.partnerRoleId)}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
             {{ csrf_field() }}
             <div class="form-group form-inline">
-              <label for="phone"><span>974</span></label>
+              <label for="phone"><span>966</span></label>
               <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
               <input type="tel" class="form-control" @if(session()->has('userIdentifier')) @endif id="phone"
-              placeholder="@lang('messages.Enter_your')"
-              oninvalid="setCustomValidity('يجب ان تدخل 8 ارقام')" name="number" required
-              pattern="[0-9]{8}">
+              placeholder="@lang('messages.Enter_your')" name="number" required>
               <span class="validity"></span>
             </div>
 

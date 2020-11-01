@@ -11,7 +11,11 @@ List video
       /* min-height: 700px; */
     }
   </style>
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+@if(request()->get('OpID') == mbc)
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
+@else
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
+@endif
     @include('front.search')
   <section class="list_page">
     <div class="content_carousel_head text-capitalize">

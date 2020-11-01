@@ -2,6 +2,10 @@
 return [
     'title' => 'SMS',
     'renew' => 'Auto-Renewed',
+    'service_type' => 'Service Plan',
+    'service_name' => 'Service Name',
+    'discription_weekly' => 'Auto Renewal of the subscription is considered to be 10 SAR per week',
+    'description' => 'Description',
     'language' => 'عربي',
     'role' => 'Role',
     'create-role' => 'Create Role',
@@ -29,12 +33,12 @@ return [
     'cancel' => 'Cancel',
     'enjoy_time' => 'Enjoy your time with the service',
     'Muslim_guide' => 'Muslim guide',
-    'Mbc_Muslim_guide' => 'MBC Islamic',
+    'Mbc_Muslim_guide' => 'Alkanz',
     'Subscribe_Now' => 'Subscribe Now',
     'Enter_your' => 'Enter your mobile phone',
     'subscription_Riyals' => 'The Subscription 10 Riyals / Week',
     'Subsc' => 'Subscribe',
-    'Subscription_renewal' => 'Subscription renewal will be automatic and effective at a cost of 10 riyals per week',
+    'Subscription_renewal' => 'Your subscription is auto renewal and price of the service is 10 / SAR weekly',
     'stop_service' => 'You can stop this service at any time by sending Unsub ISL to 92842',
     'years_service' => 'You must be 18 years of age or over or have permission from your parents or the person responsible for paying your bill in order to be able to subscribe to this service',
     'unsubscribelink' => 'To unsubscribe, please click on this',
@@ -176,7 +180,8 @@ return [
         'message_quota' => 'Message Quota',
         'message_sent' => 'Message Sent',
         'role' => 'Role',
-        'phone' => 'Phone'
+        'date' => 'Date',
+        'phone' => 'Phone Number'
       ],
       'helps' => [
         'head' => 'How can we help you ?',
@@ -233,5 +238,10 @@ return [
     'select_image' => 'Select Image',
     'add_user' => 'Add User',
     'action' => 'Action',
+
+    'enjoy_time_landing' => 'Alkanz',
+    'Mbc_Muslim_guide_landing' => 'Get the best features that interest a Muslim in his daily life',
+    'Are_you_a_subscriber' => 'Existing subscriber? Login',
+    'click_sub_landing' => 'By clicking on Subscribe now, you agree to the terms and conditions',
 
 ];

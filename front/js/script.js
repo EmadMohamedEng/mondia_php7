@@ -14,7 +14,7 @@ $(document).on('click', '.back', function () {
 $(window).on('load', function () {
   'use strict';
   $('.loading-overlay .spinner').fadeOut(500, function () {
-    $(this).parent().fadeOut(800, function () {
+    $(this).parent().fadeOut(500, function () {
       $('body').css('overflow', 'auto');
       $(this).remove();
     });
@@ -42,7 +42,7 @@ $('.owl_one').owlCarousel({
   animateOut: 'fadeOut',
   nav: false,
   dots: true,
-  center: true,
+  center: false,
   responsive: {
     0: {
       items: 1
@@ -51,6 +51,9 @@ $('.owl_one').owlCarousel({
       items: 1
     },
     1000: {
+      items: 2
+    },
+    1024.9: {
       items: 3
     }
   }
@@ -115,12 +118,12 @@ $('.owl_content_three').owlCarousel({
   responsive: {
     0: {
       items: 2,
-      loop:true,
+      loop: true,
       autoplay: true,
     },
     600: {
       items: 2,
-      loop:true,
+      loop: true,
       autoplay: true,
     },
     1000: {
@@ -169,7 +172,7 @@ $('.owl_content_five').owlCarousel({
       items: 2
     },
     1000: {
-      items: 5
+      items: 4
     }
   }
 });
@@ -212,38 +215,7 @@ $(document).ready(function () {
   });
 });
 
-setTimeout(function () {
-  $('#sebhaModal').modal('show')
-}, 1000);
 
-
-var tallyDisplay = document.getElementById('tally');
-var globalTally = 0;
-
-tallyDisplay.innerHTML = globalTally;
-
-document.addEventListener('keyup', function (event) {
-  if (event.which === 32) {
-    globalTally++;
-    tallyDisplay.innerHTML = globalTally;
-  }
-});
-
-document.getElementById('plusBtn').addEventListener('click', function (event) {
-  globalTally++;
-  tallyDisplay.innerHTML = globalTally;
-});
-
-document.getElementById('resetBtn').addEventListener('click', function (event) {
-  globalTally = 0;
-  tallyDisplay.innerHTML = globalTally;
-  $("#wordSebha").empty();
-});
-
-
-function getValue(value) {
-  $("#wordSebha").append(value);
-}
 
 
 var map;

@@ -45,8 +45,9 @@ Route::get('test2','FrontController@test');
 Route::get('search','FrontController@search')->name('front.search');
 Route::get('muslim_inner_confirm','FrontController@muslim_inner')->name('front.muslim_inner');
 Route::get('test','FrontController@prayTimesCal_v2');
-Route::get('terms','FrontController@terms');
-Route::get('faq','FrontController@faq');
+Route::get('terms','MbcController@terms');
+Route::get('faq','MbcController@faq');
+Route::get('profile','MbcController@profile');
 
 //OmanTel
 define('omantel',9);
@@ -140,23 +141,38 @@ Route::post('subscription/optout/{partnerRoleId}', 'TimweController@subscription
 
 /***************start mbc portal****************** */
 define('MBC_OP_ID', 14);
-define('CHECKSUB_URL', 14);
+define('CHECKSUB_URL', "https://mbc.digizone.com.kw/api/checksub");
+// define('CHECKUNSUB_URL', "http://localhost/mbc_system/api/unsub");
 
-Route::get('mbc_portal_login/{lang?}', 'MbcController@login');
-Route::get('mbc_portal_landing/{lang?}', 'MbcController@index');
-Route::get('mbc_portal_pin/{lang?}', 'MbcController@pincode');
-Route::get('mbc_portal_unsub/{lang?}', 'MbcController@unsubscribe');
+// Route::get('mbc_portal_login_old/{lang?}', 'MbcController@login');
+// Route::get('mbc_portal_landing_old/{lang?}', 'MbcController@index');
+// Route::get('mbc_portal_pin_old/{lang?}', 'MbcController@pincode');
+// Route::get('mbc_portal_unsub_old/{lang?}', 'MbcController@unsubscribe');
 Route::get('mbc_portal_logout', 'MbcController@logout');
+
+
+/***************start mbc 2****************** */
+
+Route::get('mbc_portal_landing', 'MbcTwoController@index');
+Route::get('mbc_portal_login', 'MbcTwoController@login');
+Route::get('mbc_portal_pin', 'MbcTwoController@pincode');
+Route::get('mbc_portal_unsub', 'MbcTwoController@unsubscribe');
+Route::post('mbc_checkstatus', 'MbcTwoController@checkStatusLogin');
+Route::post('mbc_subscription/optin/{partnerRoleId}', 'MbcTwoController@subscriptionOptIn');
+Route::post('mbc_subscription/confirm/{partnerRoleId}', 'MbcTwoController@subscriptionConfirm');
+Route::post('mbc_subscription/optout/{partnerRoleId}', 'MbcTwoController@subscriptionOptOut');
+
+/***************end mbc 2****************** */
 
 
 
 //Timwe Api
 Route::post('mbcGenerateKey', 'MbcController@generateKey');
 Route::post('{channel}/mt/{partnerRoleId}', 'MbcController@sendMt');
-Route::post('mbc_checkstatus', 'MbcController@checkStatusLogin');
-Route::post('mbc_subscription/optin/{partnerRoleId}/{lang?}', 'MbcController@subscriptionOptIn');
-Route::post('mbc_subscription/confirm/{partnerRoleId}', 'MbcController@subscriptionConfirm');
-Route::post('mbc_subscription/optout/{partnerRoleId}', 'MbcController@subscriptionOptOut');
+// Route::post('mbc_checkstatus_old', 'MbcController@checkStatusLogin');
+// Route::post('mbc_subscription_old/optin/{partnerRoleId}/{lang?}', 'MbcController@subscriptionOptIn');
+// Route::post('mbc_subscription_old/confirm/{partnerRoleId}', 'MbcController@subscriptionConfirm');
+// Route::post('mbc_subscription_old/optout/{partnerRoleId}', 'MbcController@subscriptionOptOut');
 /***************end mbc portal****************** */
 
 /********************Quran live  ********************/
@@ -235,6 +251,7 @@ Route::get('timwe_test', function(){
 
     return redirect(url('/?OpID='.timwe_op_id()));
 });
+
 
 
 

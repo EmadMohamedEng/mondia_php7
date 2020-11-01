@@ -26,7 +26,6 @@ class FrontController extends Controller
   public function index(Request $request)
   {
 
-
     if ($request->has('OpID')) {
       session()->put('current_op_id', $request->get('OpID'));
     }
@@ -106,9 +105,9 @@ class FrontController extends Controller
 
   public function contents(Request $request)
   {
-    $service = '';
-    $contents = Video::select('*', 'contents.id as content_id');
-    if ($request->has('service_id') && $request->service_id != '') {
+      $service = '';
+      $contents = Video::select('*', 'contents.id as content_id', 'posts.free');
+      if ($request->has('service_id') && $request->service_id != '') {
       $contents = $contents->where('service_id', $request->service_id);
       $service = Service::find($request->service_id);
     }
@@ -167,10 +166,11 @@ class FrontController extends Controller
     $view_coming_post = get_setting('view_coming_post');
     $enable = get_setting('enable_testing');
     $content = Video::select('contents.*', 'contents.id as content_id');
-    if ($view_coming_post) {
-      $content = $content->whereId($id)->first();
-    } else {
+    // if ($view_coming_post) {
+    //   $content = $content->whereId($id)->first();
+    // } else {
       if ($request->has('OpID') && $request->OpID != '') {
+        $content = Video::select('contents.*', 'contents.id as content_id', 'posts.free');
         $content = $content->join('posts', 'posts.video_id', '=', 'contents.id')
           ->where('posts.show_date', '<=', Carbon::now()->toDateString())
           ->where('posts.operator_id', $request->OpID)
@@ -179,7 +179,7 @@ class FrontController extends Controller
       } else {
         $content = $content->whereId($id)->first();
       }
-    }
+    // }
     if (!$content) {
       return view('errors.404');
     }
@@ -216,11 +216,20 @@ class FrontController extends Controller
 
 
     if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
-      if($enable || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
-        return view('front.inner_enable_testing', compact('content','contents'));
-      }
+      $enable_free = get_setting('enable_free');
+        if($enable || $content->free || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
+          if($enable_free == "1"){
+          return view('front.inner_enable_testing', compact('content','contents'));
+          }
+        }
       return redirect('mbc_portal_landing');
     }
+
+
+    // if($request->has('OpID') && $request->OpID == omantel){ // test omantel inner
+    //     return view('front.inner', compact('content', 'contents'));
+    // }
+
 
 
 
@@ -354,8 +363,8 @@ class FrontController extends Controller
       });
     }
 
-    $services = $services->get();
-    $contents = $contents->get();
+    $services = $services->groupBy('service_id')->get();
+    $contents = $contents->groupBy('content_id')->get();
     return view('front.search_result', compact('services', 'contents'));
   }
 
@@ -1505,22 +1514,4 @@ class FrontController extends Controller
     }
   }
 
-
-  public function terms(Request $request)
-  {
-    if (request()->get('OpID') == mbc_op_id()) {
-      return view('front.terms');
-    } else {
-      return view('errors.404');
-    }
-  }
-
-  public function faq(Request $request)
-  {
-    if (request()->get('OpID') == mbc_op_id()) {
-      return view('front.f_q');
-    } else {
-      return view('errors.404');
-    }
-  }
 }

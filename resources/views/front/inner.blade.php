@@ -13,14 +13,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
 @endphp
 <style>
-  @media (max-width: 374.9px) and (min-width: 360px){
-    .main_container .inner_page .cover img {
-      width: 100%;
-      height: unset;
-    }
-  }
   .main_container .inner_page .cover img {
-    height: 32rem;
     width: 92%;
     opacity: 0.7;
   }
@@ -32,7 +25,11 @@ if (session()->get('applocale') == 'ar') {
   $text = "text-align: left";
 }
 ?>
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
+@if(request()->get('OpID') == mbc)
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
+@else
+<div class="col-md-12 col-lg-12 col-xl-8 col-12  padding_phones no_padding close_nav">
+@endif
   @include('front.search')
   <section class="inner_page">
     <div class="row m-0">
@@ -45,7 +42,7 @@ if (session()->get('applocale') == 'ar') {
             </video>
             @endif
             @if($content->type == 2)
-                <img src="{{$src}}" alt="Video Cover" style="opacity: 1 !important;height:auto">
+                <img src="{{$src}}" alt="Video Cover" style="opacity: 1 !important;">
                 <audio src="{{url($content->video)}}" controls style="width: 94%;" controlsList="nodownload"></audio>
             @endif
             @if($content->type == 3)

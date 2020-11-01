@@ -1,4 +1,8 @@
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+@if(request()->get('OpID') == mbc)
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
+@else
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
+@endif
     <section class="search_page">
       <div class="col-md-12 col-lg-12 col-lg-12 col-12">
         <form class="form_search from-middle" id="form_search" action="{{route('front.search')}}" method="get">

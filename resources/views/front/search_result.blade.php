@@ -9,7 +9,11 @@
 @endsection
 @section('content')
 
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 p-0 close_nav">
+@if(request()->get('OpID') == mbc)
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
+@else
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
+@endif
     @include('front.search')
   <section class="list_page">
     <div class="content_carousel_head text-capitalize">
@@ -22,7 +26,11 @@
 
     <div class="row m-0">
         @foreach ($services as $service)
-        <div class="col-md-4 col-lg-4 col-xl-2 col-4 p-0">
+        @if(request()->get('OpID') == mbc)
+      <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
+      @else
+      <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-0">
+      @endif
             <div class="item">
               <div class="card ovf-hidden">
                 <a class="owl_content_img view overlay link_href" href="{{route('front.list',['service_id' => $service->service_id])}}">
@@ -53,7 +61,11 @@
 
     <div class="row m-0">
         @foreach ($contents as $content)
-        <div class="col-md-4 col-lg-4 col-xl-2 col-4 p-0">
+        @if(request()->get('OpID') == mbc)
+      <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
+      @else
+      <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-0">
+      @endif
             <div class="item">
               <div class="card ovf-hidden">
                 <a class="owl_content_img view overlay link_href" href="{{route('front.inner',['id' => $content->content_id])}}">

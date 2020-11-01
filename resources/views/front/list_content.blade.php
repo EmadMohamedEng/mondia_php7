@@ -12,11 +12,15 @@
     /* min-height: 700px; */
   }
 </style>
-<div class="col-md-12 col-lg-12 col-xl-9 col-12 no_padding close_nav">
+@if(request()->get('OpID') == mbc)
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
+@else
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
+@endif
   @include('front.search')
   <section class="list_page">
     <div class="content_carousel_head text-capitalize">
-      <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0 padding_phones">
+      <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones">
         @if(request()->has('service_id') && request()->get('service_id') != '')
         <a class="link_title link_href" href="{{route('front.list',['service_id' => request()->get('service_id')])}}">
           <h6 class="">{{$service->getTranslation('title',getCode())}}</h6>
@@ -36,7 +40,12 @@
       </div>
       @else
       @foreach ($contents as $item)
-      <div class="col-md-4 col-lg-4 col-xl-2 col-6 p-0">
+      @if(request()->get('OpID') == mbc)
+      <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-1">
+      @else
+      <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-0">
+      @endif
+
         <div class="item">
           <div class="card ovf-hidden">
             <a class="owl_content_img view overlay link_href" href="{{route('front.inner',['id' => $item->content_id])}}">
@@ -52,6 +61,13 @@
               }
               @endphp
               <img class="w-100" src="{{$src}}" alt="Card image cap">
+
+              @if ($item->free == 1)
+              <div class="content_free text-center py-1">
+              <span class="text-capitalize">@lang('front.free')</span>
+              </div>
+              @endif
+
               <a>
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
               </a>

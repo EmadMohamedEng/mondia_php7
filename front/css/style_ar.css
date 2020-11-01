@@ -1,5 +1,5 @@
 body {
-  direction: rtl;
+  direction: rtl !important;
 }
 
 .row {
@@ -23,63 +23,104 @@ body {
   /* End Zakkah Page */
   /* Start Merath Page */
   /* End Merath Page */
+  /* Start Sebha Page */
+  /* End Sebha Page */
+  /* Start Profile Page */
+  /* End Profile Page */
 }
 .main_container .header .header_logo.header_logo,
 .main_container .header .header_icon.header_logo {
-  float: right;
+  text-align: center;
+  margin-left: 8%;
 }
 .main_container .header .header_logo.header_logo h6,
 .main_container .header .header_icon.header_logo h6 {
   padding-right: 0;
   padding-left: unset;
 }
-.main_container .header .header_logo.header_logo .arrow_back,
-.main_container .header .header_icon.header_logo .arrow_back {
-  top: 1rem;
-  right: 100%;
-  transform: translate(-50%, -50%);
+.main_container .header .header_logo.header_logo .link_href,
+.main_container .header .header_icon.header_logo .link_href {
+  text-align: left;
+}
+.main_container .header .header_logo.header_logo .link_href img,
+.main_container .header .header_icon.header_logo .link_href img {
+  margin-right: 0%;
 }
 .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
-  text-align: left;
-  float: left;
+  text-align: left !important;
+  float: left !important;
+}
+.main_container .header .arrow_back {
+  top: 1rem;
+  right: 100%;
+  transform: translate(-50%, -50%);
 }
 .main_container .nav_nav .navbar_ul {
   padding-right: 0;
 }
 .main_container .nav_nav .navbar_ul .nav_item_welc {
-  text-align: right;
+  text-align: right !important;
 }
 .main_container .nav_nav .navbar_ul .nav-item .nav-link {
-  text-align: right;
+  text-align: right !important;
 }
 .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
-  float: right;
+  float: right !important;
   padding-left: 0.5rem;
 }
 .main_container .nav_nav .navbar_ul .nav-item .nav-link.nav-link2 {
-  text-align: left;
+  text-align: left !important;
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-toggle::after {
-  float: left;
+  float: left !important;
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu.dropdown-menu2 {
-  float: left;
+  float: left !important;
+}
+.main_container #mySidenav.sidenav {
+  left: 56%;
+}
+.main_container #mySidenav.sidenav .closebtn_mbc {
+  left: 55% !important;
+}
+.main_container #mySidenav.sidenav .closebtn_mbc:hover, .main_container #mySidenav.sidenav .closebtn_mbc:focus {
+  background: transparent;
+}
+.main_container #mySidenav.sidenav .navbar_ul {
+  padding: 0 0.75rem;
+}
+.main_container #mySidenav.sidenav .navbar_ul .nav-item .nav-link {
+  text-align: right !important;
+  direction: rtl !important;
+}
+.main_container #mySidenav.sidenav .navbar_ul .nav-item .dropdown-menu {
+  text-align: center;
+}
+.main_container .img_carousel .owl_one .item .content_free {
+  top: 7%;
+  right: 74%;
+  transform: rotate(-45deg);
 }
 .main_container .content_carousel .content_carousel_head .link_title {
-  text-align: right;
+  text-align: right !important;
 }
 .main_container .content_carousel .content_carousel_head .btn_more {
-  float: left;
+  float: left !important;
 }
 .main_container .list_page .content_carousel_head {
   text-align: right;
+}
+.main_container .list_page .item .card .owl_content_img .content_free {
+  top: 9%;
+  right: 75%;
+  transform: rotate(-45deg);
 }
 .main_container .inner_page .cover {
   text-align: right;
 }
 .main_container .inner_page .cover button {
-  left: 40%;
+  left: 40% !important;
 }
 .main_container .inner_page .poster {
   text-align: right;
@@ -98,27 +139,30 @@ body {
   margin-right: 1.5rem;
 }
 .main_container .inner_page .section_content .pa_Videos {
-  text-align: right;
+  text-align: right !important;
 }
 .main_container .inner_page .section_content .p_content {
-  text-align: right;
+  text-align: right !important;
   margin-right: 0.5rem;
   margin-left: 0;
+}
+.main_container .modal_cover .modal-dialog .modal-content {
+  left: -32% !important;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-header .close {
   margin: -1rem -1rem -1rem 0;
 }
 .main_container .salah_time_page .time_btn .h4_time_2 {
-  text-align: left;
+  text-align: left !important;
 }
 .main_container .salah_time_page .time_btn .h4_time {
-  text-align: right;
+  text-align: right !important;
 }
 .main_container .subscribe_page .subscribe_bg .form-signin .buttons button {
   margin-bottom: 1rem;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field label {
-  float: right;
+  float: right !important;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value {
   float: right;
@@ -156,13 +200,22 @@ body {
   float: left;
 }
 .main_container .merath_page .input_span {
-  text-align: right;
+  text-align: right !important;
 }
 .main_container .merath_page .input_span h4 {
-  float: right;
+  float: right !important;
 }
 .main_container .merath_page .table_table .table {
   direction: rtl;
+}
+.main_container .sebha_page #sebhaModal .modal-content {
+  left: -29% !important;
+}
+.main_container .profile .profile_table table tbody tr .label-view {
+  text-align: right;
+}
+.main_container .profile .profile_table table tbody tr .label-view2 {
+  text-align: right;
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {
@@ -173,7 +226,7 @@ body {
 
   .main_container .header .header_logo,
 .main_container .header .header_icon {
-    float: left !important;
+    margin-left: 8%;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -184,8 +237,10 @@ body {
     padding-right: 0;
     padding-left: unset;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
+  .main_container .header .lang_mbc {
+    margin-left: -17%;
+  }
+  .main_container .header .arrow_back {
     right: 100% !important;
     left: unset !important;
     top: 1rem !important;
@@ -194,15 +249,33 @@ body {
   .main_container .nav_nav button {
     width: 0;
     height: 0;
-    top: 1.5rem;
+    top: 1.5rem !important;
     right: -1rem;
     left: unset;
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
   }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 5%;
+    right: 76%;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
-    font-size: 1.25rem;
+    font-size: 0.9rem;
+  }
+  .main_container .content_carousel .content_carousel_head .btn_more {
+    font-size: 0.9rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_two .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_three .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+    font-size: 0.9rem;
+  }
+  .main_container .list_page .item .card .owl_content_img .content_free {
+    top: 7% !important;
+    right: 64% !important;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
@@ -223,6 +296,9 @@ body {
   .main_container .merath_page .input_span h4 {
     font-size: 1.09rem;
   }
+  .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    left: 50% !important;
+  }
 
   .loading-overlay .spinner-large {
     right: 31%;
@@ -236,7 +312,7 @@ body {
 
   .main_container .header .header_logo,
 .main_container .header .header_icon {
-    float: left !important;
+    margin-left: 8%;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -247,18 +323,20 @@ body {
     padding-right: 0;
     padding-left: unset;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
+  .main_container .header .arrow_back {
     right: 100% !important;
     left: unset !important;
     top: 1rem !important;
     width: 0;
   }
+  .main_container .header .lang_mbc {
+    margin-left: -38%;
+  }
   .main_container .nav_nav button {
     font-size: 1rem;
     width: 0;
     height: 0;
-    top: 1.5rem;
+    top: 1.5rem !important;
     right: -0.75rem;
     left: unset;
   }
@@ -268,8 +346,16 @@ body {
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
   }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 5%;
+    right: 80%;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
-    font-size: 1.5rem;
+    font-size: 14px;
+  }
+  .main_container .list_page .item .card .owl_content_img .content_free {
+    top: 8% !important;
+    right: 65% !important;
   }
   .main_container .salah_time_page {
     width: 95%;
@@ -292,6 +378,9 @@ body {
   .main_container .merath_page .input_span {
     text-align: right;
   }
+  .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    left: 50% !important;
+  }
 
   .loading-overlay .spinner-large {
     right: 31%;
@@ -305,7 +394,7 @@ body {
 
   .main_container .header .header_logo,
 .main_container .header .header_icon {
-    float: left !important;
+    margin-left: 8%;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -316,8 +405,10 @@ body {
     padding-right: 0;
     padding-left: unset;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
+  .main_container .header .lang_mbc {
+    margin-left: -13%;
+  }
+  .main_container .header .arrow_back {
     right: 100% !important;
     left: unset !important;
     top: 1rem !important;
@@ -328,7 +419,7 @@ body {
     font-size: 1rem;
     width: 0;
     height: 0;
-    top: 1.5rem;
+    top: 1.5rem !important;
     right: -0.75rem;
     left: unset;
   }
@@ -338,8 +429,19 @@ body {
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
   }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 5%;
+    right: 80%;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  .main_container .content_carousel .content_carousel_head .btn_more {
+    font-size: 1rem;
+  }
+  .main_container .list_page .item .card .owl_content_img .content_free {
+    top: 8% !important;
+    right: 65% !important;
   }
   .main_container .inner_page .section_content .image_inner {
     height: 100px;
@@ -350,7 +452,7 @@ body {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    font-size: 21px;
+    font-size: 13px;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
@@ -366,6 +468,9 @@ body {
     padding-left: 8px;
     padding-right: 0;
     font-size: 1.3rem;
+  }
+  .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    left: 50% !important;
   }
   .main_container .sebha_page #sebhaModal .close {
     font-size: 2rem;
@@ -391,7 +496,7 @@ body {
 
   .main_container .header .header_logo,
 .main_container .header .header_icon {
-    float: left !important;
+    margin-left: 8%;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -402,26 +507,43 @@ body {
     padding-right: 0;
     padding-left: unset;
   }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
+  .main_container .header .arrow_back {
     right: 100% !important;
     left: unset !important;
     top: 1rem !important;
     width: 0;
   }
+  .main_container .header .lang_mbc {
+    margin-left: -13%;
+  }
   .main_container .nav_nav button {
     font-size: 1rem;
     width: 0;
     height: 0;
-    top: 1.5rem;
+    top: 1.5rem !important;
     right: -0.75rem;
     left: unset;
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
   }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 5%;
+    right: 80%;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  .main_container .content_carousel .content_carousel_head .btn_more {
+    font-size: 1rem;
+  }
+  .main_container .list_page .item .card .owl_content_img .content_free {
+    top: 8% !important;
+    right: 65% !important;
+  }
+  .main_container .inner_page .section_content .p_content,
+.main_container .inner_page .section_content .p_content_2 {
+    font-size: 14px;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
@@ -444,22 +566,17 @@ body {
   .main_container .merath_page .input_span h4 {
     font-size: 1.5rem;
   }
+  .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    left: 50% !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023.9px) {
   .main_container .header .header_logo,
 .main_container .header .header_icon {
     width: 100%;
-    text-align: center;
+    text-align: left !important;
     display: block;
-    float: left !important;
-  }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-    right: 99% !important;
-    left: unset !important;
-    top: 1.5rem !important;
-    font-size: 2rem;
-    width: 0;
+    margin-left: 0 !important;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -472,19 +589,57 @@ body {
     font-size: 2rem;
     margin-top: 1rem;
   }
+  .main_container .header .lang_mbc {
+    margin-left: -6%;
+  }
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    right: unset !important;
+    left: 0% !important;
+  }
+  .main_container .header .arrow_back {
+    right: 96% !important;
+    left: unset !important;
+    top: 1.5rem !important;
+    font-size: 2rem;
+    width: 0;
+  }
   .main_container .nav_nav button {
     font-size: 2rem;
     width: 0;
     height: 0;
-    top: 1.5rem;
+    top: 1.5rem !important;
     right: -0.5rem;
     left: unset;
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
   }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 4%;
+    right: 85%;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+  }
+  .main_container .content_carousel .content_carousel_head .btn_more {
+    font-size: 1.5rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_two .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_three .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+    font-size: 1.25rem;
+  }
+  .main_container .list_page .item .card .owl_content_img .content_free {
+    top: 8% !important;
+    right: 69% !important;
+  }
+  .main_container .inner_page .cover audio {
+    width: 100% !important;
+  }
+  .main_container .modal_cover .modal-dialog .modal-content {
+    left: 0 !important;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
@@ -502,22 +657,16 @@ body {
   .main_container .merath_page .input_span {
     text-align: right;
   }
+  .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    left: 50% !important;
+  }
 }
-@media (min-width: 1024px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1030px) {
   .main_container .header .header_logo,
 .main_container .header .header_icon {
     width: 100%;
-    text-align: center;
+    text-align: left !important;
     display: block;
-    float: left !important;
-  }
-  .main_container .header .header_logo .arrow_back,
-.main_container .header .header_icon .arrow_back {
-    right: 98% !important;
-    left: unset !important;
-    top: 1.85rem !important;
-    font-size: 2.5rem;
-    width: 0;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -530,11 +679,25 @@ body {
     font-size: 2rem;
     margin-top: 1rem;
   }
+  .main_container .header .lang_mbc {
+    margin-left: -4%;
+  }
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    right: unset !important;
+    left: 0% !important;
+  }
+  .main_container .header .arrow_back {
+    right: 95% !important;
+    left: unset !important;
+    top: 1.85rem !important;
+    font-size: 2.5rem;
+    width: 0;
+  }
   .main_container .nav_nav button {
     font-size: 2rem;
     width: 0;
     height: 0;
-    top: 2rem;
+    top: 2rem !important;
     right: 0;
     left: unset;
   }
@@ -543,6 +706,35 @@ body {
   }
   .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     float: left;
+  }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 5.5%;
+    right: 77%;
+  }
+  .main_container .content_carousel .content_carousel_head .link_title h6 {
+    font-size: 1.85rem;
+  }
+  .main_container .content_carousel .content_carousel_head .btn_more {
+    font-size: 1.85rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_two .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_three .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+    font-size: 1.75rem !important;
+  }
+  .main_container .list_page .item .card .owl_content_img .content_free {
+    top: 8% !important;
+    right: 69% !important;
+  }
+  .main_container .inner_page .section_content .p_content,
+.main_container .inner_page .section_content .p_content_2 {
+    font-size: 26px;
+    margin-right: 0.75rem;
+  }
+  .main_container .modal_cover .modal-dialog .modal-content {
+    left: 0 !important;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
@@ -559,6 +751,17 @@ body {
   }
   .main_container .merath_page .input_span {
     text-align: right;
+  }
+  .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
+    left: 50% !important;
+  }
+}
+@media (min-width: 1031px) and (max-width: 1360px) {
+  .main_container .sebha_page #sebhaModal .modal-content {
+    left: 2%;
+  }
+  .main_container .modal_cover .modal-dialog .modal-content {
+    left: -26%;
   }
 }
 @media (min-width: 320px) and (max-width: 1200px) {
