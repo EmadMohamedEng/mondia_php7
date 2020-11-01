@@ -153,12 +153,12 @@ Route::get('mbc_portal_logout', 'MbcController@logout');
 
 /***************start mbc 2****************** */
 
-Route::get('mbc_portal_landing/{lang?}', 'MbcTwoController@index');
-Route::get('mbc_portal_login/{lang?}', 'MbcTwoController@login');
-Route::get('mbc_portal_pin/{lang?}', 'MbcTwoController@pincode');
-Route::get('mbc_portal_unsub/{lang?}', 'MbcTwoController@unsubscribe');
+Route::get('mbc_portal_landing', 'MbcTwoController@index');
+Route::get('mbc_portal_login', 'MbcTwoController@login');
+Route::get('mbc_portal_pin', 'MbcTwoController@pincode');
+Route::get('mbc_portal_unsub', 'MbcTwoController@unsubscribe');
 Route::post('mbc_checkstatus', 'MbcTwoController@checkStatusLogin');
-Route::post('mbc_subscription/optin/{partnerRoleId}/{lang?}', 'MbcTwoController@subscriptionOptIn');
+Route::post('mbc_subscription/optin/{partnerRoleId}', 'MbcTwoController@subscriptionOptIn');
 Route::post('mbc_subscription/confirm/{partnerRoleId}', 'MbcTwoController@subscriptionConfirm');
 Route::post('mbc_subscription/optout/{partnerRoleId}', 'MbcTwoController@subscriptionOptOut');
 

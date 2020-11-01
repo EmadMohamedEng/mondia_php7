@@ -223,9 +223,9 @@ if ($lang == 'ar') {
       const checkbox = document.getElementById("on-off");
       checkbox.addEventListener('change', (event) => {
         if (event.target.checked) {
-          location.href = "{{url('mbc_portal_landing/ar')}}";
+          location.href = "{{url('lang/ar')}}";
         } else {
-          location.href = "{{url('mbc_portal_landing/en')}}";
+          location.href = "{{url('lang/en')}}";
         }
       })
     }
