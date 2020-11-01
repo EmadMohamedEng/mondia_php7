@@ -150,7 +150,11 @@ class MbcTwoController extends Controller
 
   public function index(Request $request)
   {
-    $lang =  isset($request->lang) ? $request->lang : "en";
+    if (Session::get('applocale') == 'en') {
+      $lang =  isset($request->lang) ? $request->lang : "en";
+    }else{
+      $lang =  isset($request->lang) ? $request->lang : "ar";
+    }
     session::put('lang', $lang);
     return view('landing_v2.mbcTwo.timwe_landing', compact("lang"));
   }

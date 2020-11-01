@@ -26,7 +26,6 @@ class FrontController extends Controller
   public function index(Request $request)
   {
 
-
     if ($request->has('OpID')) {
       session()->put('current_op_id', $request->get('OpID'));
     }
