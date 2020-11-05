@@ -153,6 +153,9 @@ Route::get('mbc_portal_logout', 'MbcController@logout');
 
 /***************start mbc 2****************** */
 
+Route::get('ip_info', 'MbcTwoController@ip_info');
+
+
 Route::get('mbc_portal_landing', 'MbcTwoController@index');
 Route::get('mbc_portal_login', 'MbcTwoController@login');
 Route::get('mbc_portal_pin', 'MbcTwoController@pincode');
