@@ -10,6 +10,10 @@
   <title>islamic landing page</title>
   <link rel="stylesheet" href='{{url('front/stc')}}/css/bootstrap.min.css'>
   <link rel="stylesheet" href='{{url('front/stc')}}/css/all.min.css'>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_mbc_two.css">
 
@@ -39,6 +43,10 @@
     color: #e0c26c;
   }
 
+.all_slect{
+  padding-right: 9%;
+    padding-left: 9%;
+}
 </style>
 @php
 App::setLocale($lang);
@@ -138,34 +146,36 @@ if ($lang == 'ar') {
           <form method="post" action="{{url('mbc_subscription/optin/'.partnerRoleId)}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
             {{ csrf_field() }}
 
-            <!-- <div class="row m-0">
+            <div class="row m-0">
               <div class="col-3 p-0">
                 <div class="dropdown">
-                  <button class="btn btn_select dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                  <div class="dropdown-menu dropdown-primary">
-                    <a class="dropdown-item select_option " href="#" data-select="<img src='{{asset('front/stc/img/egy.png')}}'>">
-                    <img src="{{asset('front/stc/img/egy.png')}}">
-                      <span id="+02" >+02 EGY </span>
-                      </a>
-                    <a class="dropdown-item select_option " href="#" data-select="<img src='{{asset('front/stc/img/ksa.png')}}'>">
-                    <img src="{{asset('front/stc/img/ksa.png')}}">
-                    <span id="+966">+966 KSA </span>
-                    </a>
-                  </div>
+                  <button class="btn btn_select" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <span style="font-weight: bold;">{{ $country->code }}</span>
+                  </button>
+
                 </div>
               </div>
 
               <div class="col-9 p-0">
                 <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-                <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
+                <input type="hidden" name="code" value="{{ $country->code }}">
+                <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>
-            </div> -->
+            </div>
+            <div class="all_slect">
+              <select class="mdb-select md-form form-control" name="operator" required>
+                <option value="" disabled selected>Choose your Operators</option>
+                @foreach($operators as $operator)
+                <option value="{{$operator->id}}">{{$operator->name}}</option>
+                @endforeach
+              </select>
+            </div>
 
-            <div class="form-group input-group form-inline">
+            <!-- <div class="form-group input-group form-inline">
               <label for="phone"><span>966</span></label>
               <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
               <input type="tel" class="form-control" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
-            </div>
+            </div> -->
 
         <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subscribe_Now') </button>
         </form>
@@ -188,12 +198,16 @@ if ($lang == 'ar') {
   </div>
   <!-- script -->
   <script src="{{url('front/stc')}}/js/jquery-3.4.0.min.js"></script>
-  <script src="{{ url('front/stc')}}/js/popper.min.js"></script>
+  <!-- <script src="{{ url('front/stc')}}/js/popper.min.js"></script> -->
   <script src="{{url('front/stc')}}/js/bootstrap.min.js"></script>
+
+  <!-- JQuery -->
   <script src="{{ url('front/stc')}}/js/script_viva.js"></script>
 
 
   <script>
+    // Material Select Initialization
+
 
     $('.select_option').click(function () {
       var x= $(this).data('select');
@@ -204,9 +218,9 @@ if ($lang == 'ar') {
     // document.getElementById("county_code").innerHTML = e.target.id
     // })
 
-    $('.select_option').click(function (e) {
-    document.getElementById("phone").value = e.target.id
-    })
+    // $('.select_option').click(function (e) {
+    // document.getElementById("phone").value = e.target.id
+    // })
 
     $(document).ready(function() {
       var msisdn = $("#phone").val();

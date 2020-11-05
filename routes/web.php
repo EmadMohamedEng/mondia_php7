@@ -142,6 +142,7 @@ Route::post('subscription/optout/{partnerRoleId}', 'TimweController@subscription
 /***************start mbc portal****************** */
 define('MBC_OP_ID', 14);
 define('CHECKSUB_URL', "https://mbc.digizone.com.kw/api/checksub");
+define('MBC_CREATE_SUB', "https://mbc.digizone.com.kw/api/create_sub");
 // define('CHECKUNSUB_URL', "http://localhost/mbc_system/api/unsub");
 
 // Route::get('mbc_portal_login_old/{lang?}', 'MbcController@login');
@@ -153,7 +154,7 @@ Route::get('mbc_portal_logout', 'MbcController@logout');
 
 /***************start mbc 2****************** */
 
-Route::get('ip_info', 'MbcTwoController@ip_info');
+Route::get('get_country', 'MbcTwoController@get_country');
 
 
 Route::get('mbc_portal_landing', 'MbcTwoController@index');
@@ -164,6 +165,7 @@ Route::post('mbc_checkstatus', 'MbcTwoController@checkStatusLogin');
 Route::post('mbc_subscription/optin/{partnerRoleId}', 'MbcTwoController@subscriptionOptIn');
 Route::post('mbc_subscription/confirm/{partnerRoleId}', 'MbcTwoController@subscriptionConfirm');
 Route::post('mbc_subscription/optout/{partnerRoleId}', 'MbcTwoController@subscriptionOptOut');
+Route::post('mbc_subscription_resend_pincode/optin/{partnerRoleId}', 'MbcTwoController@resend_pincode');
 
 /***************end mbc 2****************** */
 

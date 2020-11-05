@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Country;
 use SoapClient;
 use App\MbcSendMt;
 use App\MbcNotification;
+use App\Operator;
 use Illuminate\Http\Request;
 use Artisaninweb\SoapWrapper\SoapWrapper;
 use Illuminate\Support\Facades\Validator;
@@ -15,7 +17,8 @@ use Illuminate\Support\Facades\File;
 use App\TimWe;
 use App\timweUnsubscriber;
 use App\timweSubscriber;
-
+use App\Pincode;
+use Carbon\Carbon;
 
 class MbcTwoController extends Controller
 {
@@ -150,12 +153,18 @@ class MbcTwoController extends Controller
 
   public function index(Request $request)
   {
+
+    $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
+    $country = Country::where('title',$get_url_country)->first();
+    $operators = Operator::where('country_id',$country->id)->get();
+    // dd($operators);
+
     $lang =  Session::get('applocale');
       if (Session::get('applocale') == 'ur') {
         $lang = 'ar';
       }
     session::put('lang', $lang);
-    return view('landing_v2.mbcTwo.timwe_landing', compact("lang"));
+    return view('landing_v2.mbcTwo.timwe_landing', compact("lang",'country','operators'));
   }
 
   public function pincode()
@@ -299,73 +308,144 @@ class MbcTwoController extends Controller
 
   public function subscriptionOptIn(Request $request, $partnerRole)
   {
-    $msisdn = $request->number ?? session('pinMsisdn');
-    // $msisdn = str_replace("+0","",$msisdn);
-    // $msisdn = trim($msisdn,"+");
+
+    date_default_timezone_set("Africa/Cairo");
+    // format number
+    $msisdn = $request->code.$request->number?? session('Msisdn');
+    $msisdn = str_replace("+0","",$msisdn);
+    $msisdn = trim($msisdn,"+");
     $service_id = 2;
-
-
     $check = $this->checkStatus($msisdn, $service_id);
     if ($check == "true") {
-
-      session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-      return redirect(url('/?OpID=' . MBC_OP_ID));
-    } else {
-
-      date_default_timezone_set('Asia/Qatar');
-
-      $partnerRoleId = $partnerRole;
-
-      require_once('uuid/UUID.php');
-      $trxid = \UUID::v4();
-
-      $headers = array(
-        "Content-Type: application/json",
-        "apikey: " . apikeysubscription,
-        "authentication: " . $this->generateKey(presharedkeysubscription),
-        "external-tx-id: " . $trxid
-      );
-
-      $now = strtotime(now());
-      $sendDate = gmdate(DATE_W3C, $now);
-
-      $vars["userIdentifier"] = '966' . $msisdn;
-
-
-      session()->put('userIdentifier', '966' . $msisdn);
-      session()->put('pinMsisdn',  $msisdn);
-
-
-        if (true) {
-          $lang =  session::get('lang');
-          if ($request->has('prev_url'))
-            return redirect('mbc_portal_pin');
-          if ($lang == 'ar')
-            return redirect('mbc_portal_pin')->with('success', '!تم ارسال رمز التحقق');
-
-          return redirect('mbc_portal_pin')->with('success', 'Pincode Sent!');
-        }
-
+    session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+    return redirect(url('/?OpID=' . MBC_OP_ID));
     }
+      // create pincode
+    $random = mt_rand(1000, 9999);
+    $pincode_random = $random;
+    $pincode = new Pincode();
+    $pincode->msisdn = $msisdn;
+    $pincode->pincode = $pincode_random;
+    $date = Carbon::now()->format('Y-m-d H:i:s');
+    $pincode->expire_date_time = Carbon::parse($date)->addHour();
+    $pincode->operator_id = $request->operator;
+    $pincode->save();
+    Session::put('Msisdn', $msisdn);
+    //send massage
+    $URL = "http://mbc.mobc.com:8030/Alkanz_URL_IN/SMSIN.aspx?"."Mobileno=$msisdn&MsgBody=$pincode_random";
+    $ch = curl_init();
+    $timeout = 500;
+    curl_setopt($ch, CURLOPT_URL, $URL);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+    curl_setopt($ch, CURLOPT_POSTREDIR, 3);
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    $lang =  session::get('lang');
+    if ($response == "OK") {
+      if ($lang == 'ar'){
+        return redirect('mbc_portal_pin')->with('success', '!تم ارسال رمز التحقق');
+      }
+      return redirect('mbc_portal_pin')->with('success', 'Pincode Sent!');
+    } else {
+      if ($lang == 'ar'){
+        return redirect('mbc_portal_pin')->with('failed', 'يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');
+      }
+      return redirect('mbc_portal_pin')->with('failed', 'There is an error, please click to resend the verification code');
+    }
+
+
+
+
+
+    // $check = $this->checkStatus($msisdn, $service_id);
+    // if ($check == "true") {
+
+    //   session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+    //   return redirect(url('/?OpID=' . MBC_OP_ID));
+    // } else {
+
+    //   date_default_timezone_set('Asia/Qatar');
+
+    //   $partnerRoleId = $partnerRole;
+
+    //   require_once('uuid/UUID.php');
+    //   $trxid = \UUID::v4();
+
+    //   $headers = array(
+    //     "Content-Type: application/json",
+    //     "apikey: " . apikeysubscription,
+    //     "authentication: " . $this->generateKey(presharedkeysubscription),
+    //     "external-tx-id: " . $trxid
+    //   );
+
+    //   $now = strtotime(now());
+    //   $sendDate = gmdate(DATE_W3C, $now);
+
+    //   $vars["userIdentifier"] = '966' . $msisdn;
+
+
+    //   session()->put('userIdentifier', '966' . $msisdn);
+    //   session()->put('pinMsisdn',  $msisdn);
+
+
+    //     if (true) {
+    //       $lang =  session::get('lang');
+    //       if ($request->has('prev_url'))
+    //         return redirect('mbc_portal_pin');
+    //       if ($lang == 'ar')
+    //         return redirect('mbc_portal_pin')->with('success', '!تم ارسال رمز التحقق');
+
+    //       return redirect('mbc_portal_pin')->with('success', 'Pincode Sent!');
+    //     }
+
+    // }
   }
 
   public function subscriptionConfirm(Request $request, $partnerRole)
   {
-
-
-    if (session()->has('userIdentifier')) {
-      $vars["userIdentifier"] = session('userIdentifier');
-    } else {
-      $vars["userIdentifier"] = 'no session found';
-    }
-    session(['MSISDN' => $vars["userIdentifier"], 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+    date_default_timezone_set("Africa/Cairo");
+    $pincode = $request->input('pincode');
+    $msisdn = Session::get('Msisdn');
+    $service_id = 2;
+    $date = Carbon::now()->format('Y-m-d H:i:s');
+    //check pincode
     $lang =  session::get('lang');
-    if ($lang == 'ar') {
-      $message = 'تم الاشتراك بنجاح';
-    } else {
-      $message = 'Subscribed succesfully';
+    $PinCode = Pincode::where('msisdn', '=', $msisdn)->where('pincode', '=', $pincode)->orderBy('id', 'DESC')->first();
+    if ($PinCode) {
+      $expire_date_time= $PinCode->expire_date_time; /*"2020-07-05 17:28:19"*/
+      $now = Carbon::now()->format('Y-m-d H:i:s');/*"2020-07-05 16:30:00"*/
+      if ($now <= $expire_date_time) {
+        //make optn api
+        //add this number
+        $create_msisdn_for_mbc_server = $this->mbc_create_sub($msisdn, $service_id);
+        //set session and make redirect
+        session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+        $lang =  session::get('lang');
+          if ($lang == 'ar') {
+            $message = 'تم الاشتراك بنجاح';
+          } else {
+            $message = 'Subscribed succesfully';
+          }
+          $PinCode->verified = 1;
+          $PinCode->save();
+          return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
+      }else{
+        $PinCode->verified = 0;
+        $PinCode->save();
+        if ($lang == 'ar'){
+          return redirect('mbc_portal_pin')->with('failed', 'انتهاء وقت الكود برجاء ارسال الكود مره اخرى');
+        }
+        return redirect('mbc_portal_pin')->with('failed', 'Resend the pincode');
+      }
+    }else{
+      if ($lang == 'ar'){
+        return redirect('mbc_portal_pin')->with('failed','خطأ في كود التفعيل برجاء ادخال كود التفعيل الصحيح');
+      }
+      return redirect('mbc_portal_pin')->with('failed','Activation error. Please enter the correct activation code');
     }
-    return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
+
   }
 
 
@@ -396,6 +476,23 @@ class MbcTwoController extends Controller
     $JSON = json_encode($vars);
     $actionName = "MBC Check Status";
     $URL = CHECKSUB_URL;
+    $ReqResponse = $this->SendRequest($URL, $vars, ["Accept: application/json"]);
+    $ReqResponse = json_decode($ReqResponse, true);
+    //log request and response
+    $result['request'] = $vars;
+    $result['response'] = $ReqResponse;
+    $result['date'] = date('Y-m-d H:i:s');
+    $this->log($actionName, $URL, $result);
+    return $ReqResponse;
+  }
+
+  public function mbc_create_sub($msisdn, $service_id)
+  {
+    $vars["msisdn"] = $msisdn;
+    $vars["service_id"] = $service_id;
+    $JSON = json_encode($vars);
+    $actionName = "MBC Check Status";
+    $URL = MBC_CREATE_SUB;
     $ReqResponse = $this->SendRequest($URL, $vars, ["Accept: application/json"]);
     $ReqResponse = json_decode($ReqResponse, true);
     //log request and response
@@ -442,7 +539,44 @@ class MbcTwoController extends Controller
     }
   }
 
+  public function resend_pincode(Request $request, $partnerRole)
+  {
+    $msisdn = Session::get('Msisdn');
+    $service_id = 2;
+    $random = mt_rand(1000, 9999);
+    $pincode_random = $random;
+    $pincode = new Pincode();
+    $pincode->msisdn = $msisdn;
+    $pincode->pincode = $pincode_random;
+    $date = Carbon::now()->format('Y-m-d H:i:s');
+    $pincode->expire_date_time = Carbon::parse($date)->addHour();
+    $pincode->operator_id = $request->operator;
+    $pincode->save();
+    Session::put('Msisdn', $msisdn);
+    //send massage
+    $URL = "http://mbc.mobc.com:8030/Alkanz_URL_IN/SMSIN.aspx?"."Mobileno=$msisdn&MsgBody=$pincode_random";
+    $ch = curl_init();
+    $timeout = 500;
+    curl_setopt($ch, CURLOPT_URL, $URL);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+    curl_setopt($ch, CURLOPT_POSTREDIR, 3);
+    $response = curl_exec($ch);
+    curl_close($ch);
 
+    $lang =  session::get('lang');
+    if ($response == "OK") {
+      if ($lang == 'ar'){
+        return redirect('mbc_portal_pin')->with('success', '!تم ارسال رمز التحقق');
+      }
+      return redirect('mbc_portal_pin')->with('success', 'Pincode Sent!');
+    } else {
+      if ($lang == 'ar'){
+        return redirect('mbc_portal_pin')->with('failed', 'يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');
+      }
+      return redirect('mbc_portal_pin')->with('failed', 'There is an error, please click to resend the verification code');
+    }
+  }
 
 
 
@@ -498,7 +632,7 @@ class MbcTwoController extends Controller
     }
   }
 
-  function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE)
+  function get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE)
   {
       $output = NULL;
       if (filter_var($ip, FILTER_VALIDATE_IP) === FALSE) {
@@ -512,31 +646,13 @@ class MbcTwoController extends Controller
       }
       $purpose = str_replace(array("name", "\n", "\t", " ", "-", "_"), NULL, strtolower(trim($purpose)));
       $support = array("country", "countrycode", "state", "region", "city", "location", "address");
-      $continents = array(
-          "AF" => "Africa",
-          "AN" => "Antarctica",
-          "AS" => "Asia",
-          "EU" => "Europe",
-          "OC" => "Australia (Oceania)",
-          "NA" => "North America",
-          "SA" => "South America"
-      );
       if (filter_var($ip, FILTER_VALIDATE_IP) && in_array($purpose, $support)) {
-          //  $ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $ip));
-
           $ipdat  = @json_decode($this->GetPageData("http://www.geoplugin.net/json.gp?ip=" . $ip));
 
           if (@strlen(trim($ipdat->geoplugin_countryCode)) == 2) {
               switch ($purpose) {
                   case "location":
-                      $output = array(
-                          "city" => @$ipdat->geoplugin_city,
-                          "state" => @$ipdat->geoplugin_regionName,
-                          "country" => @$ipdat->geoplugin_countryName,
-                          "country_code" => @$ipdat->geoplugin_countryCode,
-                          "continent" => @$continents[strtoupper($ipdat->geoplugin_continentCode)],
-                          "continent_code" => @$ipdat->geoplugin_continentCode
-                      );
+                      $output = @$ipdat->geoplugin_countryName;
                       break;
                   case "address":
                       $address = array($ipdat->geoplugin_countryName);
@@ -546,27 +662,16 @@ class MbcTwoController extends Controller
                           $address[] = $ipdat->geoplugin_city;
                       $output = implode(", ", array_reverse($address));
                       break;
-                  case "city":
-                      $output = @$ipdat->geoplugin_city;
-                      break;
-                  case "state":
-                      $output = @$ipdat->geoplugin_regionName;
-                      break;
-                  case "region":
-                      $output = @$ipdat->geoplugin_regionName;
-                      break;
                   case "country":
                       $output = @$ipdat->geoplugin_countryName;
-                      break;
-                  case "countrycode":
-                      $output = @$ipdat->geoplugin_countryCode;
                       break;
               }
           }
       }
-      dd($output);
+      $output = "Egypt";
       return $output;
   }
+
 
   public static function GetPageData($URL)
     {
