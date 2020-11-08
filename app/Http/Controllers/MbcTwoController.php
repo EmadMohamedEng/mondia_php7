@@ -182,7 +182,10 @@ class MbcTwoController extends Controller
   public function login(Request $request)
   {
     $lang =  session::get('lang');
-    return view('landing_v2.mbcTwo.timwe_login', compact('lang'));
+    $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
+    $country = Country::where('title',$get_url_country)->first();
+    $operators = Operator::where('country_id',$country->id)->get();
+    return view('landing_v2.mbcTwo.timwe_login', compact('lang','country','operators'));
   }
 
   public function gen_uuid()
@@ -306,14 +309,13 @@ class MbcTwoController extends Controller
     return $ReqResponse;
   }
 
-  public function subscriptionOptIn(Request $request, $partnerRole)
+  public function subscriptionOptIn(Request $request, $partnerRole) //register
   {
-
     date_default_timezone_set("Africa/Cairo");
     // format number
-    $msisdn = $request->code.$request->number?? session('Msisdn');
-    $msisdn = str_replace("+0","",$msisdn);
-    $msisdn = trim($msisdn,"+");
+    $msisdn = $request->number?? session('Msisdn');
+    // $msisdn = str_replace("+0","",$msisdn);
+    // $msisdn = trim($msisdn,"+");
     $service_id = 2;
     $check = $this->checkStatus($msisdn, $service_id);
     if ($check == "true") {
@@ -331,6 +333,7 @@ class MbcTwoController extends Controller
     $pincode->operator_id = $request->operator;
     $pincode->save();
     Session::put('Msisdn', $msisdn);
+    Session::put('operator_id', $request->operator);
     //send massage
     $URL = "http://mbc.mobc.com:8030/Alkanz_URL_IN/SMSIN.aspx?"."Mobileno=$msisdn&MsgBody=$pincode_random";
     $ch = curl_init();
@@ -341,7 +344,7 @@ class MbcTwoController extends Controller
     curl_setopt($ch, CURLOPT_POSTREDIR, 3);
     $response = curl_exec($ch);
     curl_close($ch);
-
+      // dd($response);
     $lang =  session::get('lang');
     if ($response == "OK") {
       if ($lang == 'ar'){
@@ -354,56 +357,9 @@ class MbcTwoController extends Controller
       }
       return redirect('mbc_portal_pin')->with('failed', 'There is an error, please click to resend the verification code');
     }
-
-
-
-
-
-    // $check = $this->checkStatus($msisdn, $service_id);
-    // if ($check == "true") {
-
-    //   session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-    //   return redirect(url('/?OpID=' . MBC_OP_ID));
-    // } else {
-
-    //   date_default_timezone_set('Asia/Qatar');
-
-    //   $partnerRoleId = $partnerRole;
-
-    //   require_once('uuid/UUID.php');
-    //   $trxid = \UUID::v4();
-
-    //   $headers = array(
-    //     "Content-Type: application/json",
-    //     "apikey: " . apikeysubscription,
-    //     "authentication: " . $this->generateKey(presharedkeysubscription),
-    //     "external-tx-id: " . $trxid
-    //   );
-
-    //   $now = strtotime(now());
-    //   $sendDate = gmdate(DATE_W3C, $now);
-
-    //   $vars["userIdentifier"] = '966' . $msisdn;
-
-
-    //   session()->put('userIdentifier', '966' . $msisdn);
-    //   session()->put('pinMsisdn',  $msisdn);
-
-
-    //     if (true) {
-    //       $lang =  session::get('lang');
-    //       if ($request->has('prev_url'))
-    //         return redirect('mbc_portal_pin');
-    //       if ($lang == 'ar')
-    //         return redirect('mbc_portal_pin')->with('success', '!تم ارسال رمز التحقق');
-
-    //       return redirect('mbc_portal_pin')->with('success', 'Pincode Sent!');
-    //     }
-
-    // }
   }
 
-  public function subscriptionConfirm(Request $request, $partnerRole)
+  public function subscriptionConfirm(Request $request, $partnerRole) //pincode
   {
     date_default_timezone_set("Africa/Cairo");
     $pincode = $request->input('pincode');
@@ -508,14 +464,12 @@ class MbcTwoController extends Controller
 
   public function checkStatusLogin(Request $request)
   {
-
     $msisdn = $request->number;
     $service_id = 2;
     // $msisdn = str_replace("+0","",$msisdn);
     // $msisdn = trim($msisdn,"+");
 
     $check = $this->checkStatus($msisdn, $service_id);
-    //dd($check);
 
     if ($check == "true") {
 
@@ -539,7 +493,7 @@ class MbcTwoController extends Controller
     }
   }
 
-  public function resend_pincode(Request $request, $partnerRole)
+  public function resend_pincode(Request $request, $partnerRole) //resend_pincode
   {
     $msisdn = Session::get('Msisdn');
     $service_id = 2;
@@ -550,7 +504,7 @@ class MbcTwoController extends Controller
     $pincode->pincode = $pincode_random;
     $date = Carbon::now()->format('Y-m-d H:i:s');
     $pincode->expire_date_time = Carbon::parse($date)->addHour();
-    $pincode->operator_id = $request->operator;
+    $pincode->operator_id = Session::get('operator_id');
     $pincode->save();
     Session::put('Msisdn', $msisdn);
     //send massage

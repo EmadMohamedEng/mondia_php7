@@ -20,6 +20,13 @@ App::setLocale($lang);
   .landing_page .form_content{
     width: 67%;
   }
+  .all_slect{
+    padding-right: 9%;
+    padding-left: 9%;
+    position: relative;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
 </style>
 <body>
   <div class="main_container pt-5">
@@ -62,32 +69,29 @@ App::setLocale($lang);
           <form method="post" action="{{url('mbc_checkstatus')}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
             {{ csrf_field() }}
 
-            <!-- <div class="row m-0">
+            <div class="row m-0">
               <div class="col-3 p-0">
                 <div class="dropdown">
-                  <button class="btn btn_select dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                  <div class="dropdown-menu dropdown-primary">
-                    <a class="dropdown-item select_option " href="#" data-select="<img src='{{asset('front/stc/img/egy.png')}}'>">
-                    <img src="{{asset('front/stc/img/egy.png')}}">
-                      <span id="+02" >+02 EGY </span>
-                      </a>
-                    <a class="dropdown-item select_option " href="#" data-select="<img src='{{asset('front/stc/img/ksa.png')}}'>">
-                    <img src="{{asset('front/stc/img/ksa.png')}}">
-                    <span id="+966">+966 KSA </span>
-                    </a>
-                  </div>
+                  <button class="btn btn_select" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <span style="font-weight: bold;">{{ $country->code }}</span>
+                  </button>
+
                 </div>
               </div>
 
               <div class="col-9 p-0">
                 <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-                <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
+                <input type="hidden" name="code" value="{{ $country->code }}">
+                <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>
-            </div> -->
-            <div class="form-group input-group form-inline">
-              <label for="phone"><span>966</span></label>
-              <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-              <input type="tel" class="form-control" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
+            </div>
+            <div class="all_slect">
+              <select class="mdb-select md-form form-control" name="operator" required>
+                <option value="" disabled selected>Choose your Operators</option>
+                @foreach($operators as $operator)
+                <option value="{{$operator->id}}">{{$operator->name}}</option>
+                @endforeach
+              </select>
             </div>
           <!--<button class="btn back">رجوع</button>-->
             <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subsc')</button>
