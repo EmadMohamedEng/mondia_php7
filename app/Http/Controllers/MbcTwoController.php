@@ -344,7 +344,6 @@ class MbcTwoController extends Controller
     curl_setopt($ch, CURLOPT_POSTREDIR, 3);
     $response = curl_exec($ch);
     curl_close($ch);
-      // dd($response);
     $lang =  session::get('lang');
     if ($response == "OK") {
       if ($lang == 'ar'){
