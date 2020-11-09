@@ -15,8 +15,8 @@ class CreateResponseSendMessageTable extends Migration
     {
         Schema::create('response_send_messages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('link', 300);
-            $table->string('response', 191);
+            $table->string('link', 500);
+            $table->string('response', 200);
             $table->timestamps();
         });
     }
