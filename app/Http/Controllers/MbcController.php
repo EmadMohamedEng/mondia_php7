@@ -666,7 +666,14 @@ class MbcController extends Controller
     {
       if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
         if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
-          return view('front.profile');
+          $vars["msisdn"] = session()->get('MSISDN');
+          $vars["service_id"] = 2;
+          $sub = $this->SendRequest(MBC_CREATE_SUB, $vars, ["Accept: application/json"]);
+          $date = date('Y-m-d');
+          if($sub){
+            $date = date('Y-m-d',strtotime($sub->create_at));
+          }
+          return view('front.profile',compact('date'));
         }
         return redirect('mbc_portal_login');
       }
