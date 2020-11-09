@@ -49,17 +49,20 @@ class OperatorsController extends Controller {
         $validator = Validator::make($request->all(), [
                     'name' => 'required',
                     'country_id' => 'required',
-                    'operator_image' => 'required|mimes:jpg,jpeg,png',
+                    // 'operator_image' => 'required|mimes:jpg,jpeg,png',
         ]);
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
         }
         $operator = new Operator($request->all());
-        $file = $request->file('operator_image');
-        $destinationFolder = $this->destinationFolder;
-        $uniqueID = uniqid();
-        $operator['operator_image'] = $destinationFolder . $uniqueID . "." . $file->getClientOriginalExtension();
-        $file->move($destinationFolder, $uniqueID . "." . $file->getClientOriginalExtension());
+        if ($request->hasFile('operator_image')) {
+          # code...
+          $file = $request->file('operator_image');
+          $destinationFolder = $this->destinationFolder;
+          $uniqueID = uniqid();
+          $operator['operator_image'] = $destinationFolder . $uniqueID . "." . $file->getClientOriginalExtension();
+          $file->move($destinationFolder, $uniqueID . "." . $file->getClientOriginalExtension());
+        }
         $operator->save();
         \Session::flash('success', 'Operator Added successsfully');
         return redirect('operators');

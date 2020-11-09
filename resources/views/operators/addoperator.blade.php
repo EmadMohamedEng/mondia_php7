@@ -36,8 +36,8 @@ Operators
                             <div class="fileupload-preview fileupload-exists img-thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
                             <div>
                                 <span class="btn btn-default btn-file"><span class="fileupload-new">Select image</span>
-                                    <span class="fileupload-exists">Change</span>
-                                    {!! Form::file('operator_image',['required'=>'required','accept'=>'image/*']) !!}</span>
+                                    <!-- <span class="fileupload-exists">Change</span> -->
+                                    {!! Form::file('operator_image',['accept'=>'image/*']) !!}</span>
                                 <a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
                             </div>
                         </div>
@@ -46,12 +46,20 @@ Operators
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 col-lg-2 control-label">Code <span class="text-danger">*</span></label>
+                    <label class="col-sm-3 col-lg-2 control-label">Code</label>
                     <div class="col-sm-9 col-lg-10 controls">
                         {!! Form::number("code", null ,['placeholder'=> "Code",'class'=>'form-control input-lg']) !!}
                     </div>
                 </div>
 
+                @if(isset($_REQUEST['country_id']))
+                <div class="form-group">
+                  <label class="col-sm-3 col-lg-2 control-label">Country <span class="text-danger">*</span></label>
+                  <div class="col-sm-9 col-lg-10 controls">
+                    {!! Form::select('country_id',array($_REQUEST['country_id'] => $_REQUEST['title']),null,['class'=>'form-control chosen-rtl btn-lg','required' => true,'style'=>'height: 48px;']) !!}
+                  </div>
+                </div>
+                @else
                 <div class="form-group">
                     <label for="textfield5" class="col-sm-3 col-lg-2 control-label">Select Country <span class="text-danger">*</span></label>
                     <div class="col-sm-9 col-lg-10 controls">
@@ -62,6 +70,9 @@ Operators
                         </select>
                     </div>
                 </div>
+              @endif
+
+
 
                 <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
