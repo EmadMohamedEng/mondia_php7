@@ -28,6 +28,7 @@ Route::get('list_services','FrontController@services')->name('front.service');
 Route::get('list_contents','FrontController@contents')->name('front.list');
 Route::get('loadcontent','FrontController@load_contents')->name('front.load');
 Route::get('view_content/{id}','FrontController@view_content')->name('front.inner');
+Route::get('today_link/{msisdn}','FrontController@mbcTodayLink')->name('front.mbc');
 Route::get('sebha','FrontController@sebha')->name('front.sebha');
 Route::get('zakah','FrontController@zakah')->name('front.zakah');
 Route::get('zakah_v2','FrontController@zakah_v2')->name('front.zakah_v2');

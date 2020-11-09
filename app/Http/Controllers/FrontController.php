@@ -218,7 +218,7 @@ class FrontController extends Controller
     if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
       $enable_free = get_setting('enable_free');
         if($enable || $content->free || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
-          if($enable_free == "1"){
+          if($enable_free == "1" || (session()->has('MSISDN') && $this->checkStatus(session()->has('MSISDN'),2))){
           return view('front.inner_enable_testing', compact('content','contents'));
           }
         }
@@ -326,7 +326,75 @@ class FrontController extends Controller
     return view('front.inner', compact('content', 'contents'));
   }
 
+  public function mbcTodayLink($msisdn)
+  {
+    // first post for mbc
+    $content = Video::select('contents.*', 'contents.id as content_id', 'posts.free')
+      ->join('posts', 'posts.video_id', '=', 'contents.id')
+      ->where('posts.show_date', '<=', Carbon::now()->toDateString())
+      ->where('posts.operator_id', MBC_OP_ID)
+      ->orderBy('posts.show_date','desc')
+      ->first();
+    $contents = video::select('contents.*', 'contents.id as content_id')
+      ->join('posts', 'posts.video_id', '=', 'contents.id')
+      ->where('contents.service_id', $content->service->id)
+      ->whereNotIn('contents.id', [$content->id])
+      ->where('posts.operator_id', MBC_OP_ID)
+      ->where('posts.show_date', '<=', Carbon::now()->toDateString())
+      ->orderBy('contents.index', 'asc')->limit(4)->get();
+    $msisdn = $this->decryptMobileNumber($msisdn);
+    if($this->checkStatus($msisdn,2)){
+      session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+      return view('front.inner_enable_testing', compact('content', 'contents'));
+    }
+    return redirect('landing_stc');
+  }
 
+  /**
+   * Method decryptMobileNumber
+   *
+   * @param String $phone
+   *
+   * @return String
+   */
+  public function decryptMobileNumber($phone)
+  {
+    $key = 'arpuIvasKey' ;
+    $key = hash('md5', $key, true);  // here key not fixed
+    $iv = str_repeat(chr(0), 16);
+    $mobile = openssl_decrypt($phone, 'aes-128-cbc', $key, 0, $iv);
+    return $mobile;
+  }
+
+  /**
+   * Method checkStatus
+   *
+   * @param String $msisdn
+   * @param int $service_id
+   *
+   * @return Boolean
+   */
+  public function checkStatus($msisdn, $service_id)
+  {
+
+    $vars["msisdn"] = $msisdn;
+    $vars["service_id"] = $service_id;
+
+    $JSON = json_encode($vars);
+
+    $actionName = "MBC Check Status";
+
+    $URL = CHECKSUB_URL;
+    $ReqResponse = $this->SendRequestPost($URL, $vars, ["Accept: application/json"]);
+    $ReqResponse = json_decode($ReqResponse, true);
+
+    //log request and response
+    $result['request'] = $vars;
+    $result['response'] = $ReqResponse;
+    $result['date'] = date('Y-m-d H:i:s');
+
+    return $ReqResponse;
+  }
 
   public function search(Request $request)
   {
