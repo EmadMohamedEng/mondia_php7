@@ -621,7 +621,9 @@ class MbcTwoController extends Controller
               }
           }
       }
-      $output = "Egypt";
+
+
+     if( $output == NULL) $output = "Egypt";
       return $output;
   }
 
