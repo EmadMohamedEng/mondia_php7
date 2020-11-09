@@ -668,7 +668,7 @@ class MbcController extends Controller
         if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
           $vars["msisdn"] = session()->get('MSISDN');
           $vars["service_id"] = 2;
-          $sub = $this->SendRequest(MBC_CREATE_SUB, $vars, ["Accept: application/json"]);
+          $sub = $this->SendRequest(MBC_GET_SUB, $vars, ["Accept: application/json"]);
           $date = date('Y-m-d');
           if($sub){
             $date = date('Y-m-d',strtotime($sub->create_at));
