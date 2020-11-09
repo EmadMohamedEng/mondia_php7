@@ -1,4 +1,4 @@
-@extends('front.master')
+<!-- @extends('front.master') -->
 @section('page_title') @lang('front.profile') @endsection
 @section('content')
 
@@ -27,7 +27,7 @@
 
             <tr>
               <td class="label-view font-weight-bold"> @lang('messages.users.date')</td>
-              <td class="label-view2">{{date('Y-M-d')}}</td>
+              <td class="label-view2">{{$date}}</td>
             </tr>
 
             <tr>
