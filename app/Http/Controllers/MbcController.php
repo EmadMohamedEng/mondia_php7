@@ -669,9 +669,10 @@ class MbcController extends Controller
           $vars["msisdn"] = session()->get('MSISDN');
           $vars["service_id"] = 2;
           $sub = $this->SendRequest(MBC_GET_SUB, $vars, ["Accept: application/json"]);
+          $sub = json_decode(  $sub);
           $date = date('Y-m-d');
           if($sub){
-            $date = date('Y-m-d',strtotime($sub->create_at));
+            $date = date('Y-m-d',strtotime($sub->created_at));
           }
           return view('front.profile',compact('date'));
         }
