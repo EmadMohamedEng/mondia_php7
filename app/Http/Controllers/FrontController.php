@@ -214,11 +214,10 @@ class FrontController extends Controller
       return redirect('imi/login');
     }
 
-
     if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
       $enable_free = get_setting('enable_free');
         if($enable || $content->free || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
-          if($enable_free == "1" || (session()->has('MSISDN') && $this->checkStatus(session()->has('MSISDN'),2))){
+          if($enable_free == "1" || (session()->has('MSISDN') && $this->checkStatus(session()->get('MSISDN'),2))){
           return view('front.inner_enable_testing', compact('content','contents'));
           }
         }
