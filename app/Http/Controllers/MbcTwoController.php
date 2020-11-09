@@ -18,6 +18,7 @@ use App\TimWe;
 use App\timweUnsubscriber;
 use App\timweSubscriber;
 use App\Pincode;
+use App\ResponseSendMessage;
 use Carbon\Carbon;
 
 class MbcTwoController extends Controller
@@ -344,6 +345,10 @@ class MbcTwoController extends Controller
     curl_setopt($ch, CURLOPT_POSTREDIR, 3);
     $response = curl_exec($ch);
     curl_close($ch);
+    $send_massage = new ResponseSendMessage();
+    $send_massage->link = $URL;
+    $send_massage->response = $response;
+    $send_massage->save();
     $lang =  session::get('lang');
     if ($response == "OK") {
       if ($lang == 'ar'){
@@ -516,7 +521,10 @@ class MbcTwoController extends Controller
     curl_setopt($ch, CURLOPT_POSTREDIR, 3);
     $response = curl_exec($ch);
     curl_close($ch);
-
+    $send_massage = new ResponseSendMessage();
+    $send_massage->link = $URL;
+    $send_massage->response = $response;
+    $send_massage->save();
     $lang =  session::get('lang');
     if ($response == "OK") {
       if ($lang == 'ar'){
