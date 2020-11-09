@@ -20,13 +20,13 @@
                         <div class="btn-toolbar pull-right">
                             <div class="btn-group">
                                 <a class="btn btn-circle show-tooltip" title="" href="{{url('countries/create')}}" data-original-title="Add new record"><i class="fa fa-plus"></i></a>
-                                <?php 
-								$table_name = "countries" ; 
-								// pass table name to delete all function 
+                                <?php
+								$table_name = "countries" ;
+								// pass table name to delete all function
 								// if the current route exists in delete all table flags it will appear in view
 								// else it'll not appear
                                 ?>
-                                @include('partial.delete_all') 
+                                @include('partial.delete_all')
                             </div>
                         </div>
                         <br><br>
@@ -37,7 +37,8 @@
                         <tr>
                             <th style="width:18px"><input type="checkbox" onclick="select_all('{{$table_name}}')"></th>
                             <th>id</th>
-                            <th>Name</th> 
+                            <th>Name</th>
+                            <th>Code</th>
                             <th >Action</th>
                         </tr>
                         </thead>
@@ -48,11 +49,12 @@
                                 <td>{{$country->id}}</td>
                                 <td>
                                     {!! Form::label('brand_name',$country->title) !!}
-                                </td> 
+                                </td>
+                                <td>{{$country->code}}</td>
                                 <td class="visible-md visible-lg">
-                                    <div class="btn-group">                                       
+                                    <div class="btn-group">
                                         <a class="btn btn-sm show-tooltip" href="{{url("countries/$country->id/edit")}}" title="Edit"><i class="fa fa-edit"></i></a>
-                                        <a class="btn btn-sm show-tooltip btn-danger" onclick="return ConfirmDelete();" href="{{url("countries/$country->id/delete")}}" title="Delete"><i class="fa fa-trash"></i></a>                                    
+                                        <a class="btn btn-sm show-tooltip btn-danger" onclick="return ConfirmDelete();" href="{{url("countries/$country->id/delete")}}" title="Delete"><i class="fa fa-trash"></i></a>
                                     </div>
                                 </td>
                             </tr>
