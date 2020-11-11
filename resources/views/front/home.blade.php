@@ -6,7 +6,7 @@ $count = (int)(count(provider_menu())/2);
 $menu = provider_menu();
 @endphp
 
-@if(request()->get('OpID') == mbc)
+@if(request()->get('OpID') == mbc  || request()->get('OpID') == orange  )
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
   @else
   <div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
@@ -94,7 +94,7 @@ $menu = provider_menu();
             <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
               @if (request()->get("OpID") == 9)
               <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/01.png')}}" alt="Card image cap">
-              @elseif (request()->get("OpID") == mbc)
+              @elseif (request()->get("OpID") == mbc  || request()->get('OpID') == orange )
               <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/01.png')}}" alt="Card image cap">
               @else
               <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/01.png')}}" alt="Card image cap">
@@ -118,7 +118,9 @@ $menu = provider_menu();
             <a class="owl_content_img view overlay link_href" href="{{url('mosque')}}">
               @if (request()->get("OpID") == 9)
               <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/02.png')}}" alt="Card image cap">
-              @elseif (request()->get("OpID") == mbc)
+              @elseif (request()->get("OpID") == mbc   )
+              <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/02.png')}}" alt="Card image cap">
+              @elseif (request()->get("OpID") == orange   )
               <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/02.png')}}" alt="Card image cap">
               @else
               <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/02.png')}}" alt="Card image cap">
@@ -141,8 +143,11 @@ $menu = provider_menu();
             <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
               @if (request()->get("OpID") == 9)
               <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/07.png')}}" alt="Card image cap">
-              @elseif (request()->get("OpID") == mbc)
+              @elseif (request()->get("OpID") == mbc )
               <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/07.png')}}" alt="Card image cap">
+              @elseif (request()->get("OpID") == orange )
+              <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/07.png')}}" alt="Card image cap">
+              
               @else
               <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/07.png')}}" alt="Card image cap">
               @endif
@@ -171,6 +176,8 @@ $menu = provider_menu();
               <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/04.png')}}" alt="Card image cap">
               @elseif (request()->get("OpID") == mbc)
               <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/04.png')}}" alt="Card image cap">
+              @elseif (request()->get("OpID") == orange)
+              <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/04.png')}}" alt="Card image cap">
               @else
               <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/04.png')}}" alt="Card image cap">
               @endif
@@ -188,7 +195,7 @@ $menu = provider_menu();
         </div>
         @endif
 
-        @if (request()->get("OpID") == mbc)
+        @if (request()->get("OpID") == mbc || request()->get("OpID") == orange)
         @else
         <div class="item">
           <div class="card card_muslim_guid ovf-hidden">
@@ -196,6 +203,8 @@ $menu = provider_menu();
               @if (request()->get("OpID") == 9)
               <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/03.png')}}" alt="Card image cap">
               @elseif (request()->get("OpID") == mbc)
+              <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/03.png')}}" alt="Card image cap">
+              @elseif (request()->get("OpID") == orange)
               <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/03.png')}}" alt="Card image cap">
               @else
               <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/03.png')}}" alt="Card image cap">

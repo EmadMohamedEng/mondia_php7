@@ -13,6 +13,8 @@
   <link rel="shortcut icon" href="{{asset('front/images/STC01.png')}}">
   @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
   <link rel="shortcut icon" href="{{asset('front/images/mbc_header - fav.png')}}">
+  @elseif(request()->has('OpID') && request()->get('OpID') == orange)
+  <link rel="shortcut icon" href="{{asset('front/images/orange.png')}}">
   @else
   <link rel="shortcut icon" href="{{asset('front/images/favicon.ico')}}">
   @endif
@@ -28,7 +30,8 @@
   <link rel="stylesheet" href="{{asset('front/css/style_en_stc.css')}}">
   @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
   <link rel="stylesheet" href="{{asset('front/css/style_en_mbc.css')}}">
-
+  @elseif(request()->has('OpID') && request()->get('OpID') == orange)
+  <link rel="stylesheet" href="{{asset('front/css/style_en_orange.css')}}">
   @else
   <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
   @endif
@@ -41,6 +44,15 @@
   @endif
   @endif
 
+
+  
+  @if(request()->get('OpID') == orange)
+  @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
+  <link rel="stylesheet" href="{{asset('front/css/style_orange_2_ar.css')}}">
+  @else
+  <link rel="stylesheet" href="{{asset('front/css/style_orange_2.css')}}">
+  @endif
+  @endif
 
   @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
   <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
@@ -83,7 +95,7 @@ $enable = get_setting('enable_testing');
 </style>
 
 
-@if(request()->get('OpID') == mbc)
+@if(request()->get('OpID') == mbc  )
 <style>
   .navbar {
     z-index: 999;
@@ -143,18 +155,79 @@ $enable = get_setting('enable_testing');
 @endif
 
 
+
+@if(request()->get('OpID') == orange )
+<style>
+  .navbar {
+    z-index: 999;
+    width: 100%;
+    margin-top: 0;
+    background: #0f1218 !important;
+  }
+
+  .navbar .navbar-nav .nav-item {
+    cursor: pointer;
+  }
+
+  .navbar-light .navbar-nav .active>.nav-link,
+  .navbar-light .navbar-nav .nav-link.active,
+  .navbar-light .navbar-nav .nav-link.show,
+  .navbar-light .navbar-nav .show>.nav-link {
+    color:#FF6600;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    color: #FF6600;
+    font-size: 17px;
+    text-indent: -5px;
+  }
+
+  .navbar-light .navbar-nav .nav-link:focus,
+  .navbar-light .navbar-nav .nav-link:hover {
+    background: linear-gradient(to right, #aa6620 0,#FF6600 30%, #aa6620 60%);
+    color: #FFF;
+    border-radius: 0.25rem;
+  }
+
+  .dropdown-item:focus,
+  .dropdown-item:hover {
+    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+    color: #FFF;
+    ;
+  }
+
+  .dropdown-item {
+    color: #FF6600 ;
+  }
+
+  .dropdown-divider {
+    border-top: 1px solid  #FF6600;
+  }
+
+  .ul_menu {
+    background-color: unset;
+    font-size: 13px;
+  }
+
+  .navbar-nav .dropdown-menu {
+    background-color: #0f1218;
+  }
+</style>
+@endif
+
+
 <body>
   <main class="main_container">
     <header class="header w-100">
       <div class="row">
-        @if(request()->get('OpID') == mbc)
+        @if(request()->get('OpID') == mbc  || request()->get('OpID') == orange )
         <div class="col-md-4 col-lg-4 col-xl-4 col-4 d-flex justify-content-start">
           <span class="open_icon_nav_mbc" onclick="openNav()">&#9776;</span>
         </div>
         @endif
 
 
-        @if(request()->get('OpID') == mbc)
+        @if(request()->get('OpID') == mbc  || request()->get('OpID') == orange )
         <div class="col-md-4 col-lg-4 col-xl-4 col-4 p-0 d-flex justify-content-center">
           @else
           <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0 d-flex justify-content-center">
@@ -168,6 +241,8 @@ $enable = get_setting('enable_testing');
                 <img class="bounce-top" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
                 @elseif(request()->get('OpID') == mbc)
                 <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
+                @elseif(request()->get('OpID') == orange)
+                <img class="bounce-top" src='{{asset("front/images/orange.png")}}' alt='Logo'>
                 @else
                 {{-- <img class="bounce-top" src='{{asset("front/images/daleel_elmuslim.png")}}' alt='Logo'> --}}
                 @lang('front.Daleel Al Muslim')
@@ -176,13 +251,13 @@ $enable = get_setting('enable_testing');
             </div>
           </div>
 
-          @if(request()->get('OpID') == mbc)
+          @if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
           <div class="col-md-4 col-lg-4 col-xl-4 col-4 d-flex justify-content-end">
             @else
             <div class="col-md-5 col-lg-5 col-xl-5 col-5 d-flex justify-content-end">
               @endif
 
-              @if(request()->get('OpID') == mbc)
+              @if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
 
               @else
               <a class="arrow_back back" href="#0">
@@ -191,7 +266,7 @@ $enable = get_setting('enable_testing');
               @endif
 
 
-              @if(request()->get('OpID') == mbc)
+              @if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
               <div class="lang_mbc m-md-1 m-lg-1">
                 <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize p-0" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
                 <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
@@ -214,7 +289,7 @@ $enable = get_setting('enable_testing');
     </header>
 
     <div class="row m-0">
-      @if(request()->get('OpID') == mbc)
+      @if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
       <div class="" style="z-index: 9999999999;">
 
 
@@ -238,6 +313,8 @@ $enable = get_setting('enable_testing');
                     <img class="pulsate-bck" src="{{asset('front/images/du_logo.png')}}" alt="Logo">
                     @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
                     <img class="pulsate-bck" src="{{asset('front/images/mbc_header.png')}}" alt="Logo">
+                    @elseif(request()->has('OpID') && request()->get('OpID') == orange)
+                    <img class="pulsate-bck" src="{{asset('front/images/orange.png')}}" alt="Logo">
                     @else
                     {{-- <img class="pulsate-bck" src="{{asset('front/images/daleel_elmuslim.png')}}" alt="Logo"> --}}
                     @endif
@@ -366,7 +443,7 @@ $enable = get_setting('enable_testing');
                 @else
                 <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
                 @endif
-                @if ( request()->get("OpID") == mbc )
+                @if ( request()->get("OpID") == mbc   || request()->get('OpID') == orange)
 
                 @else
                 <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
@@ -419,6 +496,8 @@ $enable = get_setting('enable_testing');
               @endif
             </li>
 
+
+            @if(request()->get('OpID') == orange) 
             <li class="nav-item">
               <a class="nav-link text-capitalize link_href" href="{{url('/terms')}}" style=" <?php echo $style ?>">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
@@ -444,6 +523,7 @@ $enable = get_setting('enable_testing');
                 <span class="sr-only">(current)</span>
               </a>
             </li>
+            @endif
 
             <li class="nav-item">
               <a class="nav-link text-capitalize link_href" href="{{url('/faq')}}" style=" <?php echo $style ?>">
@@ -545,6 +625,8 @@ $enable = get_setting('enable_testing');
                         <img class="pulsate-bck" src="{{asset('front/images/du_logo.png')}}" alt="Logo">
                         @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
                         <img class="pulsate-bck" src="{{asset('front/images/mbc_header.png')}}" alt="Logo">
+                        @elseif(request()->has('OpID') && request()->get('OpID') == orange)
+                        <img class="pulsate-bck" src="{{asset('front/images/orange.png')}}" alt="Logo">
                         @else
                         {{-- <img class="pulsate-bck" src="{{asset('front/images/daleel_elmuslim.png')}}" alt="Logo"> --}}
                         @endif
@@ -560,7 +642,7 @@ $enable = get_setting('enable_testing');
                       <div class="nav_item_welc text-capitalize font-weight-bolder" href="#0">@lang('front.welcome')</div>
                     </div>
 
-                    @if(request()->get('OpID') == mbc)
+                    @if(request()->get('OpID') == mbc   || request()->get('OpID') == orange)
 
                     @else
                     <div class="col-6 p-0">
@@ -579,7 +661,7 @@ $enable = get_setting('enable_testing');
                 <div class="border-bottom"></div>
 
                 <?php
-                if (request()->get('OpID') == 9 || request()->get('OpID') == 10 || request()->get('OpID') == 11 || request()->get('OpID') == 12 || request()->get('OpID') == 13) {
+                if ( request()->get('OpID') == 9 || request()->get('OpID') == 10 || request()->get('OpID') == 11 || request()->get('OpID') == 12 || request()->get('OpID') == 13) {
                   $style = "background: #FFF;";
                 } else {
                   $style = "background: transparent;";
@@ -697,7 +779,7 @@ $enable = get_setting('enable_testing');
                     @else
                     <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
                     @endif
-                    @if ( request()->get("OpID") == mbc )
+                    @if ( request()->get("OpID") == mbc  || request()->get('OpID') == orange )
 
                     @else
                     <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
@@ -731,7 +813,7 @@ $enable = get_setting('enable_testing');
                 </li>
                 @endif
 
-                @if ( request()->get("OpID") == mbc )
+                @if ( request()->get("OpID") == mbc  || request()->get('OpID') == orange)
                 <li class="nav-item">
                   <a class="nav-link text-capitalize link_href" href="{{url('/terms')}}" style=" <?php echo $style ?>">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
@@ -860,7 +942,12 @@ $enable = get_setting('enable_testing');
           </nav>
           <!-- end menu 1  -->
         </div>
-        @if(request()->get('OpID') == mbc)
+        @if(request()->get('OpID') == mbc  || request()->get('OpID') == orange)
+        <?php 
+        if(request()->get('OpID') == mbc) $style_color= "#efc049";
+        if(request()->get('OpID') == orange) $style_color= "#FF6600";
+
+        ?>
         <!-- start menu 3  -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -876,7 +963,7 @@ $enable = get_setting('enable_testing');
                 $style = "background: transparent;";
                 ?>
                 <!-- <li class="nav-item">
-                  <a class="nav-link text-capitalize active_menu link_href" href="{{route('front.index')}}" style=" <?php echo $style ?>color:#efc049!important;margin-top: 0px;">
+                  <a class="nav-link text-capitalize active_menu link_href" href="{{route('front.index')}}" style=" <?php echo $style ?>color:$style_color!important;margin-top: 0px;">
                     @lang('front.home')
                     <span class="sr-only">(current)</span>
                   </a>
@@ -919,7 +1006,7 @@ $enable = get_setting('enable_testing');
                     @else
                     <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
                     @endif
-                    @if ( request()->get("OpID") == mbc )
+                    @if ( request()->get("OpID") == mbc  || request()->get('OpID') == orange )
 
                     @else
                     <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
@@ -928,7 +1015,7 @@ $enable = get_setting('enable_testing');
 
                   </div>
                 </li>
-
+                @if ( request()->get("OpID") == mbc   )
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Terms and Faq
@@ -938,12 +1025,16 @@ $enable = get_setting('enable_testing');
                     <a class="dropdown-item text-capitalize link_href ul_menu" href="{{url('/faq')}}">@lang('front.faq')</a>
                   </div>
                 </li>
+                @endif
+
+                @if ( request()->get("OpID") == mbc   )
                 <li class="nav-item">
                   <a class="nav-link text-capitalize link_href" href="{{url('/profile')}}" style=" <?php echo $style ?>">
                     @lang('front.profile')
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
+                @endif
 
 
               </div>

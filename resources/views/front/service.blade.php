@@ -9,7 +9,7 @@
 @endsection
 @section('content')
 
-@if(request()->get('OpID') == mbc)
+@if(request()->get('OpID') == mbc || request()->get('OpID') == orange )
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
   @else
   <div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
@@ -36,7 +36,7 @@
       @endphp
       <div class="row m-0">
         @foreach ($contents as $item)
-        @if(request()->get('OpID') == mbc)
+        @if(request()->get('OpID') == mbc || request()->get('OpID') == orange  )
         <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-1">
           @else
           <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-0">

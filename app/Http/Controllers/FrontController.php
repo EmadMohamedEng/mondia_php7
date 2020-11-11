@@ -225,6 +225,12 @@ class FrontController extends Controller
     }
 
 
+    
+    if($request->has('OpID') && $request->OpID == orange){  //mbc
+          return view('front.inner_enable_testing', compact('content','contents'));
+    }
+
+
     // if($request->has('OpID') && $request->OpID == omantel){ // test omantel inner
     //     return view('front.inner', compact('content', 'contents'));
     // }

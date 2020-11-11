@@ -1,7 +1,7 @@
 @extends('front.master')
 @section('page_title') PinCode @endsection
 @section('content')
-@if(request()->get('OpID') == mbc)
+@if(request()->get('OpID') == mbc || request()->get('OpID') == orange )
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
 @else
 <div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">

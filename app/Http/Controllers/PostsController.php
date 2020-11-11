@@ -200,7 +200,7 @@ class PostsController extends Controller
         foreach ($contents as $key => $value) {
           Post::create([
             'video_id' => $value->id,
-            'operator_id' => 14,
+            'operator_id' => 8,
             'show_date' => '2020-04-21',
             'active' => 1,
             'slider' => 0

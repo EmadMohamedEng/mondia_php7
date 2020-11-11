@@ -1,0 +1,1396 @@
+@font-face {
+  font-family: DuCoHeadline200;
+  src: url("../font/DuCoHeadline200.ttf");
+}
+body {
+  font-family: DuCoHeadline200;
+  background-image: url("../images/mbc_background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.main_container {
+  width: 40% !important;
+  /* Start Header */
+  /* End Header */
+  /* Start Home Page */
+  /* End Home Page */
+  /* Start List Page */
+  /* End List Page */
+  /* Start Inner Page */
+  /* Start Modal For InnerPager */
+  /* End Modal For InnerPager */
+  /* End Inner Page */
+  /* Start Azan Page */
+  /* End Azan Page */
+  /* Start Nearmosque Page */
+  /* End Nearmosque Page */
+  /* Start Salah Page */
+  /* End Salah Page */
+  /* Start Subscribe Page */
+  /* End Subscribe Page */
+  /* Start Zakkah Page */
+  /* End Zakkah Page */
+  /* Start Zakkah Page */
+  /* End Zakkah Page */
+  /* Start Merath Page */
+  /* End Merath Page */
+  /* Start Sebha Page */
+  /* End Sebha Page */
+  /* Start Search Page */
+  /* End Search Page */
+  /* Start Error Page */
+  /* End Error Page */
+  /* Start Profile Page */
+  /* End Profile Page */
+  /* Start Terms Page */
+  /* End Terms Page */
+}
+.main_container .header {
+  position: unset !important;
+  background: #0f1218;
+}
+.main_container .header .header_logo .link_href,
+.main_container .header .header_icon .link_href {
+  text-align: center !important;
+}
+.main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href img {
+  width: 22%;
+  margin-top: -0.75rem;
+}
+.main_container .header .header_logo .arrow_back,
+.main_container .header .header_icon .arrow_back {
+  color: #FF6600;
+  left: -0.5rem;
+}
+.main_container .header .lang_mbc {
+  color: #FF6600;
+  cursor: pointer;
+}
+.main_container .header .lang_mbc .dropdown-menu2 {
+  right: 0 !important;
+  text-align: center;
+  background-color: #0f1218;
+}
+.main_container .nav_nav {
+  display: none;
+}
+.main_container .nav_nav .navbar_ul .nav_item_welc {
+  color: #FF6600 !important;
+}
+.main_container .nav_nav .navbar_ul .nav-item .nav-link {
+  color: #FF6600 !important;
+}
+.main_container .nav_nav .navbar_ul .nav-item .nav-link svg {
+  fill: #FF6600;
+}
+.main_container .nav_nav .navbar_ul .nav-item .dropdown-menu {
+  min-width: 55% !important;
+  background-color: transparent;
+}
+.main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
+  color: #FF6600;
+}
+.main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:active, .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:focus, .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:hover {
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  color: #FFF;
+}
+.main_container .img_carousel .owl_one .item .content_free {
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  color: #FFF;
+  width: 25%;
+  position: absolute;
+  top: 6%;
+  right: 1%;
+  transform: rotate(45deg);
+  border-radius: 10px;
+}
+.main_container .img_carousel .owl_one .item .btn_subscribe button {
+  background: #FF6600;
+  color: #FFF;
+}
+.main_container .img_carousel .owl-theme .owl-dots .owl-dot.active span,
+.main_container .img_carousel .owl-theme .owl-dots .owl-dot:hover span {
+  background: #aa6620;
+}
+.main_container .content_carousel .content_carousel_head .link_title {
+  color: #FF6600;
+}
+.main_container .content_carousel .content_carousel_head .link_title h6 {
+  margin-left: 3%;
+}
+.main_container .content_carousel .content_carousel_head .btn_more {
+  background: #FF6600;
+  color: #FFF;
+}
+.main_container .content_carousel .content_carousel_head .btn_more:focus {
+  box-shadow: 0 0 0 0.2rem #0f1218 !important;
+}
+.main_container .content_carousel .owl_content_one .item .card {
+  background: #0f1218;
+  border: 1px solid #FF6600;
+}
+.main_container .content_carousel .owl_content_one .item .card .card-body {
+  background-color: #0f1218;
+  color: #FFF;
+}
+.main_container .content_carousel .owl_content_two .item .card {
+  background: #0f1218;
+  border: 1px solid #FF6600;
+}
+.main_container .content_carousel .owl_content_two .item .card .owl_content_img {
+  position: relative;
+}
+.main_container .content_carousel .owl_content_two .item .card .card-body {
+  background-color: #0f1218;
+  color: #FFF;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main_container .content_carousel .owl_content_three .item .card {
+  background: #0f1218;
+  border: 1px solid #FF6600;
+}
+.main_container .content_carousel .owl_content_three .item .card .owl_content_img {
+  position: relative;
+}
+.main_container .content_carousel .owl_content_three .item .card .card-body {
+  background-color: #0f1218;
+  color: #FFF;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main_container .content_carousel .owl_content_four .item .card {
+  background: #0f1218;
+  border: 1px solid #FF6600;
+}
+.main_container .content_carousel .owl_content_four .item .card .owl_content_img {
+  position: relative;
+}
+.main_container .content_carousel .owl_content_four .item .card .card-body {
+  background-color: #0f1218;
+  color: #FF6600;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main_container .content_carousel .owl_content_five .item .card {
+  background: #0f1218;
+  border: 1px solid #FF6600;
+}
+.main_container .content_carousel .owl_content_five .item .card .owl_content_img {
+  position: relative;
+}
+.main_container .content_carousel .owl_content_five .item .card .card-body {
+  background-color: #0f1218;
+  color: #FFF;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main_container .list_page .coming_soon {
+  color: #FFF;
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+}
+.main_container .list_page .content_carousel_head .link_title {
+  color: #FF6600;
+}
+.main_container .list_page .item .card {
+  border: 1px solid #FF6600;
+}
+.main_container .list_page .item .card .owl_content_img {
+  position: relative;
+}
+.main_container .list_page .item .card .owl_content_img .content_free {
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  width: 25%;
+  position: absolute;
+  top: 8%;
+  right: 1%;
+  transform: rotate(45deg);
+  border-radius: 10px;
+}
+.main_container .list_page .item .card .card-body {
+  background-color: #0f1218;
+  color: #FFF;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main_container .inner_page .cover h4 {
+  color: #FFF;
+}
+.main_container .inner_page .cover button {
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  color: #FFF;
+  left: 35%;
+}
+.main_container .inner_page .poster {
+  color: #FFF;
+}
+.main_container .inner_page .poster .poster-details .outside-cover {
+  color: #FF6600;
+}
+.main_container .inner_page .socail_media .pa_share {
+  color: #FF6600;
+}
+.main_container .inner_page .socail_media .shear_div .facebook,
+.main_container .inner_page .socail_media .shear_div .twitter,
+.main_container .inner_page .socail_media .shear_div .messenger,
+.main_container .inner_page .socail_media .shear_div .whatsapp {
+  color: #FFF;
+}
+.main_container .inner_page .section_content .pa_Videos {
+  color: #FF6600;
+}
+.main_container .inner_page .section_content .p_content {
+  color: #FFF !important;
+}
+.main_container .inner_page .section_content .p_content_2 {
+  color: #aa6620 !important;
+}
+.main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club .btn {
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  color: #FFF;
+}
+.main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn {
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  color: #FFF;
+}
+.main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn.btn_2 {
+  background: #FF6600;
+}
+.main_container .azan_page .azan_title {
+  color: #FF6600;
+}
+.main_container .azan_page .input_text .azan_input {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
+  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
+}
+.main_container .azan_page .azan_text .call_tone {
+  background: transparent;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
+  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
+}
+.main_container .nearmosque_page .nearmosque_title h2 {
+  color: #FF6600;
+}
+.main_container .nearmosque_page .nearmosque_title #map {
+  border: double 5px transparent;
+  background-image: linear-gradient(#aa6620, #FF6600), linear-gradient(to right, #aa6620, #FF6600);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.main_container .salah_time_page .salah_time_title h2 {
+  color: #FF6600;
+}
+.main_container .salah_time_page .time_btn {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
+  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
+}
+.main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value input {
+  border: solid 2px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #aa6620, #FF6600);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.main_container .zakkah_page .zakah_zakah .form_zakah .actions button.button {
+  border: solid 2px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #aa6620, #FF6600);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.main_container .zakkah_v2_page {
+  margin: 0 auto;
+  width: 100%;
+  color: #FFF;
+}
+.main_container .zakkah_v2_page #accordion {
+  margin-top: 0.5rem;
+}
+.main_container .zakkah_v2_page #accordion .card {
+  background: #00000054;
+  border-radius: 1.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header {
+  border-bottom: none;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header button {
+  color: #FFF;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header button .currency_title {
+  color: #FFF;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header button span {
+  float: right;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  color: #FF6600;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header button span.red_result {
+  color: #F00;
+}
+.main_container .zakkah_v2_page #accordion .card .card-header button .up_down {
+  float: right;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.main_container .zakkah_v2_page #accordion .card .card-body {
+  border-top: 1px solid #FF6600;
+}
+.main_container .zakkah_v2_page #accordion .card .card-body .currency_bg {
+  background: transparent;
+}
+.main_container .zakkah_v2_page .currency_title {
+  color: #FF6600;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  float: left;
+}
+.main_container .zakkah_v2_page .currency_icon {
+  color: #FF6600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  float: right;
+}
+.main_container .zakkah_v2_page .currency_bg {
+  background: #00000054;
+  border-radius: 1.5rem;
+}
+.main_container .zakkah_v2_page .currency_bg .flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main_container .zakkah_v2_page .currency_bg .flex_center .currency_text {
+  text-align: left;
+  font-size: 0.75rem;
+}
+.main_container .zakkah_v2_page .currency_bg .currency_selectBox select {
+  text-align-last: center;
+  background: transparent;
+  color: #FF6600;
+}
+.main_container .zakkah_v2_page .currency_bg .currency_selectBox select:focus {
+  box-shadow: 0 0 0 0.2rem transparent !important;
+}
+.main_container .zakkah_v2_page .currency_bg .currency_selectBox select option {
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+}
+.main_container .zakkah_v2_page .currency_bg .result {
+  float: right;
+  margin-right: 1rem;
+}
+.main_container .zakkah_v2_page .currency_bg .form_input {
+  position: relative;
+}
+.main_container .zakkah_v2_page .currency_bg .form_input .textbox {
+  outline: 0;
+  height: 3rem;
+  padding: 0 1rem;
+  background: transparent;
+  border-bottom: 1px solid #adadad;
+  color: #adadad;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+.main_container .zakkah_v2_page .currency_bg .form_input .textbox::placeholder {
+  color: #adadad;
+}
+.main_container .zakkah_v2_page .currency_bg .form_input .textbox.input-middle + .bord {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  width: 0;
+  height: 2px;
+  transition: all 0.4s ease-in-out;
+  left: 50%;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.main_container .zakkah_v2_page .currency_bg .form_input .textbox.input-middle:focus + .bord {
+  width: 100%;
+  left: 0;
+}
+.main_container .zakkah_v2_page .currency_bg .form_input .textbox:focus, .main_container .zakkah_v2_page .currency_bg .form_input .textbox:active {
+  box-shadow: none !important;
+}
+.main_container .zakkah_v2_page .zakah_result {
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  position: fixed;
+  bottom: 0;
+  width: 39.5%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.main_container .zakkah_v2_page .zakah_result .zakah_result_right {
+  text-align: center;
+}
+.main_container .zakkah_v2_page .zakah_result .zakah_result_left {
+  text-align: center;
+}
+.main_container .merath_page .merath_title h2 {
+  color: #FF6600;
+}
+.main_container .merath_page .input_text .merath_input {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
+  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
+}
+.main_container .merath_page .input_span h4 {
+  color: #FF6600;
+}
+.main_container .merath_page .button_merath .merath_btn {
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+}
+.main_container .merath_page .table_table .thead2_h4 {
+  color: #FF6600;
+}
+.main_container .merath_page .table_table .table {
+  border: 2px #FF6600 solid !important;
+}
+.main_container .merath_page .table_table .table tbody tr {
+  color: #FF6600;
+}
+.main_container .sebha_page .display #wordSebha {
+  color: #FF6600 !important;
+}
+.main_container .sebha_page .display #tally {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
+  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.main_container .sebha_page .display .btn-bar button {
+  border: 2px solid;
+  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
+  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
+  border-image-slice: 1;
+}
+.main_container .sebha_page #sebhaModal .modal-content {
+  left: 0 !important;
+}
+.main_container .sebha_page .choose_sebha {
+  border: 2px solid;
+  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
+  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
+  border-image-slice: 1;
+}
+.main_container .sebha_page a:hover {
+  color: #FF6600;
+}
+.main_container .search_page .form_search .textbox {
+  color: #FF6600 !important;
+}
+.main_container .search_page .form_search .textbox::placeholder {
+  color: #FF6600;
+}
+.main_container .search_page .form_search .textbox.input-middle + .bord {
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+}
+.main_container .search_page .form_search .btn_search {
+  color: #FF6600 !important;
+  opacity: 1 !important;
+}
+.main_container .error_page .buttons-con .action-link-wrap .link-button {
+  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+}
+.main_container .error_page .buttons-con .action-link-wrap .link-button:hover {
+  background: #FFF !important;
+  color: #FF6600 !important;
+}
+.main_container .profile {
+  margin: 3.5rem auto;
+}
+.main_container .profile .profile_title {
+  color: #FF6600;
+  margin-bottom: 5% !important;
+}
+.main_container .profile .profile_table table tbody tr .label-view {
+  width: 25%;
+  color: #FF6600;
+  border: 0;
+}
+.main_container .profile .profile_table table tbody tr .label-view2 {
+  width: 75%;
+  color: #FF6600;
+  border: 0;
+}
+.main_container .terms_page {
+  margin: 1.5rem auto;
+}
+.main_container .terms_page .terms_title {
+  color: #FF6600;
+}
+.main_container .terms_page .terms_title h2 {
+  font-size: 1.25rem;
+}
+.main_container .terms_page .ul_terms {
+  font-size: 0.85rem !important;
+  color: #FF6600 !important;
+}
+
+.loading-overlay .spinner-large {
+  bottom: 15% !important;
+  left: 45% !important;
+}
+.loading-overlay .spinner-blue {
+  border-top-color: #FF6600 !important;
+  border-left-color: #FF6600 !important;
+}
+
+.active_menu {
+  background: #FF6600;
+}
+.active_menu a {
+  color: #FFF !important;
+}
+
+.active_menu_parent {
+  color: #FFF !important;
+}
+
+@media (min-width: 320px) and (max-width: 359.9px) {
+  .open_icon_nav_mbc {
+    display: none;
+  }
+
+  .navbar-light .navbar-toggler {
+    display: none;
+  }
+
+  .dropdown-toggle::after {
+    margin-right: unset !important;
+  }
+
+  .main_container {
+    padding-bottom: 20%;
+  }
+  .main_container .header {
+    position: fixed !important;
+  }
+  .main_container .header .header_logo img,
+.main_container .header .header_icon img {
+    width: 40% !important;
+    margin-top: 0rem !important;
+  }
+  .main_container .header .lang_mbc {
+    margin-right: -18%;
+  }
+  .main_container .nav_nav {
+    display: unset;
+  }
+  .main_container .nav_nav button .icon_before {
+    color: #FF6600 !important;
+  }
+  .main_container .nav_nav .navbar_ul {
+    background-color: #0f1218 !important;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
+    color: #FF6600;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
+    color: #FF6600;
+  }
+  .main_container .img_carousel .owl_one .item .content_free {
+    top: 5%;
+    right: -1%;
+  }
+  .main_container .list_page .item .card .content_free {
+    width: 35% !important;
+    top: 8% !important;
+    right: 1% !important;
+  }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 100%;
+    left: 0;
+  }
+  .main_container .merath_page .button_merath .merath_btn {
+    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  }
+  .main_container .merath_page .table_table .table {
+    border: 2px #FF6600 solid;
+  }
+  .main_container .profile {
+    width: 90%;
+    margin: 2.5rem auto;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view {
+    width: 40%;
+    font-size: 0.75rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view2 {
+    width: 60%;
+    font-size: 0.85rem;
+  }
+}
+@media (min-width: 360px) and (max-width: 374.9px) {
+  .open_icon_nav_mbc {
+    display: none;
+  }
+
+  .navbar-light .navbar-toggler {
+    display: none;
+  }
+
+  .dropdown-toggle::after {
+    margin-right: unset !important;
+  }
+
+  .main_container {
+    padding-bottom: 17%;
+  }
+  .main_container .header {
+    position: fixed !important;
+  }
+  .main_container .header .header_logo img,
+.main_container .header .header_icon img {
+    width: 40% !important;
+    margin-top: 0.5rem !important;
+  }
+  .main_container .header .lang_mbc {
+    margin-right: -18%;
+  }
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    left: -4%;
+    min-width: 8rem;
+  }
+  .main_container .nav_nav {
+    display: unset;
+  }
+  .main_container .nav_nav button {
+    opacity: 1 !important;
+    z-index: -1;
+  }
+  .main_container .nav_nav button .icon_before {
+    color: #FF6600 !important;
+  }
+  .main_container .nav_nav .navbar_ul {
+    background-color: #0f1218 !important;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
+    color: #FF6600;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
+    color: #FF6600;
+  }
+  .main_container .img_carousel .owl_one .item .content_free {
+    width: 20%;
+    top: 5%;
+    right: 0%;
+  }
+  .main_container .list_page .item .card .content_free {
+    width: 35% !important;
+    top: 8% !important;
+    right: 1% !important;
+  }
+  .main_container .inner_page .section_content .p_content {
+    font-size: 12px;
+  }
+  .main_container .sebha_page #sebhaModal .modal-title {
+    font-size: 1rem;
+  }
+  .main_container .sebha_page #sebhaModal .choose_sebha {
+    font-size: 0.9rem;
+  }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 100%;
+    left: 0;
+  }
+  .main_container .merath_page .button_merath .merath_btn {
+    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  }
+  .main_container .merath_page .table_table .table {
+    border: 2px #FF6600 solid;
+  }
+  .main_container .profile {
+    width: 90%;
+    margin: 2.5rem auto;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view {
+    width: 35%;
+    font-size: 0.75rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view2 {
+    width: 65%;
+    font-size: 0.85rem;
+  }
+}
+@media (min-width: 375px) and (max-width: 410.9px) {
+  .open_icon_nav_mbc {
+    display: none;
+  }
+
+  .navbar-light .navbar-toggler {
+    display: none;
+  }
+
+  .dropdown-toggle::after {
+    margin-right: unset !important;
+  }
+
+  .main_container {
+    padding-bottom: 17%;
+  }
+  .main_container .header {
+    position: fixed !important;
+  }
+  .main_container .header .header_logo img,
+.main_container .header .header_icon img {
+    width: 45% !important;
+    margin-top: 0rem !important;
+  }
+  .main_container .nav_nav {
+    display: unset;
+  }
+  .main_container .nav_nav button {
+    opacity: 1 !important;
+  }
+  .main_container .nav_nav button .icon_before {
+    color: #FF6600 !important;
+  }
+  .main_container .nav_nav .navbar_ul {
+    background-color: #0f1218 !important;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
+    color: #FF6600;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
+    color: #FF6600;
+  }
+  .main_container .img_carousel .owl_one .item .content_free {
+    width: 20%;
+    top: 5%;
+    right: 0%;
+  }
+  .main_container .list_page .item .card .content_free {
+    width: 35% !important;
+    top: 8% !important;
+    right: 1% !important;
+  }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 100%;
+    left: 0;
+  }
+  .main_container .merath_page .button_merath .merath_btn {
+    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  }
+  .main_container .merath_page .table_table .table {
+    border: 2px #FF6600 solid;
+  }
+  .main_container .profile {
+    width: 90%;
+    margin: 2.5rem auto;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view {
+    width: 35%;
+    font-size: 0.75rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view2 {
+    width: 65%;
+    font-size: 0.85rem;
+  }
+}
+@media (min-width: 411px) and (max-width: 415px) {
+  .open_icon_nav_mbc {
+    display: none;
+  }
+
+  .navbar-light .navbar-toggler {
+    display: none;
+  }
+
+  .dropdown-toggle::after {
+    margin-right: unset !important;
+  }
+
+  .main_container {
+    padding-bottom: 17%;
+  }
+  .main_container .header {
+    position: fixed !important;
+  }
+  .main_container .header .header_logo img,
+.main_container .header .header_icon img {
+    width: 40% !important;
+    margin-top: 0rem !important;
+  }
+  .main_container .header .lang_mbc {
+    margin-right: -13%;
+  }
+  .main_container .nav_nav {
+    display: unset;
+  }
+  .main_container .nav_nav button {
+    opacity: 1 !important;
+  }
+  .main_container .nav_nav button .icon_before {
+    color: #FF6600 !important;
+  }
+  .main_container .nav_nav .navbar_ul {
+    background-color: #0f1218 !important;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
+    color: #FF6600;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
+    color: #FF6600;
+  }
+  .main_container .img_carousel .owl_one .item .content_free {
+    width: 20%;
+    top: 5%;
+    right: 0%;
+  }
+  .main_container .list_page .item .card .content_free {
+    width: 35% !important;
+    top: 8% !important;
+    right: 0 !important;
+  }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 100%;
+    left: 0;
+  }
+  .main_container .merath_page .button_merath .merath_btn {
+    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  }
+  .main_container .merath_page .table_table .table {
+    border: 2px #FF6600 solid;
+  }
+  .main_container .profile {
+    width: 90%;
+    margin: 2.5rem auto;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view {
+    width: 35%;
+    font-size: 0.85rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view2 {
+    width: 65%;
+    font-size: 0.95rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.9px) {
+  .open_icon_nav_mbc {
+    display: none;
+  }
+
+  .navbar-light .navbar-toggler {
+    display: none;
+  }
+
+  .dropdown-toggle::after {
+    margin-right: unset !important;
+  }
+
+  .main_container .header {
+    position: fixed !important;
+  }
+  .main_container .header .header_logo img,
+.main_container .header .header_icon img {
+    width: 30% !important;
+    margin-top: 0.75rem !important;
+    margin-left: 8%;
+  }
+  .main_container .header .lang_mbc {
+    font-size: 1.5rem;
+  }
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    right: 0 !important;
+    left: 37% !important;
+    width: 0;
+    font-size: 1.5rem;
+  }
+  .main_container .nav_nav {
+    display: unset;
+  }
+  .main_container .nav_nav button {
+    opacity: 1 !important;
+  }
+  .main_container .nav_nav button .icon_before {
+    color: #FF6600 !important;
+  }
+  .main_container .nav_nav .navbar_ul {
+    background-color: #0f1218 !important;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
+    color: #FF6600;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
+    color: #FF6600;
+  }
+  .main_container .img_carousel .owl_one .item .content_free {
+    font-size: 1.5rem;
+    width: 15%;
+    top: 4%;
+    right: 0%;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .owl_content_img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .list_page .item .card .content_free {
+    width: 30% !important;
+    font-size: 1.35rem;
+    top: 8% !important;
+    right: 1% !important;
+  }
+  .main_container .zakkah_v2_page {
+    margin: 4% auto;
+  }
+  .main_container .zakkah_v2_page .container {
+    max-width: 100%;
+  }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 100%;
+    left: 0;
+  }
+  .main_container .zakkah_v2_page .zakah_result .zakah_result_right,
+.main_container .zakkah_v2_page .zakah_result .zakah_result_left {
+    font-size: 1.35rem;
+  }
+  .main_container .merath_page .button_merath .merath_btn {
+    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  }
+  .main_container .merath_page .table_table .table {
+    border: 2px #FF6600 solid;
+  }
+  .main_container .profile {
+    width: 90%;
+    margin: 2.5rem auto;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view {
+    width: 35%;
+    font-size: 1rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view2 {
+    width: 65%;
+    font-size: 1.35rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1030px) {
+  .open_icon_nav_mbc {
+    display: none;
+  }
+
+  .navbar-light .navbar-toggler {
+    display: none;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .dropdown-toggle::after {
+    margin-right: unset !important;
+  }
+
+  .main_container .header {
+    position: fixed !important;
+  }
+  .main_container .header .header_logo img,
+.main_container .header .header_icon img {
+    width: 30% !important;
+    margin-top: 0.75rem !important;
+    margin-left: 8%;
+  }
+  .main_container .header .lang_mbc {
+    font-size: 1.75rem;
+  }
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    right: 0 !important;
+    left: 52% !important;
+    width: 0;
+    font-size: 1.75rem;
+  }
+  .main_container .nav_nav {
+    display: unset;
+  }
+  .main_container .nav_nav button {
+    opacity: 1 !important;
+  }
+  .main_container .nav_nav button .icon_before {
+    color: #FF6600 !important;
+  }
+  .main_container .nav_nav .navbar_ul {
+    background-color: #0f1218 !important;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
+    color: #FF6600;
+  }
+  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
+    color: #FF6600;
+  }
+  .main_container .img_carousel .owl_one .item .content_free {
+    font-size: 1.75rem;
+    width: 23%;
+    top: 6%;
+    right: 1%;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_four .item .card .owl_content_img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main_container .list_page .item .card .content_free {
+    width: 30% !important;
+    font-size: 1.5rem;
+    top: 8% !important;
+    right: 1% !important;
+  }
+  .main_container .azan_page {
+    margin: 3rem auto;
+  }
+  .main_container .azan_page .azan_title h2 {
+    font-size: 3rem;
+  }
+  .main_container .azan_page .input_text {
+    width: 85%;
+  }
+  .main_container .azan_page .input_text .azan_input {
+    height: 4.5rem;
+    font-size: 2.75rem;
+  }
+  .main_container .nearmosque_page {
+    margin: 3.5rem auto;
+  }
+  .main_container .nearmosque_page .nearmosque_title h2 {
+    font-size: 2rem;
+  }
+  .main_container .nearmosque_page .nearmosque_title #map {
+    width: 90%;
+  }
+  .main_container .zakkah_v2_page {
+    margin: 4% auto;
+  }
+  .main_container .zakkah_v2_page .container {
+    max-width: 100%;
+  }
+  .main_container .zakkah_v2_page .currency_title,
+.main_container .zakkah_v2_page .currency_icon {
+    font-size: 1.75rem;
+  }
+  .main_container .zakkah_v2_page .currency_bg .flex_center .currency_text {
+    font-size: 1.5rem;
+  }
+  .main_container .zakkah_v2_page .currency_bg .form_input .textbox {
+    font-size: 1.5rem;
+  }
+  .main_container .zakkah_v2_page .currency_bg .result {
+    font-size: 1.75rem;
+  }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 100%;
+    left: 0;
+  }
+  .main_container .zakkah_v2_page .zakah_result .zakah_result_right,
+.main_container .zakkah_v2_page .zakah_result .zakah_result_left {
+    font-size: 2rem;
+  }
+  .main_container .merath_page .button_merath .merath_btn {
+    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  }
+  .main_container .merath_page .table_table .table {
+    border: 2px #FF6600 solid;
+  }
+  .main_container .profile {
+    width: 90%;
+    margin: 4.5rem auto;
+  }
+  .main_container .profile .profile_title h2 {
+    font-size: 3rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view {
+    width: 35%;
+    font-size: 1.75rem;
+    padding: 1.75rem 1rem;
+  }
+  .main_container .profile .profile_table table tbody tr .label-view2 {
+    width: 65%;
+    font-size: 2rem;
+    padding: 1.75rem 1rem;
+  }
+}
+@media (min-width: 1031px) and (max-width: 1360px) {
+  .main_container {
+    width: 50% !important;
+  }
+  .main_container #mySidenav.sidenav {
+    left: 25%;
+  }
+  .main_container #mySidenav.sidenav .closebtn_mbc {
+    font-size: 1.5rem;
+    top: 0%;
+    right: 5%;
+  }
+  .main_container .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+  }
+  .main_container .img_carousel .owl_one .item .owl_one_img img {
+    height: 13.656rem !important;
+  }
+  .main_container .img_carousel .owl_one .item .btn_subscribe button {
+    top: 90% !important;
+    width: 70% !important;
+  }
+  .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
+    height: 13.323rem !important;
+  }
+  .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
+    height: 9.857rem !important;
+  }
+  .main_container .list_page .item .card .owl_content_img img {
+    height: 13.031rem !important;
+  }
+  .main_container .zakkah_v2_page .zakah_result {
+    width: 50%;
+  }
+}
+/* Start Animation */
+.scale-up-bottom {
+  -webkit-animation: scale-up-bottom 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 1.5s both;
+  animation: scale-up-bottom 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 1.5s both;
+}
+
+@-webkit-keyframes scale-up-bottom {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+}
+@keyframes scale-up-bottom {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+}
+.bounce-top {
+  -webkit-animation: bounce-top 0.9s ease-in-out 1s both;
+  animation: bounce-top 0.9s ease-in-out 1s both;
+}
+
+@-webkit-keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+    transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  25%, 55%, 75%, 87% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+    transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  25%, 55%, 75%, 87% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+.roll-in-top {
+  -webkit-animation: roll-in-top 1s ease-in-out 1s both;
+  animation: roll-in-top 1s ease-in-out 1s both;
+}
+
+@-webkit-keyframes roll-in-top {
+  0% {
+    -webkit-transform: translateY(-800px) rotate(-540deg);
+    transform: translateY(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes roll-in-top {
+  0% {
+    -webkit-transform: translateY(-800px) rotate(-540deg);
+    transform: translateY(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+.pulsate-bck {
+  -webkit-animation: pulsate-bck 1.5s ease-in-out infinite both;
+  animation: pulsate-bck 1.5s ease-in-out infinite both;
+}
+
+@-webkit-keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/* End Animation */
+
+/*# sourceMappingURL=style_en_orange.css.map */
