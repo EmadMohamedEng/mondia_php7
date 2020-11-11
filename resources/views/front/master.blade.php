@@ -813,7 +813,7 @@ $enable = get_setting('enable_testing');
                 </li>
                 @endif
 
-                @if ( request()->get("OpID") == mbc  || request()->get('OpID') == orange)
+                @if ( request()->get("OpID") == mbc  )
                 <li class="nav-item">
                   <a class="nav-link text-capitalize link_href" href="{{url('/terms')}}" style=" <?php echo $style ?>">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
