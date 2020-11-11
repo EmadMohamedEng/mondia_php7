@@ -464,7 +464,7 @@ class FrontController extends Controller
 
   public function zakah(Request $request)
   {
-    if (request()->get("OpID") == mbc) {
+    if (request()->get("OpID") == mbc || request()->get("OpID") == orange ) {
       return view('front.zakah_v2');
     }
     return view('front.zakah');
