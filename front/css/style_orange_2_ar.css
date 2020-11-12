@@ -1,3 +1,12 @@
+.main_container .header .header_logo .link_href img {
+  width: 70%;
+  margin-top: -0.5rem;
+}
+
+.main_container .header .header_logo .link_href .img_khir img {
+  margin-top: 0.75rem;
+}
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -9,12 +18,13 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  border-radius: 8px;
 }
 
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 19px !important;
   color: #FF6600;
   cursor: pointer;
   display: block;
@@ -29,10 +39,10 @@
 
 .sidenav .closebtn_mbc {
   position: absolute;
-  top: -14px;
+  top: 0;
   left: -24%;
   color: #FF6600;
-  font-size: 2.5rem;
+  font-size: 1.5rem !important;
   margin-left: 50px;
   font-weight: bold;
 }
@@ -50,10 +60,10 @@ svg {
   width: 15%;
 }
 
-.dropdown-toggle::after {
-  float: left;
-  margin-top: 0.75rem;
-  margin-right: 10px;
+.sidenav .navbar_ul .nav-item .menuTwo::after {
+  float: LEFT;
+  margin-top: 1.2rem;
+  margin-LEFT: 10px;
 }
 
 .ul_menu {
@@ -106,9 +116,14 @@ svg {
 
 }
 
-.navbar-nav .nav-link {
+.navbar .navbar-nav .nav-item .menuThree {
+  font-size: 19px !important;
+  color: #FF6600;
+  text-indent: 5px;
+}
 
-  font-size: 13px;
+.sidenav .navbar_ul .nav-item .menuTwo {
+  font-size: 16px !important;
 }
 
 .close_nav {

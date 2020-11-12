@@ -47,6 +47,7 @@ body {
 .main_container .header {
   position: unset !important;
   background: #0f1218;
+  height: 5rem !important;
 }
 .main_container .header .header_logo .link_href,
 .main_container .header .header_icon .link_href {
@@ -54,8 +55,17 @@ body {
 }
 .main_container .header .header_logo .link_href img,
 .main_container .header .header_icon .link_href img {
-  width: 22%;
+  width: 60%;
   margin-top: -0.75rem;
+}
+.main_container .header .header_logo .link_href .img_khir,
+.main_container .header .header_icon .link_href .img_khir {
+  text-align: left;
+}
+.main_container .header .header_logo .link_href .img_khir img,
+.main_container .header .header_icon .link_href .img_khir img {
+  width: 50%;
+  margin-top: 0.5rem;
 }
 .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
@@ -129,35 +139,35 @@ body {
   box-shadow: 0 0 0 0.2rem #0f1218 !important;
 }
 .main_container .content_carousel .owl_content_one .item .card {
-  background: #0f1218;
+  background: #000;
   border: 1px solid #FF6600;
 }
 .main_container .content_carousel .owl_content_one .item .card .card-body {
-  background-color: #0f1218;
+  background-color: #000;
   color: #FFF;
 }
 .main_container .content_carousel .owl_content_two .item .card {
-  background: #0f1218;
+  background: #000;
   border: 1px solid #FF6600;
 }
 .main_container .content_carousel .owl_content_two .item .card .owl_content_img {
   position: relative;
 }
 .main_container .content_carousel .owl_content_two .item .card .card-body {
-  background-color: #0f1218;
+  background-color: #000;
   color: #FFF;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 .main_container .content_carousel .owl_content_three .item .card {
-  background: #0f1218;
+  background: #000;
   border: 1px solid #FF6600;
 }
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img {
   position: relative;
 }
 .main_container .content_carousel .owl_content_three .item .card .card-body {
-  background-color: #0f1218;
+  background-color: #000;
   color: #FFF;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -170,7 +180,7 @@ body {
   position: relative;
 }
 .main_container .content_carousel .owl_content_four .item .card .card-body {
-  background-color: #0f1218;
+  background-color: #000;
   color: #FFF;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -183,7 +193,7 @@ body {
   position: relative;
 }
 .main_container .content_carousel .owl_content_five .item .card .card-body {
-  background-color: #0f1218;
+  background-color: #000;
   color: #FFF;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -263,35 +273,23 @@ body {
   color: #FF6600;
 }
 .main_container .azan_page .input_text .azan_input {
-  border: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
-  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
+  border: 2px solid #FF6600;
 }
 .main_container .azan_page .azan_text .call_tone {
-  background: transparent;
-  border: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
-  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
+  border: 2px solid #FF6600;
 }
 .main_container .nearmosque_page .nearmosque_title h2 {
   color: #FF6600;
 }
 .main_container .nearmosque_page .nearmosque_title #map {
-  border: double 5px transparent;
-  background-image: linear-gradient(#aa6620, #FF6600), linear-gradient(to right, #aa6620, #FF6600);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
+  border: 5px solid #FF6600;
 }
 .main_container .salah_time_page .salah_time_title h2 {
   color: #FF6600;
 }
 .main_container .salah_time_page .time_btn {
-  border: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
-  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
+  color: #FFF;
+  border: 2px solid #FF6600;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value input {
   border: solid 2px transparent;
@@ -445,10 +443,7 @@ body {
   color: #FF6600;
 }
 .main_container .merath_page .input_text .merath_input {
-  border: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
-  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
+  border: 2px solid #FF6600;
 }
 .main_container .merath_page .input_span h4 {
   color: #FF6600;
@@ -469,27 +464,17 @@ body {
   color: #FF6600 !important;
 }
 .main_container .sebha_page .display #tally {
-  border: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
-  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
+  color: #FFF !important;
+  border: 2px solid #FF6600;
 }
 .main_container .sebha_page .display .btn-bar button {
-  border: 2px solid;
-  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
-  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
-  border-image-slice: 1;
+  border: 2px solid #FF6600;
 }
 .main_container .sebha_page #sebhaModal .modal-content {
   left: 0 !important;
 }
 .main_container .sebha_page .choose_sebha {
-  border: 2px solid;
-  border-image-source: linear-gradient(45deg, #aa6620 40%, #FF6600 60%);
-  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, #FF6600);
-  border-image-slice: 1;
+  border: 2px solid #FF6600;
 }
 .main_container .sebha_page a:hover {
   color: #FF6600;
@@ -660,8 +645,8 @@ body {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 40% !important;
-    margin-top: 0.5rem !important;
+    width: 100% !important;
+    margin-top: -0.5rem !important;
   }
   .main_container .header .lang_mbc {
     margin-right: -18%;
@@ -1169,7 +1154,7 @@ body {
     right: 5%;
   }
   .main_container .navbar .navbar-nav .nav-item .nav-link {
-    font-size: 14px;
+    font-size: 15px !important;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
     height: 13.656rem !important;
