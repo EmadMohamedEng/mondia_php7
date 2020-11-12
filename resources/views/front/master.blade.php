@@ -956,7 +956,7 @@ $enable = get_setting('enable_testing');
 
         ?>
         <!-- start menu 3  -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar_ul navbar-expand-lg navbar-light " style="cursor: pointer;">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
