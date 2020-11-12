@@ -2,6 +2,7 @@ $bg_color: #FF6600;
 $bg_color2: #0f1218;
 $text_color: #FF6600;
 $white_color: #FFF;
+$black_color: #000;
 $grey_color: #adadad;
 
 
@@ -40,6 +41,10 @@ body {
           width: 22%;
           margin-top: -.75rem;
           // border-radius: 10px;
+        }
+
+        .elkhir {
+          color: $bg_color;
         }
       }
 
@@ -115,6 +120,7 @@ body {
     .navbar_ul {
       .nav-item {
         .nav-link {
+
           &:hover,
           &:focus {
             color: $white_color !important;
@@ -183,7 +189,7 @@ body {
     .owl_content_one {
       .item {
         .card {
-          background: $bg_color2;
+          background: $black_color;
           border: 1px solid $text_color;
 
           .owl_content_img {
@@ -193,7 +199,7 @@ body {
           }
 
           .card-body {
-            background-color: $bg_color2;
+            background-color: $black_color;
             color: $white_color;
 
             .card-title {}
@@ -205,7 +211,7 @@ body {
     .owl_content_two {
       .item {
         .card {
-          background: #0f1218;
+          background: $black_color;
           border: 1px solid $text_color;
 
           .owl_content_img {
@@ -215,7 +221,7 @@ body {
           }
 
           .card-body {
-            background-color: $bg_color2;
+            background-color: $black_color;
             color: $white_color;
             border-bottom-right-radius: 10px;
             border-bottom-left-radius: 10px;
@@ -229,7 +235,7 @@ body {
     .owl_content_three {
       .item {
         .card {
-          background: #0f1218;
+          background: $black_color;
           border: 1px solid $text_color;
 
           .owl_content_img {
@@ -239,7 +245,7 @@ body {
           }
 
           .card-body {
-            background-color: $bg_color2;
+            background-color: $black_color;
             color: $white_color;
             border-bottom-right-radius: 10px;
             border-bottom-left-radius: 10px;
@@ -263,7 +269,7 @@ body {
           }
 
           .card-body {
-            background-color: $bg_color2;
+            background-color: $black_color;
             color: $white_color;
             border-bottom-right-radius: 10px;
             border-bottom-left-radius: 10px;
@@ -287,7 +293,7 @@ body {
           }
 
           .card-body {
-            background-color: $bg_color2;
+            background-color: $black_color;
             color: $white_color;
             border-bottom-right-radius: 10px;
             border-bottom-left-radius: 10px;

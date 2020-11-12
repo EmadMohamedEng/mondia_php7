@@ -57,6 +57,10 @@ body {
   width: 22%;
   margin-top: -0.75rem;
 }
+.main_container .header .header_logo .link_href .elkhir,
+.main_container .header .header_icon .link_href .elkhir {
+  color: #FF6600;
+}
 .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
   color: #FF6600;
@@ -129,35 +133,35 @@ body {
   box-shadow: 0 0 0 0.2rem #0f1218 !important;
 }
 .main_container .content_carousel .owl_content_one .item .card {
-  background: #0f1218;
+  background: #000;
   border: 1px solid #FF6600;
 }
 .main_container .content_carousel .owl_content_one .item .card .card-body {
-  background-color: #0f1218;
+  background-color: #000;
   color: #FFF;
 }
 .main_container .content_carousel .owl_content_two .item .card {
-  background: #0f1218;
+  background: #000;
   border: 1px solid #FF6600;
 }
 .main_container .content_carousel .owl_content_two .item .card .owl_content_img {
   position: relative;
 }
 .main_container .content_carousel .owl_content_two .item .card .card-body {
-  background-color: #0f1218;
+  background-color: #000;
   color: #FFF;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 .main_container .content_carousel .owl_content_three .item .card {
-  background: #0f1218;
+  background: #000;
   border: 1px solid #FF6600;
 }
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img {
   position: relative;
 }
 .main_container .content_carousel .owl_content_three .item .card .card-body {
-  background-color: #0f1218;
+  background-color: #000;
   color: #FFF;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -170,7 +174,7 @@ body {
   position: relative;
 }
 .main_container .content_carousel .owl_content_four .item .card .card-body {
-  background-color: #0f1218;
+  background-color: #000;
   color: #FFF;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -183,7 +187,7 @@ body {
   position: relative;
 }
 .main_container .content_carousel .owl_content_five .item .card .card-body {
-  background-color: #0f1218;
+  background-color: #000;
   color: #FFF;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;

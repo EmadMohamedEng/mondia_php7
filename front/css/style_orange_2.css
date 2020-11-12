@@ -9,7 +9,6 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  /* border: 2px solid #fe6600; */
   border-radius: 8px;
 }
 
@@ -52,10 +51,16 @@ svg {
   width: 15%;
 }
 
-.dropdown-toggle::after {
-  /* float: right;
-  margin-top: 0.75rem;
-  margin-right: 10px; */
+.sidenav .navbar_ul .nav-item .menuTwo::after {
+  float: right;
+  margin-top: 1.2rem;
+  margin-right: 10px;
+}
+
+.navbar .navbar-nav .nav-item .menuThree {
+  font-size: 17px !important;
+  color: #FF6600;
+  text-indent: 5px;
 }
 
 /* .dropdown-toggle::after {
