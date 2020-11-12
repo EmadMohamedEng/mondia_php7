@@ -1,4 +1,4 @@
-$bg_color: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+$bg_color: #FF6600;
 $bg_color2: #0f1218;
 $text_color: #FF6600;
 $white_color: #FFF;
@@ -38,6 +38,7 @@ body {
         img {
           width: 22%;
           margin-top: -.75rem;
+          border-radius: 10px;
         }
       }
 
@@ -103,6 +104,18 @@ body {
               background: $bg_color;
               color: $white_color;
             }
+          }
+        }
+      }
+    }
+  }
+
+  #mySidenav {
+    .navbar_ul {
+      .nav-item {
+        .nav-link {
+          &:hover {
+            color: $white_color;
           }
         }
       }

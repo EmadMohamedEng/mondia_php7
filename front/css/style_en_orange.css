@@ -60,6 +60,7 @@ body {
 .main_container .header .header_icon .link_href img {
   width: 22%;
   margin-top: -0.75rem;
+  border-radius: 10px;
 }
 .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
@@ -95,11 +96,14 @@ body {
   color: #FF6600;
 }
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:active, .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:focus, .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:hover {
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
+  color: #FFF;
+}
+.main_container #mySidenav .navbar_ul .nav-item .nav-link:hover {
   color: #FFF;
 }
 .main_container .img_carousel .owl_one .item .content_free {
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
   color: #FFF;
   width: 25%;
   position: absolute;
@@ -191,7 +195,7 @@ body {
 }
 .main_container .list_page .coming_soon {
   color: #FFF;
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
 }
 .main_container .list_page .content_carousel_head .link_title {
   color: #FF6600;
@@ -203,7 +207,7 @@ body {
   position: relative;
 }
 .main_container .list_page .item .card .owl_content_img .content_free {
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
   width: 25%;
   position: absolute;
   top: 8%;
@@ -221,7 +225,7 @@ body {
   color: #FFF;
 }
 .main_container .inner_page .cover button {
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
   color: #FFF;
   left: 35%;
 }
@@ -250,11 +254,11 @@ body {
   color: #aa6620 !important;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club .btn {
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
   color: #FFF;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn {
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
   color: #FFF;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn.btn_2 {
@@ -385,7 +389,7 @@ body {
   box-shadow: 0 0 0 0.2rem transparent !important;
 }
 .main_container .zakkah_v2_page .currency_bg .currency_selectBox select option {
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
 }
 .main_container .zakkah_v2_page .currency_bg .result {
   float: right;
@@ -411,7 +415,7 @@ body {
 .main_container .zakkah_v2_page .currency_bg .form_input .textbox.input-middle + .bord {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
   width: 0;
   height: 2px;
   transition: all 0.4s ease-in-out;
@@ -429,7 +433,7 @@ body {
   box-shadow: none !important;
 }
 .main_container .zakkah_v2_page .zakah_result {
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
   position: fixed;
   bottom: 0;
   width: 39.5%;
@@ -455,7 +459,7 @@ body {
   color: #FF6600;
 }
 .main_container .merath_page .button_merath .merath_btn {
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
 }
 .main_container .merath_page .table_table .thead2_h4 {
   color: #FF6600;
@@ -502,14 +506,14 @@ body {
   color: #FF6600;
 }
 .main_container .search_page .form_search .textbox.input-middle + .bord {
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
 }
 .main_container .search_page .form_search .btn_search {
   color: #FF6600 !important;
   opacity: 1 !important;
 }
 .main_container .error_page .buttons-con .action-link-wrap .link-button {
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
 }
 .main_container .error_page .buttons-con .action-link-wrap .link-button:hover {
   background: #FFF !important;
@@ -622,7 +626,7 @@ body {
     left: 0;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+    background: #FF6600;
   }
   .main_container .merath_page .table_table .table {
     border: 2px #FF6600 solid;
@@ -714,7 +718,7 @@ body {
     left: 0;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+    background: #FF6600;
   }
   .main_container .merath_page .table_table .table {
     border: 2px #FF6600 solid;
@@ -789,7 +793,7 @@ body {
     left: 0;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+    background: #FF6600;
   }
   .main_container .merath_page .table_table .table {
     border: 2px #FF6600 solid;
@@ -867,7 +871,7 @@ body {
     left: 0;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+    background: #FF6600;
   }
   .main_container .merath_page .table_table .table {
     border: 2px #FF6600 solid;
@@ -981,7 +985,7 @@ body {
     font-size: 1.35rem;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+    background: #FF6600;
   }
   .main_container .merath_page .table_table .table {
     border: 2px #FF6600 solid;
@@ -1134,7 +1138,7 @@ body {
     font-size: 2rem;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+    background: #FF6600;
   }
   .main_container .merath_page .table_table .table {
     border: 2px #FF6600 solid;
