@@ -4,11 +4,7 @@
 }
 body {
   font-family: DuCoHeadline200;
-  background-image: url("../images/mbc_background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #0f1218;
 }
 
 .main_container {
@@ -60,7 +56,6 @@ body {
 .main_container .header .header_icon .link_href img {
   width: 22%;
   margin-top: -0.75rem;
-  border-radius: 10px;
 }
 .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
@@ -99,8 +94,8 @@ body {
   background: #FF6600;
   color: #FFF;
 }
-.main_container #mySidenav .navbar_ul .nav-item .nav-link:hover {
-  color: #FFF;
+.main_container #mySidenav .navbar_ul .nav-item .nav-link:hover, .main_container #mySidenav .navbar_ul .nav-item .nav-link:focus {
+  color: #FFF !important;
 }
 .main_container .img_carousel .owl_one .item .content_free {
   background: #FF6600;

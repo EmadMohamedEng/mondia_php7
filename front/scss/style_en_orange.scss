@@ -13,11 +13,12 @@ $grey_color: #adadad;
 body {
   font-family: DuCoHeadline200;
   // font-family: DuCoHeadline, Arial, sans-serif;
-  background-image: url('../images/mbc_background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: $bg_color2;
+  // background-image: url('../images/mbc_background.jpg');
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
 }
 
 .main_container {
@@ -38,7 +39,7 @@ body {
         img {
           width: 22%;
           margin-top: -.75rem;
-          border-radius: 10px;
+          // border-radius: 10px;
         }
       }
 
@@ -114,8 +115,9 @@ body {
     .navbar_ul {
       .nav-item {
         .nav-link {
-          &:hover {
-            color: $white_color;
+          &:hover,
+          &:focus {
+            color: $white_color !important;
           }
         }
       }

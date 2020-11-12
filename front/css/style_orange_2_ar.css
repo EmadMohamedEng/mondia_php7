@@ -5,7 +5,7 @@
   z-index: 1;
   top: 0;
   /* left: 29.5%; */
-  background-color: #111;
+  background-color: #0f1218;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -15,7 +15,7 @@
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 14px;
-  color: #efc049;
+  color: #FF6600;
   cursor: pointer;
   display: block;
   transition: 0.3s;
@@ -23,7 +23,7 @@
 }
 
 .sidenav a:hover {
-  background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
+  background: #FF6600;
   color: #FFF;
 }
 
@@ -31,14 +31,14 @@
   position: absolute;
   top: -14px;
   left: -24%;
-  color: #efc049;
+  color: #FF6600;
   font-size: 2.5rem;
   margin-left: 50px;
   font-weight: bold;
 }
 
 .open_icon_nav_mbc {
-  color: #efc049;
+  color: #FF6600;
   font-size: 30px;
   cursor: pointer;
   margin-top: -12px;
@@ -46,7 +46,7 @@
 }
 
 svg {
-  fill: #efc049;
+  fill: #FF6600;
   width: 15%;
 }
 
@@ -71,7 +71,7 @@ svg {
 }
 
 .navbar-nav .dropdown-menu {
-  background-color: #111;
+  background-color: #0f1218 !important;
 }
 
 .active_menu {
@@ -89,20 +89,20 @@ svg {
 }
 
 .lang_color a:hover {
-  background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
+  background: #FF6600;
   color: #FFF;
 }
 
 .lang_show {
   cursor: pointer;
-  color: #efc049;
+  color: #FF6600;
   margin: -10% 0 0 0;
 
 }
 
 .angle_show {
   margin: 0 -10px 0 -13px;
-  color: #efc049;
+  color: #FF6600;
 
 }
 
