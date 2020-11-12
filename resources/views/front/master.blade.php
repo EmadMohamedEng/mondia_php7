@@ -1122,10 +1122,12 @@ $enable = get_setting('enable_testing');
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "266px";
+      $('.sidenav').css('border', '2px solid #fe6600');
     }
 
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
+      $('.sidenav').css('border', '0');
     }
   </script>
   @yield('script')
