@@ -208,4 +208,15 @@ class PostsController extends Controller
         }
         echo "ok";
     }
+
+    // add slider from mbc to orange
+    public function copy_slider_from_mbc_to_orange()
+    {
+      $mbc_slider = Post::where('operator_id', mbc)->where('slider', 1)->get();
+
+      foreach($mbc_slider as $slider){
+        $orange_post = Post::where('operator_id', orange)->where('video_id', $slider->video_id)->update(['slider' => 1]);
+      }
+      echo 'done';
+    }
 }

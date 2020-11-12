@@ -258,8 +258,4 @@ Route::get('timwe_test', function(){
     return redirect(url('/?OpID='.timwe_op_id()));
 });
 
-
-
-
-
-
+Route::get('copy_slider_from_mbc_to_orange', 'PostsController@copy_slider_from_mbc_to_orange');
