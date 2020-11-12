@@ -195,7 +195,7 @@ $menu = provider_menu();
         </div>
         @endif
 
-        @if (request()->get("OpID") == mbc || request()->get("OpID") == orange)
+        @if (request()->get("OpID") == mbc)
         @else
         <div class="item">
           <div class="card card_muslim_guid ovf-hidden">
