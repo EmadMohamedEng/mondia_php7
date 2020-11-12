@@ -5,10 +5,12 @@
   z-index: 1;
   top: 0;
   left: 30%;
-  background-color: #111;
+  background-color: #0f1218;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  border: 2px solid #fe6600;
+  border-radius: 8px;
 }
 
 .sidenav a {
@@ -21,7 +23,7 @@
   transition: 0.3s;
 }
 
-/* 
+/*
 .sidenav a:hover {
   background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
   color: #FFF;
@@ -78,7 +80,8 @@ svg {
 }
 
 .navbar-nav .dropdown-menu {
-  background-color: #111;
+  background-color: #0f1218 !important;
+  border: none;
 }
 
 .active_menu {
@@ -86,7 +89,7 @@ svg {
 }
 
 .lang_color {
-  background-color: #111;
+  background-color: #0f1218 !important;
   z-index: 2147483647;
 }
 
@@ -95,7 +98,7 @@ svg {
 }
 
 .lang_color a:hover {
-  background: linear-gradient(to right, #aa6620 0, #FF6600 30%, #aa6620 60%);
+  background: #FF6600;
   color: #FFF;
 }
 
