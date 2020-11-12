@@ -1,3 +1,12 @@
+.main_container .header .header_logo .link_href img {
+  width: 70%;
+  margin-top: -0.5rem;
+}
+
+.main_container .header .header_logo .link_href .img_khir img {
+  margin-top: 0.75rem;
+}
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -33,7 +42,7 @@
   top: 0;
   left: -24%;
   color: #FF6600;
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
   margin-left: 50px;
   font-weight: bold;
 }

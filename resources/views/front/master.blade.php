@@ -44,8 +44,6 @@
   @endif
   @endif
 
-
-
   @if(request()->get('OpID') == orange)
   @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
   <link rel="stylesheet" href="{{asset('front/css/style_orange_2_ar.css')}}">
@@ -247,12 +245,17 @@ $enable = get_setting('enable_testing');
                   @elseif(request()->get('OpID') == orange)
 
                   <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-6 col-6">
                       <img class="bounce-top" src='{{asset("front/images/orange.png")}}' alt='Logo'>
                     </div>
 
-                    <div class="elkhir col-md-4">
-                      <h6>الخير</h6>
+                    <div class="col-md-6 col-6 img_khir">
+                    @if (getCode() == 'ar')
+                    <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_ar.png")}}' alt='Logo'>
+                    @else
+                    <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_en.png")}}' alt='Logo'>
+                    @endif
+                    <!-- <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_ar.png")}}' alt='Logo'> -->
                     </div>
                   </div>
 

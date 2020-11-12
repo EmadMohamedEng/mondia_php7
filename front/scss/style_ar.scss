@@ -32,6 +32,10 @@ body {
           img {
             margin-right: 0%;
           }
+
+          .img_khir {
+            text-align: right;
+          }
         }
       }
 
@@ -432,7 +436,7 @@ body {
   /* Start Sebha Page */
   .sebha_page {
     #sebhaModal .modal-content {
-      left: -29% !important;
+      left: -29%;
     }
   }
 
@@ -1101,6 +1105,7 @@ body {
 @media (min-width: 768px) and (max-width: 1023.9px) {
   .main_container {
     .header {
+
       .header_logo,
       .header_icon {
         width: 100%;
@@ -1461,6 +1466,16 @@ body {
 
 @media (min-width: 1031px) and (max-width: 1360px) {
   .main_container {
+    .navbar {
+      .navbar-nav {
+        .nav-item {
+          .menuThree {
+            font-size: 17px !important;
+          }
+        }
+      }
+    }
+
     .sebha_page {
       #sebhaModal {
         .modal-content {
