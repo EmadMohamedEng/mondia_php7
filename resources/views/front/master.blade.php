@@ -178,8 +178,8 @@ $enable = get_setting('enable_testing');
 
   .navbar-light .navbar-nav .nav-link {
     color: #FF6600;
-    font-size: 17px;
-    text-indent: -5px;
+    font-size: 18px;
+    text-indent: 5px;
   }
 
   .navbar-light .navbar-nav .nav-link:focus,
