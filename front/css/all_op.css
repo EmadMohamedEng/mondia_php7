@@ -1501,7 +1501,7 @@ select:active {
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
     top: 93%;
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-weight: bold;

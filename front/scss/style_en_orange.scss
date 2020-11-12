@@ -30,7 +30,7 @@ body {
     position: unset !important;
     background: $bg_color2;
     height: 5rem !important;
-    
+
 
     .header_logo,
     .header_icon {
@@ -78,6 +78,10 @@ body {
 
   .nav_nav {
     display: none;
+
+    #menu_toggle {
+      z-index: -9;
+    }
 
     .navbar_ul {
       .nav_item_welc {
@@ -1041,6 +1045,7 @@ body {
 
     .header {
       position: fixed !important;
+      height: 4rem !important;
 
       .header_logo,
       .header_icon {
@@ -1087,6 +1092,7 @@ body {
           &.nav_item_logo {
             .arrow_back {
               color: $text_color;
+              font-size: 1rem !important;
             }
 
             img {}
@@ -1380,13 +1386,20 @@ body {
 
     .header {
       position: fixed !important;
+      // height: 4rem !important;
 
       .header_logo,
       .header_icon {
 
         img {
-          width: 100% !important;
-          margin-top: -0.5rem !important;
+          width: 85% !important;
+          margin-top: -0.8rem !important;
+        }
+
+        .img_khir {
+          img {
+            width: 60% !important;
+          }
         }
       }
 
@@ -1743,6 +1756,7 @@ body {
 
     .header {
       position: fixed !important;
+      height: 4rem !important;
 
       .header_logo,
       .header_icon {
@@ -2096,6 +2110,7 @@ body {
 
     .header {
       position: fixed !important;
+      height: 4rem !important;
 
       .header_logo,
       .header_icon {
@@ -2462,6 +2477,7 @@ body {
   .main_container {
     .header {
       position: fixed !important;
+      height: 4rem !important;
 
       .header_logo,
       .header_icon {
@@ -2976,6 +2992,7 @@ body {
   .main_container {
     .header {
       position: fixed !important;
+      height: 4rem !important;
 
       .header_logo,
       .header_icon {

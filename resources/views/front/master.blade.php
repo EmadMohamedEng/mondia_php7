@@ -219,7 +219,7 @@ $enable = get_setting('enable_testing');
     <header class="header w-100">
       <div class="row">
         @if(request()->get('OpID') == mbc || request()->get('OpID') == orange )
-        <div class="col-md-4 col-lg-4 col-xl-4 col-4 d-flex justify-content-start">
+        <div class="col-md-4 col-lg-4 col-xl-4 col-2 d-flex justify-content-start">
           <span class="open_icon_nav_mbc" onclick="openNav()">&#9776;</span>
         </div>
         @endif
@@ -228,7 +228,7 @@ $enable = get_setting('enable_testing');
         @if(request()->get('OpID') == mbc)
         <div class="col-md-4 col-lg-4 col-xl-4 col-4 p-0 d-flex justify-content-center">
           @elseif(request()->get('OpID') == orange)
-          <div class="col-md-4 col-lg-4 col-xl-4 col-4 p-0 d-flex justify-content-center">
+          <div class="col-md-4 col-lg-4 col-xl-4 col-7 p-0 d-flex justify-content-center">
 
             @else
             <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0 d-flex justify-content-center">
@@ -249,7 +249,7 @@ $enable = get_setting('enable_testing');
                       <img class="bounce-top" src='{{asset("front/images/orange.png")}}' alt='Logo'>
                     </div>
 
-                    <div class="col-md-6 col-6 img_khir">
+                    <div class="col-md-6 col-6 img_khir p-0">
                     @if (getCode() == 'ar')
                     <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_ar.png")}}' alt='Logo'>
                     @else
@@ -268,7 +268,7 @@ $enable = get_setting('enable_testing');
             </div>
 
             @if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
-            <div class="col-md-4 col-lg-4 col-xl-4 col-4 d-flex justify-content-end">
+            <div class="col-md-4 col-lg-4 col-xl-4 col-3 d-flex justify-content-end">
               @else
               <div class="col-md-5 col-lg-5 col-xl-5 col-5 d-flex justify-content-end">
                 @endif

@@ -1,10 +1,21 @@
 .main_container .header .header_logo .link_href img {
-  width: 70%;
-  margin-top: -0.5rem;
+  width: 100% !important;
+  margin-top: -0.5rem !important;
 }
 
 .main_container .header .header_logo .link_href .img_khir img {
   margin-top: 0.75rem;
+  width: 55% !important;
+}
+
+@media (min-width: 320px) and (max-width: 359.9px) {
+  .main_container .header .lang_mbc {
+    margin-left: -75% !important;
+  }
+
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    right: -100% !important;
+  }
 }
 
 .sidenav {

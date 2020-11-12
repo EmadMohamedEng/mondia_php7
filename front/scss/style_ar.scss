@@ -507,6 +507,7 @@ body {
 
     .nav_nav {
       button {
+        z-index: -9;
         width: 0;
         height: 0;
         top: 1.5rem !important;
