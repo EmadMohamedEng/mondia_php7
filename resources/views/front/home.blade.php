@@ -147,7 +147,7 @@ $menu = provider_menu();
               <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/07.png')}}" alt="Card image cap">
               @elseif (request()->get("OpID") == orange )
               <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/07.png')}}" alt="Card image cap">
-              
+
               @else
               <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/07.png')}}" alt="Card image cap">
               @endif

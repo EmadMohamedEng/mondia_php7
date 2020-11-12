@@ -225,7 +225,7 @@ class FrontController extends Controller
     }
 
 
-    
+
     if($request->has('OpID') && $request->OpID == orange){  //mbc
           return view('front.inner_enable_testing', compact('content','contents'));
     }

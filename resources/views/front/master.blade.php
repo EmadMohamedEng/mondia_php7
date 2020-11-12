@@ -45,7 +45,7 @@
   @endif
 
 
-  
+
   @if(request()->get('OpID') == orange)
   @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
   <link rel="stylesheet" href="{{asset('front/css/style_orange_2_ar.css')}}">
@@ -443,7 +443,7 @@ $enable = get_setting('enable_testing');
                 @else
                 <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
                 @endif
-                @if ( request()->get("OpID") == mbc   || request()->get('OpID') == orange)
+                @if ( request()->get("OpID") == mbc)
 
                 @else
                 <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
@@ -497,7 +497,7 @@ $enable = get_setting('enable_testing');
             </li>
 
 
-            @if(request()->get('OpID') == orange) 
+            @if(request()->get('OpID') == orange)
             <li class="nav-item">
               <a class="nav-link text-capitalize link_href" href="{{url('/terms')}}" style=" <?php echo $style ?>">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
@@ -779,7 +779,7 @@ $enable = get_setting('enable_testing');
                     @else
                     <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
                     @endif
-                    @if ( request()->get("OpID") == mbc  || request()->get('OpID') == orange )
+                    @if ( request()->get("OpID") == mbc)
 
                     @else
                     <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
@@ -943,7 +943,7 @@ $enable = get_setting('enable_testing');
           <!-- end menu 1  -->
         </div>
         @if(request()->get('OpID') == mbc  || request()->get('OpID') == orange)
-        <?php 
+        <?php
         if(request()->get('OpID') == mbc) $style_color= "#efc049";
         if(request()->get('OpID') == orange) $style_color= "#FF6600";
 
@@ -1006,7 +1006,7 @@ $enable = get_setting('enable_testing');
                     @else
                     <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
                     @endif
-                    @if ( request()->get("OpID") == mbc  || request()->get('OpID') == orange )
+                    @if ( request()->get("OpID") == mbc )
 
                     @else
                     <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
