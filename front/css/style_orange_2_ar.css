@@ -1,6 +1,6 @@
 .main_container .header .header_logo .link_href img {
-  width: 100% !important;
-  margin-top: -0.5rem !important;
+  width: 90% !important;
+  margin-top: -0.85rem;
 }
 
 .main_container .header .header_logo .link_href .img_khir img {
@@ -10,6 +10,10 @@
 
 .main_container .header .header_logo .link_href .img_khir {
   text-align: left !important;
+}
+
+.main_container .header .lang_mbc {
+  margin-left: -15% !important;
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {
@@ -143,7 +147,7 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1030px){
+@media (min-width: 1024px) and (max-width: 1030px) {
   .main_container .header .header_logo {
     margin-left: 0 !important;
   }
@@ -187,7 +191,7 @@
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 19px !important;
+  font-size: 15px !important;
   color: #FF6600;
   cursor: pointer;
   display: block;
@@ -214,7 +218,8 @@
   color: #FF6600;
   font-size: 30px;
   cursor: pointer;
-  margin-top: -12px;
+  margin-top: -1%;
+  margin-right: -13%;
   font-weight: bold;
 }
 
