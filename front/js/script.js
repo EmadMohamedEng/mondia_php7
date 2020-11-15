@@ -205,6 +205,16 @@ $(function () {
       $(this).parents(".nav-item").children("div").show();
     }
   });
+
+  $(".navbar_ul_three .nav-item a").each(function () {});
+  $(".navbar_ul_three .nav-item a").each(function () {
+    if (url == (this.href)) {
+      $("#indexed").removeClass("active_menu");
+      $(this).parents(".nav-item").children("a").addClass("active_menu_parent");
+      $(this).closest("a").addClass("active_menu");
+      $(this).parents(".nav-item").children("div").hide();
+    }
+  });
 });
 /* End Active Menu */
 

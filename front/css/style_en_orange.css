@@ -214,6 +214,13 @@ body {
 .main_container .list_page .item .card .owl_content_img {
   position: relative;
 }
+.main_container .list_page .item .card .owl_content_img .playCircle {
+  color: #FF6600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .main_container .list_page .item .card .owl_content_img .content_free {
   background: #FF6600;
   width: 25%;
@@ -991,6 +998,9 @@ body {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
+  .main_container .list_page .item .card .owl_content_img .playCircle {
+    font-size: 1.5rem;
+  }
   .main_container .list_page .item .card .content_free {
     width: 30% !important;
     font-size: 1.35rem;
@@ -1115,6 +1125,9 @@ body {
   .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+  }
+  .main_container .list_page .item .card .owl_content_img .playCircle {
+    font-size: 1.75rem;
   }
   .main_container .list_page .item .card .content_free {
     width: 30% !important;

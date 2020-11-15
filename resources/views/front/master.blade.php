@@ -308,7 +308,6 @@ $enable = get_setting('enable_testing');
       @if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
       <div class="" style="z-index: 9999999999;">
 
-
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn_mbc" onclick="closeNav()"><i class="fas fa-times"></i></a>
           <!-- start menu 2  -->
@@ -389,7 +388,7 @@ $enable = get_setting('enable_testing');
             @endif
             @foreach(provider_menu() as $provider)
             <li class="nav-item dropdown">
-              <a class="menuTwo nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="menuTwo nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 @if($provider->image)
                 {!! $provider->image !!}
                 @else
@@ -397,7 +396,7 @@ $enable = get_setting('enable_testing');
                 @endif
                 {{$provider->getTranslation('title',getCode())}}
               </a>
-              <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+              <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink2">
                 @foreach($provider->services as $value)
 
                 <?php
@@ -413,7 +412,7 @@ $enable = get_setting('enable_testing');
             @endforeach
 
             <li class="nav-item dropdown">
-              <a class="menuTwo nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="menuTwo nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
                   <g>
                     <path d="M344.94,154.96L344.94,154.96c-18.11-53.29-58.53-80.54-81.01-92.04c-8.72-4.46-19.13-4.46-27.85,0
@@ -455,7 +454,7 @@ $enable = get_setting('enable_testing');
                   </g>
                 </svg>
                 @lang('front.muslim_guide')</a>
-              <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+              <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink3">
 
                 <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
                 <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
@@ -646,7 +645,7 @@ $enable = get_setting('enable_testing');
                         @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
                         <img class="pulsate-bck" src="{{asset('front/images/mbc_header.png')}}" alt="Logo">
                         @elseif(request()->has('OpID') && request()->get('OpID') == orange)
-                        <img class="pulsate-bck" src="{{asset('front/images/orange.png')}}" alt="Logo">
+                        <img class="" src="{{asset('front/images/orange.png')}}" alt="Logo">
                         @else
                         {{-- <img class="pulsate-bck" src="{{asset('front/images/daleel_elmuslim.png')}}" alt="Logo"> --}}
                         @endif
@@ -666,8 +665,8 @@ $enable = get_setting('enable_testing');
 
                     @else
                     <div class="col-6 p-0">
-                      <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
-                      <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+                      <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
+                      <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink4">
                         @foreach(Config::get('languages') as $key=>$lang)
                         <a class="dropdown-item dropdown-item2 text-capitalize" href="{{url('lang/'.$key)}}">{{$lang}}</a>
                         @endforeach
@@ -720,7 +719,7 @@ $enable = get_setting('enable_testing');
                 @endif
                 @foreach(provider_menu() as $provider)
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     @if($provider->image)
                     {!! $provider->image !!}
                     @else
@@ -728,7 +727,7 @@ $enable = get_setting('enable_testing');
                     @endif
                     {{$provider->getTranslation('title',getCode())}}
                   </a>
-                  <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+                  <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink5">
                     @foreach($provider->services as $value)
 
                     <?php
@@ -745,7 +744,7 @@ $enable = get_setting('enable_testing');
                 @endforeach
 
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
                       <g>
                         <path d="M344.94,154.96L344.94,154.96c-18.11-53.29-58.53-80.54-81.01-92.04c-8.72-4.46-19.13-4.46-27.85,0
@@ -787,7 +786,7 @@ $enable = get_setting('enable_testing');
                       </g>
                     </svg>
                     @lang('front.muslim_guide')</a>
-                  <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+                  <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink6">
 
                     <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
                     <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
@@ -972,7 +971,7 @@ $enable = get_setting('enable_testing');
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
-              <div class="navbar navbar-nav mr-auto">
+              <div class="navbar_ul_three navbar navbar-nav mr-auto">
                 <?php
                 $style = "background: transparent;";
                 ?>
@@ -984,14 +983,14 @@ $enable = get_setting('enable_testing');
                 </li> -->
                 @foreach(provider_menu() as $provider)
                 <li class="nav-item dropdown">
-                  <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     @if($provider->image)
                     @else
                     <i class="icon_before fas fa-mosque fa-lg"></i>
                     @endif
                     {{$provider->getTranslation('title',getCode())}}
                   </a>
-                  <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+                  <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink7">
                     @foreach($provider->services as $value)
                     <?php
                     if ($provider->id == 23 && $value->id == 40  && request()->get("OpID") == 12) { // The Holy Quran and TIMWE
@@ -1005,10 +1004,10 @@ $enable = get_setting('enable_testing');
                 @endforeach
 
                 <li class="nav-item dropdown">
-                  <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                     @lang('front.muslim_guide')</a>
-                  <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+                  <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink8">
 
 
                     <a class="menuThree dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
@@ -1031,10 +1030,10 @@ $enable = get_setting('enable_testing');
                 </li>
                 @if ( request()->get("OpID") == mbc )
                 <li class="nav-item dropdown">
-                  <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Terms and Faq
                   </a>
-                  <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
+                  <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink9">
                     <a class="menuThree dropdown-item text-capitalize link_href ul_menu" href="{{url('/terms')}}">@lang('front.terms')</a>
                     <a class="menuThree dropdown-item text-capitalize link_href ul_menu" href="{{url('/faq')}}">@lang('front.faq')</a>
                   </div>

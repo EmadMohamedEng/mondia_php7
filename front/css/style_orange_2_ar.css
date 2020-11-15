@@ -250,6 +250,7 @@ svg {
 
 .navbar-nav .dropdown-menu {
   background-color: #0f1218 !important;
+  text-align: right;
 }
 
 .active_menu {
