@@ -1212,6 +1212,27 @@ body {
   .main_container {
     width: 50% !important;
   }
+  .main_container .header {
+    height: 4rem !important;
+  }
+  .main_container .header .header_logo .link_href,
+.main_container .header .header_icon .link_href {
+    text-align: center !important;
+  }
+  .main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href img {
+    width: 60%;
+    margin-top: -0.85rem;
+  }
+  .main_container .header .header_logo .link_href .img_khir,
+.main_container .header .header_icon .link_href .img_khir {
+    text-align: left;
+  }
+  .main_container .header .header_logo .link_href .img_khir img,
+.main_container .header .header_icon .link_href .img_khir img {
+    width: 60%;
+    margin-top: 0;
+  }
   .main_container #mySidenav.sidenav {
     left: 25%;
   }

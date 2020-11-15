@@ -27,7 +27,6 @@ body {
   /* Start Header */
   .header {
     position: unset !important;
-    // background: $white_color;
     background: $bg_color2;
     height: 5rem !important;
 
@@ -3614,6 +3613,38 @@ body {
 @media (min-width: 1031px) and (max-width: 1360px) {
   .main_container {
     width: 50% !important;
+
+    .header {
+      height: 4rem !important;
+
+
+      .header_logo,
+      .header_icon {
+        h6 {}
+
+        .link_href {
+          text-align: center !important;
+
+          img {
+            width: 60%;
+            margin-top: -0.85rem;
+          }
+
+          .img_khir {
+            text-align: left;
+
+            img {
+              width: 60%;
+              margin-top: 0;
+            }
+          }
+        }
+
+        .arrow_back {
+
+        }
+      }
+    }
 
     #mySidenav {
       &.sidenav {
