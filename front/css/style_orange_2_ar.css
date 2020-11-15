@@ -8,13 +8,165 @@
   width: 55% !important;
 }
 
+.main_container .header .header_logo .link_href .img_khir {
+  text-align: left !important;
+}
+
 @media (min-width: 320px) and (max-width: 359.9px) {
+  .main_container .header .header_logo {
+    margin-left: 0 !important;
+  }
+
+  .main_container .header .header_logo .link_href img {
+    width: 100% !important;
+    margin-top: -0.5rem !important;
+    margin-right: 44% !important;
+  }
+
+  .main_container .header .header_logo .link_href .img_khir img {
+    margin-top: 0.5rem !important;
+  }
+
   .main_container .header .lang_mbc {
-    margin-left: -75% !important;
+    margin-left: -100% !important;
+    margin-top: 7% !important;
   }
 
   .main_container .header .lang_mbc .dropdown-menu2 {
-    right: -100% !important;
+    right: -87% !important;
+    left: unset !important;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 374.9px) {
+  .main_container .header .header_logo {
+    margin-left: 0 !important;
+  }
+
+  .main_container .header .header_logo .link_href img {
+    width: 100% !important;
+    margin-top: -0.25rem !important;
+    margin-right: 44% !important;
+  }
+
+  .main_container .header .header_logo .link_href .img_khir img {
+    margin-top: 0.75rem !important;
+  }
+
+  .main_container .header .lang_mbc {
+    margin-left: -75% !important;
+    margin-top: 18% !important;
+  }
+
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    right: -87% !important;
+    left: -38% !important;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 410.9px) {
+  .main_container .header .header_logo {
+    margin-left: 0 !important;
+  }
+
+  .main_container .header .header_logo .link_href img {
+    width: 90% !important;
+    margin-top: -0.85rem !important;
+    margin-right: 44% !important;
+  }
+
+  .main_container .header .header_logo .link_href .img_khir img {
+    margin-top: 0.25rem !important;
+  }
+
+  .main_container .header .lang_mbc {
+    margin-left: -70% !important;
+    margin-top: 0 !important;
+  }
+
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    right: -87% !important;
+    left: -38% !important;
+  }
+}
+
+@media (min-width: 411px) and (max-width: 415px) {
+  .main_container .header .header_logo {
+    margin-left: 0 !important;
+  }
+
+  .main_container .header .header_logo .link_href img {
+    width: 90% !important;
+    margin-top: -0.75rem !important;
+    margin-right: 44% !important;
+  }
+
+  .main_container .header .header_logo .link_href .img_khir img {
+    margin-top: 0.75rem !important;
+  }
+
+  .main_container .header .lang_mbc {
+    margin-left: -60% !important;
+    margin-top: 18% !important;
+  }
+
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    right: -87% !important;
+    left: -38% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.9px) {
+  .main_container .header .header_logo {
+    margin-left: 0 !important;
+  }
+
+  .main_container .header .header_logo .link_href img {
+    width: 40% !important;
+    margin-top: -0.85rem !important;
+    margin-right: 44% !important;
+  }
+
+  .main_container .header .header_logo .link_href .img_khir img {
+    margin-top: 0.25rem !important;
+    width: 40% !important;
+  }
+
+  .main_container .header .lang_mbc {
+    margin-left: -25% !important;
+    margin-top: 0 !important
+  }
+
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    right: 25% !important;
+    left: unset !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1030px){
+  .main_container .header .header_logo {
+    margin-left: 0 !important;
+  }
+
+  .main_container .header .header_logo .link_href img {
+    width: 40% !important;
+    margin-top: -0.85rem !important;
+    margin-right: 44% !important;
+  }
+
+  .main_container .header .header_logo .link_href .img_khir img {
+    margin-top: 0.25rem !important;
+    width: 40% !important;
+  }
+
+  .main_container .header .lang_mbc {
+    margin-left: -16% !important;
+    margin-top: 0 !important
+  }
+
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    right: 25% !important;
+    left: unset !important;
   }
 }
 

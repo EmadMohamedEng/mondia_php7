@@ -189,7 +189,7 @@ body {
   border-bottom-left-radius: 10px;
 }
 .main_container .content_carousel .owl_content_five .item .card {
-  background: #0f1218;
+  background: #000;
   border: 1px solid #FF6600;
 }
 .main_container .content_carousel .owl_content_five .item .card .owl_content_img {
@@ -575,20 +575,28 @@ body {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 40% !important;
-    margin-top: 0rem !important;
+    width: 70% !important;
+    margin-top: -0.5rem !important;
   }
   .main_container .header .lang_mbc {
     margin-right: -18%;
   }
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    left: -60%;
+    min-width: 8rem;
+  }
   .main_container .nav_nav {
     display: unset;
+  }
+  .main_container .nav_nav button {
+    opacity: 1 !important;
   }
   .main_container .nav_nav button .icon_before {
     color: #FF6600 !important;
   }
   .main_container .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
+    border: 2px solid #FF6600;
   }
   .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     color: #FF6600;
@@ -661,7 +669,7 @@ body {
     margin-right: -18%;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    left: -4%;
+    left: -40%;
     min-width: 8rem;
   }
   .main_container .nav_nav {
@@ -676,6 +684,7 @@ body {
   }
   .main_container .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
+    border: 2px solid #FF6600;
   }
   .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     color: #FF6600;
@@ -747,8 +756,19 @@ body {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 45% !important;
-    margin-top: 0rem !important;
+    width: 60% !important;
+    margin-top: -0.75rem !important;
+  }
+  .main_container .header .header_logo .img_khir img,
+.main_container .header .header_icon .img_khir img {
+    width: 60% !important;
+  }
+  .main_container .header .lang_mbc {
+    margin-right: -18%;
+  }
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    left: -33%;
+    min-width: 8rem;
   }
   .main_container .nav_nav {
     display: unset;
@@ -761,6 +781,7 @@ body {
   }
   .main_container .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
+    border: 2px solid #FF6600;
   }
   .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     color: #FF6600;
@@ -819,15 +840,23 @@ body {
   }
   .main_container .header {
     position: fixed !important;
-    height: 4rem !important;
+    height: 5rem !important;
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 40% !important;
-    margin-top: 0rem !important;
+    width: 55% !important;
+    margin-top: -0.85rem !important;
+  }
+  .main_container .header .header_logo .img_khir img,
+.main_container .header .header_icon .img_khir img {
+    width: 60% !important;
   }
   .main_container .header .lang_mbc {
     margin-right: -13%;
+  }
+  .main_container .header .lang_mbc .dropdown-menu2 {
+    left: -20%;
+    min-width: 8rem;
   }
   .main_container .nav_nav {
     display: unset;
@@ -840,6 +869,7 @@ body {
   }
   .main_container .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
+    border: 2px solid #FF6600;
   }
   .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     color: #FF6600;
@@ -895,20 +925,24 @@ body {
 
   .main_container .header {
     position: fixed !important;
-    height: 4rem !important;
+    height: 5rem !important;
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 30% !important;
+    width: 35% !important;
+    margin-top: -0.75rem !important;
+  }
+  .main_container .header .header_logo .img_khir img,
+.main_container .header .header_icon .img_khir img {
+    width: 45% !important;
     margin-top: 0.75rem !important;
-    margin-left: 8%;
   }
   .main_container .header .lang_mbc {
     font-size: 1.5rem;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
     right: 0 !important;
-    left: 37% !important;
+    left: 19% !important;
     width: 0;
     font-size: 1.5rem;
   }
@@ -923,6 +957,7 @@ body {
   }
   .main_container .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
+    border: 2px solid #FF6600;
   }
   .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     color: #FF6600;
@@ -1014,20 +1049,24 @@ body {
 
   .main_container .header {
     position: fixed !important;
-    height: 4rem !important;
+    height: 7rem !important;
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 30% !important;
-    margin-top: 0.75rem !important;
-    margin-left: 8%;
+    width: 35% !important;
+    margin-top: -0.65rem !important;
+  }
+  .main_container .header .header_logo .img_khir img,
+.main_container .header .header_icon .img_khir img {
+    width: 50% !important;
+    margin-top: 0.95rem !important;
   }
   .main_container .header .lang_mbc {
     font-size: 1.75rem;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
     right: 0 !important;
-    left: 52% !important;
+    left: 39% !important;
     width: 0;
     font-size: 1.75rem;
   }
@@ -1036,12 +1075,14 @@ body {
   }
   .main_container .nav_nav button {
     opacity: 1 !important;
+    top: 3.75rem !important;
   }
   .main_container .nav_nav button .icon_before {
     color: #FF6600 !important;
   }
   .main_container .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
+    border: 2px solid #FF6600;
   }
   .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     color: #FF6600;

@@ -5,7 +5,6 @@ $white_color: #FFF;
 $black_color: #000;
 $grey_color: #adadad;
 
-
 @font-face {
   font-family: DuCoHeadline200;
   src: url('../font/DuCoHeadline200.ttf')
@@ -293,7 +292,7 @@ body {
     .owl_content_five {
       .item {
         .card {
-          background: #0f1218;
+          background: $black_color;
           border: 1px solid $text_color;
 
           .owl_content_img {
@@ -1050,8 +1049,8 @@ body {
       .header_logo,
       .header_icon {
         img {
-          width: 40% !important;
-          margin-top: 0rem !important;
+          width: 70% !important;
+          margin-top: -0.5rem !important;
         }
       }
 
@@ -1059,6 +1058,11 @@ body {
 
       .lang_mbc {
         margin-right: -18%;
+
+        .dropdown-menu2 {
+          left: -60%;
+          min-width: 8rem;
+        }
       }
     }
 
@@ -1066,6 +1070,7 @@ body {
       display: unset;
 
       button {
+        opacity: 1 !important;
         .icon_before {
           color: $text_color !important;
         }
@@ -1075,6 +1080,7 @@ body {
 
       .navbar_ul {
         background-color: $bg_color2 !important;
+        border: 2px solid $bg_color;
 
         .nav-item {
           .nav-link {
@@ -1409,7 +1415,7 @@ body {
         margin-right: -18%;
 
         .dropdown-menu2 {
-          left: -4%;
+          left: -40%;
           min-width: 8rem;
         }
       }
@@ -1422,7 +1428,6 @@ body {
         opacity: 1 !important;
         z-index: -1;
 
-
         .icon_before {
           color: $text_color !important;
         }
@@ -1432,6 +1437,7 @@ body {
 
       .navbar_ul {
         background-color: $bg_color2 !important;
+        border: 2px solid $bg_color;
 
         .nav-item {
           .nav-link {
@@ -1761,12 +1767,27 @@ body {
       .header_logo,
       .header_icon {
         img {
-          width: 45% !important;
-          margin-top: 0rem !important;
+          width: 60% !important;
+          margin-top: -0.75rem !important;
+        }
+
+        .img_khir {
+          img {
+            width: 60% !important;
+          }
         }
       }
 
       .arrow_back {}
+
+      .lang_mbc {
+        margin-right: -18%;
+
+        .dropdown-menu2 {
+          left: -33%;
+          min-width: 8rem;
+        }
+      }
     }
 
     .nav_nav {
@@ -1784,6 +1805,7 @@ body {
 
       .navbar_ul {
         background-color: $bg_color2 !important;
+        border: 2px solid $bg_color;
 
         .nav-item {
           .nav-link {
@@ -2110,13 +2132,19 @@ body {
 
     .header {
       position: fixed !important;
-      height: 4rem !important;
+      height: 5rem !important;
 
       .header_logo,
       .header_icon {
         img {
-          width: 40% !important;
-          margin-top: 0rem !important;
+          width: 55% !important;
+          margin-top: -0.85rem !important;
+        }
+
+        .img_khir {
+          img {
+            width: 60% !important;
+          }
         }
 
         h6 {}
@@ -2126,6 +2154,11 @@ body {
 
       .lang_mbc {
         margin-right: -13%;
+
+        .dropdown-menu2 {
+          left: -20%;
+          min-width: 8rem;
+        }
       }
     }
 
@@ -2144,6 +2177,7 @@ body {
 
       .navbar_ul {
         background-color: $bg_color2 !important;
+        border: 2px solid $bg_color;
 
         .nav-item {
           .nav-link {
@@ -2477,16 +2511,22 @@ body {
   .main_container {
     .header {
       position: fixed !important;
-      height: 4rem !important;
+      height: 5rem !important;
 
       .header_logo,
       .header_icon {
         h6 {}
 
         img {
-          width: 30% !important;
-          margin-top: 0.75rem !important;
-          margin-left: 8%;
+          width: 35% !important;
+          margin-top: -0.75rem !important;
+        }
+
+        .img_khir {
+          img {
+            width: 45% !important;
+            margin-top: 0.75rem !important;
+          }
         }
 
         &.header_icon {
@@ -2499,7 +2539,7 @@ body {
 
         .dropdown-menu2 {
           right: 0 !important;
-          left: 37% !important;
+          left: 19% !important;
           width: 0;
           font-size: 1.5rem;
         }
@@ -2523,6 +2563,7 @@ body {
 
       .navbar_ul {
         background-color: $bg_color2 !important;
+        border: 2px solid $bg_color;
 
         .nav-item {
           .nav-link {
@@ -2992,16 +3033,22 @@ body {
   .main_container {
     .header {
       position: fixed !important;
-      height: 4rem !important;
+      height: 7rem !important;
 
       .header_logo,
       .header_icon {
         h6 {}
 
         img {
-          width: 30% !important;
-          margin-top: 0.75rem !important;
-          margin-left: 8%;
+          width: 35% !important;
+          margin-top: -0.65rem !important;
+        }
+
+        .img_khir {
+          img {
+            width: 50% !important;
+            margin-top: 0.95rem !important;
+          }
         }
 
         &.header_icon {
@@ -3016,7 +3063,7 @@ body {
 
         .dropdown-menu2 {
           right: 0 !important;
-          left: 52% !important;
+          left: 39% !important;
           width: 0;
           font-size: 1.75rem;
         }
@@ -3028,6 +3075,7 @@ body {
 
       button {
         opacity: 1 !important;
+        top: 3.75rem !important;
 
         .icon_before {
           color: $text_color !important;
@@ -3038,6 +3086,7 @@ body {
 
       .navbar_ul {
         background-color: $bg_color2 !important;
+        border: 2px solid $bg_color;
 
         .nav-item {
           .nav-link {
