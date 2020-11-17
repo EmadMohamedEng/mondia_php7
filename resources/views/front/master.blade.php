@@ -7,6 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="url" content="{{url('/')}}">
+  <!-- Start Favicon -->
   @if(request()->has('OpID') && request()->get('OpID') == omantel)
   <link rel="shortcut icon" href="{{asset('front/images/omantel_logo.png')}}">
   @elseif(request()->has('OpID') && request()->get('OpID') == stc)
@@ -18,8 +19,9 @@
   @else
   <link rel="shortcut icon" href="{{asset('front/images/favicon.ico')}}">
   @endif
+  <!-- End Favicon -->
   <title> @yield('page_title')</title>
-  <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">  
   <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
@@ -60,14 +62,6 @@
   <style>
     .active_menu {
       color: #000;
-
-      background: {
-          {
-          request()->get('OpID')==omantel ? '#ff9e1b': 'linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%)'
-        }
-      }
-
-      ;
     }
   </style>
 
@@ -91,7 +85,6 @@ $enable = get_setting('enable_testing');
     font-size: 14px;
   }
 </style>
-
 
 @if(request()->get('OpID') == mbc )
 <style>
@@ -152,8 +145,6 @@ $enable = get_setting('enable_testing');
 </style>
 @endif
 
-
-
 @if(request()->get('OpID') == orange )
 <style>
   .navbar {
@@ -213,7 +204,6 @@ $enable = get_setting('enable_testing');
 </style>
 @endif
 
-
 <body>
   <main class="main_container">
     <header class="header w-100">
@@ -250,12 +240,12 @@ $enable = get_setting('enable_testing');
                     </div>
 
                     <div class="col-md-6 col-6 img_khir p-0">
-                    @if (getCode() == 'ar')
-                    <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_ar.png")}}' alt='Logo'>
-                    @else
-                    <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_en.png")}}' alt='Logo'>
-                    @endif
-                    <!-- <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_ar.png")}}' alt='Logo'> -->
+                      @if (getCode() == 'ar')
+                      <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_ar.png")}}' alt='Logo'>
+                      @else
+                      <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_en.png")}}' alt='Logo'>
+                      @endif
+                      <!-- <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_ar.png")}}' alt='Logo'> -->
                     </div>
                   </div>
 
@@ -280,7 +270,6 @@ $enable = get_setting('enable_testing');
                   <i class="fas fa-angle-left fa-lg"></i>
                 </a>
                 @endif
-
 
                 @if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
                 <div class="lang_mbc m-md-1 m-lg-1">
@@ -333,7 +322,6 @@ $enable = get_setting('enable_testing');
                     @else
                     {{-- <img class="pulsate-bck" src="{{asset('front/images/daleel_elmuslim.png')}}" alt="Logo"> --}}
                     @endif
-
                   </a>
                 </div>
               </div>
@@ -366,6 +354,7 @@ $enable = get_setting('enable_testing');
                 <span class="sr-only">(current)</span>
               </a>
             </li>
+
             @if(request()->get('OpID') == stc)
             {{-- <li class="nav-item">
                 <a class="nav-link text-capitalize link_href" href="{{url("latest/quran")}}">
@@ -386,6 +375,7 @@ $enable = get_setting('enable_testing');
             </a>
             </li> --}}
             @endif
+
             @foreach(provider_menu() as $provider)
             <li class="nav-item dropdown">
               <a class="menuTwo nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -454,8 +444,8 @@ $enable = get_setting('enable_testing');
                   </g>
                 </svg>
                 @lang('front.muslim_guide')</a>
-              <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink3">
 
+              <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink3">
                 <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
                 <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
                 @if (request()->get("OpID") == 9 )
@@ -471,7 +461,6 @@ $enable = get_setting('enable_testing');
                 <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
                 @endif
                 <a class="dropdown-item text-capitalize link_href" href="{{url('mosque')}}"> @lang('front.mosque')</a>
-
               </div>
             </li>
 
@@ -485,6 +474,7 @@ $enable = get_setting('enable_testing');
               <a class="menuTwo nav-link text-capitalize" href="{{route('front.du_unsub')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
               @endif
             </li>
+
             <li class="nav-item ">
               @if(request()->get('OpID') == omantel && session()->has('menu_unsub_omantel') &&
               session()->get('menu_unsub_omantel') == 'active' )
@@ -505,6 +495,7 @@ $enable = get_setting('enable_testing');
               <a class="menuTwo nav-link text-capitalize" href="{{url('imi/unsubscribe')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
               @endif
             </li>
+
             <li class="nav-item ">
               @if(request()->get('OpID') == ooredoo && session()->has('ooredoo_op_id') && session()->get('status') ==
               'active' )
@@ -516,7 +507,6 @@ $enable = get_setting('enable_testing');
             </li>
 
             @if(request()->get('OpID') == mbc)
-
             <li class="nav-item">
               <a class="menuTwo nav-link text-capitalize link_href" href="{{url('/terms')}}" style=" <?php echo $style ?>">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
@@ -588,7 +578,6 @@ $enable = get_setting('enable_testing');
             @endif
 
             @if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN')))
-
             <li class="nav-item">
               <a class="menuTwo nav-link text-capitalize link_href" href="{{url('/mbc_portal_logout')}}" style=" <?php echo $style ?>">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
@@ -611,11 +600,11 @@ $enable = get_setting('enable_testing');
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-
             @endif
           </ul>
           <!-- end menu 2  -->
         </div>
+
         @else
         <div class="col-md-0 col-lg-0 col-xl-4 col-0 p-0" style="z-index: 9999999999">
           @endif
@@ -673,7 +662,6 @@ $enable = get_setting('enable_testing');
                       </div>
                     </div>
                     @endif
-
                   </div>
                 </li>
 
@@ -697,6 +685,7 @@ $enable = get_setting('enable_testing');
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
+
                 @if(request()->get('OpID') == stc)
                 {{-- <li class="nav-item">
                 <a class="nav-link text-capitalize link_href" href="{{url("latest/quran")}}">
@@ -717,6 +706,7 @@ $enable = get_setting('enable_testing');
                 </a>
                 </li> --}}
                 @endif
+
                 @foreach(provider_menu() as $provider)
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -727,6 +717,7 @@ $enable = get_setting('enable_testing');
                     @endif
                     {{$provider->getTranslation('title',getCode())}}
                   </a>
+
                   <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink5">
                     @foreach($provider->services as $value)
 
@@ -740,7 +731,6 @@ $enable = get_setting('enable_testing');
                     @endforeach
                   </div>
                 </li>
-
                 @endforeach
 
                 <li class="nav-item dropdown">
@@ -787,7 +777,6 @@ $enable = get_setting('enable_testing');
                     </svg>
                     @lang('front.muslim_guide')</a>
                   <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink6">
-
                     <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
                     <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
                     @if (request()->get("OpID") == 9 )
@@ -803,7 +792,6 @@ $enable = get_setting('enable_testing');
                     <a class="dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
                     @endif
                     <a class="dropdown-item text-capitalize link_href" href="{{url('mosque')}}"> @lang('front.mosque')</a>
-
                   </div>
                 </li>
 
@@ -817,6 +805,7 @@ $enable = get_setting('enable_testing');
                   <a class="nav-link text-capitalize" href="{{route('front.du_unsub')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
                   @endif
                 </li>
+
                 <li class="nav-item ">
                   @if(request()->get('OpID') == omantel && session()->has('menu_unsub_omantel') &&
                   session()->get('menu_unsub_omantel') == 'active' )
@@ -904,7 +893,6 @@ $enable = get_setting('enable_testing');
                 @endif
 
                 @if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN')))
-
                 <li class="nav-item">
                   <a class="nav-link text-capitalize link_href" href="{{url('/mbc_portal_logout')}}" style=" <?php echo $style ?>">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
@@ -927,9 +915,9 @@ $enable = get_setting('enable_testing');
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
-
                 @endif
-                <li class="nav-item ">
+
+                <li class="nav-item">
                   @if(request()->get('OpID') == ooredoo && session()->has('ooredoo_op_id') && session()->get('status') ==
                   'active' )
                   <a class="nav-link text-capitalize" href="{{url('ooredoo_q_unsub')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
@@ -938,6 +926,7 @@ $enable = get_setting('enable_testing');
                   <a class="nav-link text-capitalize" href="{{url('imi/unsubscribe')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.unsub')</a>
                   @endif
                 </li>
+
                 <li class="nav-item ">
                   @if(request()->get('OpID') == ooredoo && session()->has('ooredoo_op_id') && session()->get('status') ==
                   'active' )
@@ -947,16 +936,12 @@ $enable = get_setting('enable_testing');
                   <a class="nav-link text-capitalize" href="{{url('imi/logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
                   @endif
                 </li>
-
-
-
               </ul>
-
-
             </div>
           </nav>
           <!-- end menu 1  -->
         </div>
+
         @if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
         <?php
         if (request()->get('OpID') == mbc) $style_color = "#efc049";
@@ -1008,8 +993,6 @@ $enable = get_setting('enable_testing');
 
                     @lang('front.muslim_guide')</a>
                   <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink8">
-
-
                     <a class="menuThree dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
                     <a class="menuThree dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
                     @if (request()->get("OpID") == 9 )
@@ -1025,9 +1008,9 @@ $enable = get_setting('enable_testing');
                     <a class="menuThree dropdown-item text-capitalize link_href" href="{{url('salah_time')}}">@lang('front.prayer')</a>
                     @endif
                     <a class="menuThree dropdown-item text-capitalize link_href" href="{{url('mosque')}}"> @lang('front.mosque')</a>
-
                   </div>
                 </li>
+
                 @if ( request()->get("OpID") == mbc )
                 <li class="nav-item dropdown">
                   <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1048,8 +1031,6 @@ $enable = get_setting('enable_testing');
                   </a>
                 </li>
                 @endif
-
-
               </div>
             </div>
         </nav>
