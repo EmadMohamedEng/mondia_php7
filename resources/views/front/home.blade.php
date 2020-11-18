@@ -88,7 +88,7 @@ $menu = provider_menu();
         </div>
       </div>
 
-      <div class="owl_content owl_content_two owl-carousel owl-theme" dir="ltr">
+      <div class="owl_content owl_content_five owl-carousel owl-theme" dir="ltr">
         <div class="item">
           <div class="card card_muslim_guid ovf-hidden">
             <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
