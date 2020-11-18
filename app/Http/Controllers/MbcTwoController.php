@@ -314,8 +314,12 @@ class MbcTwoController extends Controller
   {
     date_default_timezone_set("Africa/Cairo");
     // format number
-    $msisdn = $request->number?? session('Msisdn');
-    // $msisdn = str_replace("+0","",$msisdn);
+    // dd($request);
+
+    $msisdn = $request->code.$request->number?? session('Msisdn');
+    $msisdn = str_replace("200","20",$msisdn);
+    $msisdn = str_replace("2020","20",$msisdn);
+     //dd($msisdn);
     // $msisdn = trim($msisdn,"+");
     $service_id = 2;
     $check = $this->checkStatus($msisdn, $service_id);
@@ -468,7 +472,10 @@ class MbcTwoController extends Controller
 
   public function checkStatusLogin(Request $request)
   {
-    $msisdn = $request->number;
+    $msisdn = $request->code.$request->number;
+    $msisdn = str_replace("200","20",$msisdn);
+    $msisdn = str_replace("2020","20",$msisdn);
+    // dd($msisdn);
     $service_id = 2;
     // $msisdn = str_replace("+0","",$msisdn);
     // $msisdn = trim($msisdn,"+");
