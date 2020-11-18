@@ -1,0 +1,11 @@
+.main_container .header .open_icon_nav_mbc {
+  margin-right: -15%;
+}
+.main_container .sidenav a {
+  direction: ltr;
+}
+.main_container .navbar_ul .nav-item .menuTwo:after {
+  float: left !important;
+}
+
+/*# sourceMappingURL=style_mbc_menu_ar.css.map */

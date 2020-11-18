@@ -171,7 +171,7 @@ $menu = provider_menu();
         @if (request()->get("OpID") == 9)
 
         @elseif(request()->get("OpID") == ooredoo)
-        
+
         @elseif(request()->get("OpID") == mbc)
 
         @else
