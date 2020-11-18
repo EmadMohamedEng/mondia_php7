@@ -27,6 +27,9 @@
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}">
+  @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
+  <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
+  @endif
   @if(request()->has('OpID') && request()->get('OpID') == omantel)
   <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
   @elseif(request()->has('OpID') && request()->get('OpID') == stc)
@@ -41,7 +44,7 @@
 
   @if(request()->get('OpID') == mbc)
   @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
-  <link rel="stylesheet" href="{{asset('front/css/style_mbc_2_ar.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/style_mbc_menu_ar.css')}}">
   @endif
   <!-- <link rel="stylesheet" href="{{asset('front/css/style_mbc_2.css')}}"> -->
   <link rel="stylesheet" href="{{asset('front/css/style_mbc_menu.css')}}">
@@ -55,9 +58,7 @@
   @endif
   @endif
 
-  @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
-  <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
-  @endif
+
 
 
   <style>
@@ -86,65 +87,6 @@ $enable = get_setting('enable_testing');
     font-size: 14px;
   }
 </style>
-
-@if(request()->get('OpID') == mbc )
-<style>
-  .navbar {
-    z-index: 999;
-    width: 100%;
-    margin-top: 0;
-    background: #0f1218 !important;
-  }
-
-  .navbar .navbar-nav .nav-item {
-    cursor: pointer;
-  }
-
-  .navbar-light .navbar-nav .active>.nav-link,
-  .navbar-light .navbar-nav .nav-link.active,
-  .navbar-light .navbar-nav .nav-link.show,
-  .navbar-light .navbar-nav .show>.nav-link {
-    color: #efc049;
-  }
-
-  .navbar-light .navbar-nav .nav-link {
-    color: #efc049;
-    font-size: 17px;
-    text-indent: -5px;
-  }
-
-  .navbar-light .navbar-nav .nav-link:focus,
-  .navbar-light .navbar-nav .nav-link:hover {
-    background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
-    color: #FFF;
-    border-radius: 0.25rem;
-  }
-
-  .dropdown-item:focus,
-  .dropdown-item:hover {
-    background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
-    color: #FFF;
-    ;
-  }
-
-  .dropdown-item {
-    color: #efc049;
-  }
-
-  .dropdown-divider {
-    border-top: 1px solid #efc049;
-  }
-
-  .ul_menu {
-    background-color: unset;
-    font-size: 13px;
-  }
-
-  .navbar-nav .dropdown-menu {
-    background-color: #0f1218;
-  }
-</style>
-@endif
 
 @if(request()->get('OpID') == orange )
 <style>
@@ -214,7 +156,6 @@ $enable = get_setting('enable_testing');
           <span class="open_icon_nav_mbc" onclick="openNav()">&#9776;</span>
         </div>
         @endif
-
 
         @if(request()->get('OpID') == mbc)
         <div class="col-md-4 col-lg-4 col-xl-4 col-4 p-0 d-flex justify-content-center">
@@ -959,7 +900,7 @@ $enable = get_setting('enable_testing');
 
         ?>
         <!-- start menu 3  -->
-        <nav class="navbar navbar-expand-lg navbar-light " style="cursor: pointer;">
+        <nav class="navbar navbar-expand-lg navbar-light navbar_three " style="cursor: pointer;">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

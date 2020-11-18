@@ -45,6 +45,14 @@ body {
       }
     }
 
+    .lang_mbc {
+      margin-left: -15% !important;
+
+      .dropdown-menu2 {
+        left: -7% !important;
+      }
+    }
+
     .arrow_back {
       top: 1rem;
       right: 100%;
@@ -100,7 +108,7 @@ body {
       left: 56%;
 
       .closebtn_mbc {
-        left: 55% !important;
+        left: 0%;
 
         &:hover,
         &:focus {

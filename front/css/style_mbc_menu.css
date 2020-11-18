@@ -18,7 +18,7 @@
   padding-top: 60px;
 }
 .main_container .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px;
   text-decoration: none;
   font-size: 14px;
   color: #efc049;
@@ -27,7 +27,11 @@
   transition: 0.3s;
 }
 .main_container .sidenav a:hover {
+  background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
   color: #FFF;
+}
+.main_container .sidenav a.menuTwo {
+  background: transparent;
 }
 .main_container .sidenav .closebtn_mbc {
   position: absolute;
@@ -36,6 +40,9 @@
   color: #efc049;
   font-size: 1.5rem;
   font-weight: bold;
+}
+.main_container .sidenav .closebtn_mbc:hover, .main_container .sidenav .closebtn_mbc:focus {
+  background: transparent;
 }
 .main_container .sidenav .navbar_ul .nav-item .dropdown-menu .dropdown-item.link_href {
   padding: 5px 0;
@@ -49,6 +56,7 @@
   width: 15%;
 }
 .main_container .navbar-nav .dropdown-menu {
+  background-color: #0f1218;
   text-align: center;
 }
 .main_container .navbar-nav .dropdown-menu .nav-link {

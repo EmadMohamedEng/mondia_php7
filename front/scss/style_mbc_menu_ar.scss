@@ -1,0 +1,34 @@
+.main_container {
+  .header {
+    .open_icon_nav_mbc {
+      margin-right: -15%;
+    }
+  }
+
+  .sidenav {
+
+    a {
+      direction: ltr;
+    }
+  }
+
+  .navbar_ul {
+    .nav-item {
+      .dropdown-menu {
+        .dropdown-item {
+          &.link_href {
+            // padding: 5px 0;
+          }
+        }
+      }
+
+      .menuTwo {
+        &:after {
+          float: left !important;
+        }
+
+        svg {}
+      }
+    }
+  }
+}

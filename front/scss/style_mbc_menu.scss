@@ -28,7 +28,7 @@ $grey_color: #adadad;
     padding-top: 60px;
 
     a {
-      padding: 8px 8px 8px 32px;
+      padding: 8px;
       text-decoration: none;
       font-size: 14px;
       color: #efc049;
@@ -37,19 +37,27 @@ $grey_color: #adadad;
       transition: 0.3s;
 
       &:hover {
-        // background: $bg_color;
+        background: $bg_color;
         color: $white_color;
+      }
+
+      &.menuTwo {
+        background: transparent;
       }
     }
 
     .closebtn_mbc {
       position: absolute;
       top: 0;
-    right: 3%;
+      right: 3%;
       color: #efc049;
       font-size: 1.5rem;
-      // margin-left: 50px;
       font-weight: bold;
+
+      &:hover,
+      &:focus {
+        background: transparent;
+      }
     }
 
     .navbar_ul {
@@ -81,7 +89,8 @@ $grey_color: #adadad;
 
   .navbar-nav {
     .dropdown-menu {
-      // background-color: $bg_color2;
+      background-color: $bg_color2;
+      // background: rgba(0, 0, 0, .5) !important;
       text-align: center;
 
       .nav-link {
