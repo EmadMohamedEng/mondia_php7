@@ -24,6 +24,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+      if (request()->get('OpID') == mbc_op_id()) {
+        $lang = 'ar';
+        session()->put('applocale', $lang);
+      }
         Schema::defaultStringLength(191);
     }
 }

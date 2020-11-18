@@ -139,36 +139,40 @@ $menu = provider_menu();
             </a>
           </div>
         </div>
+        @if (request()->get("OpID") == mbc)
+        @else
+          <div class="item">
+            <div class="card card_muslim_guid ovf-hidden">
+              <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
+                @if (request()->get("OpID") == 9)
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/07.png')}}" alt="Card image cap">
+                @elseif (request()->get("OpID") == mbc )
+                <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/07.png')}}" alt="Card image cap">
+                @elseif (request()->get("OpID") == orange )
+                <img class="w-100 img_muslim_guid" src="{{asset('front/images/orange/07.png')}}" alt="Card image cap">
 
-        <div class="item">
-          <div class="card card_muslim_guid ovf-hidden">
-            <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
-              @if (request()->get("OpID") == 9)
-              <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/07.png')}}" alt="Card image cap">
-              @elseif (request()->get("OpID") == mbc )
-              <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/07.png')}}" alt="Card image cap">
-              @elseif (request()->get("OpID") == orange )
-              <img class="w-100 img_muslim_guid" src="{{asset('front/images/orange/07.png')}}" alt="Card image cap">
-
-              @else
-              <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/07.png')}}" alt="Card image cap">
-              @endif
-              <a>
-                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                @else
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/07.png')}}" alt="Card image cap">
+                @endif
+                <a>
+                  <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                </a>
               </a>
-            </a>
 
-            <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
-              <div class="card-body">
-                <h4 class="card-title text-capitalize">@lang('front.zakah')</h4>
-              </div>
-            </a>
+              <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
+                <div class="card-body">
+                  <h4 class="card-title text-capitalize">@lang('front.zakah')</h4>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
+        @endif
 
         @if (request()->get("OpID") == 9)
 
         @elseif(request()->get("OpID") == ooredoo)
+        
+        @elseif(request()->get("OpID") == mbc)
 
         @else
         <div class="item">
