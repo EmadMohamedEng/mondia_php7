@@ -283,6 +283,7 @@ $enable = get_setting('enable_testing');
 
 
                 @if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
+
                 <div class="lang_mbc m-md-1 m-lg-1">
                   <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize p-0" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
                   <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
@@ -457,10 +458,15 @@ $enable = get_setting('enable_testing');
               <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink3">
 
                 <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
+                @if (request()->get("OpID") == mbc )
+                @else
                 <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
+                @endif
                 @if (request()->get("OpID") == 9 )
 
-                @elseif ( request()->get("OpID") == ooredoo )
+                @elseif ( request()->get("OpID") == ooredoo)
+
+                @elseif ( request()->get("OpID") == mbc)
 
                 @else
                 <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
@@ -789,11 +795,14 @@ $enable = get_setting('enable_testing');
                   <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink6">
 
                     <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
+                    @if (request()->get("OpID") == mbc )
+                    @else
                     <a class="dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
+                    @endif
                     @if (request()->get("OpID") == 9 )
 
                     @elseif ( request()->get("OpID") == ooredoo )
-
+                    @elseif ( request()->get("OpID") == mbc)
                     @else
                     <a class="dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
                     @endif
@@ -1011,11 +1020,14 @@ $enable = get_setting('enable_testing');
 
 
                     <a class="menuThree dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
+                    @if (request()->get("OpID") == mbc )
+                    @else
                     <a class="menuThree dropdown-item text-capitalize link_href" href="{{url('zakah')}}">@lang('front.zakah')</a>
+                    @endif
                     @if (request()->get("OpID") == 9 )
 
                     @elseif ( request()->get("OpID") == ooredoo )
-
+                    @elseif ( request()->get("OpID") == mbc)
                     @else
                     <a class="menuThree dropdown-item text-capitalize link_href" href="{{url('merath')}}">@lang('front.merath')</a>
                     @endif
@@ -1031,7 +1043,7 @@ $enable = get_setting('enable_testing');
                 @if ( request()->get("OpID") == mbc )
                 <li class="nav-item dropdown">
                   <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Terms and Faq
+                  @lang('front.terms')
                   </a>
                   <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink9">
                     <a class="menuThree dropdown-item text-capitalize link_href ul_menu" href="{{url('/terms')}}">@lang('front.terms')</a>

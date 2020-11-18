@@ -30,6 +30,15 @@ class FrontController extends Controller
       session()->put('current_op_id', $request->get('OpID'));
     }
 
+    // if (request()->get('OpID') == mbc) {
+    //   $lang = 'ar';
+    //   \Session::put('applocale', $lang);
+    //   \App::setlocale($lang);
+    // }else{
+    //   $lang = 'en';
+    //   \Session::put('applocale', $lang);
+    //   \App::setlocale($lang);
+    // }
 
     $latest = Video::select('*', 'contents.id as content_id');
     if (request()->has('OpID') && request()->get('OpID') != '') {
