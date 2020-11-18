@@ -104,8 +104,13 @@ class FrontController extends Controller
 
   public function contents(Request $request)
   {
+
       $service = '';
-      $contents = Video::select('*', 'contents.id as content_id', 'posts.free');
+      if (request()->has('OpID') && request()->get('OpID') != '') {
+      $contents = Video::select('*', 'contents.id as content_id','posts.free');
+      }else{
+        $contents = Video::select('*', 'contents.id as content_id');
+      }
       if ($request->has('service_id') && $request->service_id != '') {
       $contents = $contents->where('service_id', $request->service_id);
       $service = Service::find($request->service_id);
@@ -125,7 +130,7 @@ class FrontController extends Controller
           $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
         });
     }
-
+    // dd($contents);
     $contents = $contents->groupBy('contents.id')->orderBy('contents.index', 'asc')->limit(get_pageLength())->get();
 
     if (!request()->has('OpID') && !get_setting('enable_testing')) {

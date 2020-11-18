@@ -74,12 +74,12 @@ class VideosController extends Controller
             ->addColumn('index2', function (Video $video) {
               return $video->index;
           })
-            ->addColumn('url', function (Video $video) {
-                return '<td>
-                            <input type="text" id="url_h' . $video->id . '"  value="' . url('view_content/' . $video->id) . '">
-                            <span class="btn" onclick="x = document.getElementById(' . "'url_h" . $video->id . "'); x.select();document.execCommand('copy')" . '"> <i class="fa fa-copy"></i> </span>
-                            </td>';
-            })
+            // ->addColumn('url', function (Video $video) {
+            //     return '<td>
+            //                 <input type="text" id="url_h' . $video->id . '"  value="' . url('view_content/' . $video->id) . '">
+            //                 <span class="btn" onclick="x = document.getElementById(' . "'url_h" . $video->id . "'); x.select();document.execCommand('copy')" . '"> <i class="fa fa-copy"></i> </span>
+            //                 </td>';
+            // })
             ->addColumn('action', function (Video $video) {
                 return view('videos.action', compact('video'))->render();
             })
