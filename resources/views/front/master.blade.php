@@ -21,11 +21,12 @@
   @endif
   <!-- End Favicon -->
   <title> @yield('page_title')</title>
-  <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">  
+  <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}">
   @if(request()->has('OpID') && request()->get('OpID') == omantel)
   <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
   @elseif(request()->has('OpID') && request()->get('OpID') == stc)
@@ -41,9 +42,9 @@
   @if(request()->get('OpID') == mbc)
   @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
   <link rel="stylesheet" href="{{asset('front/css/style_mbc_2_ar.css')}}">
-  @else
-  <link rel="stylesheet" href="{{asset('front/css/style_mbc_2.css')}}">
   @endif
+  <!-- <link rel="stylesheet" href="{{asset('front/css/style_mbc_2.css')}}"> -->
+  <link rel="stylesheet" href="{{asset('front/css/style_mbc_menu.css')}}">
   @endif
 
   @if(request()->get('OpID') == orange)
@@ -57,7 +58,7 @@
   @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
   <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
   @endif
-  <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}">
+
 
   <style>
     .active_menu {
@@ -1104,8 +1105,20 @@ $enable = get_setting('enable_testing');
     }
   </script>
 
+@if(request()->get('OpID') == mbc)
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "266px";
+      $('.sidenav').css('border', '2px solid #aa6620');
+    }
 
-  <script>
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      $('.sidenav').css('border', '0');
+    }
+  </script>
+@elseif(request()->get('OpID') == orange)
+<script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "266px";
       $('.sidenav').css('border', '2px solid #fe6600');
@@ -1116,6 +1129,8 @@ $enable = get_setting('enable_testing');
       $('.sidenav').css('border', '0');
     }
   </script>
+@else @endif
+
   @yield('script')
 </body>
 
