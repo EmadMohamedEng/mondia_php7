@@ -462,7 +462,7 @@ class FrontController extends Controller
 
   public function sebha(Request $request)
   {
-    if(request()->filled("OpID") && request()->get("OpID") == mbc && date("D") != 'Fri') {
+    if(request()->filled("OpID") && request()->get("OpID") == mbc) {
       if(!(session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))) {
         return back();
       }
