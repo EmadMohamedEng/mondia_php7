@@ -40,11 +40,13 @@ $menu = provider_menu();
             <img class="m-auto d-block" src="{{$content->type == 1 ? $content->image_preview : $content->video}}" alt="banner_slider">
           </a>
 
+          @if(request()->get('OpID') == mbc)
           @if ($content->free == 1)
       @if( DB::table('settings')->where('key','like','%enable_free%')->first()->value  == "1")
           <div class="content_free text-center py-1">
             <span class="text-capitalize">@lang('front.free')</span>
           </div>
+          @endif
           @endif
           @endif
 
@@ -88,7 +90,11 @@ $menu = provider_menu();
         </div>
       </div>
 
-      <div class="owl_content owl_content_five owl-carousel owl-theme" dir="ltr">
+      @if(request()->get('OpID') == mbc)
+      <div class="owl_content owl_content_two owl-carousel owl-theme" dir="ltr">
+        @else
+        <div class="owl_content owl_content_five owl-carousel owl-theme" dir="ltr">
+        @endif
         <div class="item">
           <div class="card card_muslim_guid ovf-hidden">
             <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
