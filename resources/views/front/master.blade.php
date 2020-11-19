@@ -46,7 +46,6 @@
   @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
   <link rel="stylesheet" href="{{asset('front/css/style_mbc_menu_ar.css')}}">
   @endif
-  <!-- <link rel="stylesheet" href="{{asset('front/css/style_mbc_2.css')}}"> -->
   <link rel="stylesheet" href="{{asset('front/css/style_mbc_menu.css')}}">
   @endif
 
@@ -97,7 +96,7 @@ $enable = get_setting('enable_testing');
         @if(request()->get('OpID') == mbc)
         <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-0 d-flex justify-content-center">
           @elseif(request()->get('OpID') == orange)
-          <div class="col-md-6 col-lg-7 col-xl-4 col-6 p-0 d-flex justify-content-center">
+          <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-0 d-flex justify-content-center">
 
             @else
             <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0 d-flex justify-content-center">
@@ -115,7 +114,7 @@ $enable = get_setting('enable_testing');
 
                   <div class="row">
                     <div class="col-md-6 col-6">
-                      <img class="bounce-top" src='{{asset("front/images/orange.png")}}' alt='Logo'>
+                      <img class="bounce-top logo_orange" src='{{asset("front/images/orange.png")}}' alt='Logo'>
                     </div>
 
                     <div class="col-md-6 col-6 img_khir p-0">
@@ -151,7 +150,7 @@ $enable = get_setting('enable_testing');
 
                 @if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
 
-                <div class="lang_mbc m-md-1 m-lg-1">
+                <div class="lang_mbc">
                   <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize p-0" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
                   <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
                     @foreach(Config::get('languages') as $key=>$lang)
