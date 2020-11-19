@@ -2,6 +2,13 @@
   font-family: DuCoHeadline200;
   src: url("../font/DuCoHeadline200.ttf");
 }
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: #FF6600;
+}
+
 body {
   font-family: DuCoHeadline200;
   background-color: #0f1218;
@@ -46,7 +53,7 @@ body {
 }
 .main_container .header {
   position: unset !important;
-  background: #0f1218;
+  background: rgba(0, 0, 0, 0.5);
   height: 5rem !important;
 }
 .main_container .header .header_logo .link_href,
@@ -77,9 +84,24 @@ body {
   cursor: pointer;
 }
 .main_container .header .lang_mbc .dropdown-menu2 {
-  right: 0 !important;
+  left: 35%;
   text-align: center;
-  background-color: #0f1218;
+  background-color: #000;
+}
+.main_container .header .lang_mbc .dropdown-menu2 .dropdown-item {
+  color: #FF6600;
+}
+.main_container .header .lang_mbc .dropdown-menu2 .dropdown-item:hover, .main_container .header .lang_mbc .dropdown-menu2 .dropdown-item:focus {
+  background-color: #FF6600;
+  color: #FFF;
+}
+.main_container .navbar {
+  z-index: 999;
+  width: 100%;
+  margin-top: 0;
+}
+.main_container .navbar .navbar-nav .nav-item {
+  cursor: pointer;
 }
 .main_container .nav_nav {
   display: none;
@@ -109,6 +131,26 @@ body {
 }
 .main_container #mySidenav .navbar_ul .nav-item .nav-link:hover, .main_container #mySidenav .navbar_ul .nav-item .nav-link:focus {
   color: #FFF !important;
+}
+.main_container .navbar_three {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+.main_container .navbar_three .navbar_ul_three .menuThree {
+  color: #FF6600;
+  font-size: 20px;
+  text-indent: -5px;
+}
+.main_container .navbar_three .navbar_ul_three .menuThree:focus, .main_container .navbar_three .navbar_ul_three .menuThree:hover {
+  background: #FF6600;
+  color: #FFF;
+  border-radius: 0.25rem;
+}
+.main_container .navbar_three .navbar_ul_three .dropdown-menu .dropdown-item {
+  color: #FF6600;
+}
+.main_container .navbar_three .navbar_ul_three .dropdown-menu .dropdown-item:focus, .main_container .navbar_three .navbar_ul_three .dropdown-menu .dropdown-item:hover {
+  background: #FF6600;
+  color: #FFF;
 }
 .main_container .img_carousel .owl_one .item .content_free {
   background: #FF6600;
@@ -479,6 +521,9 @@ body {
 }
 .main_container .sebha_page .display .btn-bar button {
   border: 2px solid #FF6600;
+}
+.main_container .sebha_page #sebhaModal {
+  overflow: hidden;
 }
 .main_container .sebha_page #sebhaModal .modal-content {
   left: 0 !important;
@@ -934,18 +979,19 @@ body {
 .main_container .header .header_icon img {
     width: 35% !important;
     margin-top: -0.75rem !important;
+    margin-left: 66%;
   }
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
     width: 45% !important;
     margin-top: 0.75rem !important;
+    margin-left: 0%;
   }
   .main_container .header .lang_mbc {
     font-size: 1.5rem;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    right: 0 !important;
-    left: 19% !important;
+    left: 35% !important;
     width: 0;
     font-size: 1.5rem;
   }
@@ -1061,18 +1107,19 @@ body {
 .main_container .header .header_icon img {
     width: 35% !important;
     margin-top: -0.65rem !important;
+    margin-left: 65%;
   }
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
     width: 50% !important;
     margin-top: 0.95rem !important;
+    margin-left: 0;
   }
   .main_container .header .lang_mbc {
     font-size: 1.75rem;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    right: 0 !important;
-    left: 39% !important;
+    left: 50% !important;
     width: 0;
     font-size: 1.75rem;
   }

@@ -46,23 +46,21 @@
   @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
   <link rel="stylesheet" href="{{asset('front/css/style_mbc_menu_ar.css')}}">
   @endif
-  <!-- <link rel="stylesheet" href="{{asset('front/css/style_mbc_2.css')}}"> -->
   <link rel="stylesheet" href="{{asset('front/css/style_mbc_menu.css')}}">
   @endif
 
   @if(request()->get('OpID') == orange)
   @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
-  <link rel="stylesheet" href="{{asset('front/css/style_orange_2_ar.css')}}">
-  @else
-  <link rel="stylesheet" href="{{asset('front/css/style_orange_2.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/style_orange_menu_ar.css')}}">
   @endif
+  <link rel="stylesheet" href="{{asset('front/css/style_orange_menu.css')}}">
   @endif
 
-  <style>
+  <!-- <style>
     .active_menu {
       color: #000;
     }
-  </style>
+  </style> -->
 
   <script>
     window.base_url = '{{url("/")}}';
@@ -85,65 +83,6 @@ $enable = get_setting('enable_testing');
   }
 </style>
 
-@if(request()->get('OpID') == orange )
-<style>
-  .navbar {
-    z-index: 999;
-    width: 100%;
-    margin-top: 0;
-    background: #0f1218 !important;
-  }
-
-  .navbar .navbar-nav .nav-item {
-    cursor: pointer;
-  }
-
-  .navbar-light .navbar-nav .active>.nav-link,
-  .navbar-light .navbar-nav .nav-link.active,
-  .navbar-light .navbar-nav .nav-link.show,
-  .navbar-light .navbar-nav .show>.nav-link {
-    color: #FF6600;
-  }
-
-  /* .navbar-light .navbar-nav .nav-link {
-    color: #FF6600;
-    font-size: 18px;
-    text-indent: 5px;
-  } */
-
-  .navbar-light .navbar-nav .nav-link:focus,
-  .navbar-light .navbar-nav .nav-link:hover {
-    background: #FF6600;
-    color: #FFF;
-    border-radius: 0.25rem;
-  }
-
-  .dropdown-item:focus,
-  .dropdown-item:hover {
-    background: #FF6600;
-    color: #FFF;
-    ;
-  }
-
-  .dropdown-item {
-    color: #FF6600;
-  }
-
-  .dropdown-divider {
-    border-top: 1px solid #FF6600;
-  }
-
-  .ul_menu {
-    background-color: unset;
-    font-size: 13px;
-  }
-
-  .navbar-nav .dropdown-menu {
-    background-color: #111;
-  }
-</style>
-@endif
-
 <body>
   <main class="main_container">
     <header class="header w-100">
@@ -157,7 +96,7 @@ $enable = get_setting('enable_testing');
         @if(request()->get('OpID') == mbc)
         <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-0 d-flex justify-content-center">
           @elseif(request()->get('OpID') == orange)
-          <div class="col-md-7 col-lg-7 col-xl-4 col-6 p-0 d-flex justify-content-center">
+          <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-0 d-flex justify-content-center">
 
             @else
             <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0 d-flex justify-content-center">
@@ -184,7 +123,6 @@ $enable = get_setting('enable_testing');
                       @else
                       <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_en.png")}}' alt='Logo'>
                       @endif
-                      <!-- <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_ar.png")}}' alt='Logo'> -->
                     </div>
                   </div>
 

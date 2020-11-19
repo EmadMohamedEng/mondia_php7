@@ -24,7 +24,7 @@ body {
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-  color: #efc049;
+  color: $text_color;
 }
 
 .main_container {
@@ -78,7 +78,6 @@ body {
   }
 
   .navbar {
-    // z-index: -999;
     z-index: 999;
     width: 100%;
     margin-top: 0;
