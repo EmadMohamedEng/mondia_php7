@@ -315,11 +315,13 @@ class MbcTwoController extends Controller
     date_default_timezone_set("Africa/Cairo");
     // format number
     // dd($request);
-
-    $msisdn = $request->code.$request->number?? session('Msisdn');
-    $msisdn = str_replace("200","20",$msisdn);
-    $msisdn = str_replace("2020","20",$msisdn);
-     //dd($msisdn);
+    $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
+    if($get_url_country == "Egypt"){
+      $number = ltrim($request->number,"0");
+      $number = ltrim($request->number,"20");
+    }
+    $msisdn = $request->code.$number?? session('Msisdn');
+    //dd($msisdn);
     // $msisdn = trim($msisdn,"+");
     $service_id = 2;
     $check = $this->checkStatus($msisdn, $service_id);
@@ -472,9 +474,14 @@ class MbcTwoController extends Controller
 
   public function checkStatusLogin(Request $request)
   {
-    $msisdn = $request->code.$request->number;
-    $msisdn = str_replace("200","20",$msisdn);
-    $msisdn = str_replace("2020","20",$msisdn);
+    $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
+    if($get_url_country == "Egypt"){
+      $number = ltrim($request->number,"0");
+      $number = ltrim($request->number,"20");
+    }
+    $msisdn = $request->code.$number;
+    // $msisdn = str_replace("200","20",$msisdn);
+    // $msisdn = str_replace("2020","20",$msisdn);
     // dd($msisdn);
     $service_id = 2;
     // $msisdn = str_replace("+0","",$msisdn);
