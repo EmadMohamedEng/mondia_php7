@@ -540,10 +540,6 @@ body {
   color: #FF6600 !important;
 }
 
-.loading-overlay .spinner-large {
-  bottom: 15% !important;
-  left: 45% !important;
-}
 .loading-overlay .spinner-blue {
   border-top-color: #FF6600 !important;
   border-left-color: #FF6600 !important;

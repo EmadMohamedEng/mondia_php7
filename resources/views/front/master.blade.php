@@ -58,9 +58,6 @@
   @endif
   @endif
 
-
-
-
   <style>
     .active_menu {
       color: #000;
@@ -158,7 +155,7 @@ $enable = get_setting('enable_testing');
         @endif
 
         @if(request()->get('OpID') == mbc)
-        <div class="col-md-4 col-lg-4 col-xl-4 col-4 p-0 d-flex justify-content-center">
+        <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-0 d-flex justify-content-center">
           @elseif(request()->get('OpID') == orange)
           <div class="col-md-7 col-lg-7 col-xl-4 col-7 p-0 d-flex justify-content-center">
 
@@ -200,7 +197,7 @@ $enable = get_setting('enable_testing');
             </div>
 
             @if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
-            <div class="col-md-3 col-lg-3 col-xl-4 col-3 d-flex justify-content-end">
+            <div class="col-md-4 col-lg-4 col-xl-4 col-4 d-flex justify-content-end">
               @else
               <div class="col-md-5 col-lg-5 col-xl-5 col-5 d-flex justify-content-end">
                 @endif

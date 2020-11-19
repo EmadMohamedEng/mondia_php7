@@ -588,10 +588,6 @@ body {
   color: #efc049 !important;
 }
 
-.loading-overlay .spinner-large {
-  bottom: 15% !important;
-  left: 45% !important;
-}
 .loading-overlay .spinner-blue {
   border-top-color: #efc049 !important;
   border-left-color: #efc049 !important;
@@ -953,10 +949,14 @@ body {
     font-size: 1.5rem;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    right: 0 !important;
-    left: 37% !important;
+    right: 0;
+    left: 37%;
     width: 0;
     font-size: 1.5rem;
+  }
+  .main_container .navbar_three {
+    background: transparent !important;
+    display: none;
   }
   .main_container .nav_nav {
     display: unset;
@@ -1071,8 +1071,8 @@ body {
     font-size: 1.75rem;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    right: 0 !important;
-    left: 52% !important;
+    right: 0;
+    left: 52%;
     width: 0;
     font-size: 1.75rem;
   }
