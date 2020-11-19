@@ -88,25 +88,6 @@ body {
 .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu.dropdown-menu2 {
   float: left !important;
 }
-.main_container #mySidenav.sidenav {
-  left: 56%;
-}
-.main_container #mySidenav.sidenav .closebtn_mbc {
-  left: 0%;
-}
-.main_container #mySidenav.sidenav .closebtn_mbc:hover, .main_container #mySidenav.sidenav .closebtn_mbc:focus {
-  background: transparent;
-}
-.main_container #mySidenav.sidenav .navbar_ul {
-  padding: 0 0.75rem;
-}
-.main_container #mySidenav.sidenav .navbar_ul .nav-item .nav-link {
-  text-align: right !important;
-  direction: rtl !important;
-}
-.main_container #mySidenav.sidenav .navbar_ul .nav-item .dropdown-menu {
-  text-align: center;
-}
 .main_container .img_carousel .owl_one .item .content_free {
   top: 7%;
   right: 74%;

@@ -237,10 +237,6 @@ body {
   .main_container .merath_page .table_table .table {
     border: 2px #00a9ce solid;
   }
-  .loading-overlay .spinner-large {
-    bottom: 30%;
-    left: 31%;
-  }
 }
 @media (min-width: 375px) and (max-width: 410.9px) {
   .main_container .header .header_logo img,

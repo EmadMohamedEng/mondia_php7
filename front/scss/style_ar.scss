@@ -103,35 +103,7 @@ body {
 
   /* End Header */
 
-  #mySidenav {
-    &.sidenav {
-      left: 56%;
-
-      .closebtn_mbc {
-        left: 0%;
-
-        &:hover,
-        &:focus {
-          background: transparent;
-        }
-      }
-
-      .navbar_ul {
-        padding: 0 0.75rem;
-
-        .nav-item {
-          .nav-link {
-            text-align: right !important;
-            direction: rtl !important;
-          }
-
-          .dropdown-menu {
-            text-align: center;
-          }
-        }
-      }
-    }
-  }
+  
 
   /* Start Home Page */
   .img_carousel {

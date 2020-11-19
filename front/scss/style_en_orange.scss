@@ -10,6 +10,13 @@ $grey_color: #adadad;
   src: url('../font/DuCoHeadline200.ttf')
 }
 
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+  color: $text_color;
+}
+
 body {
   font-family: DuCoHeadline200;
   // font-family: DuCoHeadline, Arial, sans-serif;
@@ -27,7 +34,8 @@ body {
   /* Start Header */
   .header {
     position: unset !important;
-    background: $bg_color2;
+    background: rgba(0, 0, 0, .5);
+
     height: 5rem !important;
 
 
@@ -64,15 +72,36 @@ body {
       cursor: pointer;
 
       .dropdown-menu2 {
-        right: 0 !important;
+        // right: 0 !important;
+        left: 35%;
         text-align: center;
-        background-color: $bg_color2;
+        background-color: $black_color;
+
+        .dropdown-item {
+          color: $text_color;
+
+          &:hover,
+          &:focus {
+            background-color: $bg_color;
+            color: $white_color;
+          }
+        }
       }
     }
   }
 
   .navbar {
     // z-index: -999;
+    z-index: 999;
+    width: 100%;
+    margin-top: 0;
+    // background: rgba(0, 0, 0, .5) !important;
+
+    .navbar-nav {
+      .nav-item {
+        cursor: pointer;
+      }
+    }
   }
 
   .nav_nav {
@@ -133,6 +162,38 @@ body {
           &:hover,
           &:focus {
             color: $white_color !important;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar_three {
+    background: rgba(0, 0, 0, 0.5) !important;
+
+    .navbar_ul_three {
+
+      .menuThree {
+        color: $text_color;
+        font-size: 20px;
+        text-indent: -5px;
+
+        &:focus,
+        &:hover {
+          background: $bg_color;
+          color: $white_color;
+          border-radius: 0.25rem;
+        }
+      }
+
+      .dropdown-menu {
+        .dropdown-item {
+          color: $text_color;
+
+          &:focus,
+          &:hover {
+            background: $bg_color;
+            color: $white_color;
           }
         }
       }
@@ -874,6 +935,10 @@ body {
 
     .modal.show .modal-dialog {}
 
+    #sebhaModal {
+      overflow: hidden;
+    }
+
     #sebhaModal .modal-content {
       left: 0 !important;
     }
@@ -1001,10 +1066,7 @@ body {
 .loading-overlay {
   .spinner {}
 
-  .spinner-large {
-    bottom: 15% !important;
-    left: 45% !important;
-  }
+  .spinner-large {}
 
   .spinner-slow {}
 
@@ -2529,12 +2591,14 @@ body {
         img {
           width: 35% !important;
           margin-top: -0.75rem !important;
+          margin-left: 66%;
         }
 
         .img_khir {
           img {
             width: 45% !important;
             margin-top: 0.75rem !important;
+            margin-left: 0%;
           }
         }
 
@@ -2547,8 +2611,7 @@ body {
         font-size: 1.5rem;
 
         .dropdown-menu2 {
-          right: 0 !important;
-          left: 19% !important;
+          left: 35% !important;
           width: 0;
           font-size: 1.5rem;
         }
@@ -3055,12 +3118,14 @@ body {
         img {
           width: 35% !important;
           margin-top: -0.65rem !important;
+          margin-left: 65%;
         }
 
         .img_khir {
           img {
             width: 50% !important;
             margin-top: 0.95rem !important;
+            margin-left: 0;
           }
         }
 
@@ -3075,8 +3140,7 @@ body {
         font-size: 1.75rem;
 
         .dropdown-menu2 {
-          right: 0 !important;
-          left: 39% !important;
+          left: 50% !important;
           width: 0;
           font-size: 1.75rem;
         }
@@ -3640,9 +3704,7 @@ body {
           }
         }
 
-        .arrow_back {
-
-        }
+        .arrow_back {}
       }
     }
 

@@ -1,5 +1,5 @@
 .main_container .header .open_icon_nav_mbc {
-  color: #efc049;
+  color: #FF6600;
   font-size: 30px;
   cursor: pointer;
   margin-top: -12px;
@@ -23,13 +23,13 @@
   padding: 8px;
   text-decoration: none;
   font-size: 14px;
-  color: #efc049;
+  color: #FF6600;
   cursor: pointer;
   display: block;
   transition: 0.3s;
 }
-.main_container .sidenav a:hover {
-  background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
+.main_container .sidenav a:hover, .main_container .sidenav a:focus {
+  background: #FF6600;
   color: #FFF;
 }
 .main_container .sidenav a.menuTwo {
@@ -39,12 +39,15 @@
   position: absolute;
   top: 0;
   right: 3%;
-  color: #efc049;
+  color: #FF6600;
   font-size: 1.5rem;
   font-weight: bold;
 }
 .main_container .sidenav .closebtn_mbc:hover, .main_container .sidenav .closebtn_mbc:focus {
   background: transparent;
+}
+.main_container .sidenav .navbar_ul .nav-item .dropdown-menu {
+  background-color: #0f1218;
 }
 .main_container .sidenav .navbar_ul .nav-item .dropdown-menu .dropdown-item.link_href {
   padding: 5px 0;
@@ -54,11 +57,11 @@
   margin-top: 5%;
 }
 .main_container .sidenav .navbar_ul .nav-item .menuTwo svg {
-  fill: #efc049;
+  fill: #FF6600;
   width: 15%;
 }
 .main_container .navbar-nav .dropdown-menu {
-  background-color: #0f1218;
+  background-color: #000;
   text-align: center;
 }
 .main_container .navbar-nav .dropdown-menu .nav-link {
@@ -82,4 +85,4 @@
   }
 }
 
-/*# sourceMappingURL=style_mbc_menu.css.map */
+/*# sourceMappingURL=style_orange_menu.css.map */

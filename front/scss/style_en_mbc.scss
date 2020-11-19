@@ -24,7 +24,7 @@ body {
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-  color: #efc049;
+  color: $text_color;
 }
 
 .main_container {
@@ -78,7 +78,6 @@ body {
   }
 
   .navbar {
-    // z-index: -999;
     z-index: 999;
     width: 100%;
     margin-top: 0;
@@ -1021,10 +1020,7 @@ body {
 .loading-overlay {
   .spinner {}
 
-  .spinner-large {
-    bottom: 15% !important;
-    left: 45% !important;
-  }
+  .spinner-large {}
 
   .spinner-slow {}
 
@@ -2513,14 +2509,19 @@ body {
         font-size: 1.5rem;
 
         .dropdown-menu2 {
-          right: 0 !important;
-          left: 37% !important;
+          right: 0;
+          left: 37%;
           width: 0;
           font-size: 1.5rem;
         }
       }
 
       .arrow_back {}
+    }
+
+    .navbar_three {
+      background: transparent !important;
+      display: none;;
     }
 
     .nav_nav {
@@ -3029,8 +3030,8 @@ body {
         font-size: 1.75rem;
 
         .dropdown-menu2 {
-          right: 0 !important;
-          left: 52% !important;
+          right: 0 ;
+          left: 52%;
           width: 0;
           font-size: 1.75rem;
         }

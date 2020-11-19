@@ -1,7 +1,8 @@
-$bg_color: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
+$bg_color: #FF6600;
 $bg_color2: #0f1218;
-$text_color: #efc049;
+$text_color: #FF6600;
 $white_color: #FFF;
+$black_color: #000;
 $grey_color: #adadad;
 
 .main_container {
@@ -33,12 +34,13 @@ $grey_color: #adadad;
       padding: 8px;
       text-decoration: none;
       font-size: 14px;
-      color: #efc049;
+      color: $text_color;
       cursor: pointer;
       display: block;
       transition: 0.3s;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background: $bg_color;
         color: $white_color;
       }
@@ -52,7 +54,7 @@ $grey_color: #adadad;
       position: absolute;
       top: 0;
       right: 3%;
-      color: #efc049;
+      color: $text_color;
       font-size: 1.5rem;
       font-weight: bold;
 
@@ -65,6 +67,7 @@ $grey_color: #adadad;
     .navbar_ul {
       .nav-item {
         .dropdown-menu {
+          background-color: $bg_color2;
           .dropdown-item {
             &.link_href {
               padding: 5px 0;
@@ -91,8 +94,7 @@ $grey_color: #adadad;
 
   .navbar-nav {
     .dropdown-menu {
-      background-color: $bg_color2;
-      // background: rgba(0, 0, 0, .5) !important;
+      background-color: $black_color;
       text-align: center;
 
       .nav-link {

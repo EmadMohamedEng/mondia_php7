@@ -1028,7 +1028,7 @@ select:active {
   height: 7rem;
   border-width: 6px;
   position: fixed;
-  bottom: 3rem;
+  bottom: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -1777,7 +1777,7 @@ select:active {
 
   .loading-overlay .spinner-large {
     bottom: 30%;
-    left: 31%;
+    left: 35%;
   }
 }
 @media (min-width: 375px) and (max-width: 410.9px) {
