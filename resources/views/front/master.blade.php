@@ -157,7 +157,7 @@ $enable = get_setting('enable_testing');
         @if(request()->get('OpID') == mbc)
         <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-0 d-flex justify-content-center">
           @elseif(request()->get('OpID') == orange)
-          <div class="col-md-7 col-lg-7 col-xl-4 col-7 p-0 d-flex justify-content-center">
+          <div class="col-md-7 col-lg-7 col-xl-4 col-6 p-0 d-flex justify-content-center">
 
             @else
             <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0 d-flex justify-content-center">
