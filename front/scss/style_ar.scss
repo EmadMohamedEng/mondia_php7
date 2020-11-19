@@ -30,7 +30,11 @@ body {
           text-align: left;
 
           img {
-            margin-right: 0%;
+            margin-right: 30%;
+
+            &.logo_orange {
+              margin-right: 85%;
+            }
           }
 
           .img_khir {
@@ -46,7 +50,7 @@ body {
     }
 
     .lang_mbc {
-      margin-left: -15% !important;
+      margin-left: -15%;
 
       .dropdown-menu2 {
         left: -7% !important;
@@ -63,6 +67,7 @@ body {
   .nav_nav {
     .navbar_ul {
       padding-right: 0;
+      float: right;
 
       .nav_item_welc {
         text-align: right !important;
@@ -103,7 +108,7 @@ body {
 
   /* End Header */
 
-  
+
 
   /* Start Home Page */
   .img_carousel {
@@ -474,7 +479,7 @@ body {
       }
 
       .lang_mbc {
-        margin-left: -17%;
+        margin-left: -55%;
       }
 
       .arrow_back {
@@ -643,7 +648,7 @@ body {
       }
 
       .lang_mbc {
-        margin-left: -38%;
+        margin-left: -47%;
       }
     }
 
@@ -780,7 +785,7 @@ body {
       }
 
       .lang_mbc {
-        margin-left: -13%;
+        margin-left: -45%;
       }
 
       .arrow_back {
@@ -966,7 +971,7 @@ body {
       }
 
       .lang_mbc {
-        margin-left: -13%;
+        margin-left: -40%;
       }
     }
 
@@ -1115,7 +1120,7 @@ body {
       }
 
       .lang_mbc {
-        margin-left: -6%;
+        margin-left: -17%;
 
         .dropdown-menu2 {
           right: unset !important;
