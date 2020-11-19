@@ -107,6 +107,10 @@ class PostsController extends Controller
             return back()->withErrors($validator)->withInput();
         }
         for ($i = 0; $i < count($request['operator_id']); $i++) {
+          $exist_post = Post::where('video_id', $request->video_id)->where('operator_id', $request['operator_id'][$i])->first();
+          if($exist_post){
+            return back()->with('failed', 'Post already exists!');
+          }else{
             $post = new Post();
             $post->video_id = $request->video_id;
             $post->operator_id = $request['operator_id'][$i];
@@ -114,6 +118,7 @@ class PostsController extends Controller
             $post->slider = $request->slider;
             $post->free = $request->free;
             $post->save();
+          }
         }
         if (isset($request->video))
             return redirect("videos/$request->video_id/posts");
