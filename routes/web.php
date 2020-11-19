@@ -259,3 +259,4 @@ Route::get('timwe_test', function(){
 });
 
 Route::get('copy_slider_from_mbc_to_orange', 'PostsController@copy_slider_from_mbc_to_orange');
+Route::get('remove_dublicate_posts', 'PostsController@remove_dublicate_posts');

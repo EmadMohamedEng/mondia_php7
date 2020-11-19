@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use Validator;
-use App\Video;
 use App\Post;
+use App\Video;
+use Validator;
 use App\Operator;
 use App\Datatables;
+use App\Http\Requests;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class PostsController extends Controller
 {
@@ -221,6 +222,23 @@ class PostsController extends Controller
 
       foreach($mbc_slider as $slider){
         $orange_post = Post::where('operator_id', orange)->where('video_id', $slider->video_id)->update(['slider' => 1]);
+      }
+      echo 'done';
+    }
+
+    // remove dub posts
+    public function remove_dublicate_posts()
+    {
+      $duplicates = DB::table('posts')->select('id', 'operator_id', 'video_id')->where('operator_id', 14)->get();
+
+      $video_array = array();
+
+      foreach($duplicates as $duplicate){
+        if(!in_array($duplicate->video_id, $video_array)){
+          $video_array[$duplicate->video_id] = $duplicate->video_id;
+        }else{
+          Post::where('operator_id', $duplicate->operator_id)->where('video_id', $duplicate->video_id)->first()->delete();
+        }
       }
       echo 'done';
     }
