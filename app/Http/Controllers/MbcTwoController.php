@@ -165,6 +165,11 @@ class MbcTwoController extends Controller
         $lang = 'ar';
       }
     session::put('lang', $lang);
+
+    if(session()->has('current_url')){
+      // dd(session('current_url'));
+      return redirect(session('current_url'));
+    }
     return view('landing_v2.mbcTwo.timwe_landing', compact("lang",'country','operators'));
   }
 

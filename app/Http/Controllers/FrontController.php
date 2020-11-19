@@ -179,9 +179,9 @@ class FrontController extends Controller
           ->where('posts.show_date', '<=', Carbon::now()->toDateString())
           ->where('posts.operator_id', $request->OpID)
           ->where('contents.id', $id)
-          ->first();
+          ->latest()->first();
       } else {
-        $content = $content->whereId($id)->first();
+        $content = $content->whereId($id)->latest()->first();
       }
     // }
     if (!$content) {
@@ -217,7 +217,6 @@ class FrontController extends Controller
       }
       return redirect('imi/login');
     }
-
     if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
       $enable_free = get_setting('enable_free');
         if($enable || $content->free || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
