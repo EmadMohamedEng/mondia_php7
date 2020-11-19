@@ -5,10 +5,42 @@
     }
   }
 
-  .sidenav {
+  #mySidenav {
+    &.sidenav {
+      left: 56.5%;
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
 
-    a {
-      direction: ltr;
+      border-top-left-radius: 0.6rem;
+      border-bottom-left-radius: 0.6rem;
+
+      a {
+        direction: ltr;
+      }
+
+      .closebtn_mbc {
+        left: 0%;
+
+        &:hover,
+        &:focus {
+          background: transparent;
+        }
+      }
+
+      .navbar_ul {
+        padding: 0 0.75rem;
+
+        .nav-item {
+          .nav-link {
+            text-align: right !important;
+            direction: rtl !important;
+          }
+
+          .dropdown-menu {
+            text-align: center;
+          }
+        }
+      }
     }
   }
 
@@ -28,6 +60,24 @@
         }
 
         svg {}
+      }
+    }
+  }
+
+  .navbar_three {
+    .navbar_ul_three {
+      .menuThree {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .sebha_page {
+    #sebhaModal {
+      overflow: hidden;
+
+      .modal-content {
+        left: 0 !important;
       }
     }
   }
