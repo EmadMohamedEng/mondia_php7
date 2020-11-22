@@ -355,7 +355,7 @@ class FrontController extends Controller
       session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
       return view('front.inner_enable_testing', compact('content', 'contents'));
     }
-    return redirect('landing_stc');
+    return redirect('mbc_portal_landing');
   }
 
   /**

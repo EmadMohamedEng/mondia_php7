@@ -166,10 +166,6 @@ class MbcTwoController extends Controller
       }
     session::put('lang', $lang);
 
-    if(session()->has('current_url')){
-      // dd(session('current_url'));
-      return redirect(session('current_url'));
-    }
     return view('landing_v2.mbcTwo.timwe_landing', compact("lang",'country','operators'));
   }
 
@@ -332,7 +328,13 @@ class MbcTwoController extends Controller
     $check = $this->checkStatus($msisdn, $service_id);
     if ($check == "true") {
     session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-    return redirect(url('/?OpID=' . MBC_OP_ID));
+
+    if(session()->has('current_url')){
+      return redirect(session('current_url'));
+    }else{
+      return redirect(url('/?OpID=' . MBC_OP_ID));
+    }
+
     }
       // create pincode
     $random = mt_rand(1000, 9999);
@@ -401,7 +403,14 @@ class MbcTwoController extends Controller
           }
           $PinCode->verified = 1;
           $PinCode->save();
-          return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
+
+          if(session()->has('current_url')){
+            return redirect(session('current_url'));
+          }else{
+            return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
+          }
+
+
       }else{
         $PinCode->verified = 0;
         $PinCode->save();
