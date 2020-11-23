@@ -12,12 +12,13 @@ class Operator extends Model {
         'name',
         'operator_image',
         'code',
-        'country_id'
+        'country_id',
+        'operator_name'
     ];
 
     public function country()
     {
-        return $this->belongsTo('App\Country') ; 
+        return $this->belongsTo('App\Country') ;
     }
 
 }

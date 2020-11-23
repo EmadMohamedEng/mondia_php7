@@ -166,7 +166,7 @@ if ($lang == 'ar') {
               <select class="mdb-select md-form form-control" name="operator" required>
                 <option value="" disabled selected>Choose your Operators</option>
                 @foreach($operators as $operator)
-                <option value="{{$operator->id}}">{{$operator->name}}</option>
+                <option value="{{$operator->operator_name}}">{{$operator->name}}</option>
                 @endforeach
               </select>
             </div>

@@ -166,19 +166,19 @@ class MbcTwoController extends Controller
       }
     session::put('lang', $lang);
 
-    return view('landing_v2.mbcTwo.timwe_landing', compact("lang",'country','operators'));
+    return view('landing_v2.mbcTwo.landing', compact("lang",'country','operators'));
   }
 
   public function pincode()
   {
     $lang =  session::get('lang');
-    return view('landing_v2.mbcTwo.timwe_pinCode', compact("lang"));
+    return view('landing_v2.mbcTwo.pinCode', compact("lang"));
   }
 
   public function unsubscribe()
   {
     $lang =  session::get('lang');
-    return view('landing_v2.mbcTwo.timwe_unsub', compact("lang"));
+    return view('landing_v2.mbcTwo.unsub', compact("lang"));
   }
 
   public function login(Request $request)
@@ -187,7 +187,7 @@ class MbcTwoController extends Controller
     $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
     $country = Country::where('title',$get_url_country)->first();
     $operators = Operator::where('country_id',$country->id)->get();
-    return view('landing_v2.mbcTwo.timwe_login', compact('lang','country','operators'));
+    return view('landing_v2.mbcTwo.login', compact('lang','country','operators'));
   }
 
   public function gen_uuid()
@@ -323,18 +323,20 @@ class MbcTwoController extends Controller
     }
 
     $msisdn = $request->code.$number ?? session()->get('Msisdn');
-    $operator = $request->operator ?? session()->get('operator_id');
+    $operator = $request->operator ?? session()->get('operator');
 
     Session::put('Msisdn', $msisdn);
-    Session::put('operator_id', $operator);
+    Session::put('operator', $operator);
 
     $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/pincode.aspx?Mobileno=$msisdn&OP=$operator";
 
     $response = $this->SendRequestGet($URL);
+    $request_type = 'Send Pincode';
 
     $send_massage = new ResponseSendMessage();
-    $send_massage->link = $URL;
+    $send_massage->request = $URL;
     $send_massage->response = $response;
+    $send_massage->request_type = $request_type;
     $send_massage->save();
 
     $lang =  session::get('lang');
@@ -358,14 +360,17 @@ class MbcTwoController extends Controller
 
     $pincode = $request->input('pincode');
     $msisdn = Session::get('Msisdn');
+    $operator = Session::get('operator');
 
-    $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/pincode.aspx?Mobileno=$msisdn&OP=$request->operator&PinCode=$pincode";
+    $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/pincode.aspx?Mobileno=$msisdn&OP=$operator&PinCode=$pincode";
 
     $response = $this->SendRequestGet($URL);
+    $request_type = 'Confirm Pincode';
 
     $send_massage = new ResponseSendMessage();
-    $send_massage->link = $URL;
+    $send_massage->request = $URL;
     $send_massage->response = $response;
+    $send_massage->request_type = $request_type;
     $send_massage->save();
 
     $lang =  session::get('lang');
