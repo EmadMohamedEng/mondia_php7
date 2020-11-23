@@ -163,8 +163,8 @@ Route::get('mbc_portal_login', 'MbcTwoController@login');
 Route::get('mbc_portal_pin', 'MbcTwoController@pincode');
 Route::get('mbc_portal_unsub', 'MbcTwoController@unsubscribe');
 Route::post('mbc_checkstatus', 'MbcTwoController@checkStatusLogin');
-Route::post('mbc_subscription/optin/{partnerRoleId}', 'MbcTwoController@subscriptionOptIn');
-Route::post('mbc_subscription/confirm/{partnerRoleId}', 'MbcTwoController@subscriptionConfirm');
+Route::post('mbc_subscription/optin', 'MbcTwoController@subscriptionOptIn');
+Route::post('mbc_subscription/confirm', 'MbcTwoController@subscriptionConfirm');
 Route::post('mbc_subscription/optout/{partnerRoleId}', 'MbcTwoController@subscriptionOptOut');
 Route::post('mbc_subscription_resend_pincode/optin/{partnerRoleId}', 'MbcTwoController@resend_pincode');
 
@@ -260,3 +260,5 @@ Route::get('timwe_test', function(){
 
 Route::get('copy_slider_from_mbc_to_orange', 'PostsController@copy_slider_from_mbc_to_orange');
 Route::get('remove_dublicate_posts', 'PostsController@remove_dublicate_posts');
+
+Route::get('send_pin_code', 'OrangeController@send_pin_code');

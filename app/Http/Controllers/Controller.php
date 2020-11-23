@@ -90,7 +90,7 @@ abstract class Controller extends BaseController
         return $sOutput;
     }
 
-    public function SendRequestGet($URL, $JSON, $headers)
+    public function SendRequestGet($URL, $JSON = null, $headers = null)
     {
         $ch = curl_init();
 
@@ -102,7 +102,9 @@ abstract class Controller extends BaseController
         curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        if($headers){
+          curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        }
 
         $sOutput = curl_exec($ch);
         curl_close($ch);

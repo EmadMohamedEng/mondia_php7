@@ -81,7 +81,7 @@ if ($lang == 'ar') {
       <div class="container py-3">
         <div class="form_content">
           <!--<h5>ادخل رقم الهاتف</h5>-->
-          {!! Form::open(['url'=>'mbc_subscription/confirm/'.partnerRoleId,'method'=>'post','class'=>'form']) !!}
+          {!! Form::open(['url'=>'mbc_subscription/confirm/','method'=>'post','class'=>'form']) !!}
           <div class="form-group">
             <input type="tel" style="font-family: cursive" name="pincode" class="form-control text-center w-100 rounded" id="pincode" placeholder="@lang('messages.confirmation_code')">
           </div>
@@ -96,7 +96,7 @@ if ($lang == 'ar') {
         </div>
       </div>
       <div class="cancel text-center py-4">
-        {!! Form::open(['url'=>'mbc_subscription_resend_pincode/optin/'.partnerRoleId,'method'=>'post','class'=>'form']) !!}
+        {!! Form::open(['url'=>'mbc_subscription/optin/','method'=>'post','class'=>'form']) !!}
         <div class="form-group">
           <input type="submit" id="reSendPin" class="border-0 rounded p-2 font-weight-bold mt-3 " value="@lang('messages.click_confirmation')">
         </div>

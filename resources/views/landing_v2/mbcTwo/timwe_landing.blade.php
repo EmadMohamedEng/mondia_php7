@@ -143,7 +143,7 @@ if ($lang == 'ar') {
       <div class="container p-0">
         <div class="form_content">
           <!--<h5>ادخل رقم الهاتف</h5>-->
-          <form method="post" action="{{url('mbc_subscription/optin/'.partnerRoleId)}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
+          <form method="post" action="{{url('mbc_subscription/optin/')}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
             {{ csrf_field() }}
 
             <div class="row m-0">

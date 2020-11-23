@@ -311,58 +311,34 @@ class MbcTwoController extends Controller
     return $ReqResponse;
   }
 
-  public function subscriptionOptIn(Request $request, $partnerRole) //register
+  public function subscriptionOptIn(Request $request) //register
   {
     date_default_timezone_set("Africa/Cairo");
     // format number
-    // dd($request);
+
     $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
     if($get_url_country == "Egypt"){
       $number = ltrim($request->number,"0");
       $number = ltrim($request->number,"20");
     }
-    $msisdn = $request->code.$number?? session('Msisdn');
-    //dd($msisdn);
-    // $msisdn = trim($msisdn,"+");
-    $service_id = 2;
-    $check = $this->checkStatus($msisdn, $service_id);
-    if ($check == "true") {
-    session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
 
-    if(session()->has('current_url')){
-      return redirect(session('current_url'));
-    }else{
-      return redirect(url('/?OpID=' . MBC_OP_ID));
-    }
+    $msisdn = $request->code.$number ?? session()->get('Msisdn');
+    $operator = $request->operator ?? session()->get('operator_id');
 
-    }
-      // create pincode
-    $random = mt_rand(1000, 9999);
-    $pincode_random = $random;
-    $pincode = new Pincode();
-    $pincode->msisdn = $msisdn;
-    $pincode->pincode = $pincode_random;
-    $date = Carbon::now()->format('Y-m-d H:i:s');
-    $pincode->expire_date_time = Carbon::parse($date)->addHour();
-    $pincode->operator_id = $request->operator;
-    $pincode->save();
     Session::put('Msisdn', $msisdn);
-    Session::put('operator_id', $request->operator);
-    //send massage
-    $URL = "http://mbc.mobc.com:8030/Alkanz_URL_IN/SMSIN.aspx?"."Mobileno=$msisdn&MsgBody=$pincode_random";
-    $ch = curl_init();
-    $timeout = 500;
-    curl_setopt($ch, CURLOPT_URL, $URL);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-    curl_setopt($ch, CURLOPT_POSTREDIR, 3);
-    $response = curl_exec($ch);
-    curl_close($ch);
+    Session::put('operator_id', $operator);
+
+    $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/pincode.aspx?Mobileno=$msisdn&OP=$operator";
+
+    $response = $this->SendRequestGet($URL);
+
     $send_massage = new ResponseSendMessage();
     $send_massage->link = $URL;
     $send_massage->response = $response;
     $send_massage->save();
+
     $lang =  session::get('lang');
+
     if ($response == "OK") {
       if ($lang == 'ar'){
         return redirect('mbc_portal_pin')->with('success', '!تم ارسال رمز التحقق');
@@ -379,46 +355,31 @@ class MbcTwoController extends Controller
   public function subscriptionConfirm(Request $request, $partnerRole) //pincode
   {
     date_default_timezone_set("Africa/Cairo");
+
     $pincode = $request->input('pincode');
     $msisdn = Session::get('Msisdn');
-    $service_id = 2;
-    $date = Carbon::now()->format('Y-m-d H:i:s');
-    //check pincode
+
+    $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/pincode.aspx?Mobileno=$msisdn&OP=$request->operator&PinCode=$pincode";
+
+    $response = $this->SendRequestGet($URL);
+
+    $send_massage = new ResponseSendMessage();
+    $send_massage->link = $URL;
+    $send_massage->response = $response;
+    $send_massage->save();
+
     $lang =  session::get('lang');
-    $PinCode = Pincode::where('msisdn', '=', $msisdn)->where('pincode', '=', $pincode)->orderBy('id', 'DESC')->first();
-    if ($PinCode) {
-      $expire_date_time= $PinCode->expire_date_time; /*"2020-07-05 17:28:19"*/
-      $now = Carbon::now()->format('Y-m-d H:i:s');/*"2020-07-05 16:30:00"*/
-      if ($now <= $expire_date_time) {
-        //make optn api
-        //add this number
-        $create_msisdn_for_mbc_server = $this->mbc_create_sub($msisdn, $service_id);
-        //set session and make redirect
-        session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-        $lang =  session::get('lang');
-          if ($lang == 'ar') {
-            $message = 'تم الاشتراك بنجاح';
-          } else {
-            $message = 'Subscribed succesfully';
-          }
-          $PinCode->verified = 1;
-          $PinCode->save();
 
-          if(session()->has('current_url')){
-            return redirect(session('current_url'));
-          }else{
-            return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
-          }
-
-
-      }else{
-        $PinCode->verified = 0;
-        $PinCode->save();
-        if ($lang == 'ar'){
-          return redirect('mbc_portal_pin')->with('failed', 'انتهاء وقت الكود برجاء ارسال الكود مره اخرى');
-        }
-        return redirect('mbc_portal_pin')->with('failed', 'Resend the pincode');
+    if ($response = 'Success') {
+      if ($lang == 'ar'){
+        return redirect('mbc_portal_pin')->with('success','!تم الاشتراك بنجاح! تم ارسال رابط الدخول');
       }
+      return redirect('mbc_portal_pin')->with('success','Subscribed successfully! we login url sent!');
+    }elseif($response = 'CodeHasExpired'){
+      if ($lang == 'ar'){
+        return redirect('mbc_portal_pin')->with('failed','يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');
+      }
+      return redirect('mbc_portal_pin')->with('failed','There is an error, please click to resend the pincode');
     }else{
       if ($lang == 'ar'){
         return redirect('mbc_portal_pin')->with('failed','خطأ في كود التفعيل برجاء ادخال كود التفعيل الصحيح');
