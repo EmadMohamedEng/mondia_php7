@@ -22,9 +22,7 @@
         "doctrine/dbal": "^2.5",
         "orangehill/iseed": "2.2",
         "maatwebsite/excel": "~2.1.0",
-        "intervention/image": "^2.4",
-        "spatie/laravel-backup": "^3.11",
-        "artisaninweb/laravel-soap": "0.3.0.9"
+        "intervention/image": "^2.4"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

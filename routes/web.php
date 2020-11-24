@@ -153,6 +153,11 @@ define('MBC_OP_ID', 14);
 Route::get('mbc_portal_logout', 'MbcController@logout');
 
 
+/***************start orange ****************** */
+Route::get('orange_portal_login', 'OrangeController@login');
+/***************end orange ****************** */
+
+
 /***************start mbc 2****************** */
 
 Route::get('get_country', 'MbcTwoController@get_country');
