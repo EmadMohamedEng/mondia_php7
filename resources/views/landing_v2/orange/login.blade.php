@@ -8,38 +8,29 @@
   <!--Mobile Meta-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>islamic landing page</title>
-  <link rel="stylesheet" href='{{url('front/stc')}}/css/bootstrap.min.css'>
-  <link rel="stylesheet" href='{{url('front/stc')}}/css/all.min.css'>
+  <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
-  <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_mbc_two.css">
+  <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/orange_login.css">
 </head>
-@php
-App::setLocale($lang);
-@endphp
+
 <style>
   .landing_page .form_content{
     width: 67%;
   }
-  .all_slect{
-    padding-right: 9%;
-    padding-left: 9%;
-    position: relative;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-}
 </style>
 <body>
   <div class="main_container pt-5">
     <div class="img-fluid text-center p-3">
-      <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
+      <img class="bounce-top" src='{{asset("front/images/orange.png")}}' alt='Logo'>
     </div>
 
     <div class="landing_page pt-5">
 
     <div class="landing_page">
       <div class="strip text-dark">
-        <h2>@lang('messages.enjoy_time_landing')</h2>
-        <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
+        <h2>Alkanz</h2>
+        <p class="best_features">Get the best features that interest a Muslim in his daily life</p>
       </div>
 
       <div class="shbka">
@@ -66,14 +57,14 @@ App::setLocale($lang);
       <div class="container">
         <div class="form_content">
           <!--<h5>ادخل رقم الهاتف</h5>-->
-          <form method="post" action="{{url('mbc_checkstatus')}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
+          <form method="post" action="#0" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
             {{ csrf_field() }}
 
             <div class="row m-0">
               <div class="col-3 p-0">
                 <div class="dropdown">
                   <button class="btn btn_select" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 <span style="font-weight: bold;">{{ $country->code }}</span>
+                 <span style="font-weight: bold;">012</span>
                   </button>
 
                 </div>
@@ -81,17 +72,9 @@ App::setLocale($lang);
 
               <div class="col-9 p-0">
                 <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-                <input type="hidden" name="code" value="{{ $country->code }}">
+                <input type="hidden" name="code" value="012">
                 <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>
-            </div>
-            <div class="all_slect">
-              <select class="mdb-select md-form form-control" name="operator" required>
-                <option value="" disabled selected>Choose your Operators</option>
-                @foreach($operators as $operator)
-                <option value="{{$operator->operator_name}}">{{$operator->name}}</option>
-                @endforeach
-              </select>
             </div>
           <!--<button class="btn back">رجوع</button>-->
             <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subsc')</button>
