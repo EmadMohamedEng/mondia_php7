@@ -13,4 +13,11 @@ class OrangeController extends Controller
 
     return view('landing_v2.orange.login');
   }
+
+  public function unsubscribe()
+  {
+    return view('landing_v2.orange.unsub');
+  }
+
+
 }
