@@ -912,7 +912,7 @@ $enable = get_setting('enable_testing');
                 </li>
                 @endif
 
-                @if ( request()->get("OpID") == mbc )
+                @if ( request()->get("OpID") == mbc || request()->get("OpID") == orange )
                 <li class="nav-item">
                   <a class="menuThree nav-link text-capitalize link_href" href="{{url('/profile')}}" style=" <?php echo $style ?>">
                     @lang('front.profile')

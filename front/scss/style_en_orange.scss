@@ -175,8 +175,10 @@ body {
 
       .menuThree {
         color: $text_color;
-        font-size: 18px;
+        font-size: 17px;
         text-indent: -5px;
+        cursor: pointer;
+
 
         &:focus,
         &:hover {
