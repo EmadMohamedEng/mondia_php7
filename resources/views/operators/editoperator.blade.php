@@ -53,7 +53,7 @@ Edit Operator
 
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 col-lg-2 control-label">Code <span class="text-danger">*</span></label>
+                    <label class="col-sm-3 col-lg-2 control-label">Code</label>
                     <div class="col-sm-9 col-lg-10 controls">
                         {!! Form::number("code", $operator->code ,['placeholder'=> "Code",'class'=>'form-control input-lg']) !!}
                     </div>

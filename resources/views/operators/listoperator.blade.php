@@ -20,9 +20,9 @@
                             <a class="btn btn-circle show-tooltip" title="" href="{{url('operators/create')}}" data-original-title="Add new record"><i class="fa fa-plus"></i></a>
                              <?php
                                 $table_name = "operators";
-                              
+
                                 ?>
-                                @include('partial.delete_all') 
+                                @include('partial.delete_all')
                         </div>
                     </div>
                     <br><br>
@@ -35,6 +35,7 @@
                     <th>Operator Name</th>
                     <th>Country</th>
                     <th>Image</th>
+                    <th>Operator Name</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -47,7 +48,8 @@
                         <td>{{$operator->country->title}}</td>
                         <td>
                             <img src="{{$operator->operator_image}}" class="img-circle" width="160px" height="160px">
-                        </td>                    
+                        </td>
+                        <td>{{$operator->operator_name}}</td>
                         <td class="visible-md visible-lg">
                             <div class="btn-group">
                                  <a class="btn btn-sm show-tooltip" title="" href="{{url("operators/$operator->id/edit")}}" data-original-title="Edit"><i class="fa fa-edit"></i></a>
