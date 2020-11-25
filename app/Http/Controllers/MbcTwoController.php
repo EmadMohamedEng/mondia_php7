@@ -156,6 +156,7 @@ class MbcTwoController extends Controller
   {
 
     $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
+    $get_url_country = "KSA";  // KSA  -   Egypt  - Kuwait  - United Arab Emirates
     $country = Country::where('title',$get_url_country)->first();
     $operators = Operator::where('country_id',$country->id)->get();
     // dd($operators);
@@ -315,18 +316,29 @@ class MbcTwoController extends Controller
   {
     date_default_timezone_set("Africa/Cairo");
     // format number
-
     $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
+    $get_url_country = "KSA";  // KSA  -   Egypt  - Kuwait  - United Arab Emirates
+    $number = "";
     if($get_url_country == "Egypt"){
+     if(isset($request->number)) {
       $number = ltrim($request->number,"0");
       $number = ltrim($request->number,"20");
+     }
+    }else{
+      if(isset($request->number)) {
+        $number = $request->number ;
+      }else{
+        $number = "" ;
+      }
+
     }
 
-    $msisdn = $request->code.$number ?? session()->get('Msisdn');
+    $msisdn = $request->code ?  $request->code.$number : session()->get('Msisdn');
     $operator = $request->operator ?? session()->get('operator');
 
     Session::put('Msisdn', $msisdn);
     Session::put('operator', $operator);
+
 
     $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/pincode.aspx?Mobileno=$msisdn&OP=$operator";
 
@@ -354,7 +366,7 @@ class MbcTwoController extends Controller
     }
   }
 
-  public function subscriptionConfirm(Request $request, $partnerRole) //pincode
+  public function subscriptionConfirm(Request $request) //pincode
   {
     date_default_timezone_set("Africa/Cairo");
 
@@ -362,7 +374,8 @@ class MbcTwoController extends Controller
     $msisdn = Session::get('Msisdn');
     $operator = Session::get('operator');
 
-    $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/pincode.aspx?Mobileno=$msisdn&OP=$operator&PinCode=$pincode";
+    $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/Confirm.aspx?Mobileno=$msisdn&OP=$operator&PinCode=$pincode";
+
 
     $response = $this->SendRequestGet($URL);
     $request_type = 'Confirm Pincode';
@@ -375,11 +388,11 @@ class MbcTwoController extends Controller
 
     $lang =  session::get('lang');
 
-    if ($response = 'Success') {
+    if ($response == 'Success') {
       if ($lang == 'ar'){
-        return redirect('mbc_portal_pin')->with('success','!تم الاشتراك بنجاح! تم ارسال رابط الدخول');
+        return redirect('mbc_portal_pin')->with('success','تم الاشتراك بنجاح وارسال رابط الدخول لجوالك');
       }
-      return redirect('mbc_portal_pin')->with('success','Subscribed successfully! we login url sent!');
+      return redirect('mbc_portal_pin')->with('success','Subscribed successfully and login url is dent to your phone');
     }elseif($response = 'CodeHasExpired'){
       if ($lang == 'ar'){
         return redirect('mbc_portal_pin')->with('failed','يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');
