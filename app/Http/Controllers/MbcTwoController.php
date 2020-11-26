@@ -7,6 +7,7 @@ use SoapClient;
 use App\MbcSendMt;
 use App\MbcNotification;
 use App\Operator;
+use App\Video;
 use Illuminate\Http\Request;
 use Artisaninweb\SoapWrapper\SoapWrapper;
 use Illuminate\Support\Facades\Validator;
@@ -186,6 +187,7 @@ class MbcTwoController extends Controller
   {
     $lang =  session::get('lang');
     $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
+    $get_url_country = "KSA";  // KSA  -   Egypt  - Kuwait  - United Arab Emirates
     $country = Country::where('title',$get_url_country)->first();
     $operators = Operator::where('country_id',$country->id)->get();
     return view('landing_v2.mbcTwo.login', compact('lang','country','operators'));
@@ -340,6 +342,25 @@ class MbcTwoController extends Controller
     Session::put('operator', $operator);
 
 
+
+ // check user status
+    $service_id = 2;
+    $check = $this->checkStatus($msisdn, $service_id);
+
+    if ($check == "true") {
+      session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+      $lang =  session::get('lang');
+      if ($lang == 'ar') {
+        $message = 'تم تسجيل الدخول بنجاح';
+      } else {
+        $message = 'Login succesfully';
+      }
+      return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
+
+    }
+
+
+
     $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/pincode.aspx?Mobileno=$msisdn&OP=$operator";
 
     $response = $this->SendRequestGet($URL);
@@ -468,10 +489,20 @@ class MbcTwoController extends Controller
   public function checkStatusLogin(Request $request)
   {
     $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
+    $get_url_country = "KSA";  // KSA  -   Egypt  - Kuwait  - United Arab Emirates
     if($get_url_country == "Egypt"){
-      $number = ltrim($request->number,"0");
-      $number = ltrim($request->number,"20");
-    }
+      if(isset($request->number)) {
+       $number = ltrim($request->number,"0");
+       $number = ltrim($request->number,"20");
+      }
+     }else{
+       if(isset($request->number)) {
+         $number = $request->number ;
+       }else{
+         $number = "" ;
+       }
+
+     }
     $msisdn = $request->code.$number;
     // $msisdn = str_replace("200","20",$msisdn);
     // $msisdn = str_replace("2020","20",$msisdn);
@@ -492,6 +523,7 @@ class MbcTwoController extends Controller
         $message = 'Login succesfully';
       }
       return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
+
     } else {
       $lang =  session::get('lang');
       if ($lang == 'ar') {
