@@ -19,6 +19,7 @@ use App\TimWe;
 use App\timweUnsubscriber;
 use App\timweSubscriber;
 use App\Pincode;
+use App\ResendPincode;
 use App\ResponseSendMessage;
 use Carbon\Carbon;
 
@@ -316,6 +317,7 @@ class MbcTwoController extends Controller
 
   public function subscriptionOptIn(Request $request) //register
   {
+    // dd("omar");
     date_default_timezone_set("Africa/Cairo");
     // format number
     $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
@@ -358,11 +360,25 @@ class MbcTwoController extends Controller
       return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
 
     }
+    $lang =  session::get('lang');
+      $resend_pincode = ResendPincode::where('msisdn',$msisdn)->where('date',date('Y-m-d'))->first();
+      if ($resend_pincode && $resend_pincode->count == 3) {
+        if ($lang == 'ar'){
+          return redirect('mbc_portal_landing')->with('failed', 'لقد تم تجاوز الحد الاقصي لمحاولات اعاده ارسال  كود التحقق');
+        }
+        return redirect('mbc_portal_landing')->with('failed', 'The maximum number of retries to resend the verification code has been exceeded
+        ');
+      }elseif($resend_pincode && $resend_pincode->count < 3){
+        $resend_pincode->count = $resend_pincode->count +1;
+      }else{
+        $resend_pincode = new ResendPincode;
+        $resend_pincode->msisdn = $msisdn;
+        $resend_pincode->count = 1;
+        $resend_pincode->date = Carbon::now()->format('Y-m-d');
+      }
+      $resend_pincode->save();
 
-
-
-    $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/pincode.aspx?Mobileno=$msisdn&OP=$operator";
-
+     $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/pincode.aspx?Mobileno=$msisdn&OP=$operator";
     $response = $this->SendRequestGet($URL);
     $request_type = 'Send Pincode';
 
@@ -372,7 +388,8 @@ class MbcTwoController extends Controller
     $send_massage->request_type = $request_type;
     $send_massage->save();
 
-    $lang =  session::get('lang');
+
+
 
     if ($response == "OK") {
       if ($lang == 'ar'){
@@ -396,7 +413,6 @@ class MbcTwoController extends Controller
     $operator = Session::get('operator');
 
     $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/Confirm.aspx?Mobileno=$msisdn&OP=$operator&PinCode=$pincode";
-
 
     $response = $this->SendRequestGet($URL);
     $request_type = 'Confirm Pincode';
@@ -550,6 +566,8 @@ class MbcTwoController extends Controller
     $pincode->operator_id = Session::get('operator_id');
     $pincode->save();
     Session::put('Msisdn', $msisdn);
+    // $resend_pincode = ResendPincode::where('msisdn',$msisdn)->first();
+    // dd($resend_pincode);
     //send massage
     $URL = "http://mbc.mobc.com:8030/Alkanz_URL_IN/SMSIN.aspx?"."Mobileno=$msisdn&MsgBody=$pincode_random";
     $ch = curl_init();
