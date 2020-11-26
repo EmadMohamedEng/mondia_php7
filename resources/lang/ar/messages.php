@@ -45,6 +45,7 @@ return [
     'confirmation_code' => 'أدخل رمز التأكيد',
     'confirmation' => 'تاكيد',
     'unsubscribe' => 'الغاء الاشتراك',
+    'orange_elker' => 'اورنج الخير',
     'click_confirmation' => 'اضغط لارسال رمز التاكيد مرة اخري',
     'roles' => [
         'edit-role' => 'تعديل الدور',

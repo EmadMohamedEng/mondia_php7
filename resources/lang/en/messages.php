@@ -34,7 +34,7 @@ return [
     'enjoy_time' => 'Enjoy your time with the service',
     'Muslim_guide' => 'Muslim guide',
     'Mbc_Muslim_guide' => 'Alkanz',
-    'Subscribe_Now' => 'Subscribe Now',
+    'Subscribe_Now' => 'Subscribe',
     'Enter_your' => 'Enter your mobile phone',
     'subscription_Riyals' => 'The Subscription 10 Riyals / Week',
     'Subsc' => 'Subscribe',
@@ -47,6 +47,7 @@ return [
     'confirmation_code' => 'Enter the confirmation code',
     'confirmation' => 'Confirm',
     'unsubscribe' => 'Unsubscribe',
+    'orange_elker' => 'Orange Al Kheer',
     'click_confirmation' => 'Click to send the confirm code again',
 
     'roles' => [

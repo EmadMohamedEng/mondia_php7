@@ -34,13 +34,13 @@
     <div class="landing_page">
 
       <div class="strip text-dark">
-        <h2>Alkanz</h2>
-        <p class="best_features">Get the best features that interest a Muslim in his daily life</p>
+      <h2>@lang('messages.orange_elker')</h2>
+        <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
       </div>
 
       <div class="shbka">
         <div class="container">
-          <h3 class="">Unsubscribe</h3>
+          <h3 class="">@lang('messages.unsubscribe')</h3>
           <div class="zain_viva">
             @if(Session::has('success'))
             <div class="alert alert-success alert-dismissible">
@@ -79,7 +79,7 @@
               <div class="col-9 p-0">
                 <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
                 <input type="hidden" name="code" value="012">
-                <input type="tel" class="form-control show_class" @if(session()->has('userIdentifier')) @endif id="phone" placeholder="Enter your mobile phone" name="number" required>
+                <input type="tel" class="form-control show_class" @if(session()->has('userIdentifier')) @endif id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>
             </div>
 
