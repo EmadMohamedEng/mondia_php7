@@ -14,11 +14,29 @@
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/orange_login.css">
 </head>
 
+@php
+App::setLocale($lang);
+@endphp
+<?php
+if ($lang == 'ar') {
+  $text = "text-right";
+  $left = "rtl";
+  $bottom = "bottom: 0%;";
+  $font = "font-size: 20px;";
+  $float = "float-left";
+} else {
+  $text = "text-left";
+  $left = "ltr";
+  $font = "font-size: 16px;";
+  $float = "float-right";
+}
+?>
+
 <body>
   <div class="main_container">
     <div class="row m-0">
       <div class="col-5 p-0">
-        <input type="checkbox" id="on-off" name="on-off" onclick="toggle_lang()" class="switch-input">
+        <input type="checkbox" id="on-off" name="on-off" onclick="toggle_lang()" class="switch-input" class="switch-input" {{ $lang == 'ar' ? 'checked' : '' }}>
         <label for="on-off" class="switch-label">
           <span class="toggle--on toggle--option">EN</span>
           <span class="toggle--off toggle--option">AR</span>
@@ -35,8 +53,8 @@
     <div class="landing_page pt-5">
       <div class="landing_page">
         <div class="strip text-dark">
-          <h2>Alkanz</h2>
-          <p class="best_features">Get the best features that interest a Muslim in his daily life</p>
+          <h2>@lang('messages.orange_elker')</h2>
+          <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
         </div>
 
         <div class="shbka">
@@ -87,7 +105,7 @@
             </form>
 
             <div class="unsub_cancle">
-              <a href="{{url('/orange_portal_unsub')}}">Unsubscribe</a>
+              <a href="{{url('/orange_portal_unsub')}}">@lang('messages.unsubscribe')</a>
             </div>
             <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
                 <h5>الى <span>965</span><span> STOP1 </span>لالغاء الاشتراك ارسل</h5>-->
@@ -128,6 +146,17 @@
       $('.select_option').click(function(e) {
         document.getElementById("phone").value = e.target.id
       })
+
+      function toggle_lang() {
+      const checkbox = document.getElementById("on-off");
+      checkbox.addEventListener('change', (event) => {
+        if (event.target.checked) {
+          location.href = "{{url('lang/ar')}}";
+        } else {
+          location.href = "{{url('lang/en')}}";
+        }
+      })
+    }
     </script>
 
 </body>
