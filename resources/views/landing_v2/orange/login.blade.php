@@ -14,20 +14,25 @@
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/orange_login.css">
 </head>
 
-<style>
-  .landing_page .form_content {
-    width: 67%;
-  }
-</style>
-
 <body>
-  <div class="main_container pt-5">
-    <div class="img-fluid text-center p-3">
-      <img class="bounce-top" src='{{asset("front/images/orange.png")}}' alt='Logo'>
+  <div class="main_container">
+    <div class="row m-0">
+      <div class="col-5 p-0">
+        <input type="checkbox" id="on-off" name="on-off" onclick="toggle_lang()" class="switch-input">
+        <label for="on-off" class="switch-label">
+          <span class="toggle--on toggle--option">EN</span>
+          <span class="toggle--off toggle--option">AR</span>
+        </label>
+      </div>
+
+      <div class="col-7 p-0">
+        <div class="img-fluid text-left">
+          <img class="bounce-top" src='{{asset("front/images/orange.png")}}' alt='Logo'>
+        </div>
+      </div>
     </div>
 
     <div class="landing_page pt-5">
-
       <div class="landing_page">
         <div class="strip text-dark">
           <h2>Alkanz</h2>
@@ -80,6 +85,10 @@
               <!--<button class="btn back">رجوع</button>-->
               <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subsc')</button>
             </form>
+
+            <div class="unsub_cancle">
+              <a href="{{url('/orange_portal_unsub')}}">Unsubscribe</a>
+            </div>
             <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
                 <h5>الى <span>965</span><span> STOP1 </span>لالغاء الاشتراك ارسل</h5>-->
           </div>
