@@ -16,21 +16,11 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_mbc_two.css">
-
-
 </head>
 
 <style>
-  /* .main_container {
-    position: unset !important;
-    overflow-y: hidden !important;
-  } */
-
   .main_container .landing_page {
     margin-top: 0;
-  }
-  .landing_page .form_content{
-    width: 67%;
   }
 
   .switch-label:before,
