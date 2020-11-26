@@ -167,7 +167,7 @@ if ($lang == 'ar') {
               <input type="tel" class="form-control" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
             </div> -->
 
-        <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subscribe_Now') </button>
+        <button id="zain_submit" class="btn text-capitalize" type="submit">@lang('messages.Subscribe_Now')</button>
         </form>
         <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
                 <h5>الى <span>965</span><span> STOP1 </span>لالغاء الاشتراك ارسل</h5>-->
