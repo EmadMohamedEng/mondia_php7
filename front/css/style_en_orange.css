@@ -263,6 +263,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0.5;
 }
 .main_container .list_page .item .card .owl_content_img .content_free {
   background: #FF6600;

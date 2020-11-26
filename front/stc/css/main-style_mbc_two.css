@@ -5,7 +5,7 @@
   background-size: cover;
   background-attachment: fixed;
   position: fixed;
-  overflow-y: scroll;
+  overflow-y: hidden;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -24,6 +24,16 @@
   padding: 0 3%;
 }
 
+.all_slect{
+  padding-right: 9%;
+  padding-left: 9%;
+  position: relative;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-align-last: center;
+}
+
 .div_size {
   margin-bottom: 10% !important;
 }
@@ -35,6 +45,10 @@
 .landing_page .shbka h3 {
   color: #e0c26c !important;
   font-size: 1.25rem;
+}
+
+.landing_page .form_content{
+  width: 85%;
 }
 
 .landing_page .form_content form .form-group label {

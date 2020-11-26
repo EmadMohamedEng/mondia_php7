@@ -14,12 +14,6 @@
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/orange_login.css">
 </head>
 
-<style>
-  .landing_page .form_content {
-    width: 67%;
-  }
-</style>
-
 <body>
   <div class="main_container pt-5">
     <div class="img-fluid text-center p-3">
@@ -80,6 +74,10 @@
               <!--<button class="btn back">رجوع</button>-->
               <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subsc')</button>
             </form>
+
+            <div class="unsub_cancle">
+              <a href="{{url('/orange_portal_unsub')}}">لالغاء الاشتراك</a>
+            </div>
             <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
                 <h5>الى <span>965</span><span> STOP1 </span>لالغاء الاشتراك ارسل</h5>-->
           </div>

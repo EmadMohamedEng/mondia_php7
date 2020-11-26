@@ -8,26 +8,15 @@
   <!--Mobile Meta-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>islamic landing page</title>
-  <link rel="stylesheet" href='{{url('front/stc')}}/css/bootstrap.min.css'>
-  <link rel="stylesheet" href='{{url('front/stc')}}/css/all.min.css'>
+  <link rel="stylesheet" href="{{asset('front/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_mbc_two.css">
 </head>
 @php
 App::setLocale($lang);
 @endphp
-<style>
-  .landing_page .form_content{
-    width: 67%;
-  }
-  .all_slect{
-    padding-right: 9%;
-    padding-left: 9%;
-    position: relative;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-</style>
+
 <body>
   <div class="main_container pt-5">
     <div class="img-fluid text-center p-3">

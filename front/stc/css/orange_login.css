@@ -38,6 +38,10 @@
   font-size: 1.25rem;
 }
 
+.landing_page .form_content {
+  width: 85%;
+}
+
 .landing_page .form_content form .form-group label {
   padding: 6.5px;
   background: #FF6600;
@@ -54,6 +58,7 @@
 .landing_page .form_content form .form-group input:focus {
   box-shadow: 0 0 0 0.2rem #fff;
 }
+
 .landing_page .cancel #reSendPin {
   background: #FF6600;
 }
@@ -70,11 +75,6 @@
   width: 65%;
   background: #FF6600;
   color: #FFF;
-}
-
-.landing_page .form_content form .btn:hover,
-.landing_page .form_content form .btn:focus {
-  box-shadow: 0 0 0 0.2rem rgb(255 255 255);
 }
 
 .landing_page .form_content form .btn_select {
@@ -113,10 +113,11 @@
   border-top-left-radius: 0;
 }
 
-.landing_page .form_content form #phone:focus {
+.landing_page .form_content form #phone:focus,
+.landing_page .form_content form #phone:hover {
   border-color: #000;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem #fff;
+  box-shadow: 0 0 0 0.2rem #FF6600;
 }
 
 .Are_you_a_subscriber {
@@ -148,6 +149,22 @@ a:hover {
 .terms {
   font-size: 0.7rem;
   color: #FF6600;
+}
+
+.unsub_cancle {
+  text-align: center;
+  margin-top: 12%;
+}
+
+.unsub_cancle a {
+  color: #FFF;
+  border-bottom: 1px solid #FF6600;
+  padding-bottom: 1.75%;
+}
+
+.unsub_cancle a:hover {
+  color: #FF6600;
+  border-bottom: 1px solid #FFF;
 }
 
 @media (min-width: 768px) and (max-width: 1024.9px) {
@@ -296,8 +313,3 @@ a:hover {
     opacity: 1;
   }
 }
-
-
-
-
-
