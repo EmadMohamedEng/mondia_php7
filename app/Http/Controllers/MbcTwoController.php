@@ -381,9 +381,9 @@ class MbcTwoController extends Controller
       return redirect('mbc_portal_pin')->with('success', 'Pincode Sent!');
     } else {
       if ($lang == 'ar'){
-        return redirect('mbc_portal_pin')->with('failed', 'يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');
+        return redirect('mbc_portal_landing')->with('failed', 'يوجد خطأ');
       }
-      return redirect('mbc_portal_pin')->with('failed', 'There is an error, please click to resend the verification code');
+      return redirect('mbc_portal_landing')->with('failed', 'There is an error');
     }
   }
 
