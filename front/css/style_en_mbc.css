@@ -610,6 +610,47 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.main_container .inner_filter .card {
+  background: #0f1218;
+  border: 1px solid #efc049;
+  margin-bottom: 15%;
+}
+.main_container .inner_filter .card .owl_content_img {
+  position: relative;
+}
+.main_container .inner_filter .card .card-body {
+  background-color: #0f1218;
+  color: #efc049;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main_container .inner_filter .card .card-body .card-title {
+  text-align: center;
+  font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main_container .inner_filter .inner_filter_btn .btn_download,
+.main_container .inner_filter .inner_filter_btn .btn_share {
+  color: #efc049;
+  border-color: #efc049;
+  margin-bottom: 10%;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.main_container .inner_filter .inner_filter_btn .btn_download:hover, .main_container .inner_filter .inner_filter_btn .btn_download:focus,
+.main_container .inner_filter .inner_filter_btn .btn_share:hover,
+.main_container .inner_filter .inner_filter_btn .btn_share:focus {
+  box-shadow: 0 0 0 0.2rem white;
+  color: #FFF;
+  background-color: #efc049;
+  border-color: #efc049;
+}
 
 .loading-overlay .spinner-blue {
   border-top-color: #efc049 !important;
