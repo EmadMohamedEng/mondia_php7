@@ -54,6 +54,8 @@ body {
   /* End Profile Page */
   /* Start Terms Page */
   /* End Terms Page */
+  /* Start MBC Filter */
+  /* End MBC Filter */
 }
 .main_container .header {
   position: unset !important;
@@ -586,6 +588,27 @@ body {
 .main_container .terms_page .ul_terms {
   font-size: 0.85rem !important;
   color: #efc049 !important;
+}
+.main_container .list_filter .card {
+  background: #0f1218;
+  border: 1px solid #efc049;
+  margin-bottom: 15%;
+}
+.main_container .list_filter .card .owl_content_img {
+  position: relative;
+}
+.main_container .list_filter .card .card-body {
+  background-color: #0f1218;
+  color: #efc049;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main_container .list_filter .card .card-body .card-title {
+  text-align: center;
+  font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .loading-overlay .spinner-blue {

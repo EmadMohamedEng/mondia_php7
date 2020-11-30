@@ -709,4 +709,15 @@ class MbcTwoController extends Controller
         return $data;
     }
 
+
+    public function mbc_filter_list()
+  {
+    return view('front.mbc_filter.list');
+  }
+
+    public function mbc_filter_inner()
+  {
+    return view('front.mbc_filter.inner');
+  }
+
 }

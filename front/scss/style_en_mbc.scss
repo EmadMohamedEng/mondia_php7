@@ -1015,6 +1015,38 @@ body {
   }
 
   /* End Terms Page */
+
+  /* Start MBC Filter */
+  .list_filter {
+    .card {
+      background: #0f1218;
+      border: 1px solid $text_color;
+      margin-bottom: 15%;
+
+      .owl_content_img {
+        position: relative;
+
+        img {}
+      }
+
+      .card-body {
+        background-color: $bg_color2;
+        color: $text_color;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        .card-title {
+          text-align: center;
+          font-size: 1.05rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+  /* End MBC Filter */
 }
 
 .loading-overlay {
@@ -2521,7 +2553,8 @@ body {
 
     .navbar_three {
       background: transparent !important;
-      display: none;;
+      display: none;
+      ;
     }
 
     .nav_nav {
@@ -3030,7 +3063,7 @@ body {
         font-size: 1.75rem;
 
         .dropdown-menu2 {
-          right: 0 ;
+          right: 0;
           left: 52%;
           width: 0;
           font-size: 1.75rem;

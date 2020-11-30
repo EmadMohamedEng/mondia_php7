@@ -12,6 +12,11 @@ $(document).on('click', '.back', function () {
   parent.history.back();
 });
 
+$('.star').on('change', function() {
+  let stars = $(this).val();
+  /* Make an AJAX call to register the rating */
+});
+
 $(window).on('load', function () {
   'use strict';
   $('.loading-overlay .spinner').fadeOut(500, function () {
