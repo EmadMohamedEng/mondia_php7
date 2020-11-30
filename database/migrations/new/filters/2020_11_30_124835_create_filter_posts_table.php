@@ -20,6 +20,10 @@ class CreateFilterPostsTable extends Migration
             $table->date('published_date')->nullable();
             $table->timestamps();
         });
+        \DB::statement("ALTER TABLE `filter_posts` CHANGE `filter_id` `filter_id` BIGINT(20) NOT NULL;");
+        \DB::statement("ALTER TABLE `filter_posts` ADD CONSTRAINT `filter_posts_on_filter` FOREIGN KEY (`filter_id`) REFERENCES `filters`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;");
+        \DB::statement("ALTER TABLE `filter_posts` ADD CONSTRAINT `operator_on_filters` FOREIGN KEY (`operator_id`) REFERENCES `operators`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;");
+
     }
 
     /**
