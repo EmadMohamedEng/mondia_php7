@@ -76,7 +76,7 @@ App::setLocale($lang);
             </div>
             <div class="all_slect">
               <select class="mdb-select md-form form-control" name="operator" required>
-                <option value="" disabled selected>Choose your Operators</option>
+                <option value="" disabled selected>@lang('messages.Choose_your_Operators')</option>
                 @foreach($operators as $operator)
                 <option value="{{$operator->operator_name}}">{{ $operator->name  == "mbc"?  "Mobily" :   $operator->name }}</option>
                 @endforeach

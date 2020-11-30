@@ -154,7 +154,7 @@ if ($lang == 'ar') {
             </div>
             <div class="all_slect">
               <select class="mdb-select md-form form-control" name="operator" required>
-                <option value="" disabled selected>Choose your Operators</option>
+                <option value="" disabled selected>@lang('messages.Choose_your_Operators')</option>
                 @foreach($operators as $operator)
                 <option value="{{$operator->operator_name}}">{{ $operator->name  == "mbc"?  "Mobily" :   $operator->name }}</option>
                 @endforeach
@@ -178,7 +178,7 @@ if ($lang == 'ar') {
       <a href="{{url('mbc_portal_login' )}}" class="Are_you_a_subscriber">
         <p>@lang('messages.Are_you_a_subscriber')</p>
       </a>
-      <p style="font-size: 9px;">@lang('messages.click_sub_landing')</p>
+      <!-- <p style="font-size: 9px;">@lang('messages.click_sub_landing')</p> -->
       {{-- <p>@lang('messages.unsubscribelink') <a href="{{url('mbc_portal_unsub' )}}">@lang('messages.Link')</a></p> --}}
 
     </div>

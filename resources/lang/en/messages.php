@@ -244,5 +244,6 @@ return [
     'Mbc_Muslim_guide_landing' => 'Get the best features that interest a Muslim in his daily life',
     'Are_you_a_subscriber' => 'Existing subscriber? Login',
     'click_sub_landing' => 'By clicking on Subscribe now, you agree to the terms and conditions',
+    'Choose_your_Operators' => 'Choose your Operators',
 
 ];

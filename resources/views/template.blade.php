@@ -450,6 +450,23 @@ if (Config::get('languages')[App::getLocale()] == "English") {
                             <!-- END Submenu -->
                         </li>
                     </ul>
+
+                    <ul class="nav nav-list">
+                        <li id="filters">
+                            <a href="#" class="dropdown-toggle">
+                                <i class="glyphicon glyphicon-sound-stereo"></i>
+                                <span>Filters</span>
+                                <b class="arrow fa fa-angle-right"></b>
+                            </a>
+                            <!-- BEGIN Submenu -->
+                            <ul class="submenu">
+                                <li id="filters-index"><a href="{{url('filters')}}">List Filters</a></li>
+                                <li id="filter_posts-index"><a href="{{url('filter_posts')}}">List Filter Posts</a></li>
+
+                            </ul>
+                            <!-- END Submenu -->
+                        </li>
+                    </ul>
                     {{--@endif--}}
                 </ul>
                 <!-- END Navlist -->
