@@ -589,6 +589,9 @@ body {
   font-size: 0.85rem !important;
   color: #efc049 !important;
 }
+.main_container .list_filter .card_title h6 {
+  color: #efc049;
+}
 .main_container .list_filter .card {
   background: #0f1218;
   border: 1px solid #efc049;

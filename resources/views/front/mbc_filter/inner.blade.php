@@ -12,6 +12,8 @@ $menu = provider_menu();
   <div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
     @endif
 
+    @include('front.search')
+
     <section class="inner_filter mt-5">
       <div class="container">
         <div class="row">
