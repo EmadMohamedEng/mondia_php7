@@ -190,7 +190,7 @@ class ServicesController extends Controller {
 
       return 'ok';
     }
-    public function export() 
+    public function export()
     {
         return Excel::download(new ServicesExport, 'Services.xlsx');
     }

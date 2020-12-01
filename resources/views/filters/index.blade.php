@@ -47,9 +47,12 @@
                                           <li> <b>{{$language->title}} :</b> {{$value->getTranslation('title',$language->short_code)}}</li>
                                           @endforeach
                                         </td>
-                                        <td>{{$value->link}}</td>
                                         <td>
-                                            <img class=" img-circle" width="100px" src="{{$value->image}}"/>
+                                          <a href="{{$value->link}}" target="_blank">{{$value->link}}</a>
+
+                                        </td>
+                                        <td>
+                                            <img class=" img-circle" width="100px" src="{{url('uploads/filters/'.$value->image)}}"/>
                                         </td>
                                         <td class="visible-md visible-lg">
                                             <div class="btn-group">

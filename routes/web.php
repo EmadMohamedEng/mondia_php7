@@ -176,6 +176,10 @@ Route::post('mbc_subscription_resend_pincode/optin/{partnerRoleId}', 'MbcTwoCont
 
 /***************end mbc 2****************** */
 
+/***************start mbc filter ****************** */
+Route::get('mbc_filter_list', 'MbcTwoController@mbc_filter_list');
+Route::get('mbc_filter_inner', 'MbcTwoController@mbc_filter_inner');
+/***************end mbc filter ****************** */
 
 
 //Timwe Api
