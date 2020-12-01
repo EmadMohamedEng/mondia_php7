@@ -108,8 +108,6 @@ body {
 
   /* End Header */
 
-
-
   /* Start Home Page */
   .img_carousel {
     .owl_one {
@@ -186,8 +184,6 @@ body {
   }
 
   /* End List Page */
-
-
   .list_page {
     .content_carousel_head {
       text-align: right;
@@ -449,6 +445,194 @@ body {
   }
 
   /* End Profile Page */
+
+  /* Start MBC Filter */
+  .list_filter {
+    .card_title {
+      h6 {
+        text-align: right;
+      }
+    }
+
+    .card {
+      background: #0f1218;
+      margin-bottom: 15%;
+
+      .owl_content_img {
+        position: relative;
+
+        img {}
+      }
+
+      .card-body {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        .card-title {
+          text-align: center;
+          font-size: 1.05rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+  .inner_filter {
+    .card {
+      margin-bottom: 15%;
+
+      .owl_content_img {
+        position: relative;
+
+        img {}
+      }
+
+      .card-body {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        .card-title {
+          text-align: center;
+          font-size: 1.05rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    .inner_filter_btn {
+
+      .btn_download,
+      .btn_share {
+        margin-bottom: 10%;
+        font-size: 1.25rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+
+        &:focus {}
+
+        &:hover,
+        &:focus {
+
+        }
+      }
+    }
+  }
+
+  #modalShare {
+    direction: ltr;
+
+    .modal-dialog {
+      .modal-content {
+
+
+        .modal-header {
+
+          .close {
+            opacity: 1;
+
+            &:focus {
+              outline: 0;
+            }
+          }
+        }
+
+        .modal-body {
+          .social-icon {
+            a {
+              margin: 0 .5em;
+              border: 1px solid transparent;
+              width: 35px;
+              height: 35px;
+              display: inline-block;
+              text-align: center;
+              line-height: 2.4em;
+              position: relative;
+              z-index: 999;
+              transition: .5s all ease-in-out;
+              -webkit-transition: .5s all ease-in-out;
+              -moz-transition: .5s all ease-in-out;
+              -ms-transition: .5s all ease-in-out;
+              -o-transition: .5s all ease-in-out;
+
+              &:before {
+                content: '';
+                display: block;
+                height: 35px;
+                width: 35px;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                position: absolute;
+                z-index: -1;
+                transition: .5s all ease-in-out;
+                -webkit-transition: .5s all ease-in-out;
+                -moz-transition: .5s all ease-in-out;
+                -ms-transition: .5s all ease-in-out;
+                -o-transition: .5s all ease-in-out;
+              }
+
+              &.facebook:hover {
+
+
+                &:before {
+
+                }
+              }
+
+              &.twitter:hover {
+
+
+                &:before {
+
+                }
+              }
+
+              &.linkedin:hover {
+
+
+                &:before {
+
+                }
+              }
+
+              &.pinterest:hover {
+
+                &:before {
+                }
+              }
+
+              &:hover:before {
+              }
+
+              i {
+              }
+            }
+          }
+        }
+
+        .modal-footer {
+          justify-content: flex-end;
+
+          .btnClose {
+            &:hover,
+            &:focus {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* End MBC Filter */
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {

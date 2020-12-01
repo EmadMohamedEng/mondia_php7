@@ -27,6 +27,8 @@ body {
   /* End Sebha Page */
   /* Start Profile Page */
   /* End Profile Page */
+  /* Start MBC Filter */
+  /* End MBC Filter */
 }
 .main_container .header .header_logo.header_logo,
 .main_container .header .header_icon.header_logo {
@@ -213,7 +215,100 @@ body {
 .main_container .profile .profile_table table tbody tr .label-view2 {
   text-align: right;
 }
-
+.main_container .list_filter .card_title h6 {
+  text-align: right;
+}
+.main_container .list_filter .card {
+  background: #0f1218;
+  margin-bottom: 15%;
+}
+.main_container .list_filter .card .owl_content_img {
+  position: relative;
+}
+.main_container .list_filter .card .card-body {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main_container .list_filter .card .card-body .card-title {
+  text-align: center;
+  font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main_container .inner_filter .card {
+  margin-bottom: 15%;
+}
+.main_container .inner_filter .card .owl_content_img {
+  position: relative;
+}
+.main_container .inner_filter .card .card-body {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main_container .inner_filter .card .card-body .card-title {
+  text-align: center;
+  font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main_container .inner_filter .inner_filter_btn .btn_download,
+.main_container .inner_filter .inner_filter_btn .btn_share {
+  margin-bottom: 10%;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.main_container #modalShare {
+  direction: ltr;
+}
+.main_container #modalShare .modal-dialog .modal-content .modal-header .close {
+  opacity: 1;
+}
+.main_container #modalShare .modal-dialog .modal-content .modal-header .close:focus {
+  outline: 0;
+}
+.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a {
+  margin: 0 0.5em;
+  border: 1px solid transparent;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  text-align: center;
+  line-height: 2.4em;
+  position: relative;
+  z-index: 999;
+  transition: 0.5s all ease-in-out;
+  -webkit-transition: 0.5s all ease-in-out;
+  -moz-transition: 0.5s all ease-in-out;
+  -ms-transition: 0.5s all ease-in-out;
+  -o-transition: 0.5s all ease-in-out;
+}
+.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a:before {
+  content: "";
+  display: block;
+  height: 35px;
+  width: 35px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  position: absolute;
+  z-index: -1;
+  transition: 0.5s all ease-in-out;
+  -webkit-transition: 0.5s all ease-in-out;
+  -moz-transition: 0.5s all ease-in-out;
+  -ms-transition: 0.5s all ease-in-out;
+  -o-transition: 0.5s all ease-in-out;
+}
+.main_container #modalShare .modal-dialog .modal-content .modal-footer {
+  justify-content: flex-end;
+}
 @media (min-width: 320px) and (max-width: 359.9px) {
   .padding_phones {
     padding-left: 1rem !important;

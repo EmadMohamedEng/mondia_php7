@@ -13,4 +13,9 @@ class FilterPosts extends Model
   {
       return $this->belongsTo('App\Filters', 'filter_id', 'id');
   }
+
+  public function operator() {
+    return $this->belongsTo('App\Operator');
+   }
+
 }
