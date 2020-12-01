@@ -351,7 +351,7 @@ class FrontController extends Controller
       ->where('posts.operator_id', MBC_OP_ID)
       ->where('posts.active', 1)
       ->where('posts.show_date', '<=', Carbon::now()->toDateString())
-      ->orderBy('contents.index', 'asc')->limit(6)->get();
+      ->orderBy('contents.index', 'asc')->limit(4)->get();
     $msisdn = $this->decryptMobileNumber($msisdn);
     if($this->checkStatus($msisdn,2)){
       session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
