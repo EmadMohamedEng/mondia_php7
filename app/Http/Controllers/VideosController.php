@@ -343,7 +343,6 @@ class VideosController extends Controller
 
     public function posts($id)
     {
-
         $posts = \App\Post::where('video_id', $id)->get();
         $video = $id;
         return view('posts.index', compact('posts', 'video'));
