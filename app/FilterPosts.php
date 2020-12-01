@@ -8,4 +8,9 @@ class FilterPosts extends Model
 {
   protected $table = "filter_posts" ;
   protected $fillable = ['filter_id','operator_id','published_date'];
+
+  public function filter()
+  {
+      return $this->belongsTo('App\Filters', 'filter_id', 'id');
+  }
 }

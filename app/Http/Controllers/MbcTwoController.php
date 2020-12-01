@@ -2,26 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Country;
-use SoapClient;
-use App\MbcSendMt;
-use App\MbcNotification;
-use App\Operator;
+use App\TimWe;
 use App\Video;
+use SoapClient;
+use App\Country;
+use App\Filters;
+use App\Pincode;
+use App\Operator;
+use App\MbcSendMt;
+use Carbon\Carbon;
+use Monolog\Logger;
+use App\ResendPincode;
+use App\MbcNotification;
+use App\timweSubscriber;
+use App\timweUnsubscriber;
+use App\ResponseSendMessage;
 use Illuminate\Http\Request;
+use Monolog\Handler\StreamHandler;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
 use Artisaninweb\SoapWrapper\SoapWrapper;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Session;
-use Monolog\Handler\StreamHandler;
-use Monolog\Logger;
-use Illuminate\Support\Facades\File;
-use App\TimWe;
-use App\timweUnsubscriber;
-use App\timweSubscriber;
-use App\Pincode;
-use App\ResendPincode;
-use App\ResponseSendMessage;
-use Carbon\Carbon;
 
 class MbcTwoController extends Controller
 {
@@ -712,7 +713,11 @@ class MbcTwoController extends Controller
 
     public function mbc_filter_list()
   {
-    return view('front.mbc_filter.list');
+    $operator = Operator::find(mbc);
+
+    $filters = $operator->filterPosts->load('filter');
+
+    return view('front.mbc_filter.list', compact('filters'));
   }
 
     public function mbc_filter_inner()
