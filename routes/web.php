@@ -178,7 +178,7 @@ Route::post('mbc_subscription_resend_pincode/optin/{partnerRoleId}', 'MbcTwoCont
 
 /***************start mbc filter ****************** */
 Route::get('filter_list', 'MbcTwoController@mbc_filter_list');
-Route::get('filter_inner', 'MbcTwoController@mbc_filter_inner');
+Route::get('filter_inner/{id}', 'MbcTwoController@mbc_filter_inner');
 /***************end mbc filter ****************** */
 
 

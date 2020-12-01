@@ -12,6 +12,7 @@ use App\Operator;
 use App\MbcSendMt;
 use Carbon\Carbon;
 use Monolog\Logger;
+use App\FilterPosts;
 use App\ResendPincode;
 use App\MbcNotification;
 use App\timweSubscriber;
@@ -720,9 +721,11 @@ class MbcTwoController extends Controller
     return view('front.mbc_filter.list', compact('filters'));
   }
 
-    public function mbc_filter_inner()
+    public function mbc_filter_inner(Request $request)
   {
-    return view('front.mbc_filter.inner');
+    $filter = FilterPosts::find($request->id)->filter;
+    
+    return view('front.mbc_filter.inner', compact('filter'));
   }
 
 }
