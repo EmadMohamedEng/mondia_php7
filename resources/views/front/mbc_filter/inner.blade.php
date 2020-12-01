@@ -37,7 +37,7 @@ $menu = provider_menu();
                 <div class="col-md-8 col-lg-8 col-xl-7 col-6 m-auto">
                   <a class="btn btn-block btn_download text-capitalize" href="front/images/mbc_filter/01.png" download="">download</a>
 
-                  <a class="btn btn-block btn_share text-capitalize" href="#0">share</a>
+                  <a class="btn btn-block btn_share text-capitalize" data-toggle="modal" data-target="#exampleModalCenter">share</a>
                 </div>
               </div>
             </div>
@@ -45,5 +45,33 @@ $menu = provider_menu();
         </div>
       </div>
     </section>
+
+    <div id="modalShare">
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div class="social-icon text-center">
+                <a class="facebook" href="#0" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="twitter" href="#0" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="linkedin" href=#0" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="pinterest" href="#0" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btnClose" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     @stop
