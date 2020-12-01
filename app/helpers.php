@@ -109,7 +109,13 @@ function get_static_routes()
         Route::post('filters', 'FiltersController@store');
 
         Route::get('filter_posts', 'FilterPostsController@index');
-
+        Route::get('filter_posts/create', 'FilterPostsController@create');
+        Route::get('filter_posts/{id}/edit', 'FilterPostsController@edit');
+        Route::post('filter_posts/{id}', 'FilterPostsController@update');
+        Route::post('filter_posts', 'FilterPostsController@store');
+        Route::get('filter_posts/{id}/delete', 'FilterPostsController@destroy');
+        Route::get('filter_posts/allData', 'FilterPostsController@allData');
+        Route::get('filters/{id}/filter_posts', 'FilterPostsController@posts');
     });
 
     Route::group(['middleware' =>['auth',"role:super_admin"]],function(){
