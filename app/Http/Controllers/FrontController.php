@@ -346,12 +346,12 @@ class FrontController extends Controller
       ->first();
     $contents = video::select('contents.*', 'contents.id as content_id')
       ->join('posts', 'posts.video_id', '=', 'contents.id')
-      ->where('contents.service_id', $content->service->id)
+     // ->where('contents.service_id', $content->service->id)
       ->whereNotIn('contents.id', [$content->id])
       ->where('posts.operator_id', MBC_OP_ID)
       ->where('posts.active', 1)
       ->where('posts.show_date', '<=', Carbon::now()->toDateString())
-      ->orderBy('contents.index', 'asc')->limit(4)->get();
+      ->orderBy('contents.index', 'asc')->limit(6)->get();
     $msisdn = $this->decryptMobileNumber($msisdn);
     if($this->checkStatus($msisdn,2)){
       session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
