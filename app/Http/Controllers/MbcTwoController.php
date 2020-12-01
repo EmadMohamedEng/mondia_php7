@@ -712,20 +712,4 @@ class MbcTwoController extends Controller
     }
 
 
-    public function mbc_filter_list()
-  {
-    $operator = Operator::find(mbc);
-
-    $filters = $operator->filterPosts->load('filter');
-
-    return view('front.mbc_filter.list', compact('filters'));
-  }
-
-    public function mbc_filter_inner(Request $request)
-  {
-    $filter = FilterPosts::find($request->id)->filter;
-
-    return view('front.mbc_filter.inner', compact('filter'));
-  }
-
 }
