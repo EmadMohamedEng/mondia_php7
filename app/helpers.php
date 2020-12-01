@@ -102,6 +102,12 @@ function get_static_routes()
         Route::get('service/export/', 'ServicesController@export');
         Route::get('content/export/', 'VideosController@export');
         Route::get('filters', 'FiltersController@index');
+        Route::get('filters/create', 'FiltersController@create');
+        Route::get('filters/{id}/edit', 'FiltersController@edit');
+        Route::post('filters/{id}', 'FiltersController@update');
+        Route::get('filters/{id}/delete', 'FiltersController@destroy');
+        Route::post('filters', 'FiltersController@store');
+
         Route::get('filter_posts', 'FilterPostsController@index');
 
     });
