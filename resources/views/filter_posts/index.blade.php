@@ -34,6 +34,7 @@ Post
                                         <th>Filters</th>
                                         <th>Published Date</th>
                                         <th>URL</th>
+                                        <th>Free</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -85,6 +86,7 @@ Post
                 {data: 'filter'},
                 {data: 'published_date'},
                 {data: 'url',name:'url'},
+                {data: 'free',name:'free'},
                 {data: 'action', searchable: false}
 
             ]

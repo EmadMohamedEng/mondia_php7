@@ -56,9 +56,16 @@ class FilterPostsController extends Controller
           })
             ->addColumn('url', function (FilterPosts $post) {
                 return  '<td>
-                            <input type="text" id="url_h' . $post->id . '"  value="' . url('view_content/' . $post->filter_id . '/?OpID=' . $post->operator_id) . '">
+                            <input type="text" id="url_h' . $post->id . '"  value="' . url('filter_inner/' . $post->filter_id . '/?OpID=' . $post->operator_id) . '">
                             <span class="btn" onclick="x = document.getElementById(' . "'url_h" . $post->id . "'); x.select();document.execCommand('copy')" . '"> <i class="fa fa-copy"></i> </span>
                             </td>';
+            })
+              ->addColumn('free', function (FilterPosts $post) {
+                if ($post->free == 1)
+                return 'FREE';
+                  else
+                return 'Not FREE';
+                
             })
             ->addColumn('action', function (FilterPosts $post) {
                 return '<td class="visible-md visible-lg">
@@ -100,7 +107,8 @@ class FilterPostsController extends Controller
         $validator = Validator::make($request->all(), [
             'filter_id' => 'required',
             'operator_id' => 'required',
-            'published_date' => 'required'
+            'published_date' => 'required',
+            'free' => 'required'
         ]);
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
@@ -114,11 +122,11 @@ class FilterPostsController extends Controller
             $post->filter_id = $request->filter_id;
             $post->operator_id = $request['operator_id'][$i];
             $post->published_date = \Carbon\Carbon::createFromFormat('d/m/Y', $request->published_date)->format('Y-m-d');
+            $post->free = $request->free;
             $post->save();
           }
         }
-        if (isset($request->video))
-            return redirect("videos/$request->video_id/posts");
+
         return redirect('filter_posts');
     }
 
@@ -171,10 +179,10 @@ class FilterPostsController extends Controller
         $post = FilterPosts::findOrFail($id);
         $post->operator_id = $request['operator_id'][0];
         $post->published_date = \Carbon\Carbon::createFromFormat('d/m/Y', $request->published_date)->format('Y-m-d');
+        $post->free = $request->free;
         $post->save();
         \Session::flash('success', 'Post Updated successfully');
-        if (isset($request->video))
-            return redirect("videos/$request->video_id/posts");
+
         return redirect('filter_posts');
     }
 
