@@ -1,6 +1,7 @@
 <?php
 return [
     'use_filter' => 'استخدم الفلتر',
+    'filters' => 'الفلتر',
     'home' => 'سرورق',
     'welcome' => 'خوش آمدید',
     'more' => 'مزید',

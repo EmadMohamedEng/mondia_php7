@@ -2,23 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Video;
-use App\Provider;
-use App\Service;
-use App\Audio;
 use App\Post;
+use App\Audio;
+use App\Video;
+use App\Filters;
+use App\Service;
+use App\Provider;
+use Carbon\Carbon;
+use Monolog\Logger;
+use App\DuIntgration;
+use App\Http\Requests;
+
 use App\MondiaSubscriber;
 use App\MondiaUnsubscriber;
-
-use Monolog\Logger;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\File;
+use Illuminate\Http\Request;
 use Monolog\Handler\StreamHandler;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
-use App\DuIntgration;
 
 class FrontController extends Controller
 {
@@ -426,6 +427,16 @@ class FrontController extends Controller
         $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
       });
 
+      $filters = Filters::select('filters.*', 'filters.id as filter_id')
+      ->join('translatables', 'translatables.record_id', '=', 'filters.id')
+      ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
+      ->where('translatables.table_name', 'filters')
+      ->where('translatables.column_name', 'title')
+      ->where(function ($q) use ($request) {
+        $q->where('filters.title', 'like', '%' . $request->search . '%');
+        $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+      });
+
     if (request()->has('OpID') && request()->get('OpID') != '') {
       $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
         ->where('posts.operator_id', request()->get('OpID'))
@@ -438,10 +449,16 @@ class FrontController extends Controller
           ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
       });
     }
+    if (request()->has('OpID') && request()->get('OpID') == mbc) {
+      $filters = $filters->join('filter_posts', 'filter_posts.filter_id', '=', 'filters.id')
+      ->where('filter_posts.operator_id', mbc)
+      ->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+    }
 
     $services = $services->groupBy('service_id')->get();
     $contents = $contents->groupBy('content_id')->get();
-    return view('front.search_result', compact('services', 'contents'));
+    $filters = $filters->groupBy('filter_id')->get();
+    return view('front.search_result', compact('services', 'contents', 'filters'));
   }
 
 

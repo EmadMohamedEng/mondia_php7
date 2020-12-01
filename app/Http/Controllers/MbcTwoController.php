@@ -716,7 +716,7 @@ class MbcTwoController extends Controller
   {
     $operator = Operator::find(mbc);
 
-    $filters = $operator->filterPosts->load('filter');
+    $filters = $operator->filterPosts->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))->load('filter');
 
     return view('front.mbc_filter.list', compact('filters'));
   }

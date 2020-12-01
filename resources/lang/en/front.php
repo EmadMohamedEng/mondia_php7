@@ -1,6 +1,7 @@
 <?php
 return [
     'use_filter' => 'Use Filter',
+    'filters' => 'Filters',
     'home' => 'Home',
     'welcome' => 'welcome',
     'profile' => 'Profile',
