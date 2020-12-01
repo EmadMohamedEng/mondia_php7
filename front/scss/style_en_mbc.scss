@@ -1021,6 +1021,7 @@ body {
     .card_title {
       h6 {
         color: $text_color;
+        margin-bottom: 2%;
       }
     }
 
@@ -3293,6 +3294,23 @@ body {
       }
     }
 
+    .list_filter {
+      .card_title {
+        h6 {
+          font-size: 1.2rem !important;
+          margin-bottom: 4%;
+        }
+      }
+
+      .card {
+        .card-body {
+          h4 {
+            font-size: 1.2rem !important;
+          }
+        }
+      }
+    }
+
     .inner_filter {
       .no_padding {
         padding-right: 0;
@@ -3883,6 +3901,23 @@ body {
       }
     }
 
+    .list_filter {
+      .card_title {
+        h6 {
+          font-size: 1.75rem !important;
+          margin-bottom: 4%;
+        }
+      }
+
+      .card {
+        .card-body {
+          h4 {
+            font-size: 1.75rem !important;
+          }
+        }
+      }
+    }
+
     .inner_filter {
       .no_padding {
         padding-right: 0;
@@ -3898,10 +3933,11 @@ body {
       }
 
       .inner_filter_btn {
+
         .btn_download,
         .btn_share {
           font-size: 1.75rem;
-          padding: 4% 2%;
+          padding: 3% 2%;
         }
       }
 
@@ -3909,6 +3945,38 @@ body {
         .modal-dialog {
           .modal-content {
             width: 100%;
+
+            .modal-header {
+              .close {
+                font-size: 2rem;
+              }
+            }
+
+            .modal-body {
+              .social-icon {
+                a {
+                  margin: 1em;
+                  width: 50px;
+                  height: 50px;
+                  line-height: 3.5em;
+
+                  &:before {
+                    height: 50px;
+                    width: 50px;
+                  }
+
+                  i {
+                    font-size: 1.75rem;
+                  }
+                }
+              }
+            }
+
+            .modal-footer {
+              .btnClose {
+                font-size: 1.75rem;
+              }
+            }
           }
         }
       }

@@ -6,8 +6,19 @@ $count = (int)(count(provider_menu())/2);
 $menu = provider_menu();
 @endphp
 
+
+@if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
+<style>
+  .list_filter_padd {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+    padding: 0;
+  }
+</style>
+@endif
+
 @if(request()->get('OpID') == mbc)
-<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav list_filter_padd">
   @else
   <div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
     @endif
@@ -25,7 +36,7 @@ $menu = provider_menu();
         </div>
 
 
-         @foreach ($filters as $filter)
+          @foreach ($filters as $filter)
           <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
             <div class="card ovf-hidden">
               <a class="link_href owl_content_img" href="{{url("filter_inner/$filter->id")}}">

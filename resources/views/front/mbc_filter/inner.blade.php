@@ -20,7 +20,7 @@ $menu = provider_menu();
           <div class="col-md-8 col-lg-8 col-xl-7 col-9 m-auto no_padding">
             <div class="card ovf-hidden">
 
-              <a  class="owl_content_img" href="{{$filter->link}}">
+              <a class="owl_content_img" href="{{$filter->link}}">
                 <img class="w-100" src="{{url('uploads/filters/'.$filter->image)}}" alt="filter">
 
                 <a>
@@ -39,9 +39,9 @@ $menu = provider_menu();
             <div class="inner_filter_btn">
               <div class="row">
                 <div class="col-md-8 col-lg-8 col-xl-7 col-8 m-auto">
-                  <a class="btn btn-block btn_download text-capitalize" href="{{$filter->link}}" >@lang('front.use_filter')</a>
+                  <a class="btn btn-block btn_download text-capitalize" href="{{$filter->link}}">@lang('front.use_filter')</a>
 
-                  <a class="btn btn-block btn_share text-capitalize"data-toggle="modal" data-target="#exampleModalCenter" >@lang('front.share')</a>
+                  <a class="btn btn-block btn_share text-capitalize" data-toggle="modal" data-target="#exampleModalCenter">@lang('front.share')</a>
                 </div>
               </div>
             </div>
