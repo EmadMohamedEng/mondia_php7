@@ -33,6 +33,14 @@
     </div>
 </div>
 <div class="form-group">
+  <label class="col-sm-3 col-lg-2 control-label">Free</label>
+  <div class="col-sm-9 col-lg-10 controls">
+      <label class="radio">
+          {!! Form::select('free',array(0=>'NO',1=>'YES'),null,['class'=>'form-control chosen','required'=>'required']) !!}
+      </label>
+  </div>
+</div>
+<div class="form-group">
     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
         {!! Form::submit($buttonAction,['class'=>'btn btn-primary']) !!}
     </div>
