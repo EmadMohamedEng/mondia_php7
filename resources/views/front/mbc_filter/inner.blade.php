@@ -62,10 +62,10 @@ $menu = provider_menu();
 
               <div class="modal-body">
                 <div class="social-icon text-center">
-                  <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{URL::current()}}" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                  <a class="twitter" href="http://twitter.com/share?url={{URL::current()}}" target="_blank"><i class="fab fa-twitter"></i></a>
-                  <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{URL::current()}}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                  <a class="pinterest" href="http://pinterest.com/pin/create/link/?url={{URL::current()}}" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                  <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{URL::full()}}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  <a class="twitter" href="http://twitter.com/share?url={{URL::full()}}" target="_blank"><i class="fab fa-twitter"></i></a>
+                  <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{URL::full()}}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  <a class="pinterest" href="http://pinterest.com/pin/create/link/?url={{URL::full()}}" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                 </div>
               </div>
 
