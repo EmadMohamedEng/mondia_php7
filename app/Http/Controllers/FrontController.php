@@ -1634,7 +1634,7 @@ class FrontController extends Controller
   {
     if(get_setting('filters_flag')){
 
-      $filter = FilterPosts::find($request->id)->filter;
+      $filter = FilterPosts::findOrFail($request->id)->filter;
       $enable = get_setting('enable_testing');
   
       if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
