@@ -1015,6 +1015,97 @@ body {
   }
 
   /* End Terms Page */
+
+  /* Start MBC Filter */
+  .list_filter {
+    .card {
+      background: #0f1218;
+      border: 1px solid $text_color;
+      margin-bottom: 15%;
+
+      .owl_content_img {
+        position: relative;
+
+        img {}
+      }
+
+      .card-body {
+        background-color: $bg_color2;
+        color: $text_color;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        .card-title {
+          text-align: center;
+          font-size: 1.05rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+  .inner_filter {
+    .card {
+      background: #0f1218;
+      border: 1px solid $text_color;
+      margin-bottom: 15%;
+
+      .owl_content_img {
+        position: relative;
+
+        img {}
+      }
+
+      .card-body {
+        background-color: $bg_color2;
+        color: $text_color;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        .card-title {
+          text-align: center;
+          font-size: 1.05rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    .inner_filter_btn {
+
+      .btn_download,
+      .btn_share {
+        color: $text_color;
+        border-color: $text_color;
+        // color: $white_color;
+        // background-color: $text_color;
+        margin-bottom: 10%;
+        font-size: 1.25rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+
+        &:focus {
+          
+        }
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 0 0 0.2rem rgb(255 255 255);
+          color: $white_color;
+          background-color: $text_color;;
+          border-color: $text_color;;
+        }
+      }
+    }
+  }
+
+  /* End MBC Filter */
 }
 
 .loading-overlay {
@@ -2521,7 +2612,8 @@ body {
 
     .navbar_three {
       background: transparent !important;
-      display: none;;
+      display: none;
+      ;
     }
 
     .nav_nav {
@@ -3030,7 +3122,7 @@ body {
         font-size: 1.75rem;
 
         .dropdown-menu2 {
-          right: 0 ;
+          right: 0;
           left: 52%;
           width: 0;
           font-size: 1.75rem;
