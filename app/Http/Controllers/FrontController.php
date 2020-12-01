@@ -1622,9 +1622,9 @@ class FrontController extends Controller
   {
     if(get_setting('filters_flag')){
       $operator = Operator::find($request->OpID);
-  
+
       $filters = $operator->filterPosts->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
-  
+
       return view('front.mbc_filter.list', compact('filters'));
     }
   }
@@ -1644,5 +1644,5 @@ class FrontController extends Controller
       return redirect('mbc_portal_landing');
     }
   }
-  
+
 }
