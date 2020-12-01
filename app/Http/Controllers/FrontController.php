@@ -341,6 +341,7 @@ class FrontController extends Controller
       ->join('posts', 'posts.video_id', '=', 'contents.id')
       ->where('posts.show_date', '<=', Carbon::now()->toDateString())
       ->where('posts.operator_id', MBC_OP_ID)
+      ->where('posts.active', 1)
       ->orderBy('posts.show_date','desc')
       ->first();
     $contents = video::select('contents.*', 'contents.id as content_id')
@@ -348,6 +349,7 @@ class FrontController extends Controller
       ->where('contents.service_id', $content->service->id)
       ->whereNotIn('contents.id', [$content->id])
       ->where('posts.operator_id', MBC_OP_ID)
+      ->where('posts.active', 1)
       ->where('posts.show_date', '<=', Carbon::now()->toDateString())
       ->orderBy('contents.index', 'asc')->limit(4)->get();
     $msisdn = $this->decryptMobileNumber($msisdn);
