@@ -17,17 +17,17 @@ $menu = provider_menu();
         <div class="row">
           <div class="col-md-8 col-lg-8 col-xl-7 col-10 m-auto">
             <div class="card ovf-hidden">
-              <a href="{{url('mbc_filter_inner/?OpID=14')}}">
-                <img class="w-100" src="front/images/mbc_filter/01.png" alt="filter">
+              <a href="{{$filter->link}}">
+                <img class="w-100" src="{{url('uploads/filters/'.$filter->image)}}" alt="filter">
 
                 <a>
                   <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
               </a>
 
-              <a href="{{url('mbc_filter_inner/?OpID=14')}}">
+              <a href="{{$filter->link}}">
                 <div class="card-body">
-                  <h4 class="card-title text-capitalize">دعوتك</h4>
+                  <h4 class="card-title text-capitalize">{{$filter->getTranslation('title',getCode())}}</h4>
                 </div>
               </a>
             </div>
@@ -35,9 +35,9 @@ $menu = provider_menu();
             <div class="inner_filter_btn">
               <div class="row">
                 <div class="col-md-8 col-lg-8 col-xl-7 col-6 m-auto">
-                  <a class="btn btn-block btn_download text-capitalize" href="front/images/mbc_filter/01.png" download="">download</a>
+                  <a class="btn btn-block btn_download text-capitalize" href="{{$filter->link}}" download="">@lang('front.use_filter')</a>
 
-                  <a class="btn btn-block btn_share text-capitalize" data-toggle="modal" data-target="#exampleModalCenter">share</a>
+                  <a class="btn btn-block btn_share text-capitalize"data-toggle="modal" data-target="#exampleModalCenter" >@lang('front.share')</a>
                 </div>
               </div>
             </div>
