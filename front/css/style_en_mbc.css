@@ -596,15 +596,23 @@ body {
   background: #0f1218;
   border: 1px solid #efc049;
   margin-bottom: 15%;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
-.main_container .list_filter .card .owl_content_img {
-  position: relative;
+.main_container .list_filter .card .owl_content_img img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .main_container .list_filter .card .card-body {
   background-color: #0f1218;
   color: #efc049;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 .main_container .list_filter .card .card-body .card-title {
   text-align: center;
@@ -617,15 +625,23 @@ body {
   background: #0f1218;
   border: 1px solid #efc049;
   margin-bottom: 15%;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
-.main_container .inner_filter .card .owl_content_img {
-  position: relative;
+.main_container .inner_filter .card .owl_content_img img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .main_container .inner_filter .card .card-body {
   background-color: #0f1218;
   color: #efc049;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 .main_container .inner_filter .card .card-body .card-title {
   text-align: center;
@@ -654,28 +670,29 @@ body {
   background-color: #efc049;
   border-color: #efc049;
 }
-.main_container #modalShare {
+.main_container .inner_filter #modalShare {
   direction: ltr;
 }
-.main_container #modalShare .modal-dialog .modal-content {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content {
   background-image: url(../images/mbc_background.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 70%;
   margin: 0 auto;
+  border: 0;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-header {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-header {
   border-bottom: 1px solid #efc049;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-header .close {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-header .close {
   color: #efc049;
   opacity: 1;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-header .close:focus {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-header .close:focus {
   outline: 0;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-body .social-icon a {
   color: #efc049;
   margin: 0 0.5em;
   border: 1px solid transparent;
@@ -692,7 +709,7 @@ body {
   -ms-transition: 0.5s all ease-in-out;
   -o-transition: 0.5s all ease-in-out;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a:before {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-body .social-icon a:before {
   content: "";
   display: block;
   height: 35px;
@@ -711,39 +728,39 @@ body {
   -ms-transition: 0.5s all ease-in-out;
   -o-transition: 0.5s all ease-in-out;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a.facebook:hover {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-body .social-icon a.facebook:hover {
   background-color: #3b5999;
   color: #FFF;
   border-radius: 50%;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a.facebook:hover:before {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-body .social-icon a.facebook:hover:before {
   border: 0;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a.twitter:hover {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-body .social-icon a.twitter:hover {
   background-color: #55acee;
   color: #FFF;
   border-radius: 50%;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a.twitter:hover:before {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-body .social-icon a.twitter:hover:before {
   border: 0;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a.linkedin:hover {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-body .social-icon a.linkedin:hover {
   background-color: #0077B5;
   color: #FFF;
   border-radius: 50%;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a.linkedin:hover:before {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-body .social-icon a.linkedin:hover:before {
   border: 0;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a.pinterest:hover {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-body .social-icon a.pinterest:hover {
   background-color: #bd081c;
   color: #FFF;
   border-radius: 50%;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a.pinterest:hover:before {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-body .social-icon a.pinterest:hover:before {
   border: 0;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a:hover:before {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-body .social-icon a:hover:before {
   border-color: #efc049;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -751,14 +768,14 @@ body {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-body .social-icon a i {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-body .social-icon a i {
   font-size: 1.2rem;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-footer {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-footer {
   justify-content: flex-start;
   border-top: 1px solid #efc049;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-footer .btnClose {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-footer .btnClose {
   color: #efc049;
   border-color: #efc049;
   border-radius: 1rem;
@@ -767,7 +784,7 @@ body {
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
 }
-.main_container #modalShare .modal-dialog .modal-content .modal-footer .btnClose:hover, .main_container #modalShare .modal-dialog .modal-content .modal-footer .btnClose:focus {
+.main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-footer .btnClose:hover, .main_container .inner_filter #modalShare .modal-dialog .modal-content .modal-footer .btnClose:focus {
   box-shadow: 0 0 0 0.2rem white;
   color: #FFF;
   background-color: #efc049;
@@ -863,6 +880,13 @@ body {
     width: 60%;
     font-size: 0.85rem;
   }
+  .main_container .inner_filter .no_padding {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .main_container .inner_filter #modalShare .modal-dialog .modal-content {
+    width: 95%;
+  }
 }
 @media (min-width: 360px) and (max-width: 374.9px) {
   .open_icon_nav_mbc {
@@ -955,6 +979,13 @@ body {
     width: 65%;
     font-size: 0.85rem;
   }
+  .main_container .inner_filter .no_padding {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .main_container .inner_filter #modalShare .modal-dialog .modal-content {
+    width: 95%;
+  }
 }
 @media (min-width: 375px) and (max-width: 410.9px) {
   .open_icon_nav_mbc {
@@ -1029,6 +1060,13 @@ body {
   .main_container .profile .profile_table table tbody tr .label-view2 {
     width: 65%;
     font-size: 0.85rem;
+  }
+  .main_container .inner_filter .no_padding {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .main_container .inner_filter #modalShare .modal-dialog .modal-content {
+    width: 95%;
   }
 }
 @media (min-width: 411px) and (max-width: 415px) {
@@ -1107,6 +1145,13 @@ body {
   .main_container .profile .profile_table table tbody tr .label-view2 {
     width: 65%;
     font-size: 0.95rem;
+  }
+  .main_container .inner_filter .no_padding {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .main_container .inner_filter #modalShare .modal-dialog .modal-content {
+    width: 95%;
   }
 }
 @media (min-width: 768px) and (max-width: 1023.9px) {
@@ -1225,6 +1270,13 @@ body {
   .main_container .profile .profile_table table tbody tr .label-view2 {
     width: 65%;
     font-size: 1.35rem;
+  }
+  .main_container .inner_filter .no_padding {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .main_container .inner_filter #modalShare .modal-dialog .modal-content {
+    width: 90%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1030px) {
@@ -1383,6 +1435,21 @@ body {
     width: 65%;
     font-size: 2rem;
     padding: 1.75rem 1rem;
+  }
+  .main_container .inner_filter .no_padding {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .main_container .inner_filter .card .card-body h4 {
+    font-size: 1.75rem !important;
+  }
+  .main_container .inner_filter .inner_filter_btn .btn_download,
+.main_container .inner_filter .inner_filter_btn .btn_share {
+    font-size: 1.75rem;
+    padding: 4% 2%;
+  }
+  .main_container .inner_filter #modalShare .modal-dialog .modal-content {
+    width: 100%;
   }
 }
 @media (min-width: 1031px) and (max-width: 1360px) {

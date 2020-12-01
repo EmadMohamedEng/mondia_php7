@@ -25,7 +25,7 @@ $menu = provider_menu();
 
           <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
             <div class="card ovf-hidden">
-              <a href="{{url('mbc_filter_inner/?OpID=14')}}">
+              <a class="owl_content_img" href="{{url('mbc_filter_inner/?OpID=14')}}">
                 <img class="w-100" src="front/images/mbc_filter/01.png" alt="filter">
 
                 <a>
@@ -43,7 +43,7 @@ $menu = provider_menu();
 
           <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
             <div class="card ovf-hidden">
-              <a href="{{url('mbc_filter_inner/?OpID=14')}}">
+              <a class="owl_content_img" href="{{url('mbc_filter_inner/?OpID=14')}}">
                 <img class="w-100" src="front/images/mbc_filter/02.png" alt="filter">
 
                 <a>
@@ -61,7 +61,7 @@ $menu = provider_menu();
 
           <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
             <div class="card ovf-hidden">
-              <a href="{{url('mbc_filter_inner/?OpID=14')}}">
+              <a class="owl_content_img" href="{{url('mbc_filter_inner/?OpID=14')}}">
                 <img class="w-100" src="front/images/mbc_filter/03.png" alt="filter">
 
                 <a>
@@ -79,7 +79,7 @@ $menu = provider_menu();
 
           <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
             <div class="card ovf-hidden">
-              <a href="{{url('mbc_filter_inner/?OpID=14')}}">
+              <a class="owl_content_img" href="{{url('mbc_filter_inner/?OpID=14')}}">
                 <img class="w-100" src="front/images/mbc_filter/04.png" alt="filter">
 
                 <a>
@@ -97,7 +97,7 @@ $menu = provider_menu();
 
           <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
             <div class="card ovf-hidden">
-              <a href="{{url('mbc_filter_inner/?OpID=14')}}">
+              <a class="owl_content_img" href="{{url('mbc_filter_inner/?OpID=14')}}">
                 <img class="w-100" src="front/images/mbc_filter/05.png" alt="filter">
 
                 <a>
@@ -115,7 +115,7 @@ $menu = provider_menu();
 
           <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
             <div class="card ovf-hidden">
-              <a href="{{url('mbc_filter_inner/?OpID=14')}}">
+              <a class="owl_content_img" href="{{url('mbc_filter_inner/?OpID=14')}}">
                 <img class="w-100" src="front/images/mbc_filter/06.png" alt="filter">
 
                 <a>
