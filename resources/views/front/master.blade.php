@@ -390,7 +390,9 @@ $enable = get_setting('enable_testing');
             </li>
 
             @if(request()->get('OpID') == mbc)
-            
+
+            @if(get_setting('filters_flag'))
+
             <li class="nav-item">
               <a class="menuTwo nav-link text-capitalize link_href" href="{{url('/filter_list')}}" style=" <?php echo $style ?>">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
@@ -410,6 +412,8 @@ $enable = get_setting('enable_testing');
                 <span class="sr-only">(current)</span>
               </a>
             </li>
+
+            @endif
 
             <li class="nav-item">
               <a class="menuTwo nav-link text-capitalize link_href" href="{{url('/terms')}}" style=" <?php echo $style ?>">
@@ -944,13 +948,13 @@ $enable = get_setting('enable_testing');
                 </li>
                 @endif
 
-                @if ( request()->get("OpID") == mbc )
-                <li class="nav-item">
-                  <a class="menuThree nav-link text-capitalize link_href" href="{{url('/filter_list')}}" style=" <?php echo $style ?>">
-                    @lang('front.filters')
-                    <span class="sr-only">(current)</span>
-                  </a>
-                </li>
+                @if(get_setting('filters_flag') && request()->get("OpID") == mbc)
+                  <li class="nav-item">
+                    <a class="menuThree nav-link text-capitalize link_href" href="{{url('/filter_list')}}" style=" <?php echo $style ?>">
+                      @lang('front.filters')
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
                 @endif
               </div>
             </div>

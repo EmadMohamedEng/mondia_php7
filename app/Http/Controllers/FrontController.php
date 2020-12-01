@@ -429,15 +429,17 @@ class FrontController extends Controller
         $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
       });
 
-      $filters = Filters::select('filters.*', 'filters.id as filter_id')
-      ->join('translatables', 'translatables.record_id', '=', 'filters.id')
-      ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
-      ->where('translatables.table_name', 'filters')
-      ->where('translatables.column_name', 'title')
-      ->where(function ($q) use ($request) {
-        $q->where('filters.title', 'like', '%' . $request->search . '%');
-        $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
-      });
+      if(get_setting('filters_flag')){
+        $filters = Filters::select('filters.*', 'filters.id as filter_id')
+        ->join('translatables', 'translatables.record_id', '=', 'filters.id')
+        ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
+        ->where('translatables.table_name', 'filters')
+        ->where('translatables.column_name', 'title')
+        ->where(function ($q) use ($request) {
+          $q->where('filters.title', 'like', '%' . $request->search . '%');
+          $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+        });
+      }
 
     if (request()->has('OpID') && request()->get('OpID') != '') {
       $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
@@ -451,7 +453,7 @@ class FrontController extends Controller
           ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
       });
     }
-    if (request()->has('OpID') && request()->get('OpID') != '') {
+    if (request()->has('OpID') && request()->get('OpID') != '' && get_setting('filters_flag')) {
       $filters = $filters->join('filter_posts', 'filter_posts.filter_id', '=', 'filters.id')
       ->where('filter_posts.operator_id', request()->get('OpID'))
       ->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
@@ -459,8 +461,11 @@ class FrontController extends Controller
 
     $services = $services->groupBy('service_id')->get();
     $contents = $contents->groupBy('content_id')->get();
-    $filters = $filters->groupBy('filter_id')->get();
-    return view('front.search_result', compact('services', 'contents', 'filters'));
+    if(get_setting('filters_flag')){
+      $filters = $filters->groupBy('filter_id')->get();
+      return view('front.search_result', compact('services', 'contents', 'filters'));
+    }
+    return view('front.search_result', compact('services', 'contents'));
   }
 
 

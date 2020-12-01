@@ -97,6 +97,8 @@
 
     <br>
 
+    @if(get_setting('filters_flag'))
+
     <div class="content_carousel_head text-capitalize mt-4">
       <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0 padding_phones">
         <a class="link_title link_href" href="{{route('front.search',['search' => request()->get('search')])}}">
@@ -114,7 +116,7 @@
       @endif
             <div class="item">
               <div class="card ovf-hidden">
-                <a class="owl_filter_img view overlay link_href" href="{{route('front.inner',['id' => $filter->filter_id])}}">
+                <a class="owl_filter_img view overlay link_href" href="{{route('front.filter_inner',['id' => $filter->filter_id])}}">
                   <img class="w-100" src="{{url('uploads/filters/'.$filter->image)}}" alt="Card image cap">
                   <a>
                     <div class="mask waves-effect waves-light rgba-white-slight"></div>
@@ -129,6 +131,8 @@
         </div>
         @endforeach
     </div>
+
+    @endif
   </section>
 </div>
 
