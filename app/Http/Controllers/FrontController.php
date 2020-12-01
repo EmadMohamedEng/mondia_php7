@@ -346,7 +346,7 @@ class FrontController extends Controller
       ->first();
     $contents = video::select('contents.*', 'contents.id as content_id')
       ->join('posts', 'posts.video_id', '=', 'contents.id')
-     // ->where('contents.service_id', $content->service->id)
+      ->where('contents.service_id', $content->service->id)
       ->whereNotIn('contents.id', [$content->id])
       ->where('posts.operator_id', MBC_OP_ID)
       ->where('posts.active', 1)
