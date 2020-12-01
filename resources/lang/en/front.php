@@ -1,6 +1,7 @@
 <?php
 return [
     'use_filter' => 'Use Filter',
+    'islamic_filter' => 'Islamic Filter',
     'filters' => 'Filters',
     'home' => 'Home',
     'welcome' => 'welcome',

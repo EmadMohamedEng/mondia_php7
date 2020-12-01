@@ -7,12 +7,14 @@ use App\Audio;
 use App\Video;
 use App\Filters;
 use App\Service;
+use App\Operator;
 use App\Provider;
 use Carbon\Carbon;
 use Monolog\Logger;
+use App\FilterPosts;
+
 use App\DuIntgration;
 use App\Http\Requests;
-
 use App\MondiaSubscriber;
 use App\MondiaUnsubscriber;
 use Illuminate\Http\Request;
@@ -1611,4 +1613,29 @@ class FrontController extends Controller
     }
   }
 
+  public function mbc_filter_list(Request $request)
+  {
+    $operator = Operator::find($request->OpID);
+
+    $filters = $operator->filterPosts->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+
+    return view('front.mbc_filter.list', compact('filters'));
+  }
+
+  public function mbc_filter_inner(Request $request)
+  {
+    $filter = FilterPosts::find($request->id)->filter;
+    $enable = get_setting('enable_testing');
+
+    if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
+      $enable_free = get_setting('enable_free');
+        if($enable || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
+          if($enable_free == "1" || (session()->has('MSISDN') && $this->checkStatus(session()->get('MSISDN'),2))){
+            return view('front.mbc_filter.inner', compact('filter'));
+          }
+        }
+      return redirect('mbc_portal_landing');
+    }
+  }
+  
 }

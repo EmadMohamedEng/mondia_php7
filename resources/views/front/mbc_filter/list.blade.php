@@ -20,7 +20,7 @@ $menu = provider_menu();
 
         <div class="col-md-8 col-lg-8 col-xl-12 col-10 m-auto">
                   <div class="card_title">
-                    <h6>فلتر اسلامي</h6>
+                    <h6>@lang('front.islamic_filter')</h6>
                   </div>
         </div>
 
