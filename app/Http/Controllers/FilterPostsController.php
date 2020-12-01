@@ -56,7 +56,7 @@ class FilterPostsController extends Controller
           })
             ->addColumn('url', function (FilterPosts $post) {
                 return  '<td>
-                            <input type="text" id="url_h' . $post->id . '"  value="' . url('filter_inner/' . $post->filter_id . '/?OpID=' . $post->operator_id) . '">
+                            <input type="text" id="url_h' . $post->id . '"  value="' . url('filter_inner/' . $post->id . '/?OpID=' . $post->operator_id) . '">
                             <span class="btn" onclick="x = document.getElementById(' . "'url_h" . $post->id . "'); x.select();document.execCommand('copy')" . '"> <i class="fa fa-copy"></i> </span>
                             </td>';
             })
@@ -65,7 +65,7 @@ class FilterPostsController extends Controller
                 return 'FREE';
                   else
                 return 'Not FREE';
-                
+
             })
             ->addColumn('action', function (FilterPosts $post) {
                 return '<td class="visible-md visible-lg">
