@@ -1618,7 +1618,7 @@ class FrontController extends Controller
     }
   }
 
-  public function mbc_filter_list(Request $request)
+  public function filter_list(Request $request)
   {
     $operator = Operator::find($request->OpID);
 
@@ -1627,7 +1627,7 @@ class FrontController extends Controller
     return view('front.mbc_filter.list', compact('filters'));
   }
 
-  public function mbc_filter_inner(Request $request)
+  public function filter_inner(Request $request)
   {
     $filter = FilterPosts::find($request->id)->filter;
     $enable = get_setting('enable_testing');

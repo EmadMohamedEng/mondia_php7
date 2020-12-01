@@ -1,8 +1,8 @@
 <?php
 return [
     'use_filter' => 'استخدم الفلتر',
-    'islamic_filter' => 'فلتر اسلامي',
-    'filters' => 'الفلتر',
+    'islamic_filter' => 'فلاتر اسلامية',
+    'filters' => 'الفلاتر',
     'home' => 'الصفحه الرئيسية',
     'welcome' => 'مرحبا',
     'profile' => 'الصفحه الشخصية',
