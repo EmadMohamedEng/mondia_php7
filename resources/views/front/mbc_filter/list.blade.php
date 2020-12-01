@@ -6,7 +6,6 @@ $count = (int)(count(provider_menu())/2);
 $menu = provider_menu();
 @endphp
 
-
 @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
 <style>
   .list_filter_padd {

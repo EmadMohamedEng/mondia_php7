@@ -6,8 +6,18 @@ $count = (int)(count(provider_menu())/2);
 $menu = provider_menu();
 @endphp
 
+@if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
+<style>
+  .list_filter_padd {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+    padding: 0;
+  }
+</style>
+@endif
+
 @if(request()->get('OpID') == mbc)
-<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav list_filter_padd">
   @else
   <div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
     @endif

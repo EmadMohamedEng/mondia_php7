@@ -455,25 +455,14 @@ body {
     }
 
     .card {
-      background: #0f1218;
-      margin-bottom: 15%;
-
       .owl_content_img {
-        position: relative;
 
         img {}
       }
 
       .card-body {
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-
         .card-title {
-          text-align: center;
-          font-size: 1.05rem;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          direction: rtl !important;
         }
       }
     }
@@ -481,39 +470,21 @@ body {
 
   .inner_filter {
     .card {
-      margin-bottom: 15%;
-
       .owl_content_img {
-        position: relative;
-
         img {}
       }
 
       .card-body {
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-
         .card-title {
-          text-align: center;
-          font-size: 1.05rem;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          direction: rtl !important;
         }
       }
     }
 
     .inner_filter_btn {
-
       .btn_download,
       .btn_share {
-        margin-bottom: 10%;
-        font-size: 1.25rem;
-        border-radius: 1rem;
-        -webkit-border-radius: 1rem;
-        -moz-border-radius: 1rem;
-        -ms-border-radius: 1rem;
-        -o-border-radius: 1rem;
+        font-size: 0.85rem !important;
 
         &:focus {}
 
@@ -526,19 +497,13 @@ body {
   }
 
   #modalShare {
-    direction: ltr;
+    direction: rtl !important;
 
     .modal-dialog {
       .modal-content {
-
-
         .modal-header {
-
           .close {
-            opacity: 1;
-
             &:focus {
-              outline: 0;
             }
           }
         }
@@ -546,66 +511,28 @@ body {
         .modal-body {
           .social-icon {
             a {
-              margin: 0 .5em;
-              border: 1px solid transparent;
-              width: 35px;
-              height: 35px;
-              display: inline-block;
-              text-align: center;
-              line-height: 2.4em;
-              position: relative;
-              z-index: 999;
-              transition: .5s all ease-in-out;
-              -webkit-transition: .5s all ease-in-out;
-              -moz-transition: .5s all ease-in-out;
-              -ms-transition: .5s all ease-in-out;
-              -o-transition: .5s all ease-in-out;
-
               &:before {
-                content: '';
-                display: block;
-                height: 35px;
-                width: 35px;
-                -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-                -moz-transform: rotate(45deg);
-                -o-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                position: absolute;
-                z-index: -1;
-                transition: .5s all ease-in-out;
-                -webkit-transition: .5s all ease-in-out;
-                -moz-transition: .5s all ease-in-out;
-                -ms-transition: .5s all ease-in-out;
-                -o-transition: .5s all ease-in-out;
               }
 
               &.facebook:hover {
-
-
                 &:before {
 
                 }
               }
 
               &.twitter:hover {
-
-
                 &:before {
 
                 }
               }
 
               &.linkedin:hover {
-
-
                 &:before {
 
                 }
               }
 
               &.pinterest:hover {
-
                 &:before {
                 }
               }
@@ -620,7 +547,7 @@ body {
         }
 
         .modal-footer {
-          justify-content: flex-end;
+          justify-content: flex-end !important;
 
           .btnClose {
             &:hover,
@@ -1447,6 +1374,46 @@ body {
         }
       }
     }
+
+    .list_filter {
+      .card_title {
+        h6 {
+          font-size: 1.2rem !important;
+          margin-bottom: 4%;
+        }
+      }
+
+      .card {
+        .card-body {
+          h4 {
+            font-size: 1.2rem !important;
+          }
+        }
+      }
+    }
+
+    .inner_filter {
+      .no_padding {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      .card {
+        .card-body {
+          h4 {
+            font-size: 1.2rem !important;
+          }
+        }
+      }
+
+      #modalShare {
+        .modal-dialog {
+          .modal-content {
+            width: 90%;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1631,6 +1598,8 @@ body {
         }
       }
     }
+
+    
   }
 }
 
