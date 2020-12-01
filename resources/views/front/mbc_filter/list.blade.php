@@ -18,17 +18,16 @@ $menu = provider_menu();
       <div class="container">
         <div class="row">
 
-        <div class="col-md-8 col-lg-8 col-xl-12 col-10 m-auto">
-                  <div class="card_title">
-                    <h6>فلتر اسلامي</h6>
-                  </div>
-        </div>
+          <div class="col-md-8 col-lg-8 col-xl-12 col-10">
+            <div class="card_title">
+              <h6>فلتر اسلامي</h6>
+            </div>
+          </div>
 
-
-         @foreach ($filters as $filter)
+          @foreach ($filters as $filter)
           <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
             <div class="card ovf-hidden">
-              <a class="owl_content_img"  href="{{url("filter_inner/$filter->id?OpID=14")}}">
+              <a class="owl_content_img" href="{{url("filter_inner/$filter->id?OpID=14")}}">
                 <img class="w-100" src="{{url('uploads/filters/'.$filter->filter->image)}}" alt="{{$filter->filter->getTranslation('title',getCode())}}">
 
                 <a>
