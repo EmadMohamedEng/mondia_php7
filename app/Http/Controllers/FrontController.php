@@ -449,9 +449,9 @@ class FrontController extends Controller
           ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
       });
     }
-    if (request()->has('OpID') && request()->get('OpID') == mbc) {
+    if (request()->has('OpID') && request()->get('OpID') != '') {
       $filters = $filters->join('filter_posts', 'filter_posts.filter_id', '=', 'filters.id')
-      ->where('filter_posts.operator_id', mbc)
+      ->where('filter_posts.operator_id', request()->get('OpID'))
       ->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
     }
 

@@ -19,7 +19,7 @@ $menu = provider_menu();
           @foreach ($filters as $filter)
           <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
             <div class="card ovf-hidden">
-              <a href="{{url("filter_inner/$filter->id?OpID=14")}}">
+              <a class="link_href" href="{{url("filter_inner/$filter->id")}}">
                 <img class="w-100" src="{{url('uploads/filters/'.$filter->filter->image)}}" alt="{{$filter->filter->getTranslation('title',getCode())}}">
 
                 <a>
@@ -27,7 +27,7 @@ $menu = provider_menu();
                 </a>
               </a>
 
-              <a href="{{url("filter_inner/$filter->id?OpID=14")}}">
+              <a class="link_href" href="{{url("filter_inner/$filter->id")}}">
                 <div class="card-body">
                   <h4 class="card-title text-capitalize">{{$filter->filter->getTranslation('title',getCode())}}</h4>
                 </div>

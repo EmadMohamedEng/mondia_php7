@@ -716,7 +716,7 @@ class MbcTwoController extends Controller
   {
     $operator = Operator::find(mbc);
 
-    $filters = $operator->filterPosts->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))->load('filter');
+    $filters = $operator->filterPosts->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
 
     return view('front.mbc_filter.list', compact('filters'));
   }
@@ -724,8 +724,17 @@ class MbcTwoController extends Controller
     public function mbc_filter_inner(Request $request)
   {
     $filter = FilterPosts::find($request->id)->filter;
-    
-    return view('front.mbc_filter.inner', compact('filter'));
+    $enable = get_setting('enable_testing');
+
+    if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
+      $enable_free = get_setting('enable_free');
+        if($enable || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
+          if($enable_free == "1" || (session()->has('MSISDN') && $this->checkStatus(session()->get('MSISDN'),2))){
+            return view('front.mbc_filter.inner', compact('filter'));
+          }
+        }
+      return redirect('mbc_portal_landing');
+    }
   }
 
 }

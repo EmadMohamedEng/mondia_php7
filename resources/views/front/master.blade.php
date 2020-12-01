@@ -390,6 +390,27 @@ $enable = get_setting('enable_testing');
             </li>
 
             @if(request()->get('OpID') == mbc)
+            
+            <li class="nav-item">
+              <a class="menuTwo nav-link text-capitalize link_href" href="{{url('/filter_list')}}" style=" <?php echo $style ?>">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+                  <g>
+                    <path d="M429.66,250.5c-0.73,99.14-78.96,176.9-174.87,179.36c-101.62,2.6-183.95-78.67-184.46-178.78
+                      c-0.5-98.69,78.5-179.81,178.02-180.52C348.98,69.84,429.24,149.88,429.66,250.5z M378.82,337.26
+                      c41.8-59.58,37.17-151.57-29.65-207.2C283.62,75.49,185.2,84.6,130.55,150.41c-52.64,63.39-40.87,144.61-8.93,186.64
+                      C192.26,265.29,308.68,265.41,378.82,337.26z M363.41,356.23c-62.47-67.34-168.84-63.48-226.38,0.21
+                      C197.26,423.21,305.84,421.15,363.41,356.23z" />
+                    <path d="M321.95,190.49c0.02,39.34-32.36,71.69-71.7,71.65c-39.6-0.04-72.01-32.14-72.04-71.34
+                      c-0.03-40.35,32.07-72.43,72.48-72.42C289.85,118.38,321.93,150.84,321.95,190.49z M202.18,190.01
+                      c-0.05,26.6,21.36,48.11,47.93,48.15c26.28,0.04,47.8-21.47,47.89-47.86c0.08-26.29-21.5-47.96-47.76-47.96
+                      C223.78,142.35,202.23,163.73,202.18,190.01z" />
+                  </g>
+                </svg>
+                @lang('front.filters')
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+
             <li class="nav-item">
               <a class="menuTwo nav-link text-capitalize link_href" href="{{url('/terms')}}" style=" <?php echo $style ?>">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
@@ -458,6 +479,8 @@ $enable = get_setting('enable_testing');
                 <span class="sr-only">(current)</span>
               </a>
             </li>
+
+
             @endif
 
             @if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN')))
@@ -916,6 +939,15 @@ $enable = get_setting('enable_testing');
                 <li class="nav-item">
                   <a class="menuThree nav-link text-capitalize link_href" href="{{url('/profile')}}" style=" <?php echo $style ?>">
                     @lang('front.profile')
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                @endif
+
+                @if ( request()->get("OpID") == mbc )
+                <li class="nav-item">
+                  <a class="menuThree nav-link text-capitalize link_href" href="{{url('/filter_list')}}" style=" <?php echo $style ?>">
+                    @lang('front.filters')
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
