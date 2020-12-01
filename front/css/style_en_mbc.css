@@ -621,6 +621,8 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  direction: ltr;
+  margin-bottom: 0;
 }
 .main_container .inner_filter .card {
   background: #0f1218;
@@ -650,6 +652,8 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  direction: ltr;
+  margin-bottom: 0;
 }
 .main_container .inner_filter .inner_filter_btn .btn_download,
 .main_container .inner_filter .inner_filter_btn .btn_share {
@@ -1460,7 +1464,7 @@ body {
   }
   .main_container .inner_filter .inner_filter_btn .btn_download,
 .main_container .inner_filter .inner_filter_btn .btn_share {
-    font-size: 1.75rem;
+    font-size: 1.75rem !important;
     padding: 3% 2%;
   }
   .main_container .inner_filter #modalShare .modal-dialog .modal-content {
