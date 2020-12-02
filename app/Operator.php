@@ -21,4 +21,9 @@ class Operator extends Model {
         return $this->belongsTo('App\Country') ;
     }
 
+    public function filterPosts()
+    {
+        return $this->hasMany('App\FilterPosts', 'operator_id', 'id');
+    }
+
 }

@@ -5,7 +5,7 @@
   background-size: cover;
   background-attachment: fixed;
   position: fixed;
-  overflow-y: hidden;
+  overflow-y: scroll;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -18,13 +18,18 @@
   color: #e0c26c;
 }
 
-.best_features {
-  color: #e0c26c;
-  font-size: 14px;
-  padding: 0 3%;
+.main_container .landing_page .video-fluid #myVideo {
+  object-fit: fill;
+  width: 100%;
 }
 
-.all_slect{
+.best_features {
+  color: #e0c26c;
+  font-size: 13px;
+  padding: 0 1%;
+}
+
+.all_slect {
   padding-right: 9%;
   padding-left: 9%;
   position: relative;
@@ -47,7 +52,7 @@
   font-size: 1.25rem;
 }
 
-.landing_page .form_content{
+.landing_page .form_content {
   width: 85%;
 }
 
@@ -67,6 +72,7 @@
 .landing_page .form_content form .form-group input:focus {
   box-shadow: 0 0 0 0.2rem #aa6620;
 }
+
 .landing_page .cancel #reSendPin {
   background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
 }
@@ -299,8 +305,3 @@ a:hover {
     opacity: 1;
   }
 }
-
-
-
-
-

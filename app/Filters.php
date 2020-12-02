@@ -10,4 +10,8 @@ class Filters extends Model
   use Translatable;
   protected $table = "filters" ;
   protected $fillable = ['title','link','image'];
+
+  public function filterpost() {
+    return $this->hasMany('App\FilterPosts');
+}
 }

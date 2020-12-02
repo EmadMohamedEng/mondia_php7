@@ -2,23 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Video;
-use App\Provider;
-use App\Service;
-use App\Audio;
 use App\Post;
+use App\Audio;
+use App\Video;
+use App\Filters;
+use App\Service;
+use App\Operator;
+use App\Provider;
+use Carbon\Carbon;
+use Monolog\Logger;
+use App\FilterPosts;
+
+use App\DuIntgration;
+use App\Http\Requests;
 use App\MondiaSubscriber;
 use App\MondiaUnsubscriber;
-
-use Monolog\Logger;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\File;
+use Illuminate\Http\Request;
 use Monolog\Handler\StreamHandler;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
-use App\DuIntgration;
 
 class FrontController extends Controller
 {
@@ -428,6 +431,18 @@ class FrontController extends Controller
         $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
       });
 
+      if(get_setting('filters_flag')){
+        $filters = Filters::select('filters.*', 'filters.id as filter_id')
+        ->join('translatables', 'translatables.record_id', '=', 'filters.id')
+        ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
+        ->where('translatables.table_name', 'filters')
+        ->where('translatables.column_name', 'title')
+        ->where(function ($q) use ($request) {
+          $q->where('filters.title', 'like', '%' . $request->search . '%');
+          $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+        });
+      }
+
     if (request()->has('OpID') && request()->get('OpID') != '') {
       $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
         ->where('posts.operator_id', request()->get('OpID'))
@@ -440,9 +455,18 @@ class FrontController extends Controller
           ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
       });
     }
+    if (request()->has('OpID') && request()->get('OpID') != '' && get_setting('filters_flag')) {
+      $filters = $filters->join('filter_posts', 'filter_posts.filter_id', '=', 'filters.id')
+      ->where('filter_posts.operator_id', request()->get('OpID'))
+      ->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+    }
 
     $services = $services->groupBy('service_id')->get();
     $contents = $contents->groupBy('content_id')->get();
+    if(get_setting('filters_flag')){
+      $filters = $filters->groupBy('filter_id')->get();
+      return view('front.search_result', compact('services', 'contents', 'filters'));
+    }
     return view('front.search_result', compact('services', 'contents'));
   }
 
@@ -1594,6 +1618,40 @@ class FrontController extends Controller
     } else {
       return view('errors.404');
     }
+  }
+
+  public function filter_list(Request $request)
+  {
+    if(get_setting('filters_flag')){
+      $operator = Operator::find($request->OpID);
+
+      $filters = $operator->filterPosts->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+
+      return view('front.mbc_filter.list', compact('filters'));
+    }
+    return view('errors.404');
+  }
+
+  public function filter_inner(Request $request)
+  {
+    if(get_setting('filters_flag')){
+
+      $filter = FilterPosts::findOrFail($request->id)->filter;
+      $enable = get_setting('enable_testing');
+  
+      if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
+        $enable_free = get_setting('enable_free');
+          if($enable || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
+            if($enable_free == "1" || (session()->has('MSISDN') && $this->checkStatus(session()->get('MSISDN'),2))){
+              return view('front.mbc_filter.inner', compact('filter'));
+            }
+          }
+        return redirect('mbc_portal_landing');
+      }
+    }
+
+    return view('errors.404');
+    
   }
 
 }

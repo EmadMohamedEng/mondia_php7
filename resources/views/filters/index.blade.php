@@ -58,6 +58,9 @@
                                             <div class="btn-group">
                                                 <a class="btn btn-sm btn-success show-tooltip" href="{{url('filter_posts/create?filterID='.$value->id)}}" title="Add Filters Post"><i class="fa fa-plus"></i></a>
                                                 <a class="btn btn-sm show-tooltip" href="{{url("filters/$value->id/edit")}}" title="Edit"><i class="fa fa-edit"></i></a>
+                                                @if(\App\FilterPosts::where('filter_id',$value->id)->count()>0)
+                                                <a class="btn btn-sm show-tooltip" href="{{url("filters/$value->id/filter_posts")}}" title="Posts"><i class="fa fa-table"></i></a>
+                                                @endif
                                                 <a class="btn btn-sm show-tooltip btn-danger" onclick="return ConfirmDelete();" href="{{url("filters/$value->id/delete")}}" title="Delete"><i class="fa fa-trash"></i></a>
                                             </div>
                                         </td>

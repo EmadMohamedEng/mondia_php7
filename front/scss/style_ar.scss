@@ -108,8 +108,6 @@ body {
 
   /* End Header */
 
-
-
   /* Start Home Page */
   .img_carousel {
     .owl_one {
@@ -186,8 +184,6 @@ body {
   }
 
   /* End List Page */
-
-
   .list_page {
     .content_carousel_head {
       text-align: right;
@@ -449,6 +445,121 @@ body {
   }
 
   /* End Profile Page */
+
+  /* Start MBC Filter */
+  .list_filter {
+    .card_title {
+      h6 {
+        text-align: right;
+      }
+    }
+
+    .card {
+      .owl_content_img {
+
+        img {}
+      }
+
+      .card-body {
+        .card-title {
+          direction: rtl !important;
+        }
+      }
+    }
+  }
+
+  .inner_filter {
+    .card {
+      .owl_content_img {
+        img {}
+      }
+
+      .card-body {
+        .card-title {
+          direction: rtl !important;
+        }
+      }
+    }
+
+    .inner_filter_btn {
+      .btn_download,
+      .btn_share {
+        font-size: 0.85rem !important;
+
+        &:focus {}
+
+        &:hover,
+        &:focus {
+
+        }
+      }
+    }
+  }
+
+  #modalShare {
+    direction: rtl !important;
+
+    .modal-dialog {
+      .modal-content {
+        .modal-header {
+          .close {
+            &:focus {
+            }
+          }
+        }
+
+        .modal-body {
+          .social-icon {
+            a {
+              &:before {
+              }
+
+              &.facebook:hover {
+                &:before {
+
+                }
+              }
+
+              &.twitter:hover {
+                &:before {
+
+                }
+              }
+
+              &.linkedin:hover {
+                &:before {
+
+                }
+              }
+
+              &.pinterest:hover {
+                &:before {
+                }
+              }
+
+              &:hover:before {
+              }
+
+              i {
+              }
+            }
+          }
+        }
+
+        .modal-footer {
+          justify-content: flex-end !important;
+
+          .btnClose {
+            &:hover,
+            &:focus {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* End MBC Filter */
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {
@@ -1263,6 +1374,46 @@ body {
         }
       }
     }
+
+    .list_filter {
+      .card_title {
+        h6 {
+          font-size: 1.2rem !important;
+          margin-bottom: 4%;
+        }
+      }
+
+      .card {
+        .card-body {
+          h4 {
+            font-size: 1.2rem !important;
+          }
+        }
+      }
+    }
+
+    .inner_filter {
+      .no_padding {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      .card {
+        .card-body {
+          h4 {
+            font-size: 1.2rem !important;
+          }
+        }
+      }
+
+      #modalShare {
+        .modal-dialog {
+          .modal-content {
+            width: 90%;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1447,6 +1598,8 @@ body {
         }
       }
     }
+
+    
   }
 }
 

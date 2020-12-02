@@ -1,5 +1,8 @@
 <?php
 return [
+    'use_filter' => 'استخدم الفلتر',
+    'islamic_filter' => 'فلتر اسلامي',
+    'filters' => 'الفلتر',
     'home' => 'سرورق',
     'welcome' => 'خوش آمدید',
     'more' => 'مزید',

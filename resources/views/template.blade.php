@@ -450,6 +450,7 @@ if (Config::get('languages')[App::getLocale()] == "English") {
                             <!-- END Submenu -->
                         </li>
                     </ul>
+                    @if(get_setting('filters_flag'))
 
                     <ul class="nav nav-list">
                         <li id="filters">
@@ -467,7 +468,7 @@ if (Config::get('languages')[App::getLocale()] == "English") {
                             <!-- END Submenu -->
                         </li>
                     </ul>
-                    {{--@endif--}}
+                    @endif
                 </ul>
                 <!-- END Navlist -->
 

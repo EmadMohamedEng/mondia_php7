@@ -27,6 +27,8 @@ body {
   /* End Sebha Page */
   /* Start Profile Page */
   /* End Profile Page */
+  /* Start MBC Filter */
+  /* End MBC Filter */
 }
 .main_container .header .header_logo.header_logo,
 .main_container .header .header_icon.header_logo {
@@ -213,7 +215,25 @@ body {
 .main_container .profile .profile_table table tbody tr .label-view2 {
   text-align: right;
 }
-
+.main_container .list_filter .card_title h6 {
+  text-align: right;
+}
+.main_container .list_filter .card .card-body .card-title {
+  direction: rtl !important;
+}
+.main_container .inner_filter .card .card-body .card-title {
+  direction: rtl !important;
+}
+.main_container .inner_filter .inner_filter_btn .btn_download,
+.main_container .inner_filter .inner_filter_btn .btn_share {
+  font-size: 0.85rem !important;
+}
+.main_container #modalShare {
+  direction: rtl !important;
+}
+.main_container #modalShare .modal-dialog .modal-content .modal-footer {
+  justify-content: flex-end !important;
+}
 @media (min-width: 320px) and (max-width: 359.9px) {
   .padding_phones {
     padding-left: 1rem !important;
@@ -656,6 +676,23 @@ body {
   }
   .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
     left: 50% !important;
+  }
+  .main_container .list_filter .card_title h6 {
+    font-size: 1.2rem !important;
+    margin-bottom: 4%;
+  }
+  .main_container .list_filter .card .card-body h4 {
+    font-size: 1.2rem !important;
+  }
+  .main_container .inner_filter .no_padding {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .main_container .inner_filter .card .card-body h4 {
+    font-size: 1.2rem !important;
+  }
+  .main_container .inner_filter #modalShare .modal-dialog .modal-content {
+    width: 90%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1030px) {
