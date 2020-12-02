@@ -12,8 +12,8 @@
   <link rel="stylesheet" href='{{url('front/stc')}}/css/all.min.css'>
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_mbc_two.css">
 </head>
@@ -33,10 +33,10 @@
     color: #e0c26c;
   }
 
-.all_slect{
-  padding-right: 9%;
+  .all_slect {
+    padding-right: 9%;
     padding-left: 9%;
-}
+  }
 </style>
 @php
 App::setLocale($lang);
@@ -74,43 +74,24 @@ if ($lang == 'ar') {
       </div>
     </div>
 
-
     <div class="landing_page">
       <div class="strip text-dark">
         <h2>@lang('messages.enjoy_time_landing')</h2>
         <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
       </div>
 
+      <div class="row div_size m-0">
+        <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
+          <div class="video-fluid">
+            <video id="myVideo" poster="front/images/mbc_landing/video_poster.png" loop playsinline controls>
+              <source src="front/images/mbc_landing/mbc_video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+
       <div class="shbka">
         <div class="container">
-          <div class="row div_size m-0">
-            {{-- @if($lang == 'ar')
-            <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
-              <img src='{{asset("front/images/mbc_landing/02.png")}}'>
-            </div>
-
-            <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
-              <img src='{{asset("front/images/mbc_landing/01.png")}}'>
-            </div>
-            @else
-            <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
-              <img src='{{asset("front/images/mbc_landing/04.png")}}'>
-            </div>
-
-            <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
-              <img src='{{asset("front/images/mbc_landing/03.png")}}'>
-            </div>
-            @endif --}}
-
-            <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
-              <img src='{{asset("front/images/mbc_landing/02.png")}}'>
-            </div>
-
-            <div class="col-md-6 col-lg-6 col-xl-6 col-6 p-0">
-              <img src='{{asset("front/images/mbc_landing/01.png")}}'>
-            </div>
-          </div>
-
           <div class="zain_viva">
             @if(Session::has('success'))
             <div class="alert alert-success alert-dismissible">
@@ -140,7 +121,7 @@ if ($lang == 'ar') {
               <div class="col-3 p-0">
                 <div class="dropdown">
                   <button class="btn btn_select" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 <span style="font-weight: bold;">{{ $country->code }}</span>
+                    <span style="font-weight: bold;">{{ $country->code }}</span>
                   </button>
 
                 </div>
@@ -167,74 +148,80 @@ if ($lang == 'ar') {
               <input type="tel" class="form-control" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
             </div> -->
 
-        <button id="zain_submit" class="btn text-capitalize" type="submit">@lang('messages.Subscribe_Now')</button>
-        </form>
-        <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
+            <button id="zain_submit" class="btn text-capitalize" type="submit">@lang('messages.Subscribe_Now')</button>
+          </form>
+          <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
                 <h5>الى <span>965</span><span> STOP1 </span>لالغاء الاشتراك ارسل</h5>-->
+        </div>
+      </div>
+
+      <div class="cancel text-center mt-3 text-white">
+        <a href="{{url('mbc_portal_login' )}}" class="Are_you_a_subscriber">
+          <p>@lang('messages.Are_you_a_subscriber')</p>
+        </a>
+        <!-- <p style="font-size: 9px;">@lang('messages.click_sub_landing')</p> -->
+        {{-- <p>@lang('messages.unsubscribelink') <a href="{{url('mbc_portal_unsub' )}}">@lang('messages.Link')</a></p> --}}
       </div>
     </div>
+    <!-- script -->
+    <script src="{{url('front/stc')}}/js/jquery-3.4.0.min.js"></script>
+    <!-- <script src="{{ url('front/stc')}}/js/popper.min.js"></script> -->
+    <script src="{{url('front/stc')}}/js/bootstrap.min.js"></script>
 
-    <div class="cancel text-center mt-3 text-white">
-      <a href="{{url('mbc_portal_login' )}}" class="Are_you_a_subscriber">
-        <p>@lang('messages.Are_you_a_subscriber')</p>
-      </a>
-      <!-- <p style="font-size: 9px;">@lang('messages.click_sub_landing')</p> -->
-      {{-- <p>@lang('messages.unsubscribelink') <a href="{{url('mbc_portal_unsub' )}}">@lang('messages.Link')</a></p> --}}
+    <!-- JQuery -->
+    <script src="{{ url('front/stc')}}/js/script_viva.js"></script>
 
-    </div>
+    <script>
+      const myVideo = document.getElementById('myVideo');
 
-  </div>
+      // Not all browsers return promise from .play().
+      const playPromise = myVideo.play() || Promise.reject('');
+      playPromise.then(() => {
+        // Video could be autoplayed, do nothing.
+      }).catch(err => {
+        // Video couldn't be autoplayed because of autoplay policy. Mute it and play.
+        myVideo.muted = true;
+        myVideo.play();
+      });
+    </script>
 
-  </div>
-  <!-- script -->
-  <script src="{{url('front/stc')}}/js/jquery-3.4.0.min.js"></script>
-  <!-- <script src="{{ url('front/stc')}}/js/popper.min.js"></script> -->
-  <script src="{{url('front/stc')}}/js/bootstrap.min.js"></script>
-
-  <!-- JQuery -->
-  <script src="{{ url('front/stc')}}/js/script_viva.js"></script>
-
-
-  <script>
-    // Material Select Initialization
-
-
-    $('.select_option').click(function () {
-      var x= $(this).data('select');
-      $('#dropdownMenu1').html(x);
-    })
-
-    // $('.select_option').click(function (e) {
-    // document.getElementById("county_code").innerHTML = e.target.id
-    // })
-
-    // $('.select_option').click(function (e) {
-    // document.getElementById("phone").value = e.target.id
-    // })
-
-    $(document).ready(function() {
-      var msisdn = $("#phone").val();
-      if (msisdn != "" && msisdn.length == 8 && msisdn != "@_MSISDN") {
-        $("#viva_form").submit();
-      }
-    });
-
-    $('#zain_submit').focusin(function() {
-      $('#viva_form').submit()
-    });
-
-    function toggle_lang() {
-      const checkbox = document.getElementById("on-off");
-      checkbox.addEventListener('change', (event) => {
-        if (event.target.checked) {
-          location.href = "{{url('lang/ar')}}";
-        } else {
-          location.href = "{{url('lang/en')}}";
-        }
+    <script>
+      // Material Select Initialization
+      $('.select_option').click(function() {
+        var x = $(this).data('select');
+        $('#dropdownMenu1').html(x);
       })
-    }
-  </script>
 
+      // $('.select_option').click(function (e) {
+      // document.getElementById("county_code").innerHTML = e.target.id
+      // })
+
+      // $('.select_option').click(function (e) {
+      // document.getElementById("phone").value = e.target.id
+      // })
+
+      $(document).ready(function() {
+        var msisdn = $("#phone").val();
+        if (msisdn != "" && msisdn.length == 8 && msisdn != "@_MSISDN") {
+          $("#viva_form").submit();
+        }
+      });
+
+      $('#zain_submit').focusin(function() {
+        $('#viva_form').submit()
+      });
+
+      function toggle_lang() {
+        const checkbox = document.getElementById("on-off");
+        checkbox.addEventListener('change', (event) => {
+          if (event.target.checked) {
+            location.href = "{{url('lang/ar')}}";
+          } else {
+            location.href = "{{url('lang/en')}}";
+          }
+        })
+      }
+    </script>
 </body>
 
 </html>
