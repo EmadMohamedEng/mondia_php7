@@ -15,7 +15,7 @@ class AddFiltersFlagToSettings extends Migration
     {
         DB::table('settings')->insert([
             'key' => 'filters_flag',
-            'value' => 1,
+            'value' => 0,
             'type_id' => 7
         ]);
     }
