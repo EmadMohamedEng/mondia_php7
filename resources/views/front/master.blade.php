@@ -952,7 +952,7 @@ $enable = get_setting('enable_testing');
                 @endif
 
                 @if(get_setting('filters_flag') && request()->get("OpID") == mbc)
-                  <li class="nav-item">
+                  <li class="nav-item m-auto">
                     <a class="menuThree nav-link text-capitalize link_href" href="{{url('/filter_list')}}" style=" <?php echo $style ?>">
                       @lang('front.filters')
                       <span class="sr-only">(current)</span>

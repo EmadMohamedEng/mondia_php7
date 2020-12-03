@@ -522,14 +522,16 @@ select {
           display: flex;
           align-items: center;
           justify-content: center;
+          padding: 1rem 0.25rem;
 
           .card-title {
             text-align: center;
-            font-size: 1.05rem;
+            font-size: 1rem;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             direction: ltr;
+            margin-bottom: 0;
           }
 
           .card-text {

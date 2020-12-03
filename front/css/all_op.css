@@ -402,14 +402,16 @@ select:active {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem 0.25rem;
 }
 .main_container .list_page .item .card .card-body .card-title {
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   direction: ltr;
+  margin-bottom: 0;
 }
 .main_container .list_page .item .card .card-body .card-text i {
   color: #adadad;

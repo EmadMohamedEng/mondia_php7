@@ -228,6 +228,12 @@ body {
             transform: rotate(-45deg);
           }
         }
+
+        .card-body {
+          .card-title {
+            direction: rtl;
+          }
+        }
       }
     }
   }

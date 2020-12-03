@@ -129,6 +129,9 @@ body {
   right: 75%;
   transform: rotate(-45deg);
 }
+.main_container .list_page .item .card .card-body .card-title {
+  direction: rtl;
+}
 .main_container .inner_page .cover {
   text-align: right;
 }
