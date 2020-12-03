@@ -48,11 +48,13 @@ if ($lang == 'ar') {
   $bottom = "bottom: 0%;";
   $font = "font-size: 20px;";
   $float = "float-left";
+  $Mobily = "موبايلي";
 } else {
   $text = "text-left";
   $left = "ltr";
   $font = "font-size: 16px;";
   $float = "float-right";
+  $Mobily = "Mobily";
 }
 ?>
 
@@ -137,7 +139,7 @@ if ($lang == 'ar') {
               <select class="mdb-select md-form form-control" name="operator" required>
                 <option value="" disabled selected>@lang('messages.Choose_your_Operators')</option>
                 @foreach($operators as $operator)
-                <option value="{{$operator->operator_name}}">{{ $operator->name  == "mbc"?  "Mobily" :   $operator->name }}</option>
+                <option value="{{$operator->operator_name}}">{{ $operator->name  == "mbc"?  $Mobily :   $operator->name }}</option>
                 @endforeach
               </select>
             </div>
