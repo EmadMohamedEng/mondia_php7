@@ -643,7 +643,7 @@ class MbcController extends Controller
       session()->forget('MSISDN');
       session()->forget('mbc_op_id');
 
-      return redirect('mbc_portal_landing');
+      return redirect('mbc_portal_login');
     }
 
 
