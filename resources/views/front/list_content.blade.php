@@ -61,11 +61,11 @@
               }
               @endphp
               <img class="w-100" src="{{$src}}" alt="Card image cap">
-              @if(request()->get('OpID') == orange)
+              {{-- @if(request()->get('OpID') == orange)
               <div class="playCircle">
                 <i class="far fa-play-circle fa-2x"></i>
               </div>
-              @endif
+              @endif --}}
 
               @if(request()->get('OpID') == mbc)
               @if ($item->free == 1)

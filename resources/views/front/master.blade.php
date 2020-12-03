@@ -884,7 +884,7 @@ $enable = get_setting('enable_testing');
                 </li> -->
                 @foreach(provider_menu() as $provider)
                 <li class="nav-item dropdown">
-                  <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" <?php echo $style ?>">
                     @if($provider->image)
                     @else
                     <i class="icon_before fas fa-mosque fa-lg"></i>
@@ -905,7 +905,7 @@ $enable = get_setting('enable_testing');
                 @endforeach
 
                 <li class="nav-item dropdown">
-                  <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" <?php echo $style ?>">
 
                     @lang('front.muslim_guide')</a>
                   <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink8">
@@ -932,7 +932,7 @@ $enable = get_setting('enable_testing');
 
                 @if ( request()->get("OpID") == mbc )
                 <li class="nav-item dropdown">
-                  <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" <?php echo $style ?>">
                   @lang('front.terms')
                   </a>
                   <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink9">

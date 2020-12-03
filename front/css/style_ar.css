@@ -106,6 +106,21 @@ body {
 .main_container .content_carousel .content_carousel_head .btn_more {
   float: left !important;
 }
+.main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
+  direction: rtl;
+}
+.main_container .content_carousel .owl_content_two .item .card .card-body .card-title {
+  direction: rtl;
+}
+.main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
+  direction: rtl;
+}
+.main_container .content_carousel .owl_content_four .item .card .card-body .card-title {
+  direction: rtl;
+}
+.main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
+  direction: rtl;
+}
 .main_container .list_page .content_carousel_head {
   text-align: right;
 }

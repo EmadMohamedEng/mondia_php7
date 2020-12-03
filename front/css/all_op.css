@@ -242,17 +242,18 @@ select:active {
   border-top-right-radius: 10px;
 }
 .main_container .content_carousel .owl_content_one .item .card .card-body {
-  padding: 1.25rem 0.25rem;
+  padding: 1rem 0.25rem;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   direction: ltr;
+  margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_one .item .card .card-body .card-text i {
   color: #adadad;
@@ -270,15 +271,16 @@ select:active {
   border-top-right-radius: 10px;
 }
 .main_container .content_carousel .owl_content_two .item .card .card-body {
-  padding: 1.25rem 0.25rem;
+  padding: 1rem 0.25rem;
 }
 .main_container .content_carousel .owl_content_two .item .card .card-body .card-title {
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   direction: ltr;
+  margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_two .item .card .card-body .card-text i {
   color: #adadad;
@@ -296,15 +298,16 @@ select:active {
   border-top-right-radius: 10px;
 }
 .main_container .content_carousel .owl_content_three .item .card .card-body {
-  padding: 1.25rem 0.25rem;
+  padding: 1rem 0.25rem;
 }
 .main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   direction: ltr;
+  margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_three .item .card .card-body .card-text i {
   color: #adadad;
@@ -322,15 +325,16 @@ select:active {
   border-top-right-radius: 10px;
 }
 .main_container .content_carousel .owl_content_four .item .card .card-body {
-  padding: 1.25rem 0.25rem;
+  padding: 1rem 0.25rem;
 }
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-title {
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   direction: ltr;
+  margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_four .item .card .card-body .card-text i {
   color: #adadad;
@@ -348,15 +352,16 @@ select:active {
   border-top-right-radius: 10px;
 }
 .main_container .content_carousel .owl_content_five .item .card .card-body {
-  padding: 1.25rem 0.25rem;
+  padding: 1rem 0.25rem;
 }
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   direction: ltr;
+  margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-text i {
   color: #adadad;

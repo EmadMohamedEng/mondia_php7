@@ -146,6 +146,12 @@ body {
       .item {
         .card {
           .owl_content_img {}
+
+          .card-body {
+            .card-title {
+              direction: rtl;
+            }
+          }
         }
       }
     }
@@ -154,6 +160,12 @@ body {
       .item {
         .card {
           .owl_content_img {}
+
+          .card-body {
+            .card-title {
+              direction: rtl;
+            }
+          }
         }
       }
     }
@@ -162,6 +174,12 @@ body {
       .item {
         .card {
           .owl_content_img {}
+
+          .card-body {
+            .card-title {
+              direction: rtl;
+            }
+          }
         }
       }
     }
@@ -170,6 +188,12 @@ body {
       .item {
         .card {
           .owl_content_img {}
+
+          .card-body {
+            .card-title {
+              direction: rtl;
+            }
+          }
         }
       }
     }
@@ -178,6 +202,12 @@ body {
       .item {
         .card {
           .owl_content_img {}
+
+          .card-body {
+            .card-title {
+              direction: rtl;
+            }
+          }
         }
       }
     }
@@ -482,6 +512,7 @@ body {
     }
 
     .inner_filter_btn {
+
       .btn_download,
       .btn_share {
         font-size: 0.85rem !important;
@@ -489,9 +520,7 @@ body {
         &:focus {}
 
         &:hover,
-        &:focus {
-
-        }
+        &:focus {}
       }
     }
   }
@@ -503,45 +532,34 @@ body {
       .modal-content {
         .modal-header {
           .close {
-            &:focus {
-            }
+            &:focus {}
           }
         }
 
         .modal-body {
           .social-icon {
             a {
-              &:before {
-              }
+              &:before {}
 
               &.facebook:hover {
-                &:before {
-
-                }
+                &:before {}
               }
 
               &.twitter:hover {
-                &:before {
-
-                }
+                &:before {}
               }
 
               &.linkedin:hover {
-                &:before {
-
-                }
+                &:before {}
               }
 
               &.pinterest:hover {
-                &:before {
-                }
+                &:before {}
               }
 
-              &:hover:before {
-              }
+              &:hover:before {}
 
-              i {
-              }
+              i {}
             }
           }
         }
@@ -550,9 +568,9 @@ body {
           justify-content: flex-end !important;
 
           .btnClose {
+
             &:hover,
-            &:focus {
-            }
+            &:focus {}
           }
         }
       }
@@ -1599,7 +1617,7 @@ body {
       }
     }
 
-    
+
   }
 }
 
