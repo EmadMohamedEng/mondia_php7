@@ -640,7 +640,10 @@ class MbcController extends Controller
       session()->forget('status');
       session()->forget('ooredoo_op_id');
 
-      return redirect('mbc_portal_login');
+      session()->forget('MSISDN');
+      session()->forget('mbc_op_id');
+
+      return redirect('mbc_portal_landing');
     }
 
 
