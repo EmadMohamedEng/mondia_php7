@@ -229,7 +229,7 @@ return [
 
     'enjoy_time_landing' => 'الكنز',
     'Mbc_Muslim_guide_landing' => 'احصل علي أفضل المميزات التي تهم المسلم في حياته اليومية',
-    'Are_you_a_subscriber' => 'مشترك حالي؟تسجيل الدخول',
+    'Are_you_a_subscriber' => 'مشترك حالي؟ تسجيل الدخول',
     'click_sub_landing' => 'من خلال الضغط علي اشتراك الان فأنت توافق علي الشروط والاحكام',
     'Choose_your_Operators' => 'اختر الشبكة',
 
