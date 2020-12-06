@@ -37,3 +37,8 @@ Route::prefix('v1')->group(function() {
   Route::get('users', 'TestController@users');
 
   });
+
+
+/*************orange************* */
+define('END_POINT', 'https://dev.digizone.com.kw');
+/***********end orange*********** */
