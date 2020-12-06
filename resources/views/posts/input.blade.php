@@ -9,7 +9,7 @@
             <option value=""></option>
             @foreach ($operators as $value)
             <option value="{{ $value->id }}" @if($post && $post->operator_id==$value->id) selected @endif>
-                    {{$value->name }}
+                    {{ $value->country->title . ' - ' . $value->name }}
         </option>
         @endforeach
     </select>
