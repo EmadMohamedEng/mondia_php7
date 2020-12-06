@@ -47,7 +47,7 @@ class PostsController extends Controller
                 return $post->id;
             })
             ->addColumn('operator', function (Post $post) {
-                return '<a href="'.url('operators/'.$post->operator->id.'/edit').'"target=_blank>'.$post->operator->name.'</a>';
+                return '<a href="'.url('operators/'.$post->operator->id.'/edit').'"target=_blank>'. $post->operator->country->title . ' - ' . $post->operator->name.'</a>';
 
             })
             ->addColumn('video', function (Post $post) {
