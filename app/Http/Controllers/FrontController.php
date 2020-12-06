@@ -224,7 +224,7 @@ class FrontController extends Controller
       $enable_free = get_setting('enable_free');
         if($enable || $content->free || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
           if($enable_free == "1" || (session()->has('MSISDN') && $this->checkStatus(session()->get('MSISDN'),2))){
-          return view('front.inner_enable_testing', compact('content','contents'));
+            return view('front.inner_enable_testing', compact('content','contents'));
           }
         }
       return redirect('mbc_portal_landing');
@@ -233,7 +233,10 @@ class FrontController extends Controller
 
 
     if($request->has('OpID') && $request->OpID == orange){  //mbc
-          return view('front.inner_enable_testing', compact('content','contents'));
+      if ($enable || (session()->get('orange_op_id') == orange && session()->get('status') == 'active' && session()->has('MSISDN'))) {
+        return view('front.inner_enable_testing', compact('content','contents'));
+      }
+      return redirect('orange_portal_login');
     }
 
 
@@ -1638,7 +1641,7 @@ class FrontController extends Controller
 
       $filter = FilterPosts::findOrFail($request->id)->filter;
       $enable = get_setting('enable_testing');
-  
+
       if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
         $enable_free = get_setting('enable_free');
           if($enable || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
@@ -1651,7 +1654,7 @@ class FrontController extends Controller
     }
 
     return view('errors.404');
-    
+
   }
 
 }

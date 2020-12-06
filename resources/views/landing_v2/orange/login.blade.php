@@ -81,7 +81,7 @@ if ($lang == 'ar') {
         <div class="container">
           <div class="form_content">
             <!--<h5>ادخل رقم الهاتف</h5>-->
-            <form method="post" action="#0" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
+            <form method="post" action="{{url('orange_portal_login')}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
               {{ csrf_field() }}
 
               <div class="row m-0">
@@ -96,7 +96,7 @@ if ($lang == 'ar') {
 
                 <div class="col-9 p-0">
                   <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-                  <input type="hidden" name="code" value="012">
+                  <input type="hidden" name="code" value="2012">
                   <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" placeholder="@lang('messages.Enter_your')" name="number" required>
                 </div>
               </div>
