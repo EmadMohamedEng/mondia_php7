@@ -87,7 +87,7 @@ Route::get('du_set_session','FrontController@du_set_session');
 
 ///////////////////////// stc Kuwait /////////////////////////////
 define('stc',11);
-define('orange',8);
+define('orange',orange_op_id());
 define('mbc',mbc_op_id());
 Route::get('landing_stc', 'StcController@viva_login');
 Route::post('viva_login_action', 'StcController@viva_login_action');
@@ -157,7 +157,6 @@ Route::get('mbc_portal_logout', 'MbcController@logout');
 Route::get('orange_portal_login', 'OrangeController@login');
 Route::get('orange_portal_unsub', 'OrangeController@unsubscribe');
 Route::post('orange_portal_login', 'OrangeController@postLogin');
-
 Route::get('orange_logout', 'OrangeController@logout');
 /***************end orange ****************** */
 
