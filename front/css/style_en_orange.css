@@ -153,6 +153,14 @@ body {
   background: #FF6600;
   color: #FFF;
 }
+.main_container .img_carousel .owl_one .item .owl_one_img img {
+  height: 26.187rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
 .main_container .img_carousel .owl_one .item .content_free {
   background: #FF6600;
   color: #FFF;
@@ -163,9 +171,16 @@ body {
   transform: rotate(45deg);
   border-radius: 10px;
 }
-.main_container .img_carousel .owl_one .item .btn_subscribe button {
-  background: #FF6600;
-  color: #FFF;
+.main_container .img_carousel .owl_one .item .orange_svg .trapezoid {
+  display: inline-block;
+  width: 10em;
+  height: 0;
+  border-bottom: 3em solid #FF6600;
+  border-left: 0 solid transparent;
+  border-right: 39px solid transparent;
+}
+.main_container .img_carousel .owl_one .item .orange_svg svg .polygon_svg {
+  fill: #FF6600;
 }
 .main_container .img_carousel .owl-theme .owl-dots .owl-dot.active span,
 .main_container .img_carousel .owl-theme .owl-dots .owl-dot:hover span {

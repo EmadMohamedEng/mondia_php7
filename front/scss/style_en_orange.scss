@@ -208,7 +208,14 @@ body {
     .owl_one {
       .item {
         .owl_one_img {
-          img {}
+          img {
+            height: 26.187rem;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+          }
         }
 
         .content_free {
@@ -224,9 +231,27 @@ body {
 
         .btn_subscribe {
           button {
-            background: $text_color;
-            color: $white_color;
-            // top: 91%;
+            // background: $text_color;
+            // color: $white_color;
+          }
+        }
+
+        .orange_svg {
+          .trapezoid {
+            display: inline-block;
+            width: 10em;
+            height: 0;
+            border-bottom: 3em solid $bg_color;
+            border-left: 0 solid transparent;
+            border-right: 39px solid transparent;
+          }
+
+          svg {
+
+            // position: absolute;
+            .polygon_svg {
+              fill: $bg_color;
+            }
           }
         }
       }
