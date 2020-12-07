@@ -322,7 +322,11 @@ $enable = get_setting('enable_testing');
                   </g>
                 </svg>
                 @lang('front.muslim_guide')</a>
-
+                @if(request()->get('OpID') == orange && session()->has('orange_op_id') && session()->get('status') == 'active' )
+                <li class="nav-item">
+                  <a class="nav-link text-capitalize" href="{{url('orange_logout')}}"><i class="icon_before fas fa-key-alt fa-lg"></i> @lang('front.logout')</a>
+                </li>
+                @endif
               <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink3">
                 <a class="dropdown-item text-capitalize link_href" href="{{url('sebha')}}">@lang('front.sebha')</a>
                 @if (request()->get("OpID") == mbc )
