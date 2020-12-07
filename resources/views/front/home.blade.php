@@ -50,17 +50,13 @@ $menu = provider_menu();
           @endif
           @endif
 
-          @if(request()->get('OpID') == mbc)
-          <div class="btn_subscribe w-100">
-            <button onclick="" class="btn btn-sm text-capitalize">
-              <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
-            </button>
-          </div>
-          @endif
-
+          <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
           <div class="orange_svg w-100">
-          <span class="trapezoid"></span>
+            <p class="trapezoid mb-0 font-weight-bold">
+              <span>Ramadan Ahadeth <i class="fas fa-play"></i></span>
+            </p>
           </div>
+          </a>
         </div>
         @endforeach
         @foreach($health as $content)

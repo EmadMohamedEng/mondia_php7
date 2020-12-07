@@ -229,37 +229,75 @@ body {
           border-radius: 10px;
         }
 
-        .btn_subscribe {
-          button {
-            // background: $text_color;
-            // color: $white_color;
-          }
-        }
-
         .orange_svg {
+          position: relative;
+
           .trapezoid {
+            padding: 0 1%;
+            color: $white_color;
             display: inline-block;
-            width: 10em;
+            width: 32%;
             height: 0;
+            border-bottom-left-radius: 10px;
             border-bottom: 3em solid $bg_color;
             border-left: 0 solid transparent;
             border-right: 39px solid transparent;
-          }
+            position: absolute;
+            bottom: -23.55px;
+            left: 15.99%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
 
-          svg {
+            span {
+              margin-top: 6%;
+              display: block;
 
-            // position: absolute;
-            .polygon_svg {
-              fill: $bg_color;
+              i {
+                padding-left: 5%;
+                font-size: 1.25rem;
+              }
             }
           }
         }
       }
     }
 
-    .owl-theme .owl-dots .owl-dot.active span,
-    .owl-theme .owl-dots .owl-dot:hover span {
-      background: #aa6620;
+    .owl-theme .owl-nav {
+      color: $bg_color;
+      margin-top: 0;
+      position: relative;
+
+      button.owl-next,
+      button.owl-prev {
+        opacity: 1;
+        font-weight: bold;
+        font-size: 3rem;
+        position: absolute;
+        bottom: 8rem;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+
+        &.owl-next {
+          right: 0.5%;
+        }
+
+        &.owl-prev {
+          left: 2%;
+        }
+
+        &:hover,
+        &:focus {
+          background: none;
+          color: $bg_color;
+          outline: 0;
+        }
+      }
     }
   }
 

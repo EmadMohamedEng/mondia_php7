@@ -171,20 +171,68 @@ body {
   transform: rotate(45deg);
   border-radius: 10px;
 }
+.main_container .img_carousel .owl_one .item .orange_svg {
+  position: relative;
+}
 .main_container .img_carousel .owl_one .item .orange_svg .trapezoid {
+  padding: 0 1%;
+  color: #FFF;
   display: inline-block;
-  width: 10em;
+  width: 32%;
   height: 0;
+  border-bottom-left-radius: 10px;
   border-bottom: 3em solid #FF6600;
   border-left: 0 solid transparent;
   border-right: 39px solid transparent;
+  position: absolute;
+  bottom: -23.55px;
+  left: 15.99%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
-.main_container .img_carousel .owl_one .item .orange_svg svg .polygon_svg {
-  fill: #FF6600;
+.main_container .img_carousel .owl_one .item .orange_svg .trapezoid span {
+  margin-top: 6%;
+  display: block;
 }
-.main_container .img_carousel .owl-theme .owl-dots .owl-dot.active span,
-.main_container .img_carousel .owl-theme .owl-dots .owl-dot:hover span {
-  background: #aa6620;
+.main_container .img_carousel .owl_one .item .orange_svg .trapezoid span i {
+  padding-left: 5%;
+  font-size: 1.25rem;
+}
+.main_container .img_carousel .owl-theme .owl-nav {
+  color: #FF6600;
+  margin-top: 0;
+  position: relative;
+}
+.main_container .img_carousel .owl-theme .owl-nav button.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
+  opacity: 1;
+  font-weight: bold;
+  font-size: 3rem;
+  position: absolute;
+  bottom: 8rem;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.main_container .img_carousel .owl-theme .owl-nav button.owl-next.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev.owl-next {
+  right: 0.5%;
+}
+.main_container .img_carousel .owl-theme .owl-nav button.owl-next.owl-prev,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev.owl-prev {
+  left: 2%;
+}
+.main_container .img_carousel .owl-theme .owl-nav button.owl-next:hover, .main_container .img_carousel .owl-theme .owl-nav button.owl-next:focus,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev:hover,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev:focus {
+  background: none;
+  color: #FF6600;
+  outline: 0;
 }
 .main_container .content_carousel .content_carousel_head .link_title {
   color: #FF6600;
