@@ -88,15 +88,13 @@ if ($lang == 'ar') {
                 <div class="col-3 p-0">
                   <div class="dropdown">
                     <button class="btn btn_select" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span style="font-weight: bold;">012</span>
+                      <span style="font-weight: bold;">+20</span>
                     </button>
 
                   </div>
                 </div>
 
                 <div class="col-9 p-0">
-                  <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-                  <input type="hidden" name="code" value="2012">
                   <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" placeholder="@lang('messages.Enter_your')" name="number" required>
                 </div>
               </div>
