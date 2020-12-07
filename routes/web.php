@@ -156,10 +156,9 @@ Route::get('mbc_portal_logout', 'MbcController@logout');
 /***************start orange ****************** */
 Route::get('orange_portal_login', 'OrangeController@login');
 Route::get('orange_portal_unsub', 'OrangeController@unsubscribe');
+Route::post('orange_portal_login', 'OrangeController@postLogin');
 
 Route::get('orange_logout', 'OrangeController@logout');
-
-Route::post('orange_portal_login', 'OrangeController@postLogin');
 /***************end orange ****************** */
 
 
