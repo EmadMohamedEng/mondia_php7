@@ -99,7 +99,7 @@ if ($lang == 'ar') {
                 </div>
               </div>
               <!--<button class="btn back">رجوع</button>-->
-              <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subsc')</button>
+              <a id="zain_submit" class="btn"> @lang('messages.Subsc')</a>
             </form>
 
             <div class="unsub_cancle">
@@ -121,6 +121,22 @@ if ($lang == 'ar') {
 
 
     <script>
+
+      $('#zain_submit').click(function (e) {
+        e.preventDefault();
+        var str = $("#phone").val();
+        var RegExp1 = new RegExp('^[1-9][0-9]{9}$');
+        var RegExp2 = new RegExp('^[0][0-9]{10}$');
+        if(RegExp1.test(str) || RegExp2.test(str)){
+          $("#form_zain").submit();
+        }else{
+          $('.zain_viva').html(`<div class="alert alert-danger alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                This is not a valid number!
+                </div>`);
+        }
+      });
+
       $(document).ready(function() {
         var msisdn = $("#phone").val();
         if (msisdn != "" && msisdn.length == 8 && msisdn != "@_MSISDN") {
