@@ -1292,7 +1292,9 @@ body {
       .owl_one {
         .item {
           .owl_one_img {
-            img {}
+            img {
+              height: 19rem;
+            }
           }
 
           .content_free {
@@ -1301,7 +1303,27 @@ body {
           }
 
           .btn_subscribe {
-            button {}
+            button {
+              width: 99%;
+              top: 95%;
+              left: 49.60%;
+            }
+          }
+        }
+      }
+
+      .owl-theme {
+        .owl-nav {
+          button {
+
+            &.owl-next,
+            &.owl-prev {
+              bottom: 6rem;
+            }
+
+            &.owl-next {
+              right: -2% !important;
+            }
           }
         }
       }
@@ -1332,6 +1354,17 @@ body {
       .owl_content_four,
       .owl_content_five {
         .item {
+          &.item_muslim {
+            height: 11rem;
+            .card_muslim_guid {
+              .owl_content_img {
+                img {
+                  height: 8.843rem !important;
+                }
+              }
+            }
+          }
+
           .card {
             .owl_content_img {
               img {}

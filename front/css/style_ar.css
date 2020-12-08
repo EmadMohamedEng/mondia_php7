@@ -108,6 +108,7 @@ body {
   border-bottom-right-radius: 10px !important;
   border-top-right-radius: 0 !important;
   border-top-left-radius: 30px !important;
+  direction: rtl;
 }
 .main_container .img_carousel .owl_one .item .btn_subscribe button:after {
   display: none;

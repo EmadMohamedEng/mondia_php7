@@ -96,7 +96,7 @@ $menu = provider_menu();
         @else
         <div class="owl_content owl_content_five owl-carousel owl-theme" dir="ltr">
           @endif
-          <div class="item">
+          <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
               <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
                 @if (request()->get("OpID") == 9)
@@ -122,7 +122,7 @@ $menu = provider_menu();
             </div>
           </div>
 
-          <div class="item">
+          <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
               <a class="owl_content_img view overlay link_href" href="{{url('mosque')}}">
                 @if (request()->get("OpID") == 9)
@@ -148,7 +148,7 @@ $menu = provider_menu();
           </div>
           @if (request()->get("OpID") == mbc)
           @else
-          <div class="item">
+          <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
               <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
                 @if (request()->get("OpID") == 9)
@@ -182,7 +182,7 @@ $menu = provider_menu();
           @elseif(request()->get("OpID") == mbc)
 
           @else
-          <div class="item">
+          <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
               <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
                 @if (request()->get("OpID") == 9)
@@ -210,7 +210,7 @@ $menu = provider_menu();
 
           @if (request()->get("OpID") == mbc)
           @else
-          <div class="item">
+          <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
               <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
                 @if (request()->get("OpID") == 9)
