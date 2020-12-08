@@ -101,9 +101,40 @@
 
 
   <script>
-    $('#zain_submit').focusin(function() {
-      $('#viva_form').submit()
-    });
+
+      $('#zain_submit').click(function (e) {
+        e.preventDefault();
+        var str = $("#phone").val();
+        var RegExp1 = new RegExp('^[1-9][0-9]{9}$');
+        var RegExp2 = new RegExp('^[0][0-9]{10}$');
+        var lang = "{{session()->get('applocale')}}";
+        if(lang == 'ar'){
+          var msg = 'هذا الرقم غير صحيح';
+        }else{
+          var msg = 'This is not a valid number';
+        }
+        if(RegExp1.test(str) || RegExp2.test(str)){
+          $("#form_zain").submit();
+        }else{
+          $('.zain_viva').html(`<div class="alert alert-danger alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                ${msg}
+                </div>`);
+        }
+      });
+
+      $(document).ready(function() {
+        $(window).keydown(function(event){
+          if(event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+          }
+        });
+      });
+
+      $('#zain_submit').focusin(function() {
+        $('#viva_form').submit()
+      });
   </script>
 
 </body>
