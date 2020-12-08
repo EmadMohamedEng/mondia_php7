@@ -77,7 +77,7 @@
               </div>
 
               <div class="col-9 p-0">
-                <input type="tel" class="form-control show_class" @if(session()->has('userIdentifier')) @endif id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
+                <input type="tel" class="form-control show_class" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>
             </div>
 
@@ -101,13 +101,6 @@
 
 
   <script>
-    // $(document).ready(function() {
-    //   var msisdn = $("#phone").val();
-    //   if (msisdn != "" && msisdn.length == 8 && msisdn != "@_MSISDN") {
-    //     $("#viva_form").submit();
-    //   }
-    // });
-
     $('#zain_submit').focusin(function() {
       $('#viva_form').submit()
     });

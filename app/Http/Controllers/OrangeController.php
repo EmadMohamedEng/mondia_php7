@@ -84,16 +84,27 @@ class OrangeController extends Controller
 
     $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
 
+    $lang =  Session::get('applocale');
+
     if($checkStatus){
-      session()->flash('success', 'done');
-      $this->logout();
-    }else{
       $orangeUnSubscribe = $this->orangeUnSubscribe($msisdn);
-      dd($orangeUnSubscribe);
       if($orangeUnSubscribe == 0){
-        session()->flash('success', 'done');
-        $this->logout();
+        if($lang = 'ar'){
+          $msg = '!تم الغاء الاشتراك';
+        }else{
+          $msg = 'Unsubscribed successfully!';
+        }
+        session()->flash('success', $msg);
+        return $this->logout();
       }
+    }else{
+      if($lang = 'ar'){
+        $msg = '!انت غير مشترك';
+      }else{
+        $msg = 'You are not a subscriber!';
+      }
+      session()->flash('failed', $msg);
+      return $this->logout();
     }
   }
 
