@@ -50,19 +50,12 @@ $menu = provider_menu();
           @endif
           @endif
 
-          <div class="btnOrange">
-            <a class="btn_subscribe" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}
-            </a>
+          <div class="btn_subscribe w-100">
+            <button onclick="" class="btn btn-sm text-capitalize">
+              <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}
+              </a>
+            </button>
           </div>
-
-          <!-- <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
-            <div class="orange_svg w-100">
-              <p class="trapezoid mb-0 font-weight-bold">
-                <span>{{get_title($content->content_id)}}</span>
-                <i class="fas fa-play"></i>
-              </p>
-            </div>
-          </a> -->
         </div>
         @endforeach
         @foreach($health as $content)

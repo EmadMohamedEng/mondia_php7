@@ -229,31 +229,33 @@ body {
           border-radius: 10px;
         }
 
-        .btnOrange {
+        .btn_subscribe {
           height: 0;
-          padding: 0 1%;
+          background-color: unset;
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
-          color: $white_color;
-          width: 50%;
-          border-radius: unset;
-          -webkit-border-radius: unset;
-          -moz-border-radius: unset;
-          -ms-border-radius: unset;
-          -o-border-radius: unset;
-          border-bottom: 2em solid $bg_color;
-          border-left: 0 solid transparent;
-          border-right: 39px solid transparent;
-          position: absolute;
-          top: 96.1%;
-          left: 24.95%;
-          transform: translate(-50%, -50%);
 
-          .btn_subscribe {
-            background-color: unset !important;
-            height: 0;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+          button {
+            text-align: left;
+            background: $bg_color;
+            color: $white_color;
+            width: 50%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 0;
+            margin: 0;
+            border-radius: unset;
+            -webkit-border-radius: unset;
+            -moz-border-radius: unset;
+            -ms-border-radius: unset;
+            -o-border-radius: unset;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 30px;
+            position: absolute;
+            top: 96.45%;
+            left: 24.95%;
+            transform: translate(-50%, -50%);
 
             &:after {
               font-family: "Font Awesome 5 Free";
@@ -261,10 +263,6 @@ body {
               content: "\f04b";
               padding-left: 4%;
             }
-
-            // i {
-            //   padding-left: 4%;
-            // }
           }
         }
       }

@@ -172,33 +172,35 @@ body {
   transform: rotate(45deg);
   border-radius: 10px;
 }
-.main_container .img_carousel .owl_one .item .btnOrange {
+.main_container .img_carousel .owl_one .item .btn_subscribe {
   height: 0;
-  padding: 0 1%;
+  background-color: unset;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+.main_container .img_carousel .owl_one .item .btn_subscribe button {
+  text-align: left;
+  background: #FF6600;
   color: #FFF;
   width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 0;
+  margin: 0;
   border-radius: unset;
   -webkit-border-radius: unset;
   -moz-border-radius: unset;
   -ms-border-radius: unset;
   -o-border-radius: unset;
-  border-bottom: 2em solid #FF6600;
-  border-left: 0 solid transparent;
-  border-right: 39px solid transparent;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 30px;
   position: absolute;
-  top: 96.1%;
+  top: 96.45%;
   left: 24.95%;
   transform: translate(-50%, -50%);
 }
-.main_container .img_carousel .owl_one .item .btnOrange .btn_subscribe {
-  background-color: unset !important;
-  height: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.main_container .img_carousel .owl_one .item .btnOrange .btn_subscribe:after {
+.main_container .img_carousel .owl_one .item .btn_subscribe button:after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";

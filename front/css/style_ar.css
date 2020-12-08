@@ -101,19 +101,18 @@ body {
   right: 74%;
   transform: rotate(-45deg);
 }
-.main_container .img_carousel .owl_one .item .btnOrange {
+.main_container .img_carousel .owl_one .item .btn_subscribe button {
+  text-align: right !important;
+  left: 74.85% !important;
+  border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 10px !important;
-  border-bottom: 2em solid #FF6600 !important;
-  border-right: 0 solid transparent !important;
-  border-left: 39px solid transparent !important;
-  right: -24.99%;
-  left: unset !important;
-  text-align: right;
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 30px !important;
 }
-.main_container .img_carousel .owl_one .item .btnOrange .btn_subscribe:after {
+.main_container .img_carousel .owl_one .item .btn_subscribe button:after {
   display: none;
 }
-.main_container .img_carousel .owl_one .item .btnOrange .btn_subscribe::before {
+.main_container .img_carousel .owl_one .item .btn_subscribe button:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";
