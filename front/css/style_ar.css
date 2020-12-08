@@ -100,6 +100,20 @@ body {
   right: 74%;
   transform: rotate(-45deg);
 }
+.main_container .img_carousel .owl_one .item .orange_svg .trapezoid {
+  border-bottom-right-radius: 10px !important;
+  border-bottom: 3em solid #FF6600 !important;
+  border-right: 0 solid transparent !important;
+  border-left: 39px solid transparent !important;
+  right: -27.4%;
+  left: unset !important;
+  text-align: right;
+}
+.main_container .img_carousel .owl_one .item .orange_svg .trapezoid i {
+  text-align: left;
+  padding-left: unset !important;
+  padding-right: 5%;
+}
 .main_container .content_carousel .content_carousel_head .link_title {
   text-align: right !important;
 }

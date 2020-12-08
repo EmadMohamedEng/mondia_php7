@@ -50,13 +50,14 @@ $menu = provider_menu();
           @endif
           @endif
 
-          <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
-          <div class="orange_svg w-100">
-            <p class="trapezoid mb-0 font-weight-bold">
-              <span>Ramadan Ahadeth <i class="fas fa-play"></i></span>
-            </p>
-          </div>
-          </a>
+          <!-- <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
+            <div class="orange_svg w-100">
+              <p class="trapezoid mb-0 font-weight-bold">
+                <span>{{get_title($content->content_id)}}</span>
+                <i class="fas fa-play"></i>
+              </p>
+            </div>
+          </a> -->
         </div>
         @endforeach
         @foreach($health as $content)

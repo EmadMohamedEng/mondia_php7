@@ -121,6 +121,26 @@ body {
         .btn_subscribe {
           button {}
         }
+
+        .orange_svg {
+
+          .trapezoid {
+            border-bottom-right-radius: 10px !important;
+            border-bottom: 3em solid #FF6600 !important;
+            border-right: 0 solid transparent !important;
+            border-left: 39px solid transparent !important;
+
+            right: -27.4%;
+            left: unset !important;
+            text-align: right;
+
+            i {
+              text-align: left;
+              padding-left: unset !important;
+              padding-right: 5%;
+            }
+          }
+        }
       }
     }
 

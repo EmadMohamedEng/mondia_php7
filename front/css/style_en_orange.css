@@ -178,7 +178,7 @@ body {
   padding: 0 1%;
   color: #FFF;
   display: inline-block;
-  width: 32%;
+  width: 55%;
   height: 0;
   border-bottom-left-radius: 10px;
   border-bottom: 3em solid #FF6600;
@@ -186,7 +186,7 @@ body {
   border-right: 39px solid transparent;
   position: absolute;
   bottom: -23.55px;
-  left: 15.99%;
+  left: 27.5%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -194,10 +194,13 @@ body {
   -o-transform: translate(-50%, -50%);
 }
 .main_container .img_carousel .owl_one .item .orange_svg .trapezoid span {
-  margin-top: 6%;
-  display: block;
+  margin-top: 3%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.main_container .img_carousel .owl_one .item .orange_svg .trapezoid span i {
+.main_container .img_carousel .owl_one .item .orange_svg .trapezoid i {
   padding-left: 5%;
   font-size: 1.25rem;
 }
