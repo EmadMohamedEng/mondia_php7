@@ -153,6 +153,14 @@ body {
   background: #FF6600;
   color: #FFF;
 }
+.main_container .img_carousel .owl_one .item .owl_one_img img {
+  height: 26.187rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
 .main_container .img_carousel .owl_one .item .content_free {
   background: #FF6600;
   color: #FFF;
@@ -163,13 +171,68 @@ body {
   transform: rotate(45deg);
   border-radius: 10px;
 }
-.main_container .img_carousel .owl_one .item .btn_subscribe button {
-  background: #FF6600;
-  color: #FFF;
+.main_container .img_carousel .owl_one .item .orange_svg {
+  position: relative;
 }
-.main_container .img_carousel .owl-theme .owl-dots .owl-dot.active span,
-.main_container .img_carousel .owl-theme .owl-dots .owl-dot:hover span {
-  background: #aa6620;
+.main_container .img_carousel .owl_one .item .orange_svg .trapezoid {
+  padding: 0 1%;
+  color: #FFF;
+  display: inline-block;
+  width: 32%;
+  height: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom: 3em solid #FF6600;
+  border-left: 0 solid transparent;
+  border-right: 39px solid transparent;
+  position: absolute;
+  bottom: -23.55px;
+  left: 15.99%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.main_container .img_carousel .owl_one .item .orange_svg .trapezoid span {
+  margin-top: 6%;
+  display: block;
+}
+.main_container .img_carousel .owl_one .item .orange_svg .trapezoid span i {
+  padding-left: 5%;
+  font-size: 1.25rem;
+}
+.main_container .img_carousel .owl-theme .owl-nav {
+  color: #FF6600;
+  margin-top: 0;
+  position: relative;
+}
+.main_container .img_carousel .owl-theme .owl-nav button.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
+  opacity: 1;
+  font-weight: bold;
+  font-size: 3rem;
+  position: absolute;
+  bottom: 8rem;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.main_container .img_carousel .owl-theme .owl-nav button.owl-next.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev.owl-next {
+  right: 0.5%;
+}
+.main_container .img_carousel .owl-theme .owl-nav button.owl-next.owl-prev,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev.owl-prev {
+  left: 2%;
+}
+.main_container .img_carousel .owl-theme .owl-nav button.owl-next:hover, .main_container .img_carousel .owl-theme .owl-nav button.owl-next:focus,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev:hover,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev:focus {
+  background: none;
+  color: #FF6600;
+  outline: 0;
 }
 .main_container .content_carousel .content_carousel_head .link_title {
   color: #FF6600;
@@ -231,6 +294,9 @@ body {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+.main_container .content_carousel .owl_content_five .item {
+  height: 14rem;
+}
 .main_container .content_carousel .owl_content_five .item .card {
   background: #000;
   border: 1px solid #FF6600;
@@ -243,6 +309,37 @@ body {
   color: #FFF;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+.main_container .content_carousel .owl_content_five .item .card_muslim_guid {
+  background: #000;
+  border: 4px solid #FF6600;
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+}
+.main_container .content_carousel .owl_content_five .item .card_muslim_guid .owl_content_img img {
+  height: 11.25rem;
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+}
+.main_container .content_carousel .owl_content_five .item .card_muslim_guid .card-body {
+  padding: 0;
+  background-color: unset;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 .main_container .list_page .coming_soon {
   color: #FFF;

@@ -46,8 +46,8 @@ $('.owl_one').owlCarousel({
   autoplay: true,
   autoplayTimeout: 3000,
   animateOut: 'fadeOut',
-  nav: false,
-  dots: true,
+  nav: true,
+  dots: false,
   center: false,
   responsive: {
     0: {
@@ -57,10 +57,10 @@ $('.owl_one').owlCarousel({
       items: 1
     },
     1000: {
-      items: 2
+      items: 1
     },
     1024.9: {
-      items: 3
+      items: 1
     }
   }
 });
