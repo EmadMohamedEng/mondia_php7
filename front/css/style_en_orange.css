@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: DuCoHeadline200;
   src: url("../font/DuCoHeadline200.ttf");
@@ -171,38 +172,37 @@ body {
   transform: rotate(45deg);
   border-radius: 10px;
 }
-.main_container .img_carousel .owl_one .item .orange_svg {
-  position: relative;
-}
-.main_container .img_carousel .owl_one .item .orange_svg .trapezoid {
-  padding: 0 1%;
-  color: #FFF;
-  display: inline-block;
-  width: 55%;
+.main_container .img_carousel .owl_one .item .btnOrange {
   height: 0;
-  border-bottom-left-radius: 10px;
-  border-bottom: 3em solid #FF6600;
+  padding: 0 1%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #FFF;
+  width: 50%;
+  border-radius: unset;
+  -webkit-border-radius: unset;
+  -moz-border-radius: unset;
+  -ms-border-radius: unset;
+  -o-border-radius: unset;
+  border-bottom: 2em solid #FF6600;
   border-left: 0 solid transparent;
   border-right: 39px solid transparent;
   position: absolute;
-  bottom: -23.55px;
-  left: 27.5%;
+  top: 96.1%;
+  left: 24.95%;
   transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
 }
-.main_container .img_carousel .owl_one .item .orange_svg .trapezoid span {
-  margin-top: 3%;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.main_container .img_carousel .owl_one .item .btnOrange .btn_subscribe {
+  background-color: unset !important;
+  height: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
-.main_container .img_carousel .owl_one .item .orange_svg .trapezoid i {
-  padding-left: 5%;
-  font-size: 1.25rem;
+.main_container .img_carousel .owl_one .item .btnOrange .btn_subscribe:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  padding-left: 4%;
 }
 .main_container .img_carousel .owl-theme .owl-nav {
   color: #FF6600;

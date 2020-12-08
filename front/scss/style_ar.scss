@@ -118,27 +118,31 @@ body {
           transform: rotate(-45deg);
         }
 
-        .btn_subscribe {
-          button {}
-        }
+        .btnOrange {
+          border-bottom-right-radius: 10px !important;
+          border-bottom: 2em solid #FF6600 !important;
+          border-right: 0 solid transparent !important;
+          border-left: 39px solid transparent !important;
+          right: -24.99%;
+          left: unset !important;
+          text-align: right;
 
-        .orange_svg {
-
-          .trapezoid {
-            border-bottom-right-radius: 10px !important;
-            border-bottom: 3em solid #FF6600 !important;
-            border-right: 0 solid transparent !important;
-            border-left: 39px solid transparent !important;
-
-            right: -27.4%;
-            left: unset !important;
-            text-align: right;
-
-            i {
-              text-align: left;
-              padding-left: unset !important;
-              padding-right: 5%;
+          .btn_subscribe {
+            &:after {
+              display: none;
             }
+
+            &::before {
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              content: "\f04b";
+              padding-right: 4%;
+            }
+
+            // i {
+            //   padding-left: unset !important;
+            //   padding-right: 4%;
+            // }
           }
         }
       }
