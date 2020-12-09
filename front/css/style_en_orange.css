@@ -1366,6 +1366,12 @@ body {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
+  .main_container .content_carousel .owl_content_five .item.item_muslim {
+    height: 19rem;
+  }
+  .main_container .content_carousel .owl_content_five .item.item_muslim .card_muslim_guid .owl_content_img img {
+    height: 14.75rem !important;
+  }
   .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;

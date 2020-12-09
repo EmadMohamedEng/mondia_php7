@@ -703,7 +703,7 @@ body {
 
           .btn_orange {
             button {
-              left: 50.55% !important;
+              left: 51.2% !important;
             }
           }
         }
@@ -802,10 +802,7 @@ body {
 }
 
 @media (min-width: 360px) and (max-width: 374.9px) {
-  .padding_phones {
-    // padding-left: 1rem !important;
-    // padding-right: 1rem !important;
-  }
+  .padding_phones {}
 
   .main_container {
     .header {
@@ -869,6 +866,12 @@ body {
           .content_free {
             top: 5%;
             right: 80%;
+          }
+
+          .btn_orange {
+            button {
+              left: 51.2% !important;
+            }
           }
         }
       }
@@ -946,10 +949,7 @@ body {
 }
 
 @media (min-width: 375px) and (max-width: 410.9px) {
-  .padding_phones {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
+  .padding_phones {}
 
   .main_container {
     .header {
@@ -1014,6 +1014,12 @@ body {
           .content_free {
             top: 5%;
             right: 80%;
+          }
+
+          .btn_orange {
+            button {
+              left: 50.8% !important;
+            }
           }
         }
       }
@@ -1125,14 +1131,10 @@ body {
 }
 
 @media (min-width: 411px) and (max-width: 415px) {
-  .padding_phones {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
+  .padding_phones {}
 
   .main_container {
     .header {
-
       .header_logo,
       .header_icon {
         margin-left: 8%;
@@ -1190,6 +1192,12 @@ body {
           .content_free {
             top: 5%;
             right: 80%;
+          }
+
+          .btn_orange {
+            button {
+              left: 50.8% !important;
+            }
           }
         }
       }
@@ -1279,7 +1287,6 @@ body {
 @media (min-width: 768px) and (max-width: 1023.9px) {
   .main_container {
     .header {
-
       .header_logo,
       .header_icon {
         width: 100%;
@@ -1352,6 +1359,12 @@ body {
           .content_free {
             top: 4%;
             right: 85%;
+          }
+
+          .btn_orange {
+            button {
+              left: 74.9% !important;
+            }
           }
         }
       }
@@ -1497,7 +1510,6 @@ body {
 @media (min-width: 1024px) and (max-width: 1030px) {
   .main_container {
     .header {
-
       .header_logo,
       .header_icon {
         width: 100%;
@@ -1573,6 +1585,12 @@ body {
           .content_free {
             top: 5.5%;
             right: 77%;
+          }
+
+          .btn_orange {
+            button {
+              left: 74.9% !important;
+            }
           }
         }
       }

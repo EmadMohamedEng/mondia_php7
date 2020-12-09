@@ -3543,8 +3543,19 @@ body {
 
       .owl_content_five {
         .item {
-          .card {
+          &.item_muslim {
+            height: 19rem;
 
+            .card_muslim_guid {
+              .owl_content_img {
+                img {
+                  height: 14.75rem !important;
+                }
+              }
+            }
+          }
+
+          .card {
             .owl_content_img {
               img {
                 border-top-left-radius: 10px;
