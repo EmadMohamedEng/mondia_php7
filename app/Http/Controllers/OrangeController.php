@@ -38,13 +38,16 @@ class OrangeController extends Controller
     $URL = ORANGE_END_POINT."/api/checkStatus";
 
     $JSON['msisdn'] = $msisdn;
+    $JSON['service_id'] = 3;
 
     $headers['Accept'] = '*/*';
 
     $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
 
     if($checkStatus){
-      $this->orangeLoginSession($msisdn);
+      $orange_msisdn = json_decode($checkStatus);
+
+      $this->orangeLoginSession($checkStatus->msisdn);
       if(session()->has('current_url')){
         return redirect(session()->get('current_url'));
       }
@@ -121,6 +124,8 @@ class OrangeController extends Controller
 
     $JSON['msisdn'] = $msisdn;
     $JSON['command'] = 'Subscribe';
+    $JSON['service_id'] = 3;
+    $JSON['bearer_type'] = 'WEB';
 
     $headers['Accept'] = '*/*';
 
@@ -135,6 +140,8 @@ class OrangeController extends Controller
 
     $JSON['msisdn'] = $msisdn;
     $JSON['command'] = 'Unsubscribe';
+    $JSON['service_id'] = 3;
+    $JSON['bearer_type'] = 'WEB';
 
     $headers['Accept'] = '*/*';
 
