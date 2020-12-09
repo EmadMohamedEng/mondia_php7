@@ -2,7 +2,6 @@
 @section('page_title') @lang('front.profile') @endsection
 @section('content')
 
-
 <section class="profile">
   @if(request()->get('OpID') == mbc)
   <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
@@ -18,7 +17,7 @@
       @endphp --}}
 
       <div class="profile_table">
-        <table class="table  table-bordered ">
+        <table class="table table-bordered ">
           <tbody>
             <tr>
               <td class="label-view font-weight-bold">@lang('messages.users.phone')</td>

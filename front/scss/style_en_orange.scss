@@ -417,7 +417,9 @@ body {
 
     .owl_content_five {
       .item {
-        height: 14rem;
+        &.item_muslim {
+          height: 14rem;
+        }
 
         .card {
           background: $black_color;

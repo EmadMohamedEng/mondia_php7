@@ -295,7 +295,7 @@ body {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.main_container .content_carousel .owl_content_five .item {
+.main_container .content_carousel .owl_content_five .item.item_muslim {
   height: 14rem;
 }
 .main_container .content_carousel .owl_content_five .item .card {
