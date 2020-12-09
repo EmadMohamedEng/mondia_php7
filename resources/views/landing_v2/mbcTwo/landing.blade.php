@@ -48,13 +48,11 @@ if ($lang == 'ar') {
   $bottom = "bottom: 0%;";
   $font = "font-size: 20px;";
   $float = "float-left";
-  $Mobily = "موبايلي";
 } else {
   $text = "text-left";
   $left = "ltr";
   $font = "font-size: 16px;";
   $float = "float-right";
-  $Mobily = "Mobily";
 }
 ?>
 
@@ -139,9 +137,15 @@ if ($lang == 'ar') {
               <select class="mdb-select md-form form-control" name="operator" required>
                 <option value="" disabled selected>@lang('messages.Choose_your_Operators')</option>
                 @foreach($operators as $operator)
-                <option value="{{$operator->operator_name}}">{{ $operator->name  == "mbc"?  $Mobily :   $operator->name }}</option>
+                <option id="{{$operator->id}}" value="{{$operator->operator_name}}">{{ $lang == 'ar' ? $operator->name_ar : $operator->name_en }}</option>
                 @endforeach
               </select>
+            </div>
+
+            <div class="change_cost cancel text-center text-white">
+              @foreach($operators as $operator)
+              <p id="{{"cost$operator->id"}}" style="display:none">{{ $lang == 'ar' ? $operator->cost_ar : $operator->cost_en }}</p>
+              @endforeach
             </div>
 
             <!-- <div class="form-group input-group form-inline">
@@ -193,6 +197,13 @@ if ($lang == 'ar') {
         var x = $(this).data('select');
         $('#dropdownMenu1').html(x);
       })
+
+      $('.mdb-select').click(function (e) {
+        var id = $(this).children(":selected").attr("id");
+        $('.change_cost').children().css('display', 'none');
+        $(`#cost${id}`).css('display', 'block');
+
+      });
 
       // $('.select_option').click(function (e) {
       // document.getElementById("county_code").innerHTML = e.target.id
