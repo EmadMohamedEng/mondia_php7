@@ -1358,6 +1358,7 @@ body {
         .item {
           &.item_muslim {
             height: 11rem;
+
             .card_muslim_guid {
               .owl_content_img {
                 img {
@@ -1694,7 +1695,11 @@ body {
           }
 
           .btn_subscribe {
-            button {}
+            button {
+              width: 99%;
+              top: 95.79%;
+              left: 49.55%;
+            }
           }
         }
       }

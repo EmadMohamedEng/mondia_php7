@@ -40,7 +40,7 @@ $(document).ready(function () {
   });
 });
 
-$('.owl_one').owlCarousel({
+$('.owl_orange').owlCarousel({
   loop: false,
   margin: 0,
   autoplay: false,
@@ -61,6 +61,31 @@ $('.owl_one').owlCarousel({
     },
     1024.9: {
       items: 1
+    }
+  }
+});
+
+$('.owl_one').owlCarousel({
+  loop: false,
+  margin: 0,
+  autoplay: false,
+  autoplayTimeout: 3000,
+  animateOut: 'fadeOut',
+  nav: true,
+  dots: false,
+  center: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 3
+    },
+    1024.9: {
+      items: 3
     }
   }
 });

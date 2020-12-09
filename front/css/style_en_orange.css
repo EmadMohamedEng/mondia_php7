@@ -873,6 +873,11 @@ body {
     top: 5%;
     right: 0%;
   }
+  .main_container .img_carousel .owl_one .item .btn_subscribe button {
+    width: 99%;
+    top: 95.79%;
+    left: 49.55%;
+  }
   .main_container .list_page .item .card .content_free {
     width: 35% !important;
     top: 8% !important;
