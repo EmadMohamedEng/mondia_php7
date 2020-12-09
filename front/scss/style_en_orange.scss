@@ -229,36 +229,39 @@ body {
           border-radius: 10px;
         }
 
-        .orange_svg {
-          position: relative;
+        .btn_subscribe {
+          height: 0;
+          background-color: unset;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
 
-          .trapezoid {
-            padding: 0 1%;
+          button {
+            text-align: left;
+            background: $bg_color;
             color: $white_color;
-            display: inline-block;
-            width: 32%;
-            height: 0;
+            width: 50%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 0;
+            margin: 0;
+            border-radius: unset;
+            -webkit-border-radius: unset;
+            -moz-border-radius: unset;
+            -ms-border-radius: unset;
+            -o-border-radius: unset;
             border-bottom-left-radius: 10px;
-            border-bottom: 3em solid $bg_color;
-            border-left: 0 solid transparent;
-            border-right: 39px solid transparent;
+            border-top-right-radius: 30px;
             position: absolute;
-            bottom: -23.55px;
-            left: 15.99%;
+            top: 96.45%;
+            left: 24.95%;
             transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
 
-            span {
-              margin-top: 6%;
-              display: block;
-
-              i {
-                padding-left: 5%;
-                font-size: 1.25rem;
-              }
+            &:after {
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              content: "\f04b";
+              padding-left: 4%;
             }
           }
         }
@@ -312,8 +315,10 @@ body {
       }
 
       .btn_more {
-        background: $text_color;
+        background: transparent;
         color: $white_color;
+        border-radius: 5px;
+        border: 1px solid $bg_color;
 
         &:focus {
           box-shadow: 0 0 0 0.2rem $bg_color2 !important;
@@ -1289,7 +1294,9 @@ body {
       .owl_one {
         .item {
           .owl_one_img {
-            img {}
+            img {
+              height: 19rem;
+            }
           }
 
           .content_free {
@@ -1298,7 +1305,27 @@ body {
           }
 
           .btn_subscribe {
-            button {}
+            button {
+              width: 99%;
+              top: 95%;
+              left: 49.60%;
+            }
+          }
+        }
+      }
+
+      .owl-theme {
+        .owl-nav {
+          button {
+
+            &.owl-next,
+            &.owl-prev {
+              bottom: 6rem;
+            }
+
+            &.owl-next {
+              right: -2% !important;
+            }
           }
         }
       }
@@ -1329,6 +1356,17 @@ body {
       .owl_content_four,
       .owl_content_five {
         .item {
+          &.item_muslim {
+            height: 11rem;
+            .card_muslim_guid {
+              .owl_content_img {
+                img {
+                  height: 8.843rem !important;
+                }
+              }
+            }
+          }
+
           .card {
             .owl_content_img {
               img {}
