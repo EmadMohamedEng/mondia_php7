@@ -685,9 +685,19 @@ class MbcController extends Controller
 
       if($request->has('OpID') && $request->OpID == orange){  //orange
         if((session()->get('orange_op_id') == orange && session()->get('status') == 'active' && session()->has('MSISDN'))){
-          $vars["msisdn"] = session()->get('MSISDN');
-          $vars["service_id"] = 2;
+
+          $URL = ORANGE_END_POINT."/api/checkStatus";
+
+          $JSON['msisdn'] = session()->get('MSISDN');
+
+          $headers['Accept'] = '*/*';
+
+          $sub = $this->SendRequestPost($URL, $JSON, $headers);
+          $sub = json_decode($sub);
           $date = date('Y-m-d');
+          if($sub){
+            $date = date('Y-m-d',strtotime($sub->created_at));
+          }
           return view('front.orange_profile',compact('date'));
         }
         return redirect('orange_portal_login');
