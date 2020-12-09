@@ -1130,6 +1130,9 @@ body {
 
     .profile_table {
       table {
+        border: 1px solid $text_color;
+        border-collapse: unset;
+        border-radius: 20px;
         tbody {
           tr {
             .label-view {
@@ -1140,7 +1143,7 @@ body {
 
             .label-view2 {
               width: 75%;
-              color: $text_color;
+              color: $white_color;
               border: 0;
             }
           }
