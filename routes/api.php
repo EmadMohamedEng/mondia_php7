@@ -40,5 +40,5 @@ Route::prefix('v1')->group(function() {
 
 
 /*************orange************* */
-define('END_POINT', 'https://dev.digizone.com.kw');
+define('ORANGE_END_POINT', 'https://dev.digizone.com.kw/orange_integration');
 /***********end orange*********** */

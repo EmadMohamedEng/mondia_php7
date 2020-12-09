@@ -667,6 +667,7 @@ class MbcController extends Controller
 
     public function profile(Request $request)
     {
+
       if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
         if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
           $vars["msisdn"] = session()->get('MSISDN');
@@ -681,6 +682,17 @@ class MbcController extends Controller
         }
         return redirect('mbc_portal_login');
       }
+
+      if($request->has('OpID') && $request->OpID == orange){  //orange
+        if((session()->get('orange_op_id') == orange && session()->get('status') == 'active' && session()->has('MSISDN'))){
+          $vars["msisdn"] = session()->get('MSISDN');
+          $vars["service_id"] = 2;
+          $date = date('Y-m-d');
+          return view('front.profile',compact('date'));
+        }
+        return redirect('orange_portal_login');
+      }
+
     }
 
 }

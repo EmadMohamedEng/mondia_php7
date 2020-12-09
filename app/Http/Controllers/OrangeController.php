@@ -35,7 +35,7 @@ class OrangeController extends Controller
 
     $msisdn = "20$number";
 
-    $URL = END_POINT."/orange_integration/api/checkStatus";
+    $URL = ORANGE_END_POINT."/api/checkStatus";
 
     $JSON['msisdn'] = $msisdn;
 
@@ -51,11 +51,13 @@ class OrangeController extends Controller
       return redirect(url('?OpID=8'));
     }else{
       $orangeSubscribe = $this->orangeSubscribe($msisdn);
-      $this->orangeLoginSession($msisdn);
-      if(session()->has('current_url')){
-        return redirect(session()->get('current_url'));
+      if($orangeSubscribe == 0){
+        $this->orangeLoginSession($msisdn);
+        if(session()->has('current_url')){
+          return redirect(session()->get('current_url'));
+        }
+        return redirect(url('?OpID=8'));
       }
-      return redirect(url('?OpID=8'));
     }
 
     $lang =  Session::get('applocale');
@@ -68,6 +70,44 @@ class OrangeController extends Controller
     return back()->with('failed', $msg);
   }
 
+  public function postUnsubscribe(Request $request)
+  {
+    $number = ltrim($request->number, 0);
+
+    $msisdn = "20$number";
+
+    $URL = ORANGE_END_POINT."/api/checkStatus";
+
+    $JSON['msisdn'] = $msisdn;
+
+    $headers['Accept'] = '*/*';
+
+    $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
+
+    $lang =  Session::get('applocale');
+
+    if($checkStatus){
+      $orangeUnSubscribe = $this->orangeUnSubscribe($msisdn);
+      if($orangeUnSubscribe == 0){
+        if($lang = 'ar'){
+          $msg = '!تم الغاء الاشتراك';
+        }else{
+          $msg = 'Unsubscribed successfully!';
+        }
+        session()->flash('success', $msg);
+        return $this->logout();
+      }
+    }else{
+      if($lang = 'ar'){
+        $msg = '!انت غير مشترك';
+      }else{
+        $msg = 'You are not a subscriber!';
+      }
+      session()->flash('failed', $msg);
+      return $this->logout();
+    }
+  }
+
   public function orangeLoginSession($msisdn)
   {
     session()->put('MSISDN', $msisdn);
@@ -77,15 +117,30 @@ class OrangeController extends Controller
 
   public function orangeSubscribe($msisdn)
   {
-    $URL = END_POINT."/orange_integration/api/createSubscription";
+    $URL = ORANGE_END_POINT."/api/orangeWeb";
 
     $JSON['msisdn'] = $msisdn;
+    $JSON['command'] = 'Subscribe';
 
     $headers['Accept'] = '*/*';
 
     $orangeSubscribe = $this->SendRequestPost($URL, $JSON, $headers);
 
     return $orangeSubscribe;
+  }
+
+  public function orangeUnSubscribe($msisdn)
+  {
+    $URL = ORANGE_END_POINT."/api/orangeWeb";
+
+    $JSON['msisdn'] = $msisdn;
+    $JSON['command'] = 'Unsubscribe';
+
+    $headers['Accept'] = '*/*';
+
+    $orangeUnSubscribe = $this->SendRequestPost($URL, $JSON, $headers);
+
+    return $orangeUnSubscribe;
   }
 
   public function logout()

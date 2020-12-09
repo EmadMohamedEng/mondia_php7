@@ -1627,10 +1627,10 @@ class FrontController extends Controller
   {
     if(get_setting('filters_flag')){
       $operator = Operator::find($request->OpID);
-
-      $filters = $operator->filterPosts->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
-
-      return view('front.mbc_filter.list', compact('filters'));
+      if ($operator) {
+        $filters = $operator->filterPosts->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+        return view('front.mbc_filter.list', compact('filters'));
+      }
     }
     return view('errors.404');
   }
