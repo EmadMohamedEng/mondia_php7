@@ -3,7 +3,7 @@
 @section('content')
 
 <section class="profile">
-  @if(request()->get('OpID') == mbc)
+  @if(request()->get('OpID') == ornage)
   <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
     @else
     <div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">

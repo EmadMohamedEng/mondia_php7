@@ -28,11 +28,49 @@ Operators
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-3 col-lg-2 control-label">Operator Name*</label>
+                    <label class="col-sm-3 col-lg-2 control-label">Operator Name</label>
                     <div class="col-sm-9 col-lg-10 controls">
-                        <input type="text" name="operator_name" placeholder="Operator Name" class="form-control input-lg" required="" />
+                        <input type="text" name="operator_name" placeholder="Operator Name" class="form-control input-lg" />
                         <span class="help-inline">Enter a new Operator name</span><br><br>
                     </div>
+                </div>
+
+                <div class="form-group" id="cktextarea">
+                  <label class="col-sm-3 col-lg-2 control-label">Landing name</label>
+                  <div class="col-sm-9 col-lg-10 controls">
+                      <ul id="myTab1" class="nav nav-tabs">
+                          <li class="active"><a href="#name_ar" data-toggle="tab">AR</a></li>
+                          <li><a href="#name_en" data-toggle="tab">EN</a></li>
+                      </ul>
+                      <div class="tab-content">
+                          <div class="tab-pane fade in active" id="name_ar">
+                              <input class="form-control" name="name_ar"/>
+                          </div>
+                          <div class="tab-pane fade in" id="name_en">
+                              <input class="form-control" name="name_en"/>
+                          </div>
+                      </div>
+                      <span class="help-inline">Enter a new Operator landing dropdown name</span><br><br>
+                  </div>
+                </div>
+
+                <div class="form-group" id="cktextarea">
+                  <label class="col-sm-3 col-lg-2 control-label">Cost details</label>
+                  <div class="col-sm-9 col-lg-10 controls">
+                      <ul id="myTab1" class="nav nav-tabs">
+                          <li class="active"><a href="#cost_ar" data-toggle="tab">AR</a></li>
+                          <li><a href="#cost_en" data-toggle="tab">EN</a></li>
+                      </ul>
+                      <div class="tab-content">
+                          <div class="tab-pane fade in active" id="cost_ar">
+                              <input class="form-control" name="cost_ar"/>
+                          </div>
+                          <div class="tab-pane fade in" id="cost_en">
+                              <input class="form-control" name="cost_en"/>
+                          </div>
+                      </div>
+                      <span class="help-inline">Enter a new Operator cost details</span><br><br>
+                  </div>
                 </div>
 
                 <div class="form-group">
