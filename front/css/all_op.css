@@ -208,6 +208,9 @@ select:active {
 .main_container .img_carousel .owl_one .item .btn_subscribe button:focus {
   box-shadow: 0 0 0 0.2rem #FFF;
 }
+.main_container .img_carousel .owl-dots {
+  display: block;
+}
 .main_container .img_carousel .owl-dots button {
   outline: 0;
 }
