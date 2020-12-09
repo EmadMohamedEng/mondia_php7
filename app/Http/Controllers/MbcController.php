@@ -688,7 +688,7 @@ class MbcController extends Controller
           $vars["msisdn"] = session()->get('MSISDN');
           $vars["service_id"] = 2;
           $date = date('Y-m-d');
-          return view('front.profile',compact('date'));
+          return view('front.orange_profile',compact('date'));
         }
         return redirect('orange_portal_login');
       }
