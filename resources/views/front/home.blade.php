@@ -53,16 +53,17 @@ $menu = provider_menu();
           @endif
 
 
-          <!-- <div class="rectangle"></div>
+          <div class="btn_rectangle">
           <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}
           <img src='{{asset("front/images/orange/rectangle.png")}}' alt='Logo'>
-          </a> -->
+          </a>
+          </div>
 
-          <div class="btn_subscribe w-100">
+          <!-- <div class="btn_subscribe w-100">
             <button onclick="" class="btn btn-sm text-capitalize">
               <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
             </button>
-          </div>
+          </div> -->
         </div>
         @endforeach
         @foreach($health as $content)
