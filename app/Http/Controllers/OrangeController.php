@@ -134,8 +134,6 @@ class OrangeController extends Controller
 
     $orangeSubscribe = $this->SendRequestPost($URL, $JSON, $headers);
 
-    dd(orangeSubscribe);
-
     return $orangeSubscribe;
   }
 
