@@ -607,8 +607,8 @@ body {
 
 @media (min-width: 320px) and (max-width: 359.9px) {
   .padding_phones {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 
   .main_container {
@@ -619,7 +619,18 @@ body {
         margin-left: 8%;
 
         .link_href {
-          img {}
+          img {
+            &.logo_orange {
+              width: 100% !important;
+              margin-top: 0.5rem !important;
+            }
+          }
+
+          .img_khir {
+            img {
+              margin-top: 0.85rem !important;
+            }
+          }
         }
 
         &.header_icon {
@@ -671,6 +682,12 @@ body {
           .content_free {
             top: 5%;
             right: 76%;
+          }
+
+          .btn_subscribe {
+            button {
+              left: 50.55% !important;
+            }
           }
         }
       }
