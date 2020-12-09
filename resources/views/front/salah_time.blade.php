@@ -21,12 +21,12 @@
 
             <div class="time_btn roll-in-top">
                 <div class="row m-0">
-                    <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
+                    <div class="col-md-6 col-lg-6 col-xl-6 col-8 input_span">
                     <!-- <h4 class="h4_time melady_date" style="padding-right:{{getCode() == 'en' ? 0 : '' }}px">{{date('d-m-Y')}} </h4> -->
                         <h4 class="h4_time">{{$hjrri_date->day.' - '.$hjrri_date->month .' - '.$hjrri_date->year}}</h4>
                     </div>
 
-                    <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
+                    <div class="col-md-6 col-lg-6 col-xl-6 col-4 input_span">
                     <!-- <h4 class="h4_time_2 hegry_date" style="padding-left:{{getCode() == 'en' ? 0 : '' }}px" dir="{{getCode() == 'ar' ? 'rtl' : 'ltr'}}">{{$hjrri_date->day.' - '.$hjrri_date->month .' - '.$hjrri_date->year}}</h4> -->
                         <h4 class="h4_time_2" dir="{{getCode() == 'ar' ? 'rtl' : 'ltr'}}">{{date('d-m-Y')}}</h4>
                     </div>
