@@ -32,6 +32,8 @@ $menu = provider_menu();
     </div>
     @endif
 
+
+    @if(request()->get('OpID') == orange)
     <section class="img_carousel">
       <div class="owl_one owl-carousel owl-theme" dir="ltr">
         @foreach($latest as $content)
@@ -50,12 +52,17 @@ $menu = provider_menu();
           @endif
           @endif
 
-          <div class="btn_subscribe w-100">
+
+          <div class="rectangle"></div>
+          <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}
+          <img src='{{asset("front/images/orange/rectangle.png")}}' alt='Logo'>
+          </a>
+
+          <!-- <div class="btn_subscribe w-100">
             <button onclick="" class="btn btn-sm text-capitalize">
-              <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}
-              </a>
+              <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
             </button>
-          </div>
+          </div> -->
         </div>
         @endforeach
         @foreach($health as $content)
@@ -79,6 +86,11 @@ $menu = provider_menu();
         @endforeach
       </div>
     </section>
+
+    @else
+
+
+    @endif
 
     <section class="content_carousel">
       <div class="content_carousel_head text-capitalize">
