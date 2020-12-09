@@ -101,6 +101,24 @@ body {
   right: 74%;
   transform: rotate(-45deg);
 }
+.main_container .img_carousel .owl_one .item .btn_orange button {
+  text-align: right !important;
+  left: 74.85% !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 10px !important;
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 30px !important;
+  direction: rtl;
+}
+.main_container .img_carousel .owl_one .item .btn_orange button:after {
+  display: none;
+}
+.main_container .img_carousel .owl_one .item .btn_orange button:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  padding-right: 4%;
+}
 .main_container .img_carousel .owl_one .item .btn_subscribe button {
   direction: rtl;
 }

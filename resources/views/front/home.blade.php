@@ -52,18 +52,11 @@ $menu = provider_menu();
           @endif
           @endif
 
-
-          <div class="btn_rectangle">
-          <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}
-          <img src='{{asset("front/images/orange/rectangle.png")}}' alt='Logo'>
-          </a>
-          </div>
-
-          <!-- <div class="btn_subscribe w-100">
+          <div class="btn_orange w-100">
             <button onclick="" class="btn btn-sm text-capitalize">
               <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
             </button>
-          </div> -->
+          </div>
         </div>
         @endforeach
         @foreach($health as $content)
@@ -99,7 +92,7 @@ $menu = provider_menu();
 
           @if(request()->get('OpID') == mbc)
           @if ($content->free == 1)
-      @if( DB::table('settings')->where('key','like','%enable_free%')->first()->value  == "1")
+          @if( DB::table('settings')->where('key','like','%enable_free%')->first()->value == "1")
           <div class="content_free text-center py-1">
             <span class="text-capitalize">@lang('front.free')</span>
           </div>
@@ -135,7 +128,6 @@ $menu = provider_menu();
         @endforeach
       </div>
     </section>
-
     @endif
 
     <section class="content_carousel">
@@ -293,8 +285,6 @@ $menu = provider_menu();
             </div>
           </div>
           @endif
-
-
         </div>
     </section>
 
@@ -318,7 +308,6 @@ $menu = provider_menu();
           </div>
         </div>
       </div>
-
 
       @php
       if(count($item->services) == 1){
