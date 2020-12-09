@@ -38,7 +38,7 @@ class OrangeController extends Controller
     $URL = ORANGE_END_POINT."/api/checkStatus";
 
     $JSON['msisdn'] = $msisdn;
-    $JSON['service_id'] = 3;
+    $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
 
     $headers['Accept'] = '*/*';
 
@@ -124,7 +124,7 @@ class OrangeController extends Controller
 
     $JSON['msisdn'] = $msisdn;
     $JSON['command'] = 'Subscribe';
-    $JSON['service_id'] = 3;
+    $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
     $JSON['bearer_type'] = 'WEB';
 
     $headers['Accept'] = '*/*';
@@ -140,7 +140,7 @@ class OrangeController extends Controller
 
     $JSON['msisdn'] = $msisdn;
     $JSON['command'] = 'Unsubscribe';
-    $JSON['service_id'] = 3;
+    $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
     $JSON['bearer_type'] = 'WEB';
 
     $headers['Accept'] = '*/*';
