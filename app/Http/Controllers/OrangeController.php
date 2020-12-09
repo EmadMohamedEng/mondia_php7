@@ -44,7 +44,9 @@ class OrangeController extends Controller
 
     $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
 
-    if($checkStatus){
+
+
+    if($checkStatus != "0"){  //  found
       $orange_msisdn = json_decode($checkStatus);
 
       $this->orangeLoginSession($msisdn);
@@ -52,7 +54,7 @@ class OrangeController extends Controller
         return redirect(session()->get('current_url'));
       }
       return redirect(url('?OpID=8'));
-    }else{
+    }else{ // not found
       $orangeSubscribe = $this->orangeSubscribe($msisdn);
       if($orangeSubscribe == 0){
         $this->orangeLoginSession($msisdn);
@@ -89,7 +91,9 @@ class OrangeController extends Controller
 
     $lang =  Session::get('applocale');
 
-    if($checkStatus){
+
+
+    if($checkStatus != "0"){  //  found
       $orangeUnSubscribe = $this->orangeUnSubscribe($msisdn);
       if($orangeUnSubscribe == 0){
         if($lang = 'ar'){
@@ -123,13 +127,14 @@ class OrangeController extends Controller
     $URL = ORANGE_END_POINT."/api/web_notify";  // free or direct sub
 
     $JSON['msisdn'] = $msisdn;
-    $JSON['command'] = 'Subscribe';
     $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
     $JSON['bearer_type'] = 'WEB';
 
     $headers['Accept'] = '*/*';
 
     $orangeSubscribe = $this->SendRequestPost($URL, $JSON, $headers);
+
+    dd(orangeSubscribe);
 
     return $orangeSubscribe;
   }
