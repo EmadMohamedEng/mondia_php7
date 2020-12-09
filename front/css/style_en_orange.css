@@ -246,8 +246,10 @@ body {
   margin-left: 3%;
 }
 .main_container .content_carousel .content_carousel_head .btn_more {
-  background: #FF6600;
+  background: transparent;
   color: #FFF;
+  border-radius: 5px;
+  border: 1px solid #FF6600;
 }
 .main_container .content_carousel .content_carousel_head .btn_more:focus {
   box-shadow: 0 0 0 0.2rem #0f1218 !important;

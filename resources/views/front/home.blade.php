@@ -253,8 +253,7 @@ $menu = provider_menu();
 
           <div class="col-4 padding_phones">
             @if (request()->has('OpID') && request()->get('OpID') == 8)
-            <a href="{{route('front.service',['provider_id' => $item->id])}}" style="border: 1px solid #FF6600;
-                  background: transparent; border-radius: 5px;" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
+            <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
             @else
             <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
             @endif
@@ -322,8 +321,7 @@ $menu = provider_menu();
 
           <div class="col-4 padding_phones">
             @if (request()->has('OpID') && request()->get('OpID') == 8)
-            <a href="{{route('front.service',['provider_id' => $item->id])}}" style="border: 1px solid #FF6600;
-                  background: transparent; border-radius: 5px;" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
+            <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
             @else
             <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
             @endif

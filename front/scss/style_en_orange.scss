@@ -315,8 +315,10 @@ body {
       }
 
       .btn_more {
-        background: $text_color;
+        background: transparent;
         color: $white_color;
+        border-radius: 5px;
+        border: 1px solid $bg_color;
 
         &:focus {
           box-shadow: 0 0 0 0.2rem $bg_color2 !important;
