@@ -47,7 +47,7 @@ class OrangeController extends Controller
     if($checkStatus){
       $orange_msisdn = json_decode($checkStatus);
 
-      $this->orangeLoginSession($checkStatus->msisdn);
+      $this->orangeLoginSession($msisdn);
       if(session()->has('current_url')){
         return redirect(session()->get('current_url'));
       }
