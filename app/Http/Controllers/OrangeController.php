@@ -120,7 +120,7 @@ class OrangeController extends Controller
 
   public function orangeSubscribe($msisdn)
   {
-    $URL = ORANGE_END_POINT."/api/orangeWeb";
+    $URL = ORANGE_END_POINT."/api/web_notify";  // free or direct sub
 
     $JSON['msisdn'] = $msisdn;
     $JSON['command'] = 'Subscribe';
@@ -136,7 +136,7 @@ class OrangeController extends Controller
 
   public function orangeUnSubscribe($msisdn)
   {
-    $URL = ORANGE_END_POINT."/api/orangeWeb";
+    $URL = ORANGE_END_POINT."/api/orangeWeb";  // direct unsub
 
     $JSON['msisdn'] = $msisdn;
     $JSON['command'] = 'Unsubscribe';
