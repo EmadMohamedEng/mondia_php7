@@ -999,6 +999,7 @@ body {
 
       .profile_card_title {
         margin-top: 4%;
+
         h6 {
           color: $text_color;
         }
@@ -1016,7 +1017,7 @@ body {
 
           .owl_content_img {
             img {
-              height: 11rem;
+              height: 14.906rem;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
             }
@@ -1030,7 +1031,7 @@ body {
             justify-content: center;
             padding: 1rem 0.25rem;
             border-bottom-right-radius: 10px;
-          border-bottom-left-radius: 10px;
+            border-bottom-left-radius: 10px;
 
             .card-title {
               text-align: center;
@@ -1707,6 +1708,18 @@ body {
           }
         }
       }
+
+      .profile_card {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 8.875rem;
+              }
+            }
+          }
+        }
+      }
     }
 
     .inner_filter {
@@ -2085,6 +2098,18 @@ body {
           }
         }
       }
+
+      .profile_card {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 10.125rem;
+              }
+            }
+          }
+        }
+      }
     }
 
     .inner_filter {
@@ -2455,6 +2480,18 @@ body {
               .label-view2 {
                 width: 65%;
                 font-size: 0.85rem;
+              }
+            }
+          }
+        }
+      }
+
+      .profile_card {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 10.594rem;
               }
             }
           }
@@ -2843,6 +2880,18 @@ body {
               .label-view2 {
                 width: 65%;
                 font-size: 0.95rem;
+              }
+            }
+          }
+        }
+      }
+
+      .profile_card {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 11.719rem;
               }
             }
           }
@@ -3370,6 +3419,24 @@ body {
               .label-view2 {
                 width: 65%;
                 font-size: 1.35rem;
+              }
+            }
+          }
+        }
+      }
+
+      .profile_card {
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 14.708rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 1rem;
               }
             }
           }
@@ -3977,6 +4044,31 @@ body {
                 width: 65%;
                 font-size: 2rem;
                 padding: 1.75rem 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .profile_card {
+        .profile_card_title {
+          h6 {
+            font-size: 1.5rem;
+            margin-bottom: 2%;
+          }
+        }
+
+        .item {
+          .card {
+            .owl_content_img {
+              img {
+                height: 20.041rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 1.5rem;
               }
             }
           }

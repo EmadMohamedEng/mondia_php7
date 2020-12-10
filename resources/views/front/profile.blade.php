@@ -59,7 +59,7 @@
             <div class="item">
               <div class="card ovf-hidden">
                 <a class="owl_content_img view overlay link_href" href="#0">
-                  <img class="w-100" src="{{asset("front/images/Cutting/Contnent_Page/001.png")}}" alt="Card image cap">
+                  <img class="w-100" src="{{asset("front/images/Cutting/Contnent_Page/007.png")}}" alt="Card image cap">
 
                   <a>
                     <div class="mask waves-effect waves-light rgba-white-slight"></div>
@@ -79,7 +79,7 @@
             <div class="item">
               <div class="card ovf-hidden">
                 <a class="owl_content_img view overlay link_href" href="#0">
-                  <img class="w-100" src="{{asset("front/images/Cutting/Contnent_Page/001.png")}}" alt="Card image cap">
+                  <img class="w-100" src="{{asset("front/images/Cutting/Contnent_Page/008.png")}}" alt="Card image cap">
 
                   <a>
                     <div class="mask waves-effect waves-light rgba-white-slight"></div>
@@ -99,7 +99,7 @@
             <div class="item">
               <div class="card ovf-hidden">
                 <a class="owl_content_img view overlay link_href" href="#0">
-                  <img class="w-100" src="{{asset("front/images/Cutting/Contnent_Page/001.png")}}" alt="Card image cap">
+                  <img class="w-100" src="{{asset("front/images/Cutting/Contnent_Page/009.jpg")}}" alt="Card image cap">
 
                   <a>
                     <div class="mask waves-effect waves-light rgba-white-slight"></div>
