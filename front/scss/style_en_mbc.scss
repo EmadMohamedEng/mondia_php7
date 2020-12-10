@@ -992,6 +992,66 @@ body {
         }
       }
     }
+
+    .profile_card {
+      border-top: 1px solid $text_color;
+      margin-top: 8%;
+
+      .profile_card_title {
+        margin-top: 4%;
+        h6 {
+          color: $text_color;
+        }
+      }
+
+      .item {
+        .card {
+          border: 1px solid $text_color;
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          // height: 16rem;
+
+          .owl_content_img {
+            img {
+              height: 11rem;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+            }
+          }
+
+          .card-body {
+            background-color: $bg_color2;
+            color: $text_color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 0.25rem;
+            border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+
+            .card-title {
+              text-align: center;
+              font-size: 1rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              direction: ltr;
+              margin-bottom: 0;
+            }
+
+            .card-text {
+              i {
+                color: $grey_color;
+              }
+            }
+          }
+        }
+
+      }
+    }
   }
 
   /* End Profile Page */
@@ -1346,6 +1406,11 @@ body {
 
       .lang_mbc {
         margin-right: -18%;
+
+        .dropdown-menu2 {
+          left: -20%;
+          min-width: 8rem;
+        }
       }
     }
 
@@ -1622,7 +1687,7 @@ body {
     }
 
     .profile {
-      width: 90%;
+      width: 100%;
       margin: 2.5rem auto;
 
       .profile_table {
@@ -1703,7 +1768,7 @@ body {
         margin-right: -18%;
 
         .dropdown-menu2 {
-          left: -4%;
+          left: -6%;
           min-width: 8rem;
         }
       }
@@ -2000,7 +2065,7 @@ body {
     }
 
     .profile {
-      width: 90%;
+      width: 100%;
       margin: 2.5rem auto;
 
       .profile_table {
@@ -2075,6 +2140,13 @@ body {
       }
 
       .arrow_back {}
+
+      .lang_mbc {
+        .dropdown-menu2 {
+          left: -3%;
+          min-width: 8rem;
+        }
+      }
     }
 
     .nav_nav {
@@ -2368,7 +2440,7 @@ body {
     }
 
     .profile {
-      width: 90%;
+      width: 100%;
       margin: 2.5rem auto;
 
       .profile_table {
@@ -2448,6 +2520,11 @@ body {
 
       .lang_mbc {
         margin-right: -13%;
+
+        .dropdown-menu2 {
+          left: 7%;
+          min-width: 8rem;
+        }
       }
     }
 
@@ -2751,7 +2828,7 @@ body {
     }
 
     .profile {
-      width: 90%;
+      width: 100%;
       margin: 2.5rem auto;
 
       .profile_table {
@@ -3278,7 +3355,7 @@ body {
     }
 
     .profile {
-      width: 90%;
+      width: 100%;
       margin: 2.5rem auto;
 
       .profile_table {
@@ -3877,7 +3954,7 @@ body {
     }
 
     .profile {
-      width: 90%;
+      width: 100%;
       margin: 4.5rem auto;
 
       .profile_title {
