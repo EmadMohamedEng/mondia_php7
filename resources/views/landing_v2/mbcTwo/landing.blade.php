@@ -44,13 +44,13 @@ App::setLocale($lang);
 <?php
 if ($lang == 'ar') {
   $text = "text-right";
-  $left = "rtl";
+  $left = "direction: rtl;";
   $bottom = "bottom: 0%;";
   $font = "font-size: 20px;";
   $float = "float-left";
 } else {
   $text = "text-left";
-  $left = "ltr";
+  $left = "direction: ltr;";
   $font = "font-size: 16px;";
   $float = "float-right";
 }
@@ -142,7 +142,7 @@ if ($lang == 'ar') {
               </select>
             </div>
 
-            <div class="change_cost cancel text-center text-white">
+            <div class="change_cost cancel text-center text-white"  style="{{$left}}">
               @foreach($operators as $operator)
               <p id="{{"cost$operator->id"}}" style="display:none">{{ $lang == 'ar' ? $operator->cost_ar : $operator->cost_en }}</p>
               @endforeach
