@@ -249,7 +249,7 @@ body {
     }
   }
 
-  /* End List Page */
+  /* Start List Page */
   .list_page {
     .content_carousel_head {
       text-align: right;
@@ -273,6 +273,34 @@ body {
       }
     }
   }
+
+  /* End List Page */
+
+  /* Start List Muslim Page */
+  .list_muslim {
+    .coming_soon {}
+
+    .content_carousel_head {
+      .link_title {}
+    }
+
+    .item {
+      .card {
+        .owl_content_img {
+
+          img {}
+        }
+      }
+
+      .card-body {
+        .card-title {
+          direction: rtl !important;
+        }
+      }
+    }
+  }
+
+  /* End List Muslim Page */
 
   /* Start Inner Page */
   .inner_page {
@@ -712,6 +740,11 @@ body {
           .btn_orange {
             button {
               left: 51.2% !important;
+
+              &:focus {
+                top: 92.75% !important;
+                left: 50.3% !important;
+              }
             }
           }
         }
@@ -1704,8 +1737,6 @@ body {
         }
       }
     }
-
-
   }
 }
 

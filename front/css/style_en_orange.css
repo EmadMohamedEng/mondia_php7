@@ -23,6 +23,8 @@ body {
   /* End Home Page */
   /* Start List Page */
   /* End List Page */
+  /* Start List Muslim Page */
+  /* End List Muslim Page */
   /* Start Inner Page */
   /* Start Modal For InnerPager */
   /* End Modal For InnerPager */
@@ -155,7 +157,7 @@ body {
   color: #FFF;
 }
 .main_container .img_carousel .owl_one .item .owl_one_img img {
-  height: 26.187rem;
+  height: 40rem;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -173,14 +175,15 @@ body {
   border-radius: 10px;
 }
 .main_container .img_carousel .owl_one .item .btn_orange button {
+  font-size: 1.2rem;
   text-align: left;
-  background: #FF6600;
-  color: #FFF;
+  background: transparent;
+  color: #FF6600;
+  border: 1px solid #FF6600;
   width: 50%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border: 0;
   margin: 0;
   border-radius: unset;
   -webkit-border-radius: unset;
@@ -190,15 +193,23 @@ body {
   border-bottom-left-radius: 10px;
   border-top-right-radius: 30px;
   position: absolute;
-  top: 96.45%;
-  left: 24.95%;
+  top: 96.8%;
+  left: 25%;
   transform: translate(-50%, -50%);
+}
+.main_container .img_carousel .owl_one .item .btn_orange button .link_href {
+  color: #FF6600;
 }
 .main_container .img_carousel .owl_one .item .btn_orange button:after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";
   padding-left: 4%;
+}
+.main_container .img_carousel .owl_one .item .btn_orange button:focus {
+  box-shadow: 0 0 0 0.1rem #FFF;
+  top: 96.7%;
+  left: 25.2%;
 }
 .main_container .img_carousel .owl-theme .owl-nav {
   color: #FF6600;
@@ -211,7 +222,7 @@ body {
   font-weight: bold;
   font-size: 3rem;
   position: absolute;
-  bottom: 8rem;
+  bottom: 16rem;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -342,6 +353,9 @@ body {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
+.main_container .content_carousel .owl_content_five .item .card_muslim_guid .card-body .card-title {
+  font-size: 80%;
+}
 .main_container .list_page .coming_soon {
   color: #FFF;
   background: #FF6600;
@@ -373,10 +387,49 @@ body {
   border-radius: 10px;
 }
 .main_container .list_page .item .card .card-body {
-  background-color: #0f1218;
+  background-color: #000;
   color: #FFF;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+.main_container .list_muslim .content_carousel_head .link_title {
+  color: #FF6600;
+}
+.main_container .list_muslim .item {
+  width: 90%;
+  margin: 5% auto;
+}
+.main_container .list_muslim .item .card {
+  background: #000;
+  border: 4px solid #FF6600;
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+}
+.main_container .list_muslim .item .card .owl_content_img {
+  position: relative;
+}
+.main_container .list_muslim .item .card .owl_content_img img {
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+}
+.main_container .list_muslim .item .card-body {
+  padding: 0;
+  margin-top: 8%;
+}
+.main_container .list_muslim .item .card-body .card-title {
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
+  margin-bottom: 0;
 }
 .main_container .inner_page .cover h4 {
   color: #FFF;
@@ -435,6 +488,34 @@ body {
 }
 .main_container .nearmosque_page .nearmosque_title #map {
   border: 5px solid #FF6600;
+}
+.main_container .salah_time_page .roll-in-top {
+  -webkit-animation: unset;
+  animation: unset;
+}
+@-webkit-keyframes roll-in-top {
+  0% {
+    -webkit-transform: unset;
+    transform: unset;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: unset;
+    transform: unset;
+    opacity: 1;
+  }
+}
+@keyframes roll-in-top {
+  0% {
+    -webkit-transform: unset;
+    transform: unset;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: unset;
+    transform: unset;
+    opacity: 1;
+  }
 }
 .main_container .salah_time_page .salah_time_title h2 {
   color: #FF6600;
@@ -591,11 +672,22 @@ body {
 .main_container .zakkah_v2_page .zakah_result .zakah_result_left {
   text-align: center;
 }
+.main_container .merath_page .border-bottom {
+  border-bottom: 2px solid #FFF !important;
+}
 .main_container .merath_page .merath_title h2 {
   color: #FF6600;
 }
 .main_container .merath_page .input_text .merath_input {
   border: 2px solid #FF6600;
+  color: #FFF;
+  background-color: transparent;
+}
+.main_container .merath_page .input_text .merath_input::placeholder {
+  color: #FFF;
+}
+.main_container .merath_page .input_text .merath_input option {
+  background: #0f1218;
 }
 .main_container .merath_page .input_span h4 {
   color: #FF6600;
@@ -735,7 +827,7 @@ body {
     margin-right: -18%;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    left: -60%;
+    left: -20%;
     min-width: 8rem;
   }
   .main_container .nav_nav {
@@ -767,8 +859,12 @@ body {
   }
   .main_container .img_carousel .owl_one .item .btn_orange button {
     width: 97%;
-    top: 95.24%;
+    top: 93.5%;
     left: 48.6%;
+  }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 92.5%;
+    left: 49.6%;
   }
   .main_container .img_carousel .owl-theme .owl-nav button.owl-next, .main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
     bottom: 6rem;
@@ -844,7 +940,7 @@ body {
     margin-right: -18%;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    left: -40%;
+    left: -10%;
     min-width: 8rem;
   }
   .main_container .nav_nav {
@@ -874,8 +970,20 @@ body {
   }
   .main_container .img_carousel .owl_one .item .btn_orange button {
     width: 97%;
-    top: 95.79%;
+    top: 94.33%;
     left: 48.6%;
+  }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 93.5%;
+    left: 49%;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
+    bottom: 7rem;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev.owl-next {
+    right: -1%;
   }
   .main_container .content_carousel .owl_content_four .item.item_muslim,
 .main_container .content_carousel .owl_content_five .item.item_muslim {
@@ -955,7 +1063,7 @@ body {
     margin-right: -18%;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    left: -33%;
+    left: -5%;
     min-width: 8rem;
   }
   .main_container .nav_nav {
@@ -984,8 +1092,20 @@ body {
   }
   .main_container .img_carousel .owl_one .item .btn_orange button {
     width: 98%;
-    top: 96.5%;
-    left: 49.1%;
+    top: 94.75%;
+    left: 49.2%;
+  }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 94%;
+    left: 49.75%;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
+    bottom: 7rem;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev.owl-next {
+    right: -1%;
   }
   .main_container .content_carousel .owl_content_four .item.item_muslim,
 .main_container .content_carousel .owl_content_five .item.item_muslim {
@@ -1056,7 +1176,7 @@ body {
     margin-right: -13%;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    left: -20%;
+    left: 7%;
     min-width: 8rem;
   }
   .main_container .nav_nav {
@@ -1085,8 +1205,20 @@ body {
   }
   .main_container .img_carousel .owl_one .item .btn_orange button {
     width: 98%;
-    top: 96.5%;
-    left: 49.1%;
+    top: 95%;
+    left: 49.2%;
+  }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 94.5%;
+    left: 49.8%;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
+    bottom: 7rem;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev.owl-next {
+    right: -1%;
   }
   .main_container .content_carousel .owl_content_four .item.item_muslim,
 .main_container .content_carousel .owl_content_five .item.item_muslim {
@@ -1137,6 +1269,10 @@ body {
     margin-right: unset !important;
   }
 
+  .main_container {
+    /* Start List Muslim Page */
+    /* End List Muslim Page */
+  }
   .main_container .header {
     position: fixed !important;
     height: 5rem !important;
@@ -1196,6 +1332,10 @@ body {
     top: 96.35%;
     left: 25.1%;
   }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 95.85%;
+    left: 25.6%;
+  }
   .main_container .img_carousel .owl-theme .owl-nav button.owl-next,
 .main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
     font-size: 4rem;
@@ -1239,6 +1379,12 @@ body {
     font-size: 1.35rem;
     top: 8% !important;
     right: 1% !important;
+  }
+  .main_container .list_muslim .content_carousel_head .link_title h6 {
+    font-size: 1.5rem;
+  }
+  .main_container .list_muslim .item .card-body .card-title {
+    font-size: 1.25rem;
   }
   .main_container .zakkah_v2_page {
     margin: 4% auto;
@@ -1290,6 +1436,10 @@ body {
     margin-right: unset !important;
   }
 
+  .main_container {
+    /* Start List Muslim Page */
+    /* End List Muslim Page */
+  }
   .main_container .header {
     position: fixed !important;
     height: 7rem !important;
@@ -1350,6 +1500,10 @@ body {
     top: 96.3%;
     left: 25.1%;
   }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 95.85%;
+    left: 25.6%;
+  }
   .main_container .img_carousel .owl-theme .owl-nav button.owl-next,
 .main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
     font-size: 5rem;
@@ -1389,6 +1543,12 @@ body {
     font-size: 1.5rem;
     top: 8% !important;
     right: 1% !important;
+  }
+  .main_container .list_muslim .content_carousel_head .link_title h6 {
+    font-size: 2rem;
+  }
+  .main_container .list_muslim .item .card-body .card-title {
+    font-size: 1.75rem;
   }
   .main_container .azan_page {
     margin: 3rem auto;
@@ -1497,20 +1657,32 @@ body {
     right: 5%;
   }
   .main_container .navbar .navbar-nav .nav-item .nav-link {
-    font-size: 15px !important;
+    font-size: 14px !important;
+    font-weight: bold;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 13.656rem !important;
+    height: 35rem !important;
   }
   .main_container .img_carousel .owl_one .item .btn_orange button {
-    top: 90% !important;
-    width: 70% !important;
+    top: 96.8%;
+    left: 25.15%;
+    font-size: 1rem;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
+    bottom: 14rem;
   }
   .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
     height: 13.323rem !important;
   }
+  .main_container .content_carousel .owl_content_five .item.item_muslim {
+    height: 12rem;
+  }
   .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
     height: 9.857rem !important;
+  }
+  .main_container .content_carousel .owl_content_five .item .card.card_muslim_guid .owl_content_img img {
+    height: 9.5rem !important;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 13.031rem !important;
@@ -1519,205 +1691,5 @@ body {
     width: 50%;
   }
 }
-/* Start Animation */
-.scale-up-bottom {
-  -webkit-animation: scale-up-bottom 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 1.5s both;
-  animation: scale-up-bottom 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 1.5s both;
-}
-
-@-webkit-keyframes scale-up-bottom {
-  0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-    -webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-  }
-}
-@keyframes scale-up-bottom {
-  0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-    -webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-  }
-}
-.bounce-top {
-  -webkit-animation: bounce-top 0.9s ease-in-out 1s both;
-  animation: bounce-top 0.9s ease-in-out 1s both;
-}
-
-@-webkit-keyframes bounce-top {
-  0% {
-    -webkit-transform: translateY(-45px);
-    transform: translateY(-45px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 1;
-  }
-  24% {
-    opacity: 1;
-  }
-  40% {
-    -webkit-transform: translateY(-24px);
-    transform: translateY(-24px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  65% {
-    -webkit-transform: translateY(-12px);
-    transform: translateY(-12px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  82% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  93% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  25%, 55%, 75%, 87% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-}
-@keyframes bounce-top {
-  0% {
-    -webkit-transform: translateY(-45px);
-    transform: translateY(-45px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 1;
-  }
-  24% {
-    opacity: 1;
-  }
-  40% {
-    -webkit-transform: translateY(-24px);
-    transform: translateY(-24px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  65% {
-    -webkit-transform: translateY(-12px);
-    transform: translateY(-12px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  82% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  93% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  25%, 55%, 75%, 87% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-}
-.roll-in-top {
-  -webkit-animation: roll-in-top 1s ease-in-out 1s both;
-  animation: roll-in-top 1s ease-in-out 1s both;
-}
-
-@-webkit-keyframes roll-in-top {
-  0% {
-    -webkit-transform: translateY(-800px) rotate(-540deg);
-    transform: translateY(-800px) rotate(-540deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0) rotate(0deg);
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-@keyframes roll-in-top {
-  0% {
-    -webkit-transform: translateY(-800px) rotate(-540deg);
-    transform: translateY(-800px) rotate(-540deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0) rotate(0deg);
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-.pulsate-bck {
-  -webkit-animation: pulsate-bck 1.5s ease-in-out infinite both;
-  animation: pulsate-bck 1.5s ease-in-out infinite both;
-}
-
-@-webkit-keyframes pulsate-bck {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@keyframes pulsate-bck {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-/* End Animation */
 
 /*# sourceMappingURL=style_en_orange.css.map */
