@@ -147,12 +147,12 @@ if (session()->get('applocale') == 'ar') {
       <a class="row link_href m-0" href="{{route('front.inner',['id' => $item->content_id])}}">
         <div class="col-md-4 col-lg-4 col-xl-2 col-4 p-0">
           @php
-          if($item->type == 1){
+          if($item->type == 1) { //video
           $src = $item->image_preview;
-          }elseif($item->type == 3){
+          }elseif($item->type == 3) { //image
           $src =url( $item->video );
-          }elseif($item->type == 2){
-            $src = $content->image_preview;
+          }elseif($item->type == 2) { //audio
+            $src = $item->image_preview;
           }else{
           $src = url('front\images\Cutting\Contnent_Page\004.png');
           }
