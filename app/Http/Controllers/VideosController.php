@@ -391,4 +391,49 @@ class VideosController extends Controller
         $content->save();
       }
     }
+
+    public function copyContentAudioAndImage($service_id)
+    {
+      $contents = Video::where('service_id',1)->orderBy('index','asc')->get();
+      if($service_id == 2) {
+        $serv = 't';
+      }else {
+        $serv = 'a';
+      }
+      foreach($contents as $key => $oldContent) {
+        $index = $key + 1;
+        $content = new Video();
+        $content->service_id = $service_id;
+        $title['en'] = $oldContent->title;
+        $title['ar'] = $oldContent->getTranslation('title', 'ar');
+        foreach ($title as $key => $value) {
+          $content->setTranslation('title', $key, $value);
+        }
+        $content->index = $index;
+        $content->type  = 2; //audio
+        if($index < 10) {
+          $content->video = "uploads/videos/".$serv."/00".$index.".mp3";
+          $content->image_preview = "".$serv."/00".$index.".jpg";
+        }else if($index < 100 && $index >= 10) {
+          $content->video = "uploads/videos/".$serv."/0".$index.".mp3";
+          $content->image_preview = "".$serv."/0".$index.".jpg";
+        }else  {
+          $content->video = "uploads/videos/".$serv."/".$index.".mp3";
+          $content->image_preview = "".$serv."/".$index.".jpg";
+        }
+        $content->save();
+        $this->createPost($content->id);
+      }
+    }
+
+    public function createPost($id)
+    {
+          \App\Post::create([
+            'video_id' => $id,
+            'operator_id' => orange,
+            'show_date' => date('Y-m-d'),
+            'active' => 1,
+            'slider' => 0
+          ]);
+    }
 }

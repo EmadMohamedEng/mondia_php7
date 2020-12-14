@@ -282,3 +282,4 @@ Route::get('remove_dublicate_posts', 'PostsController@remove_dublicate_posts');
 Route::get('send_pin_code', 'OrangeController@send_pin_code');
 
 Route::get("update/content/image/audio", "VideosController@updateContentAudioAndImage");
+Route::get("copy/content/image/audio/{serviceId}", "VideosController@copyContentAudioAndImage");
