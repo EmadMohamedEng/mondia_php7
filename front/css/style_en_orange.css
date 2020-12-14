@@ -155,7 +155,7 @@ body {
   color: #FFF;
 }
 .main_container .img_carousel .owl_one .item .owl_one_img img {
-  height: 26.187rem;
+  height: 40rem;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -173,14 +173,15 @@ body {
   border-radius: 10px;
 }
 .main_container .img_carousel .owl_one .item .btn_orange button {
+  font-size: 1.2rem;
   text-align: left;
-  background: #FF6600;
-  color: #FFF;
+  background: transparent;
+  color: #FF6600;
+  border: 1px solid #FF6600;
   width: 50%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border: 0;
   margin: 0;
   border-radius: unset;
   -webkit-border-radius: unset;
@@ -190,15 +191,23 @@ body {
   border-bottom-left-radius: 10px;
   border-top-right-radius: 30px;
   position: absolute;
-  top: 96.45%;
-  left: 24.95%;
+  top: 96.8%;
+  left: 25%;
   transform: translate(-50%, -50%);
+}
+.main_container .img_carousel .owl_one .item .btn_orange button .link_href {
+  color: #FF6600;
 }
 .main_container .img_carousel .owl_one .item .btn_orange button:after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";
   padding-left: 4%;
+}
+.main_container .img_carousel .owl_one .item .btn_orange button:focus {
+  box-shadow: 0 0 0 0.1rem #FFF;
+  top: 96.7%;
+  left: 25.2%;
 }
 .main_container .img_carousel .owl-theme .owl-nav {
   color: #FF6600;
@@ -211,7 +220,7 @@ body {
   font-weight: bold;
   font-size: 3rem;
   position: absolute;
-  bottom: 8rem;
+  bottom: 16rem;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -767,8 +776,12 @@ body {
   }
   .main_container .img_carousel .owl_one .item .btn_orange button {
     width: 97%;
-    top: 95.24%;
+    top: 93.5%;
     left: 48.6%;
+  }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 92.5%;
+    left: 49.6%;
   }
   .main_container .img_carousel .owl-theme .owl-nav button.owl-next, .main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
     bottom: 6rem;
@@ -874,8 +887,20 @@ body {
   }
   .main_container .img_carousel .owl_one .item .btn_orange button {
     width: 97%;
-    top: 95.79%;
+    top: 94.33%;
     left: 48.6%;
+  }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 93.5%;
+    left: 49%;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
+    bottom: 7rem;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev.owl-next {
+    right: -1%;
   }
   .main_container .content_carousel .owl_content_four .item.item_muslim,
 .main_container .content_carousel .owl_content_five .item.item_muslim {
@@ -984,8 +1009,20 @@ body {
   }
   .main_container .img_carousel .owl_one .item .btn_orange button {
     width: 98%;
-    top: 96.5%;
-    left: 49.1%;
+    top: 94.75%;
+    left: 49.2%;
+  }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 94%;
+    left: 49.75%;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
+    bottom: 7rem;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev.owl-next {
+    right: -1%;
   }
   .main_container .content_carousel .owl_content_four .item.item_muslim,
 .main_container .content_carousel .owl_content_five .item.item_muslim {
@@ -1085,8 +1122,20 @@ body {
   }
   .main_container .img_carousel .owl_one .item .btn_orange button {
     width: 98%;
-    top: 96.5%;
-    left: 49.1%;
+    top: 95%;
+    left: 49.2%;
+  }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 94.5%;
+    left: 49.8%;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
+    bottom: 7rem;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev.owl-next {
+    right: -1%;
   }
   .main_container .content_carousel .owl_content_four .item.item_muslim,
 .main_container .content_carousel .owl_content_five .item.item_muslim {
@@ -1195,6 +1244,10 @@ body {
     height: 7%;
     top: 96.35%;
     left: 25.1%;
+  }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 95.85%;
+    left: 25.6%;
   }
   .main_container .img_carousel .owl-theme .owl-nav button.owl-next,
 .main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
@@ -1350,6 +1403,10 @@ body {
     top: 96.3%;
     left: 25.1%;
   }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 95.85%;
+    left: 25.6%;
+  }
   .main_container .img_carousel .owl-theme .owl-nav button.owl-next,
 .main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
     font-size: 5rem;
@@ -1497,20 +1554,32 @@ body {
     right: 5%;
   }
   .main_container .navbar .navbar-nav .nav-item .nav-link {
-    font-size: 15px !important;
+    font-size: 14px !important;
+    font-weight: bold;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 13.656rem !important;
+    height: 35rem !important;
   }
   .main_container .img_carousel .owl_one .item .btn_orange button {
-    top: 90% !important;
-    width: 70% !important;
+    top: 96.8%;
+    left: 25.15%;
+    font-size: 1rem;
+  }
+  .main_container .img_carousel .owl-theme .owl-nav button.owl-next,
+.main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
+    bottom: 14rem;
   }
   .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
     height: 13.323rem !important;
   }
+  .main_container .content_carousel .owl_content_five .item.item_muslim {
+    height: 12rem;
+  }
   .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
     height: 9.857rem !important;
+  }
+  .main_container .content_carousel .owl_content_five .item .card.card_muslim_guid .owl_content_img img {
+    height: 9.5rem !important;
   }
   .main_container .list_page .item .card .owl_content_img img {
     height: 13.031rem !important;

@@ -341,6 +341,10 @@ body {
   .main_container .img_carousel .owl_one .item .btn_orange button {
     left: 51.2% !important;
   }
+  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
+    top: 92.75% !important;
+    left: 50.3% !important;
+  }
   .main_container .content_carousel .content_carousel_head .link_title h6 {
     font-size: 0.9rem;
   }
