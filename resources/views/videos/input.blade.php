@@ -75,6 +75,7 @@
     <label class="col-sm-3 col-md-2 control-label">Source <span class="text-danger">*</span></label>
     <div class="col-sm-9 col-md-8 controls">
         {!! Form::file('video',["accept"=>isset($accept)?$accept:'*' ,"class"=>"default accept_type"]) !!}
+        @if( $video->video )
         @if($video && $video->type == 1)
             <video width="320" height="240" controls>
                 <source src="{{url($video->video)}}" type="video/mp4">
@@ -85,6 +86,7 @@
             </audio>
         @elseif($video && $video->type == 3)
             <img class=" img-responsive" width="100px" src="{{url($video->video)}}"/>
+        @endif
         @endif
     </div>
 </div>
