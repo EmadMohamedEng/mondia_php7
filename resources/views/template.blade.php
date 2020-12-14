@@ -421,6 +421,20 @@ if (Config::get('languages')[App::getLocale()] == "English") {
                         </li>
                     </ul>
                     <ul class="nav nav-list">
+                        <li id="mbc_content">
+                            <a href="#" class="dropdown-toggle">
+                                <i class="glyphicon glyphicon-film"></i>
+                                <span>Mbc Contents</span>
+                                <b class="arrow fa fa-angle-right"></b>
+                            </a>
+                            <!-- BEGIN Submenu -->
+                            <ul class="submenu">
+                                <li id="mbc_content-index"><a href="{{url('mbc_content')}}">List Mbc Contents</a></li>
+                            </ul>
+                            <!-- END Submenu -->
+                        </li>
+                    </ul>
+                    <ul class="nav nav-list">
                         <li id="posts">
                             <a href="#" class="dropdown-toggle">
                                 <i class="glyphicon glyphicon-flash"></i>

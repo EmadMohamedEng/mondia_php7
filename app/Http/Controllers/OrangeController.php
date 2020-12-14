@@ -38,21 +38,23 @@ class OrangeController extends Controller
     $URL = ORANGE_END_POINT."/api/checkStatus";
 
     $JSON['msisdn'] = $msisdn;
-    $JSON['service_id'] = 3;
+    $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
 
     $headers['Accept'] = '*/*';
 
     $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
 
-    if($checkStatus){
+
+
+    if($checkStatus != "0"){  //  found
       $orange_msisdn = json_decode($checkStatus);
 
-      $this->orangeLoginSession($checkStatus->msisdn);
+      $this->orangeLoginSession($msisdn);
       if(session()->has('current_url')){
         return redirect(session()->get('current_url'));
       }
       return redirect(url('?OpID=8'));
-    }else{
+    }else{ // not found
       $orangeSubscribe = $this->orangeSubscribe($msisdn);
       if($orangeSubscribe == 0){
         $this->orangeLoginSession($msisdn);
@@ -89,7 +91,9 @@ class OrangeController extends Controller
 
     $lang =  Session::get('applocale');
 
-    if($checkStatus){
+
+
+    if($checkStatus != "0"){  //  found
       $orangeUnSubscribe = $this->orangeUnSubscribe($msisdn);
       if($orangeUnSubscribe == 0){
         if($lang = 'ar'){
@@ -120,11 +124,10 @@ class OrangeController extends Controller
 
   public function orangeSubscribe($msisdn)
   {
-    $URL = ORANGE_END_POINT."/api/orangeWeb";
+    $URL = ORANGE_END_POINT."/api/web_notify";  // free or direct sub
 
     $JSON['msisdn'] = $msisdn;
-    $JSON['command'] = 'Subscribe';
-    $JSON['service_id'] = 3;
+    $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
     $JSON['bearer_type'] = 'WEB';
 
     $headers['Accept'] = '*/*';
@@ -136,11 +139,11 @@ class OrangeController extends Controller
 
   public function orangeUnSubscribe($msisdn)
   {
-    $URL = ORANGE_END_POINT."/api/orangeWeb";
+    $URL = ORANGE_END_POINT."/api/orangeWeb";  // direct unsub
 
     $JSON['msisdn'] = $msisdn;
     $JSON['command'] = 'Unsubscribe';
-    $JSON['service_id'] = 3;
+    $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
     $JSON['bearer_type'] = 'WEB';
 
     $headers['Accept'] = '*/*';

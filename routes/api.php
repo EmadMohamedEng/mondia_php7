@@ -40,5 +40,6 @@ Route::prefix('v1')->group(function() {
 
 
 /*************orange************* */
+define('ORANGE_ELKHEAR_SERVICE_ID',3);
 define('ORANGE_END_POINT', 'https://dev.digizone.com.kw/orange_integration');
 /***********end orange*********** */

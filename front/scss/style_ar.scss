@@ -514,6 +514,14 @@ body {
         }
       }
     }
+
+    .profile_card {
+      .profile_card_title {
+        h6 {
+          text-align: right;
+        }
+      }
+    }
   }
 
   /* End Profile Page */
@@ -1135,6 +1143,7 @@ body {
 
   .main_container {
     .header {
+
       .header_logo,
       .header_icon {
         margin-left: 8%;
@@ -1287,6 +1296,7 @@ body {
 @media (min-width: 768px) and (max-width: 1023.9px) {
   .main_container {
     .header {
+
       .header_logo,
       .header_icon {
         width: 100%;
@@ -1510,6 +1520,7 @@ body {
 @media (min-width: 1024px) and (max-width: 1030px) {
   .main_container {
     .header {
+
       .header_logo,
       .header_icon {
         width: 100%;

@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 get_static_routes() ;
 get_dynamic_routes();
 
+Route::get('mbc_content/allData', 'MbcContentController@allData');
+Route::resource('mbc_content', 'MbcContentController');
+
 Auth::routes([
     'register' => false
 ]);
