@@ -46,7 +46,7 @@
           </tbody>
         </table>
       </div>
-
+      {{-- @if(request()->get('OpID') == mbc)
       <div class="profile_card">
         <div class="row m-0">
           <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-1">
@@ -116,5 +116,6 @@
           </div>
         </div>
       </div>
+      @endif --}}
 </section>
 @stop

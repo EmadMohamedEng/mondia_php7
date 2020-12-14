@@ -154,6 +154,10 @@ $enable = get_setting('enable_testing');
                   <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize p-0" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
                   <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
                     @foreach(Config::get('languages') as $key=>$lang)
+                    @php
+                    if ($key == 'ur' && request()->get('OpID') == orange)
+                    continue;
+                    @endphp
                     <a class="dropdown-item text-capitalize" href="{{url('lang/'.$key)}}">{{$lang}}</a>
                     @endforeach
                   </div>
