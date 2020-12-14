@@ -82,7 +82,7 @@ $menu = provider_menu();
     </section> --}}
 
     <section class="img_carousel">
-      <video width="100%" controls poster="{{url('orange_slider/Fdytok_1_snapshot.jpg')}}">
+      <video class="rounded" width="100%" controls poster="{{url('orange_slider/Fdytok_1_snapshot.jpg')}}">
         <source src="{{url('orange_slider/Fdytok_1.mp4')}}" type="video/mp4">
         <source src="{{url('orange_slider/Fdytok_1.mp4')}}" type="video/ogg">
         Your browser does not support the video tag.
@@ -141,11 +141,16 @@ $menu = provider_menu();
     <section class="content_carousel">
       <div class="content_carousel_head text-capitalize">
         <div class="row m-0">
-          <div class="col-6 padding_phones">
+          <div class="col-8 padding_phones">
             <a class="link_title" href="#">
               <h6 class="">@lang('front.muslim_guide')</h6>
             </a>
           </div>
+          @if (request()->get("OpID") == orange)
+          <div class="col-4 padding_phones">
+            <a href="{{url('list_muslim')}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
+          </div>
+          @endif
         </div>
       </div>
 
