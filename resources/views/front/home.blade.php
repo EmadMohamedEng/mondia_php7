@@ -141,10 +141,14 @@ $menu = provider_menu();
     <section class="content_carousel">
       <div class="content_carousel_head text-capitalize">
         <div class="row m-0">
-          <div class="col-6 padding_phones">
+          <div class="col-8 padding_phones">
             <a class="link_title" href="#">
               <h6 class="">@lang('front.muslim_guide')</h6>
             </a>
+          </div>
+
+          <div class="col-4 padding_phones">
+            <a href="{{url('list_muslim')}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
           </div>
         </div>
       </div>
