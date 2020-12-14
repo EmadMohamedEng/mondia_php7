@@ -34,7 +34,7 @@ $menu = provider_menu();
 
 
     @if(request()->get('OpID') == orange)
-    <section class="img_carousel">
+    {{-- <section class="img_carousel">
       <div class="owl_one owl_orange owl-carousel owl-theme" dir="ltr">
         @foreach($latest as $content)
         <div class="item">
@@ -79,6 +79,14 @@ $menu = provider_menu();
         </div>
         @endforeach
       </div>
+    </section> --}}
+
+    <section class="img_carousel">
+      <video width="100%" controls poster="{{url('uploads/Fdytok_1_snapshot.jpg')}}">
+        <source src="{{url('uploads/Fdytok_1.mp4')}}" type="video/mp4">
+        <source src="{{url('uploads/Fdytok_1.mp4')}}" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
     </section>
 
     @else
