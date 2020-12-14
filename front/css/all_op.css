@@ -1878,7 +1878,7 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 23.438rem;
+    height: 23.438rem !important;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
     top: 93%;
@@ -2250,7 +2250,7 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 24.688rem;
+    height: 24.688rem !important;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
     top: 94%;

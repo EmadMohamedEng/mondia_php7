@@ -712,6 +712,11 @@ body {
           .btn_orange {
             button {
               left: 51.2% !important;
+
+              &:focus {
+                top: 92.75% !important;
+                left: 50.3% !important;
+              }
             }
           }
         }

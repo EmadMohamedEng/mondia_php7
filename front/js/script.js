@@ -41,9 +41,9 @@ $(document).ready(function () {
 });
 
 $('.owl_orange').owlCarousel({
-  loop: true,
+  loop: false,
   margin: 0,
-  autoplay: true,
+  autoplay: false,
   autoplayTimeout: 3000,
   animateOut: 'fadeOut',
   nav: true,
