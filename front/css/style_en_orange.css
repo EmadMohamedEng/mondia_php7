@@ -661,6 +661,11 @@ body {
   color: #FF6600;
   margin-bottom: 5% !important;
 }
+.main_container .profile .profile_table table {
+  border: 1px solid #FF6600;
+  border-collapse: unset;
+  border-radius: 20px;
+}
 .main_container .profile .profile_table table tbody tr .label-view {
   width: 25%;
   color: #FF6600;
@@ -668,7 +673,7 @@ body {
 }
 .main_container .profile .profile_table table tbody tr .label-view2 {
   width: 75%;
-  color: #FF6600;
+  color: #FFF;
   border: 0;
 }
 .main_container .terms_page {

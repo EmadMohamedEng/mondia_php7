@@ -1665,10 +1665,10 @@ class FrontController extends Controller
       if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
         $vars["msisdn"] = session()->get('MSISDN');
         $vars["service_id"] = 2;
-        $sub = $this->SendRequest(MBC_GET_SUB, $vars, ["Accept: application/json"]);
-        $sub = json_decode(  $sub);
+        $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
+       $sub = json_decode(  $sub);
         $date = date('Y-m-d');
-        if($sub){
+        if($sub && isset($sub->created_at)){
           $date = date('Y-m-d',strtotime($sub->created_at));
         }
         return view('front.profile',compact('date'));
