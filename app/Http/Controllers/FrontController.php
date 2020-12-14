@@ -147,40 +147,8 @@ class FrontController extends Controller
   }
 
   public function list_muslim(Request $request)
-   {
-      $service = '';
-      if (request()->has('OpID') && request()->get('OpID') != '') {
-      $contents = Video::select('*', 'contents.id as content_id','posts.free');
-      }else{
-        $contents = Video::select('*', 'contents.id as content_id');
-      }
-      if ($request->has('service_id') && $request->service_id != '') {
-      $contents = $contents->where('service_id', $request->service_id);
-      $service = Service::find($request->service_id);
-    }
-    if (request()->has('OpID') && request()->get('OpID') != '') {
-      $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
-        ->where('posts.operator_id', request()->get('OpID'))
-        ->where('posts.show_date', '<=', Carbon::now()->toDateString());
-    }
-    if ($request->has('search') && $request->search != '') {
-      $contents = $contents->join('translatables', 'translatables.record_id', '=', 'contents.id')
-        ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
-        ->where('translatables.table_name', 'contents')
-        ->where('translatables.column_name', 'title')
-        ->where(function ($q) use ($request) {
-          $q->where('contents.title', 'like', '%' . $request->search . '%');
-          $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
-        });
-    }
-    // dd($contents);
-    $contents = $contents->groupBy('contents.id')->orderBy('contents.index', 'asc')->limit(get_pageLength())->get();
-
-    if (!request()->has('OpID') && !get_setting('enable_testing')) {
-      return view('errors.404');
-    }
-
-    return view('front.list_content_muslim', compact('contents', 'service'));
+  {
+    return view('front.list_content_muslim');
   }
 
   public function load_contents(Request $request)
