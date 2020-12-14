@@ -972,7 +972,9 @@ body {
 
   /* Start Merath Page */
   .merath_page {
-    .border-bottom {}
+    .border-bottom {
+      border-bottom: 2px solid $white_color !important;
+    }
 
     .merath_title {
       h2 {
@@ -983,9 +985,14 @@ body {
     .input_text {
       .merath_input {
         border: 2px solid $bg_color;
-        // border-image-slice: 1;
-        // border-image-source: linear-gradient(45deg, #aa6620 40%, $text_color 60%);
-        // background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #aa6620, $text_color);
+        color: $white_color;
+        background-color: transparent;
+
+        &::placeholder {color: $white_color;}
+
+        option {
+          background: #0f1218;
+        }
       }
     }
 

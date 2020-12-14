@@ -600,11 +600,22 @@ body {
 .main_container .zakkah_v2_page .zakah_result .zakah_result_left {
   text-align: center;
 }
+.main_container .merath_page .border-bottom {
+  border-bottom: 2px solid #FFF !important;
+}
 .main_container .merath_page .merath_title h2 {
   color: #FF6600;
 }
 .main_container .merath_page .input_text .merath_input {
   border: 2px solid #FF6600;
+  color: #FFF;
+  background-color: transparent;
+}
+.main_container .merath_page .input_text .merath_input::placeholder {
+  color: #FFF;
+}
+.main_container .merath_page .input_text .merath_input option {
+  background: #0f1218;
 }
 .main_container .merath_page .input_span h4 {
   color: #FF6600;
