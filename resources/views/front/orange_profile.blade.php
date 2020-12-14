@@ -3,7 +3,7 @@
 @section('content')
 
 <section class="profile">
-  @if(request()->get('OpID') == mbc)
+  @if(request()->get('OpID') == ornage)
   <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
     @else
     <div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
@@ -31,17 +31,17 @@
 
             <tr>
               <td class="label-view font-weight-bold">@lang('messages.service_name')</td>
-              <td class="label-view2">@lang('messages.Mbc_Muslim_guide')</td>
+              <td class="label-view2">@lang('messages.orange_Muslim_guide')</td>
             </tr>
 
             <tr>
               <td class="label-view font-weight-bold">@lang('messages.service_type')</td>
-              <td class="label-view2">@lang('messages.repeat.weekly')</td>
+              <td class="label-view2">@lang('messages.repeat.daily')</td>
             </tr>
 
             <tr>
               <td class="label-view font-weight-bold">@lang('messages.description')</td>
-              <td class="label-view2">@lang('messages.discription_weekly')</td>
+              <td class="label-view2">@lang('messages.orange_discription_daily')</td>
             </tr>
           </tbody>
         </table>

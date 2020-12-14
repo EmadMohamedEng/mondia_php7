@@ -88,20 +88,18 @@ if ($lang == 'ar') {
                 <div class="col-3 p-0">
                   <div class="dropdown">
                     <button class="btn btn_select" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span style="font-weight: bold;">012</span>
+                      <span style="font-weight: bold;">+20</span>
                     </button>
 
                   </div>
                 </div>
 
                 <div class="col-9 p-0">
-                  <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-                  <input type="hidden" name="code" value="2012">
                   <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" placeholder="@lang('messages.Enter_your')" name="number" required>
                 </div>
               </div>
               <!--<button class="btn back">رجوع</button>-->
-              <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subsc')</button>
+              <a id="zain_submit" class="btn"> @lang('messages.Subsc')</a>
             </form>
 
             <div class="unsub_cancle">
@@ -123,6 +121,37 @@ if ($lang == 'ar') {
 
 
     <script>
+
+      $('#zain_submit').click(function (e) {
+        e.preventDefault();
+        var str = $("#phone").val();
+        var RegExp1 = new RegExp('^[1-9][0-9]{9}$');
+        var RegExp2 = new RegExp('^[0][0-9]{10}$');
+        var lang = "{{session()->get('applocale')}}";
+        if(lang == 'ar'){
+          var msg = 'هذا الرقم غير صحيح';
+        }else{
+          var msg = 'This is not a valid number';
+        }
+        if(RegExp1.test(str) || RegExp2.test(str)){
+          $("#form_zain").submit();
+        }else{
+          $('.zain_viva').html(`<div class="alert alert-danger alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                ${msg}
+                </div>`);
+        }
+      });
+
+      $(document).ready(function() {
+        $(window).keydown(function(event){
+          if(event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+          }
+        });
+      });
+
       $(document).ready(function() {
         var msisdn = $("#phone").val();
         if (msisdn != "" && msisdn.length == 8 && msisdn != "@_MSISDN") {
@@ -148,15 +177,15 @@ if ($lang == 'ar') {
       })
 
       function toggle_lang() {
-      const checkbox = document.getElementById("on-off");
-      checkbox.addEventListener('change', (event) => {
-        if (event.target.checked) {
-          location.href = "{{url('lang/ar')}}";
-        } else {
-          location.href = "{{url('lang/en')}}";
-        }
-      })
-    }
+        const checkbox = document.getElementById("on-off");
+        checkbox.addEventListener('change', (event) => {
+          if (event.target.checked) {
+            location.href = "{{url('lang/ar')}}";
+          } else {
+            location.href = "{{url('lang/en')}}";
+          }
+        })
+      }
     </script>
 
 </body>

@@ -13,6 +13,10 @@ class Operator extends Model {
         'operator_image',
         'code',
         'country_id',
+        'name_ar',
+        'name_en',
+        'cost_ar',
+        'cost_en',
         'operator_name'
     ];
 

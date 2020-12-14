@@ -68,10 +68,12 @@
               @endif --}}
 
               @if(request()->get('OpID') == mbc)
+              @if( DB::table('settings')->where('key','like','%enable_free%')->first()->value == "1")
               @if ($item->free == 1)
               <div class="content_free text-center py-1">
               <span class="text-capitalize">@lang('front.free')</span>
               </div>
+              @endif
               @endif
               @endif
 

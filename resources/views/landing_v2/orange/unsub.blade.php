@@ -63,23 +63,21 @@
       <div class="container">
         <div class="form_content">
           <!--<h5>ادخل رقم الهاتف</h5>-->
-          <form method="post" action="{{url('mbc_subscription/optout/')}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
+          <form method="post" action="{{url('orange_portal_unsub')}}" onsubmit="document.getElementById('zain_submit').disabled='true';" id="form_zain">
             {{ csrf_field() }}
 
             <div class="row m-0">
               <div class="col-3 p-0">
                 <div class="dropdown">
                   <button class="btn btn_select" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span style="font-weight: bold;">012</span>
+                    <span style="font-weight: bold;">+20</span>
                   </button>
 
                 </div>
               </div>
 
               <div class="col-9 p-0">
-                <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-                <input type="hidden" name="code" value="012">
-                <input type="tel" class="form-control show_class" @if(session()->has('userIdentifier')) @endif id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
+                <input type="tel" class="form-control show_class" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>
             </div>
 
@@ -103,16 +101,40 @@
 
 
   <script>
-    // $(document).ready(function() {
-    //   var msisdn = $("#phone").val();
-    //   if (msisdn != "" && msisdn.length == 8 && msisdn != "@_MSISDN") {
-    //     $("#viva_form").submit();
-    //   }
-    // });
 
-    $('#zain_submit').focusin(function() {
-      $('#viva_form').submit()
-    });
+      $('#zain_submit').click(function (e) {
+        e.preventDefault();
+        var str = $("#phone").val();
+        var RegExp1 = new RegExp('^[1-9][0-9]{9}$');
+        var RegExp2 = new RegExp('^[0][0-9]{10}$');
+        var lang = "{{session()->get('applocale')}}";
+        if(lang == 'ar'){
+          var msg = 'هذا الرقم غير صحيح';
+        }else{
+          var msg = 'This is not a valid number';
+        }
+        if(RegExp1.test(str) || RegExp2.test(str)){
+          $("#form_zain").submit();
+        }else{
+          $('.zain_viva').html(`<div class="alert alert-danger alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                ${msg}
+                </div>`);
+        }
+      });
+
+      $(document).ready(function() {
+        $(window).keydown(function(event){
+          if(event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+          }
+        });
+      });
+
+      $('#zain_submit').focusin(function() {
+        $('#viva_form').submit()
+      });
   </script>
 
 </body>

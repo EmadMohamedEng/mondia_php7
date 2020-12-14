@@ -51,7 +51,7 @@ Route::get('muslim_inner_confirm','FrontController@muslim_inner')->name('front.m
 Route::get('test','FrontController@prayTimesCal_v2');
 Route::get('terms','MbcController@terms');
 Route::get('faq','MbcController@faq');
-Route::get('profile','MbcController@profile');
+Route::get('profile','FrontController@profile');
 
 //OmanTel
 define('omantel',9);
@@ -90,7 +90,6 @@ Route::get('du_set_session','FrontController@du_set_session');
 
 ///////////////////////// stc Kuwait /////////////////////////////
 define('stc',11);
-define('orange',8);
 define('mbc',mbc_op_id());
 Route::get('landing_stc', 'StcController@viva_login');
 Route::post('viva_login_action', 'StcController@viva_login_action');
@@ -157,10 +156,13 @@ Route::get('mbc_portal_logout', 'MbcController@logout');
 
 
 /***************start orange ****************** */
-Route::get('orange_portal_login', 'OrangeController@login');
-Route::get('orange_portal_unsub', 'OrangeController@unsubscribe');
+define('orange',orange_op_id());
 
+Route::get('orange_portal_login', 'OrangeController@login');
 Route::post('orange_portal_login', 'OrangeController@postLogin');
+Route::get('orange_portal_unsub', 'OrangeController@unsubscribe');
+Route::post('orange_portal_unsub', 'OrangeController@postUnsubscribe');
+Route::get('orange_logout', 'OrangeController@logout');
 /***************end orange ****************** */
 
 
