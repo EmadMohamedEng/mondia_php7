@@ -29,7 +29,7 @@ Auth::routes([
 Route::get('/','FrontController@index')->name('front.index');
 Route::get('list_services','FrontController@services')->name('front.service');
 Route::get('list_contents','FrontController@contents')->name('front.list');
-Route::get('list_muslim','FrontController@list_muslim')->name('front.list');
+Route::get('list_muslim','FrontController@list_muslim')->name('front.list.muslim');
 Route::get('loadcontent','FrontController@load_contents')->name('front.load');
 Route::get('view_content/{id}','FrontController@view_content')->name('front.inner');
 Route::get('today_link/{msisdn}','FrontController@mbcTodayLink')->name('front.mbc');
