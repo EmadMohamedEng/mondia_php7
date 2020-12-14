@@ -1,6 +1,6 @@
 @extends('template')
 @section('page_title')
-Content
+MBC Content
 @stop
 @section('content')
 @include('errors')
@@ -15,11 +15,11 @@ Content
                 </div>
             </div>
             <div class="box-content">
-                @if($video)
-                {!! Form::model($video,["url"=>"MbcContent/$video->id","class"=>"form-horizontal","method"=>"patch","files"=>"True"]) !!}
+                @if($mbc_content)
+                {!! Form::model($mbc_content,["url"=>"mbc_content/$mbc_content->id","class"=>"form-horizontal","method"=>"patch","files"=>"True"]) !!}
                 @include('MbcContent.input',['buttonAction'=>'Edit','required'=>'  (optional)'])
                 @else
-                {!! Form::open(["url"=>"MbcContent","class"=>"form-horizontal","method"=>"POST","files"=>"True"]) !!}
+                {!! Form::open(["url"=>"mbc_content","class"=>"form-horizontal","method"=>"POST","files"=>"True"]) !!}
                 @include('MbcContent.input',['buttonAction'=>'Save','required'=>'  *'])
                 @endif
                 {!! Form::close() !!}
@@ -71,5 +71,20 @@ Content
     if(!img_type){
         $('.content_text').show()
     }
+</script>
+
+<script>
+  $(document).on('ready', function() {
+    $('.event_start_date').datepicker({
+      format: 'dd-mm-yyyy',
+      autoclose: true,
+    })
+  })
+  $(document).on('ready', function() {
+    $('.event_end_date').datepicker({
+      format: 'dd-mm-yyyy',
+      autoclose: true,
+    })
+  })
 </script>
 @stop

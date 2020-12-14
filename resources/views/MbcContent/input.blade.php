@@ -1,119 +1,98 @@
-@if($serviceID !=null)
-{!! Form::hidden('service_id',$serviceID,['class'=>'form-control input-lg']) !!}
-{!! Form::hidden('service',1,['class'=>'form-control input-lg']) !!}
-@else
 <div class="form-group">
-    <label for="textfield5" class="col-sm-3 col-lg-2 control-label">Select Service <span class="text-danger">*</span></label>
+    <label class="col-sm-3 col-lg-2 control-label">Provider Name *</label>
     <div class="col-sm-9 col-lg-10 controls">
-        <select id="first_select" name="service_id" class="form-control chosen-rtl">
-            <option value=""></option>
-            @foreach ($services as $value)
-                <option id="{{$value->type}}" value="{{ $value->id }}" @if($video && $video->service_id==$value->id) selected @endif>
-                        {{$value->title .' - '.$value->provider->title }}
-                </option>
-            @endforeach
+        <input type="text" value="{{$provider_id->title}}" class="form-control input-lg" readonly>
+        <input type="hidden" name="provider_id" value="{{$provider_id->id}}" class="form-control input-lg" readonly>
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-sm-3 col-lg-2 control-label">Service Name *</label>
+    <div class="col-sm-9 col-lg-10 controls">
+        <input type="text" value="{{$service_id->title}}" class="form-control input-lg" readonly>
+        <input type="hidden" name="service_id" value="{{$service_id->id}}" class="form-control input-lg" readonly>
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-sm-3 col-lg-2 control-label">Content Name *</label>
+    <div class="col-sm-9 col-lg-10 controls">
+        <input type="text" value="{{$content_id->title}}" class="form-control input-lg" readonly>
+        <input type="hidden" name="content_id" value="{{$content_id->id}}" class="form-control input-lg" readonly>
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-sm-3 col-lg-2 control-label">Subscription Day*</label>
+    <div class="col-sm-9 col-lg-10 controls">
+        <input type="number" name="subscription_day" @isset($mbc_content->subscription_day) value="{{$mbc_content->subscription_day}}"
+           @endisset class="form-control input-lg" min="0" required>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-3 col-lg-2 control-label" for="code">Type</label>
+    <div class="col-sm-9 col-lg-10 controls">
+        <div class="form-check">
+
+
+            @if (isset($mbc_content))
+            <input class="form-check-input" type="radio" name="available" id="exampleRadios4" required value="1" @if(
+                $mbc_content->type == 1) checked="checked"
+            @endif>
+            @else
+            <input class="form-check-input" type="radio" name="available" id="exampleRadios4" required value="1">
+            @endif
+            <label class="form-check-label" for="exampleRadios4" style="padding-right: 11px;">
+                General
+            </label>
+
+
+            @if (isset($mbc_content))
+            <input class="form-check-input" type="radio" name="available" id="exampleRadios2" required value="2" @if(
+                $mbc_content->type == 2) checked="checked"
+            @endif>
+            @else
+            <input class="form-check-input" type="radio" name="available" id="exampleRadios2" required value="2">
+            @endif
+            <label class="form-check-label" for="exampleRadios2" style="padding-right: 11px;">
+                Occasion
+            </label>
+
+
+            @if (isset($mbc_content))
+            <input input class="form-check-input" type="radio" name="available" id="exampleRadios3" required value="3"
+                @if( $mbc_content->type ==3) checked="checked"
+            @endif>
+            @else
+            <input class="form-check-input" type="radio" name="available" id="exampleRadios3" required value="3">
+            @endif
+            <label class="form-check-label" for="exampleRadios3" style="padding-right: 11px;">
+                Friday
+            </label>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-3 col-lg-2 control-label">Operator</label>
+    <div class="col-sm-9 col-lg-10 controls">
+        <select name='operator' class='form-control' id="contract_period" required>
+            <option>---Please Select---</option>
+            <option  @if($mbc_content && $mbc_content->operator == "all") selected @endif value="all">All</option>
+            <option @if($mbc_content && $mbc_content->operator == "Ksa-Stc") selected @endif value="Ksa-Stc">Ksa-Stc</option>
         </select>
     </div>
 </div>
-@endif
-@if($service !=null)
-{!! Form::hidden('service',1,['class'=>'form-control input-lg']) !!}
-@endif
-<!-- <div class="form-group">
-    <label class="col-sm-3 col-lg-2 control-label">Title <span class="text-danger">*</span></label>
+<div class="form-group">
+    <label class="col-sm-3 col-lg-2 control-label">Occasion Date <span class="text-danger">*</span></label>
     <div class="col-sm-9 col-lg-10 controls">
-        {!! Form::text("title", null ,['placeholder'=> "Title",'class'=>'form-control input-lg']) !!}
-    </div>
-</div> -->
-<div class="form-group"  id="cktextarea">
-  <label class="col-sm-3 col-lg-2 control-label">Title <span class="text-danger">*</span></label>
-  <div class="col-sm-9 col-lg-10 controls" >
-      <ul id="myTab1" class="nav nav-tabs">
-              <?php $i=0;?>
-              @foreach($languages as $language)
-                  <li class="{{($i++)? '':'active'}}"><a href="#title{{$language->short_code}}" data-toggle="tab"> {{$language->title}}</a></li>
-              @endforeach
-      </ul>
-      <div class="tab-content">
-          <?php $i=0;?>
-          @foreach($languages as $language)
-              <div class="tab-pane fade in {{($i++)? '':'active'}}" id="title{{$language->short_code}}">
-                  <input class="form-control" name="title[{{$language->short_code}}]" value="@if($video){!! $video->getTranslation('title',$language->short_code)  !!}@endif" required />
-              </div>
-          @endforeach
-      </div>
-  </div>
-</div>
-<div class="form-group img_pre" style="display:none">
-    <label class="col-sm-3 col-md-2 control-label">Image Preview </label>
-    <div class="col-sm-9 col-md-8 controls">
-        <div class="fileupload fileupload-new" data-provides="fileupload">
-            <div class="fileupload-new img-thumbnail" style="width: 200px; height: 150px;">
-                @if($video)
-                <img src="{{$video->image_preview}}" alt="" />
-                @else
-                <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" />
-                @endif
-            </div>
-            <div class="fileupload-preview fileupload-exists img-thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
-            <div>
-                <span class="btn btn-file"><span class="fileupload-new">@lang('messages.select_image')</span>
-                    <span class="fileupload-exists">Change</span>
-                    {!! Form::file('image_preview',["accept"=>"image/*" ,"class"=>"default"]) !!}
-                </span>
-                <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
-            </div>
+        <div class="input-group" data-date-format="dd/mm/yyyy">
+            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            @if($mbc_content)
+            {!! Form::text('occasion_date',\Carbon\Carbon::createFromFormat('Y-m-d',$mbc_content->occasion_date)->format('d/m/Y'),['class'=>'form-control date-picker1','required' => 'required', 'size'=>'16']) !!}
+            @else
+            {!! Form::text('occasion_date',\Carbon\Carbon::now()->format('d/m/Y'),['class'=>'form-control date-picker1','required' => 'required', 'size'=>'16','data-date-format'=>'dd/mm/yyyy']) !!}
+            @endif
         </div>
-        <span class="label label-important">NOTE!</span>
-        <span>Only extensions supported png, jpg, and jpeg</span>
     </div>
-</div>
-
-
-
-<div class="form-group video_display" style="display: none">
-    <label class="col-sm-3 col-md-2 control-label">Source <span class="text-danger">*</span></label>
-    <div class="col-sm-9 col-md-8 controls">
-        {!! Form::file('video',["accept"=>isset($accept)?$accept:'*' ,"class"=>"default accept_type"]) !!}
-        @if($video && $video->type == 1)
-            <video width="320" height="240" controls>
-                <source src="{{url($video->video)}}" type="video/mp4">
-            </video>
-        @elseif($video && $video->type == 2)
-            <audio width="220" height="140" controls>
-                 <source src="{{url($video->video)}}" type="audio/mp4">
-            </audio>
-        @elseif($video && $video->type == 3)
-            <img class=" img-responsive" width="100px" src="{{url($video->video)}}"/>
-        @endif
-    </div>
-</div>
-<div class="form-group content_text"  style="display: none">
-  <label class="col-sm-3 col-lg-2 control-label">Content <span class="text-danger">*</span></label>
-  <div class="col-sm-9 col-lg-10 controls" >
-      <ul id="myTab1" class="nav nav-tabs">
-              <?php $i=0;?>
-              @foreach($languages as $language)
-                  <li class="{{($i++)? '':'active'}}"><a href="#cktextarea{{$language->short_code}}" data-toggle="tab"> {{$language->title}}</a></li>
-              @endforeach
-      </ul>
-      <div class="tab-content">
-          <?php $i=0;?>
-          @foreach($languages as $language)
-              <div class="tab-pane fade in {{($i++)? '':'active'}}" id="cktextarea{{$language->short_code}}">
-                  <textarea class="form-control ckeditor" name="content_text[{{$language->short_code}}]" cols="9" rows="20">@if($video){!! $video->getTranslation('content_text',$language->short_code)  !!}@endif</textarea>
-              </div>
-          @endforeach
-      </div>
-  </div>
-</div>
-
-
-  <div class="form-group">
-  <label class="col-sm-3 col-lg-2 control-label">index <span class="text-danger">*</span></label>
-  <div class="col-sm-9 col-lg-10 controls">
-      {!! Form::text("index", null ,['placeholder'=> "index",'class'=>'form-control input-lg']) !!}
-  </div>
 </div>
 
 <div class="form-group">

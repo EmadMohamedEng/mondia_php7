@@ -128,6 +128,11 @@ function get_static_routes()
         Route::get('filter_posts/{id}/delete', 'FilterPostsController@destroy');
         Route::get('filter_posts/allData', 'FilterPostsController@allData');
         Route::get('filters/{id}/filter_posts', 'FilterPostsController@posts');
+        Route::get('mbc_content/{id}/create', 'MbcContentController@mbc_content_create');
+        Route::get('mbc_content/{id}/edit', 'MbcContentController@edit');
+        Route::post('mbc_content/{id}', 'MbcContentController@update');
+        Route::get('mbc_content/allData', 'MbcContentController@allData');
+        Route::resource('mbc_content', 'MbcContentController');
     });
 
     Route::group(['middleware' =>['auth',"role:super_admin"]],function(){
