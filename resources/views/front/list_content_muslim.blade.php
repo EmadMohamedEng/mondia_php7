@@ -2,6 +2,8 @@
 @section('page_title')
 @if(request()->has('service_id') && request()->get('service_id') != '')
 {{$service->getTranslation('title',getCode())}}
+@elseif(strpos(url()->full(), 'list_muslim') !== false)
+@lang('front.muslim_guide')
 @else
 {{request()->get('search')}}
 @endif
@@ -30,7 +32,7 @@
     </div>
 
     <div class="row m-0">
-      <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-1">
+      <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
         <div class="item">
           <div class="card ovf-hidden">
             <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
@@ -41,17 +43,18 @@
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
               </a>
             </a>
-
-            <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
-              <div class="card-body">
-                <h4 class="card-title text-capitalize">@lang('front.sebha')</h4>
-              </div>
-
           </div>
+
+          <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
+            <div class="card-body">
+              <h4 class="card-title text-capitalize">@lang('front.sebha')</h4>
+            </div>
+          </a>
+
         </div>
       </div>
 
-      <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-1">
+      <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
         <div class="item">
           <div class="card ovf-hidden">
             <a class="owl_content_img view overlay link_href" href="{{url('mosque')}}">
@@ -62,17 +65,17 @@
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
               </a>
             </a>
-
-            <a class="owl_content_img view overlay link_href" href="{{url('mosque')}}">
-              <div class="card-body">
-                <h4 class="card-title text-capitalize">@lang('front.mosque')</h4>
-              </div>
-
           </div>
+
+          <a class="owl_content_img view overlay link_href" href="{{url('mosque')}}">
+            <div class="card-body">
+              <h4 class="card-title text-capitalize">@lang('front.mosque')</h4>
+            </div>
+          </a>
         </div>
       </div>
 
-      <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-1">
+      <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1">
         <div class="item">
           <div class="card ovf-hidden">
             <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
@@ -83,17 +86,17 @@
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
               </a>
             </a>
-
-            <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
-              <div class="card-body">
-                <h4 class="card-title text-capitalize">@lang('front.zakah')</h4>
-              </div>
-
           </div>
+
+          <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
+            <div class="card-body">
+              <h4 class="card-title text-capitalize">@lang('front.zakah')</h4>
+            </div>
+          </a>
         </div>
       </div>
 
-      <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-1 m-auto">
+      <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1 m-auto">
         <div class="item">
           <div class="card ovf-hidden">
             <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
@@ -104,17 +107,17 @@
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
               </a>
             </a>
-
-            <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
-              <div class="card-body">
-                <h4 class="card-title text-capitalize">@lang('front.merath')</h4>
-              </div>
-
           </div>
+
+          <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
+            <div class="card-body">
+              <h4 class="card-title text-capitalize">@lang('front.merath')</h4>
+            </div>
+          </a>
         </div>
       </div>
 
-      <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-1 m-auto">
+      <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-1 m-auto">
         <div class="item">
           <div class="card ovf-hidden">
             <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
@@ -125,13 +128,13 @@
                 <div class="mask waves-effect waves-light rgba-white-slight"></div>
               </a>
             </a>
-
-            <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
-              <div class="card-body">
-                <h4 class="card-title text-capitalize">@lang('front.prayer')</h4>
-              </div>
-
           </div>
+
+          <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
+            <div class="card-body">
+              <h4 class="card-title text-capitalize">@lang('front.prayer')</h4>
+            </div>
+          </a>
         </div>
       </div>
     </div>
