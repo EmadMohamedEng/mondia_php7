@@ -371,4 +371,24 @@ class VideosController extends Controller
     {
         return Excel::download(new ContentsExport, 'Contents.xlsx');
     }
+
+    public function updateContentAudioAndImage()
+    {
+      $contents = Video::where('service_id',1)->orderBy('index','asc')->get();
+
+      foreach($contents as $key => $content) {
+        $index = $key + 1;
+        if($index < 10) {
+          $content->video = "uploads/videos/m/00".$index.".mp3";
+          $content->image_preview = "m/00".$index.".jpg";
+        }else if($index < 100 && $index >= 10) {
+          $content->video = "uploads/videos/m/0".$index.".mp3";
+          $content->image_preview = "m/0".$index.".jpg";
+        }else  {
+          $content->video = "uploads/videos/m/".$index.".mp3";
+          $content->image_preview = "m/".$index.".jpg";
+        }
+        $content->save();
+      }
+    }
 }
