@@ -303,6 +303,10 @@ $menu = provider_menu();
 
 
     @foreach ($menu->slice(0,$count) as $item)
+    @php
+        if($item->services->count() < 2 && request()->get('OpID') == 8)
+        continue;
+    @endphp
     <section class="content_carousel">
       <div class="content_carousel_head text-capitalize">
         <div class="row m-0">
@@ -370,6 +374,12 @@ $menu = provider_menu();
     @endforeach
 
     @foreach ($menu->slice($count,count($menu)) as $item)
+    @php
+        if($item->services->count() < 2 && request()->get('OpID') == 8){
+          continue;
+        }
+    @endphp
+
     <section class="content_carousel">
       <div class="content_carousel_head text-capitalize">
         <div class="row m-0">
@@ -447,6 +457,7 @@ $menu = provider_menu();
         @endforeach
       </div>
     </section>
+
     @endforeach
   </div>
   @stop
