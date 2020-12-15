@@ -10,9 +10,10 @@ use App\Service;
 use App\Operator;
 use App\Provider;
 use Carbon\Carbon;
+use App\MbcContent;
 use Monolog\Logger;
-use App\FilterPosts;
 
+use App\FilterPosts;
 use App\DuIntgration;
 use App\Http\Requests;
 use App\MondiaSubscriber;
@@ -1674,12 +1675,15 @@ class FrontController extends Controller
         $vars["msisdn"] = session()->get('MSISDN');
         $vars["service_id"] = 2;
         $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
-       $sub = json_decode(  $sub);
+        $sub = json_decode($sub);
         $date = date('Y-m-d');
+        $subscriber_day = 1;
+        $subscriber_content = MbcContent::where('subscription_day' , '<=' , $subscriber_day)->get()->toArray();
+        // dd($subscriber_content[0]['subscription_day']);
         if($sub && isset($sub->created_at)){
           $date = date('Y-m-d',strtotime($sub->created_at));
         }
-        return view('front.profile',compact('date'));
+        return view('front.profile',compact('date', 'subscriber_content', 'subscriber_day'));
       }
       return redirect('mbc_portal_login');
     }
