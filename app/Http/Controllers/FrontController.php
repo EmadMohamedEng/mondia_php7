@@ -1677,8 +1677,8 @@ class FrontController extends Controller
         $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
         $sub = json_decode($sub);
         $date = date('Y-m-d');
-        $subscriber_day = 1;
-        $subscriber_content = MbcContent::where('subscription_day' , '<=' , $subscriber_day)->get()->toArray();
+        $subscriber_day = 3;
+        $subscriber_content = MbcContent::where('subscription_day' , '<=' , $subscriber_day)->orderBy('subscription_day')->get();
         // dd($subscriber_content[0]['subscription_day']);
         if($sub && isset($sub->created_at)){
           $date = date('Y-m-d',strtotime($sub->created_at));
