@@ -58,11 +58,12 @@
 }
 .main_container .sidenav .navbar_ul .nav-item .menuTwo svg {
   fill: #FF6600;
-  width: 15%;
+  width: 12%;
 }
 .main_container .navbar-nav .dropdown-menu {
   background-color: #000;
-  text-align: center;
+  text-align: left;
+  margin-left: 15%;
 }
 .main_container .navbar-nav .dropdown-menu .nav-link {
   font-size: 13px;

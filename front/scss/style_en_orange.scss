@@ -162,6 +162,10 @@ body {
           &:hover,
           &:focus {
             color: $white_color !important;
+
+            svg {
+              fill: $white_color;
+            }
           }
         }
       }
@@ -1397,6 +1401,10 @@ body {
             .icon_before {
               color: $text_color;
             }
+
+            svg {
+              width: 10%;
+            }
           }
 
           .dropdown-menu {
@@ -1795,6 +1803,10 @@ body {
           .nav-link {
             .icon_before {
               color: $text_color;
+            }
+
+            svg {
+              width: 10%;
             }
           }
 
@@ -2199,6 +2211,10 @@ body {
           .nav-link {
             .icon_before {
               color: $text_color;
+            }
+
+            svg {
+              width: 10%;
             }
           }
 
@@ -2605,6 +2621,10 @@ body {
           .nav-link {
             .icon_before {
               color: $text_color;
+            }
+
+            svg {
+              width: 10%;
             }
           }
 
@@ -3030,6 +3050,10 @@ body {
           .nav-link {
             .icon_before {
               color: $text_color;
+            }
+
+            svg {
+              width: 10%;
             }
           }
 
@@ -3619,6 +3643,10 @@ body {
           .nav-link {
             .icon_before {
               color: $text_color;
+            }
+
+            svg {
+              width: 10%;
             }
           }
 
