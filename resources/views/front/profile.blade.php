@@ -47,68 +47,54 @@
         </table>
       </div>
 
-      {{-- @if(request()->get('OpID') == mbc)
+      @if(request()->get('OpID') == mbc && $subscriber_content->count())
       <div class="profile_card">
         <div class="row m-0">
-
-          @for ($i = 0 ; $i < $subscriber_day ; $i++)
-          @if ($subscriber_content[$i]['subscription_day'] == $i+1)
+          @php
+              $day = 1;
+          @endphp
           <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-1">
             <div class="profile_card_title">
-              <h6 class="font-weight-bold">Day One</h6>
+              <h6 class="font-weight-bold">Day {{$day}}</h6>
             </div>
           </div>
 
-          <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-1">
-            <div class="item">
-              <div class="card ovf-hidden">
-                <a class="owl_content_img view overlay link_href" href="#0">
-                  <img class="w-100" src="{{asset("front/images/Cutting/Contnent_Page/007.png")}}" alt="Card image cap">
-
-                  <a>
-                    <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                  </a>
-                </a>
-
-                <a class="owl_content_img view overlay link_href" href="#0">
-                  <div class="card-body">
-                    <h4 class="card-title text-capitalize">fatha1</h4>
-                  </div>
-
-              </div>
-            </div>
-          </div>
-          @else
+          @foreach ($subscriber_content as $item)
+          @if ($item->subscription_day != $day)
+          @php
+              $day++;
+          @endphp
           <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-1">
             <div class="profile_card_title">
-              <h6 class="font-weight-bold">Day One</h6>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-1">
-            <div class="item">
-              <div class="card ovf-hidden">
-                <a class="owl_content_img view overlay link_href" href="#0">
-                  <img class="w-100" src="{{asset("front/images/Cutting/Contnent_Page/007.png")}}" alt="Card image cap">
-
-                  <a>
-                    <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                  </a>
-                </a>
-
-                <a class="owl_content_img view overlay link_href" href="#0">
-                  <div class="card-body">
-                    <h4 class="card-title text-capitalize">fatha1</h4>
-                  </div>
-
-              </div>
+              <h6 class="font-weight-bold">Day {{$day}}</h6>
             </div>
           </div>
           @endif
-          @endfor
+
+          <div class="col-md-4 col-lg-4 col-xl-4 col-6 p-1">
+            <div class="item">
+              <div class="card ovf-hidden">
+                <a class="owl_content_img view overlay link_href" href="{{route('front.inner',['id' => $item->content_id])}}">
+                  <img class="w-100" src="{{url($item->content->image_preview)}}" alt="{{$item->content->image_preview}}">
+
+                  <a>
+                    <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                  </a>
+                </a>
+
+                <a class="owl_content_img view overlay link_href" href="{{route('front.inner',['id' => $item->content_id])}}">
+                  <div class="card-body">
+                    <h4 class="card-title text-capitalize">{{get_title($item->content_id)}}</h4>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          @endforeach
 
         </div>
       </div>
-      @endif --}}
+      @endif
 </section>
 @stop

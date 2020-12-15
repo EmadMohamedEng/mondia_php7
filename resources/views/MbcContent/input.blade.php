@@ -97,13 +97,22 @@
     <div class="col-sm-9 col-lg-10 controls">
         <div class="input-group" data-date-format="dd/mm/yyyy">
             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            <?php
+              if (isset($mbc_content)) {
+                if ($mbc_content->occasion_date == null) {
+                  $release_date = null;
+                } else {
+                  $release_date = \Carbon\Carbon::createFromFormat('Y-m-d',$mbc_content->occasion_date)->format('d/m/Y');
+                }
+              }
+            ?>
             @if($mbc_content)
             {!!
-            Form::text('occasion_date',\Carbon\Carbon::createFromFormat('Y-m-d',$mbc_content->occasion_date)->format('d/m/Y'),['class'=>'form-control
-            date-picker1','required' => 'required', 'size'=>'16']) !!}
+            Form::text('occasion_date',$release_date,['class'=>'form-control
+            date-picker1','size'=>'16']) !!}
             @else
-            {!! Form::text('occasion_date',\Carbon\Carbon::now()->format('d/m/Y'),['class'=>'form-control
-            date-picker1','required' => 'required', 'size'=>'16','data-date-format'=>'dd/mm/yyyy']) !!}
+            {!! Form::text('occasion_date',null,['class'=>'form-control
+            date-picker1','size'=>'16','data-date-format'=>'dd/mm/yyyy']) !!}
             @endif
         </div>
     </div>
@@ -114,23 +123,93 @@
         {!! Form::submit($buttonAction,['class'=>'btn btn-primary']) !!}
     </div>
 </div>
-
+@if($mbc_content && $mbc_content->type == "general")
+<script>
+$(document).on('ready', function() {
+    $('#subscription_day').css("display", "block")
+    $('#operator_text').css("display", "block")
+    $('#occasion_date').css("display", "none")
+    $("#general_text").click(function() {
+        $('#subscription_day').css("display", "block")
+        $('#operator_text').css("display", "block")
+        $('#occasion_date').css("display", "none")
+    });
+    $("#occasion_text").click(function() {
+        $('#occasion_date').css("display", "block")
+        $('#operator_text').css("display", "block")
+        $('#subscription_day').css("display", "none")
+    });
+    $("#friday_text").click(function() {
+        $('#operator_text').css("display", "block")
+        $('#subscription_day').css("display", "none")
+        $('#occasion_date').css("display", "none")
+    });
+})
+</script>
+@elseif($mbc_content && $mbc_content->type == "occasion")
+<script>
+$(document).on('ready', function() {
+    $('#occasion_date').css("display", "block")
+    $('#operator_text').css("display", "block")
+    $('#subscription_day').css("display", "none")
+    $("#general_text").click(function() {
+        $('#subscription_day').css("display", "block")
+        $('#operator_text').css("display", "block")
+        $('#occasion_date').css("display", "none")
+    });
+    $("#occasion_text").click(function() {
+        $('#occasion_date').css("display", "block")
+        $('#operator_text').css("display", "block")
+        $('#subscription_day').css("display", "none")
+    });
+    $("#friday_text").click(function() {
+        $('#operator_text').css("display", "block")
+        $('#subscription_day').css("display", "none")
+        $('#occasion_date').css("display", "none")
+    });
+})
+</script>
+@elseif($mbc_content && $mbc_content->type == "friday")
+<script>
+$(document).on('ready', function() {
+    $('#operator_text').css("display", "block")
+    $('#subscription_day').css("display", "none")
+    $('#occasion_date').css("display", "none")
+    $("#general_text").click(function() {
+        $('#subscription_day').css("display", "block")
+        $('#operator_text').css("display", "block")
+        $('#occasion_date').css("display", "none")
+    });
+    $("#occasion_text").click(function() {
+        $('#occasion_date').css("display", "block")
+        $('#operator_text').css("display", "block")
+        $('#subscription_day').css("display", "none")
+    });
+    $("#friday_text").click(function() {
+        $('#operator_text').css("display", "block")
+        $('#subscription_day').css("display", "none")
+        $('#occasion_date').css("display", "none")
+    });
+})
+</script>
+@else
 <script>
 $(document).ready(function() {
     $("#general_text").click(function() {
-      $('#subscription_day').css("display", "block")
-      $('#operator_text').css("display", "block")
-      $('#occasion_date').css("display", "none")
+        $('#subscription_day').css("display", "block")
+        $('#operator_text').css("display", "block")
+        $('#occasion_date').css("display", "none")
     });
     $("#occasion_text").click(function() {
-      $('#occasion_date').css("display", "block")
-      $('#operator_text').css("display", "block")
-      $('#subscription_day').css("display", "none")
+        $('#occasion_date').css("display", "block")
+        $('#operator_text').css("display", "block")
+        $('#subscription_day').css("display", "none")
     });
     $("#friday_text").click(function() {
-      $('#subscription_day').css("display", "block")
-      $('#occasion_date').css("display", "none")
-      $('#operator_text').css("display", "none")
+        $('#operator_text').css("display", "block")
+        $('#subscription_day').css("display", "none")
+        $('#occasion_date').css("display", "none")
     });
 });
 </script>
+@endif
