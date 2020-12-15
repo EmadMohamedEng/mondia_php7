@@ -26,7 +26,7 @@ return [
     'Activate' => 'تفعيل',
     'enter_code_active' => 'ادخل كود التفعيل',
     'call_tone' => 'كول تون',
-    'muslim_guide' => 'دليل مسلم',
+    'muslim_guide' => 'دليل المسلم',
     'you_search_about' => 'البحث',
     'unsub' => 'الغاء الاشتراك',
     'logout' => 'خروج',
