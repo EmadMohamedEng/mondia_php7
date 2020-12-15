@@ -113,16 +113,12 @@ $enable = get_setting('enable_testing');
                   @elseif(request()->get('OpID') == orange)
 
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-6 p-0">
                       <img class="bounce-top logo_orange" src='{{asset("front/images/orange.png")}}' alt='Logo'>
                     </div>
 
                     <div class="col-md-6 col-6 img_khir p-0">
-                      @if (getCode() == 'ar')
-                      <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_ar.png")}}' alt='Logo'>
-                      @else
-                      <img class="bounce-top" src='{{asset("front/images/orange/al_kheer_en.png")}}' alt='Logo'>
-                      @endif
+                      <img class="bounce-top" src='{{asset("front/images/orange/al_kheer.png")}}' alt='Logo'>
                     </div>
                   </div>
 
