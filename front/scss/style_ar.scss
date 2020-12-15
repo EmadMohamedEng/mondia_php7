@@ -30,15 +30,17 @@ body {
           text-align: left;
 
           img {
-            margin-right: 30%;
-
             &.logo_orange {
-              margin-right: 85%;
+              margin: 0 auto;
+              display: block;
             }
           }
 
           .img_khir {
-            text-align: right;
+            img {
+              margin-top: 0.75rem;
+              width: 70%;
+            }
           }
         }
       }
@@ -675,13 +677,15 @@ body {
           img {
             &.logo_orange {
               width: 100% !important;
-              margin-top: 0.5rem !important;
+              margin-top: -0.5rem !important;
             }
           }
 
           .img_khir {
             img {
               margin-top: 0.85rem !important;
+              width: 100% !important;
+              margin-right: 30%;
             }
           }
         }
@@ -853,7 +857,20 @@ body {
         margin-left: 8%;
 
         .link_href {
-          img {}
+          .logo_orange {
+            width: 75% !important;
+            margin-top: -0.75rem !important;
+          }
+
+          .img_khir {
+            text-align: left !important;
+
+            img {
+              width: 90% !important;
+              margin-top: 0.15rem !important;
+              margin-right: 40%;
+            }
+          }
         }
 
         &.header_icon {
@@ -1000,7 +1017,20 @@ body {
         margin-left: 8%;
 
         .link_href {
-          img {}
+          .logo_orange {
+            width: 75% !important;
+            margin-top: -0.75rem !important;
+          }
+
+          .img_khir {
+            text-align: left !important;
+
+            img {
+              width: 90% !important;
+              margin-top: 0.25rem !important;
+              margin-right: 40%;
+            }
+          }
         }
 
         &.header_icon {
@@ -1182,7 +1212,20 @@ body {
         margin-left: 8%;
 
         .link_href {
-          img {}
+          .logo_orange {
+            width: 65% !important;
+            margin-top: -0.75rem !important;
+          }
+
+          .img_khir {
+            text-align: left !important;
+
+            img {
+              width: 100% !important;
+              margin-top: -0.15rem !important;
+              margin-right: 40%;
+            }
+          }
         }
 
         &.header_icon {

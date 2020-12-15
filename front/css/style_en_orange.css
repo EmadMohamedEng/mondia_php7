@@ -65,7 +65,7 @@ body {
 }
 .main_container .header .header_logo .link_href img,
 .main_container .header .header_icon .link_href img {
-  width: 60%;
+  width: 50%;
   margin-top: -0.75rem;
 }
 .main_container .header .header_logo .link_href .img_khir,
@@ -74,8 +74,8 @@ body {
 }
 .main_container .header .header_logo .link_href .img_khir img,
 .main_container .header .header_icon .link_href .img_khir img {
-  width: 50%;
-  margin-top: 0.5rem;
+  width: 60%;
+  margin-top: 0rem;
 }
 .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
@@ -823,6 +823,15 @@ body {
     width: 70% !important;
     margin-top: -0.5rem !important;
   }
+  .main_container .header .header_logo .img_khir,
+.main_container .header .header_icon .img_khir {
+    text-align: center !important;
+  }
+  .main_container .header .header_logo .img_khir img,
+.main_container .header .header_icon .img_khir img {
+    width: 80% !important;
+    margin-top: 0.5rem !important;
+  }
   .main_container .header .lang_mbc {
     margin-right: -18%;
   }
@@ -929,12 +938,17 @@ body {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 85% !important;
-    margin-top: -0.8rem !important;
+    width: 55% !important;
+    margin-top: -0.9rem !important;
+  }
+  .main_container .header .header_logo .img_khir,
+.main_container .header .header_icon .img_khir {
+    text-align: center !important;
   }
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
-    width: 60% !important;
+    width: 75% !important;
+    margin-top: -0.25rem !important;
   }
   .main_container .header .lang_mbc {
     margin-right: -18%;
@@ -1053,11 +1067,16 @@ body {
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 60% !important;
-    margin-top: -0.75rem !important;
+    margin-top: -0.6rem !important;
+  }
+  .main_container .header .header_logo .img_khir,
+.main_container .header .header_icon .img_khir {
+    text-align: center !important;
   }
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
-    width: 60% !important;
+    width: 70% !important;
+    margin-top: 0.4rem !important;
   }
   .main_container .header .lang_mbc {
     margin-right: -18%;
@@ -1165,12 +1184,17 @@ body {
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 55% !important;
+    width: 50% !important;
     margin-top: -0.85rem !important;
+  }
+  .main_container .header .header_logo .img_khir,
+.main_container .header .header_icon .img_khir {
+    text-align: center !important;
   }
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
-    width: 60% !important;
+    width: 70% !important;
+    margin-top: -0.15rem !important;
   }
   .main_container .header .lang_mbc {
     margin-right: -13%;
@@ -1275,19 +1299,21 @@ body {
   }
   .main_container .header {
     position: fixed !important;
-    height: 5rem !important;
+    height: 5.75rem !important;
   }
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
-    width: 35% !important;
+    width: 39% !important;
     margin-top: -0.75rem !important;
-    margin-left: 66%;
+  }
+  .main_container .header .header_logo .img_khir,
+.main_container .header .header_icon .img_khir {
+    text-align: center !important;
   }
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
-    width: 45% !important;
-    margin-top: 0.75rem !important;
-    margin-left: 0%;
+    width: 60% !important;
+    margin-top: 0.2rem !important;
   }
   .main_container .header .lang_mbc {
     font-size: 1.5rem;
@@ -1296,6 +1322,9 @@ body {
     left: 35% !important;
     width: 0;
     font-size: 1.5rem;
+  }
+  .main_container .navbar_three {
+    background: transparent !important;
   }
   .main_container .nav_nav {
     display: unset;
@@ -1448,13 +1477,15 @@ body {
 .main_container .header .header_icon img {
     width: 35% !important;
     margin-top: -0.65rem !important;
-    margin-left: 65%;
+  }
+  .main_container .header .header_logo .img_khir,
+.main_container .header .header_icon .img_khir {
+    text-align: center !important;
   }
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
-    width: 50% !important;
-    margin-top: 0.95rem !important;
-    margin-left: 0;
+    width: 60% !important;
+    margin-top: 0.2rem !important;
   }
   .main_container .header .lang_mbc {
     font-size: 1.75rem;
@@ -1530,6 +1561,9 @@ body {
   }
   .main_container .content_carousel .owl_content_five .item.item_muslim .card_muslim_guid .owl_content_img img {
     height: 14.75rem !important;
+  }
+  .main_container .content_carousel .owl_content_five .item.item_muslim .card_muslim_guid .card-body .card-title {
+    font-size: 1.35rem !important;
   }
   .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
     border-top-left-radius: 10px;

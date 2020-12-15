@@ -47,7 +47,7 @@ body {
         text-align: center !important;
 
         img {
-          width: 60%;
+          width: 50%;
           margin-top: -0.75rem;
         }
 
@@ -55,8 +55,8 @@ body {
           text-align: left;
 
           img {
-            width: 50%;
-            margin-top: 0.5rem;
+            width: 60%;
+            margin-top: 0rem;
           }
         }
       }
@@ -1352,6 +1352,15 @@ body {
           width: 70% !important;
           margin-top: -0.5rem !important;
         }
+
+        .img_khir {
+          text-align: center !important;
+
+          img {
+            width: 80% !important;
+            margin-top: 0.5rem !important;
+          }
+        }
       }
 
       .arrow_back {}
@@ -1738,13 +1747,16 @@ body {
       .header_icon {
 
         img {
-          width: 85% !important;
-          margin-top: -0.8rem !important;
+          width: 55% !important;
+          margin-top: -0.9rem !important;
         }
 
         .img_khir {
+          text-align: center !important;
+
           img {
-            width: 60% !important;
+            width: 75% !important;
+            margin-top: -0.25rem !important;
           }
         }
       }
@@ -2141,12 +2153,15 @@ body {
       .header_icon {
         img {
           width: 60% !important;
-          margin-top: -0.75rem !important;
+          margin-top: -0.6rem !important;
         }
 
         .img_khir {
+          text-align: center !important;
+
           img {
-            width: 60% !important;
+            width: 70% !important;
+            margin-top: 0.4rem !important;
           }
         }
       }
@@ -2543,17 +2558,18 @@ body {
       .header_logo,
       .header_icon {
         img {
-          width: 55% !important;
+          width: 50% !important;
           margin-top: -0.85rem !important;
         }
 
         .img_khir {
+          text-align: center !important;
+
           img {
-            width: 60% !important;
+            width: 70% !important;
+            margin-top: -0.15rem !important;
           }
         }
-
-        h6 {}
       }
 
       .arrow_back {}
@@ -2951,23 +2967,23 @@ body {
   .main_container {
     .header {
       position: fixed !important;
-      height: 5rem !important;
+      height: 5.75rem !important;
 
       .header_logo,
       .header_icon {
         h6 {}
 
         img {
-          width: 35% !important;
+          width: 39% !important;
           margin-top: -0.75rem !important;
-          margin-left: 66%;
         }
 
         .img_khir {
+          text-align: center !important;
+
           img {
-            width: 45% !important;
-            margin-top: 0.75rem !important;
-            margin-left: 0%;
+            width: 60% !important;
+            margin-top: 0.2rem !important;
           }
         }
 
@@ -2987,6 +3003,10 @@ body {
       }
 
       .arrow_back {}
+    }
+
+    .navbar_three {
+      background: transparent !important;
     }
 
     .nav_nav {
@@ -3548,14 +3568,14 @@ body {
         img {
           width: 35% !important;
           margin-top: -0.65rem !important;
-          margin-left: 65%;
         }
 
         .img_khir {
+          text-align: center !important;
+
           img {
-            width: 50% !important;
-            margin-top: 0.95rem !important;
-            margin-left: 0;
+            width: 60% !important;
+            margin-top: 0.2rem !important;
           }
         }
 
@@ -3767,6 +3787,12 @@ body {
               .owl_content_img {
                 img {
                   height: 14.75rem !important;
+                }
+              }
+
+              .card-body {
+                .card-title {
+                  font-size: 1.35rem !important;
                 }
               }
             }
