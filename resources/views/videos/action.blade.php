@@ -1,5 +1,4 @@
 <td class="visible-md visible-lg">
-    <div class="btn-group">
         @if($video->type == 2)
         <a class="btn btn-sm show-tooltip" href="{{url('audios/create?videoID='.$video->id)}}" title="Add Rbt"><i class="fa fa-plus"></i></a>
         @if(\App\Audio::where('video_id',$video->id)->count()>0)
@@ -12,5 +11,7 @@
         @endif
         <a class="btn btn-sm show-tooltip" href="{{url("videos/$video->id/edit")}}" title="Edit"><i class="fa fa-edit"></i></a>
         <a class="btn btn-sm show-tooltip btn-danger" onclick="return ConfirmDelete();" href="{{url("videos/$video->id/delete")}}" title="Delete"><i class="fa fa-trash"></i></a>
-    </div>
+        <a href="{{url("mbc_content/$video->id/create")}}" target="_blank">
+                    <button class="btn btn-sm btn-warning borderRadius">Add Mbc Content</button>
+        </a>
 </td>

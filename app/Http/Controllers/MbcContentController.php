@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\MbcContent;
+use App\Provider;
+use App\Service;
+use App\Video;
 use Illuminate\Http\Request;
 
 class MbcContentController extends Controller
@@ -55,8 +58,7 @@ class MbcContentController extends Controller
      */
     public function create()
     {
-      $content_id = $request->content_id;
-      return view('MbcContent.form', compact('content_id'));
+
     }
 
     /**
@@ -67,7 +69,16 @@ class MbcContentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        $mbc_content = new MbcContent();
+        $mbc_content->content_id = $request->content_id;
+        $mbc_content->subscription_day = $request->subscription_day;
+        $mbc_content->type = $request->available;
+        $mbc_content->operator = $request->operator;
+        $mbc_content->occasion_date =  \Carbon\Carbon::createFromFormat('d/m/Y', $request->occasion_date)->format('Y-m-d');
+        $mbc_content->save();
+        \Session::flash('success', 'Mbc Content Create successfully');
+        return redirect('mbc_content');
     }
 
     /**
@@ -89,7 +100,13 @@ class MbcContentController extends Controller
      */
     public function edit($id)
     {
-        //
+      $service = $serviceID = null;
+      $mbc_content = MbcContent::findOrFail($id);
+      $content_id = Video::findOrFail($mbc_content->content_id);
+      $service_id = Service::findOrFail($content_id->service_id);
+      $provider_id = Provider::findOrFail($service_id->provider_id);
+       //dd($mbc_content);
+      return view('MbcContent.form', compact('content_id','service_id','provider_id','service','serviceID','mbc_content'));
     }
 
     /**
@@ -101,7 +118,15 @@ class MbcContentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $mbc_content = MbcContent::findOrFail($id);
+        $mbc_content->content_id = $request->content_id;
+        $mbc_content->subscription_day = $request->subscription_day;
+        $mbc_content->type = $request->available;
+        $mbc_content->operator = $request->operator;
+        $mbc_content->occasion_date =  \Carbon\Carbon::createFromFormat('d/m/Y', $request->occasion_date)->format('Y-m-d');
+        $mbc_content->save();
+        \Session::flash('success', 'Mbc Content Update successfully');
+        return redirect('mbc_content');
     }
 
     /**
@@ -113,5 +138,18 @@ class MbcContentController extends Controller
     public function destroy($id)
     {
         //
+
+      }
+    public function mbc_content_create($id)
+    {
+      //dd($id);
+      $service = $serviceID = $mbc_content = null;
+      $content_id = Video::findOrFail($id);
+      $service_id = Service::findOrFail($content_id->service_id);
+      $provider_id = Provider::findOrFail($service_id->provider_id);
+       //dd($content_id);
+      return view('MbcContent.form', compact('content_id','service_id','provider_id','service','serviceID','mbc_content'));
     }
+
+
 }
