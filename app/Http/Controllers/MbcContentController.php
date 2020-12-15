@@ -17,7 +17,7 @@ class MbcContentController extends Controller
      */
     public function index(Request $request)
     {
-      $mbc_contents = MbcContent::query()->orderBy('id', 'DESC');
+      $mbc_contents = MbcContent::query()->select('mbc_contents.*')->orderBy('id', 'DESC');
 
         $without_paginate = 0;
         if ($request->has('subscription_day') && $request->subscription_day != '') {
@@ -25,7 +25,7 @@ class MbcContentController extends Controller
           $without_paginate = 1;
         }
         if ($request->has('content_id') && $request->content_id != '') {
-          $mbc_contents = $mbc_contents->where('mbc_contents.content_id', $request->content_id);
+          $mbc_contents = $mbc_contents->join('contents', 'contents.id', '=', 'mbc_contents.content_id')->where('contents.title','like', '%'.$request->content_id.'%');
           $without_paginate = 1;
         }
         if ($request->has('operator') && $request->operator != '') {
@@ -98,14 +98,13 @@ class MbcContentController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
+        //dd($request->occasion_date);
         $mbc_content = new MbcContent();
         $mbc_content->content_id = $request->content_id;
-        $mbc_content->subscription_day = $request->subscription_day ."-Day";
+        $mbc_content->subscription_day = $request->subscription_day;
         $mbc_content->type = $request->available;
         $mbc_content->operator = $request->operator;
-        $mbc_content->occasion_date =  \Carbon\Carbon::createFromFormat('d/m/Y', $request->occasion_date)->format('Y-m-d');
-        //dd($mbc_content);
+        $mbc_content->occasion_date =  $request->occasion_date ? \Carbon\Carbon::createFromFormat('d/m/Y', $request->occasion_date)->format('Y-m-d') : null;
         $mbc_content->save();
         \Session::flash('success', 'Mbc Content Create successfully');
         return redirect('mbc_content');
@@ -150,10 +149,10 @@ class MbcContentController extends Controller
     {
         $mbc_content = MbcContent::findOrFail($id);
         $mbc_content->content_id = $request->content_id;
-        $mbc_content->subscription_day = $request->subscription_day ."-Day";
+        $mbc_content->subscription_day = $request->subscription_day;
         $mbc_content->type = $request->available;
         $mbc_content->operator = $request->operator;
-        $mbc_content->occasion_date =  \Carbon\Carbon::createFromFormat('d/m/Y', $request->occasion_date)->format('Y-m-d');
+        $mbc_content->occasion_date =  $request->occasion_date ? \Carbon\Carbon::createFromFormat('d/m/Y', $request->occasion_date)->format('Y-m-d') : null;
         $mbc_content->save();
         \Session::flash('success', 'Mbc Content Update successfully');
         return redirect('mbc_content');

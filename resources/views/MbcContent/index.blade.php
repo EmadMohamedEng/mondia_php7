@@ -45,7 +45,7 @@ Content
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     {!! Form::label('type', 'Type:') !!}
                     <div class=''>
-                        {!! Form::select('type', ['1'=>'General' , '2' => 'Occasion' , '3' => 'Friday'] ,
+                        {!! Form::select('type', ['general'=>'General' , 'occasion' => 'Occasion' , 'friday' => 'Friday'] ,
                         request()->get('type'),
                         ['class'=>'form-control','id'=>'type','placeholder'=>'Select Type']) !!}
                     </div>
@@ -98,7 +98,13 @@ Content
                                     @foreach($mbc_contents as $mbc_content)
                                     <tr>
                                         <td>{{$mbc_content->id}}</td>
-                                        <td>{{$mbc_content->subscription_day}}day</td>
+                                        <td>
+                                        @if($mbc_content->subscription_day )
+                                          {{$mbc_content->subscription_day}}day
+                                        @else
+                                        ---
+                                        @endif
+                                        </td>
                                         <td>{{$mbc_content->content->title}}</td>
                                         <td>{{$mbc_content->operator}}</td>
                                         <td>
@@ -110,7 +116,13 @@ Content
                                             Friday
                                             @endif
                                         </td>
-                                        <td>{{$mbc_content->occasion_date}}</td>
+                                        <td>
+                                        @if($mbc_content->occasion_date)
+                                        {{$mbc_content->occasion_date}}
+                                        @else
+                                        ---
+                                        @endif
+                                        </td>
                                         <td class="visible-md visible-lg">
                                             <div class="btn-group">
                                                 <a class="btn btn-sm show-tooltip"
