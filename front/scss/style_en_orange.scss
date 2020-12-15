@@ -139,6 +139,10 @@ body {
 
           .dropdown-item {
             color: $text_color;
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             &.dropdown-item2 {}
 

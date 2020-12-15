@@ -47,7 +47,8 @@
   background: transparent;
 }
 .main_container .sidenav .navbar_ul .nav-item .dropdown-menu {
-  background-color: #0f1218;
+  background-color: transparent;
+  border: 0;
 }
 .main_container .sidenav .navbar_ul .nav-item .dropdown-menu .dropdown-item.link_href {
   padding: 5px 0;
@@ -62,11 +63,11 @@
 }
 .main_container .navbar-nav .dropdown-menu {
   background-color: #000;
-  text-align: left;
-  margin-left: 15%;
+  margin-left: 12%;
 }
 .main_container .navbar-nav .dropdown-menu .nav-link {
   font-size: 13px;
+  text-align: left;
 }
 .main_container .close_nav {
   padding-right: 8px;

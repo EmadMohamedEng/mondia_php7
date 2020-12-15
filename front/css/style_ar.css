@@ -596,13 +596,13 @@ body {
     width: 100%;
   }
   .main_container .merath_page .input_text .merath_input {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .main_container .merath_page .input_span {
     text-align: right;
   }
   .main_container .merath_page .input_span h4 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 411px) and (max-width: 415px) {

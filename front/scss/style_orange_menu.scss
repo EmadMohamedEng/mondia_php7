@@ -67,7 +67,8 @@ $grey_color: #adadad;
     .navbar_ul {
       .nav-item {
         .dropdown-menu {
-          background-color: $bg_color2;
+          background-color: transparent;
+          border: 0;
           .dropdown-item {
             &.link_href {
               padding: 5px 0;
@@ -95,10 +96,11 @@ $grey_color: #adadad;
   .navbar-nav {
     .dropdown-menu {
       background-color: $black_color;
-      text-align: left;
-      margin-left: 15%;
+      margin-left: 12%;
+      
       .nav-link {
         font-size: 13px;
+        text-align: left;
       }
     }
   }
