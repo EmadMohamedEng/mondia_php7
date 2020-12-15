@@ -82,9 +82,9 @@ $menu = provider_menu();
     </section> --}}
 
     <section class="img_carousel">
-      <video class="rounded" width="100%" controls poster="{{url('orange_slider/Fdytok_1_snapshot.jpg')}}">
-        <source src="{{url('orange_slider/Fdytok_1.mp4')}}" type="video/mp4">
-        <source src="{{url('orange_slider/Fdytok_1.mp4')}}" type="video/ogg">
+      <video class="rounded" width="100%" controls poster="{{url('orange_slider/Esm EL Nabi_1_snapshot.jpg')}}">
+        <source src="{{url('orange_slider/Esm EL Nabi_1.mp4')}}" type="video/mp4">
+        <source src="{{url('orange_slider/Esm EL Nabi_1.mp4')}}" type="video/ogg">
         Your browser does not support the video tag.
       </video>
     </section>
