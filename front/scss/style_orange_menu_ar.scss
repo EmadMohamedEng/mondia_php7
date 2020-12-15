@@ -57,6 +57,7 @@
       .menuTwo {
         &:after {
           float: left !important;
+          margin-left: -0.75em;
         }
 
         svg {}

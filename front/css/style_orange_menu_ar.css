@@ -29,6 +29,7 @@
 }
 .main_container .navbar_ul .nav-item .menuTwo:after {
   float: left !important;
+  margin-left: -0.75em;
 }
 .main_container .navbar_three .navbar_ul_three .menuThree {
   font-size: 18px;
