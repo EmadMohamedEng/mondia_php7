@@ -800,6 +800,14 @@ body {
       }
     }
 
+    .inner_page {
+      .cover {
+        audio {
+          margin-right: 3%;
+        }
+      }
+    }
+
     .salah_time_page {
       .time_btn {
         direction: rtl;
@@ -956,6 +964,14 @@ body {
               right: 65% !important;
             }
           }
+        }
+      }
+    }
+
+    .inner_page {
+      .cover {
+        audio {
+          margin-right: 3%;
         }
       }
     }
@@ -1126,6 +1142,12 @@ body {
     }
 
     .inner_page {
+      .cover {
+        audio {
+          margin-right: 3%;
+        }
+      }
+
       .section_content {
         .image_inner {
           height: 100px;
@@ -1318,6 +1340,12 @@ body {
     }
 
     .inner_page {
+      .cover {
+        audio {
+          margin-right: 3%;
+        }
+      }
+
       .section_content {
 
         .p_content,

@@ -368,6 +368,9 @@ body {
     top: 7% !important;
     right: 64% !important;
   }
+  .main_container .inner_page .cover audio {
+    margin-right: 3%;
+  }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
   }
@@ -460,6 +463,9 @@ body {
   .main_container .list_page .item .card .owl_content_img .content_free {
     top: 8% !important;
     right: 65% !important;
+  }
+  .main_container .inner_page .cover audio {
+    margin-right: 3%;
   }
   .main_container .salah_time_page {
     width: 95%;
@@ -559,6 +565,9 @@ body {
   .main_container .list_page .item .card .owl_content_img .content_free {
     top: 8% !important;
     right: 65% !important;
+  }
+  .main_container .inner_page .cover audio {
+    margin-right: 3%;
   }
   .main_container .inner_page .section_content .image_inner {
     height: 100px;
@@ -670,6 +679,9 @@ body {
   .main_container .list_page .item .card .owl_content_img .content_free {
     top: 8% !important;
     right: 65% !important;
+  }
+  .main_container .inner_page .cover audio {
+    margin-right: 3%;
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
