@@ -131,7 +131,7 @@ function get_static_routes()
         Route::get('mbc_content/{id}/create', 'MbcContentController@mbc_content_create');
         Route::get('mbc_content/{id}/edit', 'MbcContentController@edit');
         Route::post('mbc_content/{id}', 'MbcContentController@update');
-        Route::get('mbc_content/allData', 'MbcContentController@allData');
+        Route::get('mbc_content/{id}/delete', 'MbcContentController@destroy');
         Route::resource('mbc_content', 'MbcContentController');
     });
 
