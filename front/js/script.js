@@ -208,6 +208,31 @@ $('.owl_content_five').owlCarousel({
   }
 });
 
+$('.owl_muslim_guide').owlCarousel({
+  rtl: true,
+  loop: true,
+  margin: 5,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  nav: false,
+  dots: false,
+  center: false,
+  responsive: {
+    0: {
+      items: 2
+    },
+    600: {
+      items: 2
+    },
+    768: {
+      items: 3
+    },
+    1000: {
+      items: 4
+    }
+  }
+});
+
 $('#Calculate').click(function () {
   var GoldPrice = $('#txtGoldPrice').val();
   var SavedMoney = $('#txtSavedMoney').val();

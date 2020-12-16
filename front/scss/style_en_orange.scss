@@ -434,7 +434,8 @@ body {
       }
     }
 
-    .owl_content_five {
+    .owl_content_five,
+    .owl_muslim_guide {
       .item {
         &.item_muslim {
           height: 14rem;
@@ -482,12 +483,14 @@ body {
           }
 
           .card-body {
+            text-align: center;
+            width: 100%;
             padding: 0;
             background-color: unset;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
             position: absolute;
-            top: 20px;
+            top: 25px;
             left: 50%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
@@ -1357,8 +1360,8 @@ body {
       .header_logo,
       .header_icon {
         img {
-          width: 70% !important;
-          margin-top: -0.5rem !important;
+          width: 60% !important;
+          margin-top: -0.8rem !important;
         }
 
         .img_khir {
@@ -1366,7 +1369,7 @@ body {
 
           img {
             width: 80% !important;
-            margin-top: 0.5rem !important;
+            margin-top: 0.05rem !important;
           }
         }
       }
@@ -1380,6 +1383,12 @@ body {
           left: -20%;
           min-width: 8rem;
         }
+      }
+    }
+
+    .mbc_orange {
+      .navbar_three {
+        background: transparent !important;
       }
     }
 
@@ -1498,7 +1507,8 @@ body {
       }
 
       .owl_content_four,
-      .owl_content_five {
+      .owl_content_five,
+      .owl_muslim_guide {
         .item {
           &.item_muslim {
             height: 9rem;
@@ -1506,6 +1516,7 @@ body {
             .card_muslim_guid {
               width: 80% !important;
               margin: 0 auto;
+
               .owl_content_img {
                 img {
                   height: auto !important;
@@ -1755,14 +1766,14 @@ body {
 
     .header {
       position: fixed !important;
-      // height: 4rem !important;
+      height: 4rem !important;
 
       .header_logo,
       .header_icon {
 
         img {
           width: 55% !important;
-          margin-top: -0.9rem !important;
+          margin-top: -0.8rem !important;
         }
 
         .img_khir {
@@ -1770,7 +1781,7 @@ body {
 
           img {
             width: 75% !important;
-            margin-top: -0.25rem !important;
+            margin-top: 0rem !important;
           }
         }
       }
@@ -1784,6 +1795,12 @@ body {
           left: -10%;
           min-width: 8rem;
         }
+      }
+    }
+
+    .mbc_orange {
+      .navbar_three {
+        background: transparent !important;
       }
     }
 
@@ -1906,7 +1923,8 @@ body {
       }
 
       .owl_content_four,
-      .owl_content_five {
+      .owl_content_five,
+      .owl_muslim_guide {
         .item {
           &.item_muslim {
             height: 10rem;
@@ -1914,9 +1932,10 @@ body {
             .card_muslim_guid {
               width: 80% !important;
               margin: 0 auto;
+
               .owl_content_img {
                 img {
-                  height: auto!important;
+                  height: auto !important;
                 }
               }
             }
@@ -2172,8 +2191,8 @@ body {
       .header_logo,
       .header_icon {
         img {
-          width: 60% !important;
-          margin-top: -0.6rem !important;
+          width: 55% !important;
+          margin-top: -0.85rem !important;
         }
 
         .img_khir {
@@ -2181,7 +2200,7 @@ body {
 
           img {
             width: 70% !important;
-            margin-top: 0.4rem !important;
+            margin-top: 0.1rem !important;
           }
         }
       }
@@ -2195,6 +2214,12 @@ body {
           left: -5%;
           min-width: 8rem;
         }
+      }
+    }
+
+    .mbc_orange {
+      .navbar_three {
+        background: transparent !important;
       }
     }
 
@@ -2307,7 +2332,8 @@ body {
       }
 
       .owl_content_four,
-      .owl_content_five {
+      .owl_content_five,
+      .owl_muslim_guide {
         .item {
           &.item_muslim {
             height: 10.5rem;
@@ -2315,6 +2341,7 @@ body {
             .card_muslim_guid {
               width: 80% !important;
               margin: 0 auto;
+
               .owl_content_img {
                 img {
                   height: auto !important;
@@ -2579,7 +2606,7 @@ body {
 
     .header {
       position: fixed !important;
-      height: 5rem !important;
+      height: 4rem !important;
 
       .header_logo,
       .header_icon {
@@ -2607,6 +2634,12 @@ body {
           left: 7%;
           min-width: 8rem;
         }
+      }
+    }
+
+    .mbc_orange {
+      .navbar_three {
+        background: transparent !important;
       }
     }
 
@@ -2728,7 +2761,8 @@ body {
       }
 
       .owl_content_four,
-      .owl_content_five {
+      .owl_content_five,
+      .owl_muslim_guide {
         .item {
           &.item_muslim {
             height: 10.75rem;
@@ -2736,6 +2770,7 @@ body {
             .card_muslim_guid {
               width: 75% !important;
               margin: 0 auto;
+
               .owl_content_img {
                 img {
                   height: auto !important;
@@ -3222,25 +3257,34 @@ body {
         }
       }
 
-      .owl_content_five {
+      .owl_content_five,
+      .owl_muslim_guide {
         .item {
           &.item_muslim {
-            height: 19.25rem;
+            height: 13rem;
 
             .card_muslim_guid {
-              width: 85%;
+              width: 75%;
+              margin: 0 auto;
 
               .owl_content_img {
                 img {
-                  height: 17rem !important;
-                  width: 90% !important;
+                  height: auto !important;
+                  width: 100% !important;
+                  margin: 0 auto;
                 }
+              }
+
+              .card-body {
+                .card-title {
+                  font-size: 1.1rem !important;
+                }
+
               }
             }
           }
 
           .card {
-
             .owl_content_img {
               img {
                 border-top-left-radius: 10px;
@@ -3818,10 +3862,11 @@ body {
         }
       }
 
-      .owl_content_five {
+      .owl_content_five,
+      .owl_muslim_guide {
         .item {
           &.item_muslim {
-            height: 19rem;
+            height: 18rem;
 
             .card_muslim_guid {
               .owl_content_img {
@@ -4357,7 +4402,8 @@ body {
         }
       }
 
-      .owl_content_five {
+      .owl_content_five,
+      .owl_muslim_guide {
         .item {
           &.item_muslim {
             height: 12rem;

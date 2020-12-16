@@ -34,53 +34,6 @@ $menu = provider_menu();
 
 
     @if(request()->get('OpID') == orange)
-    {{-- <section class="img_carousel">
-      <div class="owl_one owl_orange owl-carousel owl-theme" dir="ltr">
-        @foreach($latest as $content)
-        <div class="item">
-          <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
-            <img class="m-auto d-block" src="{{$content->type == 1 ? $content->image_preview : $content->video}}" alt="banner_slider">
-          </a>
-
-          @if(request()->get('OpID') == mbc)
-          @if ($content->free == 1)
-          @if( DB::table('settings')->where('key','like','%enable_free%')->first()->value == "1")
-          <div class="content_free text-center py-1">
-            <span class="text-capitalize">@lang('front.free')</span>
-          </div>
-          @endif
-          @endif
-          @endif
-
-          <div class="btn_orange w-100">
-            <button onclick="" class="btn btn-sm text-capitalize">
-              <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
-            </button>
-          </div>
-        </div>
-        @endforeach
-        @foreach($health as $content)
-        <div class="item">
-          <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
-            <img class="m-auto d-block" src="{{url($content->service->image)}}" alt="banner_slider">
-          </a>
-
-          @if ($content->free == 1)
-          <div class="content_free text-center py-1">
-            <span class="text-capitalize">free</span>
-          </div>
-          @endif
-
-          <div class="btn_subscribe w-100">
-            <button onclick="" class="btn btn-sm text-capitalize">
-              <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
-            </button>
-          </div>
-        </div>
-        @endforeach
-      </div>
-    </section> --}}
-
     <section class="img_carousel">
       <video class="rounded" width="100%" controls poster="{{url('orange_slider/Esm EL Nabi_1_snapshot.jpg')}}">
         <source src="{{url('orange_slider/Esm EL Nabi_1.mp4')}}" type="video/mp4">
@@ -88,8 +41,8 @@ $menu = provider_menu();
         Your browser does not support the video tag.
       </video>
     </section>
-
     @else
+
     <section class="img_carousel">
       <div class="owl_one owl-carousel owl-theme" dir="ltr">
         @foreach($latest as $content)
@@ -157,7 +110,7 @@ $menu = provider_menu();
       @if(request()->get('OpID') == mbc)
       <div class="owl_content owl_content_two owl-carousel owl-theme" dir="ltr">
         @else
-        <div class="owl_content owl_content_five owl-carousel owl-theme" dir="ltr">
+        <div class="owl_content owl_muslim_guide owl-carousel owl-theme" dir="ltr">
           @endif
           <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
