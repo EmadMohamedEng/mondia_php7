@@ -9,8 +9,8 @@
         <a href="{{route('front.index')}}" class="link_href">
 
           <div class="row">
-            <div class="col-md-6 col-6 p-0">
-              <img class="bounce-top logo_orange" src='{{asset("front/images/orange.png")}}' alt='Logo'>
+            <div class="col-md-6 col-6 p-0 logo_orange">
+              <img class="bounce-top" src='{{asset("front/images/orange.png")}}' alt='Logo'>
             </div>
 
             <div class="col-md-6 col-6 img_khir p-0">
@@ -42,10 +42,8 @@
   <div class="" style="z-index: 9999999999;">
     <!-- start burger menu => For MBC & Orange Only  -->
     <div class="burger_menu">
-
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn_mbc" onclick="closeNav()"><i class="fas fa-times"></i></a>
-        <!-- start menu 2  -->
         <ul class="navbar_ul navbar-nav mr-auto">
           <li class="nav-item nav_item_logo d-block d-sm-none d-md-block d-lg-block d-xl-none">
             <div class="row m-0">
@@ -142,36 +140,6 @@
                     c37.625-16.315,81.507,1.022,97.823,38.646c0.695,1.603,2.259,2.56,3.901,2.56c0.564,0,1.138-0.113,1.689-0.352
                     c2.153-0.934,3.142-3.437,2.208-5.59C143.456,289.83,94.557,270.512,52.633,288.691z" />
                 </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
               </svg>
 
               @lang('front.muslim_guide')</a>
@@ -184,15 +152,12 @@
             </div>
           </li>
         </ul>
-        <!-- end menu 2  -->
       </div>
     </div>
     <!-- end burger menu => For MBC & Orange Only  -->
 
-    <!-- start menu 1  -->
     <!-- start menu 1 => For All Operator / Mobile Menu / And Sidenav for PC ( Oman - DU - STC ) -->
     <div class="menu_all_op">
-
       <nav class="nav_nav navbar navbar-expand-xl primary-color">
         <button id="menu_toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="icon_before fas fa-bars fa-lg"></i>
@@ -233,7 +198,6 @@
             } else {
               $style = "background: transparent;";
             }
-
             ?>
 
             <li class="nav-item">
@@ -307,36 +271,6 @@
                         c37.625-16.315,81.507,1.022,97.823,38.646c0.695,1.603,2.259,2.56,3.901,2.56c0.564,0,1.138-0.113,1.689-0.352
                         c2.153-0.934,3.142-3.437,2.208-5.59C143.456,289.83,94.557,270.512,52.633,288.691z" />
                   </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
                 </svg>
                 @lang('front.muslim_guide')</a>
               <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink6">
@@ -349,7 +283,7 @@
             </li>
 
             <li class="nav-item ">
-            @if((session()->get('orange_op_id') == orange && session()->get('status') == 'active' && session()->has('MSISDN')))
+              @if((session()->get('orange_op_id') == orange && session()->get('status') == 'active' && session()->has('MSISDN')))
             <li class="nav-item">
               <a class="menuTwo nav-link text-capitalize link_href" href="{{url('/profile')}}" style=" <?php echo $style ?>">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
@@ -399,13 +333,12 @@
       </nav>
     </div>
     <!-- end menu 1 => For All Operator / Mobile Menu / And Sidenav for PC ( Oman - DU - STC ) -->
-    <!-- end menu 1  -->
   </div>
 
   <?php
   $style_color = "#FF6600";
   ?>
-  <!-- start menu 3  -->
+
   <!-- start menu 3 => For MBC & Orange Only  -->
   <div class="mbc_orange">
     <nav class="navbar navbar-expand-lg navbar-light navbar_three " style="cursor: pointer;">
@@ -471,6 +404,5 @@
     </nav>
   </div>
   <!-- end menu 3 => For MBC & Orange Only -->
-  <!-- end menu 3  -->
   @yield('content')
 </div>

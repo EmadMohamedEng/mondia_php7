@@ -26,9 +26,10 @@
   <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/style_orange_menu.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}">
 
-    <!-- @if(request()->get('OpID') == mbc)
+    @if(request()->get('OpID') == mbc)
       @include("front.operator.mbc.head")
     @elseif(request()->get('OpID') == orange)
       @include("front.operator.orange.head")
@@ -40,9 +41,9 @@
       @include("front.operator.stc.head")
     @else
       @include("front.operator.ooredoo.head")
-    @endif -->
+    @endif
 
-  @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
+  <!-- @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
   <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
   @endif
   @if(request()->has('OpID') && request()->get('OpID') == omantel)
@@ -69,7 +70,7 @@
   <link rel="stylesheet" href="{{asset('front/css/style_orange_menu_ar.css')}}">
   @endif
   <link rel="stylesheet" href="{{asset('front/css/style_orange_menu.css')}}">
-  @endif
+  @endif -->
 
   <!-- <style>
     .active_menu {
