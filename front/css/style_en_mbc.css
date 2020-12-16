@@ -888,6 +888,9 @@ body {
     left: -20%;
     min-width: 8rem;
   }
+  .main_container .mbc_orange .navbar_three {
+    background: transparent !important;
+  }
   .main_container .nav_nav {
     display: unset;
   }
@@ -967,7 +970,7 @@ body {
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 40% !important;
-    margin-top: 0.5rem !important;
+    margin-top: -0.5rem !important;
   }
   .main_container .header .lang_mbc {
     margin-right: -18%;
@@ -975,6 +978,9 @@ body {
   .main_container .header .lang_mbc .dropdown-menu2 {
     left: -6%;
     min-width: 8rem;
+  }
+  .main_container .mbc_orange .navbar_three {
+    background: transparent !important;
   }
   .main_container .nav_nav {
     display: unset;
@@ -1075,6 +1081,9 @@ body {
     left: -3%;
     min-width: 8rem;
   }
+  .main_container .mbc_orange .navbar_three {
+    background: transparent !important;
+  }
   .main_container .nav_nav {
     display: unset;
   }
@@ -1167,6 +1176,9 @@ body {
     left: 7%;
     min-width: 8rem;
   }
+  .main_container .mbc_orange .navbar_three {
+    background: transparent !important;
+  }
   .main_container .nav_nav {
     display: unset;
   }
@@ -1247,8 +1259,8 @@ body {
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 30% !important;
-    margin-top: 0.75rem !important;
-    margin-left: 8%;
+    margin-top: 0.25rem !important;
+    margin-left: 12%;
   }
   .main_container .header .lang_mbc {
     font-size: 1.5rem;
@@ -1258,6 +1270,9 @@ body {
     left: 37%;
     width: 0;
     font-size: 1.5rem;
+  }
+  .main_container .mbc_orange .navbar_three {
+    background: transparent !important;
   }
   .main_container .navbar_three {
     background: transparent !important;
@@ -1389,8 +1404,8 @@ body {
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 30% !important;
-    margin-top: 0.75rem !important;
-    margin-left: 8%;
+    margin-top: 0rem !important;
+    margin-left: 12%;
   }
   .main_container .header .lang_mbc {
     font-size: 1.75rem;
@@ -1400,6 +1415,9 @@ body {
     left: 52%;
     width: 0;
     font-size: 1.75rem;
+  }
+  .main_container .mbc_orange .navbar_three {
+    background: transparent !important;
   }
   .main_container .nav_nav {
     display: unset;
