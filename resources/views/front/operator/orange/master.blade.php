@@ -14,7 +14,7 @@
             </div>
 
             <div class="col-md-6 col-6 img_khir p-0">
-              <img class="bounce-top" src='{{asset("front/images/orange/al_kheer.png")}}' alt='Logo'>
+              <img class="bounce-top" src='{{asset("front/images/orange/el_kheer.png")}}' alt='Logo'>
             </div>
           </div>
         </a>

@@ -28,6 +28,20 @@
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}">
 
+    <!-- @if(request()->get('OpID') == mbc)
+      @include("front.operator.mbc.head")
+    @elseif(request()->get('OpID') == orange)
+      @include("front.operator.orange.head")
+    @elseif(request()->get('OpID') == du)
+      @include("front.operator.du.head")
+    @elseif(request()->get('OpID') == omantel)
+      @include("front.operator.omantel.head")
+    @elseif(request()->get('OpID') == stc)
+      @include("front.operator.stc.head")
+    @else
+      @include("front.operator.ooredoo.head")
+    @endif -->
+
   @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
   <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
   @endif
@@ -87,17 +101,17 @@ $enable = get_setting('enable_testing');
 <body>
   <main class="main_container">
     @if(request()->get('OpID') == mbc)
-      @include("front.operator.mbc")
+      @include("front.operator.mbc.master")
     @elseif(request()->get('OpID') == orange)
-      @include("front.operator.orange")
+      @include("front.operator.orange.master")
     @elseif(request()->get('OpID') == du)
-      @include("front.operator.du")
+      @include("front.operator.du.master")
     @elseif(request()->get('OpID') == omantel)
-      @include("front.operator.omantel")
+      @include("front.operator.omantel.master")
     @elseif(request()->get('OpID') == stc)
-      @include("front.operator.stc")
+      @include("front.operator.stc.master")
     @else
-      @include("front.operator.ooredoo")
+      @include("front.operator.ooredoo.master")
     @endif
   </main>
 
