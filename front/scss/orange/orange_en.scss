@@ -665,6 +665,8 @@ select {
     margin-top: 1.5rem;
 
     .coming_soon {
+      color: $white_color;
+      background: $bg_color;
       width: 33%;
       cursor: not-allowed;
       border-radius: 8px;
@@ -676,6 +678,7 @@ select {
 
     .content_carousel_head {
       .link_title {
+        color: $text_color;
         h6 {
           margin-bottom: 1rem;
           font-weight: bold;
@@ -688,22 +691,36 @@ select {
       margin-bottom: 1rem;
 
       .card {
+        border: 1px solid $text_color;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
-        // height: 16rem;
 
         .owl_content_img {
+          position: relative;
           img {
             height: 11rem;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
           }
+
+          .playCircle {
+            color: $bg_color;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.5;
+          }
         }
 
         .card-body {
+          background-color: $black_color;
+          color: $white_color;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -718,12 +735,6 @@ select {
             direction: ltr;
             margin-bottom: 0;
           }
-
-          .card-text {
-            i {
-              color: $grey_color;
-            }
-          }
         }
       }
 
@@ -732,6 +743,59 @@ select {
 
   /* End List Page */
 
+  /* Start List Muslim Page */
+  .list_muslim {
+    .content_carousel_head {
+      .link_title {
+        color: $text_color;
+      }
+    }
+
+    .item {
+      width: 90%;
+      margin: 5% auto;
+
+      .card {
+        background: $black_color;
+        border: 4px solid #FF6600;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        .owl_content_img {
+          position: relative;
+
+          img {
+            border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+          }
+        }
+      }
+
+      .card-body {
+        padding: 0;
+        margin-top: 8%;
+
+        .card-title {
+          text-align: center;
+          font-size: 1rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          direction: ltr;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  /* End List Muslim Page */
+
 
   /* Start Inner Page */
   .inner_page {
@@ -739,15 +803,17 @@ select {
 
     .cover {
       position: relative;
+      h4 {
+        color: $white_color;
+      }
 
       video {
-        // padding: 0 2rem;
         border-radius: 10px;
       }
 
       img {
         max-height: 36.438rem;
-        width: 100% !important;
+        width: 100%;
         margin: 0 auto;
         display: block;
         border-radius: 0.5rem;
@@ -760,14 +826,16 @@ select {
       audio {
         margin-left: 0;
         margin-top: -4%;
-        width: 100% !important;
+        width: 100%;
       }
 
       button {
+        background: $bg_color;
+        color: $white_color;
         border: 0;
         position: absolute;
         top: 49%;
-        left: 40%;
+        left: 35%;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -781,6 +849,7 @@ select {
     }
 
     .poster {
+      color: $white_color;
       margin-top: 1.5rem;
       width: 100%;
 
@@ -796,6 +865,7 @@ select {
 
         .outside-cover {
           margin-bottom: 2rem;
+          color: $text_color;
         }
       }
     }
@@ -806,6 +876,7 @@ select {
 
       .pa_share {
         margin-top: 1rem;
+        color: $text_color;
       }
 
       .shear_div {
@@ -815,6 +886,7 @@ select {
         .twitter,
         .messenger,
         .whatsapp {
+          color: $white_color;
           width: 100%;
           height: 3.5rem;
           font-size: 1.2em;
@@ -876,27 +948,28 @@ select {
       .pa_Videos {
         margin-bottom: 1rem;
         margin-top: 1rem;
+        color: $text_color;
       }
 
       .image_inner {
         height: 80px;
         width: 80px;
-        border-radius: 5px !important;
-        -webkit-border-radius: 5px !important;
-        -moz-border-radius: 5px !important;
-        -ms-border-radius: 5px !important;
-        -o-border-radius: 5px !important;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
       }
 
       .p_content {
         margin-left: 2%;
         font-size: 14px;
-        color: $black_color;
+        color: $white_color;
       }
 
       .p_content_2 {
         font-size: 14px;
-        color: #c39;
+        color: $text_color;
         margin-bottom: 0;
         margin-top: -0.75rem;
       }
@@ -915,6 +988,7 @@ select {
             margin-bottom: 0.5rem;
 
             .btn {
+              background: $bg_color;
               color: $white_color;
               border: 0;
             }
@@ -929,11 +1003,12 @@ select {
           justify-content: center;
 
           .btn {
+            background: $bg_color;
             color: $white_color;
             border: 0;
 
             &.btn_2 {
-              background: #00a9ce;
+              background: $text_color;
             }
           }
         }

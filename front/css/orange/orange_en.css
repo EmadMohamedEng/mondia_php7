@@ -53,6 +53,8 @@ select:active {
   /* End Home Page */
   /* Start List Page */
   /* End List Page */
+  /* Start List Muslim Page */
+  /* End List Muslim Page */
   /* Start Inner Page */
   /* Start Modal For InnerPager */
   /* End Modal For InnerPager */
@@ -541,6 +543,8 @@ select:active {
   margin-top: 1.5rem;
 }
 .main_container .list_page .coming_soon {
+  color: #FFF;
+  background: #FF6600;
   width: 33%;
   cursor: not-allowed;
   border-radius: 8px;
@@ -548,6 +552,9 @@ select:active {
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+}
+.main_container .list_page .content_carousel_head .link_title {
+  color: #FF6600;
 }
 .main_container .list_page .content_carousel_head .link_title h6 {
   margin-bottom: 1rem;
@@ -558,18 +565,34 @@ select:active {
   margin-bottom: 1rem;
 }
 .main_container .list_page .item .card {
+  border: 1px solid #FF6600;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+.main_container .list_page .item .card .owl_content_img {
+  position: relative;
+}
 .main_container .list_page .item .card .owl_content_img img {
   height: 11rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+.main_container .list_page .item .card .owl_content_img .playCircle {
+  color: #FF6600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
 .main_container .list_page .item .card .card-body {
+  background-color: #000;
+  color: #FFF;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -584,8 +607,44 @@ select:active {
   direction: ltr;
   margin-bottom: 0;
 }
-.main_container .list_page .item .card .card-body .card-text i {
-  color: #adadad;
+.main_container .list_muslim .content_carousel_head .link_title {
+  color: #FF6600;
+}
+.main_container .list_muslim .item {
+  width: 90%;
+  margin: 5% auto;
+}
+.main_container .list_muslim .item .card {
+  background: #000;
+  border: 4px solid #FF6600;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.main_container .list_muslim .item .card .owl_content_img {
+  position: relative;
+}
+.main_container .list_muslim .item .card .owl_content_img img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.main_container .list_muslim .item .card-body {
+  padding: 0;
+  margin-top: 8%;
+}
+.main_container .list_muslim .item .card-body .card-title {
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
+  margin-bottom: 0;
 }
 .main_container .inner_page {
   margin-top: 1.5rem;
@@ -593,12 +652,15 @@ select:active {
 .main_container .inner_page .cover {
   position: relative;
 }
+.main_container .inner_page .cover h4 {
+  color: #FFF;
+}
 .main_container .inner_page .cover video {
   border-radius: 10px;
 }
 .main_container .inner_page .cover img {
   max-height: 36.438rem;
-  width: 100% !important;
+  width: 100%;
   margin: 0 auto;
   display: block;
   border-radius: 0.5rem;
@@ -610,13 +672,15 @@ select:active {
 .main_container .inner_page .cover audio {
   margin-left: 0;
   margin-top: -4%;
-  width: 100% !important;
+  width: 100%;
 }
 .main_container .inner_page .cover button {
+  background: #FF6600;
+  color: #FFF;
   border: 0;
   position: absolute;
   top: 49%;
-  left: 40%;
+  left: 35%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -627,6 +691,7 @@ select:active {
   box-shadow: 0 0 0 0.2rem #FFF;
 }
 .main_container .inner_page .poster {
+  color: #FFF;
   margin-top: 1.5rem;
   width: 100%;
 }
@@ -638,6 +703,7 @@ select:active {
 }
 .main_container .inner_page .poster .poster-details .outside-cover {
   margin-bottom: 2rem;
+  color: #FF6600;
 }
 .main_container .inner_page .socail_media {
   width: 50%;
@@ -645,6 +711,7 @@ select:active {
 }
 .main_container .inner_page .socail_media .pa_share {
   margin-top: 1rem;
+  color: #FF6600;
 }
 .main_container .inner_page .socail_media .shear_div {
   padding-right: 1rem;
@@ -653,6 +720,7 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
+  color: #FFF;
   width: 100%;
   height: 3.5rem;
   font-size: 1.2em;
@@ -701,24 +769,25 @@ select:active {
 .main_container .inner_page .section_content .pa_Videos {
   margin-bottom: 1rem;
   margin-top: 1rem;
+  color: #FF6600;
 }
 .main_container .inner_page .section_content .image_inner {
   height: 80px;
   width: 80px;
-  border-radius: 5px !important;
-  -webkit-border-radius: 5px !important;
-  -moz-border-radius: 5px !important;
-  -ms-border-radius: 5px !important;
-  -o-border-radius: 5px !important;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 .main_container .inner_page .section_content .p_content {
   margin-left: 2%;
   font-size: 14px;
-  color: #000;
+  color: #FFF;
 }
 .main_container .inner_page .section_content .p_content_2 {
   font-size: 14px;
-  color: #c39;
+  color: #FF6600;
   margin-bottom: 0;
   margin-top: -0.75rem;
 }
@@ -730,6 +799,7 @@ select:active {
   margin-bottom: 0.5rem;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club .btn {
+  background: #FF6600;
   color: #FFF;
   border: 0;
 }
@@ -740,11 +810,12 @@ select:active {
   justify-content: center;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn {
+  background: #FF6600;
   color: #FFF;
   border: 0;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn.btn_2 {
-  background: #00a9ce;
+  background: #FF6600;
 }
 .main_container .azan_page {
   margin-top: 3rem;
