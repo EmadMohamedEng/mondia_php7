@@ -1088,7 +1088,7 @@ $enable = get_setting('enable_testing');
         if (request()->get('OpID') == orange) $style_color = "#FF6600";
         ?>
 
-        <!-- start menu 3 => For MBC & Orange Only  -->
+        <!-- start menu 3 => For MBC & Orange - PC Only  -->
         <div class="mbc_orange">
           <nav class="navbar navbar-expand-lg navbar-light navbar_three " style="cursor: pointer;">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -1188,7 +1188,7 @@ $enable = get_setting('enable_testing');
               </div>
           </nav>
         </div>
-        <!-- end menu 3 => For MBC & Orange Only -->
+        <!-- end menu 3 => For MBC & Orange - PC Only -->
         @else
         @endif
         @yield('content')
