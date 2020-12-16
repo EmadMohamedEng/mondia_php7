@@ -110,7 +110,13 @@ $menu = provider_menu();
       @if(request()->get('OpID') == mbc)
       <div class="owl_content owl_content_two owl-carousel owl-theme" dir="ltr">
         @else
-        <div class="owl_content owl_muslim_guide owl-carousel owl-theme" dir="ltr">
+        <?php 
+        if(request()->get('OpID') == orange)
+          $owl_c = 'owl_muslim_guide';
+        else
+          $owl_c = 'owl_content_five';
+        ?>
+        <div class="owl_content {{ $owl_c  }} owl-carousel owl-theme" dir="ltr">
           @endif
           <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
