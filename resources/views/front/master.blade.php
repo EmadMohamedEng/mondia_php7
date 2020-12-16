@@ -323,7 +323,7 @@ $enable = get_setting('enable_testing');
                   </g>
                 </svg>
                 @else
-                <svg style="width: 2vw" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 488.477 488.477" style="enable-background:new 0 0 488.477 488.477;" xml:space="preserve">
                 <g>
                   <path d="M472.227,35.998H16.25C7.29,35.998,0,43.288,0,52.248v383.98c0,8.961,7.29,16.25,16.25,16.25h455.977
@@ -801,7 +801,7 @@ $enable = get_setting('enable_testing');
                       </g>
                     </svg>
                     @else
-                    <svg style="width: 7vw" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 488.477 488.477" style="enable-background:new 0 0 488.477 488.477;" xml:space="preserve">
                     <g>
                       <path d="M472.227,35.998H16.25C7.29,35.998,0,43.288,0,52.248v383.98c0,8.961,7.29,16.25,16.25,16.25h455.977
