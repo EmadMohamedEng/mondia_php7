@@ -174,6 +174,8 @@ $enable = get_setting('enable_testing');
     <div class="row m-0">
       @if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
       <div class="" style="z-index: 9999999999;">
+<!-- start burger menu => For MBC & Orange Only  -->
+<div class="burger_menu">
 
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn_mbc" onclick="closeNav()"><i class="fas fa-times"></i></a>
@@ -628,11 +630,17 @@ $enable = get_setting('enable_testing');
           </ul>
           <!-- end menu 2  -->
         </div>
+        </div>
+        <!-- end burger menu => For MBC & Orange Only  -->
+
 
         @else
         <div class="col-md-0 col-lg-0 col-xl-4 col-0 p-0" style="z-index: 9999999999">
           @endif
           <!-- start menu 1  -->
+          <!-- start menu 1 => For All Operator / Mobile Menu / And Sidenav for PC ( Oman - DU - STC ) -->
+          <div class="menu_all_op">
+
           <nav class="nav_nav navbar navbar-expand-xl primary-color">
             <button id="menu_toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
               <i class="icon_before fas fa-bars fa-lg"></i>
@@ -1077,6 +1085,8 @@ $enable = get_setting('enable_testing');
               </ul>
             </div>
           </nav>
+          </div>
+           <!-- end menu 1 => For All Operator / Mobile Menu / And Sidenav for PC ( Oman - DU - STC ) -->
           <!-- end menu 1  -->
         </div>
 
@@ -1087,6 +1097,9 @@ $enable = get_setting('enable_testing');
 
         ?>
         <!-- start menu 3  -->
+        <!-- start menu 3 => For MBC & Orange Only  -->
+        <div class="mbc_orange">
+
         <nav class="navbar navbar-expand-lg navbar-light navbar_three " style="cursor: pointer;">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -1184,6 +1197,8 @@ $enable = get_setting('enable_testing');
               </div>
             </div>
         </nav>
+        </div>
+        <!-- end menu 3 => For MBC & Orange Only -->
         <!-- end menu 3  -->
         @else
         @endif

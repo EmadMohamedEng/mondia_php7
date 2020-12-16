@@ -25,7 +25,9 @@
   direction: rtl !important;
 }
 .main_container #mySidenav.sidenav .navbar_ul .nav-item .dropdown-menu {
-  text-align: center;
+  text-align: right;
+  margin-right: 15%;
+  margin-left: unset;
 }
 .main_container .navbar_ul .nav-item .menuTwo:after {
   float: left !important;
@@ -33,6 +35,13 @@
 }
 .main_container .navbar_three .navbar_ul_three .menuThree {
   font-size: 18px;
+}
+.main_container .navbar-nav .dropdown-menu {
+  margin-right: 12%;
+  margin-left: unset !important;
+}
+.main_container .navbar-nav .dropdown-menu .link_href {
+  text-align: right !important;
 }
 .main_container .sebha_page #sebhaModal {
   overflow: hidden;

@@ -368,6 +368,9 @@ body {
     top: 7% !important;
     right: 64% !important;
   }
+  .main_container .inner_page .cover audio {
+    margin-right: 3%;
+  }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
   }
@@ -460,6 +463,9 @@ body {
   .main_container .list_page .item .card .owl_content_img .content_free {
     top: 8% !important;
     right: 65% !important;
+  }
+  .main_container .inner_page .cover audio {
+    margin-right: 3%;
   }
   .main_container .salah_time_page {
     width: 95%;
@@ -560,6 +566,9 @@ body {
     top: 8% !important;
     right: 65% !important;
   }
+  .main_container .inner_page .cover audio {
+    margin-right: 3%;
+  }
   .main_container .inner_page .section_content .image_inner {
     height: 100px;
     width: 100px;
@@ -596,13 +605,13 @@ body {
     width: 100%;
   }
   .main_container .merath_page .input_text .merath_input {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .main_container .merath_page .input_span {
     text-align: right;
   }
   .main_container .merath_page .input_span h4 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 411px) and (max-width: 415px) {
@@ -670,6 +679,9 @@ body {
   .main_container .list_page .item .card .owl_content_img .content_free {
     top: 8% !important;
     right: 65% !important;
+  }
+  .main_container .inner_page .cover audio {
+    margin-right: 3%;
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
