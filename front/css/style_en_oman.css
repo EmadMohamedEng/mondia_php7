@@ -184,8 +184,8 @@ body {
 
 @media (min-width: 320px) and (max-width: 359.9px) {
   .padding_phones {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 
   .main_container .header .header_logo img,
@@ -210,6 +210,11 @@ body {
   }
 }
 @media (min-width: 360px) and (max-width: 374.9px) {
+  .padding_phones {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 23% !important;
@@ -239,6 +244,11 @@ body {
   }
 }
 @media (min-width: 375px) and (max-width: 410.9px) {
+  .padding_phones {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 18% !important;
@@ -261,6 +271,11 @@ body {
   }
 }
 @media (min-width: 411px) and (max-width: 415px) {
+  .padding_phones {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
   .main_container .header .header_logo img,
 .main_container .header .header_icon img {
     width: 18% !important;

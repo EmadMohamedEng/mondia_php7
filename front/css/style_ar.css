@@ -123,15 +123,6 @@ body {
 .main_container .img_carousel .owl_one .item .btn_subscribe button {
   direction: rtl;
 }
-.main_container .img_carousel .owl_one .item .btn_subscribe button:after {
-  display: none;
-}
-.main_container .img_carousel .owl_one .item .btn_subscribe button:before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "";
-  padding-right: 4%;
-}
 .main_container .content_carousel .content_carousel_head .link_title {
   text-align: right !important;
 }
