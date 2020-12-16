@@ -74,8 +74,9 @@ body {
 }
 .main_container .header .header_logo .link_href .img_khir img,
 .main_container .header .header_icon .link_href .img_khir img {
-  width: 60%;
-  margin-top: 0rem;
+  margin-top: -15%;
+  width: 61%;
+  margin-left: 62%;
 }
 .main_container .header .header_logo .arrow_back,
 .main_container .header .header_icon .arrow_back {
@@ -836,8 +837,9 @@ body {
   }
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
-    width: 80% !important;
-    margin-top: 0.5rem !important;
+    width: 66% !important;
+    margin-top: -18% !important;
+    margin-left: 90% !important;
   }
   .main_container .header .lang_mbc {
     margin-right: -18%;
@@ -963,7 +965,8 @@ body {
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
     width: 75% !important;
-    margin-top: -0.25rem !important;
+    margin-top: -16% !important;
+    margin-left: 93% !important;
   }
   .main_container .header .lang_mbc {
     margin-right: -18%;
@@ -1098,8 +1101,9 @@ body {
   }
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
-    width: 70% !important;
-    margin-top: 0.4rem !important;
+    width: 59% !important;
+    margin-top: -17% !important;
+    margin-left: 96% !important;
   }
   .main_container .header .lang_mbc {
     margin-right: -18%;
@@ -1224,8 +1228,9 @@ body {
   }
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
-    width: 70% !important;
-    margin-top: -0.15rem !important;
+    width: 67% !important;
+    margin-top: -15% !important;
+    margin-left: 95% !important;
   }
   .main_container .header .lang_mbc {
     margin-right: -13%;
@@ -1351,8 +1356,9 @@ body {
   }
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
-    width: 60% !important;
-    margin-top: 0.2rem !important;
+    width: 52% !important;
+    margin-top: -10% !important;
+    margin-right: 100% !important;
   }
   .main_container .header .lang_mbc {
     font-size: 1.5rem;
@@ -1526,8 +1532,9 @@ body {
   }
   .main_container .header .header_logo .img_khir img,
 .main_container .header .header_icon .img_khir img {
-    width: 60% !important;
-    margin-top: 0.2rem !important;
+    width: 49% !important;
+    margin-top: -8% !important;
+    margin-right: 100% !important;
   }
   .main_container .header .lang_mbc {
     font-size: 1.75rem;

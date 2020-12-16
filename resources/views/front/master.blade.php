@@ -15,7 +15,7 @@
   @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
   <link rel="shortcut icon" href="{{asset('front/images/mbc_header - fav.png')}}">
   @elseif(request()->has('OpID') && request()->get('OpID') == orange)
-  <link rel="shortcut icon" href="{{asset('front/images/orange.png')}}">
+  <link rel="shortcut icon" href="{{asset('front/images/indonesia/indonesia.png')}}">
   @else
   <link rel="shortcut icon" href="{{asset('front/images/favicon.ico')}}">
   @endif
@@ -113,12 +113,12 @@ $enable = get_setting('enable_testing');
                   @elseif(request()->get('OpID') == orange)
 
                   <div class="row">
-                    <div class="col-md-6 col-6 p-0">
+                    <!-- <div class="col-md-6 col-6 p-0">
                       <img class="bounce-top logo_orange" src='{{asset("front/images/orange.png")}}' alt='Logo'>
-                    </div>
+                    </div> -->
 
                     <div class="col-md-6 col-6 img_khir p-0">
-                      <img class="bounce-top" src='{{asset("front/images/orange/el_kheer.png")}}' alt='Logo'>
+                      <img class="bounce-top" src='{{asset("front/images/indonesia/indonesia.png")}}' alt='Logo'>
                     </div>
                   </div>
 
@@ -197,7 +197,7 @@ $enable = get_setting('enable_testing');
                       @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
                       <img class="pulsate-bck" src="{{asset('front/images/mbc_header.png')}}" alt="Logo">
                       @elseif(request()->has('OpID') && request()->get('OpID') == orange)
-                      <img class="pulsate-bck" src="{{asset('front/images/orange.png')}}" alt="Logo">
+                      <img class="pulsate-bck" src="{{asset('front/images/indonesia/indonesia.png')}}" alt="Logo">
                       @else
                       {{-- <img class="pulsate-bck" src="{{asset('front/images/daleel_elmuslim.png')}}" alt="Logo"> --}}
                       @endif
@@ -660,7 +660,7 @@ $enable = get_setting('enable_testing');
                           @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
                           <img class="pulsate-bck" src="{{asset('front/images/mbc_header.png')}}" alt="Logo">
                           @elseif(request()->has('OpID') && request()->get('OpID') == orange)
-                          <img class="" src="{{asset('front/images/orange.png')}}" alt="Logo">
+                          <img class="" src="{{asset('front/images/indonesia/indonesia.png')}}" alt="Logo">
                           @else
                           {{-- <img class="pulsate-bck" src="{{asset('front/images/daleel_elmuslim.png')}}" alt="Logo"> --}}
                           @endif

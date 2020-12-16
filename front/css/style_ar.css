@@ -55,8 +55,9 @@ body {
 }
 .main_container .header .header_logo.header_logo .link_href .img_khir img,
 .main_container .header .header_icon.header_logo .link_href .img_khir img {
-  margin-top: 0.75rem;
-  width: 70%;
+  margin-top: -15%;
+  width: 73%;
+  margin-right: 59%;
 }
 .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -307,9 +308,9 @@ body {
   }
   .main_container .header .header_logo .link_href .img_khir img,
 .main_container .header .header_icon .link_href .img_khir img {
-    margin-top: 0.85rem !important;
+    margin-top: -1.15rem !important;
     width: 100% !important;
-    margin-right: 30%;
+    margin-right: 100% !important;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -414,9 +415,9 @@ body {
   }
   .main_container .header .header_logo .link_href .img_khir img,
 .main_container .header .header_icon .link_href .img_khir img {
-    width: 90% !important;
-    margin-top: 0.15rem !important;
-    margin-right: 40%;
+    width: 100% !important;
+    margin-top: -0.85rem !important;
+    margin-right: 89% !important;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -512,9 +513,9 @@ body {
   }
   .main_container .header .header_logo .link_href .img_khir img,
 .main_container .header .header_icon .link_href .img_khir img {
-    width: 90% !important;
-    margin-top: 0.25rem !important;
-    margin-right: 40%;
+    width: 85% !important;
+    margin-top: -23% !important;
+    margin-right: 100% !important;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -630,9 +631,9 @@ body {
   }
   .main_container .header .header_logo .link_href .img_khir img,
 .main_container .header .header_icon .link_href .img_khir img {
-    width: 100% !important;
-    margin-top: -0.15rem !important;
-    margin-right: 40%;
+    width: 97% !important;
+    margin-top: -1.15rem !important;
+    margin-right: 99% !important;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
