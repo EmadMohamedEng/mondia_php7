@@ -238,10 +238,21 @@ class FrontController extends Controller
             $vars["service_id"] = 2;
             $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
             $sub = json_decode($sub);
+            // $today_date_format = date('D');
+            // $occassion_date_format = date('Y-m-d');
+
+            // if($sub->country == 'KSA' && $sub->operator == 'STC'){
+            //   $contents = MbcContent::where('subscription_day', $sub->day)->where('operator' ,'ksa-stc');
+            // }else{
+            //   $contents = MbcContent::where('subscription_day', $sub->day)->whereNotIn('operator' ,['ksa-stc']);
+            // }
+
             if($content->mbcContent && $content->mbcContent->subscription_day <= $sub->day){
               return view('front.inner_enable_testing', compact('content','contents'));
             }
+
             return redirect('profile?OpID='.MBC_OP_ID);
+
           }
         }
       return redirect('mbc_portal_landing');
@@ -359,35 +370,35 @@ class FrontController extends Controller
 
   public function mbcTodayLink($msisdn)
   {
-    // first post for mbc
-    $content = Video::select('contents.*', 'contents.id as content_id', 'posts.free')
-      ->join('posts', 'posts.video_id', '=', 'contents.id')
-      ->where('posts.show_date', '<=', Carbon::now()->toDateString())
-      ->where('posts.operator_id', MBC_OP_ID)
-      ->where('posts.active', 1)
-      ->orderBy('posts.show_date','desc')
-      ->first();
-    $contents = video::select('contents.*', 'contents.id as content_id')
-      ->join('posts', 'posts.video_id', '=', 'contents.id')
-      // ->where('contents.service_id', $content->service->id)
-      ->whereNotIn('contents.id', [$content->id])
-      ->where('posts.operator_id', MBC_OP_ID)
-      ->where('posts.active', 1)
-      ->where('posts.show_date', '=', Carbon::now()->toDateString())
-      ->orderBy('posts.show_date', 'asc')->get();
     $msisdn = $this->decryptMobileNumber($msisdn);
     if($this->checkStatus($msisdn,2)){
-
-
       $vars["msisdn"] = $msisdn;
       $vars["service_id"] = 2;
       $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
       $sub = json_decode($sub);
-      if($content->mbcContent && $content->mbcContent->subscription_day <= $sub->day){
-        session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-        return view('front.inner_enable_testing', compact('content', 'contents'));
+      $today_date_format = date('D');
+      $occassion_date_format = date('Y-m-d');
+
+      if($sub->country == 'KSA' && $sub->operator == 'STC'){
+        $contents = MbcContent::where('subscription_day', $sub->day)->where('operator' ,'ksa-stc');
+        $sub_operator = 'ksa-stc';
+      }else{
+        $contents = MbcContent::where('subscription_day', $sub->day)->whereNotIn('operator' ,['ksa-stc']);
+        $sub_operator = 'all';
       }
-      return redirect('profile?OpID='.MBC_OP_ID);
+
+      $contents = $contents->orWhereDate('occasion_date', $occassion_date_format);
+
+      if($today_date_format == 'Fri'){
+        $contents = $contents->orWhere('type', 'friday');
+      }
+
+      $content = $contents->first();
+
+      $contents = $contents->skip(1)->get();
+
+      session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID, 'subscription_day' => $sub->day, 'sub_operator' => $sub_operator]);
+      return view('front.mbc_today_link', compact('content' ,'contents'));
     }
     return redirect('mbc_portal_landing');
   }
