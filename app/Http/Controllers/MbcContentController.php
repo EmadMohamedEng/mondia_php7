@@ -43,7 +43,7 @@ class MbcContentController extends Controller
         if ($without_paginate) {
             $mbc_contents = $mbc_contents->get();
         } else {
-            $mbc_contents = $mbc_contents->paginate(10);
+            $mbc_contents = $mbc_contents->paginate(100);
         }
         //dd($mbc_contents);
         return view('MbcContent.index', compact('mbc_contents', 'without_paginate'));
@@ -101,15 +101,15 @@ class MbcContentController extends Controller
         //dd($request->occasion_date);
         $mbc_content = new MbcContent();
         $mbc_content->content_id = $request->content_id;
-        $mbc_content->type = $request->available;
+        $mbc_content->type = $request->type;
         $mbc_content->subscription_day = $request->subscription_day;
         $mbc_content->operator = $request->operator;
         $mbc_content->occasion_date = $request->occasion_date ? \Carbon\Carbon::createFromFormat('d/m/Y', $request->occasion_date)->format('Y-m-d') : null;
-        if ($request->available == "general") {
+        if ($request->type == "general") {
             $mbc_content->occasion_date = null;
-        } elseif ($request->available == "occasion") {
+        } elseif ($request->type == "occasion") {
             $mbc_content->subscription_day = null;
-        } elseif ($request->available == "friday") {
+        } elseif ($request->type == "friday") {
             $mbc_content->occasion_date = null;
             $mbc_content->subscription_day = null;
         }
@@ -158,15 +158,15 @@ class MbcContentController extends Controller
         //dd($request);
         $mbc_content = MbcContent::findOrFail($id);
         $mbc_content->content_id = $request->content_id;
-        $mbc_content->type = $request->available;
+        $mbc_content->type = $request->type;
         $mbc_content->subscription_day = $request->subscription_day;
         $mbc_content->operator = $request->operator;
         $mbc_content->occasion_date = $request->occasion_date ? \Carbon\Carbon::createFromFormat('d/m/Y', $request->occasion_date)->format('Y-m-d') : null;
-        if ($request->available == "general") {
+        if ($request->type == "general") {
             $mbc_content->occasion_date = null;
-        } elseif ($request->available == "occasion") {
+        } elseif ($request->type == "occasion") {
             $mbc_content->subscription_day = null;
-        } elseif ($request->available == "friday") {
+        } elseif ($request->type == "friday") {
             $mbc_content->occasion_date = null;
             $mbc_content->subscription_day = null;
         }

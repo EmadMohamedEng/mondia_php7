@@ -27,11 +27,11 @@
 
             <div id="general_text">
                 @if (isset($mbc_content))
-                <input class="form-check-input" type="radio" name="available" id="exampleRadios4" required
+                <input class="form-check-input" type="radio" name="type" id="exampleRadios4" required
                     value="general" @if( $mbc_content->type == "general") checked="checked"
                 @endif>
                 @else
-                <input class="form-check-input" type="radio" name="available" id="exampleRadios4" required
+                <input class="form-check-input" type="radio" name="type" id="exampleRadios4" required
                     value="general">
                 @endif
                 <label class="form-check-label" for="exampleRadios4" style="padding-right: 11px;">
@@ -42,11 +42,11 @@
 
             <div id="occasion_text">
                 @if (isset($mbc_content))
-                <input class="form-check-input" type="radio" name="available" id="exampleRadios2" required
+                <input class="form-check-input" type="radio" name="type" id="exampleRadios2" required
                     value="occasion" @if( $mbc_content->type == "occasion") checked="checked"
                 @endif>
                 @else
-                <input class="form-check-input" type="radio" name="available" id="exampleRadios2" required
+                <input class="form-check-input" type="radio" name="type" id="exampleRadios2" required
                     value="occasion">
                 @endif
                 <label class="form-check-label" for="exampleRadios2" style="padding-right: 11px;">
@@ -55,11 +55,11 @@
             </div>
             <div id="friday_text">
                 @if (isset($mbc_content))
-                <input input class="form-check-input" type="radio" name="available" id="exampleRadios3" required
+                <input input class="form-check-input" type="radio" name="type" id="exampleRadios3" required
                     value="friday" @if( $mbc_content->type == "friday") checked="checked"
                 @endif>
                 @else
-                <input class="form-check-input" type="radio" name="available" id="exampleRadios3" required
+                <input class="form-check-input" type="radio" name="type" id="exampleRadios3" required
                     value="friday">
                 @endif
                 <label class="form-check-label" for="exampleRadios3" style="padding-right: 11px;">
