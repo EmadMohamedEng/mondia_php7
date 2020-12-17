@@ -51,18 +51,20 @@
       <div class="profile_card">
         <div class="row m-0">
           @php
-              $day = 1;
+              $day = $subscriber_day;
           @endphp
+          @if ($subscriber_content->first()->subscription_day == $day)
           <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-1">
             <div class="profile_card_title">
               <h6 class="font-weight-bold">Day {{$day}}</h6>
             </div>
           </div>
+          @endif
 
           @foreach ($subscriber_content as $item)
           @if ($item->subscription_day != $day)
           @php
-              $day++;
+              $day--;
           @endphp
           <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-1">
             <div class="profile_card_title">
