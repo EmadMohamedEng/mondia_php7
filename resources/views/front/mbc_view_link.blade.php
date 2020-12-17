@@ -116,9 +116,6 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
     </div>
 
     @foreach ($contents as $key => $item)
-    @php
-        if($key == 0) continue;
-    @endphp
     <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
       <a class="row link_href m-0" href="{{route('front.inner',['id' => $item->content->id])}}">
         <div class="col-md-4 col-lg-4 col-xl-2 col-4 p-0">

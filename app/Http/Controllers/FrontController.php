@@ -238,17 +238,28 @@ class FrontController extends Controller
             $vars["service_id"] = 2;
             $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
             $sub = json_decode($sub);
-            // $today_date_format = date('D');
-            // $occassion_date_format = date('Y-m-d');
 
-            // if($sub->country == 'KSA' && $sub->operator == 'STC'){
-            //   $contents = MbcContent::where('subscription_day', $sub->day)->where('operator' ,'ksa-stc');
-            // }else{
-            //   $contents = MbcContent::where('subscription_day', $sub->day)->whereNotIn('operator' ,['ksa-stc']);
-            // }
+            $today_date_format = date('D');
+            $occassion_date_format = date('Y-m-d');
 
-            if($content->mbcContent && $content->mbcContent->subscription_day <= $sub->day){
-              return view('front.inner_enable_testing', compact('content','contents'));
+            $content = $content->mbccontent;
+            $contents = MbcContent::where('id', '!=', $content->id);
+            if($sub->country == 'KSA' && $sub->operator == 'STC'){
+              $contents = $contents->where('subscription_day', '<=',$sub->day)->where('operator', 'ksa-stc');
+            }else{
+              $contents = $contents->where('subscription_day', '<=', $sub->day)->where('operator', 'all');
+            }
+
+            $contents = $contents->orWhereDate('occasion_date', $occassion_date_format);
+
+            if($today_date_format == 'Fri'){
+              $contents = $contents->orWhere('type', 'friday');
+            }
+
+            $contents = $contents->inRandomOrder()->limit(6)->get();
+
+            if($content && $content->subscription_day <= $sub->day){
+              return view('front.mbc_view_link', compact('content','contents'));
             }
 
             return redirect('profile?OpID='.MBC_OP_ID);
@@ -380,10 +391,10 @@ class FrontController extends Controller
       $occassion_date_format = date('Y-m-d');
 
       if($sub->country == 'KSA' && $sub->operator == 'STC'){
-        $contents = MbcContent::where('subscription_day', $sub->day)->where('operator' ,'ksa-stc');
+        $contents = MbcContent::StcAllContent($sub->day);
         $sub_operator = 'ksa-stc';
       }else{
-        $contents = MbcContent::where('subscription_day', $sub->day)->whereNotIn('operator' ,['ksa-stc']);
+        $contents = MbcContent::MbcAllContent($sub->day);
         $sub_operator = 'all';
       }
 
@@ -393,9 +404,9 @@ class FrontController extends Controller
         $contents = $contents->orWhere('type', 'friday');
       }
 
-      $content = $contents->first();
+      $content = $contents->get()[0];
 
-      $contents = $contents->skip(1)->get();
+      $contents = $contents->get();
 
       session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID, 'subscription_day' => $sub->day, 'sub_operator' => $sub_operator]);
       return view('front.mbc_today_link', compact('content' ,'contents'));
@@ -1706,7 +1717,23 @@ class FrontController extends Controller
         $sub = json_decode($sub);
         $date = date('Y-m-d');
         $subscriber_day = $sub->day;
-        $subscriber_content = MbcContent::where('subscription_day' , '<=' , $subscriber_day)->orderBy('subscription_day', 'DESC')->get();
+
+        $today_date_format = date('D');
+        $occassion_date_format = date('Y-m-d');
+
+        if($sub->country == 'KSA' && $sub->operator == 'STC'){
+          $contents = MbcContent::where('subscription_day', '<=',$sub->day)->where('operator', 'ksa-stc');
+        }else{
+          $contents = MbcContent::where('subscription_day', '<=', $sub->day)->where('operator', 'all');
+        }
+
+        if($today_date_format == 'Fri'){
+          $contents = $contents->orWhere('type', 'friday');
+        }
+
+        $subscriber_content = $contents->orderBy('subscription_day', 'DESC')->get();
+
+        // $subscriber_content = MbcContent::where('subscription_day' , '<=' , $subscriber_day)->orderBy('subscription_day', 'DESC')->get();
         // dd($subscriber_content[0]['subscription_day']);
         if($sub && isset($sub->created_at)){
           $date = date('Y-m-d',strtotime($sub->created_at));
