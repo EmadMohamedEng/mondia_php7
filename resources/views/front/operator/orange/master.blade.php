@@ -300,10 +300,8 @@
                   </g>
                 </svg>
                 @lang('front.profile')
-                <span class="sr-only">(current)</span>
               </a>
             </li>
-            @enif
 
             <li class="nav-item">
               <a class="nav-link text-capitalize link_href" href="{{url('/orange_logout')}}" style=" <?php echo $style ?>">
@@ -342,8 +340,8 @@
   <!-- start menu 3 => For MBC & Orange Only  -->
   <div class="mbc_orange">
     <nav class="navbar navbar-expand-lg navbar-light navbar_three " style="cursor: pointer;">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler nav_btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -393,10 +391,9 @@
               </div>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item m-auto">
               <a class="menuThree nav-link text-capitalize link_href" href="{{url('/profile')}}" style=" <?php echo $style ?>">
                 @lang('front.profile')
-                <span class="sr-only">(current)</span>
               </a>
             </li>
           </div>

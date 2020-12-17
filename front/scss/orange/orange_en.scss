@@ -7,7 +7,7 @@ $grey_color: #adadad;
 
 @font-face {
   font-family: DuCoHeadline200;
-  src: url('../font/DuCoHeadline200.ttf')
+  src: url('../../font/DuCoHeadline200.ttf')
 }
 
 html {
@@ -75,7 +75,6 @@ select {
       display: inline-flex;
       position: unset;
       width: 100%;
-      height: 5rem;
       text-align: center;
 
       h6 {
@@ -118,6 +117,7 @@ select {
       cursor: pointer;
 
       .dropdown-menu2 {
+        top: 30%;
         left: 35%;
         text-align: center;
         background-color: $black_color;
@@ -146,10 +146,109 @@ select {
       -ms-transform: translate(-50%, -50%);
       -o-transform: translate(-50%, -50%);
     }
+
+    .open_icon_nav_mbc {
+      color: $text_color;
+      font-size: 30px;
+      cursor: pointer;
+      margin-top: -12px;
+      font-weight: bold;
+    }
+  }
+
+  .burger_menu {
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 30%;
+      background-color: $bg_color2;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      border-top-right-radius: 0.6rem;
+      border-bottom-right-radius: 0.6rem;
+
+      .navbar_ul {
+        .nav-item {
+          .dropdown-menu {
+            background-color: transparent;
+            margin-left: 12%;
+            border: 0;
+
+            .dropdown-item {
+              &.link_href {
+                padding: 5px 0;
+                color: $text_color;
+
+                &:hover,
+                &:focus {
+                  color: $white_color !important;
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+
+          .nav-link {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            color: $text_color;
+            cursor: pointer;
+            display: block;
+            transition: 0.3s;
+
+            &:hover,
+            &:focus {
+              color: $white_color !important;
+              background-color: transparent;
+
+              svg {
+                fill: $white_color !important;
+              }
+            }
+
+            &.menuTwo {
+              &:after {
+                float: right;
+                margin-top: 5%;
+              }
+
+              svg {
+                fill: $text_color;
+                width: 9%;
+              }
+            }
+          }
+        }
+      }
+
+
+      .closebtn_mbc {
+        position: absolute;
+        top: 0;
+        right: 3%;
+        color: $text_color;
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        &:hover,
+        &:focus {
+          background: transparent;
+          color: $white_color;
+        }
+      }
+    }
   }
 
   .menu_all_op {
     .nav_nav {
+      z-index: 999;
+      width: 100%;
+      margin-top: 0;
       display: none;
 
       #menu_toggle {
@@ -233,29 +332,10 @@ select {
     }
   }
 
-  .burger_menu {
-    #mySidenav {
-      .navbar_ul {
-        .nav-item {
-          .nav-link {
-
-            &:hover,
-            &:focus {
-              color: $white_color !important;
-
-              svg {
-                fill: $white_color;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
   .mbc_orange {
     .navbar_three {
       background: rgba(0, 0, 0, 0.5) !important;
+
 
       .navbar_ul_three {
 
@@ -275,6 +355,8 @@ select {
         }
 
         .dropdown-menu {
+          background-color: $black_color;
+
           .dropdown-item {
             color: $text_color;
 
@@ -679,6 +761,7 @@ select {
     .content_carousel_head {
       .link_title {
         color: $text_color;
+
         h6 {
           margin-bottom: 1rem;
           font-weight: bold;
@@ -700,6 +783,7 @@ select {
 
         .owl_content_img {
           position: relative;
+
           img {
             height: 11rem;
             border-top-left-radius: 10px;
@@ -769,10 +853,10 @@ select {
 
           img {
             border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
           }
         }
       }
@@ -803,6 +887,7 @@ select {
 
     .cover {
       position: relative;
+
       h4 {
         color: $white_color;
       }
@@ -824,9 +909,9 @@ select {
       }
 
       audio {
-        margin-left: 0;
+        margin-left: 3%;
         margin-top: -4%;
-        width: 100%;
+        width: 94%;
       }
 
       button {
@@ -1073,9 +1158,11 @@ select {
     .nearmosque_title {
       h2 {
         margin-bottom: 1.5rem;
+        color: $text_color;
       }
 
       #map {
+        border: 5px solid $bg_color;
         height: 66vh;
         width: 90%;
         margin: 0 auto;
@@ -1088,17 +1175,53 @@ select {
 
   /* Start Salah Page */
   .salah_time_page {
+    .roll-in-top {
+      -webkit-animation: unset;
+      animation: unset;
+    }
+
+    @-webkit-keyframes roll-in-top {
+      0% {
+        -webkit-transform: unset;
+        transform: unset;
+        opacity: 0;
+      }
+
+      100% {
+        -webkit-transform: unset;
+        transform: unset;
+        opacity: 1;
+      }
+    }
+
+    @keyframes roll-in-top {
+      0% {
+        -webkit-transform: unset;
+        transform: unset;
+        opacity: 0;
+      }
+
+      100% {
+        -webkit-transform: unset;
+        transform: unset;
+        opacity: 1;
+      }
+    }
+
     width: 95%;
     margin: 1.5rem auto;
 
     .salah_time_title {
       h2 {
+        color: $text_color;
         text-align: center;
         margin-bottom: 2rem;
       }
     }
 
     .time_btn {
+      color: $white_color;
+      border: 2px solid $bg_color;
       width: 100%;
       text-align: center;
       margin-bottom: 3%;
@@ -1231,6 +1354,180 @@ select {
 
   /* End Zakkah Page */
 
+  /* Start Zakkah Page */
+  .zakkah_v2_page {
+    margin: 0 auto;
+    width: 100%;
+    color: $white_color;
+
+    #accordion {
+      margin-top: 0.5rem;
+
+      .card {
+        background: #00000054;
+        border-radius: 1.5rem;
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.75rem;
+
+        .card-header {
+          border-bottom: none;
+
+          button {
+            color: $white_color;
+
+            .currency_title {
+              color: $white_color;
+            }
+
+            span {
+              float: right;
+              margin-top: 0.5rem;
+              margin-bottom: 0.5rem;
+              margin-right: 1rem;
+              color: $text_color;
+
+              &.red_result {
+                color: #F00;
+              }
+            }
+
+            .up_down {
+              float: right;
+              margin-top: 0.75rem;
+              margin-bottom: 0.75rem;
+
+            }
+          }
+        }
+
+        .card-body {
+          border-top: 1px solid $text_color;
+
+          .currency_bg {
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    .currency_title {
+      color: $text_color;
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+      float: left;
+    }
+
+    .currency_icon {
+      color: $text_color;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      float: right;
+    }
+
+    .currency_bg {
+      background: #00000054;
+      border-radius: 1.5rem;
+
+      .flex_center {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .currency_text {
+          text-align: left;
+          font-size: 0.75rem;
+        }
+      }
+
+      .currency_selectBox {
+        select {
+          text-align-last: center;
+          background: transparent;
+          color: $text_color;
+
+
+          &:focus {
+            box-shadow: 0 0 0 0.2rem transparent !important;
+          }
+
+          option {
+            background: $bg_color;
+          }
+        }
+      }
+
+      .result {
+        float: right;
+        margin-right: 1rem;
+      }
+
+      .form_input {
+        position: relative;
+
+        .textbox {
+          outline: 0;
+          height: 3rem;
+          padding: 0 1rem;
+          background: transparent;
+          border-bottom: 1px solid $grey_color;
+          color: $grey_color;
+          border-top: 0;
+          border-right: 0;
+          border-left: 0;
+
+          &::placeholder {
+            color: $grey_color;
+          }
+
+          &.input-middle {
+            &+.bord {
+              position: absolute;
+              bottom: 0;
+              background: $bg_color;
+              width: 0;
+              height: 2px;
+              transition: all .4s ease-in-out;
+              left: 50%;
+              -webkit-transition: all .4s ease-in-out;
+              -moz-transition: all .4s ease-in-out;
+              -ms-transition: all .4s ease-in-out;
+              -o-transition: all .4s ease-in-out;
+            }
+
+            &:focus+.bord {
+              width: 100%;
+              left: 0;
+            }
+          }
+
+          &:focus,
+          &:active {
+            box-shadow: none !important;
+          }
+        }
+      }
+    }
+
+    .zakah_result {
+      background: $bg_color;
+      position: fixed;
+      bottom: 0;
+      width: 39.5%;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+
+      .zakah_result_right {
+        text-align: center;
+      }
+
+      .zakah_result_left {
+        text-align: center;
+      }
+    }
+  }
+
+
   /* Start Merath Page */
   .merath_page {
     width: 95%;
@@ -1245,11 +1542,15 @@ select {
       h2 {
         text-align: center;
         margin-bottom: 1rem;
+        color: $text_color;
       }
     }
 
     .input_text {
       .merath_input {
+        border: 2px solid $bg_color;
+        color: $white_color;
+        background-color: transparent;
         float: right;
         width: 90%;
         text-align: center;
@@ -1259,6 +1560,14 @@ select {
         -moz-border-radius: 8px;
         -ms-border-radius: 8px;
         -o-border-radius: 8px;
+
+        &::placeholder {
+          color: $white_color;
+        }
+
+        option {
+          background: #0f1218;
+        }
       }
     }
 
@@ -1266,6 +1575,7 @@ select {
       text-align: left;
 
       h4 {
+        color: $text_color;
         line-height: 2.5rem;
         font-size: 1.35rem;
         float: left;
@@ -1281,8 +1591,9 @@ select {
       margin: 5% auto;
 
       .merath_btn {
-        width: 50%;
         color: $white_color;
+        background: $bg_color;
+        width: 50%;
         font-size: 1rem;
         font-weight: bold;
         text-align: center;
@@ -1296,13 +1607,19 @@ select {
     }
 
     .table_table {
+      .thead2_h4 {
+        color: $text_color;
+      }
+
       .table {
-        border: 2px #00a9ce solid;
+        border: 2px $text_color solid;
         border-radius: 7px;
         direction: rtl;
 
         tbody {
           tr {
+            color: $text_color;
+
             td {
               padding: 1rem 0.7rem;
               font-size: 1.25rem;
@@ -1330,10 +1647,12 @@ select {
 
       #wordSebha {
         margin-bottom: 1rem;
-        color: $black_color;
+        color: $text_color;
       }
 
       #tally {
+        color: $white_color !important;
+        border: 2px solid $bg_color;
         border-radius: 50%;
         width: 150px;
         height: 150px;
@@ -1350,10 +1669,11 @@ select {
 
       .btn-bar {
         button {
+          border: 2px solid $bg_color;
           width: 65%;
           height: 4.5rem;
           display: block;
-          color: black;
+          color: $black_color;
           font-weight: bold;
           border-radius: 4px;
           margin: 2rem auto;
@@ -1386,7 +1706,7 @@ select {
 
     #sebhaModal .modal-content {
       background-color: white;
-      left: 29%;
+      left: 0;
     }
 
     .modal-header {
@@ -1406,8 +1726,9 @@ select {
     }
 
     .choose_sebha {
+      border: 2px solid $bg_color;
       display: block;
-      color: black;
+      color: $text_color;
       text-align: center;
       margin-bottom: 15px;
       padding: 9px;
@@ -1417,6 +1738,10 @@ select {
       -ms-border-radius: 10px;
       -o-border-radius: 10px;
     }
+
+    a:hover {
+      color: $text_color;
+    }
   }
 
   /* End Sebha Page */
@@ -1425,6 +1750,7 @@ select {
   .search_page {
     margin: 2.5rem auto;
     width: 100%;
+    color: $text_color;
 
     .form_search {
       position: relative;
@@ -1442,8 +1768,13 @@ select {
         border-left: 0;
         text-align: center;
 
+        &::placeholder {
+          color: $text_color;
+        }
+
         &.input-middle {
           &+.bord {
+            background: $bg_color;
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -1469,8 +1800,8 @@ select {
       }
 
       .btn_search {
-        color: $black_color;
-        opacity: 0.5;
+        color: $text_color;
+        opacity: 1;
         position: absolute;
         top: 50%;
         left: 0;
@@ -1533,6 +1864,7 @@ select {
         .link-button {
           width: 100%;
           color: $white_color;
+          background: $bg_color;
           padding: 0.5rem 0.75rem;
           cursor: pointer;
           transition: all 0.3s linear;
@@ -1544,7 +1876,7 @@ select {
 
           &:hover {
             background: $white_color;
-            color: $black_color;
+            color: $text_color;
           }
         }
       }
@@ -1583,6 +1915,62 @@ select {
   }
 
   /* End Error Page */
+
+  /* Start Profile Page */
+  .profile {
+    margin: 3.5rem auto;
+
+    .profile_title {
+      color: $text_color;
+      margin-bottom: 5% !important;
+    }
+
+    .profile_table {
+      table {
+        border: 1px solid $text_color;
+        border-collapse: unset;
+        border-radius: 20px;
+
+        tbody {
+          tr {
+            .label-view {
+              width: 25%;
+              color: $text_color;
+              border: 0;
+            }
+
+            .label-view2 {
+              width: 75%;
+              color: $white_color;
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* End Profile Page */
+
+  /* Start Terms Page */
+  .terms_page {
+    margin: 1.5rem auto;
+
+    .terms_title {
+      color: $text_color;
+
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+
+    .ul_terms {
+      font-size: 0.85rem !important;
+      color: $text_color !important;
+    }
+  }
+
+  /* End Terms Page */
 }
 
 .loading-overlay {
@@ -1664,9 +2052,14 @@ select {
 }
 
 @media (min-width: 320px) and (max-width: 359.9px) {
-  .padding_phones {}
+  .padding_phones {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
 
-  .no_padding {}
+  .no_padding {
+    padding: 0;
+  }
 
   .open_icon_nav_mbc {
     display: none;
@@ -1681,11 +2074,15 @@ select {
   }
 
   .main_container {
+    width: 100%;
     padding-bottom: 20%;
+    padding-top: 4rem;
 
     .header {
       position: fixed !important;
       height: 4rem !important;
+      top: 0;
+      z-index: 99999999999;
 
       .header_logo,
       .header_icon {
@@ -1711,6 +2108,7 @@ select {
 
         .dropdown-menu2 {
           left: -20%;
+          top: 55%;
           min-width: 8rem;
         }
       }
@@ -1718,57 +2116,107 @@ select {
 
     .mbc_orange {
       .navbar_three {
-        background: transparent !important;
+        display: none;
       }
     }
 
-    .nav_nav {
-      display: unset;
+    .menu_all_op {
+      .nav_nav {
+        display: unset;
+        background-color: transparent;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        border: 0;
 
-      button {
-        opacity: 1 !important;
+        button {
+          opacity: 1;
+          outline: 0;
+          font-size: 1rem;
+          position: fixed;
+          top: 2.15rem;
+          left: 2.5rem;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
 
-        .icon_before {
-          color: $text_color !important;
+          .icon_before {
+            color: $text_color !important;
+          }
         }
-      }
 
-      .navbar-collapse {}
+        .navbar-collapse {
+          z-index: 9999999;
+        }
 
-      .navbar_ul {
-        background-color: $bg_color2 !important;
-        border: 2px solid $bg_color;
+        .navbar_ul {
+          background-color: $bg_color2 !important;
+          border: 2px solid $bg_color;
+          width: 15rem;
+          height: 100vh;
+          padding: 0 0;
+          overflow-y: scroll;
 
-        .nav-item {
-          .nav-link {
-            .icon_before {
-              color: $text_color;
+          .nav-item {
+            padding: 0.25rem 0.75rem;
+
+            &.nav_item_logo {
+              margin-bottom: 1rem;
+
+              .arrow_back {
+                font-size: 1rem;
+                float: right;
+                color: $text_color;
+
+                &:hover,
+                &:focus {
+                  color: $white_color;
+                }
+              }
+
+              img {
+                width: 30%;
+                display: block;
+                margin: 0 auto;
+              }
             }
 
-            svg {
-              width: 10%;
-            }
-          }
+            .nav-link {
+              padding: 0;
 
-          .dropdown-menu {
-            .dropdown-item {
-              &.dropdown-item2 {}
-            }
-          }
+              .icon_before {
+                color: $text_color;
+                padding-right: 0.5rem;
+              }
 
-          &.nav_item_logo {
-            .arrow_back {
-              color: $text_color;
-              font-size: 1rem !important;
+              svg {
+                width: 10%;
+              }
             }
 
-            img {}
+            .dropdown-menu {
+              .dropdown-item {
+                padding: 0.25rem 0;
+                width: 90% !important;
+                margin-left: 12%;
+
+                &.dropdown-item2 {
+                  width: 100% !important;
+                }
+              }
+            }
           }
         }
       }
     }
 
     .img_carousel {
+      margin-top: 0;
+
       .owl_one {
         .item {
           .owl_one_img {
@@ -1815,11 +2263,21 @@ select {
     }
 
     .content_carousel {
+      .content_carousel_head {
+        margin-top: 1rem;
+      }
+
       .owl_content_one {
         .item {
+          width: 100%;
+
           .card {
+            width: 100%;
+
             .owl_content_img {
-              img {}
+              img {
+                height: 10rem;
+              }
             }
           }
         }
@@ -1828,9 +2286,15 @@ select {
       .owl_content_two,
       .owl_content_three {
         .item {
+          width: 100%;
+
           .card {
+            width: 100%;
+
             .owl_content_img {
-              img {}
+              img {
+                height: 9.719rem !important;
+              }
             }
           }
         }
@@ -1840,24 +2304,34 @@ select {
       .owl_content_five,
       .owl_muslim_guide {
         .item {
+          width: 100%;
+
           &.item_muslim {
             height: 9rem;
 
             .card_muslim_guid {
-              width: 80% !important;
+              width: 80%;
               margin: 0 auto;
 
               .owl_content_img {
                 img {
-                  height: auto !important;
+                  height: auto;
                 }
+              }
+
+              .card-body {
+                top: 8rem;
               }
             }
           }
 
           .card {
+            width: 100%;
+
             .owl_content_img {
-              img {}
+              img {
+                height: 9.719rem;
+              }
             }
           }
         }
@@ -1865,74 +2339,139 @@ select {
     }
 
     .list_page {
-      .coming_soon {}
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 14px;
+          }
+        }
+
+        .btn_more {
+          font-size: 14px;
+        }
+      }
+
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
 
       .item {
         .card {
           .owl_content_img {
-            img {}
-          }
-
-          .content_free {
-            width: 35% !important;
-            top: 8% !important;
-            right: 1% !important;
+            img {
+              height: 9.375rem;
+            }
           }
 
           .card-body {
-            .card-title {}
+            padding: 1rem 0.25rem;
+
+            .card-title {
+              font-size: 1rem;
+            }
           }
         }
       }
     }
 
     .inner_page {
+      margin-top: 0;
+
       .cover {
-        h4 {}
+        h4 {
+          font-size: 1.15rem;
+          padding: 0 0.35rem;
+        }
 
-        video {}
+        video {
+          padding: 0 0;
+        }
 
-        img {}
+        img {
+          max-height: 20rem;
+        }
 
-        button {}
+        audio {
+          width: 94% !important;
+          margin-top: -5%;
+          margin-left: 3%;
+        }
+
+        button {
+          top: 45%;
+          left: 30%;
+        }
       }
 
       .poster {
+        padding: 0 0.75rem;
+
         .poster-details {
           .title-wrapper {
-            h2 {}
+            h2 {
+              font-size: 1.25rem;
+            }
+          }
+
+          .outside-cover {
+            font-size: 0.7rem;
           }
         }
       }
 
       .socail_media {
-        .pa_share {}
+        width: 100%;
+
+        .pa_share {
+          margin-top: 0.75rem;
+        }
 
         .shear_div {
+          padding-right: 0;
 
           .facebook,
           .twitter,
           .messenger,
-          .whatsapp {}
+          .whatsapp {
+            width: 90%;
+            height: 2.75rem;
+            margin-left: 0.5rem;
+            margin-top: 0.75rem;
+          }
         }
       }
 
       .section_content {
-        .pa_Videos {}
+        .pa_Videos {
+          margin-top: 0.75rem;
+        }
 
-        .p_content {}
+        .p_content,
+        .p_content_2 {
+          margin-left: 4%;
+          font-size: 12px;
+        }
       }
     }
 
     .modal_cover {
       .modal-dialog {
         .modal-content {
+          top: 2rem;
+
           .modal-header {
-            h5 {}
+            h5 {
+              font-size: 1.15rem;
+            }
           }
 
           .modal-footer {
-            .btn {}
+            justify-content: center;
+
+            .btn {
+              font-size: 1rem;
+            }
           }
         }
       }
@@ -1940,53 +2479,101 @@ select {
 
     .azan_page {
       .azan_title {
-        h2 {}
+        h2 {
+          font-size: 1.5rem;
+        }
       }
 
-      .input_text {}
+      .input_text {
+        width: 85%;
+      }
     }
 
     .nearmosque_page {
+      margin: 0.5rem auto;
+
       .nearmosque_title {
-        #map {}
+        #map {
+          width: 100%;
+        }
       }
     }
 
     .salah_time_page {
+      width: 100%;
+
       .salah_time_title {
-        h2 {}
+        h2 {
+          margin-bottom: 0.5rem;
+        }
       }
 
       .time_btn {
-        .input_span {}
+        margin-bottom: 4%;
+        height: 3.5rem;
 
-        .h4_time {}
+        .input_span {
+          padding: 0 !important;
+        }
 
-        .h4_time_2 {}
+        .h4_time {
+          line-height: 3rem;
+          font-size: 1rem;
+          padding: 0 0 0 5px;
+        }
+
+        .h4_time_2 {
+          line-height: 3rem;
+          font-size: 1rem;
+          padding: 0 5px 0 0;
+        }
       }
     }
 
     .sebha_page {
       .display {
         .btn-bar {
-          button {}
+          button {
+            width: 100%;
+          }
         }
       }
 
       #sebhaModal {
         .modal-dialog {
-          .modal-content {}
+          position: relative;
+          margin-top: 0;
+
+          .modal-content {
+            width: 95%;
+            position: fixed;
+            top: 57%;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+          }
         }
 
-        .modal-title {}
+        .modal-title {
+          font-size: 1.25rem;
+        }
 
-        .choose_sebha {}
+        .choose_sebha {
+          font-size: 1.09rem;
+        }
       }
     }
 
-    .subscribe_page {}
+    .subscribe_page {
+      width: 100%;
+    }
 
-    .zakkah_page {}
+    .zakkah_page {
+      width: 90%;
+    }
 
     .zakkah_v2_page {
       .zakah_result {
@@ -1996,10 +2583,18 @@ select {
     }
 
     .merath_page {
-      .border-bottom {}
+      width: 90%;
+
+      .border-bottom {
+        margin-bottom: 0.75rem;
+      }
 
       .merath_title {
-        h2 {}
+        h2 {
+          text-align: center;
+          margin-bottom: 1rem;
+          font-size: 1.3rem;
+        }
       }
 
       .input_text {
@@ -2007,26 +2602,51 @@ select {
       }
 
       .input_span {
-        h4 {}
+        h4 {
+          line-height: 2.25rem;
+          font-size: 0.85rem;
+        }
       }
 
       .button_merath {
+        text-align: center;
+        margin: 5% auto;
+
         .merath_btn {
           background: $bg_color;
+          color: $white_color;
+          width: 70%;
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+          border: 0;
+          border-radius: 8px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
         }
       }
 
       .table_table {
-        .thead2_h4 {}
+        .thead2_h4 {
+          font-size: 1rem;
+        }
 
         .table {
           border: 2px $text_color solid;
 
           tbody {
+            border-radius: 7px;
+            direction: rtl;
+
             tr {
 
               // td {}
-              .td_1 {}
+              .td_1 {
+                text-align: right;
+                font-size: 0.85rem;
+              }
             }
           }
         }
@@ -2034,15 +2654,30 @@ select {
     }
 
     .search_page {
-      .textbox {}
+      margin: 0.5rem auto;
+
+      .textbox {
+        text-align: center;
+      }
     }
 
     .error_page {
-      svg {}
+      margin: 0 auto 0 0;
 
-      .message-box {}
+      svg {
+        height: 85%;
+      }
 
-      .buttons-con {}
+      .message-box {
+        font-size: 1.5rem;
+        top: -18rem;
+        left: 42%;
+      }
+
+      .buttons-con {
+        top: -1rem;
+        left: 50%;
+      }
     }
 
     .profile {
@@ -2070,12 +2705,22 @@ select {
   }
 
   .loading-overlay {
-    .spinner-large {}
+    .spinner-large {
+      bottom: 30%;
+      left: 31%;
+    }
   }
 }
 
 @media (min-width: 360px) and (max-width: 374.9px) {
-  .padding_phones {}
+  .padding_phones {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .no_padding {
+    padding: 0;
+  }
 
   .open_icon_nav_mbc {
     display: none;
@@ -2089,29 +2734,32 @@ select {
     margin-right: unset !important;
   }
 
-  .no_padding {}
-
   .main_container {
-    padding-bottom: 17%;
+    width: 100%;
+    padding-bottom: 20%;
+    padding-top: 4rem;
 
     .header {
       position: fixed !important;
       height: 4rem !important;
+      top: 0;
+      z-index: 99999999999;
 
       .header_logo,
       .header_icon {
-
-        img {
-          width: 55% !important;
-          margin-top: -0.8rem !important;
+        .logo_orange {
+          img {
+            width: 50% !important;
+            margin-top: -0.65rem !important;
+          }
         }
 
         .img_khir {
           text-align: center !important;
 
           img {
-            width: 75% !important;
-            margin-top: 0rem !important;
+            width: 70% !important;
+            margin-top: 0.05rem !important;
           }
         }
       }
@@ -2122,7 +2770,8 @@ select {
         margin-right: -18%;
 
         .dropdown-menu2 {
-          left: -10%;
+          left: -20%;
+          top: 55%;
           min-width: 8rem;
         }
       }
@@ -2130,93 +2779,147 @@ select {
 
     .mbc_orange {
       .navbar_three {
-        background: transparent !important;
+        display: none;
       }
     }
 
-    .nav_nav {
-      display: unset;
+    .menu_all_op {
+      .nav_nav {
+        display: unset;
+        background-color: transparent;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        border: 0;
 
-      button {
-        opacity: 1 !important;
-        z-index: -1;
+        button {
+          opacity: 1;
+          outline: 0;
+          font-size: 1rem;
+          position: fixed;
+          top: 2.15rem;
+          left: 2.5rem;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
 
-        .icon_before {
-          color: $text_color !important;
+          .icon_before {
+            color: $text_color !important;
+          }
         }
-      }
 
-      .navbar-collapse {}
+        .navbar-collapse {
+          z-index: 9999999;
+        }
 
-      .navbar_ul {
-        background-color: $bg_color2 !important;
-        border: 2px solid $bg_color;
+        .navbar_ul {
+          background-color: $bg_color2 !important;
+          border: 2px solid $bg_color;
+          width: 15rem;
+          height: 100vh;
+          padding: 0 0;
+          overflow-y: scroll;
 
-        .nav-item {
-          .nav-link {
-            .icon_before {
-              color: $text_color;
+          .nav-item {
+            padding: 0.25rem 0.75rem;
+
+            &.nav_item_logo {
+              margin-bottom: 1rem;
+
+              .arrow_back {
+                font-size: 1rem;
+                float: right;
+                color: $text_color;
+
+                &:hover,
+                &:focus {
+                  color: $white_color;
+                }
+              }
+
+              img {
+                width: 30%;
+                display: block;
+                margin: 0 auto;
+              }
             }
 
-            svg {
-              width: 10%;
-            }
-          }
+            .nav-link {
+              padding: 0;
 
-          .dropdown-menu {
-            .dropdown-item {
-              &.dropdown-item2 {}
-            }
-          }
+              .icon_before {
+                color: $text_color;
+                padding-right: 0.5rem;
+              }
 
-          &.nav_item_logo {
-
-            .arrow_back {
-              color: $text_color;
+              svg {
+                width: 10%;
+              }
             }
 
-            img {}
+            .dropdown-menu {
+              .dropdown-item {
+                padding: 0.25rem 0;
+                width: 90% !important;
+                margin-left: 12%;
+
+                &.dropdown-item2 {
+                  width: 100% !important;
+                }
+              }
+            }
           }
         }
       }
     }
 
     .img_carousel {
+      margin-top: 0;
+
       .owl_one {
         .item {
           .owl_one_img {
-            img {}
+            img {
+              height: 19rem;
+            }
           }
 
           .content_free {
-            width: 20%;
             top: 5%;
-            right: 0%;
+            right: -1%;
           }
 
           .btn_orange {
             button {
               width: 97%;
-              top: 94.33%;
+              top: 93.5%;
               left: 48.6%;
 
               &:focus {
-                top: 93.5%;
-                left: 49%;
+                top: 92.5%;
+                left: 49.6%;
               }
             }
           }
         }
       }
 
-      .owl-theme .owl-nav {
+      .owl-theme {
+        .owl-nav {
+          button {
 
-        button.owl-next,
-        button.owl-prev {
-          bottom: 7rem;
+            &.owl-next,
+            &.owl-prev {
+              bottom: 6rem;
+            }
 
-          &.owl-next {
-            right: -1%;
+            &.owl-next {
+              right: -2% !important;
+            }
           }
         }
       }
@@ -2224,18 +2927,20 @@ select {
 
     .content_carousel {
       .content_carousel_head {
-        .link_title {
-          h6 {}
-        }
-
-        .btn_more {}
+        margin-top: 1rem;
       }
 
       .owl_content_one {
         .item {
+          width: 100%;
+
           .card {
+            width: 100%;
+
             .owl_content_img {
-              img {}
+              img {
+                height: 10rem;
+              }
             }
           }
         }
@@ -2244,9 +2949,15 @@ select {
       .owl_content_two,
       .owl_content_three {
         .item {
+          width: 100%;
+
           .card {
+            width: 100%;
+
             .owl_content_img {
-              img {}
+              img {
+                height: 10.438rem;
+              }
             }
           }
         }
@@ -2256,24 +2967,40 @@ select {
       .owl_content_five,
       .owl_muslim_guide {
         .item {
+          width: 100%;
+
           &.item_muslim {
             height: 10rem;
 
             .card_muslim_guid {
-              width: 80% !important;
+              width: 80%;
               margin: 0 auto;
 
               .owl_content_img {
                 img {
-                  height: auto !important;
+                  height: auto;
                 }
+              }
+
+              .card-body {
+                top: 9rem;
               }
             }
           }
 
           .card {
+            width: 100%;
+
             .owl_content_img {
-              img {}
+              img {
+                height: 10.438rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
+              }
             }
           }
         }
@@ -2281,60 +3008,117 @@ select {
     }
 
     .list_page {
-      .coming_soon {}
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 14px;
+          }
+        }
+
+        .btn_more {
+          font-size: 14px;
+        }
+      }
+
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
 
       .item {
         .card {
           .owl_content_img {
-            img {}
-          }
-
-          .content_free {
-            width: 35% !important;
-            top: 8% !important;
-            right: 1% !important;
+            img {
+              height: 10.125rem;
+            }
           }
 
           .card-body {
-            .card-title {}
+            padding: 1rem 0.25rem;
+
+            .card-title {
+              font-size: 0.9rem;
+            }
           }
         }
       }
     }
 
     .inner_page {
+      margin-top: 0;
+
       .cover {
-        h4 {}
+        h4 {
+          font-size: 1rem;
+          padding: 0 0.35rem;
+        }
 
-        video {}
+        video {
+          padding: 0 0;
+        }
 
-        img {}
+        img {
+          width: 100%;
+          max-height: 21.5rem;
+        }
+
+        audio {
+          margin-top: -5%;
+          margin-left: 3%;
+        }
+
+        button {
+          top: 45%;
+          left: 30%;
+        }
       }
 
       .poster {
+        padding: 0 0.75rem;
+
         .poster-details {
           .title-wrapper {
-            h2 {}
+            h2 {
+              font-size: 1rem;
+            }
+          }
+
+          .outside-cover {
+            font-size: 0.7rem;
           }
         }
       }
 
       .socail_media {
-        .pa_share {}
+        width: 100%;
+
+        .pa_share {
+          margin-top: 0.75rem;
+        }
 
         .shear_div {
+          padding-right: 0;
 
           .facebook,
           .twitter,
           .messenger,
-          .whatsapp {}
+          .whatsapp {
+            width: 90%;
+            height: 2.75rem;
+            margin-left: 0.5rem;
+            margin-top: 0.75rem;
+          }
         }
       }
 
       .section_content {
-        .pa_Videos {}
+        .pa_Videos {
+          margin-top: 0.75rem;
+        }
 
-        .p_content {
+        .p_content,
+        .p_content_2 {
+          margin-left: 4%;
           font-size: 12px;
         }
       }
@@ -2343,12 +3127,20 @@ select {
     .modal_cover {
       .modal-dialog {
         .modal-content {
+          top: 2rem;
+
           .modal-header {
-            h5 {}
+            h5 {
+              font-size: 0.9rem;
+            }
           }
 
           .modal-footer {
-            .btn {}
+            justify-content: center;
+
+            .btn {
+              font-size: 0.9rem;
+            }
           }
         }
       }
@@ -2356,42 +3148,757 @@ select {
 
     .azan_page {
       .azan_title {
-        h2 {}
+        h2 {
+          font-size: 1.5rem;
+        }
       }
 
-      .input_text {}
+      .input_text {
+        width: 85%;
+      }
     }
 
     .nearmosque_page {
+      margin: 0.5rem auto;
+
       .nearmosque_title {
-        #map {}
+        #map {
+          width: 100%;
+        }
       }
     }
 
     .salah_time_page {
+      width: 100%;
+
       .salah_time_title {
-        h2 {}
+        h2 {
+          margin-bottom: 0.5rem;
+        }
       }
 
       .time_btn {
-        .input_span {}
+        margin-bottom: 4%;
+        height: 3.5rem;
 
-        .h4_time {}
+        .input_span {
+          padding: 0 !important;
+        }
 
-        .h4_time_2 {}
+        .h4_time {
+          line-height: 3rem;
+          font-size: 1rem;
+          padding: 0 0 0 5px;
+        }
+
+        .h4_time_2 {
+          line-height: 3rem;
+          font-size: 1rem;
+          padding: 0 5px 0 0;
+        }
       }
     }
 
     .sebha_page {
       .display {
         .btn-bar {
-          button {}
+          button {
+            width: 100%;
+          }
         }
       }
 
       #sebhaModal {
         .modal-dialog {
-          .modal-content {}
+          position: relative;
+          margin-top: 0;
+
+          .modal-content {
+            width: 95%;
+            position: fixed;
+            top: 57%;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+          }
+        }
+
+        .modal-title {
+          font-size: 1.25rem;
+        }
+
+        .choose_sebha {
+          font-size: 1.09rem;
+        }
+      }
+    }
+
+    .subscribe_page {
+      width: 100%;
+    }
+
+    .zakkah_page {
+      width: 90%;
+    }
+
+    .zakkah_v2_page {
+      .zakah_result {
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    .merath_page {
+      width: 90%;
+
+      .border-bottom {
+        margin-bottom: 0.75rem;
+      }
+
+      .merath_title {
+        h2 {
+          text-align: center;
+          margin-bottom: 1rem;
+          font-size: 1.3rem;
+        }
+      }
+
+      .input_text {
+        // .merath_input {}
+      }
+
+      .input_span {
+        h4 {
+          line-height: 2.25rem;
+          font-size: 0.85rem;
+        }
+      }
+
+      .button_merath {
+        text-align: center;
+        margin: 5% auto;
+
+        .merath_btn {
+          background: $bg_color;
+          color: $white_color;
+          width: 70%;
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+          border: 0;
+          border-radius: 8px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
+        }
+      }
+
+      .table_table {
+        .thead2_h4 {
+          font-size: 1rem;
+        }
+
+        .table {
+          border: 2px $text_color solid;
+
+          tbody {
+            border-radius: 7px;
+            direction: rtl;
+
+            tr {
+
+              // td {}
+              .td_1 {
+                text-align: right;
+                font-size: 0.85rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .search_page {
+      margin: 0.5rem auto;
+
+      .textbox {
+        text-align: center;
+      }
+    }
+
+    .error_page {
+      margin: 0 auto 0 0;
+
+      svg {
+        height: 85%;
+      }
+
+      .message-box {
+        font-size: 1.5rem;
+        top: -18rem;
+        left: 42%;
+      }
+
+      .buttons-con {
+        top: -1rem;
+        left: 50%;
+      }
+    }
+
+    .profile {
+      width: 90%;
+      margin: 2.5rem auto;
+
+      .profile_table {
+        table {
+          tbody {
+            tr {
+              .label-view {
+                width: 40%;
+                font-size: 0.75rem;
+              }
+
+              .label-view2 {
+                width: 60%;
+                font-size: 0.85rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .loading-overlay {
+    .spinner-large {
+      bottom: 30%;
+      left: 31%;
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 410.9px) {
+  .padding_phones {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .no_padding {
+    padding: 0;
+  }
+
+  .open_icon_nav_mbc {
+    display: none;
+  }
+
+  .navbar-light .navbar-toggler {
+    display: none;
+  }
+
+  .dropdown-toggle::after {
+    margin-right: unset !important;
+  }
+
+  .main_container {
+    width: 100%;
+    padding-bottom: 20%;
+    padding-top: 4rem;
+
+    .header {
+      position: fixed !important;
+      height: 4rem !important;
+      top: 0;
+      z-index: 99999999999;
+
+      .header_logo,
+      .header_icon {
+        .logo_orange {
+          img {
+            width: 50% !important;
+            margin-top: -0.65rem !important;
+          }
+        }
+
+        .img_khir {
+          text-align: center !important;
+
+          img {
+            width: 70% !important;
+            margin-top: 0.05rem !important;
+          }
+        }
+      }
+
+      .arrow_back {}
+
+      .lang_mbc {
+        margin-right: -18%;
+
+        .dropdown-menu2 {
+          left: -20%;
+          top: 55%;
+          min-width: 8rem;
+        }
+      }
+    }
+
+    .mbc_orange {
+      .navbar_three {
+        display: none;
+      }
+    }
+
+    .menu_all_op {
+      .nav_nav {
+        display: unset;
+        background-color: transparent;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        border: 0;
+
+        button {
+          opacity: 1;
+          outline: 0;
+          font-size: 1rem;
+          position: fixed;
+          top: 2.15rem;
+          left: 2.5rem;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+
+          .icon_before {
+            color: $text_color !important;
+          }
+        }
+
+        .navbar-collapse {
+          z-index: 9999999;
+        }
+
+        .navbar_ul {
+          background-color: $bg_color2 !important;
+          border: 2px solid $bg_color;
+          width: 15rem;
+          height: 100vh;
+          padding: 0 0;
+          overflow-y: scroll;
+
+          .nav-item {
+            padding: 0.25rem 0.75rem;
+
+            &.nav_item_logo {
+              margin-bottom: 1rem;
+
+              .arrow_back {
+                font-size: 1rem;
+                float: right;
+                color: $text_color;
+
+                &:hover,
+                &:focus {
+                  color: $white_color;
+                }
+              }
+
+              img {
+                width: 30%;
+                display: block;
+                margin: 0 auto;
+              }
+            }
+
+            .nav-link {
+              padding: 0;
+
+              .icon_before {
+                color: $text_color;
+                padding-right: 0.5rem;
+              }
+
+              svg {
+                width: 10%;
+              }
+            }
+
+            .dropdown-menu {
+              .dropdown-item {
+                padding: 0.25rem 0;
+                width: 90% !important;
+                margin-left: 12%;
+
+                &.dropdown-item2 {
+                  width: 100% !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .img_carousel {
+      margin-top: 0;
+
+      .owl_one {
+        .item {
+          .owl_one_img {
+            img {
+              height: 19rem;
+            }
+          }
+
+          .content_free {
+            top: 5%;
+            right: -1%;
+          }
+
+          .btn_orange {
+            button {
+              width: 97%;
+              top: 93.5%;
+              left: 48.6%;
+
+              &:focus {
+                top: 92.5%;
+                left: 49.6%;
+              }
+            }
+          }
+        }
+      }
+
+      .owl-theme {
+        .owl-nav {
+          button {
+
+            &.owl-next,
+            &.owl-prev {
+              bottom: 6rem;
+            }
+
+            &.owl-next {
+              right: -2% !important;
+            }
+          }
+        }
+      }
+    }
+
+    .content_carousel {
+      .content_carousel_head {
+        margin-top: 1rem;
+      }
+
+      .owl_content_one {
+        .item {
+          width: 100%;
+
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 11.5rem;
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_two,
+      .owl_content_three {
+        .item {
+          width: 100%;
+
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 11.438rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_four,
+      .owl_content_five,
+      .owl_muslim_guide {
+        .item {
+          width: 100%;
+
+          &.item_muslim {
+            height: 10rem;
+
+            .card_muslim_guid {
+              width: 80%;
+              margin: 0 auto;
+
+              .owl_content_img {
+                img {
+                  height: auto;
+                }
+              }
+
+              .card-body {
+                top: 9rem;
+              }
+            }
+          }
+
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 11.438rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .list_page {
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 14px;
+          }
+        }
+
+        .btn_more {
+          font-size: 14px;
+        }
+      }
+
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
+
+      .item {
+        .card {
+          .owl_content_img {
+            img {
+              height: 11.6rem;
+            }
+          }
+
+          .card-body {
+            padding: 1rem 0.25rem;
+
+            .card-title {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    .inner_page {
+      margin-top: 0;
+
+      .cover {
+        h4 {
+          font-size: 1rem;
+          padding: 0 0.35rem;
+        }
+
+        video {
+          padding: 0 0;
+        }
+
+        img {
+          width: 100%;
+          max-height: 22.438rem;
+        }
+
+        audio {
+          margin-top: -5%;
+          margin-left: 3%;
+        }
+
+        button {
+          top: 45%;
+          left: 30%;
+        }
+      }
+
+      .poster {
+        padding: 0 0.75rem;
+
+        .poster-details {
+          .title-wrapper {
+            h2 {
+              font-size: 1rem;
+            }
+          }
+
+          .outside-cover {
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      .socail_media {
+        width: 100%;
+
+        .pa_share {
+          margin-top: 0.75rem;
+        }
+
+        .shear_div {
+          padding-right: 0;
+
+          .facebook,
+          .twitter,
+          .messenger,
+          .whatsapp {
+            width: 90%;
+            height: 2.75rem;
+            margin-left: 0.5rem;
+            margin-top: 0.75rem;
+          }
+        }
+      }
+
+      .section_content {
+        .pa_Videos {
+          margin-top: 0.75rem;
+        }
+
+        .p_content,
+        .p_content_2 {
+          margin-left: 4%;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          top: 2rem;
+
+          .modal-header {
+            h5 {
+              font-size: 0.9rem;
+            }
+          }
+
+          .modal-footer {
+            justify-content: center;
+
+            .btn {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    .azan_page {
+      .azan_title {
+        h2 {
+          font-size: 1rem;
+        }
+      }
+
+      .input_text {
+        width: 85%;
+      }
+    }
+
+    .nearmosque_page {
+      margin: 0.5rem auto;
+
+      .nearmosque_title {
+        #map {
+          width: 100%;
+        }
+      }
+    }
+
+    .salah_time_page {
+      width: 100%;
+
+      .salah_time_title {
+        h2 {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .time_btn {
+        margin-bottom: 4%;
+        height: 3.5rem;
+
+        .input_span {
+          padding: 0 !important;
+        }
+
+        .h4_time {
+          line-height: 3rem;
+          font-size: 1rem;
+          padding: 0 0 0 5px;
+        }
+
+        .h4_time_2 {
+          line-height: 3rem;
+          font-size: 1rem;
+          padding: 0 5px 0 0;
+        }
+      }
+    }
+
+    .sebha_page {
+      .display {
+        .btn-bar {
+          button {
+            width: 100%;
+          }
+        }
+      }
+
+      #sebhaModal {
+        .modal-dialog {
+          position: relative;
+          margin-top: 0;
+
+          .modal-content {
+            width: 95%;
+            position: fixed;
+            top: 57%;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+          }
         }
 
         .modal-title {
@@ -2404,9 +3911,29 @@ select {
       }
     }
 
-    .subscribe_page {}
+    .subscribe_page {
+      width: 100%;
 
-    .zakkah_page {}
+      .subscribe_bg {
+        font-size: 1rem;
+
+        .form-signin {
+          .account-wall input {
+            font-size: 1rem;
+          }
+
+          .buttons {
+            button {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .zakkah_page {
+      width: 90%;
+    }
 
     .zakkah_v2_page {
       .zakah_result {
@@ -2416,10 +3943,18 @@ select {
     }
 
     .merath_page {
-      .border-bottom {}
+      width: 90%;
+
+      .border-bottom {
+        margin-bottom: 0.75rem;
+      }
 
       .merath_title {
-        h2 {}
+        h2 {
+          text-align: center;
+          margin-bottom: 1rem;
+          font-size: 1.3rem;
+        }
       }
 
       .input_text {
@@ -2427,26 +3962,51 @@ select {
       }
 
       .input_span {
-        h4 {}
+        h4 {
+          line-height: 2.25rem;
+          font-size: 0.85rem;
+        }
       }
 
       .button_merath {
+        text-align: center;
+        margin: 5% auto;
+
         .merath_btn {
           background: $bg_color;
+          color: $white_color;
+          width: 70%;
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+          border: 0;
+          border-radius: 8px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
         }
       }
 
       .table_table {
-        .thead2_h4 {}
+        .thead2_h4 {
+          font-size: 1rem;
+        }
 
         .table {
           border: 2px $text_color solid;
 
           tbody {
-            tr {
-              td {}
+            border-radius: 7px;
+            direction: rtl;
 
-              .td_1 {}
+            tr {
+
+              // td {}
+              .td_1 {
+                text-align: right;
+                font-size: 0.85rem;
+              }
             }
           }
         }
@@ -2454,15 +4014,30 @@ select {
     }
 
     .search_page {
-      .textbox {}
+      margin: 0.5rem auto;
+
+      .textbox {
+        text-align: center;
+      }
     }
 
     .error_page {
-      svg {}
+      margin: 0 auto 0 0;
 
-      .message-box {}
+      svg {
+        height: 85%;
+      }
 
-      .buttons-con {}
+      .message-box {
+        font-size: 1.5rem;
+        top: -18rem;
+        left: 42%;
+      }
+
+      .buttons-con {
+        top: -1rem;
+        left: 50%;
+      }
     }
 
     .profile {
@@ -2474,12 +4049,12 @@ select {
           tbody {
             tr {
               .label-view {
-                width: 35%;
+                width: 40%;
                 font-size: 0.75rem;
               }
 
               .label-view2 {
-                width: 65%;
+                width: 60%;
                 font-size: 0.85rem;
               }
             }
@@ -2490,14 +4065,22 @@ select {
   }
 
   .loading-overlay {
-    .spinner-large {}
+    .spinner-large {
+      bottom: 30%;
+      left: 31%;
+    }
   }
 }
 
-@media (min-width: 375px) and (max-width: 410.9px) {
-  .padding_phones {}
+@media (min-width: 411px) and (max-width: 415px) {
+  .padding_phones {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
 
-  .no_padding {}
+  .no_padding {
+    padding: 0;
+  }
 
   .open_icon_nav_mbc {
     display: none;
@@ -2512,17 +4095,23 @@ select {
   }
 
   .main_container {
-    padding-bottom: 17%;
+    width: 100%;
+    padding-bottom: 20%;
+    padding-top: 4rem;
 
     .header {
       position: fixed !important;
       height: 4rem !important;
+      top: 0;
+      z-index: 99999999999;
 
       .header_logo,
       .header_icon {
-        img {
-          width: 55% !important;
-          margin-top: -0.85rem !important;
+        .logo_orange {
+          img {
+            width: 50% !important;
+            margin-top: -0.85rem !important;
+          }
         }
 
         .img_khir {
@@ -2530,7 +4119,7 @@ select {
 
           img {
             width: 70% !important;
-            margin-top: 0.1rem !important;
+            margin-top: 0.05rem !important;
           }
         }
       }
@@ -2541,7 +4130,8 @@ select {
         margin-right: -18%;
 
         .dropdown-menu2 {
-          left: -5%;
+          left: 7%;
+          top: 55%;
           min-width: 8rem;
         }
       }
@@ -2549,512 +4139,147 @@ select {
 
     .mbc_orange {
       .navbar_three {
-        background: transparent !important;
+        display: none;
       }
     }
 
-    .nav_nav {
-      display: unset;
+    .menu_all_op {
+      .nav_nav {
+        display: unset;
+        background-color: transparent;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        border: 0;
 
-      button {
-        opacity: 1 !important;
+        button {
+          opacity: 1;
+          outline: 0;
+          font-size: 1rem;
+          position: fixed;
+          top: 2.15rem;
+          left: 2.5rem;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
 
-        .icon_before {
-          color: $text_color !important;
-        }
-      }
-
-      .navbar-collapse {}
-
-      .navbar_ul {
-        background-color: $bg_color2 !important;
-        border: 2px solid $bg_color;
-
-        .nav-item {
-          .nav-link {
-            .icon_before {
-              color: $text_color;
-            }
-
-            svg {
-              width: 10%;
-            }
-          }
-
-          .dropdown-menu {
-            .dropdown-item {
-              &.dropdown-item2 {}
-            }
-          }
-
-          &.nav_item_logo {
-            .arrow_back {
-              color: $text_color;
-            }
-
-            img {}
+          .icon_before {
+            color: $text_color !important;
           }
         }
-      }
-    }
 
-    .img_carousel {
-      .owl_one {
-        .item {
-          .owl_one_img {
-            img {}
-          }
+        .navbar-collapse {
+          z-index: 9999999;
+        }
 
-          .content_free {
-            width: 20%;
-            top: 5%;
-            right: 0%;
-          }
+        .navbar_ul {
+          background-color: $bg_color2 !important;
+          border: 2px solid $bg_color;
+          width: 15rem;
+          height: 100vh;
+          padding: 0 0;
+          overflow-y: scroll;
 
-          .btn_orange {
-            button {
-              width: 98%;
-              top: 94.75%;
-              left: 49.2%;
+          .nav-item {
+            padding: 0.25rem 0.75rem;
 
-              &:focus {
-                top: 94%;
-                left: 49.75%;
+            &.nav_item_logo {
+              margin-bottom: 1rem;
+
+              .arrow_back {
+                font-size: 1rem;
+                float: right;
+                color: $text_color;
+
+                &:hover,
+                &:focus {
+                  color: $white_color;
+                }
+              }
+
+              img {
+                width: 30%;
+                display: block;
+                margin: 0 auto;
               }
             }
-          }
-        }
-      }
 
-      .owl-theme .owl-nav {
+            .nav-link {
+              padding: 0;
 
-        button.owl-next,
-        button.owl-prev {
-          bottom: 7rem;
+              .icon_before {
+                color: $text_color;
+                padding-right: 0.5rem;
+              }
 
-          &.owl-next {
-            right: -1%;
-          }
-        }
-      }
-    }
-
-    .content_carousel {
-      .owl_content_one {
-        .item {
-          .card {
-            .owl_content_img {
-              img {}
+              svg {
+                width: 10%;
+              }
             }
-          }
-        }
-      }
 
-      .owl_content_two,
-      .owl_content_three {
-        .item {
-          .card {
-            .owl_content_img {
-              img {}
-            }
-          }
-        }
-      }
+            .dropdown-menu {
+              .dropdown-item {
+                padding: 0.25rem 0;
+                width: 90% !important;
+                margin-left: 12%;
 
-      .owl_content_four,
-      .owl_content_five,
-      .owl_muslim_guide {
-        .item {
-          &.item_muslim {
-            height: 10.5rem;
-
-            .card_muslim_guid {
-              width: 80% !important;
-              margin: 0 auto;
-
-              .owl_content_img {
-                img {
-                  height: auto !important;
+                &.dropdown-item2 {
+                  width: 100% !important;
                 }
               }
             }
           }
-
-          .card {
-            .owl_content_img {
-              img {}
-            }
-          }
-        }
-      }
-    }
-
-    .list_page {
-      .coming_soon {}
-
-      .item {
-        .card {
-          .owl_content_img {
-            img {}
-          }
-
-          .content_free {
-            width: 35% !important;
-            top: 8% !important;
-            right: 1% !important;
-          }
-
-          .card-body {
-            .card-title {}
-          }
-        }
-      }
-    }
-
-    .inner_page {
-      .section_content {
-        .image_inner {}
-      }
-
-      .cover {
-        h4 {}
-
-        video {}
-
-        img {}
-      }
-
-      .poster {
-        .poster-details {
-          .title-wrapper {
-            h2 {}
-          }
-        }
-      }
-
-      .socail_media {
-        .pa_share {}
-
-        .shear_div {
-
-          .facebook,
-          .twitter,
-          .messenger,
-          .whatsapp {}
-        }
-      }
-
-      .section_content {
-        .pa_Videos {}
-
-        .p_content,
-        .p_content_2 {}
-      }
-    }
-
-    .modal_cover {
-      .modal-dialog {
-        .modal-content {
-          .modal-header {
-            h5 {}
-          }
-
-          .modal-footer {
-            .btn {}
-          }
-        }
-      }
-    }
-
-    .azan_page {
-      .azan_title {
-        h2 {}
-      }
-
-      .input_text {}
-    }
-
-    .nearmosque_page {
-      .nearmosque_title {
-        #map {}
-      }
-    }
-
-    .salah_time_page {
-      .salah_time_title {
-        h2 {}
-      }
-
-      .time_btn {
-        .input_span {}
-
-        .h4_time {}
-
-        .h4_time_2 {}
-      }
-    }
-
-    .sebha_page {
-      .display {
-        .btn-bar {
-          button {}
-        }
-      }
-
-      #sebhaModal {
-        .modal-dialog {
-          .modal-content {}
-        }
-
-        .close {}
-
-        .modal-title {}
-
-        .choose_sebha {}
-      }
-    }
-
-    .subscribe_page {
-      .subscribe_bg {
-        .form-signin {
-          .account-wall input {}
-
-          .buttons {
-            button {}
-          }
-        }
-      }
-    }
-
-    .zakkah_page {}
-
-    .zakkah_v2_page {
-      .zakah_result {
-        width: 100%;
-        left: 0;
-      }
-    }
-
-    .merath_page {
-      .border-bottom {}
-
-      .merath_title {
-        h2 {}
-      }
-
-      .input_text {
-        .merath_input {}
-      }
-
-      .input_span {
-        h4 {}
-      }
-
-      .button_merath {
-        .merath_btn {
-          background: $bg_color;
-        }
-      }
-
-      .table_table {
-        .thead2_h4 {}
-
-        .table {
-          border: 2px $text_color solid;
-
-          tbody {
-            tr {
-              td {}
-
-              .td_1 {}
-            }
-          }
-        }
-      }
-    }
-
-    .search_page {
-      .textbox {}
-    }
-
-    .error_page {
-      svg {}
-
-      .message-box {}
-
-      .buttons-con {}
-    }
-
-    .profile {
-      width: 90%;
-      margin: 2.5rem auto;
-
-      .profile_table {
-        table {
-          tbody {
-            tr {
-              .label-view {
-                width: 35%;
-                font-size: 0.75rem;
-              }
-
-              .label-view2 {
-                width: 65%;
-                font-size: 0.85rem;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .loading-overlay {
-    .spinner-large {}
-  }
-}
-
-@media (min-width: 411px) and (max-width: 415px) {
-  .padding_phones {}
-
-  .no_padding {}
-
-  .open_icon_nav_mbc {
-    display: none;
-  }
-
-  .navbar-light .navbar-toggler {
-    display: none;
-  }
-
-  .dropdown-toggle::after {
-    margin-right: unset !important;
-  }
-
-  .main_container {
-    padding-bottom: 17%;
-
-    .header {
-      position: fixed !important;
-      height: 4rem !important;
-
-      .header_logo,
-      .header_icon {
-        img {
-          width: 50% !important;
-          margin-top: -0.85rem !important;
-        }
-
-        .img_khir {
-          text-align: center !important;
-
-          img {
-            width: 70% !important;
-            margin-top: -0.15rem !important;
-          }
-        }
-      }
-
-      .arrow_back {}
-
-      .lang_mbc {
-        margin-right: -13%;
-
-        .dropdown-menu2 {
-          left: 7%;
-          min-width: 8rem;
-        }
-      }
-    }
-
-    .mbc_orange {
-      .navbar_three {
-        background: transparent !important;
-      }
-    }
-
-    .nav_nav {
-      display: unset;
-
-      button {
-        opacity: 1 !important;
-
-        .icon_before {
-          color: $text_color !important;
-        }
-      }
-
-      .navbar-collapse {}
-
-      .navbar_ul {
-        background-color: $bg_color2 !important;
-        border: 2px solid $bg_color;
-
-        .nav-item {
-          .nav-link {
-            .icon_before {
-              color: $text_color;
-            }
-
-            svg {
-              width: 10%;
-            }
-          }
-
-          .dropdown-menu {
-            .dropdown-item {
-              &.dropdown-item2 {}
-            }
-          }
-
-          &.nav_item_logo {
-            .arrow_back {
-              color: $text_color;
-            }
-
-            img {}
-          }
         }
       }
     }
 
     .img_carousel {
+      margin-top: 0;
+
       .owl_one {
         .item {
           .owl_one_img {
-            img {}
+            img {
+              height: 19rem;
+            }
           }
 
           .content_free {
-            width: 20%;
             top: 5%;
-            right: 0%;
+            right: -1%;
           }
 
           .btn_orange {
             button {
-              width: 98%;
-              top: 95%;
-              left: 49.20%;
-
+              width: 97%;
+              top: 93.5%;
+              left: 48.6%;
 
               &:focus {
-                top: 94.5%;
-                left: 49.8%;
+                top: 92.5%;
+                left: 49.6%;
               }
             }
           }
         }
       }
 
-      .owl-theme .owl-nav {
+      .owl-theme {
+        .owl-nav {
+          button {
 
-        button.owl-next,
-        button.owl-prev {
-          bottom: 7rem;
+            &.owl-next,
+            &.owl-prev {
+              bottom: 6rem;
+            }
 
-          &.owl-next {
-            right: -1%;
+            &.owl-next {
+              right: -2% !important;
+            }
           }
         }
       }
@@ -3062,18 +4287,26 @@ select {
 
     .content_carousel {
       .content_carousel_head {
-        .link_title {
-          h6 {}
-        }
-
-        .btn_more {}
+        margin-top: 1rem;
       }
 
       .owl_content_one {
         .item {
+          width: 100%;
+
           .card {
+            width: 100%;
+
             .owl_content_img {
-              img {}
+              img {
+                height: 11.5rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem
+              }
             }
           }
         }
@@ -3082,9 +4315,21 @@ select {
       .owl_content_two,
       .owl_content_three {
         .item {
+          width: 100%;
+
           .card {
+            width: 100%;
+
             .owl_content_img {
-              img {}
+              img {
+                height: 12.063rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem
+              }
             }
           }
         }
@@ -3094,24 +4339,40 @@ select {
       .owl_content_five,
       .owl_muslim_guide {
         .item {
+          width: 100%;
+
           &.item_muslim {
-            height: 10.75rem;
+            height: 11rem;
 
             .card_muslim_guid {
-              width: 75% !important;
+              width: 80%;
               margin: 0 auto;
 
               .owl_content_img {
                 img {
-                  height: auto !important;
+                  height: auto;
                 }
+              }
+
+              .card-body {
+                top: 10.25rem;
               }
             }
           }
 
           .card {
+            width: 100%;
+
             .owl_content_img {
-              img {}
+              img {
+                height: 12.063rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
+              }
             }
           }
         }
@@ -3119,78 +4380,139 @@ select {
     }
 
     .list_page {
-      .coming_soon {}
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 14px;
+          }
+        }
+
+        .btn_more {
+          font-size: 14px;
+        }
+      }
+
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
 
       .item {
         .card {
           .owl_content_img {
-            img {}
-          }
-
-          .content_free {
-            width: 35% !important;
-            top: 8% !important;
-            right: 0 !important;
+            img {
+              height: 12.219rem;
+            }
           }
 
           .card-body {
-            .card-title {}
+            padding: 1rem 0.25rem;
+
+            .card-title {
+              font-size: 0.9rem;
+            }
           }
         }
       }
     }
 
     .inner_page {
-      .section_content {
-        .image_inner {}
-      }
+      margin-top: 0;
 
       .cover {
-        h4 {}
+        h4 {
+          font-size: 1rem;
+          padding: 0 0.35rem;
+        }
 
-        video {}
+        video {
+          padding: 0 0;
+        }
 
-        img {}
+        img {
+          width: 100%;
+          max-height: 24.875rem;
+        }
+
+        audio {
+          margin-top: -5%;
+          margin-left: 3%;
+        }
+
+        button {
+          top: 45%;
+          left: 30%;
+        }
       }
 
       .poster {
+        padding: 0 0.75rem;
+
         .poster-details {
           .title-wrapper {
-            h2 {}
+            h2 {
+              font-size: 1rem;
+            }
+          }
+
+          .outside-cover {
+            font-size: 0.8rem;
           }
         }
       }
 
       .socail_media {
-        .pa_share {}
+        width: 75%;
+
+        .pa_share {
+          margin-top: 0.75rem;
+        }
 
         .shear_div {
+          padding-right: 0;
 
           .facebook,
           .twitter,
           .messenger,
-          .whatsapp {}
+          .whatsapp {
+            width: 90%;
+            height: 2.75rem;
+            margin-left: 0.5rem;
+            margin-top: 0.75rem;
+          }
         }
       }
 
       .section_content {
-        .pa_Videos {}
+        .pa_Videos {
+          margin-top: 0.75rem;
+        }
 
         .p_content,
-        .p_content_2 {}
+        .p_content_2 {
+          margin-left: 4%;
+          font-size: 12px;
+        }
       }
     }
 
     .modal_cover {
       .modal-dialog {
         .modal-content {
+          top: 2rem;
 
           .modal-header {
-            h5 {}
+            h5 {
+              font-size: 0.9rem;
+            }
           }
 
           .modal-footer {
-            .btn {}
+            justify-content: center;
+
+            .btn {
+              font-size: 0.9rem;
+            }
           }
         }
       }
@@ -3198,65 +4520,101 @@ select {
 
     .azan_page {
       .azan_title {
-        h2 {}
+        h2 {
+          font-size: 1.5rem;
+        }
       }
 
-      .input_text {}
+      .input_text {
+        width: 85%;
+      }
     }
 
     .nearmosque_page {
+      margin: 0.5rem auto;
+
       .nearmosque_title {
-        #map {}
+        #map {
+          width: 100%;
+        }
       }
     }
 
     .salah_time_page {
+      width: 100%;
+
       .salah_time_title {
-        h2 {}
+        h2 {
+          margin-bottom: 0.5rem;
+        }
       }
 
       .time_btn {
-        .input_span {}
+        margin-bottom: 4%;
+        height: 3.5rem;
 
-        .h4_time {}
+        .input_span {
+          padding: 0 !important;
+        }
 
-        .h4_time_2 {}
+        .h4_time {
+          line-height: 3rem;
+          font-size: 1rem;
+          padding: 0 0 0 5px;
+        }
+
+        .h4_time_2 {
+          line-height: 3rem;
+          font-size: 1rem;
+          padding: 0 5px 0 0;
+        }
       }
     }
 
     .sebha_page {
       .display {
         .btn-bar {
-          button {}
+          button {
+            width: 100%;
+          }
         }
       }
 
       #sebhaModal {
         .modal-dialog {
-          .modal-content {}
+          position: relative;
+          margin-top: 0;
+
+          .modal-content {
+            width: 95%;
+            position: fixed;
+            top: 57%;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+          }
         }
 
-        .close {}
+        .modal-title {
+          font-size: 1.25rem;
+        }
 
-        .modal-title {}
-
-        .choose_sebha {}
+        .choose_sebha {
+          font-size: 1.09rem;
+        }
       }
     }
 
     .subscribe_page {
-      .subscribe_bg {
-        .form-signin {
-          .account-wall input {}
-
-          .buttons {
-            button {}
-          }
-        }
-      }
+      width: 100%;
     }
 
-    .zakkah_page {}
+    .zakkah_page {
+      width: 90%;
+    }
 
     .zakkah_v2_page {
       .zakah_result {
@@ -3266,37 +4624,70 @@ select {
     }
 
     .merath_page {
-      .border-bottom {}
+      width: 90%;
+
+      .border-bottom {
+        margin-bottom: 0.75rem;
+      }
 
       .merath_title {
-        h2 {}
+        h2 {
+          text-align: center;
+          margin-bottom: 1rem;
+          font-size: 1.3rem;
+        }
       }
 
       .input_text {
-        .merath_input {}
+        // .merath_input {}
       }
 
       .input_span {
-        h4 {}
+        h4 {
+          line-height: 2.25rem;
+          font-size: 0.85rem;
+        }
       }
 
       .button_merath {
+        text-align: center;
+        margin: 5% auto;
+
         .merath_btn {
           background: $bg_color;
+          color: $white_color;
+          width: 70%;
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+          border: 0;
+          border-radius: 8px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
         }
       }
 
       .table_table {
-        .thead2_h4 {}
+        .thead2_h4 {
+          font-size: 1rem;
+        }
 
         .table {
           border: 2px $text_color solid;
 
           tbody {
-            tr {
-              td {}
+            border-radius: 7px;
+            direction: rtl;
 
-              .td_1 {}
+            tr {
+
+              // td {}
+              .td_1 {
+                text-align: right;
+                font-size: 0.85rem;
+              }
             }
           }
         }
@@ -3304,15 +4695,30 @@ select {
     }
 
     .search_page {
-      .textbox {}
+      margin: 0.5rem auto;
+
+      .textbox {
+        text-align: center;
+      }
     }
 
     .error_page {
-      svg {}
+      margin: 0 auto 0 0;
 
-      .message-box {}
+      svg {
+        height: 85%;
+      }
 
-      .buttons-con {}
+      .message-box {
+        font-size: 1.5rem;
+        top: -18rem;
+        left: 42%;
+      }
+
+      .buttons-con {
+        top: -1rem;
+        left: 50%;
+      }
     }
 
     .profile {
@@ -3324,13 +4730,13 @@ select {
           tbody {
             tr {
               .label-view {
-                width: 35%;
-                font-size: 0.85rem;
+                width: 40%;
+                font-size: 0.75rem;
               }
 
               .label-view2 {
-                width: 65%;
-                font-size: 0.95rem;
+                width: 60%;
+                font-size: 0.85rem;
               }
             }
           }
@@ -3340,7 +4746,10 @@ select {
   }
 
   .loading-overlay {
-    .spinner-large {}
+    .spinner-large {
+      bottom: 30%;
+      left: 31%;
+    }
   }
 }
 
@@ -3362,6 +4771,8 @@ select {
   }
 
   .main_container {
+    width: 100%;
+
     .header {
       position: fixed !important;
       height: 5.75rem !important;
@@ -3406,46 +4817,48 @@ select {
       background: transparent !important;
     }
 
-    .nav_nav {
-      display: unset;
+    .menu_all_op {
+      .nav_nav {
+        display: unset;
 
-      button {
-        opacity: 1 !important;
+        button {
+          opacity: 1 !important;
 
-        .icon_before {
-          color: $text_color !important;
+          .icon_before {
+            color: $text_color !important;
+          }
         }
-      }
 
-      .navbar-collapse {}
+        .navbar-collapse {}
 
-      .navbar_ul {
-        background-color: $bg_color2 !important;
-        border: 2px solid $bg_color;
+        .navbar_ul {
+          background-color: $bg_color2 !important;
+          border: 2px solid $bg_color;
 
-        .nav-item {
-          .nav-link {
-            .icon_before {
-              color: $text_color;
+          .nav-item {
+            .nav-link {
+              .icon_before {
+                color: $text_color;
+              }
+
+              svg {
+                width: 10%;
+              }
             }
 
-            svg {
-              width: 10%;
-            }
-          }
-
-          .dropdown-menu {
-            .dropdown-item {
-              &.dropdown-item2 {}
-            }
-          }
-
-          &.nav_item_logo {
-            .arrow_back {
-              color: $text_color;
+            .dropdown-menu {
+              .dropdown-item {
+                &.dropdown-item2 {}
+              }
             }
 
-            img {}
+            &.nav_item_logo {
+              .arrow_back {
+                color: $text_color;
+              }
+
+              img {}
+            }
           }
         }
       }
@@ -3967,6 +5380,8 @@ select {
   }
 
   .main_container {
+    width: 100%;
+
     .header {
       position: fixed !important;
       height: 7rem !important;
@@ -4007,47 +5422,49 @@ select {
       }
     }
 
-    .nav_nav {
-      display: unset;
+    .menu_all_op {
+      .nav_nav {
+        display: unset;
 
-      button {
-        opacity: 1 !important;
-        top: 3.75rem !important;
+        button {
+          opacity: 1 !important;
+          top: 3.75rem !important;
 
-        .icon_before {
-          color: $text_color !important;
+          .icon_before {
+            color: $text_color !important;
+          }
         }
-      }
 
-      .navbar-collapse {}
+        .navbar-collapse {}
 
-      .navbar_ul {
-        background-color: $bg_color2 !important;
-        border: 2px solid $bg_color;
+        .navbar_ul {
+          background-color: $bg_color2 !important;
+          border: 2px solid $bg_color;
 
-        .nav-item {
-          .nav-link {
-            .icon_before {
-              color: $text_color;
+          .nav-item {
+            .nav-link {
+              .icon_before {
+                color: $text_color;
+              }
+
+              svg {
+                width: 10%;
+              }
             }
 
-            svg {
-              width: 10%;
-            }
-          }
-
-          .dropdown-menu {
-            .dropdown-item {
-              &.dropdown-item2 {}
-            }
-          }
-
-          &.nav_item_logo {
-            .arrow_back {
-              color: $text_color;
+            .dropdown-menu {
+              .dropdown-item {
+                &.dropdown-item2 {}
+              }
             }
 
-            img {}
+            &.nav_item_logo {
+              .arrow_back {
+                color: $text_color;
+              }
+
+              img {}
+            }
           }
         }
       }

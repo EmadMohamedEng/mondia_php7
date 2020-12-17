@@ -43,7 +43,7 @@ if (session()->get('applocale') == 'ar') {
             @endif
             @if($content->type == 2)
                 <img src="{{$src}}" alt="Video Cover" style="opacity: 1 !important;">
-                <audio src="{{url($content->video)}}" controls style="width: 94%;" controlsList="nodownload"></audio>
+                <audio src="{{url($content->video)}}" controls controlsList="nodownload"></audio>
             @endif
             @if($content->type == 3)
             <img src="{{url($content->video)}}" alt="Video Cover">
