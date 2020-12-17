@@ -233,7 +233,15 @@ class FrontController extends Controller
       $enable_free = get_setting('enable_free');
         if($enable || $content->free || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
           if($enable_free == "1" || (session()->has('MSISDN') && $this->checkStatus(session()->get('MSISDN'),2))){
-            return view('front.inner_enable_testing', compact('content','contents'));
+
+            $vars["msisdn"] = session()->get('MSISDN');
+            $vars["service_id"] = 2;
+            $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
+            $sub = json_decode($sub);
+            if($content->mbcContent && $content->mbcContent->subscription_day <= $sub->day){
+              return view('front.inner_enable_testing', compact('content','contents'));
+            }
+            return redirect('profile?OpID='.MBC_OP_ID);
           }
         }
       return redirect('mbc_portal_landing');
@@ -369,8 +377,17 @@ class FrontController extends Controller
       ->orderBy('posts.show_date', 'asc')->get();
     $msisdn = $this->decryptMobileNumber($msisdn);
     if($this->checkStatus($msisdn,2)){
-      session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-      return view('front.inner_enable_testing', compact('content', 'contents'));
+
+
+      $vars["msisdn"] = $msisdn;
+      $vars["service_id"] = 2;
+      $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
+      $sub = json_decode($sub);
+      if($content->mbcContent && $content->mbcContent->subscription_day <= $sub->day){
+        session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+        return view('front.inner_enable_testing', compact('content', 'contents'));
+      }
+      return redirect('profile?OpID='.MBC_OP_ID);
     }
     return redirect('mbc_portal_landing');
   }
@@ -1677,8 +1694,8 @@ class FrontController extends Controller
         $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
         $sub = json_decode($sub);
         $date = date('Y-m-d');
-        $subscriber_day = 3;
-        $subscriber_content = MbcContent::where('subscription_day' , '<=' , $subscriber_day)->orderBy('subscription_day')->get();
+        $subscriber_day = $sub->day;
+        $subscriber_content = MbcContent::where('subscription_day' , '<=' , $subscriber_day)->orderBy('subscription_day', 'DESC')->get();
         // dd($subscriber_content[0]['subscription_day']);
         if($sub && isset($sub->created_at)){
           $date = date('Y-m-d',strtotime($sub->created_at));

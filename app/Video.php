@@ -28,4 +28,9 @@ class Video extends Model {
         return $this->hasMany('App\Post');
     }
 
+    public function mbcContent()
+    {
+        return $this->hasOne('App\MbcContent', 'content_id', 'id');
+    }
+
 }
