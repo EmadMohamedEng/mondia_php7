@@ -37,7 +37,9 @@
           }
 
           .dropdown-menu {
-            text-align: center;
+            text-align: right;
+            margin-right: 15%;
+            margin-left: unset;
           }
         }
       }
@@ -57,6 +59,7 @@
       .menuTwo {
         &:after {
           float: left !important;
+          margin-left: -0.75em;
         }
 
         svg {}
@@ -68,6 +71,16 @@
     .navbar_ul_three {
       .menuThree {
         font-size: 18px;
+      }
+    }
+  }
+
+  .navbar-nav {
+    .dropdown-menu {
+      margin-right: 12%;
+      margin-left: unset !important;
+      .link_href {
+        text-align: right !important;
       }
     }
   }
