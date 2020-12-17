@@ -101,6 +101,8 @@ Content
                                         <td>
                                         @if($mbc_content->subscription_day )
                                           {{$mbc_content->subscription_day}}day
+                                          @elseif($mbc_content->subscription_day == "0")
+                                          {{$mbc_content->subscription_day}}day
                                         @else
                                         ---
                                         @endif
