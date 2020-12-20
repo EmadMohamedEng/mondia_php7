@@ -30,6 +30,38 @@ class FrontController extends Controller
   public function index(Request $request)
   {
 
+    if( (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN')) ){
+
+      $vars["msisdn"] = session()->get('MSISDN');
+      $vars["service_id"] = 2;
+      $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
+      $sub = json_decode($sub);
+      $today_date_format = date('D');
+      $occassion_date_format = date('Y-m-d');
+
+      if($sub->country == 'KSA' && $sub->operator == 'STC'){
+        $contents = MbcContent::StcAllContent($sub->day);
+        $sub_operator = 'ksa-stc';
+      }else{
+        $contents = MbcContent::MbcAllContent($sub->day);
+        $sub_operator = 'all';
+      }
+
+      $contents = $contents->orWhereDate('occasion_date', $occassion_date_format);
+
+      if($today_date_format == 'Fri'){
+        $contents = $contents->orWhere('type', 'friday');
+      }
+
+      $latest = $contents->get();
+
+      // dd($latest);
+
+      return view('front.operator.mbc.home', compact('latest'));
+    }else{
+      return redirect('mbc_portal_landing');
+    }
+
     if (!$request->has('OpID') && get_setting('redirect_orange')) {
       return redirect('/?OpID='.orange);
     }

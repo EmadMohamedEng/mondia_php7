@@ -1,10 +1,11 @@
 <?php
 
-use App\Setting;
 use App\Post;
 use App\Video;
 use App\Service;
+use App\Setting;
 use App\Provider;
+use App\MbcContent;
 
 function get_setting($key)
 {
@@ -159,4 +160,47 @@ function get_contents($id)
     $contents = $contents->orderBy('contents.index', 'asc')->limit(6)->get();
 
     return $contents;
+}
+
+function SendRequestPost($URL, $JSON, $headers)
+{
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $URL);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 100);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 100);
+    curl_setopt($ch, CURLOPT_VERBOSE, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $JSON);
+    $sOutput = curl_exec($ch);
+    curl_close($ch);
+
+    return $sOutput;
+}
+
+function get_mbc_sub($msisdn)
+{
+    $vars["msisdn"] = $msisdn;
+    $vars["service_id"] = 2;
+    $sub = SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
+    $sub = json_decode($sub);
+
+    return $sub;
+}
+
+function get_providers_mbc($msisdn)
+{
+    $providers = null;
+    $subscription_day = get_mbc_sub($msisdn)->day;
+    $providers = Provider::select('providers.*')
+        ->join('services', 'providers.id', 'services.provider_id')
+        ->join('contents', 'services.id', 'contents.service_id')
+        ->join('mbc_contents', 'contents.id', 'mbc_contents.content_id')
+        ->where('mbc_contents.subscription_day', '<=', $subscription_day)
+        ->groupBy('providers.id')
+        ->get();
+    return $providers;
 }
