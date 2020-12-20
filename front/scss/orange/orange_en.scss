@@ -5457,9 +5457,14 @@ select {
 }
 
 @media (min-width: 1024px) and (max-width: 1030px) {
-  .padding_phones {}
+  .padding_phones {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
 
-  .no_padding {}
+  .no_padding {
+    padding: 0;
+  }
 
   .open_icon_nav_mbc {
     display: none;
@@ -5469,41 +5474,39 @@ select {
     display: none;
   }
 
-  .navbar {
-    display: none;
-  }
-
   .dropdown-toggle::after {
     margin-right: unset !important;
   }
 
   .main_container {
     width: 100%;
+    padding-bottom: 20%;
+    padding-top: 5rem;
 
     .header {
-      position: fixed !important;
-      height: 7rem !important;
+      position: fixed;
+      height: 7rem;
+      top: 0;
+      z-index: 99999999999;
 
       .header_logo,
       .header_icon {
-        h6 {}
+        .logo_orange {
+          text-align: right;
 
-        img {
-          width: 35% !important;
-          margin-top: -0.65rem !important;
+          img {
+            width: 35% !important;
+            margin-top: -0.85rem !important;
+          }
         }
 
         .img_khir {
           text-align: center !important;
 
           img {
-            width: 60% !important;
-            margin-top: 0.2rem !important;
+            width: 50% !important;
+            margin-top: 0.05rem !important;
           }
-        }
-
-        &.header_icon {
-          i {}
         }
       }
 
@@ -5513,36 +5516,92 @@ select {
         font-size: 1.75rem;
 
         .dropdown-menu2 {
-          left: 50% !important;
-          width: 0;
-          font-size: 1.75rem;
+          font-size: 1.25rem;
+          left: 40%;
+          top: 55%;
+          min-width: 9rem;
         }
+      }
+    }
+
+    .mbc_orange {
+      .navbar_three {
+        display: none;
       }
     }
 
     .menu_all_op {
       .nav_nav {
         display: unset;
+        background-color: transparent;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        border: 0;
 
         button {
-          opacity: 1 !important;
-          top: 3.75rem !important;
+          opacity: 1;
+          outline: 0;
+          font-size: 2rem;
+          position: fixed;
+          top: 3.5rem;
+          left: 5rem;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
 
           .icon_before {
             color: $text_color !important;
           }
         }
 
-        .navbar-collapse {}
+        .navbar-collapse {
+          z-index: 9999999;
+        }
 
         .navbar_ul {
           background-color: $bg_color2 !important;
           border: 2px solid $bg_color;
+          width: 22rem;
+          height: 100vh;
+          padding: 0 0;
+          overflow-y: scroll;
 
           .nav-item {
+            padding: 0.25rem 0.75rem;
+
+            &.nav_item_logo {
+              margin-bottom: 1rem;
+
+              .arrow_back {
+                font-size: 1.25rem;
+                float: right;
+                color: $text_color;
+
+                &:hover,
+                &:focus {
+                  color: $white_color;
+                }
+              }
+
+              img {
+                width: 30%;
+                display: block;
+                margin: 0 auto;
+              }
+            }
+
             .nav-link {
+              padding: 0;
+              font-size: 1.25rem;
+
               .icon_before {
                 color: $text_color;
+                padding-right: 0.5rem;
               }
 
               svg {
@@ -5552,16 +5611,15 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                &.dropdown-item2 {}
-              }
-            }
+                padding: 0.25rem 0;
+                width: 90% !important;
+                margin-left: 12%;
+                font-size: 1.15rem;
 
-            &.nav_item_logo {
-              .arrow_back {
-                color: $text_color;
+                &.dropdown-item2 {
+                  width: 100% !important;
+                }
               }
-
-              img {}
             }
           }
         }
@@ -5569,178 +5627,151 @@ select {
     }
 
     .img_carousel {
+      margin-top: 0;
+
       .owl_one {
         .item {
           .owl_one_img {
             img {
-              height: 56.25rem;
+              height: 19rem;
             }
           }
 
           .content_free {
-            font-size: 1.75rem;
-            width: 23%;
-            top: 6%;
-            right: 1%;
+            top: 5%;
+            right: -1%;
           }
 
           .btn_orange {
             button {
-              font-size: 1.75rem;
-              width: 50%;
-              height: 7%;
-              top: 96.3%;
-              left: 25.1%;
+              width: 97%;
+              top: 93.5%;
+              left: 48.6%;
 
               &:focus {
-                top: 95.85%;
-                left: 25.6%;
+                top: 92.5%;
+                left: 49.6%;
               }
             }
           }
         }
       }
 
-      .owl-theme .owl-nav {
+      .owl-theme {
+        .owl-nav {
+          button {
 
-        button.owl-next,
-        button.owl-prev {
-          font-size: 5rem;
-          bottom: 21rem;
+            &.owl-next,
+            &.owl-prev {
+              bottom: 6rem;
+            }
+
+            &.owl-next {
+              right: -2% !important;
+            }
+          }
         }
       }
     }
 
     .content_carousel {
       .content_carousel_head {
+        margin-top: 2.5rem;
+
         .link_title {
-          h6 {}
+          h6 {
+            font-size: 1.75rem;
+          }
         }
 
-        .btn_more {}
+        .btn_more {
+          padding: 0.5rem 1.5rem;
+          font-size: 1.5rem;
+        }
       }
 
       .owl_content_one {
         .item {
+          width: 100%;
+
           .card {
+            width: 100%;
+
             .owl_content_img {
               img {
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                height: 22.719rem;
               }
             }
 
             .card-body {
-              .card-title {}
-
-              .card-text {
-                i {}
+              .card-title {
+                font-size: 1.5rem;
               }
             }
           }
         }
       }
 
-      .owl_content_two {
-        .item {
-          .card {
-
-            .owl_content_img {
-              img {
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-              }
-            }
-
-            .card-body {
-              .card-title {}
-
-              .card-text {
-                i {}
-              }
-            }
-          }
-        }
-      }
-
+      .owl_content_two,
       .owl_content_three {
         .item {
+          width: 100%;
+
           .card {
+            width: 100%;
 
             .owl_content_img {
               img {
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                height: 20.333rem;
               }
             }
 
             .card-body {
-              .card-title {}
-
-              .card-text {
-                i {}
+              .card-title {
+                font-size: 1.5rem;
               }
             }
           }
         }
       }
 
-      .owl_content_four {
-        .item {
-          .card {
-
-            .owl_content_img {
-              img {
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-              }
-            }
-
-            .card-body {
-              .card-title {}
-
-              .card-text {
-                i {}
-              }
-            }
-          }
-        }
-      }
-
+      .owl_content_four,
       .owl_content_five,
       .owl_muslim_guide {
         .item {
+          width: 100%;
+
           &.item_muslim {
-            height: 18rem;
+            height: 15rem;
 
             .card_muslim_guid {
+              width: 80%;
+              margin: 0 auto;
+
               .owl_content_img {
                 img {
-                  height: 14.75rem !important;
+                  height: auto;
                 }
               }
 
               .card-body {
-                .card-title {
-                  font-size: 1.35rem !important;
-                }
+                top: 13.25rem;
               }
             }
           }
 
           .card {
+            width: 100%;
+
             .owl_content_img {
               img {
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                height: 15.39rem;
               }
             }
 
             .card-body {
-              .card-title {}
-
-              .card-text {
-                i {}
+              .card-title {
+                font-size: 1.5rem;
               }
             }
           }
@@ -5749,312 +5780,324 @@ select {
     }
 
     .list_page {
-      .coming_soon {}
-
-      .content_carousel_head {
-        .link_title {
-          h6 {}
-        }
-      }
-
-      .item {
-        .card {
-          .owl_content_img {
-            img {}
-
-            .playCircle {
-              font-size: 1.75rem;
-            }
-          }
-
-          .content_free {
-            width: 30% !important;
-            font-size: 1.5rem;
-            top: 8% !important;
-            right: 1% !important;
-          }
-
-          .card-body {
-            .card-title {}
-          }
-        }
-      }
-    }
-
-    /* Start List Muslim Page */
-    .list_muslim {
       .content_carousel_head {
         .link_title {
           h6 {
-            font-size: 2rem;
+            font-size: 1.25rem;
           }
         }
+
+        .btn_more {
+          font-size: 1.25rem;
+        }
+      }
+
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
       }
 
       .item {
         .card {
           .owl_content_img {
-            img {}
+            img {
+              height: 15.208rem;
+            }
           }
-        }
 
-        .card-body {
-          .card-title {
-            font-size: 1.75rem;
+          .card-body {
+            padding: 1rem 0.25rem;
+
+            .card-title {
+              font-size: 1rem;
+            }
           }
         }
       }
     }
 
-    /* End List Muslim Page */
-
     .inner_page {
+      margin-top: 0;
+
       .section_content {
-        .image_inner {}
+        .image_inner {
+          height: 170px;
+          width: 170px;
+        }
       }
 
       .cover {
-        h4 {}
+        h4 {
+          font-size: 1rem;
+          padding: 0 1rem;
+        }
 
-        video {}
+        video {
+          padding: 0 0;
+        }
 
-        img {}
+        img {
+          width: 100%;
+          max-height: 43.75rem;
+        }
 
-        .button_play {}
+        audio {
+          margin-top: -5%;
+          margin-left: 3%;
+        }
+
+        button {
+          top: 45%;
+          left: 30%;
+        }
       }
 
       .poster {
+        padding: 0 0.75rem;
+
         .poster-details {
           .title-wrapper {
-            h2 {}
+            h2 {
+              font-size: 1rem;
+            }
           }
 
-          .outside-cover {}
+          .outside-cover {
+            font-size: 0.8rem;
+          }
         }
       }
 
       .socail_media {
-        .pa_share {}
+        width: 100%;
+
+        .pa_share {
+          margin-top: 0.75rem;
+          font-size: 1rem;
+        }
 
         .shear_div {
+          padding-right: 0;
 
           .facebook,
           .twitter,
           .messenger,
-          .whatsapp {}
+          .whatsapp {
+            width: 50%;
+            height: 3.5rem;
+            margin-left: 4.5rem;
+            margin-top: 0.75rem;
+            font-size: 1.75rem;
+          }
         }
       }
 
       .section_content {
-        .pa_Videos {}
+        .pa_Videos {
+          margin-top: 0.75rem;
+          font-size: 1rem;
+        }
 
         .p_content,
-        .p_content_2 {}
+        .p_content_2 {
+          margin-left: 4%;
+          font-size: 1rem;
+        }
       }
     }
 
     .modal_cover {
       .modal-dialog {
         .modal-content {
+          top: 2rem;
+
           .modal-header {
-            h5 {}
-
-            .close {}
-          }
-
-          .modal-body {
-            .modal_club {
-
-              .btn,
-              strong,
-              p {}
+            h5 {
+              font-size: 0.9rem;
             }
           }
 
           .modal-footer {
-            .btn {}
+            justify-content: center;
+
+            .btn {
+              font-size: 0.9rem;
+            }
           }
         }
       }
     }
 
     .azan_page {
-      margin: 3rem auto;
-
       .azan_title {
         h2 {
-          font-size: 3rem;
+          font-size: 1.5rem;
         }
       }
 
       .input_text {
         width: 85%;
-
-        .azan_input {
-          height: 4.5rem;
-          font-size: 2.75rem;
-        }
       }
     }
 
     .nearmosque_page {
-      margin: 3.5rem auto;
+      margin: 0.5rem auto;
 
       .nearmosque_title {
-        h2 {
-          font-size: 2rem;
-        }
-
         #map {
-          width: 90%;
+          width: 100%;
         }
       }
     }
 
     .salah_time_page {
+      width: 100%;
+
       .salah_time_title {
-        h2 {}
+        h2 {
+          margin-bottom: 0.5rem;
+        }
       }
 
       .time_btn {
-        .input_span {}
+        margin-bottom: 4%;
+        height: 3.5rem;
 
-        .h4_time {}
+        .input_span {
+          padding: 0 !important;
+        }
 
-        .h4_time_2 {}
+        .h4_time {
+          line-height: 3rem;
+          font-size: 1rem;
+          padding: 0 0 0 5px;
+        }
+
+        .h4_time_2 {
+          line-height: 3rem;
+          font-size: 1rem;
+          padding: 0 5px 0 0;
+        }
       }
     }
 
     .sebha_page {
       .display {
-        #tally {}
-
         .btn-bar {
           button {
-            i {}
+            width: 100%;
           }
         }
       }
 
       #sebhaModal {
         .modal-dialog {
-          .modal-content {}
+          position: relative;
+          margin-top: 0;
+
+          .modal-content {
+            width: 95%;
+            position: fixed;
+            top: 57%;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+          }
         }
 
-        .close {}
+        .modal-title {
+          font-size: 1.25rem;
+        }
 
-        .modal-title {}
-
-        .choose_sebha {}
+        .choose_sebha {
+          font-size: 1.09rem;
+        }
       }
     }
 
     .subscribe_page {
-      .login_title {}
-
-      .subscribe_bg {
-        .form-signin {
-          .account-wall input {}
-
-          .buttons {
-            button {}
-          }
-        }
-      }
+      width: 100%;
     }
 
     .zakkah_page {
-      h4 {}
-
-      p {}
-
-      .zakah_zakah {
-        .form_zakah {
-          .field {}
-
-          .actions {
-            button {
-              &.button {}
-            }
-          }
-        }
-      }
+      width: 90%;
     }
 
     .zakkah_v2_page {
-      margin: 4% auto;
-
-      .container {
-        max-width: 100%;
-      }
-
-      .currency_title,
-      .currency_icon {
-        font-size: 1.75rem;
-      }
-
-      .currency_bg {
-        .flex_center {
-          .currency_text {
-            font-size: 1.5rem;
-          }
-        }
-
-        .form_input {
-          .textbox {
-            font-size: 1.5rem;
-          }
-        }
-
-        .result {
-          font-size: 1.75rem;
-        }
-      }
-
       .zakah_result {
         width: 100%;
         left: 0;
-
-        .zakah_result_right,
-        .zakah_result_left {
-          font-size: 2rem;
-        }
       }
-
     }
 
     .merath_page {
-      .border-bottom {}
+      width: 90%;
+
+      .border-bottom {
+        margin-bottom: 0.75rem;
+      }
 
       .merath_title {
-        h2 {}
+        h2 {
+          text-align: center;
+          margin-bottom: 1rem;
+          font-size: 1.3rem;
+        }
       }
 
       .input_text {
-        .merath_input {}
+        // .merath_input {}
       }
 
       .input_span {
-        h4 {}
+        h4 {
+          line-height: 2.25rem;
+          font-size: 1.15rem;
+        }
       }
 
       .button_merath {
+        text-align: center;
+        margin: 5% auto;
+
         .merath_btn {
           background: $bg_color;
+          color: $white_color;
+          width: 70%;
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+          border: 0;
+          border-radius: 8px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
         }
       }
 
       .table_table {
-        .thead2_h4 {}
+        .thead2_h4 {
+          font-size: 1rem;
+        }
 
         .table {
           border: 2px $text_color solid;
 
           tbody {
-            tr {
-              td {}
+            border-radius: 7px;
+            direction: rtl;
 
-              .td_1 {}
+            tr {
+
+              // td {}
+              .td_1 {
+                text-align: right;
+                font-size: 0.85rem;
+              }
             }
           }
         }
@@ -6062,45 +6105,56 @@ select {
     }
 
     .search_page {
-      .btn_search {}
+      width: 95%;
+      margin: 3rem auto;
 
-      .textbox {}
+      .textbox {
+        height: 5.5rem !important;
+        font-size: 2.75rem;
+      }
+
+      .form_search {
+        .btn_search {
+          font-size: 2rem;
+        }
+      }
     }
 
     .error_page {
-      svg {}
+      margin: 0 auto 0 0;
 
-      .message-box {
-        h1 {}
+      svg {
+        height: 85%;
       }
 
-      .buttons-con {}
+      .message-box {
+        font-size: 1.5rem;
+        top: -18rem;
+        left: 42%;
+      }
+
+      .buttons-con {
+        top: -1rem;
+        left: 50%;
+      }
     }
 
     .profile {
       width: 90%;
-      margin: 4.5rem auto;
-
-      .profile_title {
-        h2 {
-          font-size: 3rem
-        }
-      }
+      margin: 2.5rem auto;
 
       .profile_table {
         table {
           tbody {
             tr {
               .label-view {
-                width: 35%;
-                font-size: 1.75rem;
-                padding: 1.75rem 1rem;
+                width: 40%;
+                font-size: 0.75rem;
               }
 
               .label-view2 {
-                width: 65%;
-                font-size: 2rem;
-                padding: 1.75rem 1rem;
+                width: 60%;
+                font-size: 0.85rem;
               }
             }
           }
@@ -6110,11 +6164,10 @@ select {
   }
 
   .loading-overlay {
-    .spinner-large {}
-  }
-
-  .alert {
-    .close {}
+    .spinner-large {
+      bottom: 30%;
+      left: 31%;
+    }
   }
 }
 
