@@ -51,7 +51,7 @@
       @endforeach
     </div>
   </section>
-
+  @if(date('D') == 'Fri')
   <section class="content_carousel">
     <div class="content_carousel_head text-capitalize">
       <div class="row m-0">
@@ -64,7 +64,6 @@
     </div>
 
     <div class="owl_content owl_content_two owl-carousel owl-theme" dir="ltr">
-      @if(date('D') == 'Fri')
       <div class="item item_muslim">
         <div class="card card_muslim_guid ovf-hidden">
           <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
@@ -99,60 +98,9 @@
           </a>
         </div>
       </div>
-      @endif
-
-      <div class="item item_muslim">
-        <div class="card card_muslim_guid ovf-hidden">
-          <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
-            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/07.png')}}" alt="Card image cap">
-            <a>
-              <div class="mask waves-effect waves-light rgba-white-slight"></div>
-            </a>
-          </a>
-
-          <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
-            <div class="card-body">
-              <h4 class="card-title text-capitalize">@lang('front.zakah')</h4>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="item item_muslim">
-        <div class="card card_muslim_guid ovf-hidden">
-          <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
-            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/04.png')}}" alt="Card image cap">
-            <a>
-              <div class="mask waves-effect waves-light rgba-white-slight"></div>
-            </a>
-          </a>
-
-          <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
-            <div class="card-body">
-              <h4 class="card-title text-capitalize">@lang('front.merath')</h4>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="item item_muslim">
-        <div class="card card_muslim_guid ovf-hidden">
-          <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
-            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/03.png')}}" alt="Card image cap">
-            <a>
-              <div class="mask waves-effect waves-light rgba-white-slight"></div>
-            </a>
-          </a>
-
-          <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
-            <div class="card-body">
-              <h4 class="card-title text-capitalize">@lang('front.prayer')</h4>
-            </div>
-          </a>
-        </div>
-      </div>
     </div>
   </section>
+  @endif
 
   @foreach (get_providers_mbc(session()->get('subscription_day')) as $item)
   <section class="content_carousel">
@@ -172,7 +120,7 @@
     </div>
 
     @php
-    $services_foreach = get_service_mbc(session()->get('MSISDN'), $item);
+    $services_foreach = get_service_mbc(session()->get('subscription_day'), $item);
     $count_services = count($services_foreach);
     if($count_services == 1){
     $owl_1 = 'owl_content_one';
@@ -212,7 +160,7 @@
           <a class="owl_content_img view overlay link_href"
             href="{{route('front.list',['service_id' => $service->id])}}">
             <div class="card-body">
-              <h4 class="card-title text-capitalize">{{$service->getTranslation('title',getCode())}} {{$service->id}}</h4>
+              <h4 class="card-title text-capitalize">{{$service->getTranslation('title',getCode())}}</h4>
             </div>
           </a>
         </div>

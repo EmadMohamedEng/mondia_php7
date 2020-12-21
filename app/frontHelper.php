@@ -215,3 +215,31 @@ function get_service_mbc($day, $provider)
         ->get();
     return $services;
 }
+
+function get_content_mbc($day, $service)
+{
+    $mbcContent = MbcContent::select('mbc_contents.*')
+        ->join('contents', 'contents.id', 'mbc_contents.content_id')
+        ->join('services', 'services.id', 'contents.service_id')
+        ->where('mbc_contents.subscription_day', '<=', $day)
+        ->where('services.id', $service->id)
+        ->get();
+
+    return $mbcContent;
+}
+
+function get_friday_mbc()
+{
+    $mbcContents = MbcContent::where('type', 'friday')->get();
+
+    return $mbcContents;
+}
+
+function get_occasion_mbc()
+{
+    $occassion_date_format = date('Y-m-d');
+
+    $mbcContent = MbcContent::where('occasion_date', $occassion_date_format)->get();
+
+    return $mbcContent;
+}
