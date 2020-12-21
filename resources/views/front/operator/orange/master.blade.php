@@ -185,7 +185,7 @@
             <li class="nav-item">
               <div class="row m-0">
                 <div class="col-6 p-0">
-                  <div class="nav_item_welc text-capitalize font-weight-bolder" href="#0">@lang('front.welcome')</div>
+                  <div class="nav_item_welc text-capitalize font-weight-bolder">@lang('front.welcome')</div>
                 </div>
               </div>
             </li>
