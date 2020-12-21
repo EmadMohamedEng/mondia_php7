@@ -1244,15 +1244,17 @@ select {
       -o-border-radius: 8px;
 
       .h4_time_2 {
-        text-align: right;
-        margin-bottom: 0;
-        padding: 0.6rem 0;
-      }
-
-      .h4_time {
         text-align: left;
         margin-bottom: 0;
         padding: 0.6rem 0;
+        font-size: 1.10rem;
+      }
+
+      .h4_time {
+        text-align: right;
+        margin-bottom: 0;
+        padding: 0.6rem 0;
+        font-size: 1.10rem;
       }
     }
   }

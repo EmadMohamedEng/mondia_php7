@@ -1006,14 +1006,16 @@ select:active {
   -o-border-radius: 8px;
 }
 .main_container .salah_time_page .time_btn .h4_time_2 {
-  text-align: right;
-  margin-bottom: 0;
-  padding: 0.6rem 0;
-}
-.main_container .salah_time_page .time_btn .h4_time {
   text-align: left;
   margin-bottom: 0;
   padding: 0.6rem 0;
+  font-size: 1.1rem;
+}
+.main_container .salah_time_page .time_btn .h4_time {
+  text-align: right;
+  margin-bottom: 0;
+  padding: 0.6rem 0;
+  font-size: 1.1rem;
 }
 .main_container .subscribe_page {
   width: 70%;
