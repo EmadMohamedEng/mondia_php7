@@ -266,7 +266,7 @@ select:active {
   text-align: right;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-toggle::after {
-  float: right;
+  float: left;
   margin-top: 0.75rem;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu {
@@ -282,7 +282,7 @@ select:active {
   color: #FF6600;
   padding: 0.25rem 1rem;
   width: 100%;
-  text-align: left;
+  text-align: right;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2115,7 +2115,7 @@ select:active {
   }
 
   .dropdown-toggle::after {
-    margin-right: unset !important;
+    margin-left: 0;
   }
 
   .main_container {
@@ -2128,6 +2128,10 @@ select:active {
     height: 4rem !important;
     top: 0;
     z-index: 99999999999;
+  }
+  .main_container .header .header_logo .logo_orange,
+.main_container .header .header_icon .logo_orange {
+    text-align: left;
   }
   .main_container .header .header_logo .logo_orange img,
 .main_container .header .header_icon .logo_orange img {
@@ -2144,7 +2148,7 @@ select:active {
     margin-top: 0.05rem !important;
   }
   .main_container .header .lang_mbc {
-    margin-right: -18%;
+    margin-left: -18%;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
     left: -20%;
@@ -2170,7 +2174,7 @@ select:active {
     font-size: 1rem;
     position: fixed;
     top: 2.15rem;
-    left: 2.5rem;
+    right: -9%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2190,6 +2194,9 @@ select:active {
     height: 100vh;
     padding: 0 0;
     overflow-y: scroll;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
+    text-align: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -2212,6 +2219,7 @@ select:active {
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link {
     padding: 0;
+    text-align: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     color: #FF6600;
@@ -2223,7 +2231,7 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
     padding: 0.25rem 0;
     width: 90% !important;
-    margin-left: 12%;
+    margin-right: 12%;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
