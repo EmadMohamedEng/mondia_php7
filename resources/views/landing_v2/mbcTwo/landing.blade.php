@@ -20,12 +20,12 @@
 
 <style>
   @font-face {
-  font-family: CairoRegular;
-  src: url('front/font/Cairo-Regular.ttf')
+  font-family: AraJozoor-Regular;
+  src: url('front/font/AraJozoor-Regular.ttf');
 }
 
 .main_container .landing_page .strip .best_features {
-  font-family: CairoRegular;
+  font-family: AraJozoor-Regular;
 }
 
   .main_container .landing_page {
