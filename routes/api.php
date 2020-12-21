@@ -42,5 +42,5 @@ Route::prefix('v1')->group(function() {
 /*************orange************* */
 define('ORANGE_ELKHEAR_SERVICE_ID',3);
 define('ORANGE_END_POINT', 'https://dev.digizone.com.kw/orange_integration');
-define('ORANGE_API_SENDPINCODE', 'http://10.2.10.239:2080/~orangeiv/orange_egypt_send_message');
+define('ORANGE_API_SENDPINCODE', 'http://10.2.10.239:2080/~orangeiv/orange_egypt_send_message/');
 /***********end orange*********** */

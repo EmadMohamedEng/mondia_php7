@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\PincodeOrange;
+use App\UnsubPincodeOrange;
 use Carbon\Carbon;
 
 
@@ -181,33 +182,45 @@ class OrangeController extends Controller
 
   public function postUnsubscribe(Request $request)
   {
+
     $number = ltrim($request->number, 0);
-
     $msisdn = "20$number";
-
     $URL = ORANGE_END_POINT."/api/checkStatus";
-
     $JSON['msisdn'] = $msisdn;
-
     $headers['Accept'] = '*/*';
-
     $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
-
     $lang =  Session::get('applocale');
 
 
-
     if($checkStatus != "0"){  //  found
-      $orangeUnSubscribe = $this->orangeUnSubscribe($msisdn);
-      if($orangeUnSubscribe == 0){
-        if($lang = 'ar'){
-          $msg = '!تم الغاء الاشتراك';
-        }else{
-          $msg = 'Unsubscribed successfully!';
-        }
-        session()->flash('success', $msg);
-        return $this->logout();
-      }
+      //dd("omar");
+    date_default_timezone_set("Africa/Cairo");
+    $random = mt_rand(1000, 9999);
+    $pincode_random = $random;
+    $pincode = new UnsubPincodeOrange();
+    $pincode->msisdn = $msisdn;
+    $pincode->pincode = $pincode_random;
+    $date = Carbon::now()->format('Y/m/d H:i:s');
+    $pincode->expire_date_time = Carbon::parse($date)->addHour();
+    $pincode->save();
+    Session::put('unsub_orange', $msisdn);
+    $URL_Api = ORANGE_API_SENDPINCODE;
+      $param = "phone_number=$msisdn&message=$pincode_random";
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL, $URL_Api);
+      curl_setopt($ch, CURLOPT_POST, 1);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      $response = curl_exec($ch);
+      curl_close($ch);
+
+    if ($response == "1") {
+      $lang =  session::get('lang');
+      if ($lang == 'ar')
+      return redirect('unsub_pincode')->with('success', '!تم ارسال رمز التحقق');
+      return redirect('unsub_pincode')->with('success', 'Pincode Sent!');
+    }
+
     }else{
       if($lang = 'ar'){
         $msg = '!انت غير مشترك';
@@ -219,6 +232,57 @@ class OrangeController extends Controller
     }
   }
 
+  public function unsub_pincode_confirm(request $request)
+  {
+    date_default_timezone_set("Africa/Cairo");
+    $pincode = $request->input('pincode');
+    $msisdn = Session::get('unsub_orange');
+
+    $date = Carbon::now()->format('Y/m/d H:i:s');
+    $PinCode = UnsubPincodeOrange::where('msisdn', '=', $msisdn)->where('pincode', '=', $pincode)->orderBy('id', 'DESC')->first();
+    if ($PinCode) {
+      $expire_date_time= $PinCode->expire_date_time; /*"2020-07-05 17:28:19"*/
+      $now = Carbon::now()->format('Y-m-d H:i:s');  /*"2020-07-05 16:30:00"*/
+      if ($now <= $expire_date_time) {
+        $orangeUnSubscribe = $this->orangeUnSubscribe($msisdn);
+        if($orangeUnSubscribe == 0){
+          if($lang = 'ar'){
+            $msg = '!تم الغاء الاشتراك';
+          }else{
+            $msg = 'Unsubscribed successfully!';
+          }
+          session()->flash('success', $msg);
+          return $this->logout();
+        }else{
+          $lang =  session::get('lang');
+          if ($lang == 'ar')
+          return redirect('orange_portal_unsub')->with('failed', 'خطأ في التسجيل');
+          return redirect('orange_portal_unsub')->with('failed', 'Register is failed');
+        }
+      } else {
+        if (session::get("lang") == 'ar'){
+          $request->session()->flash('failed','انتهاء وقت الكود برجاء ارسال الكود مره اخرى');
+        }else{
+          $request->session()->flash('failed','Resend the pincode');
+        }
+        return redirect('unsub_pincode/');
+      }
+
+    } else {
+      if (session::get("lang") == 'ar'){
+        $request->session()->flash('failed','خطأ في كود التفعيل برجاء ادخال كود التفعيل الصحيح');
+      }else{
+        $request->session()->flash('failed','Activation error. Please enter the correct activation code');
+      }
+      return redirect('checkpincode/');
+    }
+  }
+
+  public function unsub_pincode()
+  {
+    $lang =  session::get('lang');
+    return view('landing_v2.orange.unsub_pincode', compact('lang'));
+  }
   public function orangeLoginSession($msisdn)
   {
     session()->put('MSISDN', $msisdn);
