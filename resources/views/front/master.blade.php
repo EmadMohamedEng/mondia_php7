@@ -26,7 +26,6 @@
   <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
-  <link rel="stylesheet" href="{{asset('front/css/style_orange_menu.css')}}">
   <!-- <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}"> -->
 
     @if(request()->get('OpID') == mbc)
