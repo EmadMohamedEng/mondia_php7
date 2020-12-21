@@ -17,17 +17,31 @@
 App::setLocale($lang);
 @endphp
 
+<style>
+  @font-face {
+  font-family: CairoRegular;
+  src: url('front/font/Cairo-Regular.ttf')
+}
+
+.main_container .landing_page .strip .best_features {
+  font-family: CairoRegular;
+}
+
+.landing_page {
+  margin-top: 0;
+}
+</style>
+
 <body>
   <div class="main_container pt-5">
-    <div class="img-fluid text-center p-3">
-      <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
+    <div class="img-fluid">
+      <img class="bounce-top m-auto d-block" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
     </div>
-
-    <div class="landing_page pt-5">
 
     <div class="landing_page">
       <div class="strip text-dark">
-        <h2>@lang('messages.enjoy_time_landing')</h2>
+        <!-- <h2>@lang('messages.enjoy_time_landing')</h2> -->
+        <img class="alkanz_logo m-auto d-block" src='{{asset("front/images/mbc_landing/alkazn_logo.png")}}' alt='Logo'>
         <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
       </div>
 
@@ -91,8 +105,6 @@ App::setLocale($lang);
       </div>
 
     </div>
-
-  </div>
   <!-- script -->
   <script src="{{url('front/stc')}}/js/jquery-3.4.0.min.js"></script>
   <script src="{{ url('front/stc')}}/js/popper.min.js"></script>

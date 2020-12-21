@@ -21,7 +21,7 @@
 <style>
   @font-face {
   font-family: CairoRegular;
-  src: url('../font/Cairo-Regular.ttf')
+  src: url('front/font/Cairo-Regular.ttf')
 }
 
 .main_container .landing_page .strip .best_features {
