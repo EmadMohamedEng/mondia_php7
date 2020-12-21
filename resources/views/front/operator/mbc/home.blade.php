@@ -1,11 +1,6 @@
 @extends('front.master')
 @section('page_title') Home @endsection
 @section('content')
-@php
-$count = (int)(count(provider_menu())/2);
-$menu = provider_menu();
-@endphp
-
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
 
   @include('front.search')
@@ -159,7 +154,7 @@ $menu = provider_menu();
     </div>
   </section>
 
-  @foreach (get_providers_mbc(session()->get('MSISDN')) as $item)
+  @foreach (get_providers_mbc(session()->get('subscription_day')) as $item)
   <section class="content_carousel">
     <div class="content_carousel_head text-capitalize">
       <div class="row m-0">
@@ -177,30 +172,32 @@ $menu = provider_menu();
     </div>
 
     @php
-    if(count($item->services) == 1){
+    $services_foreach = get_service_mbc(session()->get('MSISDN'), $item);
+    $count_services = count($services_foreach);
+    if($count_services == 1){
     $owl_1 = 'owl_content_one';
     }
 
-    if(count($item->services) == 2){
+    if($count_services == 2){
     $owl_1 = 'owl_content_two';
     }
 
-    if(count($item->services) == 3){
+    if($count_services == 3){
     $owl_1 = 'owl_content_three';
     }
 
-    if(count($item->services) == 4){
+    if($count_services == 4){
     $owl_1 = 'owl_content_four';
     }
 
-    if(count($item->services) >= 5){
+    if($count_services >= 5){
     $owl_1 = 'owl_content_five';
     }
     @endphp
 
 
     <div class="{{$owl_1}} owl-carousel owl-theme" dir="ltr">
-      @foreach ($item->services as $service)
+      @foreach ($services_foreach as $service)
       <div class="item">
         <div class="card ovf-hidden">
           <a class="owl_content_img view overlay link_href"
@@ -215,7 +212,7 @@ $menu = provider_menu();
           <a class="owl_content_img view overlay link_href"
             href="{{route('front.list',['service_id' => $service->id])}}">
             <div class="card-body">
-              <h4 class="card-title text-capitalize">{{$service->getTranslation('title',getCode())}}</h4>
+              <h4 class="card-title text-capitalize">{{$service->getTranslation('title',getCode())}} {{$service->id}}</h4>
             </div>
           </a>
         </div>

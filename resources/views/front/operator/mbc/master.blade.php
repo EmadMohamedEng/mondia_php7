@@ -78,8 +78,10 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-
-          @foreach(get_providers_mbc(session()->get('MSISDN')) as $provider)
+          @php
+              $providers_mbc = get_providers_mbc(session()->get('subscription_day'))
+          @endphp
+          @foreach($providers_mbc as $provider)
 
           <li class="nav-item dropdown">
             <a class="menuTwo nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -337,7 +339,7 @@
               </a>
             </li>
 
-            @foreach(get_providers_mbc(session()->get('MSISDN')) as $provider)
+            @foreach($providers_mbc as $provider)
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 @if($provider->image)
@@ -536,7 +538,7 @@
             <?php
             $style = "background: transparent;";
             ?>
-            @foreach(get_providers_mbc(session()->get('MSISDN')) as $provider)
+            @foreach($providers_mbc as $provider)
             <li class="nav-item dropdown">
               <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" <?php echo $style ?>">
                 @if($provider->image)
