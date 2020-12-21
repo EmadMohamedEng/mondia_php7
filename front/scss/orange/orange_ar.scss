@@ -526,7 +526,7 @@ select {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              direction: ltr;
+              direction: rtl;
               margin-bottom: 0;
             }
           }
@@ -567,7 +567,7 @@ select {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              direction: ltr;
+              direction: rtl;
               margin-bottom: 0;
             }
           }
@@ -648,7 +648,7 @@ select {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              direction: ltr;
+              direction: rtl;
               margin-bottom: 0;
             }
           }
@@ -694,7 +694,7 @@ select {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              direction: ltr;
+              direction: rtl;
               margin-bottom: 0;
             }
           }
@@ -823,7 +823,7 @@ select {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            direction: ltr;
+            direction: rtl;
             margin-bottom: 0;
           }
         }
@@ -879,7 +879,7 @@ select {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          direction: ltr;
+          direction: rtl;
           margin-bottom: 0;
         }
       }
@@ -1937,6 +1937,7 @@ select {
   /* Start Profile Page */
   .profile {
     margin: 3.5rem auto;
+    width: 90%;
 
     .profile_title {
       color: $text_color;
@@ -1955,12 +1956,14 @@ select {
               width: 25%;
               color: $text_color;
               border: 0;
+              text-align: right;
             }
 
             .label-view2 {
               width: 75%;
               color: $white_color;
               border: 0;
+              text-align: right;
             }
           }
         }

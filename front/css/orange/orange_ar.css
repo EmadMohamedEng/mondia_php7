@@ -450,7 +450,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_two .item .card {
@@ -480,7 +480,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_three .item .card {
@@ -540,7 +540,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_five .item.item_muslim,
@@ -578,7 +578,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_five .item .card_muslim_guid,
@@ -687,7 +687,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   margin-bottom: 0;
 }
 .main_container .list_muslim .content_carousel_head .link_title {
@@ -727,7 +727,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   margin-bottom: 0;
 }
 .main_container .inner_page {
@@ -1536,6 +1536,7 @@ select:active {
 }
 .main_container .profile {
   margin: 3.5rem auto;
+  width: 90%;
 }
 .main_container .profile .profile_title {
   color: #FF6600;
@@ -1550,11 +1551,13 @@ select:active {
   width: 25%;
   color: #FF6600;
   border: 0;
+  text-align: right;
 }
 .main_container .profile .profile_table table tbody tr .label-view2 {
   width: 75%;
   color: #FFF;
   border: 0;
+  text-align: right;
 }
 .main_container .terms_page {
   margin: 1.5rem auto;
