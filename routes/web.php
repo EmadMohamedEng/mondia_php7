@@ -160,6 +160,9 @@ define('orange',orange_op_id());
 
 Route::get('orange_portal_login', 'OrangeController@login');
 Route::post('orange_portal_login', 'OrangeController@postLogin');
+Route::get('checkpincode', 'OrangeController@checkpincode');
+Route::post('checkpincode_confirm', 'OrangeController@checkpincode_confirm');
+Route::post('ResendPincode', 'OrangeController@ResendPincode');
 Route::get('orange_portal_unsub', 'OrangeController@unsubscribe');
 Route::post('orange_portal_unsub', 'OrangeController@postUnsubscribe');
 Route::get('orange_logout', 'OrangeController@logout');
