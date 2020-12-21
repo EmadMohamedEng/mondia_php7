@@ -16,7 +16,9 @@
 }
 
 .main_container .landing_page .strip .alkanz_logo {
-  width: 75%
+  width: 35%;
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
 }
 
 .landing_page .strip h2 {
