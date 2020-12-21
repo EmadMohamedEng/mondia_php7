@@ -12,6 +12,11 @@
 
 .main_container .img-fluid img {
   width: 35%;
+  margin-top: 11%;
+}
+
+.main_container .landing_page .strip .alkanz_logo {
+  width: 75%
 }
 
 .landing_page .strip h2 {
@@ -25,7 +30,7 @@
 
 .best_features {
   color: #e0c26c;
-  font-size: 13px;
+  font-size: 14px;
   padding: 0 1%;
 }
 

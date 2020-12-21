@@ -19,6 +19,15 @@
 </head>
 
 <style>
+  @font-face {
+  font-family: CairoRegular;
+  src: url('front/font/Cairo-Regular.ttf')
+}
+
+.main_container .landing_page .strip .best_features {
+  font-family: CairoRegular;
+}
+
   .main_container .landing_page {
     margin-top: 0;
   }
@@ -68,7 +77,7 @@ if ($lang == 'ar') {
       </div>
 
       <div class="col-7 p-0">
-        <div class="img-fluid text-center p-2 d-flex justify-content-start">
+        <div class="img-fluid">
           <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
         </div>
       </div>
@@ -76,7 +85,8 @@ if ($lang == 'ar') {
 
     <div class="landing_page">
       <div class="strip text-dark">
-        <h2>@lang('messages.enjoy_time_landing')</h2>
+        <!-- <h2>@lang('messages.enjoy_time_landing')</h2> -->
+        <img class="alkanz_logo m-auto d-block" src='{{asset("front/images/mbc_landing/alkazn_logo.png")}}' alt='Logo'>
         <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
       </div>
 
@@ -142,7 +152,7 @@ if ($lang == 'ar') {
               </select>
             </div>
 
-            <div class="change_cost cancel text-center text-white"  style="{{$left}}">
+            <div class="change_cost cancel text-center text-white" style="{{$left}}">
               @foreach($operators as $operator)
               <p id="{{"cost$operator->id"}}" style="display:none">{{ $lang == 'ar' ? $operator->cost_ar : $operator->cost_en }}</p>
               @endforeach
@@ -198,7 +208,7 @@ if ($lang == 'ar') {
         $('#dropdownMenu1').html(x);
       })
 
-      $('.mdb-select').click(function (e) {
+      $('.mdb-select').click(function(e) {
         var id = $(this).children(":selected").attr("id");
         $('.change_cost').children().css('display', 'none');
         $(`#cost${id}`).css('display', 'block');
