@@ -23,7 +23,7 @@ App::setLocale($lang);
   src: url('front/font/AraJozoor-Regular.ttf');
 }
 
-.main_container .landing_page .strip .best_features {
+body {
   font-family: AraJozoor-Regular;
 }
 
