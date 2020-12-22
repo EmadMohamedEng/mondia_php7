@@ -41,12 +41,12 @@
           <div class="card ovf-hidden">
             <a class="owl_content_img view overlay link_href" href="{{route('front.inner',['id' => $item->content_id])}}">
               @php
-              if($item->type == 1){
-              $src = $item->image_preview;
-              }elseif($item->type == 3){
-              $src = $item->video;
-              }elseif($item->type == 2){
-              $src = $item->image_preview;
+              if($item->content->type == 1){
+              $src = $item->content->image_preview;
+              }elseif($item->content->type == 3){
+              $src = $item->content->video;
+              }elseif($item->content->type == 2){
+              $src = $item->content->image_preview;
               }else{ // text defauly image
               $src = url('front\images\Cutting\Contnent_Page\004.png');
               }

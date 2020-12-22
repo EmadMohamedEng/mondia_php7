@@ -534,56 +534,118 @@ class FrontController extends Controller
 
   public function search(Request $request)
   {
+
+    if(request()->get('OpID') == MBC_OP_ID){
+        if( (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN')) ){
+
+            $day = session()->get('subscription_day');
+
+            $services = Service::select('services.*')
+            ->join('providers', 'services.provider_id', 'providers.id')
+            ->join('contents', 'services.id', 'contents.service_id')
+            ->join('mbc_contents', 'contents.id', 'mbc_contents.content_id')
+            ->join('translatables', 'translatables.record_id', '=', 'services.id')
+            ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
+            ->where('mbc_contents.subscription_day', '<=', $day)
+            ->where('translatables.table_name', 'services')
+            ->where('translatables.column_name', 'title')
+            ->where(function ($q) use ($request) {
+                $q->where('services.title', 'like', '%' . $request->search . '%');
+                $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+            })->get();
+
+            $contents = MbcContent::select('mbc_contents.*')
+            ->join('contents', 'contents.id', 'mbc_contents.content_id')
+            ->join('services', 'services.id', 'contents.service_id')
+            ->join('translatables', 'translatables.record_id', '=', 'contents.id')
+            ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
+            ->where('mbc_contents.subscription_day', '<=', $day)
+            ->where('translatables.table_name', 'contents')
+            ->where('translatables.column_name', 'title')
+            ->where(function ($q) use ($request) {
+                $q->where('contents.title', 'like', '%' . $request->search . '%');
+                $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+            })->get();
+
+            if(get_setting('filters_flag')){
+              $filters = Filters::select('filters.*', 'filters.id as filter_id')
+              ->join('translatables', 'translatables.record_id', '=', 'filters.id')
+              ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
+              ->where('translatables.table_name', 'filters')
+              ->where('translatables.column_name', 'title')
+              ->where(function ($q) use ($request) {
+              $q->where('filters.title', 'like', '%' . $request->search . '%');
+              $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+              });
+            }
+
+            if (request()->has('OpID') && request()->get('OpID') != '' && get_setting('filters_flag')) {
+              $filters = $filters->join('filter_posts', 'filter_posts.filter_id', '=', 'filters.id')
+              ->where('filter_posts.operator_id', request()->get('OpID'))
+              ->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+            }
+
+            if(get_setting('filters_flag')){
+              $filters = $filters->groupBy('filter_id')->get();
+              return view('front.operator.mbc.search_result', compact('services', 'contents', 'filters'));
+            }
+
+            return view('front.operator.mbc.search_result', compact('services', 'contents'));
+
+        }else{
+            return redirect('mbc_portal_landing');
+        }
+    }
+
     $services = Service::select('services.*', 'services.id as service_id')
-      ->join('translatables', 'translatables.record_id', '=', 'services.id')
-      ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
-      ->where('translatables.table_name', 'services')
-      ->where('translatables.column_name', 'title')
-      ->where(function ($q) use ($request) {
+    ->join('translatables', 'translatables.record_id', '=', 'services.id')
+    ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
+    ->where('translatables.table_name', 'services')
+    ->where('translatables.column_name', 'title')
+    ->where(function ($q) use ($request) {
         $q->where('services.title', 'like', '%' . $request->search . '%');
         $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
-      });
+    });
 
     $contents = Video::select('contents.*', 'contents.id as content_id')
-      ->join('translatables', 'translatables.record_id', '=', 'contents.id')
-      ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
-      ->where('translatables.table_name', 'contents')
-      ->where('translatables.column_name', 'title')
-      ->where(function ($q) use ($request) {
+    ->join('translatables', 'translatables.record_id', '=', 'contents.id')
+    ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
+    ->where('translatables.table_name', 'contents')
+    ->where('translatables.column_name', 'title')
+    ->where(function ($q) use ($request) {
         $q->where('contents.title', 'like', '%' . $request->search . '%');
         $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
-      });
+    });
 
-      if(get_setting('filters_flag')){
+    if(get_setting('filters_flag')){
         $filters = Filters::select('filters.*', 'filters.id as filter_id')
         ->join('translatables', 'translatables.record_id', '=', 'filters.id')
         ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
         ->where('translatables.table_name', 'filters')
         ->where('translatables.column_name', 'title')
         ->where(function ($q) use ($request) {
-          $q->where('filters.title', 'like', '%' . $request->search . '%');
-          $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
+        $q->where('filters.title', 'like', '%' . $request->search . '%');
+        $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
         });
-      }
+    }
 
     if (request()->has('OpID') && request()->get('OpID') != '') {
-      $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
+    $content = $contents->join('posts', 'posts.video_id', '=', 'contents.id')
         ->where('posts.operator_id', request()->get('OpID'))
         ->where('posts.show_date', '<=', Carbon::now()->toDateString());
     }
     if (request()->has('OpID') && request()->get('OpID') != '') {
-      $services = $services->whereHas('videos', function ($q) {
+    $services = $services->whereHas('videos', function ($q) {
         $q->join('posts', 'posts.video_id', '=', 'contents.id')
-          ->where('posts.operator_id', request()->get('OpID'))
-          ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
-      });
+        ->where('posts.operator_id', request()->get('OpID'))
+        ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+    });
     }
     if (request()->has('OpID') && request()->get('OpID') != '' && get_setting('filters_flag')) {
-      $filters = $filters->join('filter_posts', 'filter_posts.filter_id', '=', 'filters.id')
-      ->where('filter_posts.operator_id', request()->get('OpID'))
-      ->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
+    $filters = $filters->join('filter_posts', 'filter_posts.filter_id', '=', 'filters.id')
+    ->where('filter_posts.operator_id', request()->get('OpID'))
+    ->where('filter_posts.published_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'));
     }
-
     $services = $services->groupBy('service_id')->get();
     $contents = $contents->groupBy('content_id')->get();
     if(get_setting('filters_flag')){
