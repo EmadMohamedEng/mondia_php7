@@ -26,7 +26,6 @@
       </div>
     </div>
 
-
     <div class="row m-0">
         @foreach ($services as $service)
         @if(request()->get('OpID') == mbc || request()->get('OpID') == orange  )

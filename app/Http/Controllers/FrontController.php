@@ -118,14 +118,14 @@ class FrontController extends Controller
     if(request()->get('OpID') == MBC_OP_ID){
       if( (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN')) ){
 
-        $day = session()->get('subscription_day');
+        $sub = get_mbc_sub(session()->get('MSISDN'));
 
         $services = [];
         $provider = null;
 
         if($request->provider_id){
           $provider = Provider::whereId($request->provider_id)->first();
-          $services = get_service_mbc($day, $provider);
+          $services = get_service_mbc($sub, $provider);
         }
 
         return view('front.operator.mbc.service', compact('services', 'provider'));
@@ -167,14 +167,14 @@ class FrontController extends Controller
       if(request()->get('OpID') == MBC_OP_ID){
         if( (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN')) ){
 
-          $day = session()->get('subscription_day');
+          $sub = get_mbc_sub(session()->get('MSISDN'));
 
           $service = [];
           $contents = [];
 
           if($request->service_id){
             $service = Service::find($request->service_id);
-            $contents = get_content_mbc($day, $service);
+            $contents = get_content_mbc($sub, $service);
           }
 
           return view('front.operator.mbc.list_content', compact('contents', 'service'));
@@ -538,7 +538,13 @@ class FrontController extends Controller
     if(request()->get('OpID') == MBC_OP_ID){
         if( (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN')) ){
 
-            $day = session()->get('subscription_day');
+            $sub = get_mbc_sub(session()->get('MSISDN'));
+
+            if($sub->country == 'KSA' && $sub->operator == 'STC'){
+              $sub_operator = 'ksa-stc';
+            }else{
+              $sub_operator = 'all';
+            }
 
             $services = Service::select('services.*')
             ->join('providers', 'services.provider_id', 'providers.id')
@@ -546,26 +552,28 @@ class FrontController extends Controller
             ->join('mbc_contents', 'contents.id', 'mbc_contents.content_id')
             ->join('translatables', 'translatables.record_id', '=', 'services.id')
             ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
-            ->where('mbc_contents.subscription_day', '<=', $day)
+            ->where('mbc_contents.operator', $sub_operator)
+            ->where('mbc_contents.subscription_day', '<=', $sub->day)
             ->where('translatables.table_name', 'services')
             ->where('translatables.column_name', 'title')
             ->where(function ($q) use ($request) {
                 $q->where('services.title', 'like', '%' . $request->search . '%');
                 $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
-            })->get();
+            })->groupBy('services.id')->get();
 
             $contents = MbcContent::select('mbc_contents.*')
             ->join('contents', 'contents.id', 'mbc_contents.content_id')
             ->join('services', 'services.id', 'contents.service_id')
             ->join('translatables', 'translatables.record_id', '=', 'contents.id')
             ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
-            ->where('mbc_contents.subscription_day', '<=', $day)
+            ->where('mbc_contents.operator', $sub_operator)
+            ->where('mbc_contents.subscription_day', '<=', $sub->day)
             ->where('translatables.table_name', 'contents')
             ->where('translatables.column_name', 'title')
             ->where(function ($q) use ($request) {
                 $q->where('contents.title', 'like', '%' . $request->search . '%');
                 $q->orWhere('tans_bodies.body', 'like', '%' . $request->search . '%');
-            })->get();
+            })->groupBy('mbc_contents.id')->get();
 
             if(get_setting('filters_flag')){
               $filters = Filters::select('filters.*', 'filters.id as filter_id')
@@ -1851,7 +1859,6 @@ class FrontController extends Controller
         $sub = json_decode($sub);
         $date = date('Y-m-d');
         $subscriber_day = $sub->day;
-
         $today_date_format = date('D');
         $occassion_date_format = date('Y-m-d');
 
@@ -1867,11 +1874,10 @@ class FrontController extends Controller
 
         $subscriber_content = $contents->orderBy('subscription_day', 'DESC')->get();
 
-        // $subscriber_content = MbcContent::where('subscription_day' , '<=' , $subscriber_day)->orderBy('subscription_day', 'DESC')->get();
-        // dd($subscriber_content[0]['subscription_day']);
         if($sub && isset($sub->created_at)){
           $date = date('Y-m-d',strtotime($sub->created_at));
         }
+
         return view('front.profile',compact('date', 'subscriber_content', 'subscriber_day'));
       }
       return redirect('mbc_portal_login');
