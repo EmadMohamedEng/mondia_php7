@@ -1766,7 +1766,7 @@ select {
         padding: 0 1rem;
         background: transparent;
         border-bottom: 1px solid $grey_color;
-        color: $black_color;
+        color: $text_color;
         border-top: 0;
         border-right: 0;
         border-left: 0;
@@ -2092,21 +2092,23 @@ select {
       z-index: 99999999999;
 
       .header_logo {
-        .logo_orange {
-          text-align: left;
+        .link_href {
+          .logo_orange {
+            text-align: left;
 
-          img {
-            width: 50% !important;
-            margin-top: -0.65rem !important;
+            img {
+              width: 50%;
+              margin-top: -0.65rem;
+            }
           }
-        }
 
-        .img_khir {
-          text-align: center !important;
+          .img_khir {
+            text-align: center;
 
-          img {
-            width: 70% !important;
-            margin-top: 0.05rem !important;
+            img {
+              width: 70%;
+              margin-top: 0.05rem;
+            }
           }
         }
       }
@@ -2631,18 +2633,7 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          background: $bg_color;
-          color: $white_color;
           width: 70%;
-          font-size: 1rem;
-          font-weight: bold;
-          text-align: center;
-          border: 0;
-          border-radius: 8px;
-          -webkit-border-radius: 8px;
-          -moz-border-radius: 8px;
-          -ms-border-radius: 8px;
-          -o-border-radius: 8px;
         }
       }
 
@@ -2770,21 +2761,23 @@ select {
       z-index: 99999999999;
 
       .header_logo {
-        .logo_orange {
-          text-align: left;
+        .link_href {
+          .logo_orange {
+            text-align: left;
 
-          img {
-            width: 50% !important;
-            margin-top: -0.65rem !important;
+            img {
+              width: 50%;
+              margin-top: -0.65rem;
+            }
           }
-        }
 
-        .img_khir {
-          text-align: center !important;
+          .img_khir {
+            text-align: center;
 
-          img {
-            width: 70% !important;
-            margin-top: 0.05rem !important;
+            img {
+              width: 70%;
+              margin-top: 0.05rem;
+            }
           }
         }
       }
@@ -2795,7 +2788,7 @@ select {
         margin-left: -18%;
 
         .dropdown-menu2 {
-          left: 0%;
+          left: -5%;
           top: 70%;
           min-width: 8rem;
         }
@@ -2844,7 +2837,7 @@ select {
         .navbar_ul {
           background-color: $bg_color2 !important;
           border: 2px solid $bg_color;
-          width: 15rem;
+          width: 14rem;
           height: 100vh;
           padding: 0 0;
           overflow-y: scroll;
@@ -2861,7 +2854,7 @@ select {
 
               .arrow_back {
                 font-size: 1rem;
-                float: right;
+                float: left;
                 color: $text_color;
 
                 &:hover,
@@ -2880,6 +2873,7 @@ select {
             .nav-link {
               padding: 0;
               text-align: right;
+              font-size: 0.9rem;
 
               .icon_before {
                 color: $text_color;
@@ -2896,6 +2890,7 @@ select {
                 padding: 0.25rem 0;
                 width: 90% !important;
                 margin-right: 12%;
+                font-size: 0.85rem;
 
                 &.dropdown-item2 {
                   width: 100% !important;
@@ -3319,18 +3314,7 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          background: $bg_color;
-          color: $white_color;
           width: 70%;
-          font-size: 1rem;
-          font-weight: bold;
-          text-align: center;
-          border: 0;
-          border-radius: 8px;
-          -webkit-border-radius: 8px;
-          -moz-border-radius: 8px;
-          -ms-border-radius: 8px;
-          -o-border-radius: 8px;
         }
       }
 
@@ -3452,21 +3436,23 @@ select {
       z-index: 99999999999;
 
       .header_logo {
-        .logo_orange {
-          text-align: left;
+        .link_href {
+          .logo_orange {
+            text-align: left;
 
-          img {
-            width: 50% !important;
-            margin-top: -0.65rem !important;
+            img {
+              width: 50%;
+              margin-top: -0.65rem;
+            }
           }
-        }
 
-        .img_khir {
-          text-align: center !important;
+          .img_khir {
+            text-align: center;
 
-          img {
-            width: 70% !important;
-            margin-top: 0.05rem !important;
+            img {
+              width: 70%;
+              margin-top: 0.05rem;
+            }
           }
         }
       }
@@ -4025,18 +4011,7 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          background: $bg_color;
-          color: $white_color;
           width: 70%;
-          font-size: 1rem;
-          font-weight: bold;
-          text-align: center;
-          border: 0;
-          border-radius: 8px;
-          -webkit-border-radius: 8px;
-          -moz-border-radius: 8px;
-          -ms-border-radius: 8px;
-          -o-border-radius: 8px;
         }
       }
 
@@ -4158,21 +4133,23 @@ select {
       z-index: 99999999999;
 
       .header_logo {
-        .logo_orange {
-          text-align: left;
+        .link_href {
+          .logo_orange {
+            text-align: left;
 
-          img {
-            width: 50% !important;
-            margin-top: -0.65rem !important;
+            img {
+              width: 50%;
+              margin-top: -0.85rem;
+            }
           }
-        }
 
-        .img_khir {
-          text-align: center !important;
+          .img_khir {
+            text-align: center;
 
-          img {
-            width: 70% !important;
-            margin-top: 0.05rem !important;
+            img {
+              width: 70%;
+              margin-top: 0.05rem;
+            }
           }
         }
       }
@@ -4183,7 +4160,7 @@ select {
         margin-left: -18%;
 
         .dropdown-menu2 {
-          left: 0%;
+          left: -5%;
           top: 70%;
           min-width: 8rem;
         }
@@ -4249,7 +4226,7 @@ select {
 
               .arrow_back {
                 font-size: 1rem;
-                float: right;
+                float: left;
                 color: $text_color;
 
                 &:hover,
@@ -4357,7 +4334,13 @@ select {
 
             .owl_content_img {
               img {
-                height: 10rem;
+                height: 11.5rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
               }
             }
           }
@@ -4374,7 +4357,13 @@ select {
 
             .owl_content_img {
               img {
-                height: 10.438rem;
+                height: 12.063rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
               }
             }
           }
@@ -4388,10 +4377,10 @@ select {
           width: 100%;
 
           &.item_muslim {
-            height: 10rem;
+            height: 11rem;
 
             .card_muslim_guid {
-              width: 80%;
+              width: 75%;
               margin: 0 auto;
 
               .owl_content_img {
@@ -4401,7 +4390,7 @@ select {
               }
 
               .card-body {
-                top: 9rem;
+                top: 10rem;
               }
             }
           }
@@ -4411,7 +4400,7 @@ select {
 
             .owl_content_img {
               img {
-                height: 10.438rem;
+                height: 12.063rem;
               }
             }
 
@@ -4447,7 +4436,7 @@ select {
         .card {
           .owl_content_img {
             img {
-              height: 10.125rem;
+              height: 12.219rem;
             }
           }
 
@@ -4477,7 +4466,7 @@ select {
 
         img {
           width: 100%;
-          max-height: 21.5rem;
+          max-height: 24.875rem;
         }
 
         audio {
@@ -4707,18 +4696,7 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          background: $bg_color;
-          color: $white_color;
           width: 70%;
-          font-size: 1rem;
-          font-weight: bold;
-          text-align: center;
-          border: 0;
-          border-radius: 8px;
-          -webkit-border-radius: 8px;
-          -moz-border-radius: 8px;
-          -ms-border-radius: 8px;
-          -o-border-radius: 8px;
         }
       }
 
@@ -4825,7 +4803,7 @@ select {
   }
 
   .dropdown-toggle::after {
-    margin-right: unset !important;
+    margin-left: 0;
   }
 
   .main_container {
@@ -4834,27 +4812,29 @@ select {
     padding-top: 5rem;
 
     .header {
-      position: fixed;
-      height: 5rem;
+      position: fixed !important;
+      height: 5.5rem;
       top: 0;
       z-index: 99999999999;
 
       .header_logo {
-        .logo_orange {
-          text-align: right;
+        .link_href {
+          .logo_orange {
+            text-align: left;
 
-          img {
-            width: 35% !important;
-            margin-top: -0.85rem !important;
+            img {
+              width: 40%;
+              margin-top: -0.85rem;
+            }
           }
-        }
 
-        .img_khir {
-          text-align: center !important;
+          .img_khir {
+            text-align: center;
 
-          img {
-            width: 50% !important;
-            margin-top: 0.05rem !important;
+            img {
+              width: 50%;
+              margin-top: 0.5rem;
+            }
           }
         }
       }
@@ -4862,14 +4842,14 @@ select {
       .arrow_back {}
 
       .lang_mbc {
-        margin-right: -3%;
-        font-size: 1.35rem;
+        margin-left: 0;
+        margin-top: 3%;
 
         .dropdown-menu2 {
-          font-size: 1.25rem;
-          left: 40%;
-          top: 55%;
-          min-width: 9rem;
+          left: 0%;
+          top: 70%;
+          min-width: 10rem;
+          font-size: 1.5rem;
         }
       }
     }
@@ -4896,8 +4876,8 @@ select {
           outline: 0;
           font-size: 1.5rem;
           position: fixed;
-          top: 2.5rem;
-          left: 4rem;
+          top: 2.75rem;
+          right: -3%;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -4916,10 +4896,14 @@ select {
         .navbar_ul {
           background-color: $bg_color2 !important;
           border: 2px solid $bg_color;
-          width: 22rem;
+          width: 20rem;
           height: 100vh;
           padding: 0 0;
           overflow-y: scroll;
+
+          .nav_item_welc {
+            text-align: right;
+          }
 
           .nav-item {
             padding: 0.25rem 0.75rem;
@@ -4928,8 +4912,8 @@ select {
               margin-bottom: 1rem;
 
               .arrow_back {
-                font-size: 1.25rem;
-                float: right;
+                font-size: 1.5rem;
+                float: left;
                 color: $text_color;
 
                 &:hover,
@@ -4947,6 +4931,7 @@ select {
 
             .nav-link {
               padding: 0;
+              text-align: right;
               font-size: 1.25rem;
 
               .icon_before {
@@ -4963,8 +4948,740 @@ select {
               .dropdown-item {
                 padding: 0.25rem 0;
                 width: 90% !important;
-                margin-left: 12%;
+                margin-right: 12%;
+                font-size: 1.1rem;
+
+                &.dropdown-item2 {
+                  width: 100% !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .img_carousel {
+      margin-top: 0;
+
+      .owl_one {
+        .item {
+          .owl_one_img {
+            img {
+              height: 19rem;
+            }
+          }
+
+          .content_free {
+            top: 5%;
+            right: -1%;
+          }
+
+          .btn_orange {
+            button {
+              width: 97%;
+              top: 93.5%;
+              left: 48.6%;
+
+              &:focus {
+                top: 92.5%;
+                left: 49.6%;
+              }
+            }
+          }
+        }
+      }
+
+      .owl-theme {
+        .owl-nav {
+          button {
+
+            &.owl-next,
+            &.owl-prev {
+              bottom: 6rem;
+            }
+
+            &.owl-next {
+              right: -2% !important;
+            }
+          }
+        }
+      }
+    }
+
+    .content_carousel {
+      .content_carousel_head {
+        margin-top: 1rem;
+      }
+
+      .owl_content_one {
+        .item {
+          width: 100%;
+
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 22.719rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_two,
+      .owl_content_three {
+        .item {
+          width: 100%;
+
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 22.719rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_four,
+      .owl_content_five,
+      .owl_muslim_guide {
+        .item {
+          width: 100%;
+
+          &.item_muslim {
+            height: 14rem;
+
+            .card_muslim_guid {
+              width: 75%;
+              margin: 0 auto;
+
+              .owl_content_img {
+                img {
+                  height: auto;
+                }
+              }
+
+              .card-body {
+                top: 12.5rem;
+              }
+            }
+          }
+
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 22.719rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .list_page {
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 14px;
+          }
+        }
+
+        .btn_more {
+          font-size: 14px;
+        }
+      }
+
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
+
+      .item {
+        .card {
+          .owl_content_img {
+            img {
+              height: 12.219rem;
+            }
+          }
+
+          .card-body {
+            padding: 1rem 0.25rem;
+
+            .card-title {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    .list_muslim {
+      .item {
+        width: 80%;
+
+        .card {
+          width: 70%;
+          margin: 0 auto;
+        }
+
+        .card-body {
+          margin-top: 4%;
+        }
+      }
+    }
+
+    .inner_page {
+      margin-top: 0;
+
+      .cover {
+        h4 {
+          font-size: 1rem;
+          padding: 0 0.35rem;
+        }
+
+        video {
+          padding: 0 0;
+        }
+
+        img {
+          width: 100%;
+          max-height: 24.875rem;
+        }
+
+        audio {
+          margin-top: -5%;
+          margin-left: 3%;
+        }
+
+        button {
+          top: 45%;
+          left: 30%;
+        }
+      }
+
+      .poster {
+        padding: 0 0.75rem;
+
+        .poster-details {
+          .title-wrapper {
+            h2 {
+              font-size: 1rem;
+            }
+          }
+
+          .outside-cover {
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      .socail_media {
+        width: 100%;
+
+        .pa_share {
+          margin-top: 0.75rem;
+        }
+
+        .shear_div {
+          padding-right: 0;
+
+          .facebook,
+          .twitter,
+          .messenger,
+          .whatsapp {
+            width: 90%;
+            height: 2.75rem;
+            margin-left: 0.5rem;
+            margin-top: 0.75rem;
+          }
+        }
+      }
+
+      .section_content {
+        .pa_Videos {
+          margin-top: 0.75rem;
+        }
+
+        .p_content,
+        .p_content_2 {
+          margin-left: 4%;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          top: 2rem;
+
+          .modal-header {
+            h5 {
+              font-size: 0.9rem;
+            }
+          }
+
+          .modal-footer {
+            justify-content: center;
+
+            .btn {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    .azan_page {
+      .azan_title {
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+
+      .input_text {
+        width: 85%;
+      }
+    }
+
+    .nearmosque_page {
+      margin: 0.5rem auto;
+
+      .nearmosque_title {
+        #map {
+          width: 100%;
+        }
+      }
+    }
+
+    .salah_time_page {
+      width: 100%;
+
+      .salah_time_title {
+        h2 {
+          margin-bottom: 0.5rem;
+          font-size: 1.5rem;
+        }
+      }
+
+      .time_btn {
+        margin-bottom: 4%;
+        height: 3.5rem;
+
+        .input_span {
+          padding: 0 !important;
+        }
+
+        .h4_time {
+          line-height: 3rem;
+          font-size: 1.15rem;
+          padding: 0 8px 0 0;
+        }
+
+        .h4_time_2 {
+          line-height: 3rem;
+          font-size: 1.15rem;
+          padding: 0 0 0 8px;
+        }
+      }
+    }
+
+    .sebha_page {
+      .display {
+        .btn-bar {
+          button {
+            width: 40%;
+          }
+        }
+      }
+
+      #sebhaModal {
+        .modal-dialog {
+          position: relative;
+          margin-top: 0;
+
+          .modal-content {
+            width: 95%;
+            position: fixed;
+            top: 57%;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+          }
+        }
+
+        .modal-title {
+          font-size: 1.75rem;
+        }
+
+        .choose_sebha {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .subscribe_page {
+      width: 100%;
+    }
+
+    .zakkah_page {
+      width: 90%;
+    }
+
+    .zakkah_v2_page {
+
+      .container {
+        max-width: 100%;
+      }
+
+      .currency_title,
+      .currency_icon,
+      .up_down {
+        font-size: 1.15rem;
+        margin-top: 1.75rem;
+      }
+
+      .currency_bg {
+        .flex_center {
+          .currency_text {
+            font-size: 1.10rem;
+          }
+        }
+
+        .form_input {
+          .textbox {
+            font-size: 1.10rem;
+          }
+        }
+
+        .result {
+          font-size: 1.10rem;
+        }
+      }
+
+      .zakah_result {
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    .merath_page {
+      width: 90%;
+
+      .border-bottom {
+        margin-bottom: 0.75rem;
+      }
+
+      .merath_title {
+        h2 {
+          text-align: center;
+          margin-bottom: 1rem;
+          font-size: 1.3rem;
+        }
+      }
+
+      .input_text {
+        .merath_input {
+          font-size: 1.15rem;
+        }
+      }
+
+      .input_span {
+        h4 {
+          line-height: 2.25rem;
+          font-size: 1.15rem;
+        }
+      }
+
+      .button_merath {
+        text-align: center;
+        margin: 5% auto;
+
+        .merath_btn {
+          width: 50%;
+        }
+      }
+
+      .table_table {
+        .thead2_h4 {
+          font-size: 1rem;
+        }
+
+        .table {
+          border: 2px $text_color solid;
+
+          tbody {
+            border-radius: 7px;
+            direction: rtl;
+
+            tr {
+
+              // td {}
+              .td_1 {
+                text-align: right;
                 font-size: 1.15rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .search_page {
+      margin: 1.5rem auto;
+
+      .textbox {
+        text-align: center;
+      }
+    }
+
+    .error_page {
+      margin: 0 auto 0 0;
+
+      svg {
+        height: 85%;
+      }
+
+      .message-box {
+        font-size: 1.5rem;
+        top: -18rem;
+        left: 42%;
+      }
+
+      .buttons-con {
+        top: -1rem;
+        left: 50%;
+      }
+    }
+
+    .profile {
+      width: 90%;
+      margin: 2.5rem auto;
+
+      .profile_table {
+        table {
+          tbody {
+            tr {
+              .label-view {
+                width: 40%;
+                font-size: 1.15rem;
+              }
+
+              .label-view2 {
+                width: 60%;
+                font-size: 1.15rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .loading-overlay {
+    .spinner-large {
+      bottom: 30%;
+      left: 31%;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1030px) {
+  .padding_phones {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .no_padding {
+    padding: 0;
+  }
+
+  .open_icon_nav_mbc {
+    display: none;
+  }
+
+  .navbar-light .navbar-toggler {
+    display: none;
+  }
+
+  .dropdown-toggle::after {
+    margin-left: 0;
+  }
+
+  .main_container {
+    width: 100%;
+    padding-bottom: 20%;
+    padding-top: 6rem;
+
+    .header {
+      position: fixed !important;
+      height: 6rem;
+      top: 0;
+      z-index: 99999999999;
+
+      .header_logo {
+        .link_href {
+          .logo_orange {
+            text-align: left;
+
+            img {
+              width: 30%;
+              margin-top: -0.65rem;
+            }
+          }
+
+          .img_khir {
+            text-align: center;
+
+            img {
+              width: 40%;
+              margin-top: 0.5rem;
+            }
+          }
+        }
+      }
+
+      .arrow_back {}
+
+      .lang_mbc {
+        font-size: 1.6rem;
+        margin-left: 0;
+        margin-top: 3%;
+
+        .dropdown-menu2 {
+          left: 0%;
+          top: 80%;
+          min-width: 12rem;
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .mbc_orange {
+      .navbar_three {
+        display: none;
+      }
+    }
+
+    .menu_all_op {
+      .nav_nav {
+        display: unset;
+        background-color: transparent;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        border: 0;
+
+        button {
+          opacity: 1;
+          outline: 0;
+          font-size: 1.85rem;
+          position: fixed;
+          top: 3.2rem;
+          right: -3%;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+
+          .icon_before {
+            color: $text_color !important;
+          }
+        }
+
+        .navbar-collapse {
+          z-index: 9999999;
+        }
+
+        .navbar_ul {
+          background-color: $bg_color2 !important;
+          border: 2px solid $bg_color;
+          width: 25rem;
+          height: 100vh;
+          padding: 0 0;
+          overflow-y: scroll;
+
+          .nav_item_welc {
+            text-align: right;
+            font-size: 1.6rem;
+          }
+
+          .nav-item {
+            padding: 0.25rem 0.75rem;
+
+            &.nav_item_logo {
+              margin-bottom: 1rem;
+
+              .arrow_back {
+                font-size: 1.5rem;
+                float: left;
+                color: $text_color;
+
+                &:hover,
+                &:focus {
+                  color: $white_color;
+                }
+              }
+
+              img {
+                width: 30%;
+                display: block;
+                margin: 0 auto;
+              }
+            }
+
+            .nav-link {
+              padding: 0;
+              text-align: right;
+              font-size: 1.65rem;
+
+              .icon_before {
+                color: $text_color;
+                padding-right: 0.5rem;
+              }
+
+              svg {
+                width: 10%;
+              }
+            }
+
+            .dropdown-menu {
+              .dropdown-item {
+                padding: 0.25rem 0;
+                width: 90% !important;
+                margin-right: 12%;
+                font-size: 1.35rem;
 
                 &.dropdown-item2 {
                   width: 100% !important;
@@ -5033,715 +5750,8 @@ select {
             font-size: 1.5rem;
           }
         }
-      }
-
-      .owl_content_one {
-        .item {
-          width: 100%;
-
-          .card {
-            width: 100%;
-
-            .owl_content_img {
-              img {
-                height: 22.719rem;
-              }
-            }
-
-            .card-body {
-              .card-title {
-                font-size: 1.25rem;
-              }
-            }
-          }
-        }
-      }
-
-      .owl_content_two,
-      .owl_content_three {
-        .item {
-          width: 100%;
-
-          .card {
-            width: 100%;
-
-            .owl_content_img {
-              img {
-                height: 22.719rem;
-              }
-            }
-
-            .card-body {
-              .card-title {
-                font-size: 1.25rem;
-              }
-            }
-          }
-        }
-      }
-
-      .owl_content_four,
-      .owl_content_five,
-      .owl_muslim_guide {
-        .item {
-          width: 100%;
-
-          &.item_muslim {
-            height: 14rem;
-
-            .card_muslim_guid {
-              width: 80%;
-              margin: 0 auto;
-
-              .owl_content_img {
-                img {
-                  height: auto;
-                }
-              }
-
-              .card-body {
-                top: 13.25rem;
-              }
-            }
-          }
-
-          .card {
-            width: 100%;
-
-            .owl_content_img {
-              img {
-                height: 22.719rem;
-              }
-            }
-
-            .card-body {
-              .card-title {
-                font-size: 1.25rem;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .list_page {
-      .content_carousel_head {
-        .link_title {
-          h6 {
-            font-size: 1.25rem;
-          }
-        }
 
         .btn_more {
-          font-size: 1.25rem;
-        }
-      }
-
-      .coming_soon {
-        width: 50%;
-        margin-top: 30% !important;
-      }
-
-      .item {
-        .card {
-          .owl_content_img {
-            img {
-              height: 15.208rem;
-            }
-          }
-
-          .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1rem;
-            }
-          }
-        }
-      }
-    }
-
-    .inner_page {
-      margin-top: 0;
-
-      .section_content {
-        .image_inner {
-          height: 170px;
-          width: 170px;
-        }
-      }
-
-      .cover {
-        h4 {
-          font-size: 1rem;
-          padding: 0 1rem;
-        }
-
-        video {
-          padding: 0 0;
-        }
-
-        img {
-          width: 100%;
-          max-height: 43.75rem;
-        }
-
-        audio {
-          margin-top: -5%;
-          margin-left: 3%;
-        }
-
-        button {
-          top: 45%;
-          left: 30%;
-        }
-      }
-
-      .poster {
-        padding: 0 0.75rem;
-
-        .poster-details {
-          .title-wrapper {
-            h2 {
-              font-size: 1rem;
-            }
-          }
-
-          .outside-cover {
-            font-size: 0.8rem;
-          }
-        }
-      }
-
-      .socail_media {
-        width: 100%;
-
-        .pa_share {
-          margin-top: 0.75rem;
-          font-size: 1rem;
-        }
-
-        .shear_div {
-          padding-right: 0;
-
-          .facebook,
-          .twitter,
-          .messenger,
-          .whatsapp {
-            width: 50%;
-            height: 3.5rem;
-            margin-left: 4.5rem;
-            margin-top: 0.75rem;
-            font-size: 1.75rem;
-          }
-        }
-      }
-
-      .section_content {
-        .pa_Videos {
-          margin-top: 0.75rem;
-          font-size: 1rem;
-        }
-
-        .p_content,
-        .p_content_2 {
-          margin-left: 4%;
-          font-size: 1rem;
-        }
-      }
-    }
-
-    .modal_cover {
-      .modal-dialog {
-        .modal-content {
-          top: 2rem;
-
-          .modal-header {
-            h5 {
-              font-size: 0.9rem;
-            }
-          }
-
-          .modal-footer {
-            justify-content: center;
-
-            .btn {
-              font-size: 0.9rem;
-            }
-          }
-        }
-      }
-    }
-
-    .azan_page {
-      .azan_title {
-        h2 {
-          font-size: 1.5rem;
-        }
-      }
-
-      .input_text {
-        width: 85%;
-      }
-    }
-
-    .nearmosque_page {
-      margin: 0.5rem auto;
-
-      .nearmosque_title {
-        #map {
-          width: 100%;
-        }
-      }
-    }
-
-    .salah_time_page {
-      width: 100%;
-
-      .salah_time_title {
-        h2 {
-          margin-bottom: 0.5rem;
-        }
-      }
-
-      .time_btn {
-        margin-bottom: 4%;
-        height: 3.5rem;
-
-        .input_span {
-          padding: 0 !important;
-        }
-
-        .h4_time {
-          line-height: 3rem;
-          font-size: 1rem;
-          padding: 0 0 0 5px;
-        }
-
-        .h4_time_2 {
-          line-height: 3rem;
-          font-size: 1rem;
-          padding: 0 5px 0 0;
-        }
-      }
-    }
-
-    .sebha_page {
-      .display {
-        .btn-bar {
-          button {
-            width: 100%;
-          }
-        }
-      }
-
-      #sebhaModal {
-        .modal-dialog {
-          position: relative;
-          margin-top: 0;
-
-          .modal-content {
-            width: 95%;
-            position: fixed;
-            top: 57%;
-            left: 50% !important;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-          }
-        }
-
-        .modal-title {
-          font-size: 1.25rem;
-        }
-
-        .choose_sebha {
-          font-size: 1.09rem;
-        }
-      }
-    }
-
-    .subscribe_page {
-      width: 100%;
-    }
-
-    .zakkah_page {
-      width: 90%;
-    }
-
-    .zakkah_v2_page {
-      .zakah_result {
-        width: 100%;
-        left: 0;
-      }
-    }
-
-    .merath_page {
-      width: 90%;
-
-      .border-bottom {
-        margin-bottom: 0.75rem;
-      }
-
-      .merath_title {
-        h2 {
-          text-align: center;
-          margin-bottom: 1rem;
-          font-size: 1.3rem;
-        }
-      }
-
-      .input_text {
-        // .merath_input {}
-      }
-
-      .input_span {
-        h4 {
-          line-height: 2.25rem;
-          font-size: 1.15rem;
-        }
-      }
-
-      .button_merath {
-        text-align: center;
-        margin: 5% auto;
-
-        .merath_btn {
-          background: $bg_color;
-          color: $white_color;
-          width: 70%;
-          font-size: 1rem;
-          font-weight: bold;
-          text-align: center;
-          border: 0;
-          border-radius: 8px;
-          -webkit-border-radius: 8px;
-          -moz-border-radius: 8px;
-          -ms-border-radius: 8px;
-          -o-border-radius: 8px;
-        }
-      }
-
-      .table_table {
-        .thead2_h4 {
-          font-size: 1rem;
-        }
-
-        .table {
-          border: 2px $text_color solid;
-
-          tbody {
-            border-radius: 7px;
-            direction: rtl;
-
-            tr {
-
-              // td {}
-              .td_1 {
-                text-align: right;
-                font-size: 0.85rem;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .search_page {
-      margin: 0.5rem auto;
-
-      .textbox {
-        text-align: center;
-      }
-    }
-
-    .error_page {
-      margin: 0 auto 0 0;
-
-      svg {
-        height: 85%;
-      }
-
-      .message-box {
-        font-size: 1.5rem;
-        top: -18rem;
-        left: 42%;
-      }
-
-      .buttons-con {
-        top: -1rem;
-        left: 50%;
-      }
-    }
-
-    .profile {
-      width: 90%;
-      margin: 2.5rem auto;
-
-      .profile_table {
-        table {
-          tbody {
-            tr {
-              .label-view {
-                width: 40%;
-                font-size: 0.75rem;
-              }
-
-              .label-view2 {
-                width: 60%;
-                font-size: 0.85rem;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .loading-overlay {
-    .spinner-large {
-      bottom: 30%;
-      left: 31%;
-    }
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1030px) {
-  .padding_phones {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-  }
-
-  .no_padding {
-    padding: 0;
-  }
-
-  .open_icon_nav_mbc {
-    display: none;
-  }
-
-  .navbar-light .navbar-toggler {
-    display: none;
-  }
-
-  .dropdown-toggle::after {
-    margin-left: unset;
-    margin-top: 1.25rem !important;
-  }
-
-  .main_container {
-    width: 100%;
-    padding-bottom: 20%;
-    padding-top: 5rem;
-
-    .header {
-      position: fixed;
-      height: 7rem;
-      top: 0;
-      z-index: 99999999999;
-
-      .header_logo {
-        .logo_orange {
-          text-align: right;
-
-          img {
-            width: 35% !important;
-            margin-top: -0.85rem !important;
-          }
-        }
-
-        .img_khir {
-          text-align: center !important;
-
-          img {
-            width: 50% !important;
-            margin-top: 0.5rem !important;
-          }
-        }
-      }
-
-      .arrow_back {}
-
-      .lang_mbc {
-        font-size: 1.75rem;
-
-        .dropdown-menu2 {
-          font-size: 1.5rem;
-          left: 50%;
-          top: 55%;
-          min-width: 10rem;
-        }
-      }
-    }
-
-    .mbc_orange {
-      .navbar_three {
-        display: none;
-      }
-    }
-
-    .menu_all_op {
-      .nav_nav {
-        display: unset;
-        background-color: transparent;
-        width: 0;
-        padding: 0;
-        margin: 0;
-        position: fixed;
-        top: 0;
-        border: 0;
-
-        button {
-          opacity: 1;
-          outline: 0;
-          font-size: 2rem;
-          position: fixed;
-          top: 3.5rem;
-          right: -3%;
-          transform: translate(-50%, -50%);
-          -webkit-transform: translate(-50%, -50%);
-          -moz-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          -o-transform: translate(-50%, -50%);
-
-          .icon_before {
-            color: $text_color !important;
-          }
-        }
-
-        .navbar-collapse {
-          z-index: 9999999;
-        }
-
-        .navbar_ul {
-          background-color: $bg_color2 !important;
-          border: 2px solid $bg_color;
-          width: 25rem;
-          height: 100vh;
-          padding: 0 0;
-          overflow-y: scroll;
-
-          .nav_item_welc {
-            font-size: 2rem;
-          }
-
-          .nav-item {
-            padding: 0.25rem 0.75rem;
-
-            &.nav_item_logo {
-              margin-bottom: 1rem;
-
-              .arrow_back {
-                font-size: 1.25rem;
-                float: right;
-                color: $text_color;
-
-                &:hover,
-                &:focus {
-                  color: $white_color;
-                }
-              }
-
-              img {
-                width: 30%;
-                display: block;
-                margin: 0 auto;
-              }
-            }
-
-            .nav-link {
-              padding: 0;
-              font-size: 1.75rem;
-
-              .icon_before {
-                color: $text_color;
-                padding-right: 0.5rem;
-              }
-
-              svg {
-                width: 10%;
-              }
-            }
-
-            .dropdown-menu {
-              .dropdown-item {
-                padding: 0.25rem 0;
-                width: 90% !important;
-                margin-left: 12%;
-                font-size: 1.5rem;
-
-                &.dropdown-item2 {
-                  width: 100% !important;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .img_carousel {
-      margin-top: 0;
-
-      .owl_one {
-        .item {
-          .owl_one_img {
-            img {
-              height: 19rem;
-            }
-          }
-
-          .content_free {
-            top: 5%;
-            right: -1%;
-          }
-
-          .btn_orange {
-            button {
-              width: 97%;
-              top: 93.5%;
-              left: 48.6%;
-
-              &:focus {
-                top: 92.5%;
-                left: 49.6%;
-              }
-            }
-          }
-        }
-      }
-
-      .owl-theme {
-        .owl-nav {
-          button {
-
-            &.owl-next,
-            &.owl-prev {
-              bottom: 6rem;
-            }
-
-            &.owl-next {
-              right: -2% !important;
-            }
-          }
-        }
-      }
-    }
-
-    .content_carousel {
-      .content_carousel_head {
-        margin-top: 2.5rem;
-
-        .link_title {
-          h6 {
-            font-size: 1.75rem;
-          }
-        }
-
-        .btn_more {
-          padding: 0.5rem 1.5rem;
           font-size: 1.5rem;
         }
       }
@@ -5755,13 +5765,13 @@ select {
 
             .owl_content_img {
               img {
-                height: 22.719rem;
+                height: 28rem;
               }
             }
 
             .card-body {
               .card-title {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
               }
             }
           }
@@ -5784,7 +5794,7 @@ select {
 
             .card-body {
               .card-title {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
               }
             }
           }
@@ -5798,10 +5808,10 @@ select {
           width: 100%;
 
           &.item_muslim {
-            height: 15rem;
+            height: 14rem;
 
             .card_muslim_guid {
-              width: 80%;
+              width: 75%;
               margin: 0 auto;
 
               .owl_content_img {
@@ -5811,7 +5821,7 @@ select {
               }
 
               .card-body {
-                top: 13.25rem;
+                top: 12.5rem;
               }
             }
           }
@@ -5821,13 +5831,13 @@ select {
 
             .owl_content_img {
               img {
-                height: 15.39rem;
+                height: 15.141rem;
               }
             }
 
             .card-body {
               .card-title {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
               }
             }
           }
@@ -5839,7 +5849,7 @@ select {
       .content_carousel_head {
         .link_title {
           h6 {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
           }
         }
 
@@ -5872,20 +5882,39 @@ select {
       }
     }
 
-    .inner_page {
-      margin-top: 0;
-
-      .section_content {
-        .image_inner {
-          height: 170px;
-          width: 170px;
+    .list_muslim {
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 1.75rem;
+          }
         }
       }
+      .item {
+        width: 80%;
+
+        .card {
+          width: 60%;
+          margin: 0 auto;
+        }
+
+        .card-body {
+          margin-top: 4%;
+
+          .card-title {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .inner_page {
+      margin-top: 0;
 
       .cover {
         h4 {
           font-size: 1rem;
-          padding: 0 1rem;
+          padding: 0 0.35rem;
         }
 
         video {
@@ -5919,7 +5948,7 @@ select {
           }
 
           .outside-cover {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
           }
         }
       }
@@ -5929,7 +5958,7 @@ select {
 
         .pa_share {
           margin-top: 0.75rem;
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
 
         .shear_div {
@@ -5951,13 +5980,13 @@ select {
       .section_content {
         .pa_Videos {
           margin-top: 0.75rem;
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
 
         .p_content,
         .p_content_2 {
           margin-left: 4%;
-          font-size: 1.35rem;
+          font-size: 26px;
         }
       }
     }
@@ -5997,60 +6026,52 @@ select {
     }
 
     .nearmosque_page {
-      margin: 3.5rem auto;
+      margin: 0.5rem auto;
 
       .nearmosque_title {
-        h2 {
-          font-size: 2rem;
-        }
-
         #map {
-          width: 90%;
+          width: 100%;
         }
       }
     }
 
     .salah_time_page {
-      width: 95%;
-      margin: 3.5rem auto;
+      width: 100%;
 
       .salah_time_title {
         h2 {
-          margin-bottom: 1rem;
+          margin-bottom: 0.75rem;
           font-size: 2rem;
         }
       }
 
       .time_btn {
         margin-bottom: 4%;
-        height: 5.5rem;
+        height: 3.5rem;
 
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          line-height: 5rem;
+          line-height: 3rem;
           font-size: 1.5rem;
-          padding: 0 0 0 5px;
+          padding: 0 8px 0 0;
         }
 
         .h4_time_2 {
-          line-height: 5rem;
+          line-height: 3rem;
           font-size: 1.5rem;
-          padding: 0 5px 0 0;
+          padding: 0 0 0 8px;
         }
       }
     }
 
     .sebha_page {
-      width: 40%;
-      margin: 9.5rem auto;
-
       .display {
         .btn-bar {
           button {
-            width: 100%;
+            width: 40%;
           }
         }
       }
@@ -6074,11 +6095,11 @@ select {
         }
 
         .modal-title {
-          font-size: 1.5rem;
+          font-size: 2rem;
         }
 
         .choose_sebha {
-          font-size: 1.5rem;
+          font-size: 1.75rem;
         }
       }
     }
@@ -6092,21 +6113,22 @@ select {
     }
 
     .zakkah_v2_page {
-      margin: 4% auto;
 
       .container {
         max-width: 100%;
       }
 
       .currency_title,
-      .currency_icon {
-        font-size: 1.75rem;
+      .currency_icon,
+      .up_down {
+        font-size: 1.5rem;
+        margin-top: 1.75rem;
       }
 
       .currency_bg {
         .flex_center {
           .currency_text {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
           }
         }
 
@@ -6117,7 +6139,7 @@ select {
         }
 
         .result {
-          font-size: 1.75rem;
+          font-size: 1.5rem;
         }
       }
 
@@ -6125,8 +6147,8 @@ select {
         width: 100%;
         left: 0;
 
-        .zakah_result_right,
-        .zakah_result_left {
+        .zakah_result_left,
+        .zakah_result_right {
           font-size: 2rem;
         }
       }
@@ -6142,21 +6164,22 @@ select {
       .merath_title {
         h2 {
           text-align: center;
-          margin-bottom: 1.5rem;
-          font-size: 2rem;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
         }
       }
 
       .input_text {
         .merath_input {
-          font-size: 1.75rem;
+          font-size: 1.5rem;
+          width: 60%;
         }
       }
 
       .input_span {
         h4 {
-          line-height: 4.5rem;
-          font-size: 1.75rem;
+          line-height: 2.25rem;
+          font-size: 1.5rem;
         }
       }
 
@@ -6165,18 +6188,8 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          background: $bg_color;
-          color: $white_color;
-          width: 60%;
-          font-size: 2.5rem;
-          font-weight: bold;
-          text-align: center;
-          border: 0;
-          border-radius: 8px;
-          -webkit-border-radius: 8px;
-          -moz-border-radius: 8px;
-          -ms-border-radius: 8px;
-          -o-border-radius: 8px;
+          width: 50%;
+          font-size: 1.75rem;
         }
       }
 
@@ -6194,10 +6207,13 @@ select {
 
             tr {
 
-              // td {}
               .td_1 {
-                font-size: 1.75rem;
-                padding: 1rem 1.25rem;
+                text-align: right;
+                font-size: 1.5rem;
+              }
+
+              .td_2 {
+                font-size: 1.5rem;
               }
             }
           }
@@ -6206,18 +6222,16 @@ select {
     }
 
     .search_page {
-      width: 95%;
-      margin: 3rem auto;
-
-      .textbox {
-        height: 5.5rem !important;
-        font-size: 2.75rem;
-      }
+      margin: 1.5rem auto;
 
       .form_search {
         .btn_search {
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
+      }
+
+      .textbox {
+        font-size: 1.5rem;
       }
     }
 
@@ -6243,12 +6257,6 @@ select {
     .profile {
       width: 90%;
       margin: 2.5rem auto;
-
-      .profile_title {
-        h2 {
-          font-size: 2.5rem;
-        }
-      }
 
       .profile_table {
         table {
@@ -6287,7 +6295,7 @@ select {
 
       .header_logo {
         .link_href {
-          text-align: center !important;
+          text-align: center;
 
           .logo_orange {
             img {
