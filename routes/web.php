@@ -165,7 +165,6 @@ Route::post('checkpincode_confirm', 'OrangeController@checkpincode_confirm');
 Route::post('ResendPincode', 'OrangeController@ResendPincode');
 Route::get('unsub_pincode', 'OrangeController@unsub_pincode');
 Route::post('unsub_pincode_confirm', 'OrangeController@unsub_pincode_confirm');
-
 Route::get('orange_portal_unsub', 'OrangeController@unsubscribe');
 Route::post('orange_portal_unsub', 'OrangeController@postUnsubscribe');
 Route::get('orange_logout', 'OrangeController@logout');

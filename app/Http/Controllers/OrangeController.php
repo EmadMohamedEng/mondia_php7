@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Session;
 use App\PincodeOrange;
 use App\UnsubPincodeOrange;
 use Carbon\Carbon;
+use Monolog\Logger;
+use Illuminate\Support\Facades\File;
+use Monolog\Handler\StreamHandler;
 
 
 class OrangeController extends Controller
@@ -51,9 +54,9 @@ class OrangeController extends Controller
       $pincode->expire_date_time = Carbon::parse($date)->addHour();
       $pincode->save();
       Session::put('msisdn_orange', $msisdn);
-
+      $message_pincode = " للاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
       $URL_Api = ORANGE_API_SENDPINCODE;
-      $param = "phone_number=$msisdn&message=$pincode_random";
+      $param = "phone_number=$msisdn&message=$message_pincode $pincode_random";
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL, $URL_Api);
       curl_setopt($ch, CURLOPT_POST, 1);
@@ -61,7 +64,12 @@ class OrangeController extends Controller
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
       $response = curl_exec($ch);
       curl_close($ch);
-
+      $actionName = "PinCode Orange";
+      $URL = $URL_Api;
+      $result['response'] = $response;
+      $result['phone_number'] = $msisdn;
+      $result['message'] = $message_pincode.$pincode_random;
+      $this->log($actionName, $URL, $result);
       //dd($response);
       if ($response == "1") {
         $lang =  session::get('lang');
@@ -100,7 +108,7 @@ class OrangeController extends Controller
       $now = Carbon::now()->format('Y-m-d H:i:s');  /*"2020-07-05 16:30:00"*/
       if ($now <= $expire_date_time) {
         $orangeSubscribe = $this->orangeSubscribe($msisdn);
-        if($orangeSubscribe == 0){
+        if($orangeSubscribe == 1){
           $this->orangeLoginSession($msisdn);
           if(session()->has('current_url')){
             return redirect(session()->get('current_url'));
@@ -114,9 +122,9 @@ class OrangeController extends Controller
         }
       } else {
         if (session::get("lang") == 'ar'){
-          $request->session()->flash('failed','انتهاء وقت الكود برجاء ارسال الكود مره اخرى');
+          $request->session()->flash('failed','انتهت صلاحية الكود يرجي الضغط علي اعادة ارسال كود التحقق');
         }else{
-          $request->session()->flash('failed','Resend the pincode');
+          $request->session()->flash('failed','The code has expired, please click on resend the pincode');
         }
         return redirect('checkpincode/');
       }
@@ -144,8 +152,9 @@ class OrangeController extends Controller
     $pincode->expire_date_time = Carbon::parse($date)->addHour();
     $pincode->save();
 
-    $URL_Api = ORANGE_API_SENDPINCODE;
-      $param = "phone_number=$msisdn&message=$pincode_random";
+    $message_pincode = " للاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
+      $URL_Api = ORANGE_API_SENDPINCODE;
+      $param = "phone_number=$msisdn&message=$message_pincode $pincode_random";
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL, $URL_Api);
       curl_setopt($ch, CURLOPT_POST, 1);
@@ -153,6 +162,12 @@ class OrangeController extends Controller
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
       $response = curl_exec($ch);
       curl_close($ch);
+      $actionName = "ResendPincode Orange";
+      $URL = $URL_Api;
+      $result['response'] = $response;
+      $result['phone_number'] = $msisdn;
+      $result['message'] = $message_pincode.$pincode_random;
+      $this->log($actionName, $URL, $result);
     if ($response == "1") {
       $lang =  session::get('lang');
       if ($lang == 'ar')
@@ -193,7 +208,7 @@ class OrangeController extends Controller
 
 
     if($checkStatus != "0"){  //  found
-      //dd("omar");
+
     date_default_timezone_set("Africa/Cairo");
     $random = mt_rand(1000, 9999);
     $pincode_random = $random;
@@ -204,8 +219,9 @@ class OrangeController extends Controller
     $pincode->expire_date_time = Carbon::parse($date)->addHour();
     $pincode->save();
     Session::put('unsub_orange', $msisdn);
-    $URL_Api = ORANGE_API_SENDPINCODE;
-      $param = "phone_number=$msisdn&message=$pincode_random";
+    $message_pincode = " لالغاء الاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
+      $URL_Api = ORANGE_API_SENDPINCODE;
+      $param = "phone_number=$msisdn&message=$message_pincode $pincode_random";
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL, $URL_Api);
       curl_setopt($ch, CURLOPT_POST, 1);
@@ -213,7 +229,12 @@ class OrangeController extends Controller
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
       $response = curl_exec($ch);
       curl_close($ch);
-
+      $actionName = "UnsubPincodeOrange";
+      $URL = $URL_Api;
+      $result['response'] = $response;
+      $result['phone_number'] = $msisdn;
+      $result['message'] = $message_pincode.$pincode_random;
+      $this->log($actionName, $URL, $result);
     if ($response == "1") {
       $lang =  session::get('lang');
       if ($lang == 'ar')
@@ -245,7 +266,7 @@ class OrangeController extends Controller
       $now = Carbon::now()->format('Y-m-d H:i:s');  /*"2020-07-05 16:30:00"*/
       if ($now <= $expire_date_time) {
         $orangeUnSubscribe = $this->orangeUnSubscribe($msisdn);
-        if($orangeUnSubscribe == 0){
+        if($orangeUnSubscribe == 0){ //unsub result code direct from orange unsub api
           if($lang = 'ar'){
             $msg = '!تم الغاء الاشتراك';
           }else{
@@ -256,14 +277,14 @@ class OrangeController extends Controller
         }else{
           $lang =  session::get('lang');
           if ($lang == 'ar')
-          return redirect('orange_portal_unsub')->with('failed', 'خطأ في التسجيل');
-          return redirect('orange_portal_unsub')->with('failed', 'Register is failed');
+          return redirect('orange_portal_unsub')->with('failed', 'خطأ في الغاء الاشتراك');
+          return redirect('orange_portal_unsub')->with('failed', 'Unsub is failed');
         }
       } else {
         if (session::get("lang") == 'ar'){
-          $request->session()->flash('failed','انتهاء وقت الكود برجاء ارسال الكود مره اخرى');
+          $request->session()->flash('failed','انتهت صلاحية الكود يرجي الضغط علي اعادة ارسال كود التحقق');
         }else{
-          $request->session()->flash('failed','Resend the pincode');
+          $request->session()->flash('failed','The code has expired, please click on resend the pincode');
         }
         return redirect('unsub_pincode/');
       }
@@ -274,7 +295,7 @@ class OrangeController extends Controller
       }else{
         $request->session()->flash('failed','Activation error. Please enter the correct activation code');
       }
-      return redirect('checkpincode/');
+      return redirect('unsub_pincode/');
     }
   }
 
@@ -301,7 +322,9 @@ class OrangeController extends Controller
     $headers['Accept'] = '*/*';
 
     $orangeSubscribe = $this->SendRequestPost($URL, $JSON, $headers);
-
+    $actionName = "OrangeSubscribe";
+    $result['orangeSubResult'] = $orangeSubscribe;
+    $this->log($actionName, $URL, $result);
     return $orangeSubscribe;
   }
 
@@ -310,24 +333,41 @@ class OrangeController extends Controller
     $URL = ORANGE_END_POINT."/api/orangeWeb";  // direct unsub
 
     $JSON['msisdn'] = $msisdn;
-    $JSON['command'] = 'Unsubscribe';
+    $JSON['command'] = 'UNSUBSCRIBE';
     $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
     $JSON['bearer_type'] = 'WEB';
 
     $headers['Accept'] = '*/*';
 
     $orangeUnSubscribe = $this->SendRequestPost($URL, $JSON, $headers);
-
+    $actionName = "OrangeUnSubscribe";
+    $result['orangeUnSubResult'] = $orangeUnSubscribe;
+    $this->log($actionName, $URL, $result);
     return $orangeUnSubscribe;
   }
 
   public function logout()
   {
     session()->forget('MSISDN');
+    session()->forget('unsub_orange');
     session()->forget('orange_op_id');
     session()->forget('status');
 
     return redirect('orange_portal_login');
   }
+
+  public function log($actionName, $URL, $parameters_arr)
+    {
+      date_default_timezone_set("Africa/Cairo");
+      $date = date("Y-m-d");
+      $log = new Logger($actionName);
+
+      if (!File::exists(storage_path('logs/' . $date . '/' . $actionName))) {
+        File::makeDirectory(storage_path('logs/' . $date . '/' . $actionName), 0775, true, true);
+      }
+
+      $log->pushHandler(new StreamHandler(storage_path('logs/' . $date . '/' . $actionName . '/logFile.log', Logger::INFO)));
+      $log->addInfo($URL, $parameters_arr);
+    }
 
 }
