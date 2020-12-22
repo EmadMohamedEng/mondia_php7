@@ -14,7 +14,6 @@ use Monolog\Handler\StreamHandler;
 class OrangeController extends Controller
 {
 
-
   public function login(Request $request)
   {
     $lang =  Session::get('applocale');
@@ -86,7 +85,6 @@ class OrangeController extends Controller
       }
     }
   }
-
 
   public function checkpincode(request $request)
   {
@@ -194,7 +192,6 @@ class OrangeController extends Controller
     return view('landing_v2.orange.unsub');
   }
 
-
   public function postUnsubscribe(Request $request)
   {
 
@@ -297,6 +294,52 @@ class OrangeController extends Controller
       }
       return redirect('unsub_pincode/');
     }
+  }
+
+  public function ResendUnsubPincode(request $request)
+  {
+    date_default_timezone_set("Africa/Cairo");
+    $msisdn = Session::get('unsub_orange');
+    $random = mt_rand(1000, 9999);
+    $pincode_random = $random;
+    $pincode = new UnsubPincodeOrange();
+    $pincode->msisdn = $msisdn;
+    $pincode->pincode = $pincode_random;
+    $date = Carbon::now()->format('Y/m/d H:i:s');
+    $pincode->expire_date_time = Carbon::parse($date)->addHour();
+    $pincode->save();
+
+    $message_pincode = " لالغاء الاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
+      $URL_Api = ORANGE_API_SENDPINCODE;
+      $param = "phone_number=$msisdn&message=$message_pincode $pincode_random";
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL, $URL_Api);
+      curl_setopt($ch, CURLOPT_POST, 1);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      $response = curl_exec($ch);
+      curl_close($ch);
+      $actionName = "ResendUnsubPincode Orange";
+      $URL = $URL_Api;
+      $result['response'] = $response;
+      $result['phone_number'] = $msisdn;
+      $result['message'] = $message_pincode.$pincode_random;
+      $this->log($actionName, $URL, $result);
+      if ($response == "1") {
+        $lang =  session::get('lang');
+        if ($lang == 'ar')
+        return redirect('unsub_pincode')->with('success', '!تم ارسال رمز التحقق');
+        return redirect('unsub_pincode')->with('success', 'Pincode Sent!');
+      }else{
+        if($lang = 'ar'){
+          $msg = '!انت غير مشترك';
+        }else{
+          $msg = 'You are not a subscriber!';
+        }
+        session()->flash('failed', $msg);
+        return $this->logout();
+      }
+
   }
 
   public function unsub_pincode()

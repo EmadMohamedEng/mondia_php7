@@ -101,7 +101,15 @@ if ($lang == 'ar') {
             <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
                 <h5>الى <span>965</span><span> STOP1 </span>لالغاء الاشتراك ارسل</h5>-->
           </div>
-          
+
+          <div class="cancel text-center py-4">
+            {!! Form::open(['url'=>'resend_unsub_pincode','method'=>'post','class'=>'form']) !!}
+            <div class="form-group">
+              <input type="submit" id="reSendPin" class="border-0 rounded p-2 font-weight-bold mt-3 " value="@lang('messages.click_confirmation')">
+            </div>
+            {!! Form::close() !!}
+          </div>
+
         </div>
 
       </div>
