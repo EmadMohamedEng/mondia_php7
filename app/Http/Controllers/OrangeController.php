@@ -107,6 +107,32 @@ class OrangeController extends Controller
       if ($now <= $expire_date_time) {
         $orangeSubscribe = $this->orangeSubscribe($msisdn);
         if($orangeSubscribe == "1"){
+
+         // send welcome message
+         if ($lang == 'ar'){
+          $welcome_message = "لقد تم اشتراكك في خدمة اورنج الخير بنجاح للدخول اضغط علي هذا الرابط";
+         }else{
+          $welcome_message = "You have successfully subscribed to Orange El-Kheer service. To enter, click on this link";
+         }
+
+         $welcome_message .= " ".url('?OpID=8');
+         $URL_Api = ORANGE_API_SENDPINCODE;
+         $param = "phone_number=$msisdn&message=$welcome_message";
+         $ch = curl_init();
+         curl_setopt($ch, CURLOPT_URL, $URL_Api);
+         curl_setopt($ch, CURLOPT_POST, 1);
+         curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
+         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+         $response = curl_exec($ch);
+         curl_close($ch);
+         $actionName = "Wecome Message Orange";
+         $URL = $URL_Api;
+         $result['response'] = $response;
+         $result['phone_number'] = $msisdn;
+         $result['message'] = $welcome_message;
+         $this->log($actionName, $URL, $result);
+
+
           $this->orangeLoginSession($msisdn);
           // if(session()->has('current_url')){
           //   return redirect(session()->get('current_url'));
@@ -264,6 +290,32 @@ class OrangeController extends Controller
       if ($now <= $expire_date_time) {
         $orangeUnSubscribe = $this->orangeUnSubscribe($msisdn);
         if($orangeUnSubscribe == "0"){ //unsub result code direct from orange unsub api
+
+
+             // send unsub success message
+            if($lang = 'ar'){
+            $unsub_success_message = "لقد تم الغاء اشتراكك في خدمة اورنج الخير";
+            }else{
+            $unsub_success_message = "Your subscription to Orange El-Kheer service has been canceled";
+            }
+         $URL_Api = ORANGE_API_SENDPINCODE;
+         $param = "phone_number=$msisdn&message=$unsub_success_message";
+         $ch = curl_init();
+         curl_setopt($ch, CURLOPT_URL, $URL_Api);
+         curl_setopt($ch, CURLOPT_POST, 1);
+         curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
+         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+         $response = curl_exec($ch);
+         curl_close($ch);
+         $actionName = "Unsub Message Orange";
+         $URL = $URL_Api;
+         $result['response'] = $response;
+         $result['phone_number'] = $msisdn;
+         $result['message'] = $unsub_success_message;
+         $this->log($actionName, $URL, $result);
+
+
+
           if($lang = 'ar'){
             $msg = '!تم الغاء الاشتراك';
           }else{
