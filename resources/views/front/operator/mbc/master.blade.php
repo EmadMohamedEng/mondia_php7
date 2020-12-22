@@ -78,8 +78,10 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-
-          @foreach(get_providers_mbc(session()->get('MSISDN')) as $provider)
+          @php
+              $providers_mbc = get_providers_mbc(session()->get('subscription_day'))
+          @endphp
+          @foreach($providers_mbc as $provider)
 
           <li class="nav-item dropdown">
             <a class="menuTwo nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -91,7 +93,7 @@
               {{$provider->getTranslation('title',getCode())}}
             </a>
             <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink2">
-              @foreach($provider->services as $value)
+              @foreach(get_service_mbc(session()->get('subscription_day'), $provider) as $value)
 
               <?php
               if ($provider->id == 23 && $value->id == 40  && request()->get("OpID") == 12) { // The Holy Quran and TIMWE
@@ -105,6 +107,7 @@
           </li>
           @endforeach
 
+          @if(date('D') == 'Fri')
           <li class="nav-item dropdown">
             <a class="menuTwo nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
@@ -155,6 +158,7 @@
               <a class="dropdown-item text-capitalize link_href" href="{{url('mosque')}}"> @lang('front.mosque')</a>
             </div>
           </li>
+          @endif
 
           @if(get_setting('filters_flag'))
 
@@ -337,7 +341,7 @@
               </a>
             </li>
 
-            @foreach(get_providers_mbc(session()->get('MSISDN')) as $provider)
+            @foreach($providers_mbc as $provider)
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 @if($provider->image)
@@ -349,7 +353,7 @@
               </a>
 
               <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink5">
-                @foreach($provider->services as $value)
+                @foreach(get_service_mbc(session()->get('subscription_day'), $provider) as $value)
 
                 <?php
                 if ($provider->id == 23 && $value->id == 40  && request()->get("OpID") == 12) { // The Holy Quran and TIMWE
@@ -363,6 +367,7 @@
             </li>
             @endforeach
 
+            @if(date('D') == 'Fri')
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
@@ -412,6 +417,7 @@
                 <a class="dropdown-item text-capitalize link_href" href="{{url('mosque')}}"> @lang('front.mosque')</a>
               </div>
             </li>
+            @endif
 
             <li class="nav-item">
               <a class="nav-link text-capitalize link_href" href="{{url('/terms')}}" style=" <?php echo $style ?>">
@@ -536,7 +542,7 @@
             <?php
             $style = "background: transparent;";
             ?>
-            @foreach(get_providers_mbc(session()->get('MSISDN')) as $provider)
+            @foreach($providers_mbc as $provider)
             <li class="nav-item dropdown">
               <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" <?php echo $style ?>">
                 @if($provider->image)
@@ -546,7 +552,7 @@
                 {{$provider->getTranslation('title',getCode())}}
               </a>
               <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink7">
-                @foreach($provider->services as $value)
+                @foreach(get_service_mbc(session()->get('subscription_day'), $provider) as $value)
                 <?php
                 if ($provider->id == 23 && $value->id == 40  && request()->get("OpID") == 12) { // The Holy Quran and TIMWE
                   continue;
@@ -558,6 +564,7 @@
             </li>
             @endforeach
 
+            @if(date('D') == 'Fri')
             <li class="nav-item dropdown">
               <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" <?php echo $style ?>">
                 @lang('front.muslim_guide')</a>
@@ -566,7 +573,7 @@
                 <a class="menuThree dropdown-item text-capitalize link_href" href="{{url('mosque')}}"> @lang('front.mosque')</a>
               </div>
             </li>
-
+            @endif
 
             <li class="nav-item dropdown">
               <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" <?php echo $style ?>">

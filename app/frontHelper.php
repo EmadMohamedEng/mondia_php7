@@ -191,16 +191,55 @@ function get_mbc_sub($msisdn)
     return $sub;
 }
 
-function get_providers_mbc($msisdn)
+function get_providers_mbc($day)
 {
-    $providers = null;
-    $subscription_day = get_mbc_sub($msisdn)->day;
     $providers = Provider::select('providers.*')
         ->join('services', 'providers.id', 'services.provider_id')
         ->join('contents', 'services.id', 'contents.service_id')
         ->join('mbc_contents', 'contents.id', 'mbc_contents.content_id')
-        ->where('mbc_contents.subscription_day', '<=', $subscription_day)
+        ->where('mbc_contents.subscription_day', '<=', $day)
         ->groupBy('providers.id')
         ->get();
     return $providers;
+}
+
+function get_service_mbc($day, $provider)
+{
+    $services = Service::select('services.*')
+        ->join('providers', 'services.provider_id', 'providers.id')
+        ->join('contents', 'services.id', 'contents.service_id')
+        ->join('mbc_contents', 'contents.id', 'mbc_contents.content_id')
+        ->where('mbc_contents.subscription_day', '<=', $day)
+        ->where('providers.id', $provider->id)
+        ->groupBy('services.id')
+        ->get();
+    return $services;
+}
+
+function get_content_mbc($day, $service)
+{
+    $mbcContent = MbcContent::select('mbc_contents.*')
+        ->join('contents', 'contents.id', 'mbc_contents.content_id')
+        ->join('services', 'services.id', 'contents.service_id')
+        ->where('mbc_contents.subscription_day', '<=', $day)
+        ->where('services.id', $service->id)
+        ->get();
+
+    return $mbcContent;
+}
+
+function get_friday_mbc()
+{
+    $mbcContents = MbcContent::where('type', 'friday')->get();
+
+    return $mbcContents;
+}
+
+function get_occasion_mbc()
+{
+    $occassion_date_format = date('Y-m-d');
+
+    $mbcContent = MbcContent::where('occasion_date', $occassion_date_format)->get();
+
+    return $mbcContent;
 }

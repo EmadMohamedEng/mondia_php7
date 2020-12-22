@@ -1,11 +1,6 @@
 @extends('front.master')
 @section('page_title') Home @endsection
 @section('content')
-@php
-$count = (int)(count(provider_menu())/2);
-$menu = provider_menu();
-@endphp
-
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
 
   @include('front.search')
@@ -56,7 +51,7 @@ $menu = provider_menu();
       @endforeach
     </div>
   </section>
-
+  @if(date('D') == 'Fri')
   <section class="content_carousel">
     <div class="content_carousel_head text-capitalize">
       <div class="row m-0">
@@ -69,7 +64,6 @@ $menu = provider_menu();
     </div>
 
     <div class="owl_content owl_content_two owl-carousel owl-theme" dir="ltr">
-      @if(date('D') == 'Fri')
       <div class="item item_muslim">
         <div class="card card_muslim_guid ovf-hidden">
           <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
@@ -104,62 +98,11 @@ $menu = provider_menu();
           </a>
         </div>
       </div>
-      @endif
-
-      <div class="item item_muslim">
-        <div class="card card_muslim_guid ovf-hidden">
-          <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
-            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/07.png')}}" alt="Card image cap">
-            <a>
-              <div class="mask waves-effect waves-light rgba-white-slight"></div>
-            </a>
-          </a>
-
-          <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
-            <div class="card-body">
-              <h4 class="card-title text-capitalize">@lang('front.zakah')</h4>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="item item_muslim">
-        <div class="card card_muslim_guid ovf-hidden">
-          <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
-            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/04.png')}}" alt="Card image cap">
-            <a>
-              <div class="mask waves-effect waves-light rgba-white-slight"></div>
-            </a>
-          </a>
-
-          <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
-            <div class="card-body">
-              <h4 class="card-title text-capitalize">@lang('front.merath')</h4>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="item item_muslim">
-        <div class="card card_muslim_guid ovf-hidden">
-          <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
-            <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/03.png')}}" alt="Card image cap">
-            <a>
-              <div class="mask waves-effect waves-light rgba-white-slight"></div>
-            </a>
-          </a>
-
-          <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
-            <div class="card-body">
-              <h4 class="card-title text-capitalize">@lang('front.prayer')</h4>
-            </div>
-          </a>
-        </div>
-      </div>
     </div>
   </section>
+  @endif
 
-  @foreach (get_providers_mbc(session()->get('MSISDN')) as $item)
+  @foreach (get_providers_mbc(session()->get('subscription_day')) as $item)
   <section class="content_carousel">
     <div class="content_carousel_head text-capitalize">
       <div class="row m-0">
@@ -177,30 +120,32 @@ $menu = provider_menu();
     </div>
 
     @php
-    if(count($item->services) == 1){
+    $services_foreach = get_service_mbc(session()->get('subscription_day'), $item);
+    $count_services = count($services_foreach);
+    if($count_services == 1){
     $owl_1 = 'owl_content_one';
     }
 
-    if(count($item->services) == 2){
+    if($count_services == 2){
     $owl_1 = 'owl_content_two';
     }
 
-    if(count($item->services) == 3){
+    if($count_services == 3){
     $owl_1 = 'owl_content_three';
     }
 
-    if(count($item->services) == 4){
+    if($count_services == 4){
     $owl_1 = 'owl_content_four';
     }
 
-    if(count($item->services) >= 5){
+    if($count_services >= 5){
     $owl_1 = 'owl_content_five';
     }
     @endphp
 
 
     <div class="{{$owl_1}} owl-carousel owl-theme" dir="ltr">
-      @foreach ($item->services as $service)
+      @foreach ($services_foreach as $service)
       <div class="item">
         <div class="card ovf-hidden">
           <a class="owl_content_img view overlay link_href"
