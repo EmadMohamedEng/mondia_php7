@@ -3477,7 +3477,7 @@ select {
         margin-left: -18%;
 
         .dropdown-menu2 {
-          left: 0%;
+          left: -5%;
           top: 70%;
           min-width: 8rem;
         }
@@ -3526,7 +3526,7 @@ select {
         .navbar_ul {
           background-color: $bg_color2 !important;
           border: 2px solid $bg_color;
-          width: 15rem;
+          width: 14rem;
           height: 100vh;
           padding: 0 0;
           overflow-y: scroll;
@@ -3543,7 +3543,7 @@ select {
 
               .arrow_back {
                 font-size: 1rem;
-                float: right;
+                float: left;
                 color: $text_color;
 
                 &:hover,
@@ -3562,6 +3562,7 @@ select {
             .nav-link {
               padding: 0;
               text-align: right;
+              font-size: 0.85rem;
 
               .icon_before {
                 color: $text_color;
@@ -3578,6 +3579,7 @@ select {
                 padding: 0.25rem 0;
                 width: 90% !important;
                 margin-right: 12%;
+                font-size: 0.8rem;
 
                 &.dropdown-item2 {
                   width: 100% !important;
@@ -3651,7 +3653,13 @@ select {
 
             .owl_content_img {
               img {
-                height: 10rem;
+                height: 11.5rem
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
               }
             }
           }
@@ -3668,7 +3676,13 @@ select {
 
             .owl_content_img {
               img {
-                height: 10.438rem;
+                height: 11.438rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 0.9rem;
               }
             }
           }
@@ -3682,7 +3696,7 @@ select {
           width: 100%;
 
           &.item_muslim {
-            height: 10rem;
+            height: 11rem;
 
             .card_muslim_guid {
               width: 80%;
@@ -3695,7 +3709,7 @@ select {
               }
 
               .card-body {
-                top: 9rem;
+                top: 10rem;
               }
             }
           }
@@ -3705,7 +3719,7 @@ select {
 
             .owl_content_img {
               img {
-                height: 10.438rem;
+                height: 11.438rem;
               }
             }
 
@@ -3741,7 +3755,7 @@ select {
         .card {
           .owl_content_img {
             img {
-              height: 10.125rem;
+              height: 11.6rem;
             }
           }
 
@@ -3751,6 +3765,16 @@ select {
             .card-title {
               font-size: 0.9rem;
             }
+          }
+        }
+      }
+    }
+
+    .list_muslim {
+      .item {
+        .card-body {
+          .card-title {
+            font-size: 0.9rem;
           }
         }
       }
@@ -3771,7 +3795,7 @@ select {
 
         img {
           width: 100%;
-          max-height: 21.5rem;
+          max-height: 22.438rem;
         }
 
         audio {

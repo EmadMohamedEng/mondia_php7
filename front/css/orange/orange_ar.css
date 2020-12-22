@@ -2616,7 +2616,7 @@ select:active {
     margin-left: -18%;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    left: 0%;
+    left: -5%;
     top: 70%;
     min-width: 8rem;
   }
@@ -2655,7 +2655,7 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
     border: 2px solid #FF6600;
-    width: 15rem;
+    width: 14rem;
     height: 100vh;
     padding: 0 0;
     overflow-y: scroll;
@@ -2671,7 +2671,7 @@ select:active {
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1rem;
-    float: right;
+    float: left;
     color: #FF6600;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:hover, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:focus {
@@ -2685,6 +2685,7 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link {
     padding: 0;
     text-align: right;
+    font-size: 0.85rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     color: #FF6600;
@@ -2697,6 +2698,7 @@ select:active {
     padding: 0.25rem 0;
     width: 90% !important;
     margin-right: 12%;
+    font-size: 0.8rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
@@ -2736,7 +2738,10 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-    height: 10rem;
+    height: 11.5rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
+    font-size: 0.9rem;
   }
   .main_container .content_carousel .owl_content_two .item,
 .main_container .content_carousel .owl_content_three .item {
@@ -2748,7 +2753,11 @@ select:active {
   }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
-    height: 10.438rem;
+    height: 11.438rem;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
+    font-size: 0.9rem;
   }
   .main_container .content_carousel .owl_content_four .item,
 .main_container .content_carousel .owl_content_five .item,
@@ -2758,7 +2767,7 @@ select:active {
   .main_container .content_carousel .owl_content_four .item.item_muslim,
 .main_container .content_carousel .owl_content_five .item.item_muslim,
 .main_container .content_carousel .owl_muslim_guide .item.item_muslim {
-    height: 10rem;
+    height: 11rem;
   }
   .main_container .content_carousel .owl_content_four .item.item_muslim .card_muslim_guid,
 .main_container .content_carousel .owl_content_five .item.item_muslim .card_muslim_guid,
@@ -2774,7 +2783,7 @@ select:active {
   .main_container .content_carousel .owl_content_four .item.item_muslim .card_muslim_guid .card-body,
 .main_container .content_carousel .owl_content_five .item.item_muslim .card_muslim_guid .card-body,
 .main_container .content_carousel .owl_muslim_guide .item.item_muslim .card_muslim_guid .card-body {
-    top: 9rem;
+    top: 10rem;
   }
   .main_container .content_carousel .owl_content_four .item .card,
 .main_container .content_carousel .owl_content_five .item .card,
@@ -2784,7 +2793,7 @@ select:active {
   .main_container .content_carousel .owl_content_four .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_five .item .card .owl_content_img img,
 .main_container .content_carousel .owl_muslim_guide .item .card .owl_content_img img {
-    height: 10.438rem;
+    height: 11.438rem;
   }
   .main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-title,
@@ -2802,12 +2811,15 @@ select:active {
     margin-top: 30% !important;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 10.125rem;
+    height: 11.6rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
   }
   .main_container .list_page .item .card .card-body .card-title {
+    font-size: 0.9rem;
+  }
+  .main_container .list_muslim .item .card-body .card-title {
     font-size: 0.9rem;
   }
   .main_container .inner_page {
@@ -2822,7 +2834,7 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    max-height: 21.5rem;
+    max-height: 22.438rem;
   }
   .main_container .inner_page .cover audio {
     margin-top: -5%;
