@@ -89,45 +89,27 @@ select:active {
   background: rgba(0, 0, 0, 0.5);
   height: 5rem;
 }
-.main_container .header .header_logo,
-.main_container .header .header_icon {
+.main_container .header .header_logo {
   color: #FFF;
   display: inline-flex;
   position: unset;
   width: 100%;
   text-align: center;
 }
-.main_container .header .header_logo h6,
-.main_container .header .header_icon h6 {
-  padding-left: 0;
-  font-weight: bold;
-}
-.main_container .header .header_logo .link_href,
-.main_container .header .header_icon .link_href {
+.main_container .header .header_logo .link_href {
   width: 100%;
   text-align: center;
 }
-.main_container .header .header_logo .link_href .logo_orange img,
-.main_container .header .header_icon .link_href .logo_orange img {
+.main_container .header .header_logo .link_href .logo_orange img {
   width: 50%;
   margin-top: -0.75rem;
 }
-.main_container .header .header_logo .link_href .img_khir,
-.main_container .header .header_icon .link_href .img_khir {
+.main_container .header .header_logo .link_href .img_khir {
   text-align: right;
 }
-.main_container .header .header_logo .link_href .img_khir img,
-.main_container .header .header_icon .link_href .img_khir img {
+.main_container .header .header_logo .link_href .img_khir img {
   width: 60%;
   margin-top: 0rem;
-}
-.main_container .header .header_logo.header_icon,
-.main_container .header .header_icon.header_icon {
-  direction: rtl;
-}
-.main_container .header .header_logo.header_icon i,
-.main_container .header .header_icon.header_icon i {
-  opacity: 0.5;
 }
 .main_container .header .lang_mbc {
   color: #FF6600;
@@ -1655,7 +1637,7 @@ select:active {
   }
 
   .dropdown-toggle::after {
-    margin-right: unset !important;
+    margin-left: 0;
   }
 
   .main_container {
@@ -1669,26 +1651,26 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo img,
-.main_container .header .header_icon img {
-    width: 60% !important;
-    margin-top: -0.8rem !important;
+  .main_container .header .header_logo .logo_orange {
+    text-align: left;
   }
-  .main_container .header .header_logo .img_khir,
-.main_container .header .header_icon .img_khir {
+  .main_container .header .header_logo .logo_orange img {
+    width: 50% !important;
+    margin-top: -0.65rem !important;
+  }
+  .main_container .header .header_logo .img_khir {
     text-align: center !important;
   }
-  .main_container .header .header_logo .img_khir img,
-.main_container .header .header_icon .img_khir img {
-    width: 80% !important;
+  .main_container .header .header_logo .img_khir img {
+    width: 70% !important;
     margin-top: 0.05rem !important;
   }
   .main_container .header .lang_mbc {
-    margin-right: -18%;
+    margin-left: -18%;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    left: -20%;
-    top: 55%;
+    left: 0%;
+    top: 70%;
     min-width: 8rem;
   }
   .main_container .mbc_orange .navbar_three {
@@ -1710,7 +1692,7 @@ select:active {
     font-size: 1rem;
     position: fixed;
     top: 2.15rem;
-    left: 2.5rem;
+    right: -9%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1726,10 +1708,13 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
     border: 2px solid #FF6600;
-    width: 15rem;
+    width: 13rem;
     height: 100vh;
     padding: 0 0;
     overflow-y: scroll;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
+    text-align: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -1739,7 +1724,7 @@ select:active {
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1rem;
-    float: right;
+    float: left;
     color: #FF6600;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:hover, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:focus {
@@ -1752,6 +1737,8 @@ select:active {
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link {
     padding: 0;
+    text-align: right;
+    font-size: 0.8rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     color: #FF6600;
@@ -1763,7 +1750,8 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
     padding: 0.25rem 0;
     width: 90% !important;
-    margin-left: 12%;
+    margin-right: 12%;
+    font-size: 0.75rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
@@ -1771,30 +1759,14 @@ select:active {
   .main_container .img_carousel {
     margin-top: 0;
   }
-  .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 19rem;
-  }
-  .main_container .img_carousel .owl_one .item .content_free {
-    top: 5%;
-    right: -1%;
-  }
-  .main_container .img_carousel .owl_one .item .btn_orange button {
-    width: 97%;
-    top: 93.5%;
-    left: 48.6%;
-  }
-  .main_container .img_carousel .owl_one .item .btn_orange button:focus {
-    top: 92.5%;
-    left: 49.6%;
-  }
-  .main_container .img_carousel .owl-theme .owl-nav button.owl-next, .main_container .img_carousel .owl-theme .owl-nav button.owl-prev {
-    bottom: 6rem;
-  }
-  .main_container .img_carousel .owl-theme .owl-nav button.owl-next {
-    right: -2% !important;
-  }
   .main_container .content_carousel .content_carousel_head {
     margin-top: 1rem;
+  }
+  .main_container .content_carousel .content_carousel_head .link_title h6 {
+    font-size: 0.8rem;
+  }
+  .main_container .content_carousel .content_carousel_head .btn_more {
+    font-size: 0.8rem;
   }
   .main_container .content_carousel .owl_content_one .item {
     width: 100%;
@@ -1804,6 +1776,9 @@ select:active {
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 10rem;
+  }
+  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
+    font-size: 0.9rem;
   }
   .main_container .content_carousel .owl_content_two .item,
 .main_container .content_carousel .owl_content_three .item {
@@ -1815,7 +1790,11 @@ select:active {
   }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
-    height: 9.719rem !important;
+    height: 9.719rem;
+  }
+  .main_container .content_carousel .owl_content_two .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
+    font-size: 0.9rem;
   }
   .main_container .content_carousel .owl_content_four .item,
 .main_container .content_carousel .owl_content_five .item,
@@ -1825,7 +1804,7 @@ select:active {
   .main_container .content_carousel .owl_content_four .item.item_muslim,
 .main_container .content_carousel .owl_content_five .item.item_muslim,
 .main_container .content_carousel .owl_muslim_guide .item.item_muslim {
-    height: 9rem;
+    height: 10rem;
   }
   .main_container .content_carousel .owl_content_four .item.item_muslim .card_muslim_guid,
 .main_container .content_carousel .owl_content_five .item.item_muslim .card_muslim_guid,
@@ -1841,7 +1820,7 @@ select:active {
   .main_container .content_carousel .owl_content_four .item.item_muslim .card_muslim_guid .card-body,
 .main_container .content_carousel .owl_content_five .item.item_muslim .card_muslim_guid .card-body,
 .main_container .content_carousel .owl_muslim_guide .item.item_muslim .card_muslim_guid .card-body {
-    top: 8rem;
+    top: 9rem;
   }
   .main_container .content_carousel .owl_content_four .item .card,
 .main_container .content_carousel .owl_content_five .item .card,
@@ -1853,11 +1832,16 @@ select:active {
 .main_container .content_carousel .owl_muslim_guide .item .card .owl_content_img img {
     height: 9.719rem;
   }
+  .main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
+.main_container .content_carousel .owl_content_five .item .card .card-body .card-title,
+.main_container .content_carousel .owl_muslim_guide .item .card .card-body .card-title {
+    font-size: 0.9rem;
+  }
   .main_container .list_page .content_carousel_head .link_title h6 {
-    font-size: 14px;
+    font-size: 0.8rem;
   }
   .main_container .list_page .content_carousel_head .btn_more {
-    font-size: 14px;
+    font-size: 0.8rem;
   }
   .main_container .list_page .coming_soon {
     width: 50%;
@@ -1870,23 +1854,26 @@ select:active {
     padding: 1rem 0.25rem;
   }
   .main_container .list_page .item .card .card-body .card-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+  .main_container .list_muslim .item .card-body .card-title {
+    font-size: 0.9rem;
   }
   .main_container .inner_page {
     margin-top: 0;
   }
   .main_container .inner_page .cover h4 {
-    font-size: 1.15rem;
+    font-size: 1rem;
     padding: 0 0.35rem;
   }
   .main_container .inner_page .cover video {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
-    width: 94% !important;
     margin-top: -5%;
     margin-left: 3%;
   }
@@ -1898,7 +1885,7 @@ select:active {
     padding: 0 0.75rem;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .main_container .inner_page .poster .poster-details .outside-cover {
     font-size: 0.7rem;
@@ -1933,13 +1920,13 @@ select:active {
     top: 2rem;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
-    font-size: 1.15rem;
+    font-size: 0.9rem;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-footer {
     justify-content: center;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .main_container .azan_page .azan_title h2 {
     font-size: 1.5rem;
@@ -1958,6 +1945,7 @@ select:active {
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
@@ -1968,13 +1956,13 @@ select:active {
   }
   .main_container .salah_time_page .time_btn .h4_time {
     line-height: 3rem;
-    font-size: 1rem;
-    padding: 0 0 0 5px;
+    font-size: 0.75rem;
+    padding: 0 8px 0 0;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     line-height: 3rem;
-    font-size: 1rem;
-    padding: 0 5px 0 0;
+    font-size: 0.75rem;
+    padding: 0 0 0 8px;
   }
   .main_container .sebha_page .display .btn-bar button {
     width: 100%;
@@ -1995,16 +1983,20 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .sebha_page #sebhaModal .modal-title {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .main_container .sebha_page #sebhaModal .choose_sebha {
-    font-size: 1.09rem;
+    font-size: 0.9rem;
   }
   .main_container .subscribe_page {
     width: 100%;
   }
   .main_container .zakkah_page {
     width: 90%;
+  }
+  .main_container .zakkah_v2_page .currency_title,
+.main_container .zakkah_v2_page .up_down {
+    font-size: 0.75rem;
   }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
@@ -2060,6 +2052,9 @@ select:active {
   .main_container .search_page {
     margin: 0.5rem auto;
   }
+  .main_container .search_page .form_search .btn_search {
+    font-size: 0.75rem;
+  }
   .main_container .search_page .textbox {
     text-align: center;
   }
@@ -2088,7 +2083,7 @@ select:active {
   }
   .main_container .profile .profile_table table tbody tr .label-view2 {
     width: 60%;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
 
   .loading-overlay .spinner-large {
@@ -2129,21 +2124,17 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .logo_orange,
-.main_container .header .header_icon .logo_orange {
+  .main_container .header .header_logo .logo_orange {
     text-align: left;
   }
-  .main_container .header .header_logo .logo_orange img,
-.main_container .header .header_icon .logo_orange img {
+  .main_container .header .header_logo .logo_orange img {
     width: 50% !important;
     margin-top: -0.65rem !important;
   }
-  .main_container .header .header_logo .img_khir,
-.main_container .header .header_icon .img_khir {
+  .main_container .header .header_logo .img_khir {
     text-align: center !important;
   }
-  .main_container .header .header_logo .img_khir img,
-.main_container .header .header_icon .img_khir img {
+  .main_container .header .header_logo .img_khir img {
     width: 70% !important;
     margin-top: 0.05rem !important;
   }
@@ -2593,7 +2584,7 @@ select:active {
   }
 
   .dropdown-toggle::after {
-    margin-right: unset !important;
+    margin-left: 0;
   }
 
   .main_container {
@@ -2607,26 +2598,26 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .logo_orange img,
-.main_container .header .header_icon .logo_orange img {
+  .main_container .header .header_logo .logo_orange {
+    text-align: left;
+  }
+  .main_container .header .header_logo .logo_orange img {
     width: 50% !important;
     margin-top: -0.65rem !important;
   }
-  .main_container .header .header_logo .img_khir,
-.main_container .header .header_icon .img_khir {
+  .main_container .header .header_logo .img_khir {
     text-align: center !important;
   }
-  .main_container .header .header_logo .img_khir img,
-.main_container .header .header_icon .img_khir img {
+  .main_container .header .header_logo .img_khir img {
     width: 70% !important;
     margin-top: 0.05rem !important;
   }
   .main_container .header .lang_mbc {
-    margin-right: -18%;
+    margin-left: -18%;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    left: -20%;
-    top: 55%;
+    left: 0%;
+    top: 70%;
     min-width: 8rem;
   }
   .main_container .mbc_orange .navbar_three {
@@ -2648,7 +2639,7 @@ select:active {
     font-size: 1rem;
     position: fixed;
     top: 2.15rem;
-    left: 2.5rem;
+    right: -9%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2668,6 +2659,9 @@ select:active {
     height: 100vh;
     padding: 0 0;
     overflow-y: scroll;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
+    text-align: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -2690,6 +2684,7 @@ select:active {
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link {
     padding: 0;
+    text-align: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     color: #FF6600;
@@ -2701,7 +2696,7 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
     padding: 0.25rem 0;
     width: 90% !important;
-    margin-left: 12%;
+    margin-right: 12%;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
@@ -2741,7 +2736,7 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-    height: 11.5rem;
+    height: 10rem;
   }
   .main_container .content_carousel .owl_content_two .item,
 .main_container .content_carousel .owl_content_three .item {
@@ -2753,11 +2748,7 @@ select:active {
   }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
-    height: 11.438rem;
-  }
-  .main_container .content_carousel .owl_content_two .item .card .card-body .card-title,
-.main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
-    font-size: 0.9rem;
+    height: 10.438rem;
   }
   .main_container .content_carousel .owl_content_four .item,
 .main_container .content_carousel .owl_content_five .item,
@@ -2793,7 +2784,7 @@ select:active {
   .main_container .content_carousel .owl_content_four .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_five .item .card .owl_content_img img,
 .main_container .content_carousel .owl_muslim_guide .item .card .owl_content_img img {
-    height: 11.438rem;
+    height: 10.438rem;
   }
   .main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-title,
@@ -2811,7 +2802,7 @@ select:active {
     margin-top: 30% !important;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 11.6rem;
+    height: 10.125rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -2831,7 +2822,7 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    max-height: 22.438rem;
+    max-height: 21.5rem;
   }
   .main_container .inner_page .cover audio {
     margin-top: -5%;
@@ -2889,7 +2880,7 @@ select:active {
     font-size: 0.9rem;
   }
   .main_container .azan_page .azan_title h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .main_container .azan_page .input_text {
     width: 85%;
@@ -2905,6 +2896,7 @@ select:active {
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
@@ -2915,13 +2907,13 @@ select:active {
   }
   .main_container .salah_time_page .time_btn .h4_time {
     line-height: 3rem;
-    font-size: 1rem;
-    padding: 0 0 0 5px;
+    font-size: 0.8rem;
+    padding: 0 8px 0 0;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     line-height: 3rem;
-    font-size: 1rem;
-    padding: 0 5px 0 0;
+    font-size: 0.8rem;
+    padding: 0 0 0 8px;
   }
   .main_container .sebha_page .display .btn-bar button {
     width: 100%;
@@ -2942,25 +2934,20 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .sebha_page #sebhaModal .modal-title {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   .main_container .sebha_page #sebhaModal .choose_sebha {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .main_container .subscribe_page {
     width: 100%;
   }
-  .main_container .subscribe_page .subscribe_bg {
-    font-size: 1rem;
-  }
-  .main_container .subscribe_page .subscribe_bg .form-signin .account-wall input {
-    font-size: 1rem;
-  }
-  .main_container .subscribe_page .subscribe_bg .form-signin .buttons button {
-    font-size: 1rem;
-  }
   .main_container .zakkah_page {
     width: 90%;
+  }
+  .main_container .zakkah_v2_page .currency_title,
+.main_container .zakkah_v2_page .up_down {
+    font-size: 0.75rem;
   }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
@@ -3071,7 +3058,7 @@ select:active {
   }
 
   .dropdown-toggle::after {
-    margin-right: unset !important;
+    margin-left: 0;
   }
 
   .main_container {
@@ -3085,26 +3072,26 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .logo_orange img,
-.main_container .header .header_icon .logo_orange img {
-    width: 50% !important;
-    margin-top: -0.85rem !important;
+  .main_container .header .header_logo .logo_orange {
+    text-align: left;
   }
-  .main_container .header .header_logo .img_khir,
-.main_container .header .header_icon .img_khir {
+  .main_container .header .header_logo .logo_orange img {
+    width: 50% !important;
+    margin-top: -0.65rem !important;
+  }
+  .main_container .header .header_logo .img_khir {
     text-align: center !important;
   }
-  .main_container .header .header_logo .img_khir img,
-.main_container .header .header_icon .img_khir img {
+  .main_container .header .header_logo .img_khir img {
     width: 70% !important;
     margin-top: 0.05rem !important;
   }
   .main_container .header .lang_mbc {
-    margin-right: -18%;
+    margin-left: -18%;
   }
   .main_container .header .lang_mbc .dropdown-menu2 {
-    left: 7%;
-    top: 55%;
+    left: 0%;
+    top: 70%;
     min-width: 8rem;
   }
   .main_container .mbc_orange .navbar_three {
@@ -3126,7 +3113,7 @@ select:active {
     font-size: 1rem;
     position: fixed;
     top: 2.15rem;
-    left: 2.5rem;
+    right: -9%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -3146,6 +3133,9 @@ select:active {
     height: 100vh;
     padding: 0 0;
     overflow-y: scroll;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
+    text-align: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
     padding: 0.25rem 0.75rem;
@@ -3168,6 +3158,7 @@ select:active {
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link {
     padding: 0;
+    text-align: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     color: #FF6600;
@@ -3179,7 +3170,7 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
     padding: 0.25rem 0;
     width: 90% !important;
-    margin-left: 12%;
+    margin-right: 12%;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100% !important;
@@ -3219,10 +3210,7 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-    height: 11.5rem;
-  }
-  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
-    font-size: 0.9rem;
+    height: 10rem;
   }
   .main_container .content_carousel .owl_content_two .item,
 .main_container .content_carousel .owl_content_three .item {
@@ -3234,11 +3222,7 @@ select:active {
   }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
-    height: 12.063rem;
-  }
-  .main_container .content_carousel .owl_content_two .item .card .card-body .card-title,
-.main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
-    font-size: 0.9rem;
+    height: 10.438rem;
   }
   .main_container .content_carousel .owl_content_four .item,
 .main_container .content_carousel .owl_content_five .item,
@@ -3248,7 +3232,7 @@ select:active {
   .main_container .content_carousel .owl_content_four .item.item_muslim,
 .main_container .content_carousel .owl_content_five .item.item_muslim,
 .main_container .content_carousel .owl_muslim_guide .item.item_muslim {
-    height: 11rem;
+    height: 10rem;
   }
   .main_container .content_carousel .owl_content_four .item.item_muslim .card_muslim_guid,
 .main_container .content_carousel .owl_content_five .item.item_muslim .card_muslim_guid,
@@ -3264,7 +3248,7 @@ select:active {
   .main_container .content_carousel .owl_content_four .item.item_muslim .card_muslim_guid .card-body,
 .main_container .content_carousel .owl_content_five .item.item_muslim .card_muslim_guid .card-body,
 .main_container .content_carousel .owl_muslim_guide .item.item_muslim .card_muslim_guid .card-body {
-    top: 10.25rem;
+    top: 9rem;
   }
   .main_container .content_carousel .owl_content_four .item .card,
 .main_container .content_carousel .owl_content_five .item .card,
@@ -3274,7 +3258,7 @@ select:active {
   .main_container .content_carousel .owl_content_four .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_five .item .card .owl_content_img img,
 .main_container .content_carousel .owl_muslim_guide .item .card .owl_content_img img {
-    height: 12.063rem;
+    height: 10.438rem;
   }
   .main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
 .main_container .content_carousel .owl_content_five .item .card .card-body .card-title,
@@ -3292,7 +3276,7 @@ select:active {
     margin-top: 30% !important;
   }
   .main_container .list_page .item .card .owl_content_img img {
-    height: 12.219rem;
+    height: 10.125rem;
   }
   .main_container .list_page .item .card .card-body {
     padding: 1rem 0.25rem;
@@ -3312,7 +3296,7 @@ select:active {
   }
   .main_container .inner_page .cover img {
     width: 100%;
-    max-height: 24.875rem;
+    max-height: 21.5rem;
   }
   .main_container .inner_page .cover audio {
     margin-top: -5%;
@@ -3329,10 +3313,10 @@ select:active {
     font-size: 1rem;
   }
   .main_container .inner_page .poster .poster-details .outside-cover {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .main_container .inner_page .socail_media {
-    width: 75%;
+    width: 100%;
   }
   .main_container .inner_page .socail_media .pa_share {
     margin-top: 0.75rem;
@@ -3386,6 +3370,7 @@ select:active {
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
@@ -3396,13 +3381,13 @@ select:active {
   }
   .main_container .salah_time_page .time_btn .h4_time {
     line-height: 3rem;
-    font-size: 1rem;
-    padding: 0 0 0 5px;
+    font-size: 0.8rem;
+    padding: 0 8px 0 0;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     line-height: 3rem;
-    font-size: 1rem;
-    padding: 0 5px 0 0;
+    font-size: 0.8rem;
+    padding: 0 0 0 8px;
   }
   .main_container .sebha_page .display .btn-bar button {
     width: 100%;
@@ -3426,13 +3411,17 @@ select:active {
     font-size: 1.25rem;
   }
   .main_container .sebha_page #sebhaModal .choose_sebha {
-    font-size: 1.09rem;
+    font-size: 1rem;
   }
   .main_container .subscribe_page {
     width: 100%;
   }
   .main_container .zakkah_page {
     width: 90%;
+  }
+  .main_container .zakkah_v2_page .currency_title,
+.main_container .zakkah_v2_page .up_down {
+    font-size: 0.75rem;
   }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
@@ -3557,21 +3546,17 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .logo_orange,
-.main_container .header .header_icon .logo_orange {
+  .main_container .header .header_logo .logo_orange {
     text-align: right;
   }
-  .main_container .header .header_logo .logo_orange img,
-.main_container .header .header_icon .logo_orange img {
+  .main_container .header .header_logo .logo_orange img {
     width: 35% !important;
     margin-top: -0.85rem !important;
   }
-  .main_container .header .header_logo .img_khir,
-.main_container .header .header_icon .img_khir {
+  .main_container .header .header_logo .img_khir {
     text-align: center !important;
   }
-  .main_container .header .header_logo .img_khir img,
-.main_container .header .header_icon .img_khir img {
+  .main_container .header .header_logo .img_khir img {
     width: 50% !important;
     margin-top: 0.05rem !important;
   }
@@ -4048,21 +4033,17 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .logo_orange,
-.main_container .header .header_icon .logo_orange {
+  .main_container .header .header_logo .logo_orange {
     text-align: right;
   }
-  .main_container .header .header_logo .logo_orange img,
-.main_container .header .header_icon .logo_orange img {
+  .main_container .header .header_logo .logo_orange img {
     width: 35% !important;
     margin-top: -0.85rem !important;
   }
-  .main_container .header .header_logo .img_khir,
-.main_container .header .header_icon .img_khir {
+  .main_container .header .header_logo .img_khir {
     text-align: center !important;
   }
-  .main_container .header .header_logo .img_khir img,
-.main_container .header .header_icon .img_khir img {
+  .main_container .header .header_logo .img_khir img {
     width: 50% !important;
     margin-top: 0.5rem !important;
   }
@@ -4094,7 +4075,7 @@ select:active {
     font-size: 2rem;
     position: fixed;
     top: 3.5rem;
-    left: 5rem;
+    right: -3%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -4561,21 +4542,17 @@ select:active {
   .main_container .header {
     height: 4rem !important;
   }
-  .main_container .header .header_logo .link_href,
-.main_container .header .header_icon .link_href {
+  .main_container .header .header_logo .link_href {
     text-align: center !important;
   }
-  .main_container .header .header_logo .link_href img,
-.main_container .header .header_icon .link_href img {
+  .main_container .header .header_logo .link_href .logo_orange img {
     width: 60%;
     margin-top: -0.85rem;
   }
-  .main_container .header .header_logo .link_href .img_khir,
-.main_container .header .header_icon .link_href .img_khir {
+  .main_container .header .header_logo .link_href .img_khir {
     text-align: left;
   }
-  .main_container .header .header_logo .link_href .img_khir img,
-.main_container .header .header_icon .link_href .img_khir img {
+  .main_container .header .header_logo .link_href .img_khir img {
     width: 60%;
     margin-top: 0;
   }
