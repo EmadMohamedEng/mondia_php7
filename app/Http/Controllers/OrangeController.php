@@ -266,7 +266,7 @@ class OrangeController extends Controller
       $now = Carbon::now()->format('Y-m-d H:i:s');  /*"2020-07-05 16:30:00"*/
       if ($now <= $expire_date_time) {
         $orangeUnSubscribe = $this->orangeUnSubscribe($msisdn);
-        if($orangeUnSubscribe == 0){ //unsub result code direct from orange unsub api
+        if($orangeUnSubscribe == "0"){ //unsub result code direct from orange unsub api
           if($lang = 'ar'){
             $msg = '!تم الغاء الاشتراك';
           }else{
