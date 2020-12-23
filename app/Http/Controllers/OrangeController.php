@@ -26,6 +26,7 @@ class OrangeController extends Controller
 
   public function postLogin(Request $request)
   {
+    $lang =  session::get('lang');
     date_default_timezone_set("Africa/Cairo");
     $number = ltrim($request->number, 0);
     $msisdn = "20$number";
@@ -42,6 +43,13 @@ class OrangeController extends Controller
       //   return redirect(session()->get('current_url'));
       // }
       return redirect(url('?OpID=8'));
+    }elseif($checkStatus == "2"){  // Grace
+      if ($lang == 'ar'){
+        $request->session()->flash('failed','يرجي شحن رصيدك');
+      }else{
+        $request->session()->flash('failed','Please recharge your balance');
+      }
+      return redirect('orange_portal_login');
     }else{ // not found
 
       $random = mt_rand(1000, 9999);
@@ -71,7 +79,7 @@ class OrangeController extends Controller
       $this->log($actionName, $URL, $result);
       //dd($response);
       if ($response == "1") {
-        $lang =  session::get('lang');
+
         if ($lang == 'ar')
           return redirect('checkpincode')->with('success', '!تم ارسال رمز التحقق');
           return redirect('checkpincode')->with('success', 'Pincode Sent!');
@@ -220,7 +228,7 @@ class OrangeController extends Controller
 
   public function postUnsubscribe(Request $request)
   {
-
+    $lang =  session::get('lang');
     $number = ltrim($request->number, 0);
     $msisdn = "20$number";
     $URL = ORANGE_END_POINT."/api/checkStatus";
@@ -242,7 +250,11 @@ class OrangeController extends Controller
     $pincode->expire_date_time = Carbon::parse($date)->addHour();
     $pincode->save();
     Session::put('unsub_orange', $msisdn);
-    $message_pincode = " لالغاء الاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
+    if($lang == 'ar'){
+      $message_pincode = " لالغاء الاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
+    }else{
+      $message_pincode = " To unsubscribe from the Orange El-Kheer service, please enter this code";
+    }
       $URL_Api = ORANGE_API_SENDPINCODE;
       $param = "phone_number=$msisdn&message=$message_pincode $pincode_random";
       $ch = curl_init();
@@ -259,14 +271,13 @@ class OrangeController extends Controller
       $result['message'] = $message_pincode.$pincode_random;
       $this->log($actionName, $URL, $result);
     if ($response == "1") {
-      $lang =  session::get('lang');
       if ($lang == 'ar')
       return redirect('unsub_pincode')->with('success', '!تم ارسال رمز التحقق');
       return redirect('unsub_pincode')->with('success', 'Pincode Sent!');
     }
 
     }else{
-      if($lang = 'ar'){
+      if($lang == 'ar'){
         $msg = '!انت غير مشترك';
       }else{
         $msg = 'You are not a subscriber!';
@@ -278,6 +289,7 @@ class OrangeController extends Controller
 
   public function unsub_pincode_confirm(request $request)
   {
+    $lang =  session::get('lang');
     date_default_timezone_set("Africa/Cairo");
     $pincode = $request->input('pincode');
     $msisdn = Session::get('unsub_orange');
@@ -291,9 +303,8 @@ class OrangeController extends Controller
         $orangeUnSubscribe = $this->orangeUnSubscribe($msisdn);
         if($orangeUnSubscribe == "0"){ //unsub result code direct from orange unsub api
 
-
              // send unsub success message
-            if($lang = 'ar'){
+            if($lang == 'ar'){
             $unsub_success_message = "لقد تم الغاء اشتراكك في خدمة اورنج الخير";
             }else{
             $unsub_success_message = "Your subscription to Orange El-Kheer service has been canceled";
@@ -316,7 +327,7 @@ class OrangeController extends Controller
 
 
 
-          if($lang = 'ar'){
+          if($lang == 'ar'){
             $msg = '!تم الغاء الاشتراك';
           }else{
             $msg = 'Unsubscribed successfully!';
@@ -324,7 +335,7 @@ class OrangeController extends Controller
           session()->flash('success', $msg);
           return $this->logout();
         }else{
-          $lang =  session::get('lang');
+
           if ($lang == 'ar')
           return redirect('orange_portal_unsub')->with('failed', 'خطأ في الغاء الاشتراك');
           return redirect('orange_portal_unsub')->with('failed', 'Unsub is failed');
@@ -383,7 +394,7 @@ class OrangeController extends Controller
         return redirect('unsub_pincode')->with('success', '!تم ارسال رمز التحقق');
         return redirect('unsub_pincode')->with('success', 'Pincode Sent!');
       }else{
-        if($lang = 'ar'){
+        if($lang == 'ar'){
           $msg = '!انت غير مشترك';
         }else{
           $msg = 'You are not a subscriber!';
