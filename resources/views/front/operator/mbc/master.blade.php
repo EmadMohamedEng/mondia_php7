@@ -25,6 +25,10 @@
   </div>
 </header>
 
+@php
+$sub = get_mbc_sub(session()->get('MSISDN'));
+@endphp
+
 <div class="row m-0">
 
   <div class="" style="z-index: 9999999999;">
@@ -79,7 +83,7 @@
             </a>
           </li>
           @php
-              $providers_mbc = get_providers_mbc(session()->get('subscription_day'))
+              $providers_mbc = get_providers_mbc($sub);
           @endphp
           @foreach($providers_mbc as $provider)
 
@@ -93,7 +97,7 @@
               {{$provider->getTranslation('title',getCode())}}
             </a>
             <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink2">
-              @foreach(get_service_mbc(session()->get('subscription_day'), $provider) as $value)
+              @foreach(get_service_mbc($sub, $provider) as $value)
 
               <?php
               if ($provider->id == 23 && $value->id == 40  && request()->get("OpID") == 12) { // The Holy Quran and TIMWE
@@ -353,7 +357,7 @@
               </a>
 
               <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink5">
-                @foreach(get_service_mbc(session()->get('subscription_day'), $provider) as $value)
+                @foreach(get_service_mbc($sub, $provider) as $value)
 
                 <?php
                 if ($provider->id == 23 && $value->id == 40  && request()->get("OpID") == 12) { // The Holy Quran and TIMWE
@@ -552,7 +556,7 @@
                 {{$provider->getTranslation('title',getCode())}}
               </a>
               <div class="dropdown-menu dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink7">
-                @foreach(get_service_mbc(session()->get('subscription_day'), $provider) as $value)
+                @foreach(get_service_mbc($sub, $provider) as $value)
                 <?php
                 if ($provider->id == 23 && $value->id == 40  && request()->get("OpID") == 12) { // The Holy Quran and TIMWE
                   continue;
