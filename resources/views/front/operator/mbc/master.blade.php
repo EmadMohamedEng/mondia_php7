@@ -7,7 +7,7 @@
     <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-0 d-flex justify-content-center">
       <div class="header_logo">
         <a href="{{route('front.index')}}" class="link_href">
-          <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
+          <img class="bounce-top logo_mbc" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
         </a>
       </div>
     </div>
