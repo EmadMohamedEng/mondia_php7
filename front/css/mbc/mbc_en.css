@@ -1760,7 +1760,7 @@ select:active {
 
   .main_container {
     width: 100% !important;
-    padding-top: 4rem;
+    padding-top: 2rem;
     padding-bottom: 20%;
   }
   .main_container .header {
