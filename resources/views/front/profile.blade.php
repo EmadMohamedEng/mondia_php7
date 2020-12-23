@@ -50,22 +50,13 @@
       @if(request()->get('OpID') == mbc && $subscriber_content->count())
       <div class="profile_card">
         <div class="row m-0">
-          @php
-              $day = $subscriber_day;
-          @endphp
-          @if ($subscriber_content->first()->subscription_day == $day)
-          <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-1">
-            <div class="profile_card_title">
-              <h6 class="font-weight-bold">Day {{$day}}</h6>
-            </div>
-          </div>
-          @endif
+          @for ($day = $subscriber_day ; $day > 0 ; $day--)
 
           @foreach ($subscriber_content as $item)
-          @if ($item->subscription_day != $day)
-          @php
-              $day--;
-          @endphp
+
+          @if ($item->subscription_day == $day)
+
+          @if ($count != $item->subscription_day)
           <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-1">
             <div class="profile_card_title">
               <h6 class="font-weight-bold">Day {{$day}}</h6>
@@ -93,7 +84,13 @@
               </div>
             </div>
           </div>
+          @endif
+          @php
+              $count = $item->subscription_day;
+          @endphp
           @endforeach
+
+          @endfor
 
         </div>
       </div>

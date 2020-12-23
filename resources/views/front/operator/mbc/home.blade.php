@@ -1,6 +1,9 @@
 @extends('front.master')
 @section('page_title') Home @endsection
 @section('content')
+@php
+$sub = get_mbc_sub(session()->get('MSISDN'));
+@endphp
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
 
   @include('front.search')
@@ -102,7 +105,7 @@
   </section>
   @endif
 
-  @foreach (get_providers_mbc(session()->get('subscription_day')) as $item)
+  @foreach (get_providers_mbc($sub) as $item)
   <section class="content_carousel">
     <div class="content_carousel_head text-capitalize">
       <div class="row m-0">
@@ -120,7 +123,7 @@
     </div>
 
     @php
-    $services_foreach = get_service_mbc(session()->get('subscription_day'), $item);
+    $services_foreach = get_service_mbc($sub, $item);
     $count_services = count($services_foreach);
     if($count_services == 1){
     $owl_1 = 'owl_content_one';

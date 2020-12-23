@@ -45,6 +45,17 @@ body {
   .all_slect {
     padding-right: 9%;
     padding-left: 9%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .all_slect .mdb-select {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .landing_page .form_content form #zain_submit {
+    margin-top: 5%;
   }
 </style>
 @php

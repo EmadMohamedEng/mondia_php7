@@ -1,5 +1,6 @@
 .main_container .header .open_icon_nav_mbc {
-  margin-right: -15%;
+  float: right;
+  margin-top: 0 !important;
 }
 .main_container #mySidenav.sidenav {
   left: 56.5%;

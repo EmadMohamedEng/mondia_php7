@@ -191,37 +191,60 @@ function get_mbc_sub($msisdn)
     return $sub;
 }
 
-function get_providers_mbc($day)
+function get_providers_mbc($sub)
 {
+    if($sub->country == 'KSA' && $sub->operator == 'STC'){
+      $sub_operator = 'ksa-stc';
+    }else{
+      $sub_operator = 'all';
+    }
+
     $providers = Provider::select('providers.*')
         ->join('services', 'providers.id', 'services.provider_id')
         ->join('contents', 'services.id', 'contents.service_id')
         ->join('mbc_contents', 'contents.id', 'mbc_contents.content_id')
-        ->where('mbc_contents.subscription_day', '<=', $day)
+        ->where('mbc_contents.subscription_day', '<=', $sub->day)
+        ->where('mbc_contents.operator', $sub_operator)
         ->groupBy('providers.id')
         ->get();
+
     return $providers;
 }
 
-function get_service_mbc($day, $provider)
+function get_service_mbc($sub, $provider)
 {
+    if($sub->country == 'KSA' && $sub->operator == 'STC'){
+      $sub_operator = 'ksa-stc';
+    }else{
+      $sub_operator = 'all';
+    }
+
     $services = Service::select('services.*')
         ->join('providers', 'services.provider_id', 'providers.id')
         ->join('contents', 'services.id', 'contents.service_id')
         ->join('mbc_contents', 'contents.id', 'mbc_contents.content_id')
-        ->where('mbc_contents.subscription_day', '<=', $day)
+        ->where('mbc_contents.subscription_day', '<=', $sub->day)
+        ->where('mbc_contents.operator', $sub_operator)
         ->where('providers.id', $provider->id)
         ->groupBy('services.id')
         ->get();
+
     return $services;
 }
 
-function get_content_mbc($day, $service)
+function get_content_mbc($sub, $service)
 {
+    if($sub->country == 'KSA' && $sub->operator == 'STC'){
+      $sub_operator = 'ksa-stc';
+    }else{
+      $sub_operator = 'all';
+    }
+
     $mbcContent = MbcContent::select('mbc_contents.*')
         ->join('contents', 'contents.id', 'mbc_contents.content_id')
         ->join('services', 'services.id', 'contents.service_id')
-        ->where('mbc_contents.subscription_day', '<=', $day)
+        ->where('mbc_contents.subscription_day', '<=', $sub->day)
+        ->where('mbc_contents.operator', $sub_operator)
         ->where('services.id', $service->id)
         ->get();
 
