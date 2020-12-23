@@ -43,14 +43,7 @@ class OrangeController extends Controller
       //   return redirect(session()->get('current_url'));
       // }
       return redirect(url('?OpID=8'));
-    }elseif($checkStatus == "2"){  // Grace
-      if ($lang == 'ar'){
-        $request->session()->flash('failed','يرجي شحن رصيدك');
-      }else{
-        $request->session()->flash('failed','Please recharge your balance');
-      }
-      return redirect('orange_portal_login');
-    }else{ // not found
+    }else{ // not found    or active = 0 (pending ) or active = 2 unsub
 
       $random = mt_rand(1000, 9999);
       $pincode_random = $random;
@@ -117,7 +110,15 @@ class OrangeController extends Controller
       $now = Carbon::now()->format('Y-m-d H:i:s');  /*"2020-07-05 16:30:00"*/
       if ($now <= $expire_date_time) {
         $orangeSubscribe = $this->orangeSubscribe($msisdn);
-        if($orangeSubscribe == "1"){
+           /* =================  Orange result_code for sub / unsub api ===================
+              0	success  // sub success
+              1	already subscribed  // want to sub but alreday
+              2	not subscribed    // unsub and want to unsub
+              5	not allowed
+              6	account problem = no balance
+              31	Technical problem
+              */
+        if($orangeSubscribe == "0" || $orangeSubscribe == "1"){  // subscribe success or already sub
 
          // send welcome message
          if ($lang == 'ar'){
@@ -145,7 +146,7 @@ class OrangeController extends Controller
           //   return redirect(session()->get('current_url'));
           // }
           return redirect(url('?OpID=8'));
-        }else{
+        }else{  // need to handle other cases like  6  and others
           if ($lang == 'ar')
           return redirect('orange_portal_login')->with('failed', 'خطأ في التسجيل');
           return redirect('orange_portal_login')->with('failed', 'Register is failed');
@@ -295,7 +296,17 @@ class OrangeController extends Controller
       $now = Carbon::now()->format('Y-m-d H:i:s');  /*"2020-07-05 16:30:00"*/
       if ($now <= $expire_date_time) {
         $orangeUnSubscribe = $this->orangeUnSubscribe($msisdn);
-        if($orangeUnSubscribe == "0"){ //unsub result code direct from orange unsub api
+
+     /* =================  Orange result_code for sub / unsub api ===================
+      0	success
+      1	already subscribed
+      2	not subscribed
+      5	not allowed
+      6	account problem = no balance
+      31	Technical problem
+      */
+
+        if($orangeUnSubscribe == "0"){ // unsub result code direct from orange unsub api
 
              // send unsub success message
             if($lang == 'ar'){
@@ -324,7 +335,7 @@ class OrangeController extends Controller
           }
           session()->flash('success', $msg);
           return $this->logout();
-        }else{
+        }else{  // need to be handle 2 , 5 , 31
 
           if ($lang == 'ar')
           return redirect('orange_portal_unsub')->with('failed', 'خطأ في الغاء الاشتراك');
