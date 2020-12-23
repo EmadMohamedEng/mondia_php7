@@ -1,10 +1,11 @@
 <?php
 
-use App\Setting;
 use App\Post;
 use App\Video;
 use App\Service;
+use App\Setting;
 use App\Provider;
+use App\MbcContent;
 
 function get_setting($key)
 {
@@ -159,4 +160,86 @@ function get_contents($id)
     $contents = $contents->orderBy('contents.index', 'asc')->limit(6)->get();
 
     return $contents;
+}
+
+function SendRequestPost($URL, $JSON, $headers)
+{
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $URL);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 100);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 100);
+    curl_setopt($ch, CURLOPT_VERBOSE, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $JSON);
+    $sOutput = curl_exec($ch);
+    curl_close($ch);
+
+    return $sOutput;
+}
+
+function get_mbc_sub($msisdn)
+{
+    $vars["msisdn"] = $msisdn;
+    $vars["service_id"] = 2;
+    $sub = SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
+    $sub = json_decode($sub);
+
+    return $sub;
+}
+
+function get_providers_mbc($day)
+{
+    $providers = Provider::select('providers.*')
+        ->join('services', 'providers.id', 'services.provider_id')
+        ->join('contents', 'services.id', 'contents.service_id')
+        ->join('mbc_contents', 'contents.id', 'mbc_contents.content_id')
+        ->where('mbc_contents.subscription_day', '<=', $day)
+        ->groupBy('providers.id')
+        ->get();
+    return $providers;
+}
+
+function get_service_mbc($day, $provider)
+{
+    $services = Service::select('services.*')
+        ->join('providers', 'services.provider_id', 'providers.id')
+        ->join('contents', 'services.id', 'contents.service_id')
+        ->join('mbc_contents', 'contents.id', 'mbc_contents.content_id')
+        ->where('mbc_contents.subscription_day', '<=', $day)
+        ->where('providers.id', $provider->id)
+        ->groupBy('services.id')
+        ->get();
+    return $services;
+}
+
+function get_content_mbc($day, $service)
+{
+    $mbcContent = MbcContent::select('mbc_contents.*')
+        ->join('contents', 'contents.id', 'mbc_contents.content_id')
+        ->join('services', 'services.id', 'contents.service_id')
+        ->where('mbc_contents.subscription_day', '<=', $day)
+        ->where('services.id', $service->id)
+        ->get();
+
+    return $mbcContent;
+}
+
+function get_friday_mbc()
+{
+    $mbcContents = MbcContent::where('type', 'friday')->get();
+
+    return $mbcContents;
+}
+
+function get_occasion_mbc()
+{
+    $occassion_date_format = date('Y-m-d');
+
+    $mbcContent = MbcContent::where('occasion_date', $occassion_date_format)->get();
+
+    return $mbcContent;
 }

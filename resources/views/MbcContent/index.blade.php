@@ -10,6 +10,16 @@ Content
                 {!! Form::open(['url' => url('mbc_content'),'method'=>'get', 'class'=>'all_form']) !!}
 
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    {!! Form::label('operator', 'Operator:') !!}
+                    <div class=''>
+                        {!! Form::select('operator', ['all'=>'All' , 'Ksa-Stc' => 'Ksa-Stc'] ,
+                        request()->get('operator'),
+                        ['class'=>'form-control','id'=>'operator','placeholder'=>'Select Operator']) !!}
+                    </div>
+                </div>
+
+
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     {!! Form::label('Day', 'Day:') !!}
                     <div class='input-group date'>
                         <input type='text' id="Day" class="form-control" value="{{request()->get('subscription_day')}}"
@@ -21,7 +31,7 @@ Content
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     {!! Form::label('Content', 'Content:') !!}
                     <div class='input-group date'>
                         <input type='text' id="Content" class="form-control" value="{{request()->get('content_id')}}"
@@ -31,16 +41,9 @@ Content
                                     class="glyphicon glyphicon-search"></i></button>
                         </span>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    {!! Form::label('operator', 'Operator:') !!}
-                    <div class=''>
-                        {!! Form::select('operator', ['all'=>'All' , 'Ksa-Stc' => 'Ksa-Stc'] ,
-                        request()->get('operator'),
-                        ['class'=>'form-control','id'=>'operator','placeholder'=>'Select Operator']) !!}
-                    </div>
-                </div>
+
 
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     {!! Form::label('type', 'Type:') !!}
@@ -100,6 +103,8 @@ Content
                                         <td>{{$mbc_content->id}}</td>
                                         <td>
                                         @if($mbc_content->subscription_day )
+                                          {{$mbc_content->subscription_day}}day
+                                          @elseif($mbc_content->subscription_day == "0")
                                           {{$mbc_content->subscription_day}}day
                                         @else
                                         ---
