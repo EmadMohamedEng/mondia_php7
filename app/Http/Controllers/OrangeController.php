@@ -118,6 +118,7 @@ class OrangeController extends Controller
               6	account problem = no balance
               31	Technical problem
               */
+
         if($orangeSubscribe == "0" || $orangeSubscribe == "1"){  // subscribe success or already sub
 
          // send welcome message
