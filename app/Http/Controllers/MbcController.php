@@ -575,7 +575,6 @@ class MbcController extends Controller
       curl_setopt($ch, CURLOPT_POSTFIELDS, $JSON);
       $sOutput = curl_exec($ch);
       curl_close($ch);
-
       return $sOutput;
     }
 
