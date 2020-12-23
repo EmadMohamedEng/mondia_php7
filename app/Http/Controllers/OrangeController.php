@@ -55,9 +55,9 @@ class OrangeController extends Controller
       $pincode->save();
       Session::put('msisdn_orange', $msisdn);
       if ($lang == 'ar'){
-        $message_pincode = " للاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
+        $message_pincode = "  للاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
       }else{
-        $message_pincode = "To subscribe to Orange El-Kheer service, please enter this code ";
+        $message_pincode = "To subscribe to Orange El-Kheer service, please enter this code  ";
       }
       $send_message= $message_pincode.$pincode_random ;
 
