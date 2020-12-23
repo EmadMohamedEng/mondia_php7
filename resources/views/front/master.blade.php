@@ -26,9 +26,9 @@
   <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
-  <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}">
+  <!-- <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/style_en_mbc.css')}}">
-  <link rel="stylesheet" href="{{asset('front/css/style_mbc_menu.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/style_mbc_menu.css')}}"> -->
 
     @if(request()->get('OpID') == mbc)
       @include("front.operator.mbc.head")
@@ -124,6 +124,7 @@ $enable = get_setting('enable_testing');
   <!-- end loading -->
 
   <script src="{{asset('front/js/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{asset('front/js/popper.min.js')}}"></script>
   <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
   <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
   <script src="{{asset('front/js/script.js')}}"></script>
