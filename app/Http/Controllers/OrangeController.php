@@ -147,9 +147,20 @@ class OrangeController extends Controller
           // }
           return redirect(url('?OpID=8'));
         }else{  // need to handle other cases like  6  and others
-          if ($lang == 'ar')
-          return redirect('orange_portal_login')->with('failed', 'خطأ في التسجيل');
-          return redirect('orange_portal_login')->with('failed', 'Register is failed');
+          if($orangeSubscribe == "6") {
+            if ($lang == 'ar'){
+              return redirect('orange_portal_login')->with('failed', 'ليس لديك رصيد كافى');
+            }
+            return redirect('orange_portal_login')->with('failed', "You don't have enough balance");
+          } elseif($orangeSubscribe == "5") {
+            return redirect('orange_portal_login')->with('failed', 'not allowed');
+          } elseif($orangeSubscribe == "31") {
+            return redirect('orange_portal_login')->with('failed', 'Technical problem');
+          } else {
+            if ($lang == 'ar')
+              return redirect('orange_portal_login')->with('failed', 'خطأ في التسجيل');
+            return redirect('orange_portal_login')->with('failed', 'Register is failed');
+          }
         }
       } else {
         if ($lang == 'ar'){
@@ -336,10 +347,20 @@ class OrangeController extends Controller
           session()->flash('success', $msg);
           return $this->logout();
         }else{  // need to be handle 2 , 5 , 31
-
-          if ($lang == 'ar')
-          return redirect('orange_portal_unsub')->with('failed', 'خطأ في الغاء الاشتراك');
-          return redirect('orange_portal_unsub')->with('failed', 'Unsub is failed');
+          if($orangeUnSubscribe == "2") {
+            if ($lang == 'ar'){
+              return redirect('orange_portal_unsub')->with('failed', 'انت لست مشترك فى الخدمه');
+            }
+            return redirect('orange_portal_unsub')->with('failed', "You are not subscribe in the service");
+          } elseif($orangeUnSubscribe == "5") {
+            return redirect('orange_portal_unsub')->with('failed', 'not allowed');
+          } elseif($orangeUnSubscribe == "31") {
+            return redirect('orange_portal_unsub')->with('failed', 'Technical problem');
+          } else {
+            if ($lang == 'ar')
+              return redirect('orange_portal_unsub')->with('failed', 'خطأ في التسجيل');
+            return redirect('orange_portal_unsub')->with('failed', 'Register is failed');
+          }
         }
       } else {
         if (session::get("lang") == 'ar'){
