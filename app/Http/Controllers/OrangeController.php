@@ -43,14 +43,7 @@ class OrangeController extends Controller
       //   return redirect(session()->get('current_url'));
       // }
       return redirect(url('?OpID=8'));
-    }elseif($checkStatus == "2"){  // Grace
-      if ($lang == 'ar'){
-        $request->session()->flash('failed','يرجي شحن رصيدك');
-      }else{
-        $request->session()->flash('failed','Please recharge your balance');
-      }
-      return redirect('orange_portal_login');
-    }else{ // not found
+    }else{ // not found    or active = 0 (pending ) or active = 2 unsub
 
       $random = mt_rand(1000, 9999);
       $pincode_random = $random;
@@ -61,22 +54,24 @@ class OrangeController extends Controller
       $pincode->expire_date_time = Carbon::parse($date)->addHour();
       $pincode->save();
       Session::put('msisdn_orange', $msisdn);
-      $message_pincode = " للاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
-      $URL_Api = ORANGE_API_SENDPINCODE;
-      $param = "phone_number=$msisdn&message=$message_pincode $pincode_random";
-      $ch = curl_init();
-      curl_setopt($ch, CURLOPT_URL, $URL_Api);
-      curl_setopt($ch, CURLOPT_POST, 1);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      $response = curl_exec($ch);
-      curl_close($ch);
+      if ($lang == 'ar'){
+        $message_pincode = " للاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
+      }else{
+        $message_pincode = "To subscribe to Orange El-Kheer service, please enter this code ";
+      }
+      $send_message= $message_pincode.$pincode_random ;
+
+      // orange send message
+      $response = $this->orange_send_message($msisdn, $send_message);
+
+      // orange send message log
       $actionName = "PinCode Orange";
-      $URL = $URL_Api;
+      $URL = ORANGE_API_SENDPINCODE;
       $result['response'] = $response;
       $result['phone_number'] = $msisdn;
       $result['message'] = $message_pincode.$pincode_random;
       $this->log($actionName, $URL, $result);
+
       //dd($response);
       if ($response == "1") {
 
@@ -103,6 +98,7 @@ class OrangeController extends Controller
 
   public function checkpincode_confirm(request $request)
   {
+    $lang =  session::get('lang');
     date_default_timezone_set("Africa/Cairo");
     $pincode = $request->input('pincode');
     $msisdn = Session::get('msisdn_orange');
@@ -114,7 +110,16 @@ class OrangeController extends Controller
       $now = Carbon::now()->format('Y-m-d H:i:s');  /*"2020-07-05 16:30:00"*/
       if ($now <= $expire_date_time) {
         $orangeSubscribe = $this->orangeSubscribe($msisdn);
-        if($orangeSubscribe == "1"){
+           /* =================  Orange result_code for sub / unsub api ===================
+              0	success  // sub success
+              1	already subscribed  // want to sub but alreday
+              2	not subscribed    // unsub and want to unsub
+              5	not allowed
+              6	account problem = no balance
+              31	Technical problem
+              */
+
+        if($orangeSubscribe == "0" || $orangeSubscribe == "1"){  // subscribe success or already sub
 
          // send welcome message
          if ($lang == 'ar'){
@@ -124,17 +129,13 @@ class OrangeController extends Controller
          }
 
          $welcome_message .= " ".url('?OpID=8');
-         $URL_Api = ORANGE_API_SENDPINCODE;
-         $param = "phone_number=$msisdn&message=$welcome_message";
-         $ch = curl_init();
-         curl_setopt($ch, CURLOPT_URL, $URL_Api);
-         curl_setopt($ch, CURLOPT_POST, 1);
-         curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
-         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-         $response = curl_exec($ch);
-         curl_close($ch);
-         $actionName = "Wecome Message Orange";
-         $URL = $URL_Api;
+
+          // orange send message
+          $response = $this->orange_send_message($msisdn, $welcome_message);
+
+          // log for welcome message
+         $actionName = "welcome Message Orange";
+         $URL = ORANGE_API_SENDPINCODE;
          $result['response'] = $response;
          $result['phone_number'] = $msisdn;
          $result['message'] = $welcome_message;
@@ -146,14 +147,24 @@ class OrangeController extends Controller
           //   return redirect(session()->get('current_url'));
           // }
           return redirect(url('?OpID=8'));
-        }else{
-          $lang =  session::get('lang');
-          if ($lang == 'ar')
-          return redirect('orange_portal_login')->with('failed', 'خطأ في التسجيل');
-          return redirect('orange_portal_login')->with('failed', 'Register is failed');
+        }else{  // need to handle other cases like  6  and others
+          if($orangeSubscribe == "6") {
+            if ($lang == 'ar'){
+              return redirect('orange_portal_login')->with('failed', 'ليس لديك رصيد كافى');
+            }
+            return redirect('orange_portal_login')->with('failed', "You don't have enough balance");
+          } elseif($orangeSubscribe == "5") {
+            return redirect('orange_portal_login')->with('failed', 'not allowed');
+          } elseif($orangeSubscribe == "31") {
+            return redirect('orange_portal_login')->with('failed', 'Technical problem');
+          } else {
+            if ($lang == 'ar')
+              return redirect('orange_portal_login')->with('failed', 'خطأ في التسجيل');
+            return redirect('orange_portal_login')->with('failed', 'Register is failed');
+          }
         }
       } else {
-        if (session::get("lang") == 'ar'){
+        if ($lang == 'ar'){
           $request->session()->flash('failed','انتهت صلاحية الكود يرجي الضغط علي اعادة ارسال كود التحقق');
         }else{
           $request->session()->flash('failed','The code has expired, please click on resend the pincode');
@@ -162,7 +173,7 @@ class OrangeController extends Controller
       }
 
     } else {
-      if (session::get("lang") == 'ar'){
+      if ($lang == 'ar'){
         $request->session()->flash('failed','خطأ في كود التفعيل برجاء ادخال كود التفعيل الصحيح');
       }else{
         $request->session()->flash('failed','Activation error. Please enter the correct activation code');
@@ -173,6 +184,7 @@ class OrangeController extends Controller
 
   public function ResendPincode(request $request)
   {
+    $lang =  session::get('lang');
     date_default_timezone_set("Africa/Cairo");
     $msisdn = Session::get('msisdn_orange');
     $random = mt_rand(1000, 9999);
@@ -183,30 +195,29 @@ class OrangeController extends Controller
     $date = Carbon::now()->format('Y/m/d H:i:s');
     $pincode->expire_date_time = Carbon::parse($date)->addHour();
     $pincode->save();
+    if ($lang == 'ar'){
+      $message_pincode = " للاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
+    }else{
+      $message_pincode = "To subscribe to Orange El-Kheer service, please enter this code ";
+    }
+    $send_message= $message_pincode.$pincode_random ;
+      // orange send message
+      $response = $this->orange_send_message($msisdn, $send_message);
 
-    $message_pincode = " للاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
-      $URL_Api = ORANGE_API_SENDPINCODE;
-      $param = "phone_number=$msisdn&message=$message_pincode $pincode_random";
-      $ch = curl_init();
-      curl_setopt($ch, CURLOPT_URL, $URL_Api);
-      curl_setopt($ch, CURLOPT_POST, 1);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      $response = curl_exec($ch);
-      curl_close($ch);
+      // log for welcome message
       $actionName = "ResendPincode Orange";
-      $URL = $URL_Api;
+      $URL = ORANGE_API_SENDPINCODE;
       $result['response'] = $response;
       $result['phone_number'] = $msisdn;
       $result['message'] = $message_pincode.$pincode_random;
       $this->log($actionName, $URL, $result);
+
     if ($response == "1") {
-      $lang =  session::get('lang');
       if ($lang == 'ar')
       return redirect('checkpincode')->with('success', '!تم ارسال رمز التحقق');
       return redirect('checkpincode')->with('success', 'Pincode Sent!');
     } else {
-      if (session::get("lang") == 'ar'){
+      if ($lang == 'ar'){
         $request->session()->flash('failed','يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');
       }else{
         $request->session()->flash('failed','There is an error, please click to resend the verification code');
@@ -236,7 +247,6 @@ class OrangeController extends Controller
     $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
     $headers['Accept'] = '*/*';
     $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
-    $lang =  Session::get('applocale');
 
     if($checkStatus != "0"){  //  found
 
@@ -253,19 +263,16 @@ class OrangeController extends Controller
     if($lang == 'ar'){
       $message_pincode = " لالغاء الاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
     }else{
-      $message_pincode = " To unsubscribe from the Orange El-Kheer service, please enter this code";
+      $message_pincode = " To unsubscribe from the Orange El-Kheer service, please enter this code ";
     }
-      $URL_Api = ORANGE_API_SENDPINCODE;
-      $param = "phone_number=$msisdn&message=$message_pincode $pincode_random";
-      $ch = curl_init();
-      curl_setopt($ch, CURLOPT_URL, $URL_Api);
-      curl_setopt($ch, CURLOPT_POST, 1);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      $response = curl_exec($ch);
-      curl_close($ch);
+    $send_message= $message_pincode.$pincode_random ;
+
+    // orange send message
+      $response = $this->orange_send_message($msisdn, $send_message);
+
+    // log for welcome message
       $actionName = "UnsubPincodeOrange";
-      $URL = $URL_Api;
+      $URL = ORANGE_API_SENDPINCODE;
       $result['response'] = $response;
       $result['phone_number'] = $msisdn;
       $result['message'] = $message_pincode.$pincode_random;
@@ -301,7 +308,17 @@ class OrangeController extends Controller
       $now = Carbon::now()->format('Y-m-d H:i:s');  /*"2020-07-05 16:30:00"*/
       if ($now <= $expire_date_time) {
         $orangeUnSubscribe = $this->orangeUnSubscribe($msisdn);
-        if($orangeUnSubscribe == "0"){ //unsub result code direct from orange unsub api
+
+     /* =================  Orange result_code for sub / unsub api ===================
+      0	success
+      1	already subscribed
+      2	not subscribed
+      5	not allowed
+      6	account problem = no balance
+      31	Technical problem
+      */
+
+        if($orangeUnSubscribe == "0"){ // unsub result code direct from orange unsub api
 
              // send unsub success message
             if($lang == 'ar'){
@@ -309,17 +326,13 @@ class OrangeController extends Controller
             }else{
             $unsub_success_message = "Your subscription to Orange El-Kheer service has been canceled";
             }
-         $URL_Api = ORANGE_API_SENDPINCODE;
-         $param = "phone_number=$msisdn&message=$unsub_success_message";
-         $ch = curl_init();
-         curl_setopt($ch, CURLOPT_URL, $URL_Api);
-         curl_setopt($ch, CURLOPT_POST, 1);
-         curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
-         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-         $response = curl_exec($ch);
-         curl_close($ch);
+
+         // orange send message
+        $response = $this->orange_send_message($msisdn, $unsub_success_message);
+
+          // log for welcome message
          $actionName = "Unsub Message Orange";
-         $URL = $URL_Api;
+         $URL = ORANGE_API_SENDPINCODE;
          $result['response'] = $response;
          $result['phone_number'] = $msisdn;
          $result['message'] = $unsub_success_message;
@@ -334,11 +347,21 @@ class OrangeController extends Controller
           }
           session()->flash('success', $msg);
           return $this->logout();
-        }else{
-
-          if ($lang == 'ar')
-          return redirect('orange_portal_unsub')->with('failed', 'خطأ في الغاء الاشتراك');
-          return redirect('orange_portal_unsub')->with('failed', 'Unsub is failed');
+        }else{  // need to be handle 2 , 5 , 31
+          if($orangeUnSubscribe == "2") {
+            if ($lang == 'ar'){
+              return redirect('orange_portal_unsub')->with('failed', 'انت لست مشترك فى الخدمه');
+            }
+            return redirect('orange_portal_unsub')->with('failed', "You are not subscribe in the service");
+          } elseif($orangeUnSubscribe == "5") {
+            return redirect('orange_portal_unsub')->with('failed', 'not allowed');
+          } elseif($orangeUnSubscribe == "31") {
+            return redirect('orange_portal_unsub')->with('failed', 'Technical problem');
+          } else {
+            if ($lang == 'ar')
+              return redirect('orange_portal_unsub')->with('failed', 'خطأ في التسجيل');
+            return redirect('orange_portal_unsub')->with('failed', 'Register is failed');
+          }
         }
       } else {
         if (session::get("lang") == 'ar'){
@@ -361,6 +384,7 @@ class OrangeController extends Controller
 
   public function ResendUnsubPincode(request $request)
   {
+    $lang =  session::get('lang');
     date_default_timezone_set("Africa/Cairo");
     $msisdn = Session::get('unsub_orange');
     $random = mt_rand(1000, 9999);
@@ -372,24 +396,25 @@ class OrangeController extends Controller
     $pincode->expire_date_time = Carbon::parse($date)->addHour();
     $pincode->save();
 
-    $message_pincode = " لالغاء الاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
-      $URL_Api = ORANGE_API_SENDPINCODE;
-      $param = "phone_number=$msisdn&message=$message_pincode $pincode_random";
-      $ch = curl_init();
-      curl_setopt($ch, CURLOPT_URL, $URL_Api);
-      curl_setopt($ch, CURLOPT_POST, 1);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      $response = curl_exec($ch);
-      curl_close($ch);
+
+    if($lang == 'ar'){
+      $message_pincode = " لالغاء الاشتراك في خدمة اورنج الخير يرجي ادخال هذا الرمز";
+    }else{
+      $message_pincode = " To unsubscribe from the Orange El-Kheer service, please enter this code ";
+    }
+
+    $send_message= $message_pincode.$pincode_random ;
+    // orange send message
+    $response = $this->orange_send_message($msisdn, $send_message);
+
+    // log for welcome message
       $actionName = "ResendUnsubPincode Orange";
-      $URL = $URL_Api;
+      $URL = ORANGE_ELKHEAR_SERVICE_ID;
       $result['response'] = $response;
       $result['phone_number'] = $msisdn;
       $result['message'] = $message_pincode.$pincode_random;
       $this->log($actionName, $URL, $result);
       if ($response == "1") {
-        $lang =  session::get('lang');
         if ($lang == 'ar')
         return redirect('unsub_pincode')->with('success', '!تم ارسال رمز التحقق');
         return redirect('unsub_pincode')->with('success', 'Pincode Sent!');
@@ -461,6 +486,20 @@ class OrangeController extends Controller
 
     return redirect('orange_portal_login');
   }
+
+  public function orange_send_message($msisdn, $message)
+    {
+      $URL_Api = ORANGE_API_SENDPINCODE;
+      $param = "phone_number=$msisdn&message=$message";
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL, $URL_Api);
+      curl_setopt($ch, CURLOPT_POST, 1);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      $response = curl_exec($ch);
+      curl_close($ch);
+      return $response;
+    }
 
   public function log($actionName, $URL, $parameters_arr)
     {
