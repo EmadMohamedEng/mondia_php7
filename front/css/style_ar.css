@@ -34,19 +34,17 @@ body {
   /* Start MBC Filter */
   /* End MBC Filter */
 }
-.main_container .header .header_logo.header_logo,
-.main_container .header .header_icon.header_logo {
-  text-align: center;
-  margin-left: 8%;
-}
-.main_container .header .header_logo.header_logo h6,
-.main_container .header .header_icon.header_logo h6 {
-  padding-right: 0;
-  padding-left: unset;
-}
-.main_container .header .header_logo.header_logo .link_href,
-.main_container .header .header_icon.header_logo .link_href {
-  text-align: left;
+.main_container .header .header_logo.header_logo .link_href img,
+.main_container .header .header_icon.header_logo .link_href img {
+  width: 50%;
+  position: absolute;
+  top: -1rem;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 .main_container .header .header_logo.header_logo .link_href img.logo_orange,
 .main_container .header .header_icon.header_logo .link_href img.logo_orange {
@@ -64,7 +62,7 @@ body {
   float: left !important;
 }
 .main_container .header .lang_mbc {
-  margin-left: -15%;
+  float: left !important;
 }
 .main_container .header .lang_mbc .dropdown-menu2 {
   left: -7% !important;
@@ -390,10 +388,6 @@ body {
   }
 }
 @media (min-width: 360px) and (max-width: 374.9px) {
-  .main_container .header .header_logo,
-.main_container .header .header_icon {
-    margin-left: 8%;
-  }
   .main_container .header .header_logo .link_href .logo_orange,
 .main_container .header .header_icon .link_href .logo_orange {
     width: 75% !important;
@@ -707,9 +701,12 @@ body {
   .main_container .header .header_logo,
 .main_container .header .header_icon {
     width: 100%;
-    text-align: left !important;
-    display: block;
-    margin-left: 0 !important;
+  }
+  .main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href img {
+    width: 30% !important;
+    top: -1rem !important;
+    left: 20% !important;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -818,8 +815,12 @@ body {
   .main_container .header .header_logo,
 .main_container .header .header_icon {
     width: 100%;
-    text-align: left !important;
-    display: block;
+  }
+  .main_container .header .header_logo .link_href img,
+.main_container .header .header_icon .link_href img {
+    width: 30% !important;
+    top: -1rem !important;
+    left: 20% !important;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {

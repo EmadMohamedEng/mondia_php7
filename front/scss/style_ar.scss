@@ -18,18 +18,19 @@ body {
     .header_logo,
     .header_icon {
       &.header_logo {
-        text-align: center;
-        margin-left: 8%;
-
-        h6 {
-          padding-right: 0;
-          padding-left: unset;
-        }
-
         .link_href {
-          text-align: left;
-
           img {
+            width: 50%;
+            position: absolute;
+            top: -1rem;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+
+
             &.logo_orange {
               margin: 0 auto;
               display: block;
@@ -52,7 +53,7 @@ body {
     }
 
     .lang_mbc {
-      margin-left: -15%;
+      float: left !important;
 
       .dropdown-menu2 {
         left: -7% !important;
@@ -851,7 +852,6 @@ body {
 
       .header_logo,
       .header_icon {
-        margin-left: 8%;
 
         .link_href {
           .logo_orange {
@@ -1393,13 +1393,12 @@ body {
       .header_logo,
       .header_icon {
         width: 100%;
-        text-align: left !important;
-        display: block;
-        margin-left: 0 !important;
 
         .link_href {
           img {
-            // margin-left: 35%;
+            width: 30% !important;
+            top: -1rem !important;
+            left: 20% !important;
           }
         }
 
@@ -1617,13 +1616,12 @@ body {
       .header_logo,
       .header_icon {
         width: 100%;
-        text-align: left !important;
-        display: block;
-        // margin-left: 12%;
 
         .link_href {
           img {
-            // margin-left: 35%;
+            width: 30% !important;
+            top: -1rem !important;
+            left: 20% !important;
           }
         }
 

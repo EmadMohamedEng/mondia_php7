@@ -1,10 +1,10 @@
 <header class="header w-100">
   <div class="row">
-    <div class="col-md-2 col-lg-2 col-xl-4 col-2 d-flex justify-content-start">
+    <div class="col-md-2 col-lg-2 col-xl-4 col-2">
       <span class="open_icon_nav_mbc" onclick="openNav()">&#9776;</span>
     </div>
 
-    <div class="col-md-6 col-lg-6 col-xl-4 col-6 p-0 d-flex justify-content-center">
+    <div class="col-md-6 col-lg-6 col-xl-4 col-6">
       <div class="header_logo">
         <a href="{{route('front.index')}}" class="link_href">
           <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div class="col-md-4 col-lg-4 col-xl-4 col-4 d-flex justify-content-end">
+    <div class="col-md-4 col-lg-4 col-xl-4 col-4">
       <div class="lang_mbc">
         <a class="nav-link nav-link2 dropdown-toggle slide_toggle text-capitalize p-0" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{array_key_exists(Session::get('applocale'), Config::get('languages'))?config()->get('languages')[getCode()] : 'English'}}</a>
         <div class="dropdown-menu dropdown-menu2 dropdown-primary slideContent" aria-labelledby="navbarDropdownMenuLink1">
