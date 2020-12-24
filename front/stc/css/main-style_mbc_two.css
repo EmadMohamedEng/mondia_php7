@@ -34,6 +34,7 @@
   color: #e0c26c;
   font-size: 14px;
   padding: 0 1%;
+  margin-bottom: 0;
 }
 
 .all_slect {
@@ -181,11 +182,13 @@ a:hover {
 }
 
 .landing_page .cancel {
-  padding: 0px 8px 0 8px;
+  padding: 0;
+  margin-top: 3%;
 }
 
 .landing_page .cancel p {
   color: #e0c26c;
+  margin-bottom: 0;
 }
 
 .bounce-top {
