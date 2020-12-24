@@ -1886,7 +1886,7 @@ class FrontController extends Controller
     if($request->has('OpID') && $request->OpID == orange){  //orange
       if((session()->get('orange_op_id') == orange && session()->get('status') == 'active' && session()->has('MSISDN'))){
 
-        $URL = ORANGE_END_POINT."/api/checkStatus";
+        $URL = $this->detect_server()['ORANGE_END_POINT']."/api/checkStatus";
 
         $JSON['msisdn'] = session()->get('MSISDN');
 

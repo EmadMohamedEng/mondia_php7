@@ -2,55 +2,55 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Monolog\Logger;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\File;
-use Carbon\Carbon;
 use Monolog\Handler\StreamHandler;
-use Illuminate\Support\Facades\Session;
+use Monolog\Logger;
 
 abstract class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public $form_methods = [
-                            "get"=>"GET",
-                            "post"=>"POST",
-                            "patch"=>"PATCH",
-                            "delete"=>"DELETE",
-                            "put"=>"PUT"
-                            ] ;
+        "get" => "GET",
+        "post" => "POST",
+        "patch" => "PATCH",
+        "delete" => "DELETE",
+        "put" => "PUT",
+    ];
 
     public function get_methods($filename)
     {
-        $path = $this->file_build_path("app","Http","Controllers") ;
-        $txt_file    = file_get_contents($path.'/'.$filename);
-        $matches = array() ;
+        $path = $this->file_build_path("app", "Http", "Controllers");
+        $txt_file = file_get_contents($path . '/' . $filename);
+        $matches = array();
         preg_match_all("/ function (.*)\(\D*\w*\)/U", $txt_file, $matches);
-        $result = $matches[1] ;
-        return $result ;
+        $result = $matches[1];
+        return $result;
     }
 
-    public function get_controllers() {
-        $controllers = array() ;
-        $i = 0 ;
-        $path = $this->file_build_path("app","Http","Controllers") ;
+    public function get_controllers()
+    {
+        $controllers = array();
+        $i = 0;
+        $path = $this->file_build_path("app", "Http", "Controllers");
         if ($handle = opendir($path)) {
             while (false !== ($file = readdir($handle))) {
-                if ($file != "." && $file != ".." && $file!="Auth" && $file!="Controller.php" && $file!="ScaffoldInterface") {
-                    $parsed_methods[explode('.php',$file)[0]] =
-                        $this->get_methods($file) ;
+                if ($file != "." && $file != ".." && $file != "Auth" && $file != "Controller.php" && $file != "ScaffoldInterface") {
+                    $parsed_methods[explode('.php', $file)[0]] =
+                    $this->get_methods($file);
                 }
             }
             closedir($handle);
-            return $parsed_methods ;
+            return $parsed_methods;
         }
     }
 
-    public function file_build_path(...$segments) {
+    public function file_build_path(...$segments)
+    {
         return join(DIRECTORY_SEPARATOR, $segments);
     }
 
@@ -69,7 +69,6 @@ abstract class Controller extends BaseController
         $log->pushHandler(new StreamHandler(storage_path('logs/' . $year . '/' . $month . '/' . $day . '/' . $actionName . '/logFile.log', Logger::INFO)));
         $log->addInfo($Url, $parameters_arr);
     }
-
 
     public function SendRequestPost($URL, $JSON, $headers)
     {
@@ -102,8 +101,8 @@ abstract class Controller extends BaseController
         curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-        if($headers){
-          curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        if ($headers) {
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         }
 
         $sOutput = curl_exec($ch);
@@ -153,7 +152,7 @@ abstract class Controller extends BaseController
                             "continent_code" => @$ipdat->geoplugin_continentCode,
                             'geoplugin_latitude' => @$ipdat->geoplugin_latitude,
                             'geoplugin_longitude' => @$ipdat->geoplugin_longitude,
-                            'time_zone' => @$ipdat->geoplugin_timezone
+                            'time_zone' => @$ipdat->geoplugin_timezone,
                         );
                         break;
                     case "address":
@@ -205,5 +204,24 @@ abstract class Controller extends BaseController
         return $data;
     }
 
+    public function detect_server()
+    {
+        $whitelist = array(
+            '127.0.0.1',
+            '::1',
+        );
+
+        if (in_array($_SERVER['REMOTE_ADDR'], $whitelist)) {
+            $ORANGE_END_POINT = 'http://10.2.10.15:8310/~orangelkheer';
+            $ORANGE_API_SENDPINCODE = 'http://10.2.10.15:8310/~smsorange/api/orange_egypt_send_message';
+        } else {
+            $ORANGE_END_POINT = 'http://41.33.167.16:8310/~orangelkheer'; // orange notify publiuc
+            $ORANGE_API_SENDPINCODE = 'http://41.33.167.16:8310/~smsorange/api/orange_egypt_send_message'; // sms php 7 (testind outside ivas)
+        }
+
+        $server_ips['ORANGE_END_POINT'] = $ORANGE_END_POINT;
+        $server_ips['ORANGE_API_SENDPINCODE'] = $ORANGE_API_SENDPINCODE;
+        return $server_ips;
+    }
 
 }
