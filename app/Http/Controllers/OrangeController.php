@@ -498,7 +498,7 @@ class OrangeController extends Controller
 
   public function orange_send_message($msisdn, $message)
     {
-      $URL = $this->detect_server()['ORANGE_API_SENDPINCODE'];
+      $URL_Api = $this->detect_server()['ORANGE_API_SENDPINCODE'];
       $param = "phone_number=$msisdn&message=$message";
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL, $URL_Api);
