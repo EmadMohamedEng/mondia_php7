@@ -131,12 +131,12 @@ class OrangeController extends Controller
 
          // send welcome message
          if ($lang == 'ar'){
-          $welcome_message = "لقد تم اشتراكك في خدمة اورنج الخير بنجاح للدخول اضغط علي هذا الرابط";
+          $welcome_message = " لقد تم اشتراكك في خدمة اورنج الخير بنجاح للدخول اضغط علي هذا الرابط";
          }else{
-          $welcome_message = "You have successfully subscribed to Orange El-Kheer service. To enter, click on this link";
+          $welcome_message = "You have successfully subscribed to Orange El-Kheer service. To enter, click on this link ";
          }
 
-         $welcome_message .= " ".url('?OpID=8');
+         $welcome_message .= " ".url("?OpID=8");
 
           // orange send message
           $response = $this->orange_send_message($msisdn, $welcome_message);
