@@ -529,7 +529,7 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
 
   <!-- start menu 3 => For MBC & Orange Only  -->
   <div class="mbc_orange">
-    <nav class="navbar navbar-expand-lg navbar-light navbar_three " style="cursor: pointer;">
+    <nav class="navbar navbar-expand-xl navbar-light navbar_three " style="cursor: pointer;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
