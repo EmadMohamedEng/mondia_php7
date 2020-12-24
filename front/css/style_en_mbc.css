@@ -130,6 +130,9 @@ body {
   background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
   color: #FFF;
 }
+.main_container .mbc_orange {
+  width: 100%;
+}
 .main_container .navbar_three {
   background: rgba(0, 0, 0, 0.5) !important;
 }
