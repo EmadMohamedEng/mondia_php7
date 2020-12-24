@@ -136,7 +136,7 @@ class OrangeController extends Controller
           $welcome_message = "You have successfully subscribed to Orange El-Kheer service. To enter, click on this link ";
          }
 
-         $welcome_message .= " ".url("?OpID=8");
+       //  $welcome_message .= " ".url("?OpID=8");
 
           // orange send message
           $response = $this->orange_send_message($msisdn, $welcome_message);
