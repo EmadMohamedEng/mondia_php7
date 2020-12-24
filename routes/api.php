@@ -59,8 +59,10 @@ if(in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
 // define('ORANGE_API_SENDPINCODE', 'http://10.2.10.239:2080/~orangeiv/orange_egypt_send_message');  // sms php 5
 
 
+//define('ORANGE_END_POINT', 'http://10.2.10.15:8310/~orangelkheer'); // orange notify local
+  define('ORANGE_API_SENDPINCODE', 'http://10.2.10.15:8310/~smsorange/api/orange_egypt_send_message');  // sms php 7  (testind inside ivas)
 
-define('ORANGE_END_POINT', 'http://41.33.167.16:8310/~orangelkheer'); // orange notify publiuc
-define('ORANGE_API_SENDPINCODE', 'http://41.33.167.16:8310/~smsorange/api/orange_egypt_send_message');  // sms php 7 (testind outside ivas)
+//define('ORANGE_END_POINT', 'http://41.33.167.16:8310/~orangelkheer'); // orange notify publiuc
+//define('ORANGE_API_SENDPINCODE', 'http://41.33.167.16:8310/~smsorange/api/orange_egypt_send_message');  // sms php 7 (testind outside ivas)
 
 /***********end orange*********** */
