@@ -30,21 +30,29 @@ class OrangeController extends Controller
     date_default_timezone_set("Africa/Cairo");
     $number = ltrim($request->number, 0);
     $msisdn = "20$number";
-    $URL = ORANGE_END_POINT."/api/checkStatus";
-    $JSON['msisdn'] = $msisdn;
-    $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
-    $headers['Accept'] = '*/*';
-    $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
-    //  dd($checkStatus);
-    if($checkStatus != "0"){  //  found
-      $orange_msisdn = json_decode($checkStatus);
-      $this->orangeLoginSession($msisdn);
-      // if(session()->has('current_url')){
-      //   return redirect(session()->get('current_url'));
-      // }
-      return redirect(url('?OpID=8'));
-    }else{ // not found    or active = 0 (pending ) or active = 2 unsub
 
+      // comment our check status
+    // $URL = ORANGE_END_POINT."/api/checkStatus";
+    // $JSON['msisdn'] = $msisdn;
+    // $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
+    // $headers['Accept'] = '*/*';
+    // $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
+
+
+    $orangeSubscribe = $this->orangeSubscribe($msisdn);
+    /* =================  Orange result_code for sub / unsub api ===================
+       0	success  // sub success
+       1	already subscribed  // want to sub but alreday
+       2	not subscribed    // unsub and want to unsub
+       5	not allowed
+       6	account problem = no balance
+       31	Technical problem
+       */
+
+ if($orangeSubscribe == "1"){// already sub
+      $this->orangeLoginSession($msisdn);
+      return redirect(url('?OpID=8'));
+ }else{ // not found    or active = 0 (pending ) or active = 2 unsub
       $random = mt_rand(1000, 9999);
       $pincode_random = $random;
       $pincode = new PincodeOrange();
@@ -243,13 +251,13 @@ class OrangeController extends Controller
     $lang =  session::get('lang');
     $number = ltrim($request->number, 0);
     $msisdn = "20$number";
-    $URL = ORANGE_END_POINT."/api/checkStatus";
-    $JSON['msisdn'] = $msisdn;
-    $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
-    $headers['Accept'] = '*/*';
-    $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
+    // $URL = ORANGE_END_POINT."/api/checkStatus";
+    // $JSON['msisdn'] = $msisdn;
+    // $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
+    // $headers['Accept'] = '*/*';
+    // $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
 
-    if($checkStatus != "0"){  //  found
+    // if($checkStatus != "0"){  //  found
 
     date_default_timezone_set("Africa/Cairo");
     $random = mt_rand(1000, 9999);
@@ -284,15 +292,15 @@ class OrangeController extends Controller
       return redirect('unsub_pincode')->with('success', 'Pincode Sent!');
     }
 
-    }else{
-      if($lang == 'ar'){
-        $msg = '!انت غير مشترك';
-      }else{
-        $msg = 'You are not a subscriber!';
-      }
-      session()->flash('failed', $msg);
-      return $this->logout();
-    }
+    // }else{
+    //   if($lang == 'ar'){
+    //     $msg = '!انت غير مشترك';
+    //   }else{
+    //     $msg = 'You are not a subscriber!';
+    //   }
+    //   session()->flash('failed', $msg);
+    //   return $this->logout();
+    // }
   }
 
   public function unsub_pincode_confirm(request $request)
