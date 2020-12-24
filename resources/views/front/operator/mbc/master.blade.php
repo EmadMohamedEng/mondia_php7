@@ -563,7 +563,7 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
             </li>
             @endforeach
 
-            @if(date('D') == 'Fri')
+            {{--@if(date('D') == 'Fri')@endif--}}
             <li class="nav-item dropdown">
               <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize" id="navbarDropdownMenuLink8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" <?php echo $style ?>">
                 @lang('front.muslim_guide')</a>
@@ -572,7 +572,7 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
                 <a class="menuThree dropdown-item text-capitalize link_href" href="{{url('mosque')}}"> @lang('front.mosque')</a>
               </div>
             </li>
-            @endif
+            
 
             <li class="nav-item dropdown">
               <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" <?php echo $style ?>">
