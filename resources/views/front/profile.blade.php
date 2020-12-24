@@ -59,7 +59,11 @@
           @if ($count != $item->subscription_day)
           <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-1">
             <div class="profile_card_title">
-              <h6 class="font-weight-bold">Day {{$day}}</h6>
+                @if ($day == 0)
+                <h6 class="font-weight-bold">Free Content</h6>
+                @else
+                <h6 class="font-weight-bold">Day {{$day}}</h6>
+                @endif
             </div>
           </div>
           @endif
