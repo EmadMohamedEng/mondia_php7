@@ -50,7 +50,7 @@
       @if(request()->get('OpID') == mbc && $subscriber_content->count())
       <div class="profile_card">
         <div class="row m-0">
-          @foreach ($subscription_day as $day)
+          @foreach ($subscription_days as $day)
 
           <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-1">
             <div class="profile_card_title">
