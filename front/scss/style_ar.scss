@@ -700,6 +700,11 @@ body {
               width: 100% !important;
               margin-top: -0.5rem !important;
             }
+
+            &.logo_du {
+              width: 18% !important;
+              top: 0rem;
+            }
           }
 
           .img_khir {
@@ -899,6 +904,11 @@ body {
               width: 90% !important;
               margin-top: 0.15rem !important;
               margin-right: 40%;
+
+              &.logo_du {
+                width: 18% !important;
+                top: 0rem;
+              }
             }
           }
         }
@@ -1058,6 +1068,11 @@ body {
           .logo_orange {
             width: 75% !important;
             margin-top: -0.75rem !important;
+          }
+
+          .logo_du {
+            width: 18% !important;
+            top: 0rem;
           }
 
           .img_khir {
@@ -1261,6 +1276,11 @@ body {
             margin-top: -0.75rem !important;
           }
 
+          .logo_du {
+            width: 18% !important;
+            top: 0rem;
+          }
+
           .img_khir {
             text-align: left !important;
 
@@ -1432,6 +1452,12 @@ body {
             width: 30% !important;
             top: -1rem !important;
             left: 20% !important;
+
+            &.logo_du {
+              width: 15% !important;
+              top: -0.75rem !important;
+              left: 10% !important;
+            }
           }
         }
 
@@ -1655,6 +1681,12 @@ body {
             width: 30% !important;
             top: -1rem !important;
             left: 20% !important;
+
+            &.logo_du {
+              width: 15% !important;
+              top: -0.75rem !important;
+              left: 10% !important;
+            }
           }
         }
 

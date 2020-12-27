@@ -328,6 +328,11 @@ body {
     width: 100% !important;
     margin-top: -0.5rem !important;
   }
+  .main_container .header .header_logo .link_href img.logo_du,
+.main_container .header .header_icon .link_href img.logo_du {
+    width: 18% !important;
+    top: 0rem;
+  }
   .main_container .header .header_logo .link_href .img_khir img,
 .main_container .header .header_icon .link_href .img_khir img {
     margin-top: 0.85rem !important;
@@ -439,6 +444,11 @@ body {
     margin-top: 0.15rem !important;
     margin-right: 40%;
   }
+  .main_container .header .header_logo .link_href .img_khir img.logo_du,
+.main_container .header .header_icon .link_href .img_khir img.logo_du {
+    width: 18% !important;
+    top: 0rem;
+  }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
     margin: 0.35rem 0 0 -1rem;
@@ -526,6 +536,11 @@ body {
 .main_container .header .header_icon .link_href .logo_orange {
     width: 75% !important;
     margin-top: -0.75rem !important;
+  }
+  .main_container .header .header_logo .link_href .logo_du,
+.main_container .header .header_icon .link_href .logo_du {
+    width: 18% !important;
+    top: 0rem;
   }
   .main_container .header .header_logo .link_href .img_khir,
 .main_container .header .header_icon .link_href .img_khir {
@@ -645,6 +660,11 @@ body {
     width: 65% !important;
     margin-top: -0.75rem !important;
   }
+  .main_container .header .header_logo .link_href .logo_du,
+.main_container .header .header_icon .link_href .logo_du {
+    width: 18% !important;
+    top: 0rem;
+  }
   .main_container .header .header_logo .link_href .img_khir,
 .main_container .header .header_icon .link_href .img_khir {
     text-align: left !important;
@@ -743,6 +763,12 @@ body {
     width: 30% !important;
     top: -1rem !important;
     left: 20% !important;
+  }
+  .main_container .header .header_logo .link_href img.logo_du,
+.main_container .header .header_icon .link_href img.logo_du {
+    width: 15% !important;
+    top: -0.75rem !important;
+    left: 10% !important;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -857,6 +883,12 @@ body {
     width: 30% !important;
     top: -1rem !important;
     left: 20% !important;
+  }
+  .main_container .header .header_logo .link_href img.logo_du,
+.main_container .header .header_icon .link_href img.logo_du {
+    width: 15% !important;
+    top: -0.75rem !important;
+    left: 10% !important;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
