@@ -30,10 +30,22 @@ body {
             -ms-transform: translate(-50%, -50%);
             -o-transform: translate(-50%, -50%);
 
-
             &.logo_orange {
               margin: 0 auto;
               display: block;
+            }
+
+            &.logo_oman {
+              margin: 0 auto;
+              display: block;
+              position: unset;
+              top: unset;
+              left: unset;
+              transform: unset;
+              -webkit-transform: unset;
+              -moz-transform: unset;
+              -ms-transform: unset;
+              -o-transform: unset;
             }
           }
 

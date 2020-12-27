@@ -3,7 +3,7 @@
     <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0 d-flex justify-content-center">
       <div class="header_logo">
         <a href="{{route('front.index')}}" class="link_href">
-          <img class="bounce-top" src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
+          <img class="bounce-top logo_oman" src='{{asset("front/images/omantel_header.png")}}' alt='Logo'>
         </a>
       </div>
     </div>

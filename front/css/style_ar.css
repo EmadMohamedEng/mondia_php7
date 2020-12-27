@@ -51,6 +51,19 @@ body {
   margin: 0 auto;
   display: block;
 }
+.main_container .header .header_logo.header_logo .link_href img.logo_oman,
+.main_container .header .header_icon.header_logo .link_href img.logo_oman {
+  margin: 0 auto;
+  display: block;
+  position: unset;
+  top: unset;
+  left: unset;
+  transform: unset;
+  -webkit-transform: unset;
+  -moz-transform: unset;
+  -ms-transform: unset;
+  -o-transform: unset;
+}
 .main_container .header .header_logo.header_logo .link_href .img_khir img,
 .main_container .header .header_icon.header_logo .link_href .img_khir img {
   margin-top: 0.75rem;
