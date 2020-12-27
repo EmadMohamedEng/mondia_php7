@@ -1878,12 +1878,13 @@ class FrontController extends Controller
         }
 
         $subscriber_content = $contents->orderBy('subscription_day', 'DESC')->get();
+        $subscription_day = $contents->orderBy('subscription_day', 'DESC')->groupBy('subscription_day')->pluck('subscription_day');
 
         if($sub && isset($sub->created_at)){
           $date = date('Y-m-d',strtotime($sub->created_at));
         }
 
-        return view('front.profile',compact('date', 'subscriber_content', 'subscriber_day'));
+        return view('front.profile',compact('date', 'subscriber_content', 'subscriber_day', 'subscription_day'));
       }
       return redirect('mbc_portal_login');
     }
