@@ -1,13 +1,13 @@
 <header class="header w-100">
   <div class="row">
-    <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0 d-flex justify-content-center">
+    <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0">
       <div class="header_logo">
         <a href="{{route('front.index')}}" class="link_href">
           <img class="bounce-top logo_du" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
         </a>
       </div>
     </div>
-    <div class="col-md-5 col-lg-5 col-xl-5 col-5 d-flex justify-content-end">
+    <div class="col-md-5 col-lg-5 col-xl-5 col-5">
       <a class="arrow_back back" href="#0">
         <i class="fas fa-angle-left fa-lg"></i>
       </a>
