@@ -17,7 +17,7 @@ class MbcContentController extends Controller
      */
     public function index(Request $request)
     {
-        $mbc_contents = MbcContent::query()->select('mbc_contents.*')->orderBy('id', 'DESC');
+        $mbc_contents = MbcContent::query()->select('mbc_contents.*')->orderBy('subscription_day', 'DESC');
 
         $without_paginate = 0;
         if ($request->has('subscription_day') && $request->subscription_day != '') {
@@ -40,8 +40,9 @@ class MbcContentController extends Controller
             $mbc_contents = $mbc_contents->whereDate('mbc_contents.occasion_date', $request->occasion_date);
             $without_paginate = 1;
         }
+
         if ($without_paginate) {
-            $mbc_contents = $mbc_contents->get();
+            $mbc_contents = $mbc_contents->orderBy('subscription_day')->get();
         } else {
             $mbc_contents = $mbc_contents->paginate(100);
         }

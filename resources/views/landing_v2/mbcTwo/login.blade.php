@@ -90,11 +90,14 @@ body {
             </div>
             <div class="all_slect">
               <select class="mdb-select md-form form-control" name="operator" required>
-                <option value="" disabled selected>@lang('messages.Choose_your_Operators')</option>
-                @foreach($operators as $operator)
-                <option value="{{$operator->operator_name}}">{{ $operator->name  == "mbc"?  "Mobily" :   $operator->name }}</option>
-                @endforeach
-              </select>
+              <option value="" disabled selected>@lang('messages.Choose_your_Operators')</option>
+              @foreach($operators as $operator)
+              <option id="{{$operator->id}}" value="{{$operator->operator_name}}">{{ $lang == 'ar' ? $operator->name_ar : $operator->name_en }}</option>
+              @endforeach
+            </select>
+
+
+
             </div>
           <!--<button class="btn back">رجوع</button>-->
             <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subsc')</button>

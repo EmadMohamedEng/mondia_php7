@@ -36,16 +36,31 @@ body {
             }
 
             &.logo_oman {
+              width: 15%;
               margin: 0 auto;
               display: block;
-              position: unset;
-              top: unset;
-              left: unset;
-              transform: unset;
-              -webkit-transform: unset;
-              -moz-transform: unset;
-              -ms-transform: unset;
-              -o-transform: unset;
+              position: absolute;
+              top: -1.75rem;
+              left: 0%;
+              transform: translate(-50%, -50%);
+              -webkit-transform: translate(-50%, -50%);
+              -moz-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              -o-transform: translate(-50%, -50%);
+            }
+
+            &.logo_du {
+              width: 20%;
+              margin: 0 auto;
+              display: block;
+              position: absolute;
+              top: -1.75rem;
+              left: 0%;
+              transform: translate(-50%, -50%);
+              -webkit-transform: translate(-50%, -50%);
+              -moz-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              -o-transform: translate(-50%, -50%);
             }
           }
 

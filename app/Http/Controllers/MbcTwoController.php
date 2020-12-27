@@ -159,10 +159,22 @@ class MbcTwoController extends Controller
   public function index(Request $request)
   {
 
+    // automatic detect county
     $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
-    $get_url_country = "KSA";  // KSA  -   Egypt  - Kuwait  - United Arab Emirates
+    if( $get_url_country == "Egypt"){// KSA - Kuwait  - United Arab Emirates    --- Egypt not yet
+      $get_url_country = "KSA";
+    }
+
     $country = Country::where('title',$get_url_country)->first();
     $operators = Operator::where('country_id',$country->id)->get();
+
+
+/*
+    $get_url_country = "KSA";  // KSA - Kuwait  - United Arab Emirates
+    $country = Country::where('title',$get_url_country)->first();
+    $operators_ids = array(14,21,22,11,10);
+    $operators = Operator::whereIN('id',$operators_ids)->get();
+    */
     // dd($operators);
 
     $lang =  Session::get('applocale');
@@ -189,10 +201,16 @@ class MbcTwoController extends Controller
   public function login(Request $request)
   {
     $lang =  session::get('lang');
+
     $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
-    $get_url_country = "KSA";  // KSA  -   Egypt  - Kuwait  - United Arab Emirates
+    if( $get_url_country == "Egypt"){// KSA - Kuwait  - United Arab Emirates    --- Egypt not yet
+      $get_url_country = "KSA";
+    }
+
     $country = Country::where('title',$get_url_country)->first();
     $operators = Operator::where('country_id',$country->id)->get();
+
+
     return view('landing_v2.mbcTwo.login', compact('lang','country','operators'));
   }
 
@@ -323,7 +341,7 @@ class MbcTwoController extends Controller
     date_default_timezone_set("Africa/Cairo");
     // format number
     $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
-    $get_url_country = "KSA";  // KSA  -   Egypt  - Kuwait  - United Arab Emirates
+
     $number = "";
     if($get_url_country == "Egypt"){
      if(isset($request->number)) {
@@ -351,7 +369,7 @@ class MbcTwoController extends Controller
     $service_id = 2;
     $check = $this->checkStatus($msisdn, $service_id);
 
-    if ($check == "true") {
+    if ($check) {
       session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
       $lang =  session::get('lang');
       if ($lang == 'ar') {
@@ -507,7 +525,6 @@ class MbcTwoController extends Controller
   public function checkStatusLogin(Request $request)
   {
     $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
-    $get_url_country = "KSA";  // KSA  -   Egypt  - Kuwait  - United Arab Emirates
     if($get_url_country == "Egypt"){
       if(isset($request->number)) {
        $number = ltrim($request->number,"0");
@@ -531,7 +548,7 @@ class MbcTwoController extends Controller
 
     $check = $this->checkStatus($msisdn, $service_id);
 
-    if ($check == "true") {
+    if ($check) {
 
       session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
       $lang =  session::get('lang');

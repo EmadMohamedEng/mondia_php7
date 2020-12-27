@@ -30,21 +30,19 @@ class OrangeController extends Controller
     date_default_timezone_set("Africa/Cairo");
     $number = ltrim($request->number, 0);
     $msisdn = "20$number";
-    $URL = ORANGE_END_POINT."/api/checkStatus";
+
+      //  our check status
+    $URL = $this->detect_server()['ORANGE_END_POINT']."/api/checkStatus";
     $JSON['msisdn'] = $msisdn;
     $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
     $headers['Accept'] = '*/*';
     $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
-    //  dd($checkStatus);
-    if($checkStatus != "0"){  //  found
-      $orange_msisdn = json_decode($checkStatus);
-      $this->orangeLoginSession($msisdn);
-      // if(session()->has('current_url')){
-      //   return redirect(session()->get('current_url'));
-      // }
-      return redirect(url('?OpID=8'));
-    }else{ // not found    or active = 0 (pending ) or active = 2 unsub
 
+
+ if($checkStatus != "0"){//msidn found and active = 1
+      $this->orangeLoginSession($msisdn);
+      return redirect(url('?OpID=8'));
+ }else{ // not found    or active = 0 (pending ) or active = 2 unsub
       $random = mt_rand(1000, 9999);
       $pincode_random = $random;
       $pincode = new PincodeOrange();
@@ -66,7 +64,7 @@ class OrangeController extends Controller
 
       // orange send message log
       $actionName = "PinCode Orange";
-      $URL = ORANGE_API_SENDPINCODE;
+      $URL = $this->detect_server()['ORANGE_API_SENDPINCODE'];
       $result['response'] = $response;
       $result['phone_number'] = $msisdn;
       $result['message'] = $message_pincode.$pincode_random;
@@ -123,19 +121,19 @@ class OrangeController extends Controller
 
          // send welcome message
          if ($lang == 'ar'){
-          $welcome_message = "لقد تم اشتراكك في خدمة اورنج الخير بنجاح للدخول اضغط علي هذا الرابط";
+          $welcome_message = " لقد تم اشتراكك في خدمة اورنج الخير بنجاح للدخول اضغط علي هذا الرابط";
          }else{
-          $welcome_message = "You have successfully subscribed to Orange El-Kheer service. To enter, click on this link";
+          $welcome_message = "You have successfully subscribed to Orange El-Kheer service. To enter, click on this link ";
          }
 
-         $welcome_message .= " ".url('?OpID=8');
+       $welcome_message .= " ".url("/");
 
           // orange send message
           $response = $this->orange_send_message($msisdn, $welcome_message);
 
           // log for welcome message
          $actionName = "welcome Message Orange";
-         $URL = ORANGE_API_SENDPINCODE;
+         $URL = $this->detect_server()['ORANGE_API_SENDPINCODE'];
          $result['response'] = $response;
          $result['phone_number'] = $msisdn;
          $result['message'] = $welcome_message;
@@ -207,7 +205,7 @@ class OrangeController extends Controller
 
       // log for welcome message
       $actionName = "ResendPincode Orange";
-      $URL = ORANGE_API_SENDPINCODE;
+      $URL = $this->detect_server()['ORANGE_API_SENDPINCODE'];
       $result['response'] = $response;
       $result['phone_number'] = $msisdn;
       $result['message'] = $message_pincode.$pincode_random;
@@ -243,13 +241,14 @@ class OrangeController extends Controller
     $lang =  session::get('lang');
     $number = ltrim($request->number, 0);
     $msisdn = "20$number";
-    $URL = ORANGE_END_POINT."/api/checkStatus";
+
+    $URL = $this->detect_server()['ORANGE_END_POINT']."/api/checkStatus";
     $JSON['msisdn'] = $msisdn;
     $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
     $headers['Accept'] = '*/*';
     $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
 
-    if($checkStatus != "0"){  //  found
+    if($checkStatus != "0"){  //  found and active = 1 
 
     date_default_timezone_set("Africa/Cairo");
     $random = mt_rand(1000, 9999);
@@ -273,7 +272,7 @@ class OrangeController extends Controller
 
     // log for welcome message
       $actionName = "UnsubPincodeOrange";
-      $URL = ORANGE_API_SENDPINCODE;
+      $URL = $this->detect_server()['ORANGE_API_SENDPINCODE'];
       $result['response'] = $response;
       $result['phone_number'] = $msisdn;
       $result['message'] = $message_pincode.$pincode_random;
@@ -293,7 +292,9 @@ class OrangeController extends Controller
       session()->flash('failed', $msg);
       return $this->logout();
     }
-  }
+  
+
+}
 
   public function unsub_pincode_confirm(request $request)
   {
@@ -319,7 +320,8 @@ class OrangeController extends Controller
       31	Technical problem
       */
 
-        if($orangeUnSubscribe == "0"){ // unsub result code direct from orange unsub api
+        if($orangeUnSubscribe == "0"){ // unsub result code direct from orange unsub api 
+          // 0 =>  unsub success 
 
              // send unsub success message
             if($lang == 'ar'){
@@ -333,7 +335,7 @@ class OrangeController extends Controller
 
           // log for welcome message
          $actionName = "Unsub Message Orange";
-         $URL = ORANGE_API_SENDPINCODE;
+         $URL = $this->detect_server()['ORANGE_API_SENDPINCODE'];
          $result['response'] = $response;
          $result['phone_number'] = $msisdn;
          $result['message'] = $unsub_success_message;
@@ -445,7 +447,7 @@ class OrangeController extends Controller
 
   public function orangeSubscribe($msisdn)
   {
-    $URL = ORANGE_END_POINT."/api/web_notify";  // free or direct sub
+    $URL = $this->detect_server()['ORANGE_END_POINT']."/api/web_notify";  // free or direct sub
 
     $JSON['msisdn'] = $msisdn;
     $JSON['service_id'] = ORANGE_ELKHEAR_SERVICE_ID;
@@ -462,7 +464,7 @@ class OrangeController extends Controller
 
   public function orangeUnSubscribe($msisdn)
   {
-    $URL = ORANGE_END_POINT."/api/orangeWeb";  // direct unsub
+    $URL = $this->detect_server()['ORANGE_END_POINT']."/api/orangeWeb";  // direct unsub
 
     $JSON['msisdn'] = $msisdn;
     $JSON['command'] = 'UNSUBSCRIBE';
@@ -490,7 +492,7 @@ class OrangeController extends Controller
 
   public function orange_send_message($msisdn, $message)
     {
-      $URL_Api = ORANGE_API_SENDPINCODE;
+      $URL_Api = $this->detect_server()['ORANGE_API_SENDPINCODE'];
       $param = "phone_number=$msisdn&message=$message";
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL, $URL_Api);
