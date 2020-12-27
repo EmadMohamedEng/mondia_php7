@@ -34,6 +34,10 @@ body {
   /* Start MBC Filter */
   /* End MBC Filter */
 }
+.main_container .header .header_logo.header_logo .link_href,
+.main_container .header .header_icon.header_logo .link_href {
+  text-align: left;
+}
 .main_container .header .header_logo.header_logo .link_href img,
 .main_container .header .header_icon.header_logo .link_href img {
   width: 50%;
@@ -53,7 +57,7 @@ body {
 }
 .main_container .header .header_logo.header_logo .link_href img.logo_oman,
 .main_container .header .header_icon.header_logo .link_href img.logo_oman {
-  width: 15%;
+  width: 20%;
   margin: 0 auto;
   display: block;
   position: absolute;
@@ -67,11 +71,11 @@ body {
 }
 .main_container .header .header_logo.header_logo .link_href img.logo_du,
 .main_container .header .header_icon.header_logo .link_href img.logo_du {
-  width: 20%;
+  width: 13%;
   margin: 0 auto;
   display: block;
   position: absolute;
-  top: -1.75rem;
+  top: -1rem;
   left: 0%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
