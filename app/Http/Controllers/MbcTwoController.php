@@ -160,7 +160,7 @@ class MbcTwoController extends Controller
   {
 
     $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
-    $get_url_country = "KSA";  // KSA  -   Egypt  - Kuwait  - United Arab Emirates
+    $get_url_country = "KSA";  // KSA - Kuwait  - United Arab Emirates
     $country = Country::where('title',$get_url_country)->first();
     $operators = Operator::where('country_id',$country->id)->get();
     // dd($operators);
