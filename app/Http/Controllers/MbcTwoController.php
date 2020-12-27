@@ -351,7 +351,7 @@ class MbcTwoController extends Controller
     $service_id = 2;
     $check = $this->checkStatus($msisdn, $service_id);
 
-    if ($check == "true") {
+    if ($check) {
       session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
       $lang =  session::get('lang');
       if ($lang == 'ar') {
@@ -531,7 +531,7 @@ class MbcTwoController extends Controller
 
     $check = $this->checkStatus($msisdn, $service_id);
 
-    if ($check == "true") {
+    if ($check) {
 
       session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
       $lang =  session::get('lang');

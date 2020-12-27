@@ -476,11 +476,16 @@ class FrontController extends Controller
         $contents = $contents->orWhere('type', 'friday');
       }
 
-      $content = $contents->get()[0];
-
-      $contents = $contents->get();
-
       session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID, 'subscription_day' => $sub->day, 'sub_operator' => $sub_operator]);
+
+      if ($contents->count()) {
+        $content = $contents->get()[0];
+
+        $contents = $contents->get();
+      } else {
+        return redirect('profile?OpID='.MBC_OP_ID);
+      }
+
       return view('front.mbc_today_link', compact('content' ,'contents'));
     }
     return redirect('mbc_portal_landing');
@@ -1886,7 +1891,7 @@ class FrontController extends Controller
     if($request->has('OpID') && $request->OpID == orange){  //orange
       if((session()->get('orange_op_id') == orange && session()->get('status') == 'active' && session()->has('MSISDN'))){
 
-        $URL = ORANGE_END_POINT."/api/checkStatus";
+        $URL = $this->detect_server()['ORANGE_END_POINT']."/api/checkStatus";
 
         $JSON['msisdn'] = session()->get('MSISDN');
 
