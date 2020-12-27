@@ -328,6 +328,12 @@ body {
     width: 100% !important;
     margin-top: -0.5rem !important;
   }
+  .main_container .header .header_logo .link_href img.logo_oman,
+.main_container .header .header_icon .link_href img.logo_oman {
+    width: 35% !important;
+    top: -1rem !important;
+    left: 0 !important;
+  }
   .main_container .header .header_logo .link_href img.logo_du,
 .main_container .header .header_icon .link_href img.logo_du {
     width: 18% !important;
@@ -433,6 +439,12 @@ body {
 .main_container .header .header_icon .link_href .logo_orange {
     width: 75% !important;
     margin-top: -0.75rem !important;
+  }
+  .main_container .header .header_logo .link_href .logo_oman,
+.main_container .header .header_icon .link_href .logo_oman {
+    width: 35% !important;
+    top: -1rem !important;
+    left: 0 !important;
   }
   .main_container .header .header_logo .link_href .img_khir,
 .main_container .header .header_icon .link_href .img_khir {
@@ -541,6 +553,12 @@ body {
 .main_container .header .header_icon .link_href .logo_du {
     width: 18% !important;
     top: 0rem;
+  }
+  .main_container .header .header_logo .link_href .logo_oman,
+.main_container .header .header_icon .link_href .logo_oman {
+    width: 35% !important;
+    top: -1rem !important;
+    left: 0 !important;
   }
   .main_container .header .header_logo .link_href .img_khir,
 .main_container .header .header_icon .link_href .img_khir {
@@ -660,6 +678,12 @@ body {
     width: 65% !important;
     margin-top: -0.75rem !important;
   }
+  .main_container .header .header_logo .link_href .logo_oman,
+.main_container .header .header_icon .link_href .logo_oman {
+    width: 35% !important;
+    top: -1rem !important;
+    left: 0 !important;
+  }
   .main_container .header .header_logo .link_href .logo_du,
 .main_container .header .header_icon .link_href .logo_du {
     width: 18% !important;
@@ -763,6 +787,12 @@ body {
     width: 30% !important;
     top: -1rem !important;
     left: 20% !important;
+  }
+  .main_container .header .header_logo .link_href img.logo_oman,
+.main_container .header .header_icon .link_href img.logo_oman {
+    width: 25% !important;
+    top: -1.75rem !important;
+    left: 0 !important;
   }
   .main_container .header .header_logo .link_href img.logo_du,
 .main_container .header .header_icon .link_href img.logo_du {
@@ -883,6 +913,12 @@ body {
     width: 30% !important;
     top: -1rem !important;
     left: 20% !important;
+  }
+  .main_container .header .header_logo .link_href img.logo_oman,
+.main_container .header .header_icon .link_href img.logo_oman {
+    width: 25% !important;
+    top: -1.75rem !important;
+    left: 0 !important;
   }
   .main_container .header .header_logo .link_href img.logo_du,
 .main_container .header .header_icon .link_href img.logo_du {
