@@ -628,7 +628,7 @@ select:active {
   border-radius: 14px;
 }
 .main_container .salah_time_page {
-  width: 95%;
+  width: 100%;
   margin: 1.5rem auto;
 }
 .main_container .salah_time_page .salah_time_title h2 {
