@@ -1162,7 +1162,7 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 10rem;
@@ -1173,7 +1173,7 @@ select:active {
   }
   .main_container .content_carousel .owl_content_two .item .card,
 .main_container .content_carousel .owl_content_three .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
@@ -1185,7 +1185,7 @@ select:active {
   }
   .main_container .content_carousel .owl_content_four .item .card,
 .main_container .content_carousel .owl_content_five .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_four .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
@@ -1525,7 +1525,7 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 10rem;
@@ -1539,7 +1539,7 @@ select:active {
   }
   .main_container .content_carousel .owl_content_two .item .card,
 .main_container .content_carousel .owl_content_three .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
@@ -1555,7 +1555,7 @@ select:active {
   }
   .main_container .content_carousel .owl_content_four .item .card,
 .main_container .content_carousel .owl_content_five .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_four .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
@@ -1888,7 +1888,7 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 11.5rem;
@@ -1899,7 +1899,7 @@ select:active {
   }
   .main_container .content_carousel .owl_content_two .item .card,
 .main_container .content_carousel .owl_content_three .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
@@ -1915,7 +1915,7 @@ select:active {
   }
   .main_container .content_carousel .owl_content_four .item .card,
 .main_container .content_carousel .owl_content_five .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_four .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
@@ -2268,7 +2268,7 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 11.5rem !important;
@@ -2282,7 +2282,7 @@ select:active {
   }
   .main_container .content_carousel .owl_content_two .item .card,
 .main_container .content_carousel .owl_content_three .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
@@ -2298,7 +2298,7 @@ select:active {
   }
   .main_container .content_carousel .owl_content_four .item .card,
 .main_container .content_carousel .owl_content_five .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_four .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
@@ -2687,7 +2687,7 @@ select:active {
     font-size: 1.85rem;
   }
   .main_container .content_carousel .owl_content_one .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 22.719rem !important;
@@ -2703,7 +2703,7 @@ select:active {
     color: #adadad;
   }
   .main_container .content_carousel .owl_content_two .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img {
     height: 22.719rem !important;
@@ -2719,7 +2719,7 @@ select:active {
     color: #adadad;
   }
   .main_container .content_carousel .owl_content_three .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
     height: 22.719rem !important;
@@ -2735,7 +2735,7 @@ select:active {
     color: #adadad;
   }
   .main_container .content_carousel .owl_content_four .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_four .item .card .owl_content_img img {
     height: 9.375rem;
@@ -2753,7 +2753,7 @@ select:active {
     color: #adadad;
   }
   .main_container .content_carousel .owl_content_five .item .card {
-    width: 100%;
+    width: 100% !important;
   }
   .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
     height: 22.719rem !important;
