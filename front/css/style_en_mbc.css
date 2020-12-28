@@ -187,7 +187,7 @@ body {
 .main_container .content_carousel .owl_content_one .item .card {
   background: #0f1218;
   border: 1px solid #efc049;
-  width: 60% !important;
+  width: 60%;
 }
 .main_container .content_carousel .owl_content_one .item .card .card-body {
   background-color: #0f1218;
