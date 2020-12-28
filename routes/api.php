@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,11 +37,21 @@ define('ALL',[1,100,2,200,3,300]);
 Route::prefix('v1')->group(function() {
   Route::get('users', 'TestController@users');
 
-  });
+});
 
 
 /*************orange************* */
 define('ORANGE_ELKHEAR_SERVICE_ID',1000000577);
-define('ORANGE_END_POINT', 'http://10.2.10.15:8310/~orangelkheer');
-define('ORANGE_API_SENDPINCODE', 'http://10.2.10.239:2080/~orangeiv/orange_egypt_send_message');
+
+// define('ORANGE_API_SENDPINCODE', 'http://10.2.10.239:2080/~orangeiv/orange_egypt_send_message');  // sms php 5
+
+
+//define('ORANGE_END_POINT', 'http://10.2.10.15:8310/~orangelkheer'); // orange notify local
+  define('ORANGE_API_SENDPINCODE', 'http://10.2.10.15:8310/~smsorange/api/orange_egypt_send_message');  // sms php 7  (testind inside ivas)
+
+//define('ORANGE_END_POINT', 'http://41.33.167.16:8310/~orangelkheer'); // orange notify publiuc
+//define('ORANGE_API_SENDPINCODE', 'http://41.33.167.16:8310/~smsorange/api/orange_egypt_send_message');  // sms php 7 (testind outside ivas)
+
 /***********end orange*********** */
+
+

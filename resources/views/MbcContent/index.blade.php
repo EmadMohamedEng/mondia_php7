@@ -91,6 +91,9 @@ Content
                                         <th>Id</th>
                                         <th>Subscription Day</th>
                                         <th>Content</th>
+                                        <th>Provider</th>
+                                        <th>Service</th>
+                                        <th>Content</th>
                                         <th>Operator</th>
                                         <th>Type</th>
                                         <th>Occasion date</th>
@@ -111,6 +114,8 @@ Content
                                         @endif
                                         </td>
                                         <td>{{$mbc_content->content->title}}</td>
+                                        <td>{{$mbc_content->content->service->provider->title}}</td>
+                                        <td>{{$mbc_content->content->service->title}}</td>
                                         <td>{{$mbc_content->operator}}</td>
                                         <td>
                                             @if($mbc_content->type == "general")
@@ -169,11 +174,11 @@ $(".copy").click(function() {
 $('#datetimepicker5').datepicker({
     format: "yyyy-mm-dd"
 });
+$('#mbc_content').addClass('active');
+$('#mbc_content-index').addClass('active');
 </script>
 
 <!-- <script>
-    $('#mbc_content').addClass('active');
-    $('#mbc_content-index').addClass('active');
     $(document).ready(function () {
         $('#example_video').DataTable({
             "processing": true,

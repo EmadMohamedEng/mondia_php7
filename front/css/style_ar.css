@@ -34,6 +34,10 @@ body {
   /* Start MBC Filter */
   /* End MBC Filter */
 }
+.main_container .header .header_logo.header_logo .link_href,
+.main_container .header .header_icon.header_logo .link_href {
+  text-align: left;
+}
 .main_container .header .header_logo.header_logo .link_href img,
 .main_container .header .header_icon.header_logo .link_href img {
   width: 50%;
@@ -50,6 +54,34 @@ body {
 .main_container .header .header_icon.header_logo .link_href img.logo_orange {
   margin: 0 auto;
   display: block;
+}
+.main_container .header .header_logo.header_logo .link_href img.logo_oman,
+.main_container .header .header_icon.header_logo .link_href img.logo_oman {
+  width: 20%;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  top: -1.75rem;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.main_container .header .header_logo.header_logo .link_href img.logo_du,
+.main_container .header .header_icon.header_logo .link_href img.logo_du {
+  width: 13%;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  top: -1rem;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 .main_container .header .header_logo.header_logo .link_href .img_khir img,
 .main_container .header .header_icon.header_logo .link_href .img_khir img {
@@ -194,9 +226,11 @@ body {
 }
 .main_container .salah_time_page .time_btn .h4_time_2 {
   text-align: left !important;
+  font-size: 1.2rem;
 }
 .main_container .salah_time_page .time_btn .h4_time {
   text-align: right !important;
+  font-size: 1.2rem;
 }
 .main_container .subscribe_page .subscribe_bg .form-signin .buttons button {
   margin-bottom: 1rem;
@@ -294,6 +328,17 @@ body {
     width: 100% !important;
     margin-top: -0.5rem !important;
   }
+  .main_container .header .header_logo .link_href img.logo_oman,
+.main_container .header .header_icon .link_href img.logo_oman {
+    width: 35% !important;
+    top: -1rem !important;
+    left: 0 !important;
+  }
+  .main_container .header .header_logo .link_href img.logo_du,
+.main_container .header .header_icon .link_href img.logo_du {
+    width: 18% !important;
+    top: 0rem;
+  }
   .main_container .header .header_logo .link_href .img_khir img,
 .main_container .header .header_icon .link_href .img_khir img {
     margin-top: 0.85rem !important;
@@ -365,13 +410,15 @@ body {
   }
   .main_container .salah_time_page .time_btn .h4_time {
     float: right;
-    padding-right: 8px;
+    padding-right: 3px;
     padding-left: 0;
+    font-size: 0.9rem;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     float: left;
-    padding-left: 8px;
+    padding-left: 3px;
     padding-right: 0;
+    font-size: 0.9rem;
   }
   .main_container .merath_page .input_span {
     text-align: right;
@@ -393,6 +440,12 @@ body {
     width: 75% !important;
     margin-top: -0.75rem !important;
   }
+  .main_container .header .header_logo .link_href .logo_oman,
+.main_container .header .header_icon .link_href .logo_oman {
+    width: 35% !important;
+    top: -1rem !important;
+    left: 0 !important;
+  }
   .main_container .header .header_logo .link_href .img_khir,
 .main_container .header .header_icon .link_href .img_khir {
     text-align: left !important;
@@ -402,6 +455,11 @@ body {
     width: 90% !important;
     margin-top: 0.15rem !important;
     margin-right: 40%;
+  }
+  .main_container .header .header_logo .link_href .img_khir img.logo_du,
+.main_container .header .header_icon .link_href .img_khir img.logo_du {
+    width: 18% !important;
+    top: 0rem;
   }
   .main_container .header .header_logo.header_icon,
 .main_container .header .header_icon.header_icon {
@@ -460,15 +518,15 @@ body {
   }
   .main_container .salah_time_page .time_btn .h4_time {
     float: right;
-    padding-right: 8px;
+    padding-right: 3px;
     padding-left: 0;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     float: left;
-    padding-left: 8px;
+    padding-left: 3px;
     padding-right: 0;
-    line-height: 3rem;
+    font-size: 0.9rem;
   }
   .main_container .merath_page .input_span {
     text-align: right;
@@ -490,6 +548,17 @@ body {
 .main_container .header .header_icon .link_href .logo_orange {
     width: 75% !important;
     margin-top: -0.75rem !important;
+  }
+  .main_container .header .header_logo .link_href .logo_du,
+.main_container .header .header_icon .link_href .logo_du {
+    width: 18% !important;
+    top: 0rem;
+  }
+  .main_container .header .header_logo .link_href .logo_oman,
+.main_container .header .header_icon .link_href .logo_oman {
+    width: 35% !important;
+    top: -1rem !important;
+    left: 0 !important;
   }
   .main_container .header .header_logo .link_href .img_khir,
 .main_container .header .header_icon .link_href .img_khir {
@@ -570,15 +639,15 @@ body {
   }
   .main_container .salah_time_page .time_btn .h4_time {
     float: right;
-    padding-right: 8px;
+    padding-right: 3px;
     padding-left: 0;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     float: left;
-    padding-left: 8px;
+    padding-left: 3px;
     padding-right: 0;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
     left: 50% !important;
@@ -608,6 +677,17 @@ body {
 .main_container .header .header_icon .link_href .logo_orange {
     width: 65% !important;
     margin-top: -0.75rem !important;
+  }
+  .main_container .header .header_logo .link_href .logo_oman,
+.main_container .header .header_icon .link_href .logo_oman {
+    width: 35% !important;
+    top: -1rem !important;
+    left: 0 !important;
+  }
+  .main_container .header .header_logo .link_href .logo_du,
+.main_container .header .header_icon .link_href .logo_du {
+    width: 18% !important;
+    top: 0rem;
   }
   .main_container .header .header_logo .link_href .img_khir,
 .main_container .header .header_icon .link_href .img_khir {
@@ -677,15 +757,15 @@ body {
   }
   .main_container .salah_time_page .time_btn .h4_time {
     float: right;
-    padding-right: 8px;
+    padding-right: 4px;
     padding-left: 0;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     float: left;
-    padding-left: 8px;
+    padding-left: 4px;
     padding-right: 0;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .main_container .merath_page .input_span {
     text-align: right;
@@ -707,6 +787,18 @@ body {
     width: 30% !important;
     top: -1rem !important;
     left: 20% !important;
+  }
+  .main_container .header .header_logo .link_href img.logo_oman,
+.main_container .header .header_icon .link_href img.logo_oman {
+    width: 25% !important;
+    top: -1.75rem !important;
+    left: 0 !important;
+  }
+  .main_container .header .header_logo .link_href img.logo_du,
+.main_container .header .header_icon .link_href img.logo_du {
+    width: 15% !important;
+    top: -0.75rem !important;
+    left: 10% !important;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {
@@ -821,6 +913,18 @@ body {
     width: 30% !important;
     top: -1rem !important;
     left: 20% !important;
+  }
+  .main_container .header .header_logo .link_href img.logo_oman,
+.main_container .header .header_icon .link_href img.logo_oman {
+    width: 25% !important;
+    top: -1.75rem !important;
+    left: 0 !important;
+  }
+  .main_container .header .header_logo .link_href img.logo_du,
+.main_container .header .header_icon .link_href img.logo_du {
+    width: 15% !important;
+    top: -0.75rem !important;
+    left: 10% !important;
   }
   .main_container .header .header_logo h6,
 .main_container .header .header_icon h6 {

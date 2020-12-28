@@ -55,7 +55,7 @@ body {
   }
 
   .landing_page .form_content form #zain_submit {
-    margin-top: 5%;
+    margin-top: 3%;
   }
 </style>
 @php

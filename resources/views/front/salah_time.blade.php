@@ -8,10 +8,12 @@
     }
   }
 </style>
-@if(request()->get('OpID') == mbc)
+@if(request()->get('OpID') == mbc || request()->get('OpID') == orange )
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav" dir="{{getCode() == 'ar' ? 'rtl' : 'ltr'}}">
+@elseif(request()->get('OpID') == omantel || request()->get('OpID') == stc || request()->get('OpID') == du)
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 p-0 padding_phones no_padding close_nav" dir="{{getCode() == 'ar' ? 'rtl' : 'ltr'}}">
   @else
-  <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav" dir="{{getCode() == 'ar' ? 'rtl' : 'ltr'}}">
+  <div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav" dir="{{getCode() == 'ar' ? 'rtl' : 'ltr'}}">
 
     @endif
     <section class="salah_time_page">
