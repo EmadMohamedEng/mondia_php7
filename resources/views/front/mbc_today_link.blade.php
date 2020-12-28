@@ -51,9 +51,9 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
               <h2 class="text-capitalize">{{get_title($content->content->id)}}</h2>
             </div>
 
-            {{--  <div class="outside-cover">
-              <span>@lang('front.release'):{{$content->content->created_at->format('M d , Y')}}</span>
-            </div>  --}}
+            <div class="outside-cover">
+              {{--  <span>@lang('front.release'):{{$content->content->created_at->format('M d , Y')}}</span>  --}}
+            </div>
           </div>
         </div>
       </div>
