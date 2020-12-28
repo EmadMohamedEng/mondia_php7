@@ -71,11 +71,11 @@
                 <a class="owl_content_img view overlay link_href" href="{{route('front.inner',['id' => $item->content_id])}}">
 
                   @php
-                  if($item->type == 1) { //video
+                  if($item->content->type == 1) { //video
                   $src = $item->content->image_preview;
-                  }elseif($item->type == 3) { //image
+                  }elseif(($item->content->type == 3) { //image
                   $src =url( $item->content->video );
-                  }elseif($item->type == 2) { //audio
+                  }elseif(($item->content->type == 2) { //audio
                     $src = $item->content->image_preview;
                   }else{
                   $src = url('front\images\Cutting\Contnent_Page\004.png');
