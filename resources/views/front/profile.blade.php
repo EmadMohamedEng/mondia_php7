@@ -69,7 +69,21 @@
             <div class="item">
               <div class="card ovf-hidden">
                 <a class="owl_content_img view overlay link_href" href="{{route('front.inner',['id' => $item->content_id])}}">
-                  <img class="w-100" src="{{url($item->content->image_preview)}}" alt="{{$item->content->image_preview}}">
+
+                  @php
+                  if($item->type == 1) { //video
+                  $src = $item->content->image_preview;
+                  }elseif($item->type == 3) { //image
+                  $src =url( $item->content->video );
+                  }elseif($item->type == 2) { //audio
+                    $src = $item->content->image_preview;
+                  }else{
+                  $src = url('front\images\Cutting\Contnent_Page\004.png');
+                  }
+                  @endphp
+
+
+                  <img class="w-100"  src="{{$src}}"  alt="{{get_title($item->content_id)}}">
 
                   <a>
                     <div class="mask waves-effect waves-light rgba-white-slight"></div>
