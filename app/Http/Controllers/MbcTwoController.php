@@ -411,6 +411,7 @@ class MbcTwoController extends Controller
 
 
 
+
     if ($response == "OK") {
       if ($lang == 'ar'){
         return redirect('mbc_portal_pin')->with('success', '!تم ارسال رمز التحقق');
