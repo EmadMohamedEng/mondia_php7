@@ -1858,35 +1858,43 @@ class FrontController extends Controller
 
     if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
       if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
-        $vars["msisdn"] = session()->get('MSISDN');
-        $vars["service_id"] = 2;
-        $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
-        $sub = json_decode($sub);
-        $date = date('Y-m-d');
-        $subscriber_day = $sub->day;
-        $today_date_format = date('D');
-        $occassion_date_format = date('Y-m-d');
+        $msisdn = session()->get('MSISDN');
+        if($this->checkStatus($msisdn,2)){
+          $vars["msisdn"] = $msisdn ;
+          $vars["service_id"] = 2;
+          $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
+          $sub = json_decode($sub);
+          $date = date('Y-m-d');
+          $subscriber_day = $sub->day;
+          $today_date_format = date('D');
+          $occassion_date_format = date('Y-m-d');
 
-        if($sub->country == 'KSA' && $sub->operator == 'STC'){
-          $contents = MbcContent::where('subscription_day', '<=',$sub->day)->where('operator', 'ksa-stc');
+          if($sub->country == 'KSA' && $sub->operator == 'STC'){
+            $contents = MbcContent::where('subscription_day', '<=',$sub->day)->where('operator', 'ksa-stc');
+          }else{
+            $contents = MbcContent::where('subscription_day', '<=', $sub->day)->where('operator', 'all');
+          }
+
+          if($today_date_format == 'Fri'){
+            $contents = $contents->orWhere('type', 'friday');
+          }
+
+          $subscriber_content = $contents->orderBy('subscription_day', 'DESC')->get();
+          $subscription_days = $contents->orderBy('subscription_day', 'DESC')->groupBy('subscription_day')->pluck('subscription_day');
+
+          if($sub && isset($sub->created_at)){
+            $date = date('Y-m-d',strtotime($sub->created_at));
+          }
+
+          return view('front.profile',compact('date', 'subscriber_content', 'subscriber_day', 'subscription_days'));
         }else{
-          $contents = MbcContent::where('subscription_day', '<=', $sub->day)->where('operator', 'all');
+          return redirect('mbc_portal_login');
         }
 
-        if($today_date_format == 'Fri'){
-          $contents = $contents->orWhere('type', 'friday');
+        }else{
+          return redirect('mbc_portal_login');
         }
 
-        $subscriber_content = $contents->orderBy('subscription_day', 'DESC')->get();
-        $subscription_days = $contents->orderBy('subscription_day', 'DESC')->groupBy('subscription_day')->pluck('subscription_day');
-
-        if($sub && isset($sub->created_at)){
-          $date = date('Y-m-d',strtotime($sub->created_at));
-        }
-
-        return view('front.profile',compact('date', 'subscriber_content', 'subscriber_day', 'subscription_days'));
-      }
-      return redirect('mbc_portal_login');
     }
 
     if($request->has('OpID') && $request->OpID == orange){  //orange
