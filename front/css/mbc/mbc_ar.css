@@ -345,6 +345,7 @@ select:active {
   background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
   color: #FFF;
   width: 65%;
+  direction: rtl;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -840,7 +841,7 @@ select:active {
   border-radius: 14px;
 }
 .main_container .salah_time_page {
-  width: 95%;
+  width: 100%;
   margin: 1.5rem auto;
 }
 .main_container .salah_time_page .salah_time_title h2 {
@@ -868,7 +869,7 @@ select:active {
   padding: 0.6rem 0;
 }
 .main_container .salah_time_page .time_btn .h4_time {
-  text-align: left;
+  text-align: right;
   margin-bottom: 0;
   padding: 0.6rem 0;
 }
@@ -999,7 +1000,7 @@ select:active {
   color: #efc049;
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
-  float: left;
+  float: right;
 }
 .main_container .zakkah_v2_page .currency_icon {
   color: #efc049;
@@ -1121,7 +1122,7 @@ select:active {
 .main_container .merath_page .input_span h4 {
   line-height: 2.5rem;
   font-size: 1.35rem;
-  float: left;
+  float: right;
   color: #efc049;
 }
 .main_container .merath_page .input_span h4 .span_req {
@@ -2027,6 +2028,16 @@ select:active {
   .main_container .nearmosque_page .nearmosque_title #map {
     width: 100%;
   }
+  .main_container .salah_time_page .time_btn .input_span {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .main_container .salah_time_page .time_btn .h4_time {
+    font-size: 1rem;
+  }
+  .main_container .salah_time_page .time_btn .h4_time_2 {
+    font-size: 1rem;
+  }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
     left: 0;
@@ -2367,6 +2378,16 @@ select:active {
   }
   .main_container .nearmosque_page .nearmosque_title #map {
     width: 100%;
+  }
+  .main_container .salah_time_page .time_btn .input_span {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .main_container .salah_time_page .time_btn .h4_time {
+    font-size: 1rem;
+  }
+  .main_container .salah_time_page .time_btn .h4_time_2 {
+    font-size: 1rem;
   }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
@@ -2710,6 +2731,16 @@ select:active {
   .main_container .nearmosque_page .nearmosque_title #map {
     width: 100%;
   }
+  .main_container .salah_time_page .time_btn .input_span {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .main_container .salah_time_page .time_btn .h4_time {
+    font-size: 1rem;
+  }
+  .main_container .salah_time_page .time_btn .h4_time_2 {
+    font-size: 1rem;
+  }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
     left: 0;
@@ -3051,6 +3082,16 @@ select:active {
   }
   .main_container .nearmosque_page .nearmosque_title #map {
     width: 100%;
+  }
+  .main_container .salah_time_page .time_btn .input_span {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .main_container .salah_time_page .time_btn .h4_time {
+    font-size: 1rem;
+  }
+  .main_container .salah_time_page .time_btn .h4_time_2 {
+    font-size: 1rem;
   }
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
@@ -3401,6 +3442,9 @@ select:active {
   }
   .main_container .nearmosque_page .nearmosque_title #map {
     width: 80%;
+  }
+  .main_container .salah_time_page {
+    margin: 3.5rem auto;
   }
   .main_container .sebha_page #sebhaModal .modal-title {
     font-size: 1.75rem;
@@ -3772,6 +3816,9 @@ select:active {
   }
   .main_container .nearmosque_page .nearmosque_title #map {
     width: 80%;
+  }
+  .main_container .salah_time_page {
+    margin: 4.5rem auto;
   }
   .main_container .sebha_page #sebhaModal .modal-title {
     font-size: 2rem;

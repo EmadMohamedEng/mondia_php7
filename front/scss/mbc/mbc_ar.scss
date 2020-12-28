@@ -396,6 +396,7 @@ select {
             background: $bg_color;
             color: $white_color;
             width: 65%;
+            direction: rtl;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -1050,7 +1051,7 @@ select {
 
   /* Start Salah Page */
   .salah_time_page {
-    width: 95%;
+    width: 100%;
     margin: 1.5rem auto;
 
     .salah_time_title {
@@ -1082,7 +1083,7 @@ select {
       }
 
       .h4_time {
-        text-align: left;
+        text-align: right;
         margin-bottom: 0;
         padding: 0.6rem 0;
       }
@@ -1269,7 +1270,7 @@ select {
       color: $text_color;
       margin-top: 0.75rem;
       margin-bottom: 0.75rem;
-      float: left;
+      float: right;
     }
 
     .currency_icon {
@@ -1426,7 +1427,7 @@ select {
       h4 {
         line-height: 2.5rem;
         font-size: 1.35rem;
-        float: left;
+        float: right;
         color: $text_color;
 
         .span_req {
@@ -2656,11 +2657,18 @@ select {
       }
 
       .time_btn {
-        .input_span {}
+        .input_span {
+          padding-right: 8px;
+          padding-left: 8px;
+        }
 
-        .h4_time {}
+        .h4_time {
+          font-size: 1rem;
+        }
 
-        .h4_time_2 {}
+        .h4_time_2 {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -3268,11 +3276,18 @@ select {
       }
 
       .time_btn {
-        .input_span {}
+        .input_span {
+          padding-right: 8px;
+          padding-left: 8px;
+        }
 
-        .h4_time {}
+        .h4_time {
+          font-size: 1rem;
+        }
 
-        .h4_time_2 {}
+        .h4_time_2 {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -3881,11 +3896,18 @@ select {
       }
 
       .time_btn {
-        .input_span {}
+        .input_span {
+          padding-right: 8px;
+          padding-left: 8px;
+        }
 
-        .h4_time {}
+        .h4_time {
+          font-size: 1rem;
+        }
 
-        .h4_time_2 {}
+        .h4_time_2 {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -4494,11 +4516,18 @@ select {
       }
 
       .time_btn {
-        .input_span {}
+        .input_span {
+          padding-right: 8px;
+          padding-left: 8px;
+        }
 
-        .h4_time {}
+        .h4_time {
+          font-size: 1rem;
+        }
 
-        .h4_time_2 {}
+        .h4_time_2 {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -5109,6 +5138,7 @@ select {
     }
 
     .salah_time_page {
+      margin: 3.5rem auto;
       .salah_time_title {
         h2 {}
       }
@@ -5748,6 +5778,7 @@ select {
     }
 
     .salah_time_page {
+      margin: 4.5rem auto;
       .salah_time_title {
         h2 {}
       }
