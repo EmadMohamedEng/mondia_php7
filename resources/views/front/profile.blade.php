@@ -57,7 +57,7 @@
                 @if ($day == 0)
                 <h6 class="font-weight-bold">Free Content</h6>
                 @else
-                <h6 class="font-weight-bold">Day {{$day}}</h6>
+                <h6 class="font-weight-bold">@lang('messages.Day') {{$day}}</h6>
                 @endif
             </div>
           </div>
