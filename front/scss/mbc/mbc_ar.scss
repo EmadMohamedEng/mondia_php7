@@ -110,7 +110,6 @@ select {
       float: left;
 
       .dropdown-menu2 {
-        left: 37%;
         text-align: center;
         background-color: $bg_color2;
 
@@ -455,7 +454,7 @@ select {
           border: 1px solid $text_color;
           margin: 0 auto;
           display: block;
-          width: 100%;
+          width: 60%;
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
@@ -5552,11 +5551,11 @@ select {
           width: 100%;
 
           .card {
-            width: 100%;
+            width: 60%;
 
             .owl_content_img {
               img {
-                height: 28rem;
+                height: 25rem;
               }
             }
 

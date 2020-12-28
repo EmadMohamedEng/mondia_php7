@@ -407,7 +407,7 @@ select:active {
   border: 1px solid #FF6600;
   margin: 0 auto;
   display: block;
-  width: 100%;
+  width: 60%;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -4171,10 +4171,10 @@ select:active {
     width: 100%;
   }
   .main_container .content_carousel .owl_content_one .item .card {
-    width: 100%;
+    width: 60%;
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
-    height: 28rem;
+    height: 25rem;
   }
   .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
     font-size: 1.25rem;
