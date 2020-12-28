@@ -52,7 +52,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
             </div>
 
             <div class="outside-cover">
-              <span>@lang('front.release'):{{$content->content->created_at->format('M d , Y')}}</span>
+              {{--  <span>@lang('front.release'):{{$content->content->created_at->format('M d , Y')}}</span>  --}}
             </div>
           </div>
         </div>
