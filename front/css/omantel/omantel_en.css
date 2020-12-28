@@ -126,7 +126,7 @@ select:active {
   width: 100%;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0;
   color: #ff9e1b;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
@@ -142,7 +142,7 @@ select:active {
   fill: #ff9e1b;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link.nav-link2 {
-  padding: 0 0 0.75rem 0;
+  padding: 0;
   text-align: right;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-toggle::after {
@@ -1134,7 +1134,7 @@ select:active {
   }
 
   .main_container {
-    width: 100% !important;
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -1142,10 +1142,12 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .arrow_back {
-    left: 95%;
+  .main_container .header .header_logo .link_href img.logo_oman {
+    width: 30%;
+    top: 0;
+    left: 75%;
   }
-  .main_container .nav_nav {
+  .main_container .menu_all_op .nav_nav {
     background-color: transparent;
     width: 0;
     padding: 0;
@@ -1154,10 +1156,10 @@ select:active {
     top: 0;
     border: 0;
   }
-  .main_container .nav_nav button {
+  .main_container .menu_all_op .nav_nav button {
     outline: 0;
     font-size: 1rem;
-    opacity: 0.5;
+    opacity: 1;
     position: fixed;
     top: 2.15rem;
     left: 2.5rem;
@@ -1167,41 +1169,40 @@ select:active {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
   }
-  .main_container .nav_nav button .icon_before {
+  .main_container .menu_all_op .nav_nav button .icon_before {
     color: #FFF;
   }
-  .main_container .nav_nav .navbar-collapse {
+  .main_container .menu_all_op .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
-  .main_container .nav_nav .navbar_ul {
+  .main_container .menu_all_op .nav_nav .navbar_ul {
     background-color: #FFF;
     width: 15rem;
     height: 100vh;
     padding: 0 0;
     overflow-y: scroll;
   }
-  .main_container .nav_nav .navbar_ul .nav-item {
-    padding: 0.25rem 0.75rem;
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
+    padding: 0.01rem 0.75rem;
   }
-  .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     padding-right: 0.5rem;
   }
-  .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0;
-    text-align: center;
-    width: 100% !important;
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
+    padding: 0.25rem 0 0.25rem 2.3rem;
   }
-  .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
-    width: 100% !important;
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
+    width: 100%;
   }
-  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo {
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo {
     margin-bottom: 1rem;
   }
-  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    font-size: 1.5rem;
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
+    color: #ff9e1b;
+    font-size: 1rem;
     float: right;
   }
-  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
     width: 30%;
     display: block;
     margin: 0 auto;
@@ -1214,6 +1215,9 @@ select:active {
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
     top: 92.5%;
+  }
+  .main_container .content_carousel .content_carousel_head {
+    margin-top: 1rem;
   }
   .main_container .content_carousel .owl_content_one .item {
     width: 100%;
@@ -1282,7 +1286,7 @@ select:active {
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
-    width: 94% !important;
+    width: 94%;
     margin-top: -5%;
     margin-left: 3%;
   }
@@ -1292,18 +1296,21 @@ select:active {
   }
   .main_container .inner_page .poster {
     padding: 0 0.75rem;
+    margin-top: 0.5rem;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
     font-size: 1.25rem;
   }
   .main_container .inner_page .poster .poster-details .outside-cover {
     font-size: 0.7rem;
+    margin-bottom: 0.5rem;
   }
   .main_container .inner_page .socail_media {
     width: 100%;
+    margin-bottom: 1rem;
   }
   .main_container .inner_page .socail_media .pa_share {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
   }
   .main_container .inner_page .socail_media .shear_div {
     padding-right: 0;
@@ -1318,7 +1325,8 @@ select:active {
     margin-top: 0.75rem;
   }
   .main_container .inner_page .section_content .pa_Videos {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
@@ -1327,9 +1335,13 @@ select:active {
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
+    left: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
-    font-size: 1.15rem;
+    font-size: 1rem;
+  }
+  .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club .btn {
+    font-size: 1rem;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-footer {
     justify-content: center;
@@ -1346,6 +1358,10 @@ select:active {
   .main_container .nearmosque_page {
     margin: 0.5rem auto;
   }
+  .main_container .nearmosque_page .nearmosque_title h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
   .main_container .nearmosque_page .nearmosque_title #map {
     width: 100%;
   }
@@ -1354,6 +1370,7 @@ select:active {
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
+    font-size: 1.25rem;
   }
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
@@ -1399,8 +1416,12 @@ select:active {
   .main_container .subscribe_page {
     width: 100%;
   }
-  .main_container .zakkah_page {
-    width: 90%;
+  .main_container .zakkah_page h4 {
+    font-size: 1rem;
+  }
+  .main_container .zakkah_page .zakah_zakah {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
   }
   .main_container .merath_page {
     width: 90%;
@@ -1422,8 +1443,9 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 70%;
+    background: #ff9e1b;
     color: #FFF;
+    width: 70%;
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
@@ -1438,6 +1460,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
+    border: 2px #ff9e1b solid;
     border-radius: 7px;
     direction: rtl;
   }
@@ -1446,7 +1469,6 @@ select:active {
     font-size: 0.85rem;
   }
   .main_container .search_page {
-    width: 95%;
     margin: 0.5rem auto;
   }
   .main_container .search_page .textbox {
@@ -1484,7 +1506,7 @@ select:active {
   }
 
   .main_container {
-    width: 100% !important;
+    width: 100%;
     padding-top: 4rem;
   }
   .main_container .header {
@@ -1492,10 +1514,12 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .arrow_back {
-    left: 95%;
+  .main_container .header .header_logo .link_href img.logo_oman {
+    width: 30%;
+    top: 0;
+    left: 75%;
   }
-  .main_container .nav_nav {
+  .main_container .menu_all_op .nav_nav {
     background-color: transparent;
     width: 0;
     padding: 0;
@@ -1504,58 +1528,53 @@ select:active {
     top: 0;
     border: 0;
   }
-  .main_container .nav_nav button {
+  .main_container .menu_all_op .nav_nav button {
     outline: 0;
-    font-size: 1.2rem;
-    opacity: 0.5;
+    font-size: 1rem;
+    opacity: 1;
     position: fixed;
     top: 2.15rem;
-    left: 3rem;
+    left: 2.5rem;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
   }
-  .main_container .nav_nav button .icon_before {
+  .main_container .menu_all_op .nav_nav button .icon_before {
     color: #FFF;
   }
-  .main_container .nav_nav .navbar-collapse {
+  .main_container .menu_all_op .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
-  .main_container .nav_nav .navbar_ul {
+  .main_container .menu_all_op .nav_nav .navbar_ul {
     background-color: #FFF;
     width: 15rem;
     height: 100vh;
     padding: 0 0;
     overflow-y: scroll;
   }
-  .main_container .nav_nav .navbar_ul .nav-item {
-    padding: 0.25rem 0.75rem;
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
+    padding: 0.01rem 0.75rem;
   }
-  .main_container .nav_nav .navbar_ul .nav-item .nav-link {
-    font-size: 14px;
-  }
-  .main_container .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     padding-right: 0.5rem;
   }
-  .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0;
-    text-align: center;
-    width: 100% !important;
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
+    padding: 0.25rem 0 0.25rem 2.3rem;
   }
-  .main_container .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
-    width: 100% !important;
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
+    width: 100%;
   }
-  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo {
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo {
     margin-bottom: 1rem;
   }
-  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
+    color: #ff9e1b;
     font-size: 1rem;
     float: right;
-    margin-top: 7%;
   }
-  .main_container .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
     width: 30%;
     display: block;
     margin: 0 auto;
@@ -1564,19 +1583,13 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 21.5rem !important;
+    height: 21.5rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
     top: 93%;
-    font-size: 0.85rem;
   }
-  .main_container .content_carousel .content_carousel_head .link_title h6 {
-    font-weight: bold;
-    font-size: 14px;
-  }
-  .main_container .content_carousel .content_carousel_head .btn_more {
-    padding: 0.25rem 0.75rem;
-    font-size: 14px;
+  .main_container .content_carousel .content_carousel_head {
+    margin-top: 1rem;
   }
   .main_container .content_carousel .owl_content_one .item {
     width: 100%;
@@ -1586,9 +1599,6 @@ select:active {
   }
   .main_container .content_carousel .owl_content_one .item .card .owl_content_img img {
     height: 10rem;
-  }
-  .main_container .content_carousel .owl_content_one .item .card .card-body .card-title {
-    font-size: 0.9rem;
   }
   .main_container .content_carousel .owl_content_two .item,
 .main_container .content_carousel .owl_content_three .item {
@@ -1600,11 +1610,7 @@ select:active {
   }
   .main_container .content_carousel .owl_content_two .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_three .item .card .owl_content_img img {
-    height: 10.438rem !important;
-  }
-  .main_container .content_carousel .owl_content_two .item .card .card-body .card-title,
-.main_container .content_carousel .owl_content_three .item .card .card-body .card-title {
-    font-size: 0.9rem;
+    height: 10.438rem;
   }
   .main_container .content_carousel .owl_content_four .item,
 .main_container .content_carousel .owl_content_five .item {
@@ -1616,11 +1622,13 @@ select:active {
   }
   .main_container .content_carousel .owl_content_four .item .card .owl_content_img img,
 .main_container .content_carousel .owl_content_five .item .card .owl_content_img img {
-    height: 10.438rem !important;
+    height: 10.438rem;
   }
-  .main_container .content_carousel .owl_content_four .item .card .card-body .card-title,
-.main_container .content_carousel .owl_content_five .item .card .card-body .card-title {
-    font-size: 0.9rem;
+  .main_container .list_page .content_carousel_head .link_title h6 {
+    font-size: 14px;
+  }
+  .main_container .list_page .content_carousel_head .btn_more {
+    font-size: 14px;
   }
   .main_container .list_page .coming_soon {
     width: 50%;
@@ -1633,42 +1641,48 @@ select:active {
     padding: 1rem 0.25rem;
   }
   .main_container .list_page .item .card .card-body .card-title {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .main_container .inner_page {
     margin-top: 0;
   }
   .main_container .inner_page .cover h4 {
-    font-size: 1rem;
+    font-size: 1.15rem;
     padding: 0 0.35rem;
   }
   .main_container .inner_page .cover video {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 100%;
-    max-height: 21.5rem;
+    width: 95%;
+    max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
-    width: 94% !important;
+    width: 94%;
     margin-top: -5%;
     margin-left: 3%;
   }
   .main_container .inner_page .cover button {
     top: 45%;
-    left: 33%;
+    left: 30%;
+  }
+  .main_container .inner_page .poster {
+    padding: 0 0.75rem;
+    margin-top: 0.5rem;
   }
   .main_container .inner_page .poster .poster-details .title-wrapper h2 {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   .main_container .inner_page .poster .poster-details .outside-cover {
     font-size: 0.7rem;
+    margin-bottom: 0.5rem;
   }
   .main_container .inner_page .socail_media {
     width: 100%;
+    margin-bottom: 1rem;
   }
   .main_container .inner_page .socail_media .pa_share {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
   }
   .main_container .inner_page .socail_media .shear_div {
     padding-right: 0;
@@ -1683,28 +1697,32 @@ select:active {
     margin-top: 0.75rem;
   }
   .main_container .inner_page .section_content .pa_Videos {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    font-size: 12px;
     margin-left: 4%;
+    font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
     left: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+  .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club .btn {
+    font-size: 1rem;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-footer {
     justify-content: center;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .main_container .azan_page .azan_title h2 {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
   .main_container .azan_page .input_text {
     width: 85%;
@@ -1713,48 +1731,47 @@ select:active {
     margin: 0.5rem auto;
   }
   .main_container .nearmosque_page .nearmosque_title h2 {
-    font-size: 1rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
   }
   .main_container .nearmosque_page .nearmosque_title #map {
-    width: 95%;
-    height: 60vh;
+    width: 100%;
   }
   .main_container .salah_time_page {
     width: 100%;
   }
   .main_container .salah_time_page .salah_time_title h2 {
     margin-bottom: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   .main_container .salah_time_page .time_btn {
     margin-bottom: 4%;
     height: 3.5rem;
-    direction: rtl;
   }
   .main_container .salah_time_page .time_btn .input_span {
     padding: 0 !important;
   }
   .main_container .salah_time_page .time_btn .h4_time {
-    padding: 0 0 0 5px;
     line-height: 3rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    padding: 0 0 0 5px;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
-    padding: 0 5px 0 0;
     line-height: 3rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    padding: 0 5px 0 0;
   }
   .main_container .sebha_page .display .btn-bar button {
     width: 100%;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog {
     position: relative;
-    margin: 0;
+    margin-top: 0;
   }
   .main_container .sebha_page #sebhaModal .modal-dialog .modal-content {
-    width: 90%;
+    width: 95%;
     position: fixed;
-    top: 54%;
+    top: 57%;
     left: 50% !important;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -1763,16 +1780,20 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .sebha_page #sebhaModal .modal-title {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   .main_container .sebha_page #sebhaModal .choose_sebha {
-    font-size: 0.9rem;
+    font-size: 1.09rem;
   }
   .main_container .subscribe_page {
     width: 100%;
   }
-  .main_container .zakkah_page {
-    width: 90%;
+  .main_container .zakkah_page h4 {
+    font-size: 1rem;
+  }
+  .main_container .zakkah_page .zakah_zakah {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
   }
   .main_container .merath_page {
     width: 90%;
@@ -1783,19 +1804,20 @@ select:active {
   .main_container .merath_page .merath_title h2 {
     text-align: center;
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   .main_container .merath_page .button_merath {
     text-align: center;
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    width: 65%;
+    background: #ff9e1b;
     color: #FFF;
+    width: 70%;
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
@@ -1810,41 +1832,39 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
+    border: 2px #ff9e1b solid;
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr td {
-    font-size: 0.9rem;
-  }
   .main_container .merath_page .table_table .table tbody tr .td_1 {
     text-align: right;
+    font-size: 0.85rem;
   }
   .main_container .search_page {
-    width: 100%;
-    margin: 0.75rem auto;
+    margin: 0.5rem auto;
   }
   .main_container .search_page .textbox {
     text-align: center;
   }
   .main_container .error_page {
-    margin: 2rem auto 0 0;
+    margin: 0 auto 0 0;
   }
   .main_container .error_page svg {
-    height: 100%;
+    height: 85%;
   }
   .main_container .error_page .message-box {
-    font-size: 2rem;
-    top: -19rem;
+    font-size: 1.5rem;
+    top: -18rem;
     left: 42%;
   }
   .main_container .error_page .buttons-con {
-    top: 3rem;
+    top: -1rem;
     left: 50%;
   }
 
   .loading-overlay .spinner-large {
     bottom: 30%;
-    left: 35%;
+    left: 31%;
   }
 }
 @media (min-width: 375px) and (max-width: 410.9px) {

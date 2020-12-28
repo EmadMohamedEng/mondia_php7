@@ -19,7 +19,6 @@
 <div class="row m-0">
 
   <div class="col-md-0 col-lg-0 col-xl-4 col-0 p-0" style="z-index: 9999999999">
-    <!-- start menu 1  -->
     <!-- start menu 1 => For All Operator / Mobile Menu / And Sidenav for PC ( Oman - DU - STC ) -->
     <div class="menu_all_op">
       <nav class="nav_nav navbar navbar-expand-xl primary-color">
@@ -177,7 +176,6 @@
       </nav>
     </div>
     <!-- end menu 1 => For All Operator / Mobile Menu / And Sidenav for PC ( Oman - DU - STC ) -->
-    <!-- end menu 1  -->
   </div>
 
   @yield('content')
