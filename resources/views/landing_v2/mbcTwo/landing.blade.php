@@ -142,7 +142,7 @@ if ($lang == 'ar') {
               <div class="col-3 p-0">
                 <div class="dropdown">
                   <button class="btn btn_select" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span style="font-weight: bold;">{{ $country->code }}</span>
+                    <span id="county_code_landing" style="font-weight: bold;"></span>
                   </button>
 
                 </div>
@@ -150,7 +150,7 @@ if ($lang == 'ar') {
 
               <div class="col-9 p-0">
                 <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-                <input type="hidden" name="code" value="{{ $country->code }}">
+                <input type="hidden" id="country_code" name="code" value="{{ $country->code }}">
                 <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>
             </div>
@@ -158,7 +158,7 @@ if ($lang == 'ar') {
               <select class="mdb-select md-form form-control" name="operator" required>
                 <option value="" disabled selected>@lang('messages.Choose_your_Operators')</option>
                 @foreach($operators as $operator)
-                <option id="{{$operator->id}}" value="{{$operator->operator_name}}">{{ $lang == 'ar' ? $operator->name_ar : $operator->name_en }}</option>
+                <option id="{{$operator->id}}" country="{{$operator->country->code}}"    value="{{$operator->operator_name}}">{{ $lang == 'ar' ? $operator->name_ar : $operator->name_en }}</option>
                 @endforeach
               </select>
             </div>
@@ -221,6 +221,10 @@ if ($lang == 'ar') {
 
       $('.mdb-select').click(function(e) {
         var id = $(this).children(":selected").attr("id");
+        var country_code = $(this).children(":selected").attr("country");
+        $("#country_code").val(country_code);
+        $("#county_code_landing").html(country_code);
+
         $('.change_cost').children().css('display', 'none');
         $(`#cost${id}`).css('display', 'block');
 
