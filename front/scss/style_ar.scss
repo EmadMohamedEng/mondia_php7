@@ -840,6 +840,14 @@ body {
       }
     }
 
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          left: 0 !important;
+        }
+      }
+    }
+
     .salah_time_page {
       .time_btn {
         direction: rtl;
@@ -1016,6 +1024,14 @@ body {
       .cover {
         audio {
           margin-right: 3%;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          left: 0 !important;
         }
       }
     }
@@ -1222,6 +1238,14 @@ body {
       }
     }
 
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          left: 0 !important;
+        }
+      }
+    }
+
     .salah_time_page {
       .time_btn {
         direction: rtl;
@@ -1417,6 +1441,14 @@ body {
         .p_content,
         .p_content_2 {
           font-size: 14px;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          left: 0 !important;
         }
       }
     }

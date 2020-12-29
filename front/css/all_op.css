@@ -1270,6 +1270,7 @@ select:active {
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
+    left: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1.15rem;
@@ -1998,6 +1999,7 @@ select:active {
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
+    left: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1rem;
