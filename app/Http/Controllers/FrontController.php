@@ -1875,6 +1875,22 @@ class FrontController extends Controller
             $contents = MbcContent::where('subscription_day', '<=', $sub->day)->where('operator', 'all');
           }
 
+          if($sub->country == 'UAE' && $sub->operator == 'Du'){
+            if(Session::get('applocale') == 'ar')
+            {
+              $cost = Operator::find(du)->cost_ar;
+            }else{
+              $cost = Operator::find(du)->cost_en;
+            }
+          }elseif('KSA'){
+            if(Session::get('applocale') == 'ar')
+            {
+              $cost = Operator::find(mbc)->cost_ar;
+            }else{
+              $cost = Operator::find(mbc)->cost_en;
+            }
+          }
+
           if($today_date_format == 'Fri'){
             $contents = $contents->orWhere('type', 'friday');
           }
@@ -1885,8 +1901,9 @@ class FrontController extends Controller
           if($sub && isset($sub->created_at)){
             $date = date('Y-m-d',strtotime($sub->created_at));
           }
-
-          return view('front.profile',compact('date', 'subscriber_content', 'subscriber_day', 'subscription_days'));
+          $operators_ids = array(14,21,22,11,10);
+          $operators = Operator::whereIN('id',$operators_ids)->get();
+          return view('front.operator.mbc.profile',compact('date', 'subscriber_content', 'subscriber_day', 'subscription_days', 'cost'));
         }else{
           return redirect('mbc_portal_login');
         }

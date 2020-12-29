@@ -4,6 +4,7 @@ return [
     'renew' => 'Auto-Renewed',
     'service_type' => 'Service Plan',
     'service_name' => 'Service Name',
+    'discription_all' => 'Auto Renewal of the subscription is considered to be ',
     'discription_weekly' => 'Auto Renewal of the subscription is considered to be 10 SAR per week',
     'orange_discription_daily' => 'Renewal of the subscription is considered to be 1 EGP per day',
     'description' => 'Description',

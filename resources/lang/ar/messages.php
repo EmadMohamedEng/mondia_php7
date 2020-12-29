@@ -6,6 +6,7 @@ return [
     'renew' => 'تجدد تلقائيا',
     'language' => 'english',
     'discription' => 'وصف الخدمة',
+    'discription_all' => 'تجديد الاشتراك سيكون تلقائي وفعال بتكلفة ',
     'discription_weekly' => 'تجديد الاشتراك سيكون تلقائي وفعال بتكلفة 10 ريال فى اسبوعياً',
     'orange_discription_daily' => 'تجديد الاشتراك سيكون بتكلفة 1 جنية يومياً',
     'role' => 'الادوار',
