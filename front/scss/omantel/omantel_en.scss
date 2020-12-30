@@ -1809,6 +1809,7 @@ select {
           font-size: 1.25rem;
           margin-bottom: .5rem;
         }
+
         #map {
           width: 100%;
         }
@@ -1894,8 +1895,8 @@ select {
       }
 
       .zakah_zakah {
-        margin-top: 1rem!important;
-        margin-bottom: 1rem!important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
       }
     }
 
@@ -2367,6 +2368,7 @@ select {
           font-size: 1.25rem;
           margin-bottom: .5rem;
         }
+
         #map {
           width: 100%;
         }
@@ -2452,8 +2454,8 @@ select {
       }
 
       .zakah_zakah {
-        margin-top: 1rem!important;
-        margin-bottom: 1rem!important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
       }
     }
 
@@ -2925,6 +2927,7 @@ select {
           font-size: 1.25rem;
           margin-bottom: .5rem;
         }
+
         #map {
           width: 100%;
         }
@@ -3016,8 +3019,8 @@ select {
       }
 
       .zakah_zakah {
-        margin-top: 1rem!important;
-        margin-bottom: 1rem!important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
       }
     }
 
@@ -3139,7 +3142,7 @@ select {
   }
 
   .main_container {
-    width: 100% !important;
+    width: 100%;
     padding-top: 4rem;
 
     .header {
@@ -3147,93 +3150,93 @@ select {
       top: 0;
       z-index: 99999999999;
 
-      .header_logo,
-      .header_icon {
-        img {}
-
-        h6 {
-          font-size: 1.5rem;
+      .header_logo {
+        .link_href {
+          img {
+            &.logo_oman {
+              width: 30%;
+              top: 0;
+              left: 70%;
+            }
+          }
         }
       }
 
-      .arrow_back {
-        left: 95%;
-      }
+      .arrow_back {}
     }
 
-    .nav_nav {
-      background-color: transparent;
-      width: 0;
-      padding: 0;
-      margin: 0;
-      position: fixed;
-      top: 0;
-      border: 0;
-
-      button {
-        outline: 0;
-        font-size: 1.2rem;
-        opacity: 0.5;
+    .menu_all_op {
+      .nav_nav {
+        background-color: transparent;
+        width: 0;
+        padding: 0;
+        margin: 0;
         position: fixed;
-        top: 2.15rem;
-        left: 3rem;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
+        top: 0;
+        border: 0;
 
-        .icon_before {
-          color: $white_color;
-        }
-      }
+        button {
+          outline: 0;
+          font-size: 1rem;
+          opacity: 1;
+          position: fixed;
+          top: 2.15rem;
+          left: 2.5rem;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
 
-      .navbar-collapse {
-        z-index: 9999999;
-      }
-
-      .navbar_ul {
-        background-color: $white_color;
-        width: 15rem;
-        height: 100vh;
-        padding: 0 0;
-        overflow-y: scroll;
-
-        .nav-item {
-          padding: 0.25rem 0.75rem;
-
-          .nav_item_welc {}
-
-          .nav-link {
-            .icon_before {
-              padding-right: 0.5rem;
-            }
+          .icon_before {
+            color: $white_color;
           }
+        }
 
-          .dropdown-menu {
-            .dropdown-item {
-              padding: 0.25rem 0;
-              text-align: center;
-              width: 100% !important;
+        .navbar-collapse {
+          z-index: 9999999;
+        }
 
-              &.dropdown-item2 {
-                width: 100% !important;
+        .navbar_ul {
+          background-color: $white_color;
+          width: 15rem;
+          height: 100vh;
+          padding: 0 0;
+          overflow-y: scroll;
+
+          .nav-item {
+            padding: 0.01rem 0.75rem;
+
+            .nav-link {
+              .icon_before {
+                padding-right: 0.5rem;
               }
             }
-          }
 
-          &.nav_item_logo {
-            margin-bottom: 1rem;
+            .dropdown-menu {
+              .dropdown-item {
+                padding: 0.25rem 0 0.25rem 2.3rem;
 
-            .arrow_back {
-              font-size: 1.5rem;
-              float: right;
+                &.dropdown-item2 {
+                  width: 100%;
+                }
+              }
             }
 
-            img {
-              width: 30%;
-              display: block;
-              margin: 0 auto;
+            &.nav_item_logo {
+              margin-bottom: 1rem;
+
+              .arrow_back {
+                color: $bg_color;
+                font-size: 1rem;
+                float: right;
+              }
+
+              img {
+                width: 30%;
+                display: block;
+                margin: 0 auto;
+              }
             }
           }
         }
@@ -3247,7 +3250,7 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 24.688rem !important;
+              height: 24.688rem;
             }
           }
 
@@ -3263,17 +3266,7 @@ select {
 
     .content_carousel {
       .content_carousel_head {
-        .link_title {
-          h6 {
-            font-weight: bold;
-            font-size: 1rem;
-          }
-        }
-
-        .btn_more {
-          padding: 0.25rem 0.75rem;
-          font-size: 1rem;
-        }
+        margin-top: 1rem;
       }
 
       .owl_content_one {
@@ -3285,13 +3278,7 @@ select {
 
             .owl_content_img {
               img {
-                height: 11.5rem !important;
-              }
-            }
-
-            .card-body {
-              .card-title {
-                font-size: 0.9rem
+                height: 11.5rem;
               }
             }
           }
@@ -3308,13 +3295,7 @@ select {
 
             .owl_content_img {
               img {
-                height: 12.063rem !important;
-              }
-            }
-
-            .card-body {
-              .card-title {
-                font-size: 0.9rem
+                height: 12.063rem;
               }
             }
           }
@@ -3331,13 +3312,7 @@ select {
 
             .owl_content_img {
               img {
-                height: 12.063rem !important;
-              }
-            }
-
-            .card-body {
-              .card-title {
-                font-size: 0.9rem
+                height: 12.063rem;
               }
             }
           }
@@ -3346,6 +3321,18 @@ select {
     }
 
     .list_page {
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 14px;
+          }
+        }
+
+        .btn_more {
+          font-size: 14px;
+        }
+      }
+
       .coming_soon {
         width: 50%;
         margin-top: 30% !important;
@@ -3353,8 +3340,6 @@ select {
 
       .item {
         .card {
-          // height: 17.5rem;
-
           .owl_content_img {
             img {
               height: 12.219rem;
@@ -3365,7 +3350,7 @@ select {
             padding: 1rem 0.25rem;
 
             .card-title {
-              font-size: 0.9rem;
+              font-size: 1rem;
             }
           }
         }
@@ -3375,16 +3360,9 @@ select {
     .inner_page {
       margin-top: 0;
 
-      .section_content {
-        .image_inner {
-          height: 110px;
-          width: 110px;
-        }
-      }
-
       .cover {
         h4 {
-          font-size: 1rem;
+          font-size: 1.15rem;
           padding: 0 0.35rem;
         }
 
@@ -3398,37 +3376,41 @@ select {
         }
 
         audio {
-          width: 94% !important;
+          width: 94%;
           margin-top: -5%;
           margin-left: 3%;
         }
 
         button {
           top: 45%;
-          left: 35%;
+          left: 30%;
         }
       }
 
       .poster {
+        padding: 0 0.75rem;
+        margin-top: .5rem;
+
         .poster-details {
           .title-wrapper {
             h2 {
-              font-size: 1rem;
+              font-size: 1.25rem;
             }
           }
 
           .outside-cover {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
+            margin-bottom: 0.5rem;
           }
         }
       }
 
       .socail_media {
-        width: 75%;
+        width: 100%;
+        margin-bottom: 1rem;
 
         .pa_share {
-          margin-top: 0.75rem;
-          font-size: 1rem;
+          margin-top: 0.5rem;
         }
 
         .shear_div {
@@ -3448,14 +3430,14 @@ select {
 
       .section_content {
         .pa_Videos {
-          margin-top: 0.75rem;
-          font-size: 1rem;
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
         }
 
         .p_content,
         .p_content_2 {
           margin-left: 4%;
-          font-size: 13px;
+          font-size: 12px;
         }
       }
     }
@@ -3469,6 +3451,14 @@ select {
           .modal-header {
             h5 {
               font-size: 1rem;
+            }
+          }
+
+          .modal-body {
+            .modal_club {
+              .btn {
+                font-size: 1rem;
+              }
             }
           }
 
@@ -3500,12 +3490,13 @@ select {
 
       .nearmosque_title {
         h2 {
-          font-size: 1rem;
+          font-size: 1.25rem;
+          margin-bottom: .5rem;
         }
 
         #map {
           width: 100%;
-          height: 55vh;
+          height: 50vh;
         }
       }
     }
@@ -3516,7 +3507,7 @@ select {
       .salah_time_title {
         h2 {
           margin-bottom: 0.5rem;
-          font-size: 1rem;
+          font-size: 1.25rem;
         }
       }
 
@@ -3529,15 +3520,15 @@ select {
         }
 
         .h4_time {
-          padding: 0 0 0 5px;
           line-height: 3rem;
-          font-size: 0.8rem;
+          font-size: 1rem;
+          padding: 0 0 0 5px;
         }
 
         .h4_time_2 {
-          padding: 0 5px 0 0;
           line-height: 3rem;
-          font-size: 0.8rem;
+          font-size: 1rem;
+          padding: 0 5px 0 0;
         }
       }
     }
@@ -3554,57 +3545,50 @@ select {
       #sebhaModal {
         .modal-dialog {
           position: relative;
-          margin: 0;
+          margin-top: 0;
 
           .modal-content {
             width: 95%;
             position: fixed;
-            top: 55%;
+            top: 57%;
             left: 50% !important;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             -o-transform: translate(-50%, -50%);
+
+            .modal-header {
+              .close {
+                font-size: 2rem;
+              }
+            }
           }
         }
 
-        .close {
-          font-size: 2rem;
-        }
-
         .modal-title {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
         }
 
         .choose_sebha {
-          font-size: 1.25rem;
+          font-size: 1.09rem;
         }
       }
     }
 
     .subscribe_page {
       width: 100%;
-
-      .subscribe_bg {
-        font-size: 1.25rem;
-
-        .form-signin {
-          .account-wall input {
-            font-size: 1.5rem;
-          }
-
-          .buttons {
-            button {
-              font-size: 1.5rem;
-            }
-          }
-        }
-      }
     }
 
     .zakkah_page {
-      width: 90%;
+      h4 {
+        font-size: 1rem;
+      }
+
+      .zakah_zakah {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+      }
     }
 
     .merath_page {
@@ -3619,20 +3603,18 @@ select {
         h2 {
           text-align: center;
           margin-bottom: 1rem;
-          font-size: 1rem;
+          font-size: 1.3rem;
         }
       }
 
       .input_text {
-        .merath_input {
-          font-size: 1rem;
-        }
+        // .merath_input {}
       }
 
       .input_span {
         h4 {
-          line-height: 3rem;
-          font-size: 0.9rem;
+          line-height: 2.25rem;
+          font-size: 0.85rem;
         }
       }
 
@@ -3641,8 +3623,9 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          width: 60%;
+          background: $bg_color;
           color: $white_color;
+          width: 70%;
           font-size: 1rem;
           font-weight: bold;
           text-align: center;
@@ -3661,17 +3644,17 @@ select {
         }
 
         .table {
+          border: 2px $bg_color solid;
           border-radius: 7px;
           direction: rtl;
 
           tbody {
             tr {
-              td {
-                font-size: 0.85rem;
-              }
+              // td {}
 
               .td_1 {
                 text-align: right;
+                font-size: 0.85rem;
               }
             }
           }
@@ -3680,8 +3663,7 @@ select {
     }
 
     .search_page {
-      width: 100%;
-      margin: 0.75rem auto;
+      margin: 0.5rem auto;
 
       .textbox {
         text-align: center;
@@ -3689,21 +3671,20 @@ select {
     }
 
     .error_page {
-      margin: 2rem auto 0 0;
+      margin: 0 auto 0 0;
 
       svg {
-        height: 100%;
+        height: 85%;
       }
 
       .message-box {
-        font-size: 2.5rem;
-        top: -22rem;
+        font-size: 1.5rem;
+        top: -18rem;
         left: 42%;
       }
 
       .buttons-con {
-        font-size: 1.5rem;
-        top: 3rem;
+        top: -1rem;
         left: 50%;
       }
     }
@@ -3712,15 +3693,15 @@ select {
   .loading-overlay {
     .spinner-large {
       bottom: 30%;
-      left: 35%;
+      left: 31%;
     }
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023.9px) {
   .padding_phones {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 
   .no_padding {
@@ -3728,7 +3709,7 @@ select {
   }
 
   .main_container {
-    width: 100% !important;
+    width: 100%;
     padding-top: 4rem;
 
     .header {
@@ -3737,108 +3718,103 @@ select {
       z-index: 99999999999;
       height: 5.5rem;
 
-      .header_logo,
-      .header_icon {
-        width: 100%;
-
-        h6 {
-          font-size: 2rem;
-          margin-top: 0.25rem;
-          padding-left: 0;
-        }
-
-        img {}
-
-        &.header_icon {
-          i {
-            font-size: 2rem;
-            margin-top: 1rem;
+      .header_logo {
+        .link_href {
+          img {
+            &.logo_oman {
+              width: 20%;
+              top: 0;
+              left: 70%;
+            }
           }
         }
       }
 
       .arrow_back {
-        left: 94%;
-        top: 1.5rem;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+        top: 1.75rem;
       }
     }
 
-    .nav_nav {
-      background-color: transparent;
-      width: 0;
-      padding: 0;
-      margin: 0;
-      position: fixed;
-      top: 0;
-      border: 0;
-
-      button {
-        outline: 0;
-        font-size: 1.5rem;
-        opacity: 0.5;
+    .menu_all_op {
+      .nav_nav {
+        background-color: transparent;
+        width: 0;
+        padding: 0;
+        margin: 0;
         position: fixed;
-        top: 2.85rem;
-        left: 4rem;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
+        top: 0;
+        border: 0;
 
-        .icon_before {
-          color: $white_color;
-        }
-      }
-
-      .navbar-collapse {
-        z-index: 9999999;
-      }
-
-      .navbar_ul {
-        background-color: $white_color;
-        width: 22rem;
-        height: 100vh;
-        padding: 0 0;
-        overflow-y: scroll;
-
-        .nav-item {
-          padding: 0.25rem 0.75rem;
+        button {
+          outline: 0;
           font-size: 1.5rem;
+          opacity: 1;
+          position: fixed;
+          top: 2.75rem;
+          left: 3.5rem;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
 
-          .nav-link {
-            font-size: 1rem;
+          .icon_before {
+            color: $white_color;
+          }
+        }
 
-            .icon_before {
-              padding-right: 0.5rem;
-            }
+        .navbar-collapse {
+          z-index: 9999999;
+        }
+
+        .navbar_ul {
+          background-color: $white_color;
+          width: 22rem;
+          height: 100vh;
+          padding: 0 0;
+          overflow-y: scroll;
+
+          .nav_item_welc {
+            font-size: 1.5rem;
           }
 
-          .dropdown-menu {
-            .dropdown-item {
-              padding: 0.25rem 0.75rem;
-              text-align: center;
-              width: 100% !important;
-              font-size: 0.9rem !important;
+          .nav-item {
+            padding: 0.01rem 0.75rem;
 
-              &.dropdown-item2 {
-                width: 100% !important;
+            .nav-link {
+              font-size: 1.2rem;
+
+              .icon_before {
+                padding-right: 0.5rem;
               }
             }
-          }
 
-          &.nav_item_logo {
-            margin-bottom: 1rem;
+            .dropdown-menu {
+              .dropdown-item {
+                padding: 0.25rem 0 0.25rem 2.3rem;
+                font-size: 1.15rem;
 
-            .arrow_back {
-              font-size: 1.5rem;
-              float: right;
+                &.dropdown-item2 {
+                  width: 100%;
+                }
+              }
             }
 
-            img {
-              width: 30%;
-              display: block;
-              margin: 0 auto;
+            &.nav_item_logo {
+              margin-bottom: 1rem;
+
+              .arrow_back {
+                color: $bg_color;
+                font-size: 1rem;
+                float: right;
+              }
+
+              img {
+                width: 30%;
+                display: block;
+                margin: 0 auto;
+              }
             }
           }
         }
@@ -3857,11 +3833,654 @@ select {
           }
 
           .btn_subscribe {
-            height: 5rem;
-
             button {
               width: 50%;
-              top: 95%;
+              top: 96.5%;
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+
+      .owl-theme .owl-dots .owl-dot span {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .content_carousel {
+      .content_carousel_head {
+        margin-top: 1rem;
+
+        .link_title {
+          h6 {
+            font-size: 1.5rem;
+          }
+        }
+
+        .btn_more {
+          font-size: 1.5rem;
+        }
+      }
+
+      .owl_content_one {
+        .item {
+          width: 100%;
+
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 22.719rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 1.25rem;
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_two,
+      .owl_content_three {
+        .item {
+          width: 100%;
+
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 22.719rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 1.25rem;
+              }
+            }
+          }
+        }
+      }
+
+      .owl_content_four,
+      .owl_content_five {
+        .item {
+          width: 100%;
+
+          .card {
+            width: 100%;
+
+            .owl_content_img {
+              img {
+                height: 22.719rem;
+              }
+            }
+
+            .card-body {
+              .card-title {
+                font-size: 1.25rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .list_page {
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 14px;
+          }
+        }
+
+        .btn_more {
+          font-size: 14px;
+        }
+      }
+
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
+      }
+
+      .item {
+        .card {
+          .owl_content_img {
+            img {
+              height: 15.208rem;
+            }
+          }
+
+          .card-body {
+            .card-title {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+
+    .inner_page {
+      margin-top: 0;
+
+      .cover {
+        h4 {
+          font-size: 1.15rem;
+          padding: 0 0.35rem;
+        }
+
+        video {
+          padding: 0 0;
+        }
+
+        img {
+          width: 100%;
+          max-height: 43.75rem;
+        }
+
+        audio {
+          width: 94%;
+          margin-top: -5%;
+          margin-left: 3%;
+        }
+
+        button {
+          top: 50%;
+          left: 40%;
+          font-size: 1.5rem;
+        }
+      }
+
+      .poster {
+        padding: 0 0.75rem;
+        margin-top: .5rem;
+
+        .poster-details {
+          .title-wrapper {
+            h2 {
+              font-size: 1.5rem;
+            }
+          }
+
+          .outside-cover {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+
+      .socail_media {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        .pa_share {
+          margin-top: 0.5rem;
+          font-size: 1.25rem;
+        }
+
+        .shear_div {
+          padding-right: 0;
+          margin: 0 auto;
+          width: 50%;
+
+          .facebook,
+          .twitter,
+          .messenger,
+          .whatsapp {
+            width: 90%;
+            height: 2.75rem;
+            margin-left: 0.5rem;
+            margin-top: 0.75rem;
+          }
+        }
+      }
+
+      .section_content {
+        .pa_Videos {
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+          font-size: 1.25rem;
+        }
+
+        .p_content,
+        .p_content_2 {
+          margin-left: 4%;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .modal_cover {
+      .modal-dialog {
+        .modal-content {
+          top: 2rem;
+          left: 0;
+
+          .modal-header {
+            h5 {
+              font-size: 1.25rem;
+              margin: unset !important;
+              text-align: left !important;
+            }
+          }
+
+          .modal-body {
+            .modal_club {
+              .btn {
+                font-size: 1.15rem;
+              }
+            }
+          }
+
+          .modal-footer {
+            justify-content: center;
+
+            .btn {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .azan_page {
+      .azan_title {
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+
+      .input_text {
+        width: 85%;
+      }
+    }
+
+    .nearmosque_page {
+      margin: 0.5rem auto;
+
+      .nearmosque_title {
+        h2 {
+          font-size: 1.5rem;
+          margin-bottom: .5rem;
+        }
+
+        #map {
+          width: 100%;
+          height: 50vh;
+        }
+      }
+    }
+
+    .salah_time_page {
+      width: 95%;
+      margin: 2.5rem auto;
+
+      .salah_time_title {
+        h2 {
+          margin-bottom: 0.5rem;
+          font-size: 1.5rem;
+        }
+      }
+
+      .time_btn {
+        margin-bottom: 4%;
+        height: 3.5rem;
+
+        .input_span {
+          padding: 0 !important;
+        }
+
+        .h4_time {
+          line-height: 3rem;
+          font-size: 1.25rem;
+          padding: 0 0 0 10px;
+        }
+
+        .h4_time_2 {
+          line-height: 3rem;
+          font-size: 1.25rem;
+          padding: 0 10px 0 0;
+        }
+      }
+    }
+
+    .sebha_page {
+      margin: 8rem auto;
+
+      .display {
+        .btn-bar {
+          button {
+            // width: 100%;
+          }
+        }
+      }
+
+      #sebhaModal {
+        .modal-dialog {
+          position: relative;
+          margin-top: 0;
+
+          .modal-content {
+            width: 75%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+
+            .modal-header {
+              .close {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+
+        .modal-title {
+          font-size: 1.65rem;
+        }
+
+        .choose_sebha {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .subscribe_page {
+      width: 100%;
+    }
+
+    .zakkah_page {
+      width: 95%;
+      margin: 3.5rem auto;
+
+      h4 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+
+      .zakah_zakah {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+
+        .form_zakah {
+          .field {
+
+            label,
+            input {
+              font-size: 1.15rem;
+            }
+          }
+        }
+      }
+    }
+
+    .merath_page {
+      width: 90%;
+
+      .border-bottom {
+        // margin-top: 0.25rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .merath_title {
+        h2 {
+          text-align: center;
+          margin-bottom: 1rem;
+          font-size: 1.3rem;
+        }
+      }
+
+      .input_text {
+        // .merath_input {}
+      }
+
+      .input_span {
+        h4 {
+          line-height: 2.25rem;
+          font-size: 0.85rem;
+        }
+      }
+
+      .button_merath {
+        text-align: center;
+        margin: 5% auto;
+
+        .merath_btn {
+          background: $bg_color;
+          color: $white_color;
+          width: 70%;
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+          border: 0;
+          border-radius: 8px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
+        }
+      }
+
+      .table_table {
+        .thead2_h4 {
+          font-size: 1rem;
+        }
+
+        .table {
+          border: 2px $bg_color solid;
+          border-radius: 7px;
+          direction: rtl;
+
+          tbody {
+            tr {
+              // td {}
+
+              .td_1 {
+                text-align: right;
+                font-size: 0.85rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .search_page {
+      margin: 2rem auto;
+
+      .textbox {
+        font-size: 1.5rem;
+      }
+
+      .form_search {
+        .btn_search {
+          font-size: 1.35rem;
+        }
+      }
+    }
+
+    .error_page {
+      margin: 0 auto 0 0;
+
+      svg {
+        height: 85%;
+      }
+
+      .message-box {
+        font-size: 1.5rem;
+        top: -18rem;
+        left: 42%;
+      }
+
+      .buttons-con {
+        top: -1rem;
+        left: 50%;
+      }
+    }
+  }
+
+  .loading-overlay {
+    .spinner-large {
+      bottom: 40%;
+      left: 40%;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1030px) {
+  .padding_phones {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .no_padding {
+    padding: 0;
+  }
+
+  .main_container {
+    width: 100%;
+    padding-top: 4rem;
+
+    .header {
+      position: fixed;
+      top: 0;
+      z-index: 99999999999;
+      height: 6rem;
+
+      .header_logo {
+        .link_href {
+          img {
+            &.logo_oman {
+              width: 20%;
+              top: 0;
+              left: 70%;
+            }
+          }
+        }
+      }
+
+      .arrow_back {
+        font-size: 1.75rem;
+        top: 1.75rem;
+      }
+    }
+
+    .menu_all_op {
+      .nav_nav {
+        background-color: transparent;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        border: 0;
+
+        button {
+          outline: 0;
+          font-size: 1.5rem;
+          opacity: 1;
+          position: fixed;
+          top: 2.75rem;
+          left: 3.5rem;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+
+          .icon_before {
+            color: $white_color;
+          }
+        }
+
+        .navbar-collapse {
+          z-index: 9999999;
+        }
+
+        .navbar_ul {
+          background-color: $white_color;
+          width: 31rem;
+          height: 100vh;
+          padding: 0 0;
+          overflow-y: scroll;
+
+          .nav_item_welc {
+            font-size: 1.75rem;
+          }
+
+          .nav-item {
+            padding: 0.01rem 0.75rem;
+
+            .nav-link {
+              font-size: 1.75rem;
+
+              .icon_before {
+                padding-right: 0.5rem;
+              }
+            }
+
+            .dropdown-menu {
+              .dropdown-item {
+                padding: 0.25rem 0 0.25rem 5rem;
+                font-size: 1.5rem;
+
+                &.dropdown-item2 {
+                  width: 100%;
+                }
+              }
+            }
+
+            &.nav_item_logo {
+              margin-bottom: 1rem;
+
+              .arrow_back {
+                color: $bg_color;
+                font-size: 1.5rem;
+                float: right;
+              }
+
+              img {
+                width: 30%;
+                display: block;
+                margin: 0 auto;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .img_carousel {
+      margin-top: 0;
+
+      .owl_one {
+        .item {
+          .owl_one_img {
+            img {
+              height: 31.5rem;
+            }
+          }
+
+          .btn_subscribe {
+            height: 4.5rem;
+
+            button {
+              width: 65%;
+              top: 94%;
               font-size: 1.75rem;
             }
           }
@@ -3876,814 +4495,23 @@ select {
 
     .content_carousel {
       .content_carousel_head {
+        margin-top: 1rem;
+
         .link_title {
           h6 {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.75rem;
           }
         }
 
         .btn_more {
-          padding: 0.25rem 1rem;
-          font-size: 1.85rem;
+          font-size: 1.75rem;
         }
       }
 
       .owl_content_one {
         .item {
-          .card {
-            width: 100%;
-
-            .owl_content_img {
-              img {
-                height: 22.719rem !important;
-              }
-            }
-
-            .card-body {
-              padding: 1.25rem 0.25rem;
-
-              .card-title {
-                text-align: center;
-                font-size: 1.25rem;
-              }
-
-              .card-text {
-                i {
-                  color: $grey_color;
-                }
-              }
-            }
-          }
-
-        }
-      }
-
-      .owl_content_two {
-        .item {
-          .card {
-            width: 100%;
-
-            .owl_content_img {
-              img {
-                height: 22.719rem !important;
-              }
-            }
-
-            .card-body {
-              padding: 1.25rem 0.25rem;
-
-              .card-title {
-                text-align: center;
-                font-size: 1.25rem;
-              }
-
-              .card-text {
-                i {
-                  color: $grey_color;
-                }
-              }
-            }
-          }
-
-        }
-      }
-
-      .owl_content_three {
-        .item {
-          .card {
-            width: 100%;
-
-            .owl_content_img {
-              img {
-                height: 22.719rem !important;
-              }
-            }
-
-            .card-body {
-              padding: 1.25rem 0.25rem;
-
-              .card-title {
-                text-align: center;
-                font-size: 1.25rem;
-              }
-
-              .card-text {
-                i {
-                  color: $grey_color;
-                }
-              }
-            }
-          }
-
-        }
-      }
-
-      .owl_content_four {
-        .item {
-          .card {
-            width: 100%;
-
-            .owl_content_img {
-              img {
-                height: 9.375rem;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-              }
-            }
-
-            .card-body {
-              padding: 1.25rem 0.25rem;
-
-              .card-title {
-                text-align: center;
-                font-size: 1.25rem;
-              }
-
-              .card-text {
-                i {
-                  color: $grey_color;
-                }
-              }
-            }
-          }
-
-        }
-      }
-
-      .owl_content_five {
-        .item {
-          .card {
-            width: 100%;
-
-            .owl_content_img {
-              img {
-                height: 22.719rem !important;
-
-                &.img_muslim_guid {
-                  height: 11.859rem !important;
-                  width: 50% !important;
-                  margin: 0 auto;
-                }
-              }
-            }
-
-            .card-body {
-              padding: 1.25rem 0.25rem;
-
-              .card-title {
-                text-align: center;
-                font-size: 1.25rem;
-              }
-
-              .card-text {
-                i {
-                  color: $grey_color;
-                }
-              }
-            }
-          }
-
-        }
-      }
-    }
-
-    .list_page {
-      .coming_soon {
-        width: 40%;
-        margin-top: 30% !important;
-        font-size: 1.5rem;
-      }
-
-      .content_carousel_head {
-        .link_title {
-          h6 {
-            font-size: 1.5rem;
-            font-weight: bold;
-          }
-        }
-      }
-
-      .item {
-        .card {
-          .owl_content_img {
-            img {
-              height: 15.208rem;
-            }
-          }
-
-          .card-body {
-            padding: 1rem 0.25rem;
-
-            .card-title {
-              font-size: 1rem;
-            }
-          }
-        }
-      }
-    }
-
-    .inner_page {
-      margin-top: 0;
-
-      .section_content {
-        .image_inner {
-          height: 170px;
-          width: 170px;
-        }
-      }
-
-      .cover {
-        h4 {
-          font-size: 1rem;
-          padding: 0 1rem;
-        }
-
-        video {
-          padding: 0 0;
-        }
-
-        img {
           width: 100%;
-          height: 43.75rem;
-        }
 
-        audio {
-          width: 100% !important;
-          margin-top: -3.5% !important;
-          margin-left: 0%;
-        }
-
-        button {
-          font-size: 1.75rem;
-          left: 35%;
-        }
-      }
-
-      .poster {
-        .poster-details {
-          .title-wrapper {
-            h2 {
-              font-size: 1rem;
-            }
-          }
-
-          .outside-cover {
-            font-size: 0.85rem
-          }
-        }
-      }
-
-      .socail_media {
-        width: 100%;
-
-        .pa_share {
-          margin-top: 0.75rem;
-          font-size: 1rem;
-        }
-
-        .shear_div {
-          padding-right: 0;
-
-          .facebook,
-          .twitter,
-          .messenger,
-          .whatsapp {
-            width: 50%;
-            height: 3.5rem;
-            margin-left: 4.5rem;
-            margin-top: 0.75rem;
-            font-size: 1.75rem;
-          }
-        }
-      }
-
-      .section_content {
-        .pa_Videos {
-          margin-top: 0.75rem;
-          font-size: 1rem;
-        }
-
-        .p_content,
-        .p_content_2 {
-          margin-left: 1.25rem;
-          font-size: 1rem;
-        }
-      }
-    }
-
-    .modal_cover {
-      .modal-dialog {
-        max-width: 95%;
-
-        .modal-content {
-          left: 0;
-
-          .modal-header {
-            h5 {
-              font-size: 1.5rem;
-              width: 100%;
-            }
-
-            .close {
-              margin: -0.75rem -1rem -1rem auto;
-              font-size: 2.5rem;
-            }
-          }
-
-          .modal-body {
-            .modal_club {
-
-              .btn,
-              strong,
-              p {
-                font-size: 1.5rem;
-              }
-            }
-          }
-
-          .modal-footer {
-            padding: 1rem;
-
-            .btn {
-              font-size: 1.5rem;
-              padding: 0.5rem 4rem;
-              margin: 0 1rem;
-            }
-          }
-        }
-      }
-    }
-
-    .azan_page {
-      margin: 2.5rem auto;
-
-      .azan_title {
-        h2 {
-          font-size: 2.25rem;
-        }
-      }
-
-      .input_text {
-        width: 85%;
-
-        .azan_input {
-          height: 4rem;
-          font-size: 2.5rem;
-        }
-      }
-    }
-
-    .nearmosque_page {
-      margin: 2.5rem auto;
-
-      .nearmosque_title {
-        h2 {
-          font-size: 2rem;
-        }
-
-        #map {
-          width: 90%;
-        }
-      }
-    }
-
-    .salah_time_page {
-      width: 95%;
-      margin: 2.5rem auto;
-
-      .salah_time_title {
-        h2 {
-          margin-bottom: 1rem;
-          font-size: 2rem;
-        }
-      }
-
-      .time_btn {
-        margin-bottom: 4%;
-        height: 4.5rem;
-
-        .input_span {
-          padding: 0 !important;
-        }
-
-        .h4_time {
-          padding: 0 0 0 5px;
-          line-height: 4rem;
-          font-size: 1.25rem;
-        }
-
-        .h4_time_2 {
-          padding: 0 5px 0 0;
-          line-height: 4rem;
-          font-size: 1.25rem;
-        }
-      }
-    }
-
-    .sebha_page {
-      margin: 11rem auto;
-
-      .display {
-        #tally {
-          width: 200px;
-          height: 200px;
-          line-height: 200px;
-          font-size: 80px;
-        }
-
-        .btn-bar {
-          margin-top: 3rem;
-
-          button {
-            width: 100%;
-            height: 6.5rem;
-          }
-        }
-      }
-
-      #sebhaModal {
-        .modal-dialog {
-          position: relative;
-          margin: 0;
-
-          .modal-content {
-            width: 95%;
-            position: fixed;
-            top: 55%;
-            left: 50% !important;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-          }
-        }
-
-        .close {
-          font-size: 2.5rem;
-        }
-
-        .modal-title {
-          font-size: 2rem;
-        }
-
-        .choose_sebha {
-          font-size: 1.75rem;
-          height: 4.5rem;
-        }
-      }
-    }
-
-    .subscribe_page {
-      width: 100%;
-      margin: 2.5rem auto;
-
-      .subscribe_bg {
-        font-size: 1.85rem;
-
-        .form-signin {
-          .account-wall input {
-            font-size: 2rem;
-          }
-
-          .buttons {
-            button {
-              font-size: 2rem;
-            }
-          }
-        }
-      }
-    }
-
-    .zakkah_page {
-      width: 95%;
-      margin: 2.5rem auto;
-
-      h4 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        font-size: 1.25rem;
-      }
-
-      .zakah_zakah {
-        .form_zakah {
-          .field {
-            font-size: 1.25rem;
-
-            label {
-              float: left;
-            }
-          }
-        }
-      }
-    }
-
-    .merath_page {
-      width: 95%;
-      margin: 2.5rem auto;
-
-      .border-bottom {
-        // margin-top: 0.25rem;
-        margin-bottom: 0.75rem;
-      }
-
-      .merath_title {
-        h2 {
-          text-align: center;
-          margin-bottom: 1.5rem;
-          font-size: 2rem;
-        }
-      }
-
-      .input_text {
-        .merath_input {
-          font-size: 1.25rem;
-        }
-      }
-
-      .input_span {
-        h4 {
-          line-height: 4rem;
-          font-size: 1.25rem;
-        }
-      }
-
-      .button_merath {
-        text-align: center;
-        margin: 5% auto;
-
-        .merath_btn {
-          width: 60%;
-          color: $white_color;
-          font-size: 1.5rem;
-          font-weight: bold;
-          text-align: center;
-          border: 0;
-          border-radius: 8px;
-          -webkit-border-radius: 8px;
-          -moz-border-radius: 8px;
-          -ms-border-radius: 8px;
-          -o-border-radius: 8px;
-        }
-      }
-
-      .table_table {
-        .thead2_h4 {
-          font-size: 1.75rem;
-          margin-bottom: 1rem;
-        }
-
-        .table {
-          border-radius: 7px;
-          direction: rtl;
-
-          tbody {
-            tr {
-              td {
-                font-size: 1.35rem;
-                padding: 1rem 1rem;
-              }
-
-              .td_1 {
-                text-align: right;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .search_page {
-      width: 100%;
-      margin: 1.5rem auto;
-
-      .btn_search {
-        font-size: 1.5rem
-      }
-
-      .textbox {
-        text-align: center;
-        height: 4.5rem !important;
-        font-size: 2rem;
-      }
-    }
-
-    .error_page {
-      margin: 2rem auto 0 0;
-
-      svg {
-        height: 80%;
-      }
-
-      .message-box {
-        font-size: 2.5rem;
-        top: -45rem;
-        left: 43%;
-      }
-
-      .buttons-con {
-        font-size: 2.5rem;
-        top: -7rem;
-        left: 50%;
-      }
-    }
-  }
-
-  .loading-overlay {
-    .spinner-large {
-      bottom: 30%;
-      left: 35%;
-    }
-  }
-
-  .alert {
-    font-size: 2.15rem;
-
-    .close {
-      font-size: 2.15rem;
-    }
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1030px) {
-  .padding_phones {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-
-  .no_padding {
-    padding: 0;
-  }
-
-  .main_container {
-    width: 100% !important;
-    padding-top: 4rem;
-
-    .header {
-      position: fixed;
-      top: 0;
-      z-index: 99999999999;
-      height: 6rem;
-
-      .header_logo,
-      .header_icon {
-        width: 100%;
-
-        h6 {
-          font-size: 2.5rem;
-          margin-top: 0.25rem;
-          padding-left: 0;
-        }
-
-        img {}
-
-        &.header_icon {
-          i {
-            font-size: 2.5rem;
-            margin-top: 1rem;
-          }
-        }
-      }
-
-      .arrow_back {
-        left: 94%;
-        top: 2rem;
-        font-size: 1.75rem;
-      }
-    }
-
-    .nav_nav {
-      background-color: transparent;
-      width: 0;
-      padding: 0;
-      margin: 0;
-      position: fixed;
-      top: 0;
-      border: 0;
-
-      button {
-        outline: 0;
-        font-size: 2.5rem;
-        opacity: 0.5;
-        position: fixed;
-        top: 3.25rem;
-        left: 5rem;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-
-        .icon_before {
-          color: $white_color;
-        }
-      }
-
-      .navbar-collapse {
-        z-index: 9999999;
-      }
-
-      .navbar_ul {
-        background-color: $white_color;
-        width: 31rem;
-        height: 100vh;
-        padding: 0 0;
-        overflow-y: scroll;
-
-        .nav-item {
-          padding: 0.25rem 0.75rem;
-          font-size: 2rem;
-
-          .nav_item_welc {}
-
-          .nav-link {
-            font-size: 1.75rem;
-
-            .icon_before {
-              padding-right: 0.5rem;
-            }
-          }
-
-          .dropdown-menu {
-            .dropdown-item {
-              padding: 0.25rem 0.75rem;
-              text-align: center;
-              width: 100% !important;
-              font-size: 1.5rem !important;
-
-              &.dropdown-item2 {
-                width: 100% !important;
-              }
-            }
-          }
-
-          &.nav_item_logo {
-            margin-bottom: 3rem;
-
-            .arrow_back {
-              font-size: 1.5rem;
-              float: right;
-            }
-
-            img {
-              width: 30%;
-              display: block;
-              margin: 0 auto;
-            }
-          }
-        }
-      }
-    }
-
-    .img_carousel {
-      margin-top: 0;
-
-      .owl_one {
-        .item {
-          .owl_one_img {
-            img {
-              height: 31rem;
-            }
-          }
-
-          .btn_subscribe {
-            height: 6.5rem;
-
-            button {
-              top: 91%;
-              font-size: 1.5rem;
-            }
-          }
-        }
-      }
-
-      .owl-theme .owl-dots .owl-dot span {
-        width: 18px;
-        height: 18px;
-      }
-    }
-
-    .content_carousel {
-      .content_carousel_head {
-        .link_title {
-          h6 {
-            font-size: 1.75rem;
-            font-weight: bold;
-          }
-        }
-
-        .btn_more {
-          padding: 0.25rem 1.5rem;
-          font-size: 1.5rem;
-        }
-      }
-
-      .owl_content_one {
-        .item {
           .card {
             width: 100%;
 
@@ -4694,55 +4522,19 @@ select {
             }
 
             .card-body {
-              padding: 1.25rem 0.25rem;
-
               .card-title {
-                text-align: center;
                 font-size: 1.5rem;
-              }
-
-              .card-text {
-                i {
-                  color: $grey_color;
-                }
-              }
-            }
-          }
-
-        }
-      }
-
-      .owl_content_two {
-        .item {
-          .card {
-            width: 100%;
-
-            .owl_content_img {
-              img {
-                height: 25rem;
-              }
-            }
-
-            .card-body {
-              padding: 1.25rem 0.25rem;
-
-              .card-title {
-                text-align: center;
-                font-size: 1.5rem;
-              }
-
-              .card-text {
-                i {
-                  color: $grey_color;
-                }
               }
             }
           }
         }
       }
 
+      .owl_content_two,
       .owl_content_three {
         .item {
+          width: 100%;
+
           .card {
             width: 100%;
 
@@ -4753,56 +4545,19 @@ select {
             }
 
             .card-body {
-              padding: 1.25rem 0.25rem;
-
               .card-title {
-                text-align: center;
                 font-size: 1.5rem;
-              }
-
-              .card-text {
-                i {
-                  color: $grey_color;
-                }
               }
             }
           }
-
         }
       }
 
-      .owl_content_four {
-        .item {
-          .card {
-            width: 100%;
-
-            .owl_content_img {
-              img {
-                height: 15.141rem;
-              }
-            }
-
-            .card-body {
-              padding: 1.25rem 0.25rem;
-
-              .card-title {
-                text-align: center;
-                font-size: 1.5rem;
-              }
-
-              .card-text {
-                i {
-                  color: $grey_color;
-                }
-              }
-            }
-          }
-
-        }
-      }
-
+      .owl_content_four,
       .owl_content_five {
         .item {
+          width: 100%;
+
           .card {
             width: 100%;
 
@@ -4813,41 +4568,31 @@ select {
             }
 
             .card-body {
-              padding: 1.25rem 0.25rem;
-
               .card-title {
-                text-align: center;
                 font-size: 1.5rem;
-              }
-
-              .card-text {
-                i {
-                  color: $grey_color;
-                }
               }
             }
           }
-
         }
       }
     }
 
     .list_page {
-      margin: 3.5rem auto;
-
-      .coming_soon {
-        width: 40%;
-        margin-top: 30% !important;
-        font-size: 1.5rem;
-      }
-
       .content_carousel_head {
         .link_title {
           h6 {
             font-size: 1.75rem;
-            font-weight: bold;
           }
         }
+
+        .btn_more {
+          font-size: 1.75rem;
+        }
+      }
+
+      .coming_soon {
+        width: 50%;
+        margin-top: 30% !important;
       }
 
       .item {
@@ -4859,8 +4604,6 @@ select {
           }
 
           .card-body {
-            padding: 1rem 0.25rem;
-
             .card-title {
               font-size: 1.5rem;
             }
@@ -4872,17 +4615,10 @@ select {
     .inner_page {
       margin-top: 0;
 
-      .section_content {
-        .image_inner {
-          height: 200px;
-          width: 200px;
-        }
-      }
-
       .cover {
         h4 {
-          font-size: 2rem;
-          padding: 0 1rem;
+          font-size: 1.15rem;
+          padding: 0 0.35rem;
         }
 
         video {
@@ -4890,113 +4626,109 @@ select {
         }
 
         img {
-          width: 100% !important;
+          width: 100%;
           max-height: 62rem;
         }
 
         audio {
-          width: 100% !important;
-          margin-top: -2.5% !important;
-          margin-left: 0%;
+          width: 94%;
+          margin-top: -5%;
+          margin-left: 3%;
         }
 
-        .button_play {
-          font-size: 2rem;
-          padding: 0.5rem 2rem;
-          left: 35%;
+        button {
+          top: 50%;
+          left: 40%;
+          font-size: 1.75rem;
         }
       }
 
       .poster {
+        padding: 0 0.75rem;
+        margin-top: .5rem;
+
         .poster-details {
           .title-wrapper {
             h2 {
-              font-size: 1.5rem;
+              font-size: 1.75rem;
             }
           }
 
           .outside-cover {
             font-size: 1.2rem;
+            margin-bottom: 0.5rem;
           }
         }
       }
 
       .socail_media {
         width: 100%;
+        margin-bottom: 1rem;
 
         .pa_share {
-          margin-top: 0.75rem;
-          font-size: 2rem;
+          margin-top: 0.5rem;
+          font-size: 1.5rem;
         }
 
         .shear_div {
           padding-right: 0;
+          margin: 0 auto;
+          width: 50%;
 
           .facebook,
           .twitter,
           .messenger,
           .whatsapp {
-            width: 60%;
-            height: 5rem;
-            margin-left: 5.5rem;
+            width: 90%;
+            height: 2.75rem;
+            margin-left: 0.5rem;
             margin-top: 0.75rem;
-            font-size: 2.25rem;
           }
         }
       }
 
       .section_content {
         .pa_Videos {
-          margin-top: 0.75rem;
-          font-size: 2rem;
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+          font-size: 1.5rem;
         }
 
         .p_content,
         .p_content_2 {
           margin-left: 4%;
-          margin-top: 0;
-          font-size: 20px;
+          font-size: 1.5rem;
         }
       }
     }
 
     .modal_cover {
       .modal-dialog {
-        max-width: 95%;
-
         .modal-content {
+          top: 2rem;
           left: 0;
 
           .modal-header {
             h5 {
-              font-size: 2rem;
-              width: 100%;
-            }
-
-            .close {
-              margin: -0.75rem -1rem -1rem auto;
-              font-size: 2.75rem;
+              font-size: 1.5rem;
+              margin: unset !important;
+              text-align: left !important;
             }
           }
 
           .modal-body {
             .modal_club {
-
-              .btn,
-              strong,
-              p {
-                font-size: 1.5rem;
+              .btn {
+                font-size: 1.15rem;
               }
             }
           }
 
           .modal-footer {
-            padding: 1.25rem;
+            justify-content: center;
 
             .btn {
-              font-size: 1.5rem;
-              margin: 0 1rem;
-              padding: 0.5rem 6rem;
+              font-size: 1rem;
             }
           }
         }
@@ -5004,34 +4736,29 @@ select {
     }
 
     .azan_page {
-      margin: 3rem auto;
-
       .azan_title {
         h2 {
-          font-size: 3rem;
+          font-size: 1.5rem;
         }
       }
 
       .input_text {
         width: 85%;
-
-        .azan_input {
-          height: 4.5rem;
-          font-size: 2.75rem;
-        }
       }
     }
 
     .nearmosque_page {
-      margin: 3.5rem auto;
+      margin: 0.5rem auto;
 
       .nearmosque_title {
         h2 {
           font-size: 2rem;
+          margin-bottom: .5rem;
         }
 
         #map {
-          width: 95%;
+          width: 100%;
+          height: 50vh;
         }
       }
     }
@@ -5042,54 +4769,40 @@ select {
 
       .salah_time_title {
         h2 {
-          margin-bottom: 1rem;
+          margin-bottom: 0.5rem;
           font-size: 2rem;
         }
       }
 
       .time_btn {
         margin-bottom: 4%;
-        height: 5.5rem;
+        height: 3.5rem;
 
         .input_span {
           padding: 0 !important;
         }
 
         .h4_time {
-          padding: 0 0 0 5px;
-          line-height: 5rem;
-          font-size: 1.5rem;
+          line-height: 3rem;
+          font-size: 1.75rem;
+          padding: 0 0 0 10px;
         }
 
         .h4_time_2 {
-          padding: 0 5px 0 0;
-          line-height: 5rem;
-          font-size: 1.5rem;
+          line-height: 3rem;
+          font-size: 1.75rem;
+          padding: 0 10px 0 0;
         }
       }
     }
 
     .sebha_page {
-      margin: 11rem auto;
+      margin: 8rem auto;
 
       .display {
-        #tally {
-          width: 200px;
-          height: 200px;
-          line-height: 200px;
-          font-size: 80px;
-        }
-
         .btn-bar {
-          margin-top: 3rem;
-
           button {
-            width: 100%;
-            height: 7.5rem;
-
-            i {
-              font-size: 3.75rem;
-            }
+            // width: 100%;
           }
         }
       }
@@ -5097,89 +4810,63 @@ select {
       #sebhaModal {
         .modal-dialog {
           position: relative;
-          margin: 0;
+          margin-top: 0;
 
           .modal-content {
-            max-width: 95%;
+            width: 75%;
             position: fixed;
-            top: 55%;
-            left: 50% !important;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             -o-transform: translate(-50%, -50%);
+
+            .modal-header {
+              .close {
+                font-size: 2rem;
+              }
+            }
           }
         }
 
-        .close {
+        .modal-title {
           font-size: 2rem;
         }
 
-        .modal-title {
-          font-size: 2.5rem;
-        }
-
         .choose_sebha {
-          font-size: 2.2rem;
-          height: 4.5rem;
+          font-size: 1.75rem;
         }
       }
     }
 
     .subscribe_page {
       width: 100%;
-      margin: 2.5rem auto;
-
-      .login_title {
-        font-size: 3rem;
-      }
-
-      .subscribe_bg {
-        font-size: 2.75rem;
-
-        .form-signin {
-          .account-wall input {
-            font-size: 3rem;
-          }
-
-          .buttons {
-            button {
-              font-size: 3rem;
-            }
-          }
-        }
-      }
     }
 
     .zakkah_page {
       width: 95%;
-      margin: 4.5rem auto;
+      margin: 3.5rem auto;
 
       h4 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-
-      p {
         font-size: 1.75rem;
       }
 
+      p {
+        font-size: 1.5rem;
+      }
+
       .zakah_zakah {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+
         .form_zakah {
           .field {
-            font-size: 1.9rem;
 
-            label {
-              float: left;
-            }
-          }
-
-          .actions {
-            button {
-              &.button {
-                font-size: 2rem;
-              }
+            label,
+            input {
+              font-size: 1.5rem;
             }
           }
         }
@@ -5187,8 +4874,7 @@ select {
     }
 
     .merath_page {
-      width: 95%;
-      margin: 3.5rem auto;
+      width: 90%;
 
       .border-bottom {
         // margin-top: 0.25rem;
@@ -5198,21 +4884,19 @@ select {
       .merath_title {
         h2 {
           text-align: center;
-          margin-bottom: 1.5rem;
-          font-size: 2rem;
+          margin-bottom: 1rem;
+          font-size: 1.3rem;
         }
       }
 
       .input_text {
-        .merath_input {
-          font-size: 1.75rem;
-        }
+        // .merath_input {}
       }
 
       .input_span {
         h4 {
-          line-height: 4.5rem;
-          font-size: 1.75rem;
+          line-height: 2.25rem;
+          font-size: 0.85rem;
         }
       }
 
@@ -5221,10 +4905,10 @@ select {
         margin: 5% auto;
 
         .merath_btn {
-          width: 60%;
-          height: 4rem;
+          background: $bg_color;
           color: $white_color;
-          font-size: 2.5rem;
+          width: 70%;
+          font-size: 1rem;
           font-weight: bold;
           text-align: center;
           border: 0;
@@ -5238,23 +4922,21 @@ select {
 
       .table_table {
         .thead2_h4 {
-          font-size: 2rem;
-          margin-bottom: 1rem;
+          font-size: 1rem;
         }
 
         .table {
+          border: 2px $bg_color solid;
           border-radius: 7px;
           direction: rtl;
 
           tbody {
             tr {
-              td {
-                font-size: 1.75rem;
-                padding: 1rem 1.25rem;
-              }
+              // td {}
 
               .td_1 {
                 text-align: right;
+                font-size: 0.85rem;
               }
             }
           }
@@ -5263,40 +4945,34 @@ select {
     }
 
     .search_page {
-      width: 100%;
-      margin: 3rem auto;
+      margin: 4rem auto;
 
-      .btn_search {
+      .textbox {
         font-size: 2rem;
       }
 
-      .textbox {
-        text-align: center;
-        height: 5.5rem !important;
-        font-size: 2.75rem;
+      .form_search {
+        .btn_search {
+          font-size: 1.75rem;
+        }
       }
     }
 
     .error_page {
-      margin: 2rem auto 0 0;
+      margin: 0 auto 0 0;
 
       svg {
-        height: 80%;
+        height: 85%;
       }
 
       .message-box {
-        font-size: 4rem;
-        top: -61rem;
-        left: 43%;
-
-        h1 {
-          font-size: 4.5rem;
-        }
+        font-size: 1.5rem;
+        top: -18rem;
+        left: 42%;
       }
 
       .buttons-con {
-        font-size: 3rem;
-        top: -7rem;
+        top: -1rem;
         left: 50%;
       }
     }
@@ -5304,16 +4980,8 @@ select {
 
   .loading-overlay {
     .spinner-large {
-      bottom: 30%;
-      left: 35%;
-    }
-  }
-
-  .alert {
-    font-size: 2.35rem;
-
-    .close {
-      font-size: 2.5rem;
+      bottom: 40%;
+      left: 40%;
     }
   }
 }
