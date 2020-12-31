@@ -256,16 +256,16 @@ class FrontController extends Controller
     // if ($view_coming_post) {
     //   $content = $content->whereId($id)->first();
     // } else {
-      if ($request->has('OpID') && $request->OpID != '') {
-        $content = Video::select('contents.*', 'contents.id as content_id', 'posts.free');
-        $content = $content->join('posts', 'posts.video_id', '=', 'contents.id')
-          ->where('posts.show_date', '<=', Carbon::now()->toDateString())
-          ->where('posts.operator_id', $request->OpID)
-          ->where('contents.id', $id)
-          ->latest()->first();
-      } else {
-        $content = $content->whereId($id)->latest()->first();
-      }
+    if ($request->has('OpID') && $request->OpID != '' && $request->OpID != mbc) {
+      $content = Video::select('contents.*', 'contents.id as content_id', 'posts.free');
+      $content = $content->join('posts', 'posts.video_id', '=', 'contents.id')
+        ->where('posts.show_date', '<=', Carbon::now()->toDateString())
+        ->where('posts.operator_id', $request->OpID)
+        ->where('contents.id', $id)
+        ->latest()->first();
+    } else {
+      $content = $content->whereId($id)->latest()->first();
+    }
     // }
     if (!$content) {
       return view('errors.404');

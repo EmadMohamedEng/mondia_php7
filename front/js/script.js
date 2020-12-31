@@ -72,20 +72,27 @@ $('.owl_one').owlCarousel({
   autoplayTimeout: 3000,
   animateOut: 'fadeOut',
   nav: false,
-  dots: true,
+  dots: false,
   center: false,
   responsive: {
     0: {
-      items: 1
+      items: 1,
+      dots: true
     },
     600: {
-      items: 1
+      items: 1,
+      dots: true
     },
     1000: {
-      items: 3
+      items: 3,
+      dots: true
+    },
+    1024: {
+      items: 2,
+      dots: true
     },
     1024.9: {
-      items: 3
+      items: 2
     }
   }
 });
