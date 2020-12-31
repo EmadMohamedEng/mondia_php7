@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  direction: ltr;
+  direction: rtl;
   height: 100%;
   width: 100%;
   font-family: FSAlvar-Regular;
@@ -91,10 +91,10 @@ select:active {
   width: 100%;
 }
 .main_container .header .header_logo .link_href img.logo_oman {
-  width: 15%;
+  width: 14%;
   position: absolute;
   top: -0.5rem;
-  left: 75%;
+  right: 80%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -105,7 +105,7 @@ select:active {
   opacity: 1;
   position: absolute;
   top: 1rem;
-  left: 95%;
+  right: 95%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -124,10 +124,12 @@ select:active {
 .main_container .menu_all_op .nav_nav .navbar_ul {
   display: block;
   width: 100%;
+  padding: 0;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
   margin-bottom: 0;
   color: #ff9e1b;
+  text-align: right;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
   padding: 0.25rem 0.5rem;
@@ -136,6 +138,7 @@ select:active {
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link {
   cursor: pointer;
   color: #ff9e1b;
+  text-align: right;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link svg {
   width: 15%;
@@ -143,10 +146,10 @@ select:active {
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link.nav-link2 {
   padding: 0;
-  text-align: right;
+  text-align: left;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-toggle::after {
-  float: right;
+  float: left;
   margin-top: 0.75rem;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu {
@@ -157,11 +160,11 @@ select:active {
   margin: 0;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu.dropdown-menu2 {
-  float: right;
+  float: left;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-  padding: 0.25rem 0 0.25rem 3.2rem;
-  text-align: left;
+  padding: 0.25rem 3.2rem 0.25rem 0;
+  text-align: right;
   width: 100%;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
@@ -203,7 +206,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   border: 0;
   margin: 0;
   border-radius: 6px;
@@ -237,12 +240,13 @@ select:active {
 }
 .main_container .content_carousel .content_carousel_head .link_title h6 {
   font-weight: bold;
+  text-align: right;
 }
 .main_container .content_carousel .content_carousel_head .btn_more {
   background: #ff9e1b;
   color: #FFF;
   border: 0;
-  float: right;
+  float: left;
   padding: 0.25rem 0.5rem;
   margin-bottom: 1rem;
 }
@@ -276,7 +280,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_two .item .card {
@@ -301,7 +305,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_three .item .card {
@@ -326,7 +330,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_four .item .card {
@@ -351,7 +355,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   margin-bottom: 0;
 }
 .main_container .content_carousel .owl_content_five .item .card {
@@ -376,7 +380,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   margin-bottom: 0;
 }
 .main_container .list_page {
@@ -400,6 +404,7 @@ select:active {
   margin-bottom: 1rem;
   font-weight: bold;
   font-size: 16px;
+  text-align: right;
 }
 .main_container .list_page .item {
   margin-bottom: 1rem;
@@ -429,7 +434,7 @@ select:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  direction: ltr;
+  direction: rtl;
   margin-bottom: 0;
 }
 .main_container .inner_page {
@@ -476,6 +481,7 @@ select:active {
 .main_container .inner_page .poster {
   margin-top: 1.5rem;
   width: 100%;
+  text-align: right;
 }
 .main_container .inner_page .poster .poster-details .title-wrapper .poster_rate {
   font-size: 1rem;
@@ -492,6 +498,7 @@ select:active {
 }
 .main_container .inner_page .socail_media .pa_share {
   margin-top: 1rem;
+  text-align: right;
 }
 .main_container .inner_page .socail_media .shear_div {
   padding-right: 1rem;
@@ -549,6 +556,7 @@ select:active {
 .main_container .inner_page .section_content .pa_Videos {
   margin-bottom: 1rem;
   margin-top: 1rem;
+  text-align: right;
 }
 .main_container .inner_page .section_content .image_inner {
   height: 80px;
@@ -571,7 +579,11 @@ select:active {
   margin-top: -0.75rem;
 }
 .main_container .modal_cover .modal-dialog .modal-content {
-  left: 32%;
+  right: 32%;
+}
+.main_container .modal_cover .modal-dialog .modal-content .modal-header .close {
+  padding: 0;
+  margin: 0;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club {
   margin-top: 0.5rem;
@@ -683,13 +695,13 @@ select:active {
 }
 .main_container .salah_time_page .time_btn .h4_time_2 {
   font-size: 1rem;
-  text-align: right;
+  text-align: left;
   margin-bottom: 0;
   padding: 0.6rem 0;
 }
 .main_container .salah_time_page .time_btn .h4_time {
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   margin-bottom: 0;
   padding: 0.6rem 0;
 }
@@ -731,7 +743,7 @@ select:active {
   margin-bottom: 1rem;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field label {
-  float: left;
+  float: right;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value {
   float: right;
@@ -891,7 +903,7 @@ select:active {
 }
 .main_container .sebha_page #sebhaModal .modal-content {
   background-color: #FFF;
-  left: 29%;
+  right: 29%;
 }
 .main_container .sebha_page .modal-header {
   border-bottom: 1px solid #f3e5b8;
@@ -967,7 +979,7 @@ select:active {
   opacity: 0.5;
   position: absolute;
   top: 50%;
-  left: 0;
+  right: -7%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -3812,4 +3824,4 @@ select:active {
 }
 /* End Animation */
 
-/*# sourceMappingURL=omantel_en.css.map */
+/*# sourceMappingURL=omantel_ar.css.map */

@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  direction: ltr;
+  direction: rtl;
   height: 100%;
   width: 100%;
   font-family: FSAlvar-Regular;
@@ -81,10 +81,10 @@ select {
 
         img {
           &.logo_oman {
-            width: 15%;
+            width: 14%;
             position: absolute;
             top: -0.5rem;
-            left: 75%;
+            right: 80%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -99,7 +99,7 @@ select {
       opacity: 1;
       position: absolute;
       top: 1rem;
-      left: 95%;
+      right: 95%;
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       -moz-transform: translate(-50%, -50%);
@@ -121,10 +121,12 @@ select {
       .navbar_ul {
         display: block;
         width: 100%;
+        padding: 0;
 
         .nav_item_welc {
           margin-bottom: 0;
           color: $bg_color;
+          text-align: right;
         }
 
         .nav-item {
@@ -134,6 +136,7 @@ select {
           .nav-link {
             cursor: pointer;
             color: $bg_color;
+            text-align: right;
 
             svg {
               width: 15%;
@@ -142,13 +145,13 @@ select {
 
             &.nav-link2 {
               padding: 0;
-              text-align: right;
+              text-align: left;
             }
           }
 
           .dropdown-toggle {
             &::after {
-              float: right;
+              float: left;
               margin-top: 0.75rem;
             }
           }
@@ -161,12 +164,12 @@ select {
             margin: 0;
 
             &.dropdown-menu2 {
-              float: right;
+              float: left;
             }
 
             .dropdown-item {
-              padding: 0.25rem 0 0.25rem 3.2rem;
-              text-align: left;
+              padding: 0.25rem 3.2rem 0.25rem 0;
+              text-align: right;
               width: 100%;
 
               &.dropdown-item2 {
@@ -225,7 +228,7 @@ select {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            direction: ltr;
+            direction: rtl;
             border: 0;
             margin: 0;
             border-radius: 6px;
@@ -269,6 +272,7 @@ select {
 
         h6 {
           font-weight: bold;
+          text-align: right;
         }
       }
 
@@ -276,7 +280,7 @@ select {
         background: $bg_color;
         color: $white_color;
         border: 0;
-        float: right;
+        float: left;
         padding: 0.25rem .5rem;
         margin-bottom: 1rem;
 
@@ -318,7 +322,7 @@ select {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              direction: ltr;
+              direction: rtl;
               margin-bottom: 0;
             }
           }
@@ -354,7 +358,7 @@ select {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              direction: ltr;
+              direction: rtl;
               margin-bottom: 0;
             }
           }
@@ -390,7 +394,7 @@ select {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              direction: ltr;
+              direction: rtl;
               margin-bottom: 0;
             }
           }
@@ -425,7 +429,7 @@ select {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              direction: ltr;
+              direction: rtl;
               margin-bottom: 0;
             }
           }
@@ -461,7 +465,7 @@ select {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              direction: ltr;
+              direction: rtl;
               margin-bottom: 0;
             }
           }
@@ -497,6 +501,7 @@ select {
           margin-bottom: 1rem;
           font-weight: bold;
           font-size: 16px;
+          text-align: right;
         }
       }
     }
@@ -533,7 +538,7 @@ select {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            direction: ltr;
+            direction: rtl;
             margin-bottom: 0;
           }
         }
@@ -596,6 +601,7 @@ select {
     .poster {
       margin-top: 1.5rem;
       width: 100%;
+      text-align: right;
 
       .poster-details {
         .title-wrapper {
@@ -619,6 +625,7 @@ select {
 
       .pa_share {
         margin-top: 1rem;
+        text-align: right;
       }
 
       .shear_div {
@@ -690,6 +697,7 @@ select {
       .pa_Videos {
         margin-bottom: 1rem;
         margin-top: 1rem;
+        text-align: right;
       }
 
       .image_inner {
@@ -721,7 +729,14 @@ select {
   .modal_cover {
     .modal-dialog {
       .modal-content {
-        left: 32%;
+        right: 32%;
+
+        .modal-header {
+          .close {
+            padding: 0;
+            margin: 0;
+          }
+        }
 
         .modal-body {
           .modal_club {
@@ -874,14 +889,14 @@ select {
 
       .h4_time_2 {
         font-size: 1rem;
-        text-align: right;
+        text-align: left;
         margin-bottom: 0;
         padding: 0.6rem 0;
       }
 
       .h4_time {
         font-size: 1rem;
-        text-align: left;
+        text-align: right;
         margin-bottom: 0;
         padding: 0.6rem 0;
       }
@@ -948,7 +963,7 @@ select {
       .form_zakah {
         .field {
           label {
-            float: left;
+            float: right;
           }
 
           .field-value {
@@ -1162,7 +1177,7 @@ select {
 
     #sebhaModal .modal-content {
       background-color: $white_color;
-      left: 29%;
+      right: 29%;
     }
 
     .modal-header {
@@ -1255,7 +1270,7 @@ select {
         opacity: 0.5;
         position: absolute;
         top: 50%;
-        left: 0;
+        right: -7%;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
