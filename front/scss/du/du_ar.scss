@@ -84,7 +84,7 @@ select {
             width: 8%;
             position: absolute;
             top: -0.5rem;
-            left: 80%;
+            right: 85%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -99,7 +99,7 @@ select {
       opacity: 1;
       position: absolute;
       top: 1rem;
-      left: 95%;
+      left: 5%;
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       -moz-transform: translate(-50%, -50%);
@@ -121,10 +121,12 @@ select {
       .navbar_ul {
         display: block;
         width: 100%;
+        padding: 0;
 
         .nav_item_welc {
           margin-bottom: 0;
           color: $black_color;
+          text-align: right;
         }
 
         .nav-item {
@@ -134,6 +136,7 @@ select {
           .nav-link {
             cursor: pointer;
             color: $black_color;
+            text-align: right;
 
             svg {
               width: 15%;
@@ -142,13 +145,13 @@ select {
 
             &.nav-link2 {
               padding: 0;
-              text-align: right;
+              text-align: left;
             }
           }
 
           .dropdown-toggle {
             &::after {
-              float: right;
+              float: left;
               margin-top: 0.75rem;
             }
           }
@@ -161,12 +164,12 @@ select {
             margin: 0;
 
             &.dropdown-menu2 {
-              float: right;
+              float: left;
             }
 
             .dropdown-item {
-              padding: 0.25rem 0 0.25rem 3.2rem;
-              text-align: left;
+              padding: 0.25rem 3.2rem 0.25rem 0;
+              text-align: right;
               width: 100%;
 
               &.dropdown-item2 {
@@ -269,6 +272,7 @@ select {
 
         h6 {
           font-weight: bold;
+          text-align: right;
         }
       }
 
@@ -276,7 +280,7 @@ select {
         background: $bg_color;
         color: $white_color;
         border: 0;
-        float: right;
+        float: left;
         padding: 0.25rem .5rem;
         margin-bottom: 1rem;
 
@@ -497,6 +501,7 @@ select {
           margin-bottom: 1rem;
           font-weight: bold;
           font-size: 16px;
+          text-align: right;
         }
       }
     }
@@ -596,6 +601,7 @@ select {
     .poster {
       margin-top: 1.5rem;
       width: 100%;
+      text-align: right;
 
       .poster-details {
         .title-wrapper {
@@ -619,6 +625,7 @@ select {
 
       .pa_share {
         margin-top: 1rem;
+        text-align: right;
       }
 
       .shear_div {
@@ -690,6 +697,7 @@ select {
       .pa_Videos {
         margin-bottom: 1rem;
         margin-top: 1rem;
+        text-align: right;
       }
 
       .image_inner {
@@ -703,7 +711,8 @@ select {
       }
 
       .p_content {
-        margin-left: 2%;
+        text-align: right;
+        margin-right: 2%;
         font-size: 14px;
         color: #6a6060;
       }
@@ -1281,7 +1290,7 @@ select {
         opacity: 0.5;
         position: absolute;
         top: 50%;
-        left: 0;
+        right: -7%;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -1499,7 +1508,7 @@ select {
             &.logo_du {
               width: 20%;
               top: 0;
-              left: 75%;
+              right: 75%;
             }
           }
         }
@@ -1524,7 +1533,7 @@ select {
           opacity: 1;
           position: fixed;
           top: 2.15rem;
-          left: 2.5rem;
+          right: -11%;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -2058,7 +2067,7 @@ select {
             &.logo_du {
               width: 17%;
               top: 0;
-              left: 75%;
+              right: 75%;
             }
           }
         }
@@ -2083,7 +2092,8 @@ select {
           opacity: 1;
           position: fixed;
           top: 2.15rem;
-          left: 2.5rem;
+          right: -9%;
+
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -2617,7 +2627,7 @@ select {
             &.logo_du {
               width: 18%;
               top: 0;
-              left: 80%;
+              right: 80%;
             }
           }
         }
@@ -2642,7 +2652,7 @@ select {
           opacity: 1;
           position: fixed;
           top: 2.15rem;
-          left: 2.5rem;
+          right: -9%;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -3182,7 +3192,7 @@ select {
             &.logo_du {
               width: 18%;
               top: 0;
-              left: 80%;
+              right: 80%;
             }
           }
         }
@@ -3207,7 +3217,7 @@ select {
           opacity: 1;
           position: fixed;
           top: 2.15rem;
-          left: 2.5rem;
+          right: -8%;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -3750,7 +3760,7 @@ select {
             &.logo_du {
               width: 13%;
               top: 0;
-              left: 80%;
+              right: 80%;
             }
           }
         }
@@ -3778,7 +3788,7 @@ select {
           opacity: 1;
           position: fixed;
           top: 2.75rem;
-          left: 3.5rem;
+          right: -5%;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -4393,7 +4403,7 @@ select {
             &.logo_du {
               width: 12%;
               top: 0;
-              left: 80%;
+              right: 80%;
             }
           }
         }
@@ -4421,7 +4431,7 @@ select {
           opacity: 1;
           position: fixed;
           top: 2.75rem;
-          left: 3.5rem;
+          right: -4%;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -5023,7 +5033,7 @@ select {
             &.logo_du {
               width: 14%;
               top: 0;
-              left: 77%;
+              right: 77%;
             }
           }
         }
