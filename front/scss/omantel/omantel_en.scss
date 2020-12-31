@@ -4989,9 +4989,34 @@ select {
 @media (min-width: 1031px) and (max-width: 1360px) {
   .main_container {
     width: 60%;
+    .header {
+      .header_logo {
+        .link_href {
+          img {
+            &.logo_oman {
+              width: 14%;
+              top: 0;
+              left: 77%;
+            }
+          }
+        }
+      }
+    }
 
-    .nav_nav {
-      width: 95%;
+    .menu_all_op {
+      .nav_nav {
+        .navbar_ul {
+          .nav_item_welc {
+            font-size: 0.9rem;
+          }
+
+          .nav-item {
+            .nav-link {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
     }
 
     .img_carousel {
@@ -4999,13 +5024,15 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 10.566rem;
+              height: 15.849rem;
             }
           }
 
           .btn_subscribe {
+            height: 3rem;
+
             button {
-              top: 88%;
+              top: 92%;
               width: 70%;
             }
           }
@@ -5017,9 +5044,11 @@ select {
       .owl_content_one {
         .item {
           .card {
+            width: 75%;
+
             .owl_content_img {
               img {
-                height: 18rem;
+                height: 13rem;
               }
             }
           }
@@ -5139,6 +5168,28 @@ select {
       .modal-dialog {
         .modal-content {
           left: 26%;
+
+          .modal-header {
+            .modal-title {
+              text-align: left!important;
+              margin: unset!important;
+              font-size: 1rem;
+            }
+          }
+
+          .modal-body {
+            .modal_club {
+              .btn {
+                font-size: 1rem;
+              }
+            }
+          }
+
+          .modal-footer {
+            .btn {
+              font-size: 1rem;
+            }
+          }
         }
       }
     }
@@ -5167,7 +5218,7 @@ select {
         .h4_time_2 {
           margin-bottom: 0;
           padding: 0.6rem 0;
-          font-size: 1.25rem;
+          font-size: 1rem;
         }
       }
     }
