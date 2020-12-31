@@ -7,7 +7,7 @@
     <div class="col-md-6 col-lg-6 col-xl-4 col-6">
       <div class="header_logo">
         <a href="{{route('front.index')}}" class="link_href">
-          <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
+          <img class="bounce-top logo_mbc" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
         </a>
       </div>
     </div>
@@ -34,7 +34,6 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
   <div class="" style="z-index: 9999999999;">
     <!-- start burger menu => For MBC & Orange Only  -->
     <div class="burger_menu">
-
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn_mbc" onclick="closeNav()"><i class="fas fa-times"></i></a>
         <!-- start menu 2  -->
@@ -288,10 +287,8 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
     </div>
     <!-- end burger menu => For MBC & Orange Only  -->
 
-    <!-- start menu 1  -->
     <!-- start menu 1 => For All Operator / Mobile Menu / And Sidenav for PC ( Oman - DU - STC ) -->
     <div class="menu_all_op">
-
       <nav class="nav_nav navbar navbar-expand-xl primary-color">
         <button id="menu_toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="icon_before fas fa-bars fa-lg"></i>
@@ -336,7 +333,7 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
             ?>
 
             <li class="nav-item">
-              <a class="nav-link text-capitalize active_menu link_href" href="{{route('front.index')}}" style=" <?php echo $style ?>">
+              <a class="nav-link text-capitalize link_href" href="{{route('front.index')}}" style=" <?php echo $style ?>">
                 <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 27 22" style="enable-background:new 0 0 27 22;" xml:space="preserve">
                   <path class="st0" d="M21.8,9.6L21.8,9.6l-7.3-7.3c-0.3-0.3-0.8-0.5-1.2-0.5c-0.5,0-0.9,0.2-1.2,0.5L4.9,9.6l0,0  c-0.7,0.7-0.7,1.7,0,2.3c0.3,0.3,0.7,0.5,1.1,0.5c0,0,0,0,0.1,0h0.3v5.4c0,1.1,0.9,1.9,1.9,1.9h2.9c0.3,0,0.5-0.2,0.5-0.5V15  c0-0.5,0.4-0.9,0.9-0.9h1.7c0.5,0,0.9,0.4,0.9,0.9v4.2c0,0.3,0.2,0.5,0.5,0.5h2.9c1.1,0,1.9-0.9,1.9-1.9v-5.4h0.3  c0.5,0,0.9-0.2,1.2-0.5C22.5,11.3,22.5,10.3,21.8,9.6z M21,11.2c-0.1,0.1-0.3,0.2-0.4,0.2h-0.8c-0.3,0-0.5,0.2-0.5,0.5v5.9  c0,0.5-0.4,0.9-0.9,0.9h-2.3V15c0-1.1-0.9-1.9-1.9-1.9h-1.7c-1.1,0-1.9,0.9-1.9,1.9v3.6H8.4c-0.5,0-0.9-0.4-0.9-0.9v-5.9  c0-0.3-0.2-0.5-0.5-0.5H6.2l0,0c-0.2,0-0.3-0.1-0.4-0.2c-0.2-0.2-0.2-0.6,0-0.9l0,0l0,0l7.3-7.3c0.1-0.1,0.3-0.2,0.4-0.2  c0.2,0,0.3,0.1,0.4,0.2l7.3,7.3l0,0C21.3,10.7,21.3,11,21,11.2z" />
                 </svg>
@@ -495,7 +492,6 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
               </a>
             </li>
 
-
             @if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN')))
             <li class="nav-item">
               <a class="nav-link text-capitalize link_href" href="{{url('/mbc_portal_logout')}}" style=" <?php echo $style ?>">
@@ -525,7 +521,6 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
       </nav>
     </div>
     <!-- end menu 1 => For All Operator / Mobile Menu / And Sidenav for PC ( Oman - DU - STC ) -->
-    <!-- end menu 1  -->
   </div>
 
   <?php
@@ -534,19 +529,19 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
 
   <!-- start menu 3 => For MBC & Orange Only  -->
   <div class="mbc_orange">
-
-    <nav class="navbar navbar-expand-lg navbar-light navbar_three " style="cursor: pointer;">
+    <nav class="navbar navbar-expand-xl navbar-light navbar_three " style="cursor: pointer;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="col-md-12 col-lg-12 col-xl-12 col-12 no_padding close_nav">
-          <div class="navbar_ul_three navbar navbar-nav mr-auto">
+          <div class="navbar_ul_three navbar navbar-nav">
             <?php
             $style = "background: transparent;";
             ?>
             @foreach($providers_mbc as $provider)
+
             <li class="nav-item dropdown">
               <a class="menuThree nav-link dropdown-toggle slide_toggle text-capitalize ul_menu" id="navbarDropdownMenuLink7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" <?php echo $style ?>">
                 @if($provider->image)
@@ -589,21 +584,16 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
               </div>
             </li>
 
-
-
             <li class="nav-item">
               <a class="menuThree nav-link text-capitalize link_href" href="{{url('/profile')}}" style=" <?php echo $style ?>">
                 @lang('front.profile')
-                <span class="sr-only">(current)</span>
               </a>
             </li>
 
-
             @if(get_setting('filters_flag') && request()->get("OpID") == mbc)
-            <li class="nav-item m-auto">
+            <li class="nav-item">
               <a class="menuThree nav-link text-capitalize link_href" href="{{url('/filter_list')}}" style=" <?php echo $style ?>">
                 @lang('front.filters')
-                <span class="sr-only">(current)</span>
               </a>
             </li>
             @endif

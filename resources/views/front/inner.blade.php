@@ -12,12 +12,7 @@ $src = $content->image_preview;
 $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
 @endphp
-<style>
-  .main_container .inner_page .cover img {
-    width: 92%;
-    opacity: 0.7;
-  }
-</style>
+
 <?php
 if (session()->get('applocale') == 'ar') {
   $text = "text-align: right";
@@ -43,7 +38,7 @@ if (session()->get('applocale') == 'ar') {
             @endif
             @if($content->type == 2)
                 <img src="{{$src}}" alt="Video Cover" style="opacity: 1 !important;">
-                <audio src="{{url($content->video)}}" controls style="width: 94%;" controlsList="nodownload"></audio>
+                <audio src="{{url($content->video)}}" controls controlsList="nodownload"></audio>
             @endif
             @if($content->type == 3)
             <img src="{{url($content->video)}}" alt="Video Cover">
@@ -177,7 +172,7 @@ if (session()->get('applocale') == 'ar') {
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title m-auto text-center" id="exampleModalLongTitle">Please confirm subscription to</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Please confirm subscription to</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
