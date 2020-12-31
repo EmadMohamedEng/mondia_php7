@@ -12,12 +12,7 @@ $src = $content->image_preview;
 $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
 @endphp
-<style>
-  .main_container .inner_page .cover img {
-    width: 92%;
-    opacity: 0.7;
-  }
-</style>
+
 <?php
 if (session()->get('applocale') == 'ar') {
   $text = "text-align: right";
