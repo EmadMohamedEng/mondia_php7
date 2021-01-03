@@ -25,7 +25,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 
-      if (request()->get('OpID') == mbc_op_id() || request()->get('OpID') == orange_op_id() || request()->fullUrl() == url("orange_portal_login")) {
+      if (request()->get('OpID') == mbc_op_id() || request()->get('OpID') == orange_op_id()
+      || request()->fullUrl() == url("orange_portal_login")  || request()->fullUrl() == url("mbc_portal_landing")    ) {
         $lang = 'ar';
         session()->put('applocale', $lang);
       }

@@ -405,6 +405,9 @@ body {
   .main_container .inner_page .cover audio {
     margin-right: 3%;
   }
+  .main_container .modal_cover .modal-dialog .modal-content {
+    left: 0 !important;
+  }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
   }
@@ -509,6 +512,9 @@ body {
   }
   .main_container .inner_page .cover audio {
     margin-right: 3%;
+  }
+  .main_container .modal_cover .modal-dialog .modal-content {
+    left: 0 !important;
   }
   .main_container .salah_time_page {
     width: 95%;
@@ -634,6 +640,9 @@ body {
 .main_container .inner_page .section_content .p_content_2 {
     font-size: 13px;
   }
+  .main_container .modal_cover .modal-dialog .modal-content {
+    left: 0 !important;
+  }
   .main_container .salah_time_page .time_btn {
     direction: rtl;
   }
@@ -751,6 +760,9 @@ body {
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
     font-size: 14px;
+  }
+  .main_container .modal_cover .modal-dialog .modal-content {
+    left: 0 !important;
   }
   .main_container .salah_time_page .time_btn {
     direction: rtl;

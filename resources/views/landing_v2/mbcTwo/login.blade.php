@@ -100,7 +100,7 @@ body {
 
             </div>
           <!--<button class="btn back">رجوع</button>-->
-            <button id="zain_submit" class="btn" type="submit"> @lang('messages.Subsc')</button>
+            <button id="zain_submit" class="btn" type="submit"> @lang('messages.login')</button>
           </form>
           <!--<h5>للاشتراك يرجى الارسال الى <span>965</span></h5>
                 <h5>الى <span>965</span><span> STOP1 </span>لالغاء الاشتراك ارسل</h5>-->
