@@ -99,7 +99,7 @@ select {
       opacity: 1;
       position: absolute;
       top: 1rem;
-      right: 95%;
+      left: 0;
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       -moz-transform: translate(-50%, -50%);
@@ -711,7 +711,8 @@ select {
       }
 
       .p_content {
-        margin-left: 2%;
+        text-align: right;
+        margin-right: 2%;
         font-size: 14px;
         color: #6a6060;
       }
@@ -1422,7 +1423,7 @@ select {
     border-width: 6px;
     position: fixed;
     bottom: 40%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1488,7 +1489,7 @@ select {
             &.logo_oman {
               width: 30%;
               top: 0;
-              left: 75%;
+              right: 75%;
             }
           }
         }
@@ -1513,7 +1514,7 @@ select {
           opacity: 1;
           position: fixed;
           top: 2.15rem;
-          left: 2.5rem;
+          right: -2rem;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -1702,7 +1703,7 @@ select {
         }
 
         img {
-          width: 95%;
+          width: 100%;
           max-height: 20rem;
         }
 
@@ -1714,7 +1715,7 @@ select {
 
         button {
           top: 45%;
-          left: 30%;
+          left: 35%;
         }
       }
 
@@ -1767,7 +1768,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-right: 4%;
           font-size: 12px;
         }
       }
@@ -1777,7 +1778,7 @@ select {
       .modal-dialog {
         .modal-content {
           top: 2rem;
-          left: 0;
+          right: 0;
 
           .modal-header {
             h5 {
@@ -2047,7 +2048,7 @@ select {
             &.logo_oman {
               width: 30%;
               top: 0;
-              left: 75%;
+              right: 75%;
             }
           }
         }
@@ -2072,7 +2073,7 @@ select {
           opacity: 1;
           position: fixed;
           top: 2.15rem;
-          left: 2.5rem;
+          right: -2rem;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -2261,7 +2262,7 @@ select {
         }
 
         img {
-          width: 95%;
+          width: 100%;
           max-height: 20rem;
         }
 
@@ -2273,7 +2274,7 @@ select {
 
         button {
           top: 45%;
-          left: 30%;
+          left: 35%;
         }
       }
 
@@ -2326,7 +2327,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-right: 4%;
           font-size: 12px;
         }
       }
@@ -2336,7 +2337,7 @@ select {
       .modal-dialog {
         .modal-content {
           top: 2rem;
-          left: 0;
+          right: 0;
 
           .modal-header {
             h5 {
@@ -2606,7 +2607,7 @@ select {
             &.logo_oman {
               width: 30%;
               top: 0;
-              left: 70%;
+              right: 70%;
             }
           }
         }
@@ -2631,7 +2632,7 @@ select {
           opacity: 1;
           position: fixed;
           top: 2.15rem;
-          left: 2.5rem;
+          right: -2rem;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -2820,7 +2821,7 @@ select {
         }
 
         img {
-          width: 95%;
+          width: 100%;
           max-height: 20rem;
         }
 
@@ -2832,7 +2833,7 @@ select {
 
         button {
           top: 45%;
-          left: 30%;
+          left: 35%;
         }
       }
 
@@ -2885,7 +2886,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-right: 4%;
           font-size: 12px;
         }
       }
@@ -2895,7 +2896,7 @@ select {
       .modal-dialog {
         .modal-content {
           top: 2rem;
-          left: 0;
+          right: 0;
 
           .modal-header {
             h5 {
@@ -3171,7 +3172,7 @@ select {
             &.logo_oman {
               width: 30%;
               top: 0;
-              left: 70%;
+              right: 70%;
             }
           }
         }
@@ -3196,7 +3197,7 @@ select {
           opacity: 1;
           position: fixed;
           top: 2.15rem;
-          left: 2.5rem;
+          right: -2rem;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -3398,7 +3399,7 @@ select {
 
         button {
           top: 45%;
-          left: 30%;
+          left: 40%;
         }
       }
 
@@ -3451,7 +3452,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-right: 4%;
           font-size: 12px;
         }
       }
@@ -3461,7 +3462,7 @@ select {
       .modal-dialog {
         .modal-content {
           top: 2rem;
-          left: 0;
+          right: 0;
 
           .modal-header {
             h5 {
@@ -3739,7 +3740,7 @@ select {
             &.logo_oman {
               width: 20%;
               top: 0;
-              left: 70%;
+              right: 75%;
             }
           }
         }
@@ -3767,7 +3768,7 @@ select {
           opacity: 1;
           position: fixed;
           top: 2.75rem;
-          left: 3.5rem;
+          right: -2rem;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -4066,7 +4067,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-right: 4%;
           font-size: 12px;
         }
       }
@@ -4076,7 +4077,7 @@ select {
       .modal-dialog {
         .modal-content {
           top: 2rem;
-          left: 0;
+          right: 0;
 
           .modal-header {
             h5 {
@@ -4382,7 +4383,7 @@ select {
             &.logo_oman {
               width: 20%;
               top: 0;
-              left: 70%;
+              right: 75%;
             }
           }
         }
@@ -4410,7 +4411,7 @@ select {
           opacity: 1;
           position: fixed;
           top: 2.75rem;
-          left: 3.5rem;
+          right: -2rem;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
@@ -4711,7 +4712,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-right: 4%;
           font-size: 1.5rem;
         }
       }
@@ -4721,7 +4722,7 @@ select {
       .modal-dialog {
         .modal-content {
           top: 2rem;
-          left: 0;
+          right: 0;
 
           .modal-header {
             h5 {
@@ -5004,6 +5005,7 @@ select {
 @media (min-width: 1031px) and (max-width: 1360px) {
   .main_container {
     width: 60%;
+
     .header {
       .header_logo {
         .link_href {
@@ -5011,7 +5013,7 @@ select {
             &.logo_oman {
               width: 14%;
               top: 0;
-              left: 77%;
+              right: 77%;
             }
           }
         }
@@ -5182,12 +5184,12 @@ select {
     .modal_cover {
       .modal-dialog {
         .modal-content {
-          left: 26%;
+          right: 0;
 
           .modal-header {
             .modal-title {
-              text-align: left!important;
-              margin: unset!important;
+              text-align: left !important;
+              margin: unset !important;
               font-size: 1rem;
             }
           }

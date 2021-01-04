@@ -105,7 +105,7 @@ select:active {
   opacity: 1;
   position: absolute;
   top: 1rem;
-  right: 95%;
+  left: 0;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -568,7 +568,8 @@ select:active {
   -o-border-radius: 5px;
 }
 .main_container .inner_page .section_content .p_content {
-  margin-left: 2%;
+  text-align: right;
+  margin-right: 2%;
   font-size: 14px;
   color: #6a6060;
 }
@@ -1106,7 +1107,7 @@ select:active {
   border-width: 6px;
   position: fixed;
   bottom: 40%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -1157,7 +1158,7 @@ select:active {
   .main_container .header .header_logo .link_href img.logo_oman {
     width: 30%;
     top: 0;
-    left: 75%;
+    right: 75%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -1174,7 +1175,7 @@ select:active {
     opacity: 1;
     position: fixed;
     top: 2.15rem;
-    left: 2.5rem;
+    right: -2rem;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1294,7 +1295,7 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 95%;
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
@@ -1304,7 +1305,7 @@ select:active {
   }
   .main_container .inner_page .cover button {
     top: 45%;
-    left: 30%;
+    left: 35%;
   }
   .main_container .inner_page .poster {
     padding: 0 0.75rem;
@@ -1342,12 +1343,12 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4%;
+    margin-right: 4%;
     font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
-    left: 0;
+    right: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1rem;
@@ -1529,7 +1530,7 @@ select:active {
   .main_container .header .header_logo .link_href img.logo_oman {
     width: 30%;
     top: 0;
-    left: 75%;
+    right: 75%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -1546,7 +1547,7 @@ select:active {
     opacity: 1;
     position: fixed;
     top: 2.15rem;
-    left: 2.5rem;
+    right: -2rem;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1666,7 +1667,7 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 95%;
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
@@ -1676,7 +1677,7 @@ select:active {
   }
   .main_container .inner_page .cover button {
     top: 45%;
-    left: 30%;
+    left: 35%;
   }
   .main_container .inner_page .poster {
     padding: 0 0.75rem;
@@ -1714,12 +1715,12 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4%;
+    margin-right: 4%;
     font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
-    left: 0;
+    right: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1rem;
@@ -1901,7 +1902,7 @@ select:active {
   .main_container .header .header_logo .link_href img.logo_oman {
     width: 30%;
     top: 0;
-    left: 70%;
+    right: 70%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -1918,7 +1919,7 @@ select:active {
     opacity: 1;
     position: fixed;
     top: 2.15rem;
-    left: 2.5rem;
+    right: -2rem;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2038,7 +2039,7 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 95%;
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
@@ -2048,7 +2049,7 @@ select:active {
   }
   .main_container .inner_page .cover button {
     top: 45%;
-    left: 30%;
+    left: 35%;
   }
   .main_container .inner_page .poster {
     padding: 0 0.75rem;
@@ -2086,12 +2087,12 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4%;
+    margin-right: 4%;
     font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
-    left: 0;
+    right: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1rem;
@@ -2276,7 +2277,7 @@ select:active {
   .main_container .header .header_logo .link_href img.logo_oman {
     width: 30%;
     top: 0;
-    left: 70%;
+    right: 70%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -2293,7 +2294,7 @@ select:active {
     opacity: 1;
     position: fixed;
     top: 2.15rem;
-    left: 2.5rem;
+    right: -2rem;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2424,7 +2425,7 @@ select:active {
   }
   .main_container .inner_page .cover button {
     top: 45%;
-    left: 30%;
+    left: 40%;
   }
   .main_container .inner_page .poster {
     padding: 0 0.75rem;
@@ -2462,12 +2463,12 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4%;
+    margin-right: 4%;
     font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
-    left: 0;
+    right: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1rem;
@@ -2654,7 +2655,7 @@ select:active {
   .main_container .header .header_logo .link_href img.logo_oman {
     width: 20%;
     top: 0;
-    left: 70%;
+    right: 75%;
   }
   .main_container .header .arrow_back {
     font-size: 1.75rem;
@@ -2675,7 +2676,7 @@ select:active {
     opacity: 1;
     position: fixed;
     top: 2.75rem;
-    left: 3.5rem;
+    right: -2rem;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2875,12 +2876,12 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4%;
+    margin-right: 4%;
     font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
-    left: 0;
+    right: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1.25rem;
@@ -3084,7 +3085,7 @@ select:active {
   .main_container .header .header_logo .link_href img.logo_oman {
     width: 20%;
     top: 0;
-    left: 70%;
+    right: 75%;
   }
   .main_container .header .arrow_back {
     font-size: 1.75rem;
@@ -3105,7 +3106,7 @@ select:active {
     opacity: 1;
     position: fixed;
     top: 2.75rem;
-    left: 3.5rem;
+    right: -2rem;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -3308,12 +3309,12 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4%;
+    margin-right: 4%;
     font-size: 1.5rem;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
-    left: 0;
+    right: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1.5rem;
@@ -3501,7 +3502,7 @@ select:active {
   .main_container .header .header_logo .link_href img.logo_oman {
     width: 14%;
     top: 0;
-    left: 77%;
+    right: 77%;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
     font-size: 0.9rem;
@@ -3567,7 +3568,7 @@ select:active {
     height: 2.5rem !important;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
-    left: 26%;
+    right: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header .modal-title {
     text-align: left !important;
