@@ -1317,7 +1317,7 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 95%;
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
@@ -1689,7 +1689,7 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 95%;
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
@@ -2061,7 +2061,7 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 95%;
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
