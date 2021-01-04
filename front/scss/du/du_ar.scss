@@ -209,7 +209,7 @@ select {
 
         .owl_one_img {
           img {
-            height: 18.885rem;
+            height: 12.59rem;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
           }
@@ -224,7 +224,7 @@ select {
           button {
             background: $bg_color;
             color: $white_color;
-            width: 65%;
+            width: 80%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -237,7 +237,7 @@ select {
             -ms-border-radius: 6px;
             -o-border-radius: 6px;
             position: absolute;
-            top: 92%;
+            top: 89%;
             left: 50%;
             transform: translate(-50%, -50%);
 
@@ -889,14 +889,14 @@ select {
 
       .h4_time_2 {
         font-size: 1rem;
-        text-align: right;
+        text-align: left;
         margin-bottom: 0;
         padding: 0.6rem 0;
       }
 
       .h4_time {
         font-size: 1rem;
-        text-align: left;
+        text-align: right;
         margin-bottom: 0;
         padding: 0.6rem 0;
       }
@@ -961,13 +961,14 @@ select {
       }
 
       .form_zakah {
+        padding: 0;
         .field {
           label {
-            float: left;
+            float: right;
           }
 
           .field-value {
-            float: right;
+            float: left;
 
             input {
               border: solid 2px transparent;
@@ -1047,7 +1048,7 @@ select {
         border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
         border-image-slice: 1;
         background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #753bbd, #00a9ce);
-        float: right;
+        float: left;
         width: 60%;
         text-align: center;
         text-align-last: center;
@@ -1065,7 +1066,7 @@ select {
       h4 {
         line-height: 2.5rem;
         font-size: 1.15rem;
-        float: left;
+        float: right;
 
         .span_req {
           color: red;
@@ -1194,7 +1195,7 @@ select {
 
     #sebhaModal .modal-content {
       background-color: $white_color;
-      left: 29%;
+      left: -29%;
     }
 
     .modal-header {
@@ -1442,7 +1443,7 @@ select {
     border-width: 6px;
     position: fixed;
     bottom: 40%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1567,7 +1568,7 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                padding: 0.25rem 0 0.25rem 2.3rem;
+                padding: 0.25rem 2.3rem 0.25rem 0;
 
                 &.dropdown-item2 {
                   width: 100%;
@@ -1722,7 +1723,7 @@ select {
         }
 
         img {
-          width: 95%;
+          width: 100%;
           max-height: 20rem;
         }
 
@@ -1901,7 +1902,7 @@ select {
             width: 95%;
             position: fixed;
             top: 57%;
-            left: 50% !important;
+            left: 50%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -2127,7 +2128,7 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                padding: 0.25rem 0 0.25rem 2.3rem;
+                padding: 0.25rem 2.3rem 0.25rem 0;
 
                 &.dropdown-item2 {
                   width: 100%;
@@ -2282,7 +2283,7 @@ select {
         }
 
         img {
-          width: 95%;
+          width: 100%;
           max-height: 20rem;
         }
 
@@ -2686,7 +2687,7 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                padding: 0.25rem 0 0.25rem 2.3rem;
+                padding: 0.25rem 2.3rem 0.25rem 0;
 
                 &.dropdown-item2 {
                   width: 100%;
@@ -2841,7 +2842,7 @@ select {
         }
 
         img {
-          width: 95%;
+          width: 100%;
           max-height: 20rem;
         }
 
@@ -3251,7 +3252,7 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                padding: 0.25rem 0 0.25rem 2.3rem;
+                padding: 0.25rem 2.3rem 0.25rem 0;
 
                 &.dropdown-item2 {
                   width: 100%;
@@ -3828,7 +3829,7 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                padding: 0.25rem 0 0.25rem 2.3rem;
+                padding: 0.25rem 3.3rem 0.25rem 0;
                 font-size: 1.15rem;
 
                 &.dropdown-item2 {
@@ -4471,7 +4472,7 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                padding: 0.25rem 0 0.25rem 5rem;
+                padding: 0.25rem 5rem 0.25rem 0;
                 font-size: 1.5rem;
 
                 &.dropdown-item2 {
@@ -4507,7 +4508,7 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 31.5rem;
+              height: 21rem;
             }
           }
 
@@ -4515,8 +4516,8 @@ select {
             height: 4.5rem;
 
             button {
-              width: 65%;
-              top: 94%;
+              width: 75%;
+              top: 91%;
               font-size: 1.75rem;
             }
           }

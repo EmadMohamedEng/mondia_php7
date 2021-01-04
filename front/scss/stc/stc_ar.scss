@@ -215,7 +215,7 @@ select {
 
         .owl_one_img {
           img {
-            height: 18.885rem;
+            height: 12.59rem;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
           }
@@ -230,7 +230,7 @@ select {
           button {
             background: $bg_color;
             color: $white_color;
-            width: 65%;
+            width: 80%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -243,7 +243,7 @@ select {
             -ms-border-radius: 6px;
             -o-border-radius: 6px;
             position: absolute;
-            top: 92%;
+            top: 89%;
             left: 50%;
             transform: translate(-50%, -50%);
 
@@ -961,6 +961,7 @@ select {
       }
 
       .form_zakah {
+        padding: 0;
         .field {
           label {
             float: right;
@@ -1039,7 +1040,7 @@ select {
       .merath_input {
         border: 2px solid $bg_color;
         float: left;
-        width: 50%;
+        width: 70%;
         text-align: center;
         text-align-last: center;
         border-radius: 8px;
@@ -1422,7 +1423,7 @@ select {
     border-width: 6px;
     position: fixed;
     bottom: 40%;
-    right: 50%;
+    right: 55%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1548,7 +1549,7 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                padding: 0.25rem 0 0.25rem 2.3rem;
+                padding: 0.25rem 2.3rem 0.25rem 0;
 
                 &.dropdown-item2 {
                   width: 100%;
@@ -1697,7 +1698,7 @@ select {
         }
 
         img {
-          width: 95%;
+          width: 100%;
           max-height: 20rem;
         }
 
@@ -1762,7 +1763,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-right: 4%;
           font-size: 12px;
         }
       }
@@ -1876,7 +1877,7 @@ select {
             width: 95%;
             position: fixed;
             top: 57%;
-            right: 50% !important;
+            right: -45%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -2012,7 +2013,7 @@ select {
   .loading-overlay {
     .spinner-large {
       bottom: 30%;
-      left: 31%;
+      right: 31%;
     }
   }
 }
@@ -2098,7 +2099,7 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                padding: 0.25rem 0 0.25rem 2.3rem;
+                padding: 0.25rem 2.3rem 0.25rem 0;
 
                 &.dropdown-item2 {
                   width: 100%;
@@ -2248,7 +2249,7 @@ select {
         }
 
         img {
-          width: 95%;
+          width: 100%;
           max-height: 20rem;
         }
 
@@ -2313,7 +2314,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-right: 4%;
           font-size: 12px;
         }
       }
@@ -2427,7 +2428,7 @@ select {
             width: 95%;
             position: fixed;
             top: 57%;
-            right: 50% !important;
+            right: -45%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -2563,7 +2564,7 @@ select {
   .loading-overlay {
     .spinner-large {
       bottom: 30%;
-      left: 31%;
+      right: 31%;
     }
   }
 }
@@ -2653,7 +2654,7 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                padding: 0.25rem 0 0.25rem 2.3rem;
+                padding: 0.25rem 2.3rem 0.25rem 0;
 
                 &.dropdown-item2 {
                   width: 100%;
@@ -2802,7 +2803,7 @@ select {
         }
 
         img {
-          width: 95%;
+          width: 100%;
           max-height: 20rem;
         }
 
@@ -2867,7 +2868,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-right: 4%;
           font-size: 12px;
         }
       }
@@ -2981,7 +2982,7 @@ select {
             width: 95%;
             position: fixed;
             top: 57%;
-            right: 50% !important;
+            right: -45%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -3123,7 +3124,7 @@ select {
   .loading-overlay {
     .spinner-large {
       bottom: 30%;
-      left: 31%;
+      right: 31%;
     }
   }
 }
@@ -3209,7 +3210,7 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                padding: 0.25rem 0 0.25rem 2.3rem;
+                padding: 0.25rem 2.3rem 0.25rem 0;
 
                 &.dropdown-item2 {
                   width: 100%;
@@ -3425,7 +3426,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-right: 4%;
           font-size: 12px;
         }
       }
@@ -3540,7 +3541,7 @@ select {
             width: 95%;
             position: fixed;
             top: 57%;
-            right: 50% !important;
+            right: -45%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -3682,7 +3683,7 @@ select {
   .loading-overlay {
     .spinner-large {
       bottom: 30%;
-      left: 31%;
+      right: 31%;
     }
   }
 }
@@ -3780,7 +3781,7 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                padding: 0.25rem 0 0.25rem 2.3rem;
+                padding: 0.25rem 3.3rem 0.25rem 0;
                 font-size: 1.15rem;
 
                 &.dropdown-item2 {
@@ -4038,7 +4039,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-right: 4%;
           font-size: 12px;
         }
       }
@@ -4158,7 +4159,7 @@ select {
             width: 75%;
             position: fixed;
             top: 50%;
-            right: 50%;
+            right: -25%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -4323,7 +4324,7 @@ select {
   .loading-overlay {
     .spinner-large {
       bottom: 40%;
-      left: 40%;
+      right: 40%;
     }
   }
 }
@@ -4421,7 +4422,7 @@ select {
 
             .dropdown-menu {
               .dropdown-item {
-                padding: 0.25rem 0 0.25rem 5rem;
+                padding: 0.25rem 5rem 0.25rem 0;
                 font-size: 1.5rem;
 
                 &.dropdown-item2 {
@@ -4456,7 +4457,7 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 31.5rem;
+              height: 21rem;
             }
           }
 
@@ -4464,8 +4465,8 @@ select {
             height: 4.5rem;
 
             button {
-              width: 65%;
-              top: 94%;
+              width: 75%;
+              top: 92%;
               font-size: 1.75rem;
             }
           }
@@ -4681,7 +4682,7 @@ select {
 
         .p_content,
         .p_content_2 {
-          margin-left: 4%;
+          margin-right: 4%;
           font-size: 1.5rem;
         }
       }
@@ -4801,7 +4802,7 @@ select {
             width: 75%;
             position: fixed;
             top: 50%;
-            right: 50%;
+            right: -25%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -4966,7 +4967,7 @@ select {
   .loading-overlay {
     .spinner-large {
       bottom: 40%;
-      left: 40%;
+      right: 40%;
     }
   }
 }
@@ -5224,7 +5225,7 @@ select {
   .loading-overlay {
     .spinner-large {
       bottom: 30%;
-      left: 55%;
+      right: 55%;
     }
   }
 

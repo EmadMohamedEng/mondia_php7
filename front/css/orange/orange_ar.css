@@ -1220,7 +1220,7 @@ select:active {
   color: #FFF;
   background-color: transparent;
   float: left;
-  width: 75%;
+  width: 50%;
   text-align: center;
   text-align-last: center;
   border-radius: 8px;
@@ -1591,7 +1591,7 @@ select:active {
   border-width: 6px;
   position: fixed;
   bottom: 40%;
-  left: 50%;
+  left: 45%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -1601,6 +1601,11 @@ select:active {
 .loading-overlay .spinner-slow {
   animation: spinner 1s linear infinite;
 }
+.loading-overlay .spinner-blue {
+  border-top-color: #FF6600;
+  border-left-color: #FF6600;
+}
+
 .alert .close {
   outline: 0;
 }
@@ -2012,6 +2017,9 @@ select:active {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+  }
+  .main_container .merath_page .input_text .merath_input {
+    width: 70%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
@@ -2480,6 +2488,9 @@ select:active {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+  }
+  .main_container .merath_page .input_text .merath_input {
+    width: 70%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
@@ -2956,6 +2967,9 @@ select:active {
     margin-bottom: 1rem;
     font-size: 1.3rem;
   }
+  .main_container .merath_page .input_text .merath_input {
+    width: 70%;
+  }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
     font-size: 0.85rem;
@@ -3425,6 +3439,9 @@ select:active {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+  }
+  .main_container .merath_page .input_text .merath_input {
+    width: 70%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
