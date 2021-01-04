@@ -245,7 +245,7 @@ return [
     'action' => 'Action',
 
     'enjoy_time_landing' => 'Alkanz',
-    'Mbc_Muslim_guide_landing' => 'Get the best features that interest a Muslim in his daily life',
+    'Mbc_Muslim_guide_landing' => 'Make your day better with the Islamic Alkenz service Alkenz your way to Jannah',
     'Are_you_a_subscriber' => 'Existing subscriber? Login',
     'click_sub_landing' => 'By clicking on Subscribe now, you agree to the terms and conditions',
     'Choose_your_Operators' => 'Choose your Operators',

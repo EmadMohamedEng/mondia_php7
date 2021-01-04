@@ -233,7 +233,7 @@ return [
     'action' => 'إجراء',
 
     'enjoy_time_landing' => 'الكنز',
-    'Mbc_Muslim_guide_landing' => 'احصل على أفضل المميزات التي تهم المسلم في حياته اليومية',
+    'Mbc_Muslim_guide_landing' => 'اجعل يومك أفضل مع باقة الكنز الإسلامية الكنز.. طريقك إلى الجنة',
     'Are_you_a_subscriber' => 'مشترك حالي؟ تسجيل الدخول',
     'click_sub_landing' => 'من خلال الضغط علي اشتراك الان فأنت توافق علي الشروط والاحكام',
     'Choose_your_Operators' => 'اختر الشبكة',
