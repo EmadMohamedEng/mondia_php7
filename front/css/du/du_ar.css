@@ -189,7 +189,7 @@ select:active {
   position: relative;
 }
 .main_container .img_carousel .owl_one .item .owl_one_img img {
-  height: 18.885rem;
+  height: 12.59rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -202,7 +202,7 @@ select:active {
 .main_container .img_carousel .owl_one .item .btn_subscribe button {
   background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
-  width: 65%;
+  width: 80%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -215,7 +215,7 @@ select:active {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   position: absolute;
-  top: 92%;
+  top: 89%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -698,13 +698,13 @@ select:active {
 }
 .main_container .salah_time_page .time_btn .h4_time_2 {
   font-size: 1rem;
-  text-align: right;
+  text-align: left;
   margin-bottom: 0;
   padding: 0.6rem 0;
 }
 .main_container .salah_time_page .time_btn .h4_time {
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   margin-bottom: 0;
   padding: 0.6rem 0;
 }
@@ -745,11 +745,14 @@ select:active {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.main_container .zakkah_page .zakah_zakah .form_zakah {
+  padding: 0;
+}
 .main_container .zakkah_page .zakah_zakah .form_zakah .field label {
-  float: left;
+  float: right;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value {
-  float: right;
+  float: left;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value input {
   border: solid 2px transparent;
@@ -805,7 +808,7 @@ select:active {
   border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
   border-image-slice: 1;
   background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #753bbd, #00a9ce);
-  float: right;
+  float: left;
   width: 60%;
   text-align: center;
   text-align-last: center;
@@ -821,7 +824,7 @@ select:active {
 .main_container .merath_page .input_span h4 {
   line-height: 2.5rem;
   font-size: 1.15rem;
-  float: left;
+  float: right;
 }
 .main_container .merath_page .input_span h4 .span_req {
   color: red;
@@ -923,7 +926,7 @@ select:active {
 }
 .main_container .sebha_page #sebhaModal .modal-content {
   background-color: #FFF;
-  left: 29%;
+  left: -29%;
 }
 .main_container .sebha_page .modal-header {
   border-bottom: 1px solid #f3e5b8;
@@ -1129,7 +1132,7 @@ select:active {
   border-width: 6px;
   position: fixed;
   bottom: 40%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -1224,7 +1227,7 @@ select:active {
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0 0.25rem 2.3rem;
+    padding: 0.25rem 2.3rem 0.25rem 0;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100%;
@@ -1435,7 +1438,7 @@ select:active {
     width: 95%;
     position: fixed;
     top: 57%;
-    left: 50% !important;
+    left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1596,7 +1599,7 @@ select:active {
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0 0.25rem 2.3rem;
+    padding: 0.25rem 2.3rem 0.25rem 0;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100%;
@@ -1968,7 +1971,7 @@ select:active {
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0 0.25rem 2.3rem;
+    padding: 0.25rem 2.3rem 0.25rem 0;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100%;
@@ -2343,7 +2346,7 @@ select:active {
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0 0.25rem 2.3rem;
+    padding: 0.25rem 2.3rem 0.25rem 0;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100%;
@@ -2731,7 +2734,7 @@ select:active {
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0 0.25rem 2.3rem;
+    padding: 0.25rem 3.3rem 0.25rem 0;
     font-size: 1.15rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
@@ -3161,7 +3164,7 @@ select:active {
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0 0.25rem 5rem;
+    padding: 0.25rem 5rem 0.25rem 0;
     font-size: 1.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
@@ -3184,14 +3187,14 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 31.5rem;
+    height: 21rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
     height: 4.5rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
-    width: 65%;
-    top: 94%;
+    width: 75%;
+    top: 91%;
     font-size: 1.75rem;
   }
   .main_container .img_carousel .owl-theme .owl-dots .owl-dot span {
