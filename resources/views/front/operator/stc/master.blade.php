@@ -1,14 +1,14 @@
 <header class="header w-100">
   <div class="row">
-    <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0">
+    <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0 ">
       <div class="header_logo">
         <a href="{{route('front.index')}}" class="link_href">
-          @lang('front.Daleel Al Muslim')
+          <h6>@lang('front.Daleel Al Muslim')</h6>
         </a>
       </div>
     </div>
 
-    <div class="col-md-5 col-lg-5 col-xl-5 col-5 d-flex justify-content-end">
+    <div class="col-md-5 col-lg-5 col-xl-5 col-5">
       <a class="arrow_back back" href="#0">
         <i class="fas fa-angle-left fa-lg"></i>
       </a>
@@ -18,10 +18,8 @@
 
 <div class="row m-0">
   <div class="col-md-0 col-lg-0 col-xl-4 col-0 p-0" style="z-index: 9999999999">
-    <!-- start menu 1  -->
     <!-- start menu 1 => For All Operator / Mobile Menu / And Sidenav for PC ( Oman - DU - STC ) -->
     <div class="menu_all_op">
-
       <nav class="nav_nav navbar navbar-expand-xl primary-color">
         <button id="menu_toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="icon_before fas fa-bars fa-lg"></i>

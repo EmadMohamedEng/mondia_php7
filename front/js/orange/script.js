@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   $(".close_nav").click(function () {
     if ($('#menu_toggle').attr('aria-expanded')) {
@@ -40,32 +39,8 @@ $(document).ready(function () {
   });
 });
 
-$('.owl_orange').owlCarousel({
-  loop: true,
-  margin: 0,
-  autoplay: true,
-  autoplayTimeout: 3000,
-  animateOut: 'fadeOut',
-  nav: true,
-  dots: false,
-  center: false,
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 1
-    },
-    1000: {
-      items: 1
-    },
-    1024.9: {
-      items: 1
-    }
-  }
-});
-
 $('.owl_one').owlCarousel({
+  rtl:window.lang == 'ar' ? true : false,
   loop: true,
   margin: 0,
   autoplay: true,
@@ -98,7 +73,7 @@ $('.owl_one').owlCarousel({
 });
 
 $('.owl_content_one').owlCarousel({
-  rtl: true,
+  rtl:window.lang == 'ar' ? true : false,
   // loop: true,
   margin: 5,
   autoplay: false,
@@ -121,7 +96,7 @@ $('.owl_content_one').owlCarousel({
 });
 
 $('.owl_content_two').owlCarousel({
-  rtl: true,
+  rtl:window.lang == 'ar' ? true : false,
   // loop: true,
   margin: 5,
   autoplay: false,
@@ -144,7 +119,7 @@ $('.owl_content_two').owlCarousel({
 });
 
 $('.owl_content_three').owlCarousel({
-  rtl: true,
+  rtl:window.lang == 'ar' ? true : false,
   // loop: true,
   margin: 5,
   autoplay: false,
@@ -171,7 +146,7 @@ $('.owl_content_three').owlCarousel({
 });
 
 $('.owl_content_four').owlCarousel({
-  rtl: true,
+  rtl:window.lang == 'ar' ? true : false,
   loop: true,
   margin: 5,
   autoplay: true,
@@ -194,7 +169,7 @@ $('.owl_content_four').owlCarousel({
 });
 
 $('.owl_content_five').owlCarousel({
-  rtl: true,
+  rtl:window.lang == 'ar' ? true : false,
   loop: true,
   margin: 5,
   autoplay: true,
@@ -216,7 +191,7 @@ $('.owl_content_five').owlCarousel({
 });
 
 $('.owl_muslim_guide').owlCarousel({
-  rtl: true,
+  rtl:window.lang == 'ar' ? true : false,
   loop: true,
   margin: 5,
   autoplay: true,

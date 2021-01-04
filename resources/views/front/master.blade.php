@@ -26,23 +26,24 @@
   <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
-  <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}">
+  <!-- <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}">
+  <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}"> -->
 
-    <!-- @if(request()->get('OpID') == mbc)
-      @include("front.operator.mbc.head")
-    @elseif(request()->get('OpID') == orange)
-      @include("front.operator.orange.head")
-    @elseif(request()->get('OpID') == du)
-      @include("front.operator.du.head")
-    @elseif(request()->get('OpID') == omantel)
-      @include("front.operator.omantel.head")
-    @elseif(request()->get('OpID') == stc)
-      @include("front.operator.stc.head")
-    @else
-      @include("front.operator.ooredoo.head")
-    @endif -->
+  @if(request()->get('OpID') == mbc)
+  @include("front.operator.mbc.head")
+  @elseif(request()->get('OpID') == orange)
+  @include("front.operator.orange.head")
+  @elseif(request()->get('OpID') == du)
+  @include("front.operator.du.head")
+  @elseif(request()->get('OpID') == omantel)
+  @include("front.operator.omantel.head")
+  @elseif(request()->get('OpID') == stc)
+  @include("front.operator.stc.head")
+  @else
+  @include("front.operator.ooredoo.head")
+  @endif
 
-  @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
+  <!-- @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
   <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
   @endif
   @if(request()->has('OpID') && request()->get('OpID') == omantel)
@@ -69,7 +70,7 @@
   <link rel="stylesheet" href="{{asset('front/css/style_orange_menu_ar.css')}}">
   @endif
   <link rel="stylesheet" href="{{asset('front/css/style_orange_menu.css')}}">
-  @endif
+  @endif -->
 
   <!-- <style>
     .active_menu {
@@ -79,6 +80,7 @@
 
   <script>
     window.base_url = '{{url("/")}}';
+    window.lang = "{{session()->get('applocale')}}";
   </script>
 </head>
 
@@ -101,17 +103,17 @@ $enable = get_setting('enable_testing');
 <body>
   <main class="main_container">
     @if(request()->get('OpID') == mbc)
-      @include("front.operator.mbc.master")
+    @include("front.operator.mbc.master")
     @elseif(request()->get('OpID') == orange)
-      @include("front.operator.orange.master")
+    @include("front.operator.orange.master")
     @elseif(request()->get('OpID') == du)
-      @include("front.operator.du.master")
+    @include("front.operator.du.master")
     @elseif(request()->get('OpID') == omantel)
-      @include("front.operator.omantel.master")
+    @include("front.operator.omantel.master")
     @elseif(request()->get('OpID') == stc)
-      @include("front.operator.stc.master")
+    @include("front.operator.stc.master")
     @else
-      @include("front.operator.ooredoo.master")
+    @include("front.operator.ooredoo.master")
     @endif
   </main>
 
@@ -122,10 +124,25 @@ $enable = get_setting('enable_testing');
   <!-- end loading -->
 
   <script src="{{asset('front/js/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{asset('front/js/popper.min.js')}}"></script>
   <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
   <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
+  @if(request()->get('OpID') == mbc)
+  <script src="{{asset('front/js/mbc/script.js')}}"></script>
+  @elseif(request()->get('OpID') == orange)
+  <script src="{{asset('front/js/orange/script.js')}}"></script>
+  @elseif(request()->get('OpID') == du)
+  <script src="{{asset('front/js/du/script.js')}}"></script>
+  @elseif(request()->get('OpID') == omantel)
+  <script src="{{asset('front/js/omantel/script.js')}}"></script>
+  @elseif(request()->get('OpID') == stc)
+  <script src="{{asset('front/js/stc/script.js')}}"></script>
+  @else
   <script src="{{asset('front/js/script.js')}}"></script>
+  @endif
+
   <script src="{{asset('front/js/js_PrayTimes.js')}}"></script>
+
 
   <script>
     op_id = {{ isset($_REQUEST['OpID']) ? 1 : 0 }}
@@ -210,5 +227,4 @@ $enable = get_setting('enable_testing');
 
   @yield('script')
 </body>
-
 </html>

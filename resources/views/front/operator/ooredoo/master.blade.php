@@ -1,9 +1,9 @@
 <header class="header w-100">
   <div class="row">
-    <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0 d-flex justify-content-center">
+    <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0 ">
       <div class="header_logo">
         <a href="{{route('front.index')}}" class="link_href">
-          @lang('front.Daleel Al Muslim')
+          <h6>@lang('front.Daleel Al Muslim')</h6>
         </a>
       </div>
     </div>
