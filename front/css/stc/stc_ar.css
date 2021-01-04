@@ -1107,7 +1107,7 @@ select:active {
   border-width: 6px;
   position: fixed;
   bottom: 40%;
-  right: 50%;
+  right: 55%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -1292,7 +1292,7 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 95%;
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
@@ -1340,7 +1340,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4%;
+    margin-right: 4%;
     font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
@@ -1410,7 +1410,7 @@ select:active {
     width: 95%;
     position: fixed;
     top: 57%;
-    right: 50% !important;
+    right: -45%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1502,7 +1502,7 @@ select:active {
 
   .loading-overlay .spinner-large {
     bottom: 30%;
-    left: 31%;
+    right: 31%;
   }
 }
 @media (min-width: 360px) and (max-width: 374.9px) {
@@ -1659,7 +1659,7 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 95%;
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
@@ -1707,7 +1707,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4%;
+    margin-right: 4%;
     font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
@@ -1777,7 +1777,7 @@ select:active {
     width: 95%;
     position: fixed;
     top: 57%;
-    right: 50% !important;
+    right: -45%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1869,7 +1869,7 @@ select:active {
 
   .loading-overlay .spinner-large {
     bottom: 30%;
-    left: 31%;
+    right: 31%;
   }
 }
 @media (min-width: 375px) and (max-width: 410.9px) {
@@ -2028,7 +2028,7 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 95%;
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
@@ -2076,7 +2076,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4%;
+    margin-right: 4%;
     font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
@@ -2146,7 +2146,7 @@ select:active {
     width: 95%;
     position: fixed;
     top: 57%;
-    right: 50% !important;
+    right: -45%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2241,7 +2241,7 @@ select:active {
 
   .loading-overlay .spinner-large {
     bottom: 30%;
-    left: 31%;
+    right: 31%;
   }
 }
 @media (min-width: 411px) and (max-width: 415px) {
@@ -2447,7 +2447,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4%;
+    margin-right: 4%;
     font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
@@ -2518,7 +2518,7 @@ select:active {
     width: 95%;
     position: fixed;
     top: 57%;
-    right: 50% !important;
+    right: -45%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2613,7 +2613,7 @@ select:active {
 
   .loading-overlay .spinner-large {
     bottom: 30%;
-    left: 31%;
+    right: 31%;
   }
 }
 @media (min-width: 768px) and (max-width: 1023.9px) {
@@ -2860,7 +2860,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4%;
+    margin-right: 4%;
     font-size: 12px;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
@@ -2934,7 +2934,7 @@ select:active {
     width: 75%;
     position: fixed;
     top: 50%;
-    right: 50%;
+    right: -25%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -3043,7 +3043,7 @@ select:active {
 
   .loading-overlay .spinner-large {
     bottom: 40%;
-    left: 40%;
+    right: 40%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1030px) {
@@ -3293,7 +3293,7 @@ select:active {
   }
   .main_container .inner_page .section_content .p_content,
 .main_container .inner_page .section_content .p_content_2 {
-    margin-left: 4%;
+    margin-right: 4%;
     font-size: 1.5rem;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
@@ -3367,7 +3367,7 @@ select:active {
     width: 75%;
     position: fixed;
     top: 50%;
-    right: 50%;
+    right: -25%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -3476,7 +3476,7 @@ select:active {
 
   .loading-overlay .spinner-large {
     bottom: 40%;
-    left: 40%;
+    right: 40%;
   }
 }
 @media (min-width: 1031px) and (max-width: 1360px) {
@@ -3594,7 +3594,7 @@ select:active {
 
   .loading-overlay .spinner-large {
     bottom: 30%;
-    left: 55%;
+    right: 55%;
   }
 
   .alert {
