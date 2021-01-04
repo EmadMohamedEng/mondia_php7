@@ -8,7 +8,7 @@
       </div>
     </div>
 
-    <div class="col-md-5 col-lg-5 col-xl-5 col-5 d-flex justify-content-end">
+    <div class="col-md-5 col-lg-5 col-xl-5 col-5">
       <a class="arrow_back back" href="#0">
         <i class="fas fa-angle-left fa-lg"></i>
       </a>

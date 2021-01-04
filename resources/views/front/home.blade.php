@@ -32,7 +32,6 @@ $menu = provider_menu();
     </div>
     @endif
 
-
     @if(request()->get('OpID') == orange)
     <section class="img_carousel">
       <video class="rounded" width="100%" controls poster="{{url('orange_slider/Esm EL Nabi_1_snapshot.jpg')}}">
@@ -44,7 +43,7 @@ $menu = provider_menu();
     @else
 
     <section class="img_carousel">
-      <div class="owl_one owl-carousel owl-theme" dir="ltr">
+      <div class="owl_one owl-carousel owl-theme">
         @foreach($latest as $content)
         <div class="item">
           <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
@@ -108,15 +107,15 @@ $menu = provider_menu();
       </div>
 
       @if(request()->get('OpID') == mbc)
-      <div class="owl_content owl_content_two owl-carousel owl-theme" dir="ltr">
+      <div class="owl_content owl_content_two owl-carousel owl-theme">
         @else
-        <?php 
+        <?php
         if(request()->get('OpID') == orange)
           $owl_c = 'owl_muslim_guide';
         else
           $owl_c = 'owl_content_five';
         ?>
-        <div class="owl_content {{ $owl_c  }} owl-carousel owl-theme" dir="ltr">
+        <div class="owl_content {{ $owl_c  }} owl-carousel owl-theme">
           @endif
           <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
@@ -308,7 +307,7 @@ $menu = provider_menu();
       @endphp
 
 
-      <div class="{{$owl_1}} owl-carousel owl-theme" dir="ltr">
+      <div class="{{$owl_1}} owl-carousel owl-theme">
         @foreach ($item->services as $service)
         <div class="item">
           <div class="card ovf-hidden">
@@ -388,7 +387,7 @@ $menu = provider_menu();
 
       @endphp
 
-      <div class="{{$owl}} owl-carousel owl-theme" dir="ltr">
+      <div class="{{$owl}} owl-carousel owl-theme">
         @foreach ($item->services as $service)
 
         @if (request()->get("OpID") == 12 && $service->id == 40)
