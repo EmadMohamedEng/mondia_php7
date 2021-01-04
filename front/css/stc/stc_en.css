@@ -189,7 +189,7 @@ select:active {
   position: relative;
 }
 .main_container .img_carousel .owl_one .item .owl_one_img img {
-  height: 18.885rem;
+  height: 12.59rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -202,7 +202,7 @@ select:active {
 .main_container .img_carousel .owl_one .item .btn_subscribe button {
   background: #ff375e;
   color: #FFF;
-  width: 65%;
+  width: 80%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -215,7 +215,7 @@ select:active {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   position: absolute;
-  top: 92%;
+  top: 89%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -785,7 +785,7 @@ select:active {
 .main_container .merath_page .input_text .merath_input {
   border: 2px solid #ff375e;
   float: right;
-  width: 50%;
+  width: 70%;
   text-align: center;
   text-align-last: center;
   border-radius: 8px;
@@ -3134,14 +3134,14 @@ select:active {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 31.5rem;
+    height: 21rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
     height: 4.5rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
-    width: 65%;
-    top: 94%;
+    width: 75%;
+    top: 92%;
     font-size: 1.75rem;
   }
   .main_container .img_carousel .owl-theme .owl-dots .owl-dot span {

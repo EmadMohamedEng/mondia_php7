@@ -1552,7 +1552,7 @@ select {
         color: $white_color;
         background-color: transparent;
         float: left;
-        width: 75%;
+        width: 50%;
         text-align: center;
         text-align-last: center;
         border-radius: 8px;
@@ -2019,7 +2019,7 @@ select {
     border-width: 6px;
     position: fixed;
     bottom: 40%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2031,7 +2031,10 @@ select {
     animation: spinner 1s linear infinite;
   }
 
-  .spinner-blue {}
+  .spinner-blue {
+    border-top-color: $bg_color;
+    border-left-color: $bg_color;
+  }
 }
 
 .alert {
@@ -2618,7 +2621,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 70%;
+        }
       }
 
       .input_span {
@@ -3299,7 +3304,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 70%;
+        }
       }
 
       .input_span {
@@ -3996,7 +4003,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 70%;
+        }
       }
 
       .input_span {
@@ -4681,7 +4690,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 70%;
+        }
       }
 
       .input_span {
@@ -5411,6 +5422,7 @@ select {
       .input_text {
         .merath_input {
           font-size: 1.15rem;
+          
         }
       }
 

@@ -1538,7 +1538,7 @@ select {
         color: $white_color;
         background-color: transparent;
         float: right;
-        width: 90%;
+        width: 50%;
         text-align: center;
         text-align-last: center;
         border-radius: 8px;
@@ -2010,7 +2010,10 @@ select {
     animation: spinner 1s linear infinite;
   }
 
-  .spinner-blue {}
+  .spinner-blue {
+    border-top-color: $bg_color;
+    border-left-color: $bg_color;
+  }
 }
 
 .alert {
@@ -2586,7 +2589,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 70%;
+        }
       }
 
       .input_span {
@@ -3254,7 +3259,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 70%;
+        }
       }
 
       .input_span {
@@ -3944,7 +3951,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 70%;
+        }
       }
 
       .input_span {
@@ -4624,7 +4633,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 70%;
+        }
       }
 
       .input_span {

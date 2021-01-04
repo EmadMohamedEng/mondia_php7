@@ -211,7 +211,7 @@ select {
 
         .owl_one_img {
           img {
-            height: 18.885rem;
+            height: 12.59rem;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
           }
@@ -226,7 +226,7 @@ select {
           button {
             background: $bg_color;
             color: $white_color;
-            width: 65%;
+            width: 80%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -239,7 +239,7 @@ select {
             -ms-border-radius: 6px;
             -o-border-radius: 6px;
             position: absolute;
-            top: 92%;
+            top: 89%;
             left: 50%;
             transform: translate(-50%, -50%);
 
@@ -1029,7 +1029,7 @@ select {
       .merath_input {
         border: 2px solid $bg_color;
         float: right;
-        width: 50%;
+        width: 70%;
         text-align: center;
         text-align-last: center;
         border-radius: 8px;
@@ -4444,7 +4444,7 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 31.5rem;
+              height: 21rem;
             }
           }
 
@@ -4452,8 +4452,8 @@ select {
             height: 4.5rem;
 
             button {
-              width: 65%;
-              top: 94%;
+              width: 75%;
+              top: 92%;
               font-size: 1.75rem;
             }
           }
