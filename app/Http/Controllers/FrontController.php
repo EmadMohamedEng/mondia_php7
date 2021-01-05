@@ -443,6 +443,8 @@ class FrontController extends Controller
           MondiaSubscriber::create($subscriber);
         }
 
+
+
         return view('front.inner', compact('content', 'contents'));
       }
     }
