@@ -40,65 +40,38 @@ $(document).ready(function () {
   });
 });
 
-$('.owl_orange').owlCarousel({
-  loop: true,
-  margin: 0,
-  autoplay: true,
-  autoplayTimeout: 3000,
-  animateOut: 'fadeOut',
-  nav: true,
-  dots: false,
-  center: false,
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 1
-    },
-    1000: {
-      items: 1
-    },
-    1024.9: {
-      items: 1
-    }
-  }
-});
-
 $('.owl_one').owlCarousel({
+  rtl:window.lang == 'ar' ? true : false,
   loop: true,
   margin: 0,
   autoplay: true,
   autoplayTimeout: 3000,
   animateOut: 'fadeOut',
   nav: false,
-  dots: false,
-  center: false,
+  dots: true,
+  center: true,
   responsive: {
     0: {
       items: 1,
-      dots: true
     },
     600: {
       items: 1,
-      dots: true
     },
     1000: {
       items: 3,
-      dots: true
     },
     1024: {
-      items: 2,
-      dots: true
+      items: 3,
+      // center: false,
     },
     1024.9: {
-      items: 2
+      items: 3
     }
   }
 });
 
 $('.owl_content_one').owlCarousel({
-  rtl: true,
+  rtl:window.lang == 'ar' ? true : false,
   // loop: true,
   margin: 5,
   autoplay: false,
@@ -121,7 +94,7 @@ $('.owl_content_one').owlCarousel({
 });
 
 $('.owl_content_two').owlCarousel({
-  rtl: true,
+  rtl:window.lang == 'ar' ? true : false,
   // loop: true,
   margin: 5,
   autoplay: false,
@@ -144,7 +117,7 @@ $('.owl_content_two').owlCarousel({
 });
 
 $('.owl_content_three').owlCarousel({
-  rtl: true,
+  rtl:window.lang == 'ar' ? true : false,
   // loop: true,
   margin: 5,
   autoplay: false,
@@ -171,7 +144,7 @@ $('.owl_content_three').owlCarousel({
 });
 
 $('.owl_content_four').owlCarousel({
-  rtl: true,
+  rtl:window.lang == 'ar' ? true : false,
   loop: true,
   margin: 5,
   autoplay: true,
@@ -194,14 +167,15 @@ $('.owl_content_four').owlCarousel({
 });
 
 $('.owl_content_five').owlCarousel({
-  rtl: true,
+  rtl:window.lang == 'ar' ? true : false,
   loop: true,
-  margin: 5,
+  margin: 0,
   autoplay: true,
   autoplayTimeout: 3000,
+  animateOut: 'fadeOut',
   nav: false,
-  dots: false,
-  center: false,
+  dots: true,
+  center: true,
   responsive: {
     0: {
       items: 2
@@ -216,7 +190,7 @@ $('.owl_content_five').owlCarousel({
 });
 
 $('.owl_muslim_guide').owlCarousel({
-  rtl: true,
+  rtl:window.lang == 'ar' ? true : false,
   loop: true,
   margin: 5,
   autoplay: true,

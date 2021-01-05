@@ -37,10 +37,6 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
             <h4>{!!$content->content->getTranslation('content_text',getCode())!!}</h4>
           </div>
           @endif
-
-
-
-
         </div>
       </div>
 
@@ -71,7 +67,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           <br>
           <br>
 
-          <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
+          <div class="col-md-3 col-lg-3 col-xl-3 col-4 p-0">
             <div class="shear_div">
               <button class="btn facebook" onclick="location.href='https://www.facebook.com/sharer/sharer.php?{{urldecode(url("view_content/$content->id?OpID=14"))}}'">
                 <i class="fab fa-facebook-f"></i>
@@ -79,7 +75,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
             </div>
           </div>
 
-          <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
+          <div class="col-md-3 col-lg-3 col-xl-3 col-4 p-0">
             <div class="shear_div">
               <button class="btn twitter" onclick="location.href='https://www.twitter.com/intent/tweet?text={{urldecode(url("view_content/$content->id?OpID=14"))}}'">
                 <i class="fab fa-twitter"></i>
@@ -95,7 +91,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
         </div>
       </div> --}}
 
-      <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
+      <div class="col-md-3 col-lg-3 col-xl-3 col-4 p-0">
         <div class="shear_div">
           <button class="btn whatsapp" onclick="location.href='https://api.whatsapp.com/send?text={{urlencode(url("view_content/$content->id?OpID=14"))}}'">
             <i class="fab fa-whatsapp"></i>
