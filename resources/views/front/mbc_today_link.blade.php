@@ -103,6 +103,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 
 <div class="border-bottom"></div>
 
+@if (count($contents) > 1)
 <section class="section_content padding_phones">
   <div class="row m-0">
     <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
@@ -110,7 +111,6 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
         <span>@lang('front.related_video'): </span>
       </div>
     </div>
-
     @foreach ($contents as $key => $item)
     @php
         if($key == 0) continue;
@@ -142,6 +142,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
     @endforeach
   </div>
 </section>
+@endif
 </div>
 </section>
 
