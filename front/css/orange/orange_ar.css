@@ -289,6 +289,9 @@ select:active {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
+.main_container .mbc_orange {
+  width: 100%;
+}
 .main_container .mbc_orange .navbar_three {
   background: rgba(0, 0, 0, 0.5) !important;
 }
