@@ -1,6 +1,7 @@
 <?php
 return [
     'title' => 'ألرسائل النصيه',
+    'FreeContent' => 'المحتوي المجاني',
     'service_name' => 'اسم الخدمة',
     'service_type' => 'نوع الخدمة',
     'renew' => 'تجدد تلقائيا',

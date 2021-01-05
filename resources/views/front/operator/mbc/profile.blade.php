@@ -55,7 +55,7 @@
           <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-1">
             <div class="profile_card_title">
                 @if ($day == 0)
-                <h6 class="font-weight-bold">Free Content</h6>
+                <h6 class="font-weight-bold">@lang('messages.FreeContent')</h6>
                 @else
                 <h6 class="font-weight-bold">@lang('messages.Day') {{$day}}</h6>
                 @endif

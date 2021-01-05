@@ -1,6 +1,7 @@
 <?php
 return [
     'title' => 'SMS',
+    'FreeContent' => 'Free Content',
     'renew' => 'Auto-Renewed',
     'service_type' => 'Service Plan',
     'service_name' => 'Service Name',
