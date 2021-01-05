@@ -113,6 +113,7 @@ $opid = request()->get("OpID");
 
 <div class="border-bottom"></div>
 
+@if (count($contents) > 0)
 <section class="section_content padding_phones">
   <div class="row m-0">
     <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0">
@@ -149,6 +150,8 @@ $opid = request()->get("OpID");
     @endforeach
   </div>
 </section>
+@endif
+
 </div>
 </section>
 
