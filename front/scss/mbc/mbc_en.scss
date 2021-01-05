@@ -410,6 +410,23 @@ select {
         }
       }
     }
+
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+      background: #aa6620;
+    }
+
+    .owl-dots {
+      display: block;
+
+      button {
+        outline: 0;
+
+        span {
+          background: #D6D6D6;
+        }
+      }
+    }
   }
 
   .content_carousel {
@@ -2172,7 +2189,7 @@ select {
     border-width: 6px;
     position: fixed;
     bottom: 40%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2423,11 +2440,6 @@ select {
             }
           }
         }
-      }
-
-      .owl-theme .owl-dots .owl-dot.active span,
-      .owl-theme .owl-dots .owl-dot:hover span {
-        background: #aa6620;
       }
     }
 
@@ -3005,11 +3017,6 @@ select {
             }
           }
         }
-      }
-
-      .owl-theme .owl-dots .owl-dot.active span,
-      .owl-theme .owl-dots .owl-dot:hover span {
-        background: #aa6620;
       }
     }
 
@@ -3627,11 +3634,6 @@ select {
           }
         }
       }
-
-      .owl-theme .owl-dots .owl-dot.active span,
-      .owl-theme .owl-dots .owl-dot:hover span {
-        background: #aa6620;
-      }
     }
 
     .content_carousel {
@@ -4248,11 +4250,6 @@ select {
             }
           }
         }
-      }
-
-      .owl-theme .owl-dots .owl-dot.active span,
-      .owl-theme .owl-dots .owl-dot:hover span {
-        background: #aa6620;
       }
     }
 
@@ -4876,9 +4873,9 @@ select {
         }
       }
 
-      .owl-theme .owl-dots .owl-dot.active span,
-      .owl-theme .owl-dots .owl-dot:hover span {
-        background: #aa6620;
+      .owl-theme .owl-dots .owl-dot span {
+        width: 18px;
+        height: 18px;
       }
     }
 
@@ -5129,6 +5126,7 @@ select {
 
     .salah_time_page {
       margin: 3.5rem auto;
+
       .salah_time_title {
         h2 {}
       }
@@ -5486,7 +5484,7 @@ select {
         .item {
           .owl_one_img {
             img {
-              height: 31rem;
+              height: 20.666rem;
             }
           }
 
@@ -5499,16 +5497,17 @@ select {
             height: 4.5rem;
 
             button {
-              top: 93.7%;
-              font-size: 1.75rem;
+              top: 91%;
+              font-size: 1.5rem;
+              width: 75%;
             }
           }
         }
       }
 
-      .owl-theme .owl-dots .owl-dot.active span,
-      .owl-theme .owl-dots .owl-dot:hover span {
-        background: #aa6620;
+      .owl-theme .owl-dots .owl-dot span {
+        width: 18px;
+        height: 18px;
       }
     }
 
@@ -5761,6 +5760,7 @@ select {
 
     .salah_time_page {
       margin: 4.5rem auto;
+
       .salah_time_title {
         h2 {}
       }

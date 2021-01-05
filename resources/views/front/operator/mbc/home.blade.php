@@ -27,7 +27,7 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
   @endif
 
   <section class="img_carousel">
-    <div class="owl_one owl-carousel owl-theme" dir="ltr">
+    <div class="owl_one owl-carousel owl-theme">
       @foreach($latest as $content)
       <div class="item">
         <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
@@ -54,6 +54,7 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
       @endforeach
     </div>
   </section>
+
   @if(date('D') == 'Fri')
   <section class="content_carousel">
     <div class="content_carousel_head text-capitalize">
@@ -66,7 +67,7 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
       </div>
     </div>
 
-    <div class="owl_content owl_content_two owl-carousel owl-theme" dir="ltr">
+    <div class="owl_content owl_content_two owl-carousel owl-theme">
       <div class="item item_muslim">
         <div class="card card_muslim_guid ovf-hidden">
           <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
@@ -147,7 +148,7 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
     @endphp
 
 
-    <div class="{{$owl_1}} owl-carousel owl-theme" dir="ltr">
+    <div class="{{$owl_1}} owl-carousel owl-theme">
       @foreach ($services_foreach as $service)
       <div class="item">
         <div class="card ovf-hidden">

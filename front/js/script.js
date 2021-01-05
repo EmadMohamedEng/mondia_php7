@@ -40,31 +40,6 @@ $(document).ready(function () {
   });
 });
 
-$('.owl_orange').owlCarousel({
-  loop: true,
-  margin: 0,
-  autoplay: true,
-  autoplayTimeout: 3000,
-  animateOut: 'fadeOut',
-  nav: true,
-  dots: false,
-  center: false,
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 1
-    },
-    1000: {
-      items: 1
-    },
-    1024.9: {
-      items: 1
-    }
-  }
-});
-
 $('.owl_one').owlCarousel({
   loop: true,
   margin: 0,
