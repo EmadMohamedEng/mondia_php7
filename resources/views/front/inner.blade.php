@@ -91,10 +91,12 @@ if (session()->get('applocale') == 'ar') {
               <div>@lang('front.share'): </div>
             </div>
           </div>
-
+<?php
+$opid = request()->get("OpID");
+?>
           <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
             <div class="shear_div">
-              <button class="btn facebook" onclick="location.href='https://www.facebook.com/sharer/sharer.php?{{URL::full()}}'">
+              <button class="btn facebook" onclick="location.href='https://www.facebook.com/sharer/sharer.php?{{urldecode(url("view_content/$content->id?OpID=$opid"))}}'">
                 <i class="fab fa-facebook-f"></i>
               </button>
             </div>
@@ -102,7 +104,7 @@ if (session()->get('applocale') == 'ar') {
 
           <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
             <div class="shear_div">
-              <button class="btn twitter" onclick="location.href='https://www.twitter.com/intent/tweet?text={{URL::full()}}'">
+              <button class="btn twitter" onclick="location.href='https://www.twitter.com/intent/tweet?text={{urldecode(url("view_content/$content->id?OpID=$opid"))}}'">
                 <i class="fab fa-twitter"></i>
               </button>
             </div>
@@ -118,7 +120,7 @@ if (session()->get('applocale') == 'ar') {
 
       <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
         <div class="shear_div">
-          <button class="btn whatsapp" onclick="location.href='https://api.whatsapp.com/send?text={{URL::full()}}'">
+          <button class="btn whatsapp" onclick="location.href='https://api.whatsapp.com/send?text={{urldecode(url("view_content/$content->id?OpID=$opid"))}}'">
             <i class="fab fa-whatsapp"></i>
           </button>
         </div>
