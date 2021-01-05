@@ -102,8 +102,8 @@
 
     <br>
 
+    @if(get_setting('filters_flag'))
     @if (count($filters))
-    @if(get_setting('filters_flag') == 1 && request()->get('OpID') == mbc)
     <div class="content_carousel_head text-capitalize mt-4">
       <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-0 padding_phones">
         <a class="link_title link_href" href="{{route('front.search',['search' => request()->get('search')])}}">
