@@ -168,6 +168,12 @@ select:active {
   background-color: transparent;
   margin-right: 12%;
   border: 0;
+  width: 100%;
+  position: unset !important;
+  transform: none !important;
+  top: unset !important;
+  left: unset !important;
+  will-change: unset !important;
 }
 .main_container .burger_menu .sidenav .navbar_ul .nav-item .dropdown-menu .dropdown-item.link_href {
   padding: 5px 0;

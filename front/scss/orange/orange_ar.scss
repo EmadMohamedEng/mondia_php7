@@ -165,6 +165,12 @@ select {
             background-color: transparent;
             margin-right: 12%;
             border: 0;
+            width: 100%;
+            position: unset !important;
+            transform: none !important;
+            top: unset !important;
+            left: unset !important;
+            will-change: unset !important;
 
             .dropdown-item {
               &.link_href {
@@ -5423,7 +5429,7 @@ select {
       .input_text {
         .merath_input {
           font-size: 1.15rem;
-          
+
         }
       }
 

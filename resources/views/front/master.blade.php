@@ -124,7 +124,7 @@ $enable = get_setting('enable_testing');
   <!-- end loading -->
 
   <script src="{{asset('front/js/jquery-3.3.1.min.js')}}"></script>
-  <!-- <script src="{{asset('front/js/popper.min.js')}}"></script> -->
+  <script src="{{asset('front/js/popper.min.js')}}"></script>
   <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
   <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
   @if(request()->get('OpID') == mbc)
