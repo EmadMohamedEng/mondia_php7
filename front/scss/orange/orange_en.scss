@@ -163,6 +163,7 @@ select {
             background-color: transparent;
             margin-left: 12%;
             border: 0;
+            width: 100%;
 
             .dropdown-item {
               &.link_href {
@@ -961,7 +962,8 @@ select {
           width: 100%;
           height: 3.5rem;
           font-size: 1.2em;
-          margin-left: 4rem;
+          margin: 0 0 0 66%;
+          // margin-left: 4rem;
         }
 
         .facebook {
@@ -5810,6 +5812,34 @@ select {
             .card-title {
               font-size: 1.5rem;
             }
+          }
+        }
+      }
+    }
+
+    .list_muslim {
+      .content_carousel_head {
+        .link_title {
+          h6 {
+            font-size: 1.75rem;
+          }
+        }
+      }
+
+      .item {
+        width: 80%;
+        .card {
+          width: 60%;
+          margin: 0 auto;
+          .owl_content_img {
+            img {}
+          }
+        }
+
+        .card-body {
+          margin-top: 4%;
+          .card-title {
+            font-size: 1.5rem;
           }
         }
       }

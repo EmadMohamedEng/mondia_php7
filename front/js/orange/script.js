@@ -263,9 +263,6 @@ $(document).ready(function () {
   });
 });
 
-
-
-
 var map;
 var infowindow;
 var current_lat;
