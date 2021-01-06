@@ -1,6 +1,6 @@
 @font-face {
-  font-family: FSAlvar-Regular;
-  src: url("../../font/FSAlvar-Regular.otf");
+  font-family: DuCoHeadline200;
+  src: url("../../font/DuCoHeadline200.ttf");
 }
 html {
   height: 100%;
@@ -10,7 +10,7 @@ body {
   direction: rtl;
   height: 100%;
   width: 100%;
-  font-family: FSAlvar-Regular;
+  font-family: DuCoHeadline200;
   background: #f2f2f2;
   overflow-x: hidden;
 }
@@ -80,7 +80,7 @@ select:active {
   position: sticky;
   height: 4rem;
   padding: 1.1rem 1.75rem;
-  background: #4f008c;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
 }
 .main_container .header .header_logo {
   color: #FFF;
@@ -106,7 +106,7 @@ select:active {
   opacity: 1;
   position: absolute;
   top: 1rem;
-  left: 0;
+  left: 5%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -129,24 +129,27 @@ select:active {
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
   margin-bottom: 0;
-  color: #ff375e;
+  color: #000;
   text-align: right;
+}
+.main_container .menu_all_op .nav_nav .navbar_ul .nav_item_logo .link_href {
+  color: #000;
+  text-align: center;
+  display: block;
+  font-size: 1.25rem;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
   padding: 0.25rem 0.5rem;
-  color: #ff375e;
-}
-.main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .link_href {
-  color: #ff375e;
+  color: #000;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link {
   cursor: pointer;
-  color: #ff375e;
+  color: #000;
   text-align: right;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link svg {
   width: 15%;
-  fill: #ff375e;
+  fill: #00a9ce;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link.nav-link2 {
   padding: 0;
@@ -176,7 +179,7 @@ select:active {
   width: 100%;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:active, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:focus, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:hover {
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   margin-top: 0.5rem;
   border-radius: 8px;
@@ -193,7 +196,7 @@ select:active {
   position: relative;
 }
 .main_container .img_carousel .owl_one .item .owl_one_img img {
-  height: 18.885rem;
+  height: 12.59rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -204,9 +207,9 @@ select:active {
   border-bottom-right-radius: 10px;
 }
 .main_container .img_carousel .owl_one .item .btn_subscribe button {
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
-  width: 65%;
+  width: 80%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -219,7 +222,7 @@ select:active {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   position: absolute;
-  top: 92%;
+  top: 89%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -228,7 +231,7 @@ select:active {
 }
 .main_container .img_carousel .owl-theme .owl-dots .owl-dot.active span,
 .main_container .img_carousel .owl-theme .owl-dots .owl-dot:hover span {
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
 }
 .main_container .img_carousel .owl-dots {
   display: block;
@@ -247,7 +250,7 @@ select:active {
   text-align: right;
 }
 .main_container .content_carousel .content_carousel_head .btn_more {
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   border: 0;
   float: left;
@@ -392,7 +395,7 @@ select:active {
 }
 .main_container .list_page .coming_soon {
   color: #FFF;
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   width: 33%;
   cursor: not-allowed;
   border-radius: 8px;
@@ -467,7 +470,7 @@ select:active {
   width: 94%;
 }
 .main_container .inner_page .cover button {
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   border: 0;
   position: absolute;
@@ -515,7 +518,7 @@ select:active {
   width: 100%;
   height: 3.5rem;
   font-size: 1.2em;
-  margin-left: 4rem;
+  margin: 0 66% 0 0;
 }
 .main_container .inner_page .socail_media .shear_div .facebook {
   background: #4267B2;
@@ -591,7 +594,7 @@ select:active {
   margin-bottom: 0.5rem;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club .btn {
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   border: 0;
 }
@@ -606,7 +609,7 @@ select:active {
   justify-content: center;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn {
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   border: 0;
 }
@@ -618,10 +621,10 @@ select:active {
   box-shadow: 0 0 0 0.2rem #FFF;
 }
 .main_container #chooseAudio table {
-  border: 2px solid #ff375e;
+  border: 2px solid linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
 }
 .main_container #chooseAudio table th {
-  border-color: #ff375e;
+  border-color: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
 }
 .main_container .azan_page {
   margin-top: 3rem;
@@ -634,7 +637,7 @@ select:active {
   margin: 0 auto 2rem;
 }
 .main_container .azan_page .input_text .azan_input {
-  border: 2px solid #ff375e;
+  border: 2px solid linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   width: 100%;
   height: 3rem;
   text-align: center;
@@ -650,7 +653,7 @@ select:active {
   width: 50%;
 }
 .main_container .azan_page .azan_text .call_tone {
-  border: 2px solid #ff375e;
+  border: 2px solid linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   background: #FFF;
   width: 100%;
   height: 3rem;
@@ -669,7 +672,10 @@ select:active {
   margin-bottom: 1.5rem;
 }
 .main_container .nearmosque_page .nearmosque_title #map {
-  border: 5px solid #ff375e;
+  border: double 5px transparent;
+  background-image: linear-gradient(#00a9ce, #753bbd), linear-gradient(to right, #753bbd, #00a9ce);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
   height: 66vh;
   width: 90%;
   margin: 0 auto;
@@ -684,7 +690,10 @@ select:active {
   margin-bottom: 2rem;
 }
 .main_container .salah_time_page .time_btn {
-  border: 2px solid #ff375e;
+  border: 2px solid;
+  border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+  border-image-slice: 1;
+  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
   width: 100%;
   text-align: center;
   margin-bottom: 3%;
@@ -721,7 +730,7 @@ select:active {
   color: #FFF;
 }
 .main_container .subscribe_page .subscribe_bg .subtitle {
-  background-color: #ff375e;
+  background-color: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   border-radius: 7px 7px 0px 0px;
 }
 .main_container .subscribe_page .subscribe_bg .form-signin .account-wall input {
@@ -743,14 +752,20 @@ select:active {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.main_container .zakkah_page .zakah_zakah .form_zakah {
+  padding: 0;
+}
 .main_container .zakkah_page .zakah_zakah .form_zakah .field label {
   float: right;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value {
-  float: right;
+  float: left;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value input {
-  border: solid 2px #ff375e;
+  border: solid 2px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #753bbd, #00a9ce);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
   padding: 0.25rem 0.5rem;
   width: 100%;
   box-shadow: 2px 1000px 1px #FFF inset;
@@ -769,7 +784,10 @@ select:active {
   float: unset;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .actions button.button {
-  border: solid 2px #ff375e;
+  border: solid 2px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #753bbd, #00a9ce);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
   font-weight: bold;
   border-radius: 10px;
   padding: 7px 40px;
@@ -778,7 +796,7 @@ select:active {
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .actions button.button:hover {
   box-shadow: none;
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
 }
 .main_container .merath_page {
@@ -793,9 +811,12 @@ select:active {
   margin-bottom: 1rem;
 }
 .main_container .merath_page .input_text .merath_input {
-  border: 2px solid #ff375e;
+  border: 2px solid;
+  border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+  border-image-slice: 1;
+  background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #753bbd, #00a9ce);
   float: left;
-  width: 50%;
+  width: 60%;
   text-align: center;
   text-align-last: center;
   border-radius: 8px;
@@ -805,11 +826,11 @@ select:active {
   -o-border-radius: 8px;
 }
 .main_container .merath_page .input_span {
-  text-align: right;
+  text-align: left;
 }
 .main_container .merath_page .input_span h4 {
   line-height: 2.5rem;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   float: right;
 }
 .main_container .merath_page .input_span h4 .span_req {
@@ -821,7 +842,7 @@ select:active {
 }
 .main_container .merath_page .button_merath .merath_btn {
   width: 50%;
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   font-size: 1rem;
   font-weight: bold;
@@ -858,6 +879,12 @@ select:active {
   color: #000;
 }
 .main_container .sebha_page .display #tally {
+  border: 2px solid;
+  border-image-source: linear-gradient(50deg, #bd0ce9 40%, #00a9ce 60%);
+  border-image-slice: 1;
+  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
   width: 150px;
   height: 150px;
   margin: auto;
@@ -866,14 +893,16 @@ select:active {
   margin-bottom: 20px;
   color: black;
   border-radius: 50%;
-  border: 2px solid #ff375e;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
 .main_container .sebha_page .display .btn-bar button {
-  border: 2px solid #ff375e;
+  border: 2px solid;
+  border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+  border-image-slice: 1;
   width: 65%;
   height: 4.5rem;
   display: block;
@@ -904,7 +933,7 @@ select:active {
 }
 .main_container .sebha_page #sebhaModal .modal-content {
   background-color: #FFF;
-  right: 29%;
+  left: -29%;
 }
 .main_container .sebha_page .modal-header {
   border-bottom: 1px solid #f3e5b8;
@@ -920,7 +949,10 @@ select:active {
   color: black;
 }
 .main_container .sebha_page .choose_sebha {
-  border: 2px solid #ff375e;
+  border: 2px solid;
+  border-image-source: linear-gradient(45deg, #bd0ce9 40%, #00a9ce 60%);
+  background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to right, #753bbd, #00a9ce);
+  border-image-slice: 1;
   display: block;
   color: black;
   text-align: center;
@@ -933,7 +965,7 @@ select:active {
   -o-border-radius: 10px;
 }
 .main_container .sebha_page a:hover {
-  color: #ff375e;
+  color: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
 }
 .main_container .search_page {
   margin: 2.5rem auto;
@@ -956,7 +988,7 @@ select:active {
   text-align: center;
 }
 .main_container .search_page .form_search .textbox.input-middle + .bord {
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -1030,7 +1062,7 @@ select:active {
 }
 .main_container .error_page .buttons-con .action-link-wrap .link-button {
   width: 100%;
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   padding: 0.5rem 0.75rem;
   cursor: pointer;
@@ -1107,7 +1139,7 @@ select:active {
   border-width: 6px;
   position: fixed;
   bottom: 40%;
-  right: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -1118,8 +1150,8 @@ select:active {
   animation: spinner 1s linear infinite;
 }
 .loading-overlay .spinner-blue {
-  border-top-color: #ff375e;
-  border-left-color: #ff375e;
+  border-top-color: #09d;
+  border-left-color: #09d;
 }
 
 .alert .close {
@@ -1128,7 +1160,7 @@ select:active {
 
 .active_menu {
   margin-top: 0.25rem;
-  background: #ff375e;
+  background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
   color: #FFF;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -1174,7 +1206,7 @@ select:active {
     opacity: 1;
     position: fixed;
     top: 2.15rem;
-    right: -10%;
+    right: -11%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1197,14 +1229,11 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
     padding: 0.01rem 0.75rem;
   }
-  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo {
-    text-align: center;
-  }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0 0.25rem 2.3rem;
+    padding: 0.25rem 2.3rem 0.25rem 0;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100%;
@@ -1213,9 +1242,14 @@ select:active {
     margin-bottom: 1rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    color: #ff375e;
+    color: #00a9ce;
     font-size: 1rem;
-    float: left;
+    float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    width: 20%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -1292,7 +1326,7 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 95%;
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
@@ -1345,7 +1379,7 @@ select:active {
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
-    right: 0;
+    left: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1rem;
@@ -1410,7 +1444,7 @@ select:active {
     width: 95%;
     position: fixed;
     top: 57%;
-    right: 50% !important;
+    left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1453,7 +1487,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #ff375e;
+    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -1470,7 +1504,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #ff375e solid;
+    border: 2px linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%) solid;
     border-radius: 7px;
     direction: rtl;
   }
@@ -1543,7 +1577,7 @@ select:active {
     opacity: 1;
     position: fixed;
     top: 2.15rem;
-    right: -10%;
+    right: -9%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1570,19 +1604,23 @@ select:active {
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0 0.25rem 2.3rem;
+    padding: 0.25rem 2.3rem 0.25rem 0;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100%;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo {
     margin-bottom: 1rem;
-    text-align: center;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    color: #ff375e;
+    color: #00a9ce;
     font-size: 1rem;
-    float: left;
+    float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    width: 20%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -1659,7 +1697,7 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 95%;
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
@@ -1712,7 +1750,7 @@ select:active {
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
-    right: 0;
+    left: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1rem;
@@ -1777,7 +1815,7 @@ select:active {
     width: 95%;
     position: fixed;
     top: 57%;
-    right: 50% !important;
+    left: 50% !important;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1820,7 +1858,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #ff375e;
+    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -1837,7 +1875,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #ff375e solid;
+    border: 2px linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%) solid;
     border-radius: 7px;
     direction: rtl;
   }
@@ -1910,7 +1948,7 @@ select:active {
     opacity: 1;
     position: fixed;
     top: 2.15rem;
-    right: -10%;
+    right: -9%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1933,14 +1971,11 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
     padding: 0.01rem 0.75rem;
   }
-  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo {
-    text-align: center;
-  }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0 0.25rem 2.3rem;
+    padding: 0.25rem 2.3rem 0.25rem 0;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100%;
@@ -1949,9 +1984,14 @@ select:active {
     margin-bottom: 1rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    color: #ff375e;
+    color: #00a9ce;
     font-size: 1rem;
-    float: left;
+    float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    width: 20%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -2028,7 +2068,7 @@ select:active {
     padding: 0 0;
   }
   .main_container .inner_page .cover img {
-    width: 95%;
+    width: 100%;
     max-height: 20rem;
   }
   .main_container .inner_page .cover audio {
@@ -2081,7 +2121,7 @@ select:active {
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
-    right: 0;
+    left: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1rem;
@@ -2146,7 +2186,7 @@ select:active {
     width: 95%;
     position: fixed;
     top: 57%;
-    right: 50% !important;
+    left: 50% !important;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2192,7 +2232,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #ff375e;
+    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -2209,7 +2249,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #ff375e solid;
+    border: 2px linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%) solid;
     border-radius: 7px;
     direction: rtl;
   }
@@ -2282,7 +2322,7 @@ select:active {
     opacity: 1;
     position: fixed;
     top: 2.15rem;
-    right: -10%;
+    right: -8%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2309,19 +2349,23 @@ select:active {
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0 0.25rem 2.3rem;
+    padding: 0.25rem 2.3rem 0.25rem 0;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
     width: 100%;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo {
     margin-bottom: 1rem;
-    text-align: center;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    color: #ff375e;
+    color: #00a9ce;
     font-size: 1rem;
-    float: left;
+    float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    width: 25%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -2452,7 +2496,7 @@ select:active {
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
-    right: 0;
+    left: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1rem;
@@ -2518,7 +2562,7 @@ select:active {
     width: 95%;
     position: fixed;
     top: 57%;
-    right: 50% !important;
+    left: 50% !important;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2564,7 +2608,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #ff375e;
+    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -2581,7 +2625,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #ff375e solid;
+    border: 2px linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%) solid;
     border-radius: 7px;
     direction: rtl;
   }
@@ -2644,7 +2688,6 @@ select:active {
   .main_container .header .arrow_back {
     font-size: 1.75rem;
     top: 1.75rem;
-    left: 4%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -2694,7 +2737,7 @@ select:active {
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0 0.25rem 2.3rem;
+    padding: 0.25rem 3.3rem 0.25rem 0;
     font-size: 1.15rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
@@ -2702,15 +2745,16 @@ select:active {
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo {
     margin-bottom: 1rem;
-    text-align: center;
-  }
-  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .link_href {
-    font-size: 1.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    color: #ff375e;
+    color: #00a9ce;
     font-size: 1rem;
-    float: left;
+    float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    width: 25%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -2865,7 +2909,7 @@ select:active {
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
-    right: 0;
+    left: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1.25rem;
@@ -2934,7 +2978,7 @@ select:active {
     width: 75%;
     position: fixed;
     top: 50%;
-    right: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2991,7 +3035,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #ff375e;
+    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -3008,7 +3052,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #ff375e solid;
+    border: 2px linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%) solid;
     border-radius: 7px;
     direction: rtl;
   }
@@ -3074,7 +3118,6 @@ select:active {
   .main_container .header .arrow_back {
     font-size: 1.75rem;
     top: 1.75rem;
-    left: 4%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -3091,7 +3134,7 @@ select:active {
     opacity: 1;
     position: fixed;
     top: 2.75rem;
-    right: -3%;
+    right: -4%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -3124,7 +3167,7 @@ select:active {
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-    padding: 0.25rem 0 0.25rem 5rem;
+    padding: 0.25rem 5rem 0.25rem 0;
     font-size: 1.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item.dropdown-item2 {
@@ -3132,28 +3175,29 @@ select:active {
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo {
     margin-bottom: 1rem;
-    text-align: center;
-  }
-  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .link_href {
-    font-size: 1.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    color: #ff375e;
+    color: #00a9ce;
     font-size: 1.5rem;
     float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    width: 20%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
-    height: 31.5rem;
+    height: 21rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe {
     height: 4.5rem;
   }
   .main_container .img_carousel .owl_one .item .btn_subscribe button {
-    width: 65%;
-    top: 94%;
+    width: 75%;
+    top: 91%;
     font-size: 1.75rem;
   }
   .main_container .img_carousel .owl-theme .owl-dots .owl-dot span {
@@ -3298,7 +3342,7 @@ select:active {
   }
   .main_container .modal_cover .modal-dialog .modal-content {
     top: 2rem;
-    right: 0;
+    left: 0;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header h5 {
     font-size: 1.5rem;
@@ -3367,7 +3411,7 @@ select:active {
     width: 75%;
     position: fixed;
     top: 50%;
-    right: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -3424,7 +3468,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #ff375e;
+    background: linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%);
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -3441,7 +3485,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #ff375e solid;
+    border: 2px linear-gradient(to right, #00205b 0, #753bbd 30%, #00a9ce 60%) solid;
     border-radius: 7px;
     direction: rtl;
   }
@@ -3551,7 +3595,7 @@ select:active {
     height: 2.5rem !important;
   }
   .main_container .modal_cover .modal-dialog .modal-content {
-    right: 26%;
+    left: 26%;
   }
   .main_container .modal_cover .modal-dialog .modal-content .modal-header .modal-title {
     text-align: left !important;
@@ -3808,4 +3852,4 @@ select:active {
 }
 /* End Animation */
 
-/*# sourceMappingURL=stc_ar.css.map */
+/*# sourceMappingURL=ooredoo_ar.css.map */

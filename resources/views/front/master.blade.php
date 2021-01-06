@@ -26,8 +26,6 @@
   <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
-  <!-- <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}">
-  <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}"> -->
 
   @if(request()->get('OpID') == mbc)
   @include("front.operator.mbc.head")
@@ -137,6 +135,8 @@ $enable = get_setting('enable_testing');
   <script src="{{asset('front/js/omantel/script.js')}}"></script>
   @elseif(request()->get('OpID') == stc)
   <script src="{{asset('front/js/stc/script.js')}}"></script>
+  @elseif(request()->get('OpID') == ooredoo)
+  <script src="{{asset('front/js/ooredoo/script.js')}}"></script>
   @else
   <script src="{{asset('front/js/script.js')}}"></script>
   @endif
