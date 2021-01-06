@@ -1,4 +1,4 @@
-<header class="header w-100">
+<header class="header w-100 ">
   <div class="row">
     <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0">
       <div class="header_logo">
