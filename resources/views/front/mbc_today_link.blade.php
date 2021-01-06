@@ -67,35 +67,27 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
           <br>
           <br>
 
-          <div class="col-md-3 col-lg-3 col-xl-3 col-4 p-0">
+          <div class="col-md-4 col-lg-4 col-xl-4 col-4">
             <div class="shear_div">
-              <button class="btn facebook" onclick="location.href='https://www.facebook.com/sharer/sharer.php?{{urldecode(url("view_content/$content->id?OpID=14"))}}'">
+              <a class="btn facebook" href='https://www.facebook.com/sharer/sharer.php?{{urldecode(url("view_content/$content->id?OpID=14"))}}'>
                 <i class="fab fa-facebook-f"></i>
-              </button>
+              </a>
             </div>
           </div>
 
-          <div class="col-md-3 col-lg-3 col-xl-3 col-4 p-0">
+          <div class="col-md-4 col-lg-4 col-xl-4 col-4">
             <div class="shear_div">
-              <button class="btn twitter" onclick="location.href='https://www.twitter.com/intent/tweet?text={{urldecode(url("view_content/$content->id?OpID=14"))}}'">
+              <a class="btn twitter" href='https://www.twitter.com/intent/tweet?text={{urldecode(url("view_content/$content->id?OpID=14"))}}'>
                 <i class="fab fa-twitter"></i>
-              </button>
+              </a>
             </div>
           </div>
 
-          {{-- <div class="col-md-2 col-lg-2 col-xl-2 col-2 p-0">
-              <div class="shear_div">
-                <button class="btn messenger" onclick="location.href='{{}}'">
-          <i class="fab fa-instagram"></i>
-          </button>
-        </div>
-      </div> --}}
-
-      <div class="col-md-3 col-lg-3 col-xl-3 col-4 p-0">
+      <div class="col-md-4 col-lg-4 col-xl-4 col-4">
         <div class="shear_div">
-          <button class="btn whatsapp" onclick="location.href='https://api.whatsapp.com/send?text={{urlencode(url("view_content/$content->id?OpID=14"))}}'">
+          <a class="btn whatsapp" href='https://api.whatsapp.com/send?text={{urlencode(url("view_content/$content->id?OpID=14"))}}'>
             <i class="fab fa-whatsapp"></i>
-          </button>
+          </a>
         </div>
       </div>
     </div>

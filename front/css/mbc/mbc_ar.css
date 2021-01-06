@@ -683,18 +683,14 @@ select:active {
   margin-top: 1rem;
   color: #efc049;
 }
-.main_container .inner_page .socail_media .shear_div {
-  padding-right: 1rem;
-}
 .main_container .inner_page .socail_media .shear_div .facebook,
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
   color: #FFF;
   width: 100%;
-  height: 3.5rem;
+  height: 3rem;
   font-size: 1.2em;
-  margin: 0 66% 0 0;
 }
 .main_container .inner_page .socail_media .shear_div .facebook {
   background: #4267B2;

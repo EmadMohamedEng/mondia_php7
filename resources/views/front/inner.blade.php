@@ -94,35 +94,27 @@ if (session()->get('applocale') == 'ar') {
 <?php
 $opid = request()->get("OpID");
 ?>
-          <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
+          <div class="col-md-4 col-lg-4 col-xl-4 col-2">
             <div class="shear_div">
-              <button class="btn facebook" onclick="location.href='https://www.facebook.com/sharer/sharer.php?{{urldecode(url("view_content/$content->id?OpID=$opid"))}}'">
+              <a class="btn facebook" href='https://www.facebook.com/sharer/sharer.php?{{urldecode(url("view_content/$content->id?OpID=$opid"))}}'>
                 <i class="fab fa-facebook-f"></i>
-              </button>
+              </a>
             </div>
           </div>
 
-          <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
+          <div class="col-md-4 col-lg-4 col-xl-4 col-2">
             <div class="shear_div">
-              <button class="btn twitter" onclick="location.href='https://www.twitter.com/intent/tweet?text={{urldecode(url("view_content/$content->id?OpID=$opid"))}}'">
+              <a class="btn twitter" href='https://www.twitter.com/intent/tweet?text={{urldecode(url("view_content/$content->id?OpID=$opid"))}}'>
                 <i class="fab fa-twitter"></i>
-              </button>
+              </a>
             </div>
           </div>
 
-          {{-- <div class="col-md-2 col-lg-2 col-xl-2 col-2 p-0">
-              <div class="shear_div">
-                <button class="btn messenger" onclick="location.href='{{}}'">
-          <i class="fab fa-instagram"></i>
-          </button>
-        </div>
-      </div> --}}
-
-      <div class="col-md-3 col-lg-3 col-xl-3 col-2 p-0">
+      <div class="col-md-4 col-lg-4 col-xl-4 col-2">
         <div class="shear_div">
-          <button class="btn whatsapp" onclick="location.href='https://api.whatsapp.com/send?text={{urldecode(url("view_content/$content->id?OpID=$opid"))}}'">
+          <a class="btn whatsapp" href='https://api.whatsapp.com/send?text={{urldecode(url("view_content/$content->id?OpID=$opid"))}}'>
             <i class="fab fa-whatsapp"></i>
-          </button>
+          </a>
         </div>
       </div>
     </div>
