@@ -2017,7 +2017,7 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
-    width: 95%;
+    width: 100%;
     height: 2.75rem;
     margin-top: 0;
   }
@@ -2366,7 +2366,7 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
-    width: 95%;
+    width: 100%;
     height: 2.75rem;
     margin-top: 0;
   }
