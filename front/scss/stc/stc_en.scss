@@ -627,6 +627,8 @@ select {
       }
 
       .shear_div {
+        padding-right: 1rem;
+
         .facebook,
         .twitter,
         .messenger,
@@ -1719,12 +1721,9 @@ select {
       }
 
       .socail_media {
-        width: 100%;
-        margin-bottom: 1rem;
+        width: 80%;
 
-        .pa_share {
-          margin-top: 0.5rem;
-        }
+        .pa_share {}
 
         .shear_div {
           padding-right: 0;
@@ -1733,10 +1732,9 @@ select {
           .twitter,
           .messenger,
           .whatsapp {
-            width: 90%;
+            width: 100%;
             height: 2.75rem;
-            margin-left: 0.5rem;
-            margin-top: 0.75rem;
+            margin-top: 0;
           }
         }
       }
@@ -2270,8 +2268,7 @@ select {
       }
 
       .socail_media {
-        width: 100%;
-        margin-bottom: 1rem;
+        width: 75%;
 
         .pa_share {
           margin-top: 0.5rem;
@@ -2284,10 +2281,9 @@ select {
           .twitter,
           .messenger,
           .whatsapp {
-            width: 90%;
+            width: 100%;
             height: 2.75rem;
-            margin-left: 0.5rem;
-            margin-top: 0.75rem;
+            margin-top: 0;
           }
         }
       }
@@ -2824,8 +2820,7 @@ select {
       }
 
       .socail_media {
-        width: 100%;
-        margin-bottom: 1rem;
+        width: 75%;
 
         .pa_share {
           margin-top: 0.5rem;
@@ -2838,10 +2833,9 @@ select {
           .twitter,
           .messenger,
           .whatsapp {
-            width: 90%;
+            width: 100%;
             height: 2.75rem;
-            margin-left: 0.5rem;
-            margin-top: 0.75rem;
+            margin-top: 0;
           }
         }
       }
@@ -3382,8 +3376,7 @@ select {
       }
 
       .socail_media {
-        width: 100%;
-        margin-bottom: 1rem;
+        width: 75%;
 
         .pa_share {
           margin-top: 0.5rem;
@@ -3396,10 +3389,9 @@ select {
           .twitter,
           .messenger,
           .whatsapp {
-            width: 90%;
+            width: 100%;
             height: 2.75rem;
-            margin-left: 0.5rem;
-            margin-top: 0.75rem;
+            margin-top: 0;
           }
         }
       }
@@ -3990,27 +3982,20 @@ select {
       }
 
       .socail_media {
-        width: 100%;
-        margin-bottom: 1rem;
-
         .pa_share {
           margin-top: 0.5rem;
-          font-size: 1.25rem;
         }
 
         .shear_div {
           padding-right: 0;
-          margin: 0 auto;
-          width: 50%;
 
           .facebook,
           .twitter,
           .messenger,
           .whatsapp {
-            width: 90%;
+            width: 95%;
             height: 2.75rem;
-            margin-left: 0.5rem;
-            margin-top: 0.75rem;
+            margin-top: 0;
           }
         }
       }
@@ -4632,27 +4617,22 @@ select {
       }
 
       .socail_media {
-        width: 100%;
-        margin-bottom: 1rem;
-
         .pa_share {
-          margin-top: 0.5rem;
           font-size: 1.5rem;
+          margin-top: 0.5rem;
         }
 
         .shear_div {
           padding-right: 0;
-          margin: 0 auto;
-          width: 50%;
 
           .facebook,
           .twitter,
           .messenger,
           .whatsapp {
-            width: 90%;
-            height: 2.75rem;
-            margin-left: 0.5rem;
-            margin-top: 0.75rem;
+            width: 95%;
+            height: 4rem;
+            margin-top: 0;
+            line-height: 2.5;
           }
         }
       }
