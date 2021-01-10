@@ -2007,6 +2007,9 @@ select:active {
   .main_container .inner_page .poster .poster-details .outside-cover {
     font-size: 0.7rem;
   }
+  .main_container .inner_page .socail_media {
+    width: 80%;
+  }
   .main_container .inner_page .socail_media .shear_div {
     padding-right: 0;
   }
@@ -2016,7 +2019,6 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .whatsapp {
     width: 95%;
     height: 2.75rem;
-    margin-left: 0.5rem;
     margin-top: 0;
   }
   .main_container .inner_page .section_content .pa_Videos {
@@ -2351,6 +2353,9 @@ select:active {
   .main_container .inner_page .poster .poster-details .outside-cover {
     font-size: 0.7rem;
   }
+  .main_container .inner_page .socail_media {
+    width: 75%;
+  }
   .main_container .inner_page .socail_media .pa_share {
     margin-top: 0.5rem;
   }
@@ -2363,7 +2368,6 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .whatsapp {
     width: 95%;
     height: 2.75rem;
-    margin-left: 0.5rem;
     margin-top: 0;
   }
   .main_container .inner_page .section_content .pa_Videos {
@@ -2699,6 +2703,9 @@ select:active {
     font-size: 0.7rem;
     margin-bottom: 1rem;
   }
+  .main_container .inner_page .socail_media {
+    width: 75%;
+  }
   .main_container .inner_page .socail_media .pa_share {
     margin-top: 0.5rem;
   }
@@ -2709,9 +2716,8 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
-    width: 95%;
+    width: 100%;
     height: 2.75rem;
-    margin-left: 0.5rem;
     margin-top: 0;
   }
   .main_container .inner_page .section_content .pa_Videos {
@@ -3047,6 +3053,9 @@ select:active {
     font-size: 0.7rem;
     margin-bottom: 1rem;
   }
+  .main_container .inner_page .socail_media {
+    width: 75%;
+  }
   .main_container .inner_page .socail_media .pa_share {
     margin-top: 0.5rem;
   }
@@ -3057,9 +3066,8 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
-    width: 95%;
+    width: 100%;
     height: 2.75rem;
-    margin-left: 0.5rem;
     margin-top: 0;
   }
   .main_container .inner_page .section_content .pa_Videos {
@@ -3419,7 +3427,6 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .whatsapp {
     width: 95%;
     height: 2.75rem;
-    margin-left: 0.5rem;
     margin-top: 0;
   }
   .main_container .inner_page .section_content .pa_Videos {
@@ -3792,9 +3799,9 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
     width: 95%;
-    height: 2.75rem;
-    margin-left: 0.5rem;
+    height: 4rem;
     margin-top: 0;
+    line-height: 2.5;
   }
   .main_container .inner_page .section_content .pa_Videos {
     font-size: 1.5rem;

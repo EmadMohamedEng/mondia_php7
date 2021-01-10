@@ -2575,6 +2575,7 @@ select {
       }
 
       .socail_media {
+        width: 80%;
         .pa_share {}
 
         .shear_div {
@@ -2584,9 +2585,8 @@ select {
           .twitter,
           .messenger,
           .whatsapp {
-            width: 95%;
+            width: 100%;
             height: 2.75rem;
-            margin-left: 0.5rem;
             margin-top: 0;
           }
         }
@@ -3189,6 +3189,7 @@ select {
       }
 
       .socail_media {
+        width: 75%;
         .pa_share {
           margin-top: 0.5rem;
         }
@@ -3200,9 +3201,8 @@ select {
           .twitter,
           .messenger,
           .whatsapp {
-            width: 95%;
+            width: 100%;
             height: 2.75rem;
-            margin-left: 0.5rem;
             margin-top: 0;
           }
         }
@@ -3806,6 +3806,7 @@ select {
       }
 
       .socail_media {
+        width: 75%;
         .pa_share {
           margin-top: 0.5rem;
         }
@@ -3817,9 +3818,8 @@ select {
           .twitter,
           .messenger,
           .whatsapp {
-            width: 95%;
+            width: 100%;
             height: 2.75rem;
-            margin-left: 0.5rem;
             margin-top: 0;
           }
         }
@@ -4423,6 +4423,7 @@ select {
       }
 
       .socail_media {
+        width: 75%;
         .pa_share {
           margin-top: 0.5rem;
         }
@@ -4434,9 +4435,8 @@ select {
           .twitter,
           .messenger,
           .whatsapp {
-            width: 95%;
+            width: 100%;
             height: 2.75rem;
-            margin-left: 0.5rem;
             margin-top: 0;
           }
         }
@@ -5065,7 +5065,6 @@ select {
           .whatsapp {
             width: 95%;
             height: 2.75rem;
-            margin-left: 0.5rem;
             margin-top: 0;
           }
         }
@@ -5697,9 +5696,9 @@ select {
           .messenger,
           .whatsapp {
             width: 95%;
-            height: 2.75rem;
-            margin-left: 0.5rem;
+            height: 4rem;
             margin-top: 0;
+            line-height: 2.5;
           }
         }
       }
