@@ -790,18 +790,14 @@ select:active {
   margin-top: 1rem;
   color: #FF6600;
 }
-.main_container .inner_page .socail_media .shear_div {
-  padding-right: 1rem;
-}
 .main_container .inner_page .socail_media .shear_div .facebook,
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
   color: #FFF;
   width: 100%;
-  height: 3.5rem;
+  height: 3rem;
   font-size: 1.2em;
-  margin: 0 66% 0 0;
 }
 .main_container .inner_page .socail_media .shear_div .facebook {
   background: #4267B2;
@@ -1905,10 +1901,7 @@ select:active {
     font-size: 0.7rem;
   }
   .main_container .inner_page .socail_media {
-    width: 100%;
-  }
-  .main_container .inner_page .socail_media .pa_share {
-    margin-top: 0.75rem;
+    width: 80%;
   }
   .main_container .inner_page .socail_media .shear_div {
     padding-right: 0;
@@ -1917,10 +1910,9 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
-    width: 90%;
+    width: 100%;
     height: 2.75rem;
-    margin-left: 0.5rem;
-    margin-top: 0.75rem;
+    margin-top: 0;
   }
   .main_container .inner_page .section_content .pa_Videos {
     margin-top: 0.75rem;
@@ -2376,10 +2368,10 @@ select:active {
     font-size: 0.7rem;
   }
   .main_container .inner_page .socail_media {
-    width: 100%;
+    width: 75%;
   }
   .main_container .inner_page .socail_media .pa_share {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
   }
   .main_container .inner_page .socail_media .shear_div {
     padding-right: 0;
@@ -2388,10 +2380,9 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
-    width: 90%;
+    width: 100%;
     height: 2.75rem;
-    margin-left: 0.5rem;
-    margin-top: 0.75rem;
+    margin-top: 0;
   }
   .main_container .inner_page .section_content .pa_Videos {
     margin-top: 0.75rem;
@@ -2854,10 +2845,10 @@ select:active {
     font-size: 0.7rem;
   }
   .main_container .inner_page .socail_media {
-    width: 100%;
+    width: 75%;
   }
   .main_container .inner_page .socail_media .pa_share {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
   }
   .main_container .inner_page .socail_media .shear_div {
     padding-right: 0;
@@ -2866,10 +2857,9 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
-    width: 90%;
+    width: 100%;
     height: 2.75rem;
-    margin-left: 0.5rem;
-    margin-top: 0.75rem;
+    margin-top: 0;
   }
   .main_container .inner_page .section_content .pa_Videos {
     margin-top: 0.75rem;
@@ -3327,10 +3317,10 @@ select:active {
     font-size: 0.7rem;
   }
   .main_container .inner_page .socail_media {
-    width: 100%;
+    width: 75%;
   }
   .main_container .inner_page .socail_media .pa_share {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
   }
   .main_container .inner_page .socail_media .shear_div {
     padding-right: 0;
@@ -3339,10 +3329,9 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
-    width: 90%;
+    width: 100%;
     height: 2.75rem;
-    margin-left: 0.5rem;
-    margin-top: 0.75rem;
+    margin-top: 0;
   }
   .main_container .inner_page .section_content .pa_Videos {
     margin-top: 0.75rem;
@@ -3813,11 +3802,8 @@ select:active {
   .main_container .inner_page .poster .poster-details .outside-cover {
     font-size: 0.7rem;
   }
-  .main_container .inner_page .socail_media {
-    width: 100%;
-  }
   .main_container .inner_page .socail_media .pa_share {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
   }
   .main_container .inner_page .socail_media .shear_div {
     padding-right: 0;
@@ -3826,10 +3812,9 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
-    width: 90%;
+    width: 95%;
     height: 2.75rem;
-    margin-left: 0.5rem;
-    margin-top: 0.75rem;
+    margin-top: 0;
   }
   .main_container .inner_page .section_content .pa_Videos {
     margin-top: 0.75rem;
@@ -4328,12 +4313,9 @@ select:active {
   .main_container .inner_page .poster .poster-details .outside-cover {
     font-size: 1.25rem;
   }
-  .main_container .inner_page .socail_media {
-    width: 100%;
-  }
   .main_container .inner_page .socail_media .pa_share {
-    margin-top: 0.75rem;
     font-size: 1.5rem;
+    margin-top: 0.5rem;
   }
   .main_container .inner_page .socail_media .shear_div {
     padding-right: 0;
@@ -4342,11 +4324,10 @@ select:active {
 .main_container .inner_page .socail_media .shear_div .twitter,
 .main_container .inner_page .socail_media .shear_div .messenger,
 .main_container .inner_page .socail_media .shear_div .whatsapp {
-    width: 60%;
-    height: 5rem;
-    margin-left: 5.5rem;
-    margin-top: 0.75rem;
-    font-size: 2.25rem;
+    width: 95%;
+    height: 4rem;
+    margin-top: 0;
+    line-height: 2.5;
   }
   .main_container .inner_page .section_content .pa_Videos {
     margin-top: 0.75rem;

@@ -65,7 +65,7 @@ $opid = request()->get("OpID");
               <div>@lang('front.share'): </div>
             </div>
           </div>
-          <div class="col-md-4 col-lg-4 col-xl-4 col-2">
+          <div class="col-md-4 col-lg-4 col-xl-4 col-4">
             <div class="shear_div">
               <a class="btn facebook" href='https://www.facebook.com/sharer/sharer.php?{{urldecode(url("view_content/$content->id?OpID=$opid"))}}'>
                 <i class="fab fa-facebook-f"></i>
@@ -73,7 +73,7 @@ $opid = request()->get("OpID");
             </div>
           </div>
 
-          <div class="col-md-4 col-lg-4 col-xl-4 col-2">
+          <div class="col-md-4 col-lg-4 col-xl-4 col-4">
             <div class="shear_div">
               <a class="btn twitter" href='https://www.twitter.com/intent/tweet?text={{urldecode(url("view_content/$content->id?OpID=$opid"))}}'>
                 <i class="fab fa-twitter"></i>
@@ -81,7 +81,7 @@ $opid = request()->get("OpID");
             </div>
           </div>
 
-      <div class="col-md-4 col-lg-4 col-xl-4 col-2">
+      <div class="col-md-4 col-lg-4 col-xl-4 col-4">
         <div class="shear_div">
           <a class="btn whatsapp" href='https://api.whatsapp.com/send?text={{urldecode(url("view_content/$content->id?OpID=$opid"))}}'>
             <i class="fab fa-whatsapp"></i>
