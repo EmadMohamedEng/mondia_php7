@@ -79,7 +79,7 @@ $opid = request()->get("OpID");
 ?>
           <div class="col-md-4 col-lg-4 col-xl-4 col-4">
             <div class="shear_div">
-              <button class="btn facebook" href='https://www.facebook.com/sharer/sharer.php?{{urldecode(url("view_content/$content->id?OpID=$opid"))}}'>
+              <button class="btn facebook" onclick="location.href='https://www.facebook.com/sharer/sharer.php?{{urldecode(url("view_content/$content->id?OpID=$opid"))}}'">
                 <i class="fab fa-facebook-f"></i>
               </button>
             </div>
@@ -87,7 +87,7 @@ $opid = request()->get("OpID");
 
           <div class="col-md-4 col-lg-4 col-xl-4 col-4">
             <div class="shear_div">
-              <button class="btn twitter" href='https://www.twitter.com/intent/tweet?text={{urldecode(url("view_content/$content->id?OpID=$opid"))}}'>
+              <button class="btn twitter" onclick="location.href='https://www.twitter.com/intent/tweet?text={{urldecode(url("view_content/$content->id?OpID=$opid"))}}'">
                 <i class="fab fa-twitter"></i>
               </button>
             </div>
@@ -95,7 +95,7 @@ $opid = request()->get("OpID");
 
       <div class="col-md-4 col-lg-4 col-xl-4 col-4">
         <div class="shear_div">
-          <button class="btn whatsapp" href='https://api.whatsapp.com/send?text={{urldecode(url("view_content/$content->id?OpID=$opid"))}}'>
+          <button class="btn whatsapp" onclick="location.href='https://api.whatsapp.com/send?text={{urldecode(url("view_content/$content->id?OpID=$opid"))}}'">
             <i class="fab fa-whatsapp"></i>
           </button>
         </div>
