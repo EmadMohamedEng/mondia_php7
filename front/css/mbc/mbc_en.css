@@ -1463,7 +1463,7 @@ select:active {
 }
 .main_container .terms_page .ul_terms {
   font-size: 0.85rem !important;
-  color: #efc049 !important;
+  color: #FFF;
 }
 .main_container .list_filter .card_title h6 {
   color: #efc049;
@@ -1480,6 +1480,7 @@ select:active {
   -o-border-radius: 1rem;
 }
 .main_container .list_filter .card .owl_content_img img {
+  height: 11rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   border-bottom-left-radius: 0;
@@ -1511,6 +1512,7 @@ select:active {
   -o-border-radius: 1rem;
 }
 .main_container .inner_filter .card .owl_content_img img {
+  height: 31.357rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   border-bottom-left-radius: 0;
@@ -2056,9 +2058,15 @@ select:active {
   .main_container .profile .profile_card .item .card .owl_content_img img {
     height: 8.875rem;
   }
+  .main_container .list_filter .card .owl_content_img img {
+    height: 9.375rem;
+  }
   .main_container .inner_filter .no_padding {
     padding-right: 0;
     padding-left: 0;
+  }
+  .main_container .inner_filter .card .owl_content_img img {
+    height: 18.113rem;
   }
   .main_container .inner_filter #modalShare .modal-dialog .modal-content {
     width: 95%;
@@ -2409,9 +2417,15 @@ select:active {
   .main_container .profile .profile_card .item .card .owl_content_img img {
     height: 8.875rem;
   }
+  .main_container .list_filter .card .owl_content_img img {
+    height: 10.125rem;
+  }
   .main_container .inner_filter .no_padding {
     padding-right: 0;
     padding-left: 0;
+  }
+  .main_container .inner_filter .card .owl_content_img img {
+    height: 20.396rem;
   }
   .main_container .inner_filter #modalShare .modal-dialog .modal-content {
     width: 95%;
@@ -2763,9 +2777,15 @@ select:active {
   .main_container .profile .profile_card .item .card .owl_content_img img {
     height: 8.875rem;
   }
+  .main_container .list_filter .card .owl_content_img img {
+    height: 11.438rem;
+  }
   .main_container .inner_filter .no_padding {
     padding-right: 0;
     padding-left: 0;
+  }
+  .main_container .inner_filter .card .owl_content_img img {
+    height: 21.253rem;
   }
   .main_container .inner_filter #modalShare .modal-dialog .modal-content {
     width: 95%;
@@ -3117,9 +3137,15 @@ select:active {
   .main_container .profile .profile_card .item .card .owl_content_img img {
     height: 8.875rem;
   }
+  .main_container .list_filter .card .owl_content_img img {
+    height: 12.219rem;
+  }
   .main_container .inner_filter .no_padding {
     padding-right: 0;
     padding-left: 0;
+  }
+  .main_container .inner_filter .card .owl_content_img img {
+    height: 23.307rem;
   }
   .main_container .inner_filter #modalShare .modal-dialog .modal-content {
     width: 95%;
@@ -3479,9 +3505,21 @@ select:active {
   .main_container .profile .profile_card .item .card .owl_content_img img {
     height: 8.875rem;
   }
+  .main_container .list_filter .card .owl_content_img img {
+    height: 15.208rem;
+  }
+  .main_container .list_filter .card .card-body .card-title {
+    font-size: 1rem;
+  }
   .main_container .inner_filter .no_padding {
     padding-right: 0;
     padding-left: 0;
+  }
+  .main_container .inner_filter .card {
+    margin-bottom: 8%;
+  }
+  .main_container .inner_filter .card .owl_content_img img {
+    height: 48.555rem;
   }
   .main_container .inner_filter #modalShare .modal-dialog .modal-content {
     width: 95%;
@@ -3849,9 +3887,21 @@ select:active {
   .main_container .profile .profile_card .item .card .owl_content_img img {
     height: 8.875rem;
   }
+  .main_container .list_filter .card .owl_content_img img {
+    height: 20.375rem;
+  }
+  .main_container .list_filter .card .card-body .card-title {
+    font-size: 1.5rem;
+  }
   .main_container .inner_filter .no_padding {
     padding-right: 0;
     padding-left: 0;
+  }
+  .main_container .inner_filter .card {
+    margin-bottom: 8%;
+  }
+  .main_container .inner_filter .card .owl_content_img img {
+    height: 36.38rem;
   }
   .main_container .inner_filter #modalShare .modal-dialog .modal-content {
     width: 95%;
