@@ -2053,9 +2053,6 @@ select:active {
   .main_container .search_page .form_search .btn_search {
     font-size: 0.75rem;
   }
-  .main_container .search_page .textbox {
-    text-align: center;
-  }
   .main_container .error_page {
     margin: 0 auto 0 0;
   }
@@ -2519,9 +2516,6 @@ select:active {
   }
   .main_container .search_page {
     margin: 0.5rem auto;
-  }
-  .main_container .search_page .textbox {
-    text-align: center;
   }
   .main_container .error_page {
     margin: 0 auto 0 0;
@@ -2997,9 +2991,6 @@ select:active {
   .main_container .search_page {
     margin: 0.5rem auto;
   }
-  .main_container .search_page .textbox {
-    text-align: center;
-  }
   .main_container .error_page {
     margin: 0 auto 0 0;
   }
@@ -3468,9 +3459,6 @@ select:active {
   }
   .main_container .search_page {
     margin: 0.5rem auto;
-  }
-  .main_container .search_page .textbox {
-    text-align: center;
   }
   .main_container .error_page {
     margin: 0 auto 0 0;
@@ -3965,9 +3953,6 @@ select:active {
   }
   .main_container .search_page {
     margin: 1.5rem auto;
-  }
-  .main_container .search_page .textbox {
-    text-align: center;
   }
   .main_container .error_page {
     margin: 0 auto 0 0;
