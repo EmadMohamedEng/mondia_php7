@@ -844,6 +844,9 @@ select:active {
   font-size: 1.25rem;
 }
 .main_container .merath_page .table_table .table tbody tr .td_1 {
+  text-align: left;
+}
+.main_container .merath_page .table_table .table tbody tr .td_2 {
   text-align: right;
 }
 .main_container .sebha_page {
@@ -1484,8 +1487,8 @@ select:active {
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr .td_1 {
-    text-align: right;
+  .main_container .merath_page .table_table .table tbody tr .td_1,
+.main_container .merath_page .table_table .table tbody tr .td_2 {
     font-size: 0.85rem;
   }
   .main_container .search_page {
@@ -1854,8 +1857,8 @@ select:active {
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr .td_1 {
-    text-align: right;
+  .main_container .merath_page .table_table .table tbody tr .td_1,
+.main_container .merath_page .table_table .table tbody tr .td_2 {
     font-size: 0.85rem;
   }
   .main_container .search_page {
@@ -2227,8 +2230,8 @@ select:active {
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr .td_1 {
-    text-align: right;
+  .main_container .merath_page .table_table .table tbody tr .td_1,
+.main_container .merath_page .table_table .table tbody tr .td_2 {
     font-size: 0.85rem;
   }
   .main_container .search_page {
@@ -2602,8 +2605,8 @@ select:active {
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr .td_1 {
-    text-align: right;
+  .main_container .merath_page .table_table .table tbody tr .td_1,
+.main_container .merath_page .table_table .table tbody tr .td_2 {
     font-size: 0.85rem;
   }
   .main_container .search_page {
@@ -3021,8 +3024,8 @@ select:active {
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr .td_1 {
-    text-align: right;
+  .main_container .merath_page .table_table .table tbody tr .td_1,
+.main_container .merath_page .table_table .table tbody tr .td_2 {
     font-size: 0.85rem;
   }
   .main_container .search_page {
@@ -3448,8 +3451,8 @@ select:active {
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr .td_1 {
-    text-align: right;
+  .main_container .merath_page .table_table .table tbody tr .td_1,
+.main_container .merath_page .table_table .table tbody tr .td_2 {
     font-size: 0.85rem;
   }
   .main_container .search_page {

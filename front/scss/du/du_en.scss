@@ -1097,6 +1097,10 @@ select {
             }
 
             .td_1 {
+              text-align: left;
+            }
+
+            .td_2 {
               text-align: right;
             }
           }
@@ -1982,8 +1986,8 @@ select {
             tr {
               // td {}
 
-              .td_1 {
-                text-align: right;
+              .td_1,
+              .td_2 {
                 font-size: 0.85rem;
               }
             }
@@ -2539,8 +2543,8 @@ select {
             tr {
               // td {}
 
-              .td_1 {
-                text-align: right;
+              .td_1,
+              .td_2 {
                 font-size: 0.85rem;
               }
             }
@@ -3102,8 +3106,8 @@ select {
             tr {
               // td {}
 
-              .td_1 {
-                text-align: right;
+              .td_1,
+              .td_2 {
                 font-size: 0.85rem;
               }
             }
@@ -3667,8 +3671,8 @@ select {
             tr {
               // td {}
 
-              .td_1 {
-                text-align: right;
+              .td_1,
+              .td_2 {
                 font-size: 0.85rem;
               }
             }
@@ -4297,8 +4301,8 @@ select {
             tr {
               // td {}
 
-              .td_1 {
-                text-align: right;
+              .td_1,
+              .td_2 {
                 font-size: 0.85rem;
               }
             }
@@ -4937,8 +4941,8 @@ select {
             tr {
               // td {}
 
-              .td_1 {
-                text-align: right;
+              .td_1,
+              .td_2 {
                 font-size: 0.85rem;
               }
             }
