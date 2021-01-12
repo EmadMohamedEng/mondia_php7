@@ -844,6 +844,9 @@ select:active {
 .main_container .merath_page .table_table .table tbody tr .td_1 {
   text-align: right;
 }
+.main_container .merath_page .table_table .table tbody tr .td_2 {
+  text-align: left;
+}
 .main_container .sebha_page {
   width: 70%;
   margin: 3.5rem auto;
@@ -1386,12 +1389,12 @@ select:active {
   .main_container .salah_time_page .time_btn .h4_time {
     line-height: 3rem;
     font-size: 1rem;
-    padding: 0 0 0 5px;
+    padding: 0 5px 0 0;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     line-height: 3rem;
     font-size: 1rem;
-    padding: 0 5px 0 0;
+    padding: 0 0 0 5px;
   }
   .main_container .sebha_page .display .btn-bar button {
     width: 100%;
@@ -1468,8 +1471,8 @@ select:active {
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr .td_1 {
-    text-align: right;
+  .main_container .merath_page .table_table .table tbody tr .td_1,
+.main_container .merath_page .table_table .table tbody tr .td_2 {
     font-size: 0.85rem;
   }
   .main_container .search_page {
@@ -1751,12 +1754,12 @@ select:active {
   .main_container .salah_time_page .time_btn .h4_time {
     line-height: 3rem;
     font-size: 1rem;
-    padding: 0 0 0 5px;
+    padding: 0 5px 0 0;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     line-height: 3rem;
     font-size: 1rem;
-    padding: 0 5px 0 0;
+    padding: 0 0 0 5px;
   }
   .main_container .sebha_page .display .btn-bar button {
     width: 100%;
@@ -1833,8 +1836,8 @@ select:active {
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr .td_1 {
-    text-align: right;
+  .main_container .merath_page .table_table .table tbody tr .td_1,
+.main_container .merath_page .table_table .table tbody tr .td_2 {
     font-size: 0.85rem;
   }
   .main_container .search_page {
@@ -2118,12 +2121,12 @@ select:active {
   .main_container .salah_time_page .time_btn .h4_time {
     line-height: 3rem;
     font-size: 1rem;
-    padding: 0 0 0 5px;
+    padding: 0 5px 0 0;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     line-height: 3rem;
     font-size: 1rem;
-    padding: 0 5px 0 0;
+    padding: 0 0 0 5px;
   }
   .main_container .sebha_page .display .btn-bar button {
     width: 100%;
@@ -2203,8 +2206,8 @@ select:active {
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr .td_1 {
-    text-align: right;
+  .main_container .merath_page .table_table .table tbody tr .td_1,
+.main_container .merath_page .table_table .table tbody tr .td_2 {
     font-size: 0.85rem;
   }
   .main_container .search_page {
@@ -2488,12 +2491,12 @@ select:active {
   .main_container .salah_time_page .time_btn .h4_time {
     line-height: 3rem;
     font-size: 1rem;
-    padding: 0 0 0 5px;
+    padding: 0 5px 0 0;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     line-height: 3rem;
     font-size: 1rem;
-    padding: 0 5px 0 0;
+    padding: 0 0 0 5px;
   }
   .main_container .sebha_page .display .btn-bar button {
     width: 100%;
@@ -2573,8 +2576,8 @@ select:active {
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr .td_1 {
-    text-align: right;
+  .main_container .merath_page .table_table .table tbody tr .td_1,
+.main_container .merath_page .table_table .table tbody tr .td_2 {
     font-size: 0.85rem;
   }
   .main_container .search_page {
@@ -2896,12 +2899,12 @@ select:active {
   .main_container .salah_time_page .time_btn .h4_time {
     line-height: 3rem;
     font-size: 1.25rem;
-    padding: 0 0 0 10px;
+    padding: 0 10px 0 0;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     line-height: 3rem;
     font-size: 1.25rem;
-    padding: 0 10px 0 0;
+    padding: 0 0 0 10px;
   }
   .main_container .sebha_page {
     margin: 8rem auto;
@@ -2992,8 +2995,8 @@ select:active {
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr .td_1 {
-    text-align: right;
+  .main_container .merath_page .table_table .table tbody tr .td_1,
+.main_container .merath_page .table_table .table tbody tr .td_2 {
     font-size: 0.85rem;
   }
   .main_container .search_page {
@@ -3323,12 +3326,12 @@ select:active {
   .main_container .salah_time_page .time_btn .h4_time {
     line-height: 3rem;
     font-size: 1.75rem;
-    padding: 0 0 0 10px;
+    padding: 0 10px 0 0;
   }
   .main_container .salah_time_page .time_btn .h4_time_2 {
     line-height: 3rem;
     font-size: 1.75rem;
-    padding: 0 10px 0 0;
+    padding: 0 0 0 10px;
   }
   .main_container .sebha_page {
     margin: 8rem auto;
@@ -3419,8 +3422,8 @@ select:active {
     border-radius: 7px;
     direction: rtl;
   }
-  .main_container .merath_page .table_table .table tbody tr .td_1 {
-    text-align: right;
+  .main_container .merath_page .table_table .table tbody tr .td_1,
+.main_container .merath_page .table_table .table tbody tr .td_2 {
     font-size: 0.85rem;
   }
   .main_container .search_page {

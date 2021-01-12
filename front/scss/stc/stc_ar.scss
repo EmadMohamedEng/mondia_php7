@@ -1100,6 +1100,10 @@ select {
             .td_1 {
               text-align: right;
             }
+
+            .td_2 {
+              text-align: left;
+            }
           }
         }
       }
@@ -1843,13 +1847,13 @@ select {
         .h4_time {
           line-height: 3rem;
           font-size: 1rem;
-          padding: 0 0 0 5px;
+          padding: 0 5px 0 0;
         }
-
+        
         .h4_time_2 {
           line-height: 3rem;
           font-size: 1rem;
-          padding: 0 5px 0 0;
+          padding: 0 0 0 5px;
         }
       }
     }
@@ -1967,8 +1971,8 @@ select {
             tr {
               // td {}
 
-              .td_1 {
-                text-align: right;
+              .td_1,
+              .td_2 {
                 font-size: 0.85rem;
               }
             }
@@ -2392,13 +2396,13 @@ select {
         .h4_time {
           line-height: 3rem;
           font-size: 1rem;
-          padding: 0 0 0 5px;
+          padding: 0 5px 0 0;
         }
-
+        
         .h4_time_2 {
           line-height: 3rem;
           font-size: 1rem;
-          padding: 0 5px 0 0;
+          padding: 0 0 0 5px;
         }
       }
     }
@@ -2516,8 +2520,8 @@ select {
             tr {
               // td {}
 
-              .td_1 {
-                text-align: right;
+              .td_1,
+              .td_2 {
                 font-size: 0.85rem;
               }
             }
@@ -2944,13 +2948,13 @@ select {
         .h4_time {
           line-height: 3rem;
           font-size: 1rem;
-          padding: 0 0 0 5px;
+          padding: 0 5px 0 0;
         }
-
+        
         .h4_time_2 {
           line-height: 3rem;
           font-size: 1rem;
-          padding: 0 5px 0 0;
+          padding: 0 0 0 5px;
         }
       }
     }
@@ -3074,8 +3078,8 @@ select {
             tr {
               // td {}
 
-              .td_1 {
-                text-align: right;
+              .td_1,
+              .td_2 {
                 font-size: 0.85rem;
               }
             }
@@ -3501,13 +3505,13 @@ select {
         .h4_time {
           line-height: 3rem;
           font-size: 1rem;
-          padding: 0 0 0 5px;
+          padding: 0 5px 0 0;
         }
-
+        
         .h4_time_2 {
           line-height: 3rem;
           font-size: 1rem;
-          padding: 0 5px 0 0;
+          padding: 0 0 0 5px;
         }
       }
     }
@@ -3631,8 +3635,8 @@ select {
             tr {
               // td {}
 
-              .td_1 {
-                text-align: right;
+              .td_1,
+              .td_2 {
                 font-size: 0.85rem;
               }
             }
@@ -4110,13 +4114,13 @@ select {
         .h4_time {
           line-height: 3rem;
           font-size: 1.25rem;
-          padding: 0 0 0 10px;
+          padding: 0 10px 0 0;
         }
-
+        
         .h4_time_2 {
           line-height: 3rem;
           font-size: 1.25rem;
-          padding: 0 10px 0 0;
+          padding: 0 0 0 10px;
         }
       }
     }
@@ -4259,8 +4263,8 @@ select {
             tr {
               // td {}
 
-              .td_1 {
-                text-align: right;
+              .td_1,
+              .td_2 {
                 font-size: 0.85rem;
               }
             }
@@ -4748,13 +4752,13 @@ select {
         .h4_time {
           line-height: 3rem;
           font-size: 1.75rem;
-          padding: 0 0 0 10px;
+          padding: 0 10px 0 0;
         }
-
+        
         .h4_time_2 {
           line-height: 3rem;
           font-size: 1.75rem;
-          padding: 0 10px 0 0;
+          padding: 0 0 0 10px;
         }
       }
     }
@@ -4897,8 +4901,8 @@ select {
             tr {
               // td {}
 
-              .td_1 {
-                text-align: right;
+              .td_1,
+              .td_2 {
                 font-size: 0.85rem;
               }
             }
