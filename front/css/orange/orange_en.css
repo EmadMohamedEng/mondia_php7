@@ -986,11 +986,13 @@ select:active {
   text-align: right;
   margin-bottom: 0;
   padding: 0.6rem 0;
+  font-size: 1rem;
 }
 .main_container .salah_time_page .time_btn .h4_time {
   text-align: left;
   margin-bottom: 0;
   padding: 0.6rem 0;
+  font-size: 1rem;
 }
 .main_container .subscribe_page {
   width: 70%;
@@ -1274,6 +1276,9 @@ select:active {
   font-size: 1.25rem;
 }
 .main_container .merath_page .table_table .table tbody tr .td_1 {
+  text-align: left;
+}
+.main_container .merath_page .table_table .table tbody tr .td_2 {
   text-align: right;
 }
 .main_container .sebha_page {
@@ -1508,6 +1513,7 @@ select:active {
 }
 .main_container .profile {
   margin: 3.5rem auto;
+  width: 90%;
 }
 .main_container .profile .profile_title {
   color: #FF6600;
@@ -4486,8 +4492,8 @@ select:active {
     left: 50%;
   }
   .main_container .profile {
-    width: 90%;
     margin: 2.5rem auto;
+    width: 90%;
   }
   .main_container .profile .profile_title h2 {
     font-size: 2.5rem;

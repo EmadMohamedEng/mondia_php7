@@ -330,6 +330,7 @@ select {
 
   .mbc_orange {
     width: 100%;
+
     .navbar_three {
       background: rgba(0, 0, 0, 0.5) !important;
 
@@ -1238,14 +1239,14 @@ select {
         text-align: left;
         margin-bottom: 0;
         padding: 0.6rem 0;
-        font-size: 1.10rem;
+        font-size: 1rem;
       }
 
       .h4_time {
         text-align: right;
         margin-bottom: 0;
         padding: 0.6rem 0;
-        font-size: 1.10rem;
+        font-size: 1rem;
       }
     }
   }
@@ -5899,6 +5900,7 @@ select {
           }
         }
       }
+
       .item {
         width: 80%;
 
@@ -6262,8 +6264,8 @@ select {
     }
 
     .profile {
-      width: 90%;
       margin: 2.5rem auto;
+      width: 90%;
 
       .profile_table {
         table {

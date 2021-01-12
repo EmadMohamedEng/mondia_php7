@@ -2,14 +2,8 @@
 @section('page_title') @lang('front.merath') @endsection
 @section('content')
 <style>
-  /* .input_span{
-    text-align: {{getCode() == 'ar' ? 'right' : 'left'}} !important;
-  } */
   .table{
     direction: {{getCode() == 'ar' ? 'rtl !important' : 'ltr !important'}};
-  }
-  .table tr td{
-    text-align: {{getCode() == 'ar' ? 'right !important' : 'left !important'}};
   }
 </style>
 
