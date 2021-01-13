@@ -1023,7 +1023,7 @@ select {
       .merath_input {
         border: 2px solid $bg_color;
         float: right;
-        width: 90%;
+        width: 60%;
         text-align: center;
         text-align-last: center;
         border-radius: 8px;
@@ -1912,7 +1912,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
@@ -2469,7 +2471,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
@@ -3032,7 +3036,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
@@ -3597,7 +3603,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
@@ -4227,7 +4235,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
@@ -4867,7 +4877,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
@@ -4966,6 +4978,7 @@ select {
 @media (min-width: 1031px) and (max-width: 1360px) {
   .main_container {
     width: 60%;
+
     .header {
       .header_logo {
         .link_href {
@@ -5148,8 +5161,8 @@ select {
 
           .modal-header {
             .modal-title {
-              text-align: left!important;
-              margin: unset!important;
+              text-align: left !important;
+              margin: unset !important;
               font-size: 1rem;
             }
           }

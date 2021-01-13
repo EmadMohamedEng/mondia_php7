@@ -2032,10 +2032,7 @@ select:active {
     left: 0;
   }
   .main_container .merath_page .input_text .merath_input {
-    font-size: 1rem;
-  }
-  .main_container .merath_page .input_span h4 {
-    font-size: 1rem;
+    width: 100%;
   }
   .main_container .merath_page .button_merath .merath_btn {
     background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
@@ -2391,10 +2388,7 @@ select:active {
     left: 0;
   }
   .main_container .merath_page .input_text .merath_input {
-    font-size: 1rem;
-  }
-  .main_container .merath_page .input_span h4 {
-    font-size: 1rem;
+    width: 100%;
   }
   .main_container .merath_page .button_merath .merath_btn {
     background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
@@ -2751,10 +2745,7 @@ select:active {
     left: 0;
   }
   .main_container .merath_page .input_text .merath_input {
-    font-size: 1rem;
-  }
-  .main_container .merath_page .input_span h4 {
-    font-size: 1rem;
+    width: 100%;
   }
   .main_container .merath_page .button_merath .merath_btn {
     background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
@@ -3111,10 +3102,7 @@ select:active {
     left: 0;
   }
   .main_container .merath_page .input_text .merath_input {
-    font-size: 1rem;
-  }
-  .main_container .merath_page .input_span h4 {
-    font-size: 1rem;
+    width: 100%;
   }
   .main_container .merath_page .button_merath .merath_btn {
     background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
@@ -3477,6 +3465,9 @@ select:active {
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
     left: 0;
+  }
+  .main_container .merath_page .input_text .merath_input {
+    width: 100%;
   }
   .main_container .merath_page .button_merath .merath_btn {
     background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);
@@ -3859,6 +3850,9 @@ select:active {
   .main_container .zakkah_v2_page .zakah_result {
     width: 100%;
     left: 0;
+  }
+  .main_container .merath_page .input_text .merath_input {
+    width: 100%;
   }
   .main_container .merath_page .button_merath .merath_btn {
     background: linear-gradient(to right, #aa6620 0, #efc049 30%, #aa6620 60%);

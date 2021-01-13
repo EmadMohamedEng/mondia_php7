@@ -2020,7 +2020,7 @@ select:active {
     font-size: 1.3rem;
   }
   .main_container .merath_page .input_text .merath_input {
-    width: 70%;
+    width: 100%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
@@ -2487,7 +2487,7 @@ select:active {
     font-size: 1.3rem;
   }
   .main_container .merath_page .input_text .merath_input {
-    width: 70%;
+    width: 100%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
@@ -2961,7 +2961,7 @@ select:active {
     font-size: 1.3rem;
   }
   .main_container .merath_page .input_text .merath_input {
-    width: 70%;
+    width: 100%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
@@ -3430,7 +3430,7 @@ select:active {
     font-size: 1.3rem;
   }
   .main_container .merath_page .input_text .merath_input {
-    width: 70%;
+    width: 100%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
@@ -3924,6 +3924,7 @@ select:active {
     font-size: 1.3rem;
   }
   .main_container .merath_page .input_text .merath_input {
+    width: 100%;
     font-size: 1.15rem;
   }
   .main_container .merath_page .input_span h4 {
@@ -4440,7 +4441,7 @@ select:active {
   }
   .main_container .merath_page .input_text .merath_input {
     font-size: 1.5rem;
-    width: 60%;
+    width: 100%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;

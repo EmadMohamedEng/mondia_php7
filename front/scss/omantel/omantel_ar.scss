@@ -961,6 +961,7 @@ select {
 
       .form_zakah {
         padding: 0;
+
         .field {
           label {
             float: right;
@@ -1038,8 +1039,8 @@ select {
     .input_text {
       .merath_input {
         border: 2px solid $bg_color;
-        float: right;
-        width: 90%;
+        float: left;
+        width: 60%;
         text-align: center;
         text-align-last: center;
         border-radius: 8px;
@@ -1051,12 +1052,12 @@ select {
     }
 
     .input_span {
-      text-align: left;
+      text-align: right;
 
       h4 {
         line-height: 2.5rem;
         font-size: 1.35rem;
-        float: left;
+        float: right;
 
         .span_req {
           color: red;
@@ -1850,7 +1851,7 @@ select {
           font-size: 1rem;
           padding: 0 5px 0 0;
         }
-        
+
         .h4_time_2 {
           line-height: 3rem;
           font-size: 1rem;
@@ -1928,7 +1929,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
@@ -2485,7 +2488,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
@@ -2964,7 +2969,7 @@ select {
           font-size: 1rem;
           padding: 0 5px 0 0;
         }
-        
+
         .h4_time_2 {
           line-height: 3rem;
           font-size: 1rem;
@@ -3048,7 +3053,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
@@ -3529,7 +3536,7 @@ select {
           font-size: 1rem;
           padding: 0 5px 0 0;
         }
-        
+
         .h4_time_2 {
           line-height: 3rem;
           font-size: 1rem;
@@ -3613,7 +3620,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
@@ -4140,7 +4149,7 @@ select {
           font-size: 1.25rem;
           padding: 0 10px 0 0;
         }
-        
+
         .h4_time_2 {
           line-height: 3rem;
           font-size: 1.25rem;
@@ -4243,7 +4252,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
@@ -4780,7 +4791,7 @@ select {
           font-size: 1.75rem;
           padding: 0 10px 0 0;
         }
-        
+
         .h4_time_2 {
           line-height: 3rem;
           font-size: 1.75rem;
@@ -4883,7 +4894,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {

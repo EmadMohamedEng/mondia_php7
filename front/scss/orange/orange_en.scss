@@ -2601,7 +2601,7 @@ select {
 
       .input_text {
         .merath_input {
-          width: 70%;
+          width: 100%;
         }
       }
 
@@ -3268,7 +3268,7 @@ select {
 
       .input_text {
         .merath_input {
-          width: 70%;
+          width: 100%;
         }
       }
 
@@ -3957,7 +3957,7 @@ select {
 
       .input_text {
         .merath_input {
-          width: 70%;
+          width: 100%;
         }
       }
 
@@ -4636,7 +4636,7 @@ select {
 
       .input_text {
         .merath_input {
-          width: 70%;
+          width: 100%;
         }
       }
 
@@ -5333,7 +5333,10 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+          font-size: 1.15rem;
+        }
       }
 
       .input_span {
@@ -6115,6 +6118,7 @@ select {
 
       .input_text {
         .merath_input {
+          width: 100%;
           font-size: 1.75rem;
         }
       }

@@ -793,8 +793,8 @@ select:active {
 }
 .main_container .merath_page .input_text .merath_input {
   border: 2px solid #ff9e1b;
-  float: right;
-  width: 90%;
+  float: left;
+  width: 60%;
   text-align: center;
   text-align-last: center;
   border-radius: 8px;
@@ -804,12 +804,12 @@ select:active {
   -o-border-radius: 8px;
 }
 .main_container .merath_page .input_span {
-  text-align: left;
+  text-align: right;
 }
 .main_container .merath_page .input_span h4 {
   line-height: 2.5rem;
   font-size: 1.35rem;
-  float: left;
+  float: right;
 }
 .main_container .merath_page .input_span h4 .span_req {
   color: red;
@@ -1441,6 +1441,9 @@ select:active {
     margin-bottom: 1rem;
     font-size: 1.3rem;
   }
+  .main_container .merath_page .input_text .merath_input {
+    width: 100%;
+  }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
     font-size: 0.85rem;
@@ -1810,6 +1813,9 @@ select:active {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+  }
+  .main_container .merath_page .input_text .merath_input {
+    width: 100%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
@@ -2183,6 +2189,9 @@ select:active {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+  }
+  .main_container .merath_page .input_text .merath_input {
+    width: 100%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
@@ -2558,6 +2567,9 @@ select:active {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+  }
+  .main_container .merath_page .input_text .merath_input {
+    width: 100%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
@@ -2977,6 +2989,9 @@ select:active {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+  }
+  .main_container .merath_page .input_text .merath_input {
+    width: 100%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;
@@ -3404,6 +3419,9 @@ select:active {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+  }
+  .main_container .merath_page .input_text .merath_input {
+    width: 100%;
   }
   .main_container .merath_page .input_span h4 {
     line-height: 2.25rem;

@@ -2704,14 +2704,12 @@ select {
 
       .input_text {
         .merath_input {
-          font-size: 1rem;
+          width: 100%;
         }
       }
 
       .input_span {
-        h4 {
-          font-size: 1rem;
-        }
+        h4 {}
       }
 
       .button_merath {
@@ -3339,14 +3337,12 @@ select {
 
       .input_text {
         .merath_input {
-          font-size: 1rem;
+          width: 100%;
         }
       }
 
       .input_span {
-        h4 {
-          font-size: 1rem;
-        }
+        h4 {}
       }
 
       .button_merath {
@@ -3975,14 +3971,12 @@ select {
 
       .input_text {
         .merath_input {
-          font-size: 1rem;
+          width: 100%;
         }
       }
 
       .input_span {
-        h4 {
-          font-size: 1rem;
-        }
+        h4 {}
       }
 
       .button_merath {
@@ -4611,14 +4605,12 @@ select {
 
       .input_text {
         .merath_input {
-          font-size: 1rem;
+          width: 100%;
         }
       }
 
       .input_span {
-        h4 {
-          font-size: 1rem;
-        }
+        h4 {}
       }
 
       .button_merath {
@@ -5255,7 +5247,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
@@ -5914,7 +5908,9 @@ select {
       }
 
       .input_text {
-        // .merath_input {}
+        .merath_input {
+          width: 100%;
+        }
       }
 
       .input_span {
