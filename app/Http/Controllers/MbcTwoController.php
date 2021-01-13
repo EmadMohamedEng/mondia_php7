@@ -160,7 +160,7 @@ class MbcTwoController extends Controller
   {
 
     // automatic detect county
-    $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
+   // $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
     /*
     if( $get_url_country == "Egypt"){// KSA - Kuwait  - United Arab Emirates    --- Egypt not yet
       $get_url_country = "KSA";
@@ -169,10 +169,10 @@ class MbcTwoController extends Controller
     $country = Country::where('title',$get_url_country)->first();
     $operators = Operator::where('country_id',$country->id)->get();
 */
+   // $get_url_country = "KSA";  // KSA - Kuwait  - United Arab Emirates
+   // $country = Country::where('title',$get_url_country)->first();
 
 
-    $get_url_country = "KSA";  // KSA - Kuwait  - United Arab Emirates
-    $country = Country::where('title',$get_url_country)->first();
     $operators_ids = array(14,21,22,11,10);
     $operators = Operator::whereIN('id',$operators_ids)->get();
 
@@ -184,7 +184,7 @@ class MbcTwoController extends Controller
       }
     session::put('lang', $lang);
 
-    return view('landing_v2.mbcTwo.landing', compact("lang",'country','operators'));
+    return view('landing_v2.mbcTwo.landing', compact("lang",'operators'));
   }
 
   public function pincode()

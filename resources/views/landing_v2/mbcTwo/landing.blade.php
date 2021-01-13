@@ -150,7 +150,6 @@ if ($lang == 'ar') {
 
               <div class="col-9 p-0">
                 <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
-                <input type="hidden" id="country_code" name="code" value="{{ $country->code }}">
                 <input type="tel" class="form-control show_class" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>
             </div>
