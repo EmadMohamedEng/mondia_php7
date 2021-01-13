@@ -83,7 +83,7 @@ if ($lang == 'ar') {
           <!--<h5>ادخل رقم الهاتف</h5>-->
           {!! Form::open(['url'=>'mbc_subscription/confirm/','method'=>'post','class'=>'form']) !!}
           <div class="form-group">
-            <input type="tel" name="pincode" class="form-control text-center w-100 rounded" id="pincode" placeholder="@lang('messages.confirmation_code')">
+            <input type="tel" name="pincode" autocomplete="off" class="form-control text-center w-100 rounded" id="pincode" placeholder="@lang('messages.confirmation_code')">
           </div>
           <!-- <h2 class="text-white font-weight-bold mb-3" style="{{$font}}">
             @lang('messages.subscription_Riyals')
