@@ -338,35 +338,15 @@ class MbcTwoController extends Controller
 
   public function subscriptionOptIn(Request $request) //register
   {
-    // dd("omar");
     date_default_timezone_set("Africa/Cairo");
-    // format number
-    $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
 
-    $number = "";
-    if($get_url_country == "Egypt"){
-     if(isset($request->number)) {
-      $number = ltrim($request->number,"0");
-      $number = ltrim($request->number,"20");
-     }
-    }else{
-      if(isset($request->number)) {
-        $number = $request->number ;
-      }else{
-        $number = "" ;
-      }
-
-    }
-
-    $msisdn = $request->code ?  $request->code.$number : session()->get('Msisdn');
+    $msisdn = $request->number ?? session()->get('Msisdn');
     $operator = $request->operator ?? session()->get('operator');
 
     Session::put('Msisdn', $msisdn);
     Session::put('operator', $operator);
 
-
-
- // check user status
+    // check user status
     $service_id = 2;
     $check = $this->checkStatus($msisdn, $service_id);
 
@@ -379,27 +359,27 @@ class MbcTwoController extends Controller
         $message = 'Login succesfully';
       }
       return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
-
     }
-    $lang =  session::get('lang');
-      $resend_pincode = ResendPincode::where('msisdn',$msisdn)->where('date',date('Y-m-d'))->first();
-      if ($resend_pincode && $resend_pincode->count == 3) {
-        if ($lang == 'ar'){
-          return redirect('mbc_portal_landing')->with('failed', 'لقد تم تجاوز الحد الاقصي لمحاولات اعاده ارسال  كود التحقق');
-        }
-        return redirect('mbc_portal_landing')->with('failed', 'The maximum number of retries to resend the verification code has been exceeded
-        ');
-      }elseif($resend_pincode && $resend_pincode->count < 3){
-        $resend_pincode->count = $resend_pincode->count +1;
-      }else{
-        $resend_pincode = new ResendPincode;
-        $resend_pincode->msisdn = $msisdn;
-        $resend_pincode->count = 1;
-        $resend_pincode->date = Carbon::now()->format('Y-m-d');
-      }
-      $resend_pincode->save();
 
-     $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/pincode.aspx?Mobileno=$msisdn&OP=$operator";
+    $lang =  session::get('lang');
+
+    $resend_pincode = ResendPincode::where('msisdn',$msisdn)->where('date',date('Y-m-d'))->first();
+    if ($resend_pincode && $resend_pincode->count == 3) {
+      if ($lang == 'ar'){
+        return redirect('mbc_portal_landing')->with('failed', 'لقد تم تجاوز الحد الاقصي لمحاولات اعاده ارسال  كود التحقق');
+      }
+      return redirect('mbc_portal_landing')->with('failed', 'The maximum number of retries to resend the verification code has been exceeded');
+    }elseif($resend_pincode && $resend_pincode->count < 3){
+      $resend_pincode->count = $resend_pincode->count +1;
+    }else{
+      $resend_pincode = new ResendPincode;
+      $resend_pincode->msisdn = $msisdn;
+      $resend_pincode->count = 1;
+      $resend_pincode->date = Carbon::now()->format('Y-m-d');
+    }
+    $resend_pincode->save();
+
+    $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/pincode.aspx?Mobileno=$msisdn&OP=$operator";
     $response = $this->SendRequestGet($URL);
     $request_type = 'Send Pincode';
 
@@ -408,10 +388,6 @@ class MbcTwoController extends Controller
     $send_massage->response = $response;
     $send_massage->request_type = $request_type;
     $send_massage->save();
-
-
-
-
 
     if ($response == "OK") {
       if ($lang == 'ar'){
