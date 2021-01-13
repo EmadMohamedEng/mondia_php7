@@ -141,11 +141,11 @@ body {
     })
 
 
-    $('.mdb-select').click(function(e) {
+    $('.mdb-select').change(function(e) {
       var id = $(this).children(":selected").attr("id");
       var country_code = $(this).children(":selected").attr("country");
-      $("#country_code").val(country_code);
-      $("#county_code_landing").html(country_code);
+      // $("#country_code").val(country_code);
+      // $("#county_code_landing").html(country_code);
 
       $('.change_cost').children().css('display', 'none');
       $(`#cost${id}`).css('display', 'block');

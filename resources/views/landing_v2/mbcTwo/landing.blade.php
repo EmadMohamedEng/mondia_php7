@@ -151,7 +151,7 @@ if ($lang == 'ar') {
               <div class="col-9 p-0">
                 <input type="hidden" name="prev_url" value="{{(isset($_REQUEST['prev_url'])?$_REQUEST['prev_url']:'')}}">
                 <input type="hidden" id="country_code" name="code" value="{{ $country->code }}">
-                <input type="tel" class="form-control show_class" id="phone" value="{{(session()->has('landing_msisdn')?session()->get('landing_msisdn'):'')}}" placeholder="@lang('messages.Enter_your')" name="number" required>
+                <input type="tel" class="form-control show_class" id="phone" placeholder="@lang('messages.Enter_your')" name="number" required>
               </div>
             </div>
             <div class="all_slect">
@@ -219,11 +219,11 @@ if ($lang == 'ar') {
         $('#dropdownMenu1').html(x);
       })
 
-      $('.mdb-select').click(function(e) {
+      $('.mdb-select').change(function(e) {
         var id = $(this).children(":selected").attr("id");
         var country_code = $(this).children(":selected").attr("country");
-        $("#country_code").val(country_code);
-        $("#county_code_landing").html(country_code);
+        // $("#country_code").val(country_code);
+        // $("#county_code_landing").html(country_code);
 
         $('.change_cost').children().css('display', 'none');
         $(`#cost${id}`).css('display', 'block');
