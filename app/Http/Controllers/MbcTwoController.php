@@ -502,21 +502,7 @@ class MbcTwoController extends Controller
 
   public function checkStatusLogin(Request $request)
   {
-    $get_url_country  = $this->get_country($ip = NULL, $purpose = "location", $deep_detect = TRUE);
-    if($get_url_country == "Egypt"){
-      if(isset($request->number)) {
-       $number = ltrim($request->number,"0");
-       $number = ltrim($request->number,"20");
-      }
-     }else{
-       if(isset($request->number)) {
-         $number = $request->number ;
-       }else{
-         $number = "" ;
-       }
-
-     }
-    $msisdn = $request->code.$number;
+    $msisdn = $number;
     // $msisdn = str_replace("200","20",$msisdn);
     // $msisdn = str_replace("2020","20",$msisdn);
     // dd($msisdn);
