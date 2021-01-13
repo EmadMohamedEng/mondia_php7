@@ -405,6 +405,7 @@ class MbcTwoController extends Controller
   public function subscriptionConfirm(Request $request) //pincode
   {
     date_default_timezone_set("Africa/Cairo");
+    $lang =  session::get('lang');
 
     $pincode = $request->input('pincode');
     $msisdn = Session::get('Msisdn');
