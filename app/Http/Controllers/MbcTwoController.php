@@ -502,7 +502,7 @@ class MbcTwoController extends Controller
 
   public function checkStatusLogin(Request $request)
   {
-    $msisdn = $number;
+    $msisdn = $request->number;
     // $msisdn = str_replace("200","20",$msisdn);
     // $msisdn = str_replace("2020","20",$msisdn);
     // dd($msisdn);
