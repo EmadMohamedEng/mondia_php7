@@ -410,6 +410,16 @@ class MbcTwoController extends Controller
     $msisdn = Session::get('Msisdn');
     $operator = Session::get('operator');
 
+
+    $resend_pincode = ResendPincode::where('msisdn',$msisdn)->where('date',date('Y-m-d'))->first();
+    if ($resend_pincode && $resend_pincode->count == 3) {
+      if ($lang == 'ar'){
+        return redirect('mbc_portal_landing')->with('failed', 'لقد تم تجاوز الحد الاقصي لمحاولات اعاده ارسال  كود التحقق');
+      }
+      return redirect('mbc_portal_landing')->with('failed', 'The maximum number of retries to resend the verification code has been exceeded');
+    }
+
+
     $URL = "http://mbc.mobc.com:8030/ALkanz_PIN/Confirm.aspx?Mobileno=$msisdn&OP=$operator&PinCode=$pincode";
 
     $response = $this->SendRequestGet($URL);
