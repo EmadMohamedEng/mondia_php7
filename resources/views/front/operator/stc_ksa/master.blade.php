@@ -36,7 +36,7 @@
                   </a>
                 </div>
 
-                <div class="col-12 p-0">
+                <div class="col-12 p-0 ">
                   <a class="link_href" href="{{route('front.index')}}">
                     <img class="pulsate-bck" src="{{asset('front/images/stc_ksa.png')}}" alt="Logo">
                   </a>
