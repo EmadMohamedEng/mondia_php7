@@ -1,9 +1,9 @@
 <header class="header w-100">
   <div class="row">
-    <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0 ">
+    <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0">
       <div class="header_logo">
         <a href="{{route('front.index')}}" class="link_href">
-          <h6>@lang('front.Daleel Al Muslim')</h6>
+          <img class="bounce-top logo_stc_ksa" src='{{asset("front/images/stc_ksa.png")}}' alt='Logo'>
         </a>
       </div>
     </div>
@@ -38,7 +38,7 @@
 
                 <div class="col-12 p-0">
                   <a class="link_href" href="{{route('front.index')}}">
-                    @lang('front.Daleel Al Muslim')
+                    <img class="pulsate-bck" src="{{asset('front/images/stc_ksa.png')}}" alt="Logo">
                   </a>
                 </div>
               </div>

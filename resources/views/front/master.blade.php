@@ -151,6 +151,8 @@ $enable = get_setting('enable_testing');
   <script src="{{asset('front/js/omantel/script.js')}}"></script>
   @elseif(request()->get('OpID') == stc)
   <script src="{{asset('front/js/stc/script.js')}}"></script>
+  @elseif(request()->get('OpID') == stc_ksa)
+  <script src="{{asset('front/js/stc_ksa/script.js')}}"></script>
   @elseif(request()->get('OpID') == ooredoo)
   <script src="{{asset('front/js/ooredoo/script.js')}}"></script>
   @else
