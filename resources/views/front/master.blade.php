@@ -29,14 +29,22 @@
 
   @if(request()->get('OpID') == mbc)
   @include("front.operator.mbc.head")
+
   @elseif(request()->get('OpID') == orange)
   @include("front.operator.orange.head")
+
   @elseif(request()->get('OpID') == du)
   @include("front.operator.du.head")
+
   @elseif(request()->get('OpID') == omantel)
   @include("front.operator.omantel.head")
+
   @elseif(request()->get('OpID') == stc)
   @include("front.operator.stc.head")
+
+  @elseif(request()->get('OpID') == stc)
+  @include("front.operator.stc_kw.head")
+
   @else
   @include("front.operator.ooredoo.head")
   @endif
@@ -102,14 +110,22 @@ $enable = get_setting('enable_testing');
   <main class="main_container">
     @if(request()->get('OpID') == mbc)
     @include("front.operator.mbc.master")
+
     @elseif(request()->get('OpID') == orange)
     @include("front.operator.orange.master")
+
     @elseif(request()->get('OpID') == du)
     @include("front.operator.du.master")
+
     @elseif(request()->get('OpID') == omantel)
     @include("front.operator.omantel.master")
+
     @elseif(request()->get('OpID') == stc)
     @include("front.operator.stc.master")
+
+    @elseif(request()->get('OpID') == stc)
+    @include("front.operator.stc_kw.master")
+
     @else
     @include("front.operator.ooredoo.master")
     @endif
