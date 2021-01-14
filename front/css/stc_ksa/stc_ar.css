@@ -1219,6 +1219,12 @@ select:active {
     font-size: 1rem;
     float: left;
   }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #4f008c;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+  }
   .main_container .img_carousel {
     margin-top: 0;
   }
@@ -1584,6 +1590,12 @@ select:active {
     color: #ff375e;
     font-size: 1rem;
     float: left;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #4f008c;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -1956,6 +1968,12 @@ select:active {
     font-size: 1rem;
     float: left;
   }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #4f008c;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+  }
   .main_container .img_carousel {
     margin-top: 0;
   }
@@ -2327,6 +2345,12 @@ select:active {
     color: #ff375e;
     font-size: 1rem;
     float: left;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #4f008c;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -2717,6 +2741,12 @@ select:active {
     color: #ff375e;
     font-size: 1rem;
     float: left;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #4f008c;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -3142,6 +3172,12 @@ select:active {
     color: #ff375e;
     font-size: 1.5rem;
     float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #4f008c;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
