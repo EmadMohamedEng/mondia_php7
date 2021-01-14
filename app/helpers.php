@@ -40,7 +40,6 @@ function mbc_op_id(){
     return 14;
 }
 
-
 function orange_op_id(){
   $country = Country::where('title', 'egypt')->first();
   if(!empty($country)){
@@ -50,6 +49,17 @@ function orange_op_id(){
       }
   }
   return 8;
+}
+
+function stc_ksa(){
+  $country = Country::where('title', 'Ksa')->first();
+  if(!empty($country)){
+      $op = Operator::where('country_id', $country->id)->where('name', 'stc')->first();
+      if(!empty($op)){
+          return $op->id;
+      }
+  }
+  return 21;
 }
 
 function delete_multiselect(Request $request) // select many contract from index table and delete them

@@ -67,6 +67,10 @@ class FrontController extends Controller
       return redirect('/?OpID='.orange);
     }
 
+    if (!$request->has('OpID') && get_setting('redirect_stc_ksa')) {
+      return redirect('/?OpID='.stc_ksa);
+    }
+
     if ($request->has('OpID')) {
       session()->put('current_op_id', $request->get('OpID'));
     }
@@ -285,6 +289,13 @@ class FrontController extends Controller
         return view('front.inner_enable_testing', compact('content', 'contents'));
       }
       return redirect('landing_stc');
+    }
+
+    if ($request->has('OpID') && $request->OpID == stc_ksa) {  // enable testing from backend
+      // if ($enable || (session()->get('stc_op_id') == stc && session()->get('status') == 'active' && session()->has('MSISDN'))) {
+        return view('front.inner_enable_testing', compact('content', 'contents'));
+      // }
+      // return redirect('landing_stc');
     }
 
     if ($request->has('OpID') && $request->OpID == ooredoo) {  // enable testing from backend

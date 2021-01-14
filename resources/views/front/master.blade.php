@@ -42,8 +42,8 @@
   @elseif(request()->get('OpID') == stc)
   @include("front.operator.stc.head")
 
-  @elseif(request()->get('OpID') == stc)
-  @include("front.operator.stc_kw.head")
+  @elseif(request()->get('OpID') == stc_ksa)
+  @include("front.operator.stc_ksa.head")
 
   @else
   @include("front.operator.ooredoo.head")
@@ -123,8 +123,8 @@ $enable = get_setting('enable_testing');
     @elseif(request()->get('OpID') == stc)
     @include("front.operator.stc.master")
 
-    @elseif(request()->get('OpID') == stc)
-    @include("front.operator.stc_kw.master")
+    @elseif(request()->get('OpID') == stc_ksa)
+    @include("front.operator.stc_ksa.master")
 
     @else
     @include("front.operator.ooredoo.master")

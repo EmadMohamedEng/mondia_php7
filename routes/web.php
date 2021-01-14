@@ -291,3 +291,9 @@ Route::get('send_pin_code', 'OrangeController@send_pin_code');
 
 Route::get("update/content/image/audio", "VideosController@updateContentAudioAndImage");
 Route::get("copy/content/image/audio/{serviceId}", "VideosController@copyContentAudioAndImage");
+
+/*********start stc ksa******* */
+define('stc_ksa',stc_ksa());
+
+
+/*********end stc ksa******* */
