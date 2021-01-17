@@ -52,41 +52,6 @@
   @include("front.operator.ooredoo.head")
   @endif
 
-  <!-- @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
-  <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
-  @endif
-  @if(request()->has('OpID') && request()->get('OpID') == omantel)
-  <link rel="stylesheet" href="{{asset('front/css/style_en_oman.css')}}">
-  @elseif(request()->has('OpID') && request()->get('OpID') == stc)
-  <link rel="stylesheet" href="{{asset('front/css/style_en_stc.css')}}">
-  @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
-  <link rel="stylesheet" href="{{asset('front/css/style_en_mbc.css')}}">
-  @elseif(request()->has('OpID') && request()->get('OpID') == orange)
-  <link rel="stylesheet" href="{{asset('front/css/style_en_orange.css')}}">
-  @else
-  <link rel="stylesheet" href="{{asset('front/css/style_en.css')}}">
-  @endif
-
-  @if(request()->get('OpID') == mbc)
-  @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
-  <link rel="stylesheet" href="{{asset('front/css/style_mbc_menu_ar.css')}}">
-  @endif
-  <link rel="stylesheet" href="{{asset('front/css/style_mbc_menu.css')}}">
-  @endif
-
-  @if(request()->get('OpID') == orange)
-  @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur' )
-  <link rel="stylesheet" href="{{asset('front/css/style_orange_menu_ar.css')}}">
-  @endif
-  <link rel="stylesheet" href="{{asset('front/css/style_orange_menu.css')}}">
-  @endif -->
-
-  <!-- <style>
-    .active_menu {
-      color: #000;
-    }
-  </style> -->
-
   <script>
     window.base_url = '{{url("/")}}';
     window.lang = "{{session()->get('applocale')}}";

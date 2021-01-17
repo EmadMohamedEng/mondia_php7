@@ -1,6 +1,6 @@
 $bg_color: #6e337a;
 $bg_color2: #0f1218;
-$text_color: #6e337a;
+$text_color: #d31b88;
 $white_color: #FFF;
 $black_color: #000;
 $grey_color: #adadad;
@@ -461,7 +461,7 @@ select {
       margin-top: 2rem;
 
       .link_title {
-        color: $bg_color;
+        color: $text_color;
 
         h6 {
           font-weight: bold;
@@ -475,12 +475,12 @@ select {
         padding: 0.25rem .5rem;
         margin-bottom: 1rem;
         background: transparent;
-        color: $white_color;
+        color: $text_color;
         border-radius: 5px;
-        border: 1px solid $bg_color;
+        border: 1px solid $text_color;
 
         &:focus {
-          box-shadow: 0 0 0 0.2rem $bg_color2;
+          box-shadow: 0 0 0 0.2rem $text_color;
         }
       }
     }

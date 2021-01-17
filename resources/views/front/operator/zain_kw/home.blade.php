@@ -162,6 +162,7 @@ $menu = provider_menu();
       </div>
 
       @php
+      $owl_1 = 'owl_content_one';
       if(count($item->services) == 1){
       $owl_1 = 'owl_content_one';
       }
