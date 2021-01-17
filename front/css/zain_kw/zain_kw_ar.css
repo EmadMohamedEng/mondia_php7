@@ -8,7 +8,7 @@ html {
 
 body {
   font-family: DuCoHeadline200;
-  background-color: #d31b88;
+  background-color: #0f1218;
   direction: rtl;
   width: 100%;
   height: 100%;
@@ -154,7 +154,7 @@ select:active {
   z-index: 1;
   top: 0;
   left: 56.5%;
-  background-color: #d31b88;
+  background-color: #0f1218;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -409,7 +409,7 @@ select:active {
   border: 1px solid #6e337a;
 }
 .main_container .content_carousel .content_carousel_head .btn_more:focus {
-  box-shadow: 0 0 0 0.2rem #d31b88;
+  box-shadow: 0 0 0 0.2rem #0f1218;
 }
 .main_container .content_carousel .owl_content_one .item .card {
   background: #000;
@@ -1716,7 +1716,7 @@ select:active {
     z-index: 9999999;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul {
-    background-color: #d31b88 !important;
+    background-color: #0f1218 !important;
     border: 2px solid #6e337a;
     width: 13rem;
     height: 100vh;
@@ -2174,7 +2174,7 @@ select:active {
     z-index: 9999999;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul {
-    background-color: #d31b88 !important;
+    background-color: #0f1218 !important;
     border: 2px solid #6e337a;
     width: 14rem;
     height: 100vh;
@@ -2638,7 +2638,7 @@ select:active {
     z-index: 9999999;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul {
-    background-color: #d31b88 !important;
+    background-color: #0f1218 !important;
     border: 2px solid #6e337a;
     width: 14rem;
     height: 100vh;
@@ -3112,7 +3112,7 @@ select:active {
     z-index: 9999999;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul {
-    background-color: #d31b88 !important;
+    background-color: #0f1218 !important;
     border: 2px solid #6e337a;
     width: 15rem;
     height: 100vh;
@@ -3583,7 +3583,7 @@ select:active {
     z-index: 9999999;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul {
-    background-color: #d31b88 !important;
+    background-color: #0f1218 !important;
     border: 2px solid #6e337a;
     width: 20rem;
     height: 100vh;
@@ -4079,7 +4079,7 @@ select:active {
     z-index: 9999999;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul {
-    background-color: #d31b88 !important;
+    background-color: #0f1218 !important;
     border: 2px solid #6e337a;
     width: 25rem;
     height: 100vh;

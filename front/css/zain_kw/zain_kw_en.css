@@ -112,7 +112,7 @@ select:active {
   margin-top: 0rem;
 }
 .main_container .header .lang_mbc {
-  color: #FF6600;
+  color: #6e337a;
   cursor: pointer;
 }
 .main_container .header .lang_mbc .dropdown-menu2 {
@@ -122,14 +122,14 @@ select:active {
   background-color: #000;
 }
 .main_container .header .lang_mbc .dropdown-menu2 .dropdown-item {
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .header .lang_mbc .dropdown-menu2 .dropdown-item:hover, .main_container .header .lang_mbc .dropdown-menu2 .dropdown-item:focus {
-  background-color: #FF6600;
+  background-color: #6e337a;
   color: #FFF;
 }
 .main_container .header .arrow_back {
-  color: #FF6600;
+  color: #6e337a;
   opacity: 0.5;
   position: absolute;
   top: 47%;
@@ -141,7 +141,7 @@ select:active {
   -o-transform: translate(-50%, -50%);
 }
 .main_container .header .open_icon_nav_mbc {
-  color: #FF6600;
+  color: #6e337a;
   font-size: 30px;
   cursor: pointer;
   margin-top: -12px;
@@ -174,7 +174,7 @@ select:active {
 }
 .main_container .burger_menu .sidenav .navbar_ul .nav-item .dropdown-menu .dropdown-item.link_href {
   padding: 5px 0;
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .burger_menu .sidenav .navbar_ul .nav-item .dropdown-menu .dropdown-item.link_href:hover, .main_container .burger_menu .sidenav .navbar_ul .nav-item .dropdown-menu .dropdown-item.link_href:focus {
   color: #FFF !important;
@@ -184,7 +184,7 @@ select:active {
   padding: 8px;
   text-decoration: none;
   font-size: 14px;
-  color: #FF6600;
+  color: #6e337a;
   cursor: pointer;
   display: block;
   transition: 0.3s;
@@ -201,14 +201,14 @@ select:active {
   margin-top: 5%;
 }
 .main_container .burger_menu .sidenav .navbar_ul .nav-item .nav-link.menuTwo svg {
-  fill: #FF6600;
+  fill: #6e337a;
   width: 9%;
 }
 .main_container .burger_menu .sidenav .closebtn_mbc {
   position: absolute;
   top: 0;
   right: 3%;
-  color: #FF6600;
+  color: #6e337a;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -231,18 +231,18 @@ select:active {
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
   margin-bottom: 0.25rem;
-  color: #FF6600 !important;
+  color: #6e337a !important;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
   padding: 0.25rem 0.5rem;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link {
   cursor: pointer;
-  color: #FF6600 !important;
+  color: #6e337a !important;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link svg {
   width: 15%;
-  fill: #FF6600;
+  fill: #6e337a;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link.nav-link2 {
   padding: 0 0 0.75rem 0;
@@ -262,7 +262,7 @@ select:active {
   float: right;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item {
-  color: #FF6600;
+  color: #6e337a;
   padding: 0.25rem 1rem;
   width: 100%;
   text-align: left;
@@ -275,7 +275,7 @@ select:active {
   width: 100%;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:active, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:focus, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:hover {
-  background: #FF6600;
+  background: #6e337a;
   color: #FFF;
   margin-top: 0.5rem;
   border-radius: 8px;
@@ -291,13 +291,13 @@ select:active {
   background: rgba(0, 0, 0, 0.5) !important;
 }
 .main_container .mbc_orange .navbar_three .navbar_ul_three .menuThree {
-  color: #FF6600;
+  color: #6e337a;
   font-size: 17px;
   text-indent: -5px;
   cursor: pointer;
 }
 .main_container .mbc_orange .navbar_three .navbar_ul_three .menuThree:focus, .main_container .mbc_orange .navbar_three .navbar_ul_three .menuThree:hover {
-  background: #FF6600;
+  background: #6e337a;
   color: #FFF;
   border-radius: 0.25rem;
 }
@@ -305,10 +305,10 @@ select:active {
   background-color: #000;
 }
 .main_container .mbc_orange .navbar_three .navbar_ul_three .dropdown-menu .dropdown-item {
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .mbc_orange .navbar_three .navbar_ul_three .dropdown-menu .dropdown-item:focus, .main_container .mbc_orange .navbar_three .navbar_ul_three .dropdown-menu .dropdown-item:hover {
-  background: #FF6600;
+  background: #6e337a;
   color: #FFF;
 }
 .main_container .img_carousel {
@@ -350,7 +350,7 @@ select:active {
   box-shadow: 0 0 0 0.2rem #FFF;
 }
 .main_container .img_carousel .owl-theme .owl-nav {
-  color: #FF6600;
+  color: #6e337a;
   margin-top: 0;
   position: relative;
 }
@@ -379,14 +379,14 @@ select:active {
 .main_container .img_carousel .owl-theme .owl-nav button.owl-prev:hover,
 .main_container .img_carousel .owl-theme .owl-nav button.owl-prev:focus {
   background: none;
-  color: #FF6600;
+  color: #6e337a;
   outline: 0;
 }
 .main_container .content_carousel .content_carousel_head {
   margin-top: 2rem;
 }
 .main_container .content_carousel .content_carousel_head .link_title {
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .content_carousel .content_carousel_head .link_title h6 {
   font-weight: bold;
@@ -399,14 +399,14 @@ select:active {
   background: transparent;
   color: #FFF;
   border-radius: 5px;
-  border: 1px solid #FF6600;
+  border: 1px solid #6e337a;
 }
 .main_container .content_carousel .content_carousel_head .btn_more:focus {
   box-shadow: 0 0 0 0.2rem #0f1218;
 }
 .main_container .content_carousel .owl_content_one .item .card {
   background: #000;
-  border: 1px solid #FF6600;
+  border: 1px solid #6e337a;
   margin: 0 auto;
   display: block;
   width: 60%;
@@ -439,7 +439,7 @@ select:active {
 }
 .main_container .content_carousel .owl_content_two .item .card {
   background: #000;
-  border: 1px solid #FF6600;
+  border: 1px solid #6e337a;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -469,7 +469,7 @@ select:active {
 }
 .main_container .content_carousel .owl_content_three .item .card {
   background: #000;
-  border: 1px solid #FF6600;
+  border: 1px solid #6e337a;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -499,7 +499,7 @@ select:active {
 }
 .main_container .content_carousel .owl_content_four .item .card {
   background: #000;
-  border: 1px solid #FF6600;
+  border: 1px solid #6e337a;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -534,7 +534,7 @@ select:active {
 .main_container .content_carousel .owl_content_five .item .card,
 .main_container .content_carousel .owl_muslim_guide .item .card {
   background: #000;
-  border: 1px solid #FF6600;
+  border: 1px solid #6e337a;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -568,7 +568,7 @@ select:active {
 .main_container .content_carousel .owl_content_five .item .card_muslim_guid,
 .main_container .content_carousel .owl_muslim_guide .item .card_muslim_guid {
   background: #000;
-  border: 4px solid #FF6600;
+  border: 4px solid #6e337a;
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
@@ -610,7 +610,7 @@ select:active {
 }
 .main_container .list_page .coming_soon {
   color: #FFF;
-  background: #FF6600;
+  background: #6e337a;
   width: 33%;
   cursor: not-allowed;
   border-radius: 8px;
@@ -620,7 +620,7 @@ select:active {
   -o-border-radius: 8px;
 }
 .main_container .list_page .content_carousel_head .link_title {
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .list_page .content_carousel_head .link_title h6 {
   margin-bottom: 1rem;
@@ -631,7 +631,7 @@ select:active {
   margin-bottom: 1rem;
 }
 .main_container .list_page .item .card {
-  border: 1px solid #FF6600;
+  border: 1px solid #6e337a;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -647,7 +647,7 @@ select:active {
   border-top-right-radius: 10px;
 }
 .main_container .list_page .item .card .owl_content_img .playCircle {
-  color: #FF6600;
+  color: #6e337a;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -674,7 +674,7 @@ select:active {
   margin-bottom: 0;
 }
 .main_container .list_muslim .content_carousel_head .link_title {
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .list_muslim .item {
   width: 90%;
@@ -741,7 +741,7 @@ select:active {
   width: 94%;
 }
 .main_container .inner_page .cover button {
-  background: #FF6600;
+  background: #6e337a;
   color: #FFF;
   border: 0;
   position: absolute;
@@ -769,7 +769,7 @@ select:active {
 }
 .main_container .inner_page .poster .poster-details .outside-cover {
   margin-bottom: 2rem;
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .inner_page .socail_media {
   width: 50%;
@@ -777,7 +777,7 @@ select:active {
 }
 .main_container .inner_page .socail_media .pa_share {
   margin-top: 1rem;
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .inner_page .socail_media .shear_div .facebook,
 .main_container .inner_page .socail_media .shear_div .twitter,
@@ -831,7 +831,7 @@ select:active {
 .main_container .inner_page .section_content .pa_Videos {
   margin-bottom: 1rem;
   margin-top: 1rem;
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .inner_page .section_content .image_inner {
   height: 80px;
@@ -849,7 +849,7 @@ select:active {
 }
 .main_container .inner_page .section_content .p_content_2 {
   font-size: 14px;
-  color: #FF6600;
+  color: #6e337a;
   margin-bottom: 0;
   margin-top: -0.75rem;
 }
@@ -861,7 +861,7 @@ select:active {
   margin-bottom: 0.5rem;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club .btn {
-  background: #FF6600;
+  background: #6e337a;
   color: #FFF;
   border: 0;
 }
@@ -872,12 +872,12 @@ select:active {
   justify-content: center;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn {
-  background: #FF6600;
+  background: #6e337a;
   color: #FFF;
   border: 0;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn.btn_2 {
-  background: #FF6600;
+  background: #6e337a;
 }
 .main_container .azan_page {
   margin-top: 3rem;
@@ -921,10 +921,10 @@ select:active {
 }
 .main_container .nearmosque_page .nearmosque_title h2 {
   margin-bottom: 1.5rem;
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .nearmosque_page .nearmosque_title #map {
-  border: 5px solid #FF6600;
+  border: 5px solid #6e337a;
   height: 66vh;
   width: 90%;
   margin: 0 auto;
@@ -963,13 +963,13 @@ select:active {
   }
 }
 .main_container .salah_time_page .salah_time_title h2 {
-  color: #FF6600;
+  color: #6e337a;
   text-align: center;
   margin-bottom: 2rem;
 }
 .main_container .salah_time_page .time_btn {
   color: #FFF;
-  border: 2px solid #FF6600;
+  border: 2px solid #6e337a;
   width: 100%;
   text-align: center;
   margin-bottom: 3%;
@@ -1088,7 +1088,7 @@ select:active {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   margin-right: 1rem;
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .zakkah_v2_page #accordion .card .card-header button span.red_result {
   color: #F00;
@@ -1099,19 +1099,19 @@ select:active {
   margin-bottom: 0.75rem;
 }
 .main_container .zakkah_v2_page #accordion .card .card-body {
-  border-top: 1px solid #FF6600;
+  border-top: 1px solid #6e337a;
 }
 .main_container .zakkah_v2_page #accordion .card .card-body .currency_bg {
   background: transparent;
 }
 .main_container .zakkah_v2_page .currency_title {
-  color: #FF6600;
+  color: #6e337a;
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
   float: left;
 }
 .main_container .zakkah_v2_page .currency_icon {
-  color: #FF6600;
+  color: #6e337a;
   margin-top: 1rem;
   margin-bottom: 1rem;
   float: right;
@@ -1132,13 +1132,13 @@ select:active {
 .main_container .zakkah_v2_page .currency_bg .currency_selectBox select {
   text-align-last: center;
   background: transparent;
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .zakkah_v2_page .currency_bg .currency_selectBox select:focus {
   box-shadow: 0 0 0 0.2rem transparent !important;
 }
 .main_container .zakkah_v2_page .currency_bg .currency_selectBox select option {
-  background: #FF6600;
+  background: #6e337a;
 }
 .main_container .zakkah_v2_page .currency_bg .result {
   float: right;
@@ -1164,7 +1164,7 @@ select:active {
 .main_container .zakkah_v2_page .currency_bg .form_input .textbox.input-middle + .bord {
   position: absolute;
   bottom: 0;
-  background: #FF6600;
+  background: #6e337a;
   width: 0;
   height: 2px;
   transition: all 0.4s ease-in-out;
@@ -1182,7 +1182,7 @@ select:active {
   box-shadow: none !important;
 }
 .main_container .zakkah_v2_page .zakah_result {
-  background: #FF6600;
+  background: #6e337a;
   position: fixed;
   bottom: 0;
   width: 39.5%;
@@ -1205,10 +1205,10 @@ select:active {
 .main_container .merath_page .merath_title h2 {
   text-align: center;
   margin-bottom: 1rem;
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .merath_page .input_text .merath_input {
-  border: 2px solid #FF6600;
+  border: 2px solid #6e337a;
   color: #FFF;
   background-color: transparent;
   float: right;
@@ -1231,7 +1231,7 @@ select:active {
   text-align: left;
 }
 .main_container .merath_page .input_span h4 {
-  color: #FF6600;
+  color: #6e337a;
   line-height: 2.5rem;
   font-size: 1.35rem;
   float: left;
@@ -1245,7 +1245,7 @@ select:active {
 }
 .main_container .merath_page .button_merath .merath_btn {
   color: #FFF;
-  background: #FF6600;
+  background: #6e337a;
   width: 50%;
   font-size: 1rem;
   font-weight: bold;
@@ -1258,15 +1258,15 @@ select:active {
   -o-border-radius: 8px;
 }
 .main_container .merath_page .table_table .thead2_h4 {
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .merath_page .table_table .table {
-  border: 2px #FF6600 solid;
+  border: 2px #6e337a solid;
   border-radius: 7px;
   direction: rtl;
 }
 .main_container .merath_page .table_table .table tbody tr {
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .merath_page .table_table .table tbody tr td {
   padding: 1rem 0.7rem;
@@ -1288,11 +1288,11 @@ select:active {
 }
 .main_container .sebha_page .display #wordSebha {
   margin-bottom: 1rem;
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .sebha_page .display #tally {
   color: #FFF !important;
-  border: 2px solid #FF6600;
+  border: 2px solid #6e337a;
   border-radius: 50%;
   width: 150px;
   height: 150px;
@@ -1307,7 +1307,7 @@ select:active {
   -o-border-radius: 50%;
 }
 .main_container .sebha_page .display .btn-bar button {
-  border: 2px solid #FF6600;
+  border: 2px solid #6e337a;
   width: 65%;
   height: 4.5rem;
   display: block;
@@ -1354,9 +1354,9 @@ select:active {
   color: black;
 }
 .main_container .sebha_page .choose_sebha {
-  border: 2px solid #FF6600;
+  border: 2px solid #6e337a;
   display: block;
-  color: #FF6600;
+  color: #6e337a;
   text-align: center;
   margin-bottom: 15px;
   padding: 9px;
@@ -1367,12 +1367,12 @@ select:active {
   -o-border-radius: 10px;
 }
 .main_container .sebha_page a:hover {
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .search_page {
   margin: 2.5rem auto;
   width: 100%;
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .search_page .form_search {
   position: relative;
@@ -1384,17 +1384,17 @@ select:active {
   padding: 0 1rem;
   background: transparent;
   border-bottom: 1px solid #adadad;
-  color: #FF6600;
+  color: #6e337a;
   border-top: 0;
   border-right: 0;
   border-left: 0;
   text-align: center;
 }
 .main_container .search_page .form_search .textbox::placeholder {
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .search_page .form_search .textbox.input-middle + .bord {
-  background: #FF6600;
+  background: #6e337a;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -1414,7 +1414,7 @@ select:active {
   box-shadow: none !important;
 }
 .main_container .search_page .form_search .btn_search {
-  color: #FF6600;
+  color: #6e337a;
   opacity: 1;
   position: absolute;
   top: 50%;
@@ -1469,7 +1469,7 @@ select:active {
 .main_container .error_page .buttons-con .action-link-wrap .link-button {
   width: 100%;
   color: #FFF;
-  background: #FF6600;
+  background: #6e337a;
   padding: 0.5rem 0.75rem;
   cursor: pointer;
   transition: all 0.3s linear;
@@ -1481,7 +1481,7 @@ select:active {
 }
 .main_container .error_page .buttons-con .action-link-wrap .link-button:hover {
   background: #FFF;
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .error_page #Polygon-1,
 .main_container .error_page #Polygon-2,
@@ -1513,17 +1513,17 @@ select:active {
   width: 90%;
 }
 .main_container .profile .profile_title {
-  color: #FF6600;
+  color: #6e337a;
   margin-bottom: 5% !important;
 }
 .main_container .profile .profile_table table {
-  border: 1px solid #FF6600;
+  border: 1px solid #6e337a;
   border-collapse: unset;
   border-radius: 20px;
 }
 .main_container .profile .profile_table table tbody tr .label-view {
   width: 25%;
-  color: #FF6600;
+  color: #6e337a;
   border: 0;
 }
 .main_container .profile .profile_table table tbody tr .label-view2 {
@@ -1535,14 +1535,14 @@ select:active {
   margin: 1.5rem auto;
 }
 .main_container .terms_page .terms_title {
-  color: #FF6600;
+  color: #6e337a;
 }
 .main_container .terms_page .terms_title h2 {
   font-size: 1.25rem;
 }
 .main_container .terms_page .ul_terms {
   font-size: 0.85rem !important;
-  color: #FF6600 !important;
+  color: #6e337a !important;
 }
 
 .loading-overlay {
@@ -1592,8 +1592,8 @@ select:active {
   animation: spinner 1s linear infinite;
 }
 .loading-overlay .spinner-blue {
-  border-top-color: #FF6600;
-  border-left-color: #FF6600;
+  border-top-color: #6e337a;
+  border-left-color: #6e337a;
 }
 
 .alert .close {
@@ -1692,14 +1692,14 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .menu_all_op .nav_nav button .icon_before {
-    color: #FF6600 !important;
+    color: #6e337a !important;
   }
   .main_container .menu_all_op .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
-    border: 2px solid #FF6600;
+    border: 2px solid #6e337a;
     width: 15rem;
     height: 100vh;
     padding: 0 0;
@@ -1714,7 +1714,7 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1rem;
     float: right;
-    color: #FF6600;
+    color: #6e337a;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:hover, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:focus {
     color: #FFF;
@@ -1728,7 +1728,7 @@ select:active {
     padding: 0;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
-    color: #FF6600;
+    color: #6e337a;
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link svg {
@@ -2003,7 +2003,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #FF6600;
+    background: #6e337a;
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -2020,7 +2020,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #FF6600 solid;
+    border: 2px #6e337a solid;
   }
   .main_container .merath_page .table_table .table tbody {
     border-radius: 7px;
@@ -2145,14 +2145,14 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .menu_all_op .nav_nav button .icon_before {
-    color: #FF6600 !important;
+    color: #6e337a !important;
   }
   .main_container .menu_all_op .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
-    border: 2px solid #FF6600;
+    border: 2px solid #6e337a;
     width: 15rem;
     height: 100vh;
     padding: 0 0;
@@ -2167,7 +2167,7 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1rem;
     float: right;
-    color: #FF6600;
+    color: #6e337a;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:hover, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:focus {
     color: #FFF;
@@ -2181,7 +2181,7 @@ select:active {
     padding: 0;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
-    color: #FF6600;
+    color: #6e337a;
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link svg {
@@ -2464,7 +2464,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #FF6600;
+    background: #6e337a;
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -2481,7 +2481,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #FF6600 solid;
+    border: 2px #6e337a solid;
   }
   .main_container .merath_page .table_table .table tbody {
     border-radius: 7px;
@@ -2606,14 +2606,14 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .menu_all_op .nav_nav button .icon_before {
-    color: #FF6600 !important;
+    color: #6e337a !important;
   }
   .main_container .menu_all_op .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
-    border: 2px solid #FF6600;
+    border: 2px solid #6e337a;
     width: 15rem;
     height: 100vh;
     padding: 0 0;
@@ -2628,7 +2628,7 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1rem;
     float: right;
-    color: #FF6600;
+    color: #6e337a;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:hover, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:focus {
     color: #FFF;
@@ -2642,7 +2642,7 @@ select:active {
     padding: 0;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
-    color: #FF6600;
+    color: #6e337a;
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link svg {
@@ -2938,7 +2938,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #FF6600;
+    background: #6e337a;
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -2955,7 +2955,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #FF6600 solid;
+    border: 2px #6e337a solid;
   }
   .main_container .merath_page .table_table .table tbody {
     border-radius: 7px;
@@ -3080,14 +3080,14 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .menu_all_op .nav_nav button .icon_before {
-    color: #FF6600 !important;
+    color: #6e337a !important;
   }
   .main_container .menu_all_op .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
-    border: 2px solid #FF6600;
+    border: 2px solid #6e337a;
     width: 15rem;
     height: 100vh;
     padding: 0 0;
@@ -3102,7 +3102,7 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1rem;
     float: right;
-    color: #FF6600;
+    color: #6e337a;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:hover, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:focus {
     color: #FFF;
@@ -3116,7 +3116,7 @@ select:active {
     padding: 0;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
-    color: #FF6600;
+    color: #6e337a;
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link svg {
@@ -3406,7 +3406,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #FF6600;
+    background: #6e337a;
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -3423,7 +3423,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #FF6600 solid;
+    border: 2px #6e337a solid;
   }
   .main_container .merath_page .table_table .table tbody {
     border-radius: 7px;
@@ -3553,14 +3553,14 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .menu_all_op .nav_nav button .icon_before {
-    color: #FF6600 !important;
+    color: #6e337a !important;
   }
   .main_container .menu_all_op .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
-    border: 2px solid #FF6600;
+    border: 2px solid #6e337a;
     width: 22rem;
     height: 100vh;
     padding: 0 0;
@@ -3575,7 +3575,7 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1.25rem;
     float: right;
-    color: #FF6600;
+    color: #6e337a;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:hover, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:focus {
     color: #FFF;
@@ -3590,7 +3590,7 @@ select:active {
     font-size: 1.25rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
-    color: #FF6600;
+    color: #6e337a;
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link svg {
@@ -3887,7 +3887,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #FF6600;
+    background: #6e337a;
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -3904,7 +3904,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #FF6600 solid;
+    border: 2px #6e337a solid;
   }
   .main_container .merath_page .table_table .table tbody {
     border-radius: 7px;
@@ -4034,14 +4034,14 @@ select:active {
     -o-transform: translate(-50%, -50%);
   }
   .main_container .menu_all_op .nav_nav button .icon_before {
-    color: #FF6600 !important;
+    color: #6e337a !important;
   }
   .main_container .menu_all_op .nav_nav .navbar-collapse {
     z-index: 9999999;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul {
     background-color: #0f1218 !important;
-    border: 2px solid #FF6600;
+    border: 2px solid #6e337a;
     width: 25rem;
     height: 100vh;
     padding: 0 0;
@@ -4059,7 +4059,7 @@ select:active {
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
     font-size: 1.25rem;
     float: right;
-    color: #FF6600;
+    color: #6e337a;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:hover, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back:focus {
     color: #FFF;
@@ -4074,7 +4074,7 @@ select:active {
     font-size: 1.75rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link .icon_before {
-    color: #FF6600;
+    color: #6e337a;
     padding-right: 0.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link svg {
@@ -4425,7 +4425,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #FF6600;
+    background: #6e337a;
     color: #FFF;
     width: 60%;
     font-size: 2.5rem;
@@ -4442,7 +4442,7 @@ select:active {
     font-size: 2rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #FF6600 solid;
+    border: 2px #6e337a solid;
   }
   .main_container .merath_page .table_table .table tbody {
     border-radius: 7px;
