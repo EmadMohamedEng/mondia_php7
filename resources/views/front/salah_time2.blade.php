@@ -2,7 +2,7 @@
 @section('page_title') @lang('front.prayer') @endsection
 @section('content')
 
-@if(request()->get('OpID') == mbc || request()->get('OpID') == orange)
+@if(request()->get('OpID') == mbc || request()->get('OpID') == orange || request()->get('OpID') == zain_kw)
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav" dir="{{getCode() == 'ar' ? 'rtl' : 'ltr'}}">
 @else
 <div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav" dir="{{getCode() == 'ar' ? 'rtl' : 'ltr'}}">

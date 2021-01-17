@@ -165,6 +165,12 @@ class FrontController extends Controller
         });
     }
     $services = $services->orderBy('services.index', 'asc')->get();
+
+
+    if(request()->get('OpID') == zain_kw){
+      return view('front.operator.zain_kw.service', compact('services', 'provider'));
+    }
+
     return view('front.service', compact('services', 'provider'));
   }
 
@@ -222,6 +228,9 @@ class FrontController extends Controller
       return view('errors.404');
     }
 
+    if(request()->get('OpID') == zain_kw){
+      return view('front.operator.zain_kw.list_content', compact('contents', 'service'));
+    }
     return view('front.list_content', compact('contents', 'service'));
   }
 
@@ -301,6 +310,13 @@ class FrontController extends Controller
       // return redirect('landing_stc');
     }
 
+    if ($request->has('OpID') && $request->OpID == zain_kw) {  // enable testing from backend
+      // if ($enable || (session()->get('stc_op_id') == stc && session()->get('status') == 'active' && session()->has('MSISDN'))) {
+        return view('front.operator.zain_kw.inner_enable_testing', compact('content', 'contents'));
+      // }
+      // return redirect('landing_stc');
+    }
+
     if ($request->has('OpID') && $request->OpID == ooredoo) {  // enable testing from backend
       if ($enable || (session()->get('ooredoo_op_id') == ooredoo && session()->get('status') == 'active' && session()->has('MSISDN'))) {
         return view('front.inner_enable_testing', compact('content', 'contents'));
@@ -374,7 +390,6 @@ class FrontController extends Controller
 
 
     if ($request->has('userToken')) { // subscribe for the first time
-
 
       //   session()->put('userToken',$request->get('userToken'));
 
@@ -679,7 +694,14 @@ class FrontController extends Controller
     $contents = $contents->groupBy('content_id')->get();
     if(get_setting('filters_flag')){
       $filters = $filters->groupBy('filter_id')->get();
+      if(request()->get('OpID') == zain_kw){
+        return view('front.operator.zain_kw.search_result', compact('services', 'contents', 'filters'));
+      }
       return view('front.search_result', compact('services', 'contents', 'filters'));
+    }
+
+    if(request()->get('OpID') == zain_kw){
+      return view('front.operator.zain_kw.search_result', compact('services', 'contents'));
     }
     return view('front.search_result', compact('services', 'contents'));
   }
@@ -711,7 +733,7 @@ class FrontController extends Controller
 
   public function zakah(Request $request)
   {
-    if (request()->get("OpID") == mbc || request()->get("OpID") == orange ) {
+    if (request()->get("OpID") == mbc || request()->get("OpID") == orange || request()->get('OpID') == zain_kw ) {
       return view('front.zakah_v2');
     }
     return view('front.zakah');
