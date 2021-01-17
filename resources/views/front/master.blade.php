@@ -33,6 +33,9 @@
   @elseif(request()->get('OpID') == orange)
   @include("front.operator.orange.head")
 
+  @elseif(request()->get('OpID') == zain_kw)
+  @include("front.operator.zain_kw.head")
+
   @elseif(request()->get('OpID') == du)
   @include("front.operator.du.head")
 
@@ -113,6 +116,9 @@ $enable = get_setting('enable_testing');
 
     @elseif(request()->get('OpID') == orange)
     @include("front.operator.orange.master")
+
+    @elseif(request()->get('OpID') == zain_kw)
+    @include("front.operator.zain_kw.master")
 
     @elseif(request()->get('OpID') == du)
     @include("front.operator.du.master")
