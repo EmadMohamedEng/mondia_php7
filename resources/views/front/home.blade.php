@@ -260,9 +260,9 @@ $menu = provider_menu();
     </section>
 
 
-    @foreach ($menu->slice(0,$count) as $item)
+    @foreach ($menu as $item)
     @php
-        if($item->services->count() < 2 && request()->get('OpID') == 8)
+        if($item->services->count() < 1)
         continue;
     @endphp
     <section class="content_carousel">
@@ -332,91 +332,5 @@ $menu = provider_menu();
     </section>
     @endforeach
 
-    @foreach ($menu->slice($count,count($menu)) as $item)
-    @php
-        if($item->services->count() < 2 && request()->get('OpID') == 8){
-          continue;
-        }
-    @endphp
-
-    <section class="content_carousel">
-      <div class="content_carousel_head text-capitalize">
-        <div class="row m-0">
-          <div class="col-8 padding_phones">
-            <a class="link_title link_href" href="{{route('front.service',['provider_id' => $item->id])}}">
-              <h6 class="">{{$item->getTranslation('title',getCode())}}</h6>
-            </a>
-          </div>
-
-          <div class="col-4 padding_phones">
-            @if (request()->has('OpID') && request()->get('OpID') == 8)
-            <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
-            @else
-            <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
-            @endif
-
-            {{-- <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href">@lang('front.more')</a> --}}
-          </div>
-        </div>
-      </div>
-
-      @php
-      if(count($item->services) == 1){
-      $owl = 'owl_content_one';
-      }
-
-      if(count($item->services) == 2){
-      $owl = 'owl_content_two';
-      }
-
-      if(count($item->services) == 3){
-      $owl = 'owl_content_three';
-      }
-
-      if(count($item->services) == 4){
-      $owl = 'owl_content_four';
-      }
-
-      if(count($item->services) >= 5){
-      $owl = 'owl_content_five';
-      }
-
-      if($item->id == 23 && request()->get("OpID") == 12 ){// The Holy Quran and TIMWE
-
-      $owl = 'owl_content_one';
-      }
-
-      @endphp
-
-      <div class="{{$owl}} owl-carousel owl-theme">
-        @foreach ($item->services as $service)
-
-        @if (request()->get("OpID") == 12 && $service->id == 40)
-        <?php continue; ?>
-
-        @endif
-        <div class="item">
-          <div class="card ovf-hidden">
-            <a class="owl_content_img view overlay link_href" href="{{route('front.list',['service_id' => $service->id])}}">
-              <img class="w-100" src="{{url($service->image)}}" alt="{{$service->getTranslation('title',getCode())}}">
-
-              <a>
-                <div class="mask waves-effect waves-light rgba-white-slight"></div>
-              </a>
-            </a>
-            @if($service->provider_id != 27)
-            <a class="owl_content_img view overlay link_href" href="{{route('front.list',['service_id' => $service->id])}}">
-              <div class="card-body">
-                <h4 class="card-title text-capitalize">{{$service->getTranslation('title',getCode())}}</h4>
-              </div>
-            </a>
-            @endif
-          </div>
-        </div>
-        @endforeach
-      </div>
-    </section>
-
-    @endforeach
   </div>
   @stop
