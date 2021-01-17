@@ -244,7 +244,7 @@ $enable = get_setting('enable_testing');
       $('.sidenav').css('border', '0');
     }
   </script>
-  @elseif(request()->get('OpID') == orange)
+  @elseif(request()->get('OpID') == orange || request()->get('OpID') == zain_kw)
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "266px";

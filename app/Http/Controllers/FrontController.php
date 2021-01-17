@@ -113,6 +113,9 @@ class FrontController extends Controller
 
     $health = $health->get();
 
+    if(request()->get('OpID') == zain_kw){
+      return view('front.operator.zain_kw.home', compact('latest', 'health'));
+    }
 
     return view('front.home', compact('latest', 'health'));
   }
