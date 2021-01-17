@@ -297,3 +297,9 @@ define('stc_ksa',stc_ksa());
 
 
 /*********end stc ksa******* */
+
+/*********start zain_kw******* */
+define('zain_kw',zain_kuwait());
+
+
+/*********end zain_kw******* */

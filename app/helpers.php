@@ -62,6 +62,17 @@ function stc_ksa(){
   return 21;
 }
 
+function zain_kuwait(){
+  $country = Country::where('title', 'Kuwait')->first();
+  if(!empty($country)){
+      $op = Operator::where('country_id', $country->id)->where('name', 'zain')->first();
+      if(!empty($op)){
+          return $op->id;
+      }
+  }
+  return 23;
+}
+
 function delete_multiselect(Request $request) // select many contract from index table and delete them
 {
     $selected_list =  explode(",",$request['selected_list']);
