@@ -149,18 +149,28 @@ $enable = get_setting('enable_testing');
   <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
   @if(request()->get('OpID') == mbc)
   <script src="{{asset('front/js/mbc/script.js')}}"></script>
+
   @elseif(request()->get('OpID') == orange)
   <script src="{{asset('front/js/orange/script.js')}}"></script>
+
+  @elseif(request()->get('OpID') == zain_kw)
+  <script src="{{asset('front/js/zain_kw/script.js')}}"></script>
+
   @elseif(request()->get('OpID') == du)
   <script src="{{asset('front/js/du/script.js')}}"></script>
+
   @elseif(request()->get('OpID') == omantel)
   <script src="{{asset('front/js/omantel/script.js')}}"></script>
+
   @elseif(request()->get('OpID') == stc)
   <script src="{{asset('front/js/stc/script.js')}}"></script>
+
   @elseif(request()->get('OpID') == stc_ksa)
   <script src="{{asset('front/js/stc_ksa/script.js')}}"></script>
+
   @elseif(request()->get('OpID') == ooredoo)
   <script src="{{asset('front/js/ooredoo/script.js')}}"></script>
+
   @else
   <script src="{{asset('front/js/script.js')}}"></script>
   @endif
