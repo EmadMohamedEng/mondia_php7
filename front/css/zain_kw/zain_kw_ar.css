@@ -2667,9 +2667,9 @@ select:active {
     height: 5.5rem;
   }
   .main_container .header .header_logo .link_href img.logo_zain_kw {
-    width: 20%;
+    width: 50%;
     top: -0.25rem;
-    right: 75%;
+    right: 60%;
   }
   .main_container .header .arrow_back {
     font-size: 1.75rem;
@@ -3098,9 +3098,9 @@ select:active {
     height: 6rem;
   }
   .main_container .header .header_logo .link_href img.logo_zain_kw {
-    width: 20%;
-    top: -0.5rem;
-    right: 75%;
+    width: 50%;
+    top: -0.25rem;
+    right: 58%;
   }
   .main_container .header .arrow_back {
     font-size: 1.75rem;
@@ -3518,9 +3518,9 @@ select:active {
     width: 60%;
   }
   .main_container .header .header_logo .link_href img.logo_zain_kw {
-    width: 14%;
+    width: 35%;
     top: -0.5rem;
-    right: 77%;
+    right: 70%;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
     font-size: 0.9rem;
