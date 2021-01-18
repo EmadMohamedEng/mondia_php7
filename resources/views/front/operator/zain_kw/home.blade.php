@@ -6,7 +6,7 @@ $count = (int)(count(provider_menu())/2);
 $menu = provider_menu();
 @endphp
 
-<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
 
     @include('front.search')
 
@@ -29,11 +29,50 @@ $menu = provider_menu();
     @endif
 
     <section class="img_carousel">
-      <video class="rounded" width="100%" controls poster="{{url('orange_slider/Esm EL Nabi_1_snapshot.jpg')}}">
-        <source src="{{url('orange_slider/Esm EL Nabi_1.mp4')}}" type="video/mp4">
-        <source src="{{url('orange_slider/Esm EL Nabi_1.mp4')}}" type="video/ogg">
-        Your browser does not support the video tag.
-      </video>
+      <div class="owl_one owl-carousel owl-theme">
+        @foreach($latest as $content)
+        <div class="item">
+          <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
+            <img class="m-auto d-block" src="{{$content->type == 1 ? $content->image_preview : $content->video}}" alt="banner_slider">
+          </a>
+
+          @if(request()->get('OpID') == mbc)
+          @if ($content->free == 1)
+          @if( DB::table('settings')->where('key','like','%enable_free%')->first()->value == "1")
+          <div class="content_free text-center py-1">
+            <span class="text-capitalize">@lang('front.free')</span>
+          </div>
+          @endif
+          @endif
+          @endif
+
+          <div class="btn_subscribe w-100">
+            <button onclick="" class="btn btn-sm text-capitalize">
+              <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
+            </button>
+          </div>
+        </div>
+        @endforeach
+        @foreach($health as $content)
+        <div class="item">
+          <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
+            <img class="m-auto d-block" src="{{url($content->service->image)}}" alt="banner_slider">
+          </a>
+
+          @if ($content->free == 1)
+          <div class="content_free text-center py-1">
+            <span class="text-capitalize">free</span>
+          </div>
+          @endif
+
+          <div class="btn_subscribe w-100">
+            <button onclick="" class="btn btn-sm text-capitalize">
+              <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
+            </button>
+          </div>
+        </div>
+        @endforeach
+      </div>
     </section>
 
     <section class="content_carousel">
@@ -44,20 +83,38 @@ $menu = provider_menu();
               <h6 class="">@lang('front.muslim_guide')</h6>
             </a>
           </div>
+          @if (request()->get("OpID") == orange)
           <div class="col-4 padding_phones">
             <a href="{{url('list_muslim')}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
           </div>
+          @endif
         </div>
       </div>
 
+      @if(request()->get('OpID') == mbc)
+      <div class="owl_content owl_content_two owl-carousel owl-theme">
+        @else
         <?php
+        if(request()->get('OpID') == orange)
           $owl_c = 'owl_muslim_guide';
+        else
+          $owl_c = 'owl_content_five';
         ?>
         <div class="owl_content {{ $owl_c  }} owl-carousel owl-theme">
+          @endif
           <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
               <a class="owl_content_img view overlay link_href" href="{{url('sebha')}}">
+                @if (request()->get("OpID") == 9)
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/01.png')}}" alt="Card image cap">
+                @elseif (request()->get("OpID") == mbc)
+                <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/01.png')}}" alt="Card image cap">
+                @elseif (request()->get("OpID") == orange)
                 <img class="w-100 img_muslim_guid" src="{{asset('front/images/orange/04.png')}}" alt="Card image cap">
+                @else
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/01.png')}}" alt="Card image cap">
+                @endif
+
                 <a>
                   <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
@@ -74,7 +131,15 @@ $menu = provider_menu();
           <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
               <a class="owl_content_img view overlay link_href" href="{{url('mosque')}}">
+                @if (request()->get("OpID") == 9)
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/02.png')}}" alt="Card image cap">
+                @elseif (request()->get("OpID") == mbc )
+                <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/02.png')}}" alt="Card image cap">
+                @elseif (request()->get("OpID") == orange )
                 <img class="w-100 img_muslim_guid" src="{{asset('front/images/orange/08.png')}}" alt="Card image cap">
+                @else
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/02.png')}}" alt="Card image cap">
+                @endif
                 <a>
                   <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
@@ -87,10 +152,21 @@ $menu = provider_menu();
               </a>
             </div>
           </div>
+          @if (request()->get("OpID") == mbc)
+          @else
           <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
               <a class="owl_content_img view overlay link_href" href="{{url('zakah')}}">
+                @if (request()->get("OpID") == 9)
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/07.png')}}" alt="Card image cap">
+                @elseif (request()->get("OpID") == mbc )
+                <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/07.png')}}" alt="Card image cap">
+                @elseif (request()->get("OpID") == orange )
                 <img class="w-100 img_muslim_guid" src="{{asset('front/images/orange/07.png')}}" alt="Card image cap">
+
+                @else
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/07.png')}}" alt="Card image cap">
+                @endif
                 <a>
                   <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
@@ -103,11 +179,27 @@ $menu = provider_menu();
               </a>
             </div>
           </div>
+          @endif
 
+          @if (request()->get("OpID") == 9)
+
+          @elseif(request()->get("OpID") == ooredoo)
+
+          @elseif(request()->get("OpID") == mbc)
+
+          @else
           <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
               <a class="owl_content_img view overlay link_href" href="{{url('merath')}}">
+                @if (request()->get("OpID") == 9)
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/04.png')}}" alt="Card image cap">
+                @elseif (request()->get("OpID") == mbc)
+                <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/04.png')}}" alt="Card image cap">
+                @elseif (request()->get("OpID") == orange)
                 <img class="w-100 img_muslim_guid" src="{{asset('front/images/orange/02.png')}}" alt="Card image cap">
+                @else
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/04.png')}}" alt="Card image cap">
+                @endif
                 <a>
                   <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
@@ -120,11 +212,22 @@ $menu = provider_menu();
               </a>
             </div>
           </div>
+          @endif
 
+          @if (request()->get("OpID") == mbc)
+          @else
           <div class="item item_muslim">
             <div class="card card_muslim_guid ovf-hidden">
               <a class="owl_content_img view overlay link_href" href="{{url('salah_time')}}">
+                @if (request()->get("OpID") == 9)
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/oman/03.png')}}" alt="Card image cap">
+                @elseif (request()->get("OpID") == mbc)
+                <img class="w-100 img_muslim_guid" src="{{asset('front/images/mbc/Black/03.png')}}" alt="Card image cap">
+                @elseif (request()->get("OpID") == orange)
                 <img class="w-100 img_muslim_guid" src="{{asset('front/images/orange/05.png')}}" alt="Card image cap">
+                @else
+                <img class="w-100" src="{{asset('front/images/Cutting/Dalel_Moslem_Page/03.png')}}" alt="Card image cap">
+                @endif
                 <a>
                   <div class="mask waves-effect waves-light rgba-white-slight"></div>
                 </a>
@@ -137,6 +240,7 @@ $menu = provider_menu();
               </a>
             </div>
           </div>
+          @endif
         </div>
     </section>
 
@@ -156,7 +260,11 @@ $menu = provider_menu();
           </div>
 
           <div class="col-4 padding_phones">
+            @if (request()->has('OpID') && request()->get('OpID') == 8)
             <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
+            @else
+            <a href="{{route('front.service',['provider_id' => $item->id])}}" class="btn btn_more text-capitalize link_href roll-in-top">@lang('front.more')</a>
+            @endif
           </div>
         </div>
       </div>
