@@ -3,7 +3,7 @@
     <div class="col-md-7 col-lg-7 col-xl-7 col-7 p-0">
       <div class="header_logo">
         <a href="{{route('front.index')}}" class="link_href">
-          <img class="bounce-top logo_stc_ksa" src='{{asset("front/images/stc_kw/stc_kw.png")}}' alt='Logo'>
+          <img class="bounce-top logo_zain_kw" src='{{asset("front/images/zain_kw.png")}}' alt='Logo'>
         </a>
       </div>
     </div>

@@ -10,12 +10,19 @@
   <!-- Start Favicon -->
   @if(request()->has('OpID') && request()->get('OpID') == omantel)
   <link rel="shortcut icon" href="{{asset('front/images/omantel_logo.png')}}">
+
   @elseif(request()->has('OpID') && request()->get('OpID') == stc)
   <link rel="shortcut icon" href="{{asset('front/images/STC01.png')}}">
+
+  @elseif(request()->has('OpID') && request()->get('OpID') == zain_kw)
+  <link rel="shortcut icon" href="{{asset('front/images/zain_kw.png')}}">
+
   @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
   <link rel="shortcut icon" href="{{asset('front/images/mbc_header - fav.png')}}">
+
   @elseif(request()->has('OpID') && request()->get('OpID') == orange)
   <link rel="shortcut icon" href="{{asset('front/images/orange.png')}}">
+
   @else
   <link rel="shortcut icon" href="{{asset('front/images/favicon.ico')}}">
   @endif

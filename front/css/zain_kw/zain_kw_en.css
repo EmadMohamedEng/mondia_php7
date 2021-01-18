@@ -90,11 +90,11 @@ select:active {
 .main_container .header .header_logo .link_href {
   width: 100%;
 }
-.main_container .header .header_logo .link_href h6 {
-  width: 100%;
+.main_container .header .header_logo .link_href img.logo_zain_kw {
+  width: 35%;
   position: absolute;
-  top: 0.5rem;
-  left: 41rem;
+  top: -0.5rem;
+  left: 70%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -1144,9 +1144,10 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1rem;
-    left: 11rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 70%;
+    top: -0.25rem;
+    left: 55%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -1205,6 +1206,12 @@ select:active {
     color: #d31b88;
     font-size: 1rem;
     float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #6e337a;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -1511,9 +1518,10 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1rem;
-    left: 12.5rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 70%;
+    top: -0.25rem;
+    left: 60%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -1570,6 +1578,12 @@ select:active {
     color: #d31b88;
     font-size: 1rem;
     float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #6e337a;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -1879,9 +1893,10 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1rem;
-    left: 13.5rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 65%;
+    top: -0.25rem;
+    left: 60%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -1940,6 +1955,12 @@ select:active {
     color: #d31b88;
     font-size: 1rem;
     float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #6e337a;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -2252,9 +2273,10 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1rem;
-    left: 15rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 30%;
+    top: -0.65rem;
+    left: 70%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -2311,6 +2333,12 @@ select:active {
     color: #d31b88;
     font-size: 1rem;
     float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #6e337a;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -2626,10 +2654,10 @@ select:active {
     z-index: 99999999999;
     height: 5.5rem;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1.5rem;
-    left: 32rem;
-    font-size: 1.5rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 20%;
+    top: -0.25rem;
+    left: 75%;
   }
   .main_container .header .arrow_back {
     font-size: 1.75rem;
@@ -2700,6 +2728,12 @@ select:active {
     color: #d31b88;
     font-size: 1rem;
     float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #6e337a;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -3050,10 +3084,10 @@ select:active {
     z-index: 99999999999;
     height: 6rem;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1.5rem;
-    left: 44rem;
-    font-size: 1.75rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 20%;
+    top: -0.5rem;
+    left: 75%;
   }
   .main_container .header .arrow_back {
     font-size: 1.75rem;
@@ -3124,6 +3158,12 @@ select:active {
     color: #d31b88;
     font-size: 1.5rem;
     float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #6e337a;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -3463,9 +3503,10 @@ select:active {
   .main_container {
     width: 60%;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1rem;
-    left: 12.5rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 14%;
+    top: -0.5rem;
+    left: 77%;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
     font-size: 0.9rem;

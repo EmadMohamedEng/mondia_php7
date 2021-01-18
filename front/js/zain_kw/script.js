@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   $(".close_nav").click(function () {
     if ($('#menu_toggle').attr('aria-expanded')) {
@@ -47,27 +48,23 @@ $('.owl_one').owlCarousel({
   autoplayTimeout: 3000,
   animateOut: 'fadeOut',
   nav: false,
-  dots: false,
-  center: false,
+  dots: true,
+  center: true,
   responsive: {
     0: {
       items: 1,
-      dots: true
     },
     600: {
       items: 1,
-      dots: true
     },
     1000: {
       items: 3,
-      dots: true
     },
     1024: {
-      items: 2,
-      dots: true
+      items: 3,
     },
     1024.9: {
-      items: 2
+      items: 3
     }
   }
 });
@@ -191,7 +188,7 @@ $('.owl_content_five').owlCarousel({
 });
 
 $('.owl_muslim_guide').owlCarousel({
-  rtl:window.lang == 'ar' ? true : false,
+  rtl: true,
   loop: true,
   margin: 5,
   autoplay: true,
@@ -262,6 +259,9 @@ $(document).ready(function () {
     $(target).not().parent().children(".slideContent").slideToggle();
   });
 });
+
+
+
 
 var map;
 var infowindow;

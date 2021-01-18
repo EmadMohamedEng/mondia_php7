@@ -80,16 +80,18 @@ select {
       .link_href {
         width: 100%;
 
-        h6 {
-          width: 100%;
-          position: absolute;
-          top: 0.5rem;
-          left: 41rem;
-          transform: translate(-50%, -50%);
-          -webkit-transform: translate(-50%, -50%);
-          -moz-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          -o-transform: translate(-50%, -50%);
+        img {
+          &.logo_zain_kw {
+            width: 35%;
+            position: absolute;
+            top: -0.5rem;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+          }
         }
       }
     }
@@ -1476,9 +1478,12 @@ select {
 
       .header_logo {
         .link_href {
-          h6 {
-            top: 1rem;
-            left: 11rem;
+          img {
+            &.logo_zain_kw {
+              width: 70%;
+              top: -0.25rem;
+              left: 55%;
+            }
           }
         }
       }
@@ -1555,6 +1560,13 @@ select {
                 color: $bg_color;
                 font-size: 1rem;
                 float: right;
+              }
+
+              img {
+                background-color: $bg_color2;
+                width: 30%;
+                display: block;
+                margin: 0 auto;
               }
             }
           }
@@ -2028,9 +2040,12 @@ select {
 
       .header_logo {
         .link_href {
-          h6 {
-            top: 1rem;
-            left: 12.5rem;
+          img {
+            &.logo_zain_kw {
+              width: 70%;
+              top: -0.25rem;
+              left: 60%;
+            }
           }
         }
       }
@@ -2104,6 +2119,13 @@ select {
                 color: $bg_color;
                 font-size: 1rem;
                 float: right;
+              }
+
+              img {
+                background-color: $bg_color2;
+                width: 30%;
+                display: block;
+                margin: 0 auto;
               }
             }
           }
@@ -2579,9 +2601,12 @@ select {
 
       .header_logo {
         .link_href {
-          h6 {
-            top: 1rem;
-            left: 13.5rem;
+          img {
+            &.logo_zain_kw {
+              width: 65%;
+              top: -0.25rem;
+              left: 60%;
+            }
           }
         }
       }
@@ -2658,6 +2683,13 @@ select {
                 color: $bg_color;
                 font-size: 1rem;
                 float: right;
+              }
+
+              img {
+                background-color: $bg_color2;
+                width: 30%;
+                display: block;
+                margin: 0 auto;
               }
             }
           }
@@ -3139,9 +3171,12 @@ select {
 
       .header_logo {
         .link_href {
-          h6 {
-            top: 1rem;
-            left: 15rem;
+          img {
+            &.logo_zain_kw {
+              width: 30%;
+              top: -0.65rem;
+              left: 70%;
+            }
           }
         }
       }
@@ -3215,6 +3250,13 @@ select {
                 color: $bg_color;
                 font-size: 1rem;
                 float: right;
+              }
+
+              img {
+                background-color: $bg_color2;
+                width: 30%;
+                display: block;
+                margin: 0 auto;
               }
             }
           }
@@ -3699,10 +3741,12 @@ select {
 
       .header_logo {
         .link_href {
-          h6 {
-            top: 1.5rem;
-            left: 32rem;
-            font-size: 1.5rem;
+          img {
+            &.logo_zain_kw {
+              width: 20%;
+              top: -0.25rem;
+              left: 75%;
+            }
           }
         }
       }
@@ -3790,6 +3834,13 @@ select {
                 color: $bg_color;
                 font-size: 1rem;
                 float: right;
+              }
+
+              img {
+                background-color: $bg_color2;
+                width: 30%;
+                display: block;
+                margin: 0 auto;
               }
             }
           }
@@ -4334,10 +4385,12 @@ select {
 
       .header_logo {
         .link_href {
-          h6 {
-            top: 1.5rem;
-            left: 44rem;
-            font-size: 1.75rem;
+          img {
+            &.logo_zain_kw {
+              width: 20%;
+              top: -0.5rem;
+              left: 75%;
+            }
           }
         }
       }
@@ -4425,6 +4478,13 @@ select {
                 color: $bg_color;
                 font-size: 1.5rem;
                 float: right;
+              }
+
+              img {
+                background-color: $bg_color2;
+                width: 30%;
+                display: block;
+                margin: 0 auto;
               }
             }
           }
@@ -4958,9 +5018,12 @@ select {
     .header {
       .header_logo {
         .link_href {
-          h6 {
-            top: 1rem;
-            left: 12.5rem;
+          img {
+            &.logo_zain_kw {
+              width: 14%;
+              top: -0.5rem;
+              left: 77%;
+            }
           }
         }
       }

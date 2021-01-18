@@ -90,12 +90,11 @@ select:active {
 .main_container .header .header_logo .link_href {
   width: 100%;
 }
-.main_container .header .header_logo .link_href h6 {
-  font-size: 1.25rem;
-  width: 100%;
+.main_container .header .header_logo .link_href img.logo_zain_kw {
+  width: 35%;
   position: absolute;
-  top: 0.5rem;
-  right: -19rem;
+  top: -0.5rem;
+  right: 70%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -1157,9 +1156,10 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1rem;
-    right: -5rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 70%;
+    top: -0.25rem;
+    right: 50%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -1218,6 +1218,12 @@ select:active {
     color: #d31b88;
     font-size: 1rem;
     float: left;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #6e337a;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -1524,9 +1530,10 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1rem;
-    right: -5.5rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 70%;
+    top: -0.25rem;
+    right: 55%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -1583,6 +1590,12 @@ select:active {
     color: #d31b88;
     font-size: 1rem;
     float: left;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #6e337a;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -1892,9 +1905,10 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1rem;
-    right: -6.5rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 65%;
+    top: -0.25rem;
+    right: 55%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -1953,6 +1967,12 @@ select:active {
     color: #d31b88;
     font-size: 1rem;
     float: left;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #6e337a;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -2265,9 +2285,10 @@ select:active {
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1rem;
-    right: -6.5rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 30%;
+    top: -0.65rem;
+    right: 70%;
   }
   .main_container .menu_all_op .nav_nav {
     background-color: transparent;
@@ -2324,6 +2345,12 @@ select:active {
     color: #d31b88;
     font-size: 1rem;
     float: left;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #6e337a;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -2639,10 +2666,10 @@ select:active {
     z-index: 99999999999;
     height: 5.5rem;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1.5rem;
-    right: -14.5rem;
-    font-size: 1.5rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 20%;
+    top: -0.25rem;
+    right: 75%;
   }
   .main_container .header .arrow_back {
     font-size: 1.75rem;
@@ -2714,6 +2741,12 @@ select:active {
     color: #d31b88;
     font-size: 1rem;
     float: left;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #6e337a;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -3064,10 +3097,10 @@ select:active {
     z-index: 99999999999;
     height: 6rem;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1.75rem;
-    right: -20.5rem;
-    font-size: 2rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 20%;
+    top: -0.5rem;
+    right: 75%;
   }
   .main_container .header .arrow_back {
     font-size: 1.75rem;
@@ -3139,6 +3172,12 @@ select:active {
     color: #d31b88;
     font-size: 1.5rem;
     float: right;
+  }
+  .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
+    background-color: #6e337a;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
   }
   .main_container .img_carousel {
     margin-top: 0;
@@ -3478,9 +3517,10 @@ select:active {
   .main_container {
     width: 60%;
   }
-  .main_container .header .header_logo .link_href h6 {
-    top: 1rem;
-    right: 12.5rem;
+  .main_container .header .header_logo .link_href img.logo_zain_kw {
+    width: 14%;
+    top: -0.5rem;
+    right: 77%;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
     font-size: 0.9rem;
