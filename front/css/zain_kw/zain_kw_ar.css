@@ -1,6 +1,6 @@
 @font-face {
-  font-family: FSAlvar-Regular;
-  src: url("../../font/FSAlvar-Regular.otf");
+  font-family: DroidKufi-Regular;
+  src: url("../../font/DroidKufi-Regular.ttf");
 }
 html {
   height: 100%;
@@ -10,7 +10,7 @@ body {
   direction: rtl;
   height: 100%;
   width: 100%;
-  font-family: FSAlvar-Regular;
+  font-family: DroidKufi-Regular;
   background: #f2f2f2;
   overflow-x: hidden;
 }
