@@ -30,6 +30,10 @@ class AppServiceProvider extends ServiceProvider
         $lang = 'ar';
         session()->put('applocale', $lang);
       }
+      if (request()->get('OpID') == zain_kuwait()) {
+        $lang = 'ar';
+        session()->put('applocale', $lang);
+      }
         Schema::defaultStringLength(191);
     }
 }
