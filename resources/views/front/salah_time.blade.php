@@ -55,7 +55,7 @@
           </div>
 
           <div class="col-md-6 col-lg-6 col-xl-6 col-6 input_span">
-            <h4 class="h4_time_2">{{$value}} </h4>
+            <h4 class="h4_time_2">{{filter_time($value)}} </h4>
           </div>
         </div>
       </div>
