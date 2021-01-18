@@ -266,3 +266,15 @@ function get_occasion_mbc()
 
     return $mbcContent;
 }
+
+function filter_time($time){
+  $arabic_number = array('٠','١','٢','٣','٤','٥','٦','٧','٨','٩');
+  $english_number = array('0','1','2','3','4','5','6','7','8','9');
+  if(getCode() == 'ar'){
+    $time = str_replace('am','ص',$time);
+    $time = str_replace('pm','م',$time);
+    $time = str_replace($english_number, $arabic_number, $time);
+  }
+  return $time;
+}
+
