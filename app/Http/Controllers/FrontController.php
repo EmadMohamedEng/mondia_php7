@@ -71,6 +71,10 @@ class FrontController extends Controller
       return redirect('/?OpID='.stc_ksa);
     }
 
+    if (!$request->has('OpID') && get_setting('redirect_zain_kw')) {
+      return redirect('/?OpID='.zain_kw);
+    }
+
     if ($request->has('OpID')) {
       session()->put('current_op_id', $request->get('OpID'));
     }
