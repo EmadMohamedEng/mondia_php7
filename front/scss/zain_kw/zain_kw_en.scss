@@ -9,8 +9,8 @@ $grey_color: #adadad;
 // }
 
 @font-face {
-  font-family: FSAlvar-Regular;
-  src: url('../../font/FSAlvar-Regular.otf')
+  font-family: DroidKufi-Regular;
+  src: url('../../font/DroidKufi-Regular.ttf')
 }
 
 html {
@@ -21,7 +21,7 @@ body {
   direction: ltr;
   height: 100%;
   width: 100%;
-  font-family: FSAlvar-Regular;
+  font-family: DroidKufi-Regular;
   background: #f2f2f2;
   overflow-x: hidden;
 }
@@ -1564,7 +1564,8 @@ select {
 
               img {
                 background-color: $bg_color2;
-                width: 30%;
+                padding: 1% 0;
+                width: 50%;
                 display: block;
                 margin: 0 auto;
               }
@@ -2123,7 +2124,8 @@ select {
 
               img {
                 background-color: $bg_color2;
-                width: 30%;
+                padding: 1% 0;
+                width: 60%;
                 display: block;
                 margin: 0 auto;
               }
@@ -2687,7 +2689,8 @@ select {
 
               img {
                 background-color: $bg_color2;
-                width: 30%;
+                padding: 1% 0;
+                width: 60%;
                 display: block;
                 margin: 0 auto;
               }
@@ -3254,7 +3257,8 @@ select {
 
               img {
                 background-color: $bg_color2;
-                width: 30%;
+                padding: 1% 0;
+                width: 60%;
                 display: block;
                 margin: 0 auto;
               }
@@ -3743,9 +3747,9 @@ select {
         .link_href {
           img {
             &.logo_zain_kw {
-              width: 20%;
+              width: 50%;
               top: -0.25rem;
-              left: 75%;
+              left: 67%;
             }
           }
         }
@@ -3838,7 +3842,8 @@ select {
 
               img {
                 background-color: $bg_color2;
-                width: 30%;
+                padding: 1% 0;
+                width: 60%;
                 display: block;
                 margin: 0 auto;
               }
@@ -4387,9 +4392,9 @@ select {
         .link_href {
           img {
             &.logo_zain_kw {
-              width: 20%;
-              top: -0.5rem;
-              left: 75%;
+              width: 50%;
+              top: -0.25rem;
+              left: 65%;
             }
           }
         }
@@ -4482,7 +4487,8 @@ select {
 
               img {
                 background-color: $bg_color2;
-                width: 30%;
+                padding: 1% 0;
+                width: 60%;
                 display: block;
                 margin: 0 auto;
               }
@@ -5020,9 +5026,9 @@ select {
         .link_href {
           img {
             &.logo_zain_kw {
-              width: 14%;
+              width: 35%;
               top: -0.5rem;
-              left: 77%;
+              left: 70%;
             }
           }
         }

@@ -894,6 +894,7 @@ class FrontController extends Controller
     // $ip1       = "91.72.180.37";      //emirate
     //  $ip2       = "105.181.117.137";   //Egypt
     $ip3 =   "62.231.247.72"; //oman
+    // $ip4 = "94.129.0.40"; //kuwait
     if (request()->get('OpID') == 9) {
       $location  =  $this->ip_info($ip3, "location");
     } else {
