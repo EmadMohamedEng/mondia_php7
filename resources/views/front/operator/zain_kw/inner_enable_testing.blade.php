@@ -13,7 +13,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
 }
 @endphp
 
-<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
+<div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
   @include('front.search')
   <section class="inner_page">
     <div class="row m-0">
