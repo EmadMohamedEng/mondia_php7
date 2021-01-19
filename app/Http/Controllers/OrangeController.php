@@ -39,10 +39,10 @@ class OrangeController extends Controller
     $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
 
     // log check status
-    $actionName = "Orange Check Status";
-    $checkStatus_log['msisdn'] =$msisdn;
-    $checkStatus_log['result'] =    $checkStatus  ;
-    $this->log($actionName, $URL, $checkStatus_log);
+    // $actionName = "Orange Check Status";
+    // $checkStatus_log['msisdn'] =$msisdn;
+    // $checkStatus_log['result'] =    $checkStatus  ;
+    // $this->log($actionName, $URL, $checkStatus_log);
 
 
  if($checkStatus != "0"){//msidn found and active = 1
