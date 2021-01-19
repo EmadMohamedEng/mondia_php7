@@ -38,6 +38,12 @@ class OrangeController extends Controller
     $headers['Accept'] = '*/*';
     $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
 
+    // log check status
+    $actionName = "Orange Check Status";
+    $checkStatus_log['msisdn'] =$msisdn;
+    $checkStatus_log['result'] =    $checkStatus  ;
+    $this->log($actionName, $URL, $checkStatus_log);
+
 
  if($checkStatus != "0"){//msidn found and active = 1
       $this->orangeLoginSession($msisdn);
@@ -248,7 +254,7 @@ class OrangeController extends Controller
     $headers['Accept'] = '*/*';
     $checkStatus = $this->SendRequestPost($URL, $JSON, $headers);
 
-    if($checkStatus != "0"){  //  found and active = 1 
+    if($checkStatus != "0"){  //  found and active = 1
 
     date_default_timezone_set("Africa/Cairo");
     $random = mt_rand(1000, 9999);
@@ -292,7 +298,7 @@ class OrangeController extends Controller
       session()->flash('failed', $msg);
       return $this->logout();
     }
-  
+
 
 }
 
@@ -320,8 +326,8 @@ class OrangeController extends Controller
       31	Technical problem
       */
 
-        if($orangeUnSubscribe == "0"){ // unsub result code direct from orange unsub api 
-          // 0 =>  unsub success 
+        if($orangeUnSubscribe == "0"){ // unsub result code direct from orange unsub api
+          // 0 =>  unsub success
 
              // send unsub success message
             if($lang == 'ar'){
