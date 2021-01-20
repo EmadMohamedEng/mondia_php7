@@ -525,16 +525,15 @@ class OrangeController extends Controller
       $log->addInfo($URL, $parameters_arr);
     }
 
-    public function send_today_content()
+    public function orange_get_today_content_link()
     {
-      $send_today_content = Post::select('*', 'posts.id as post_id')
+      $orange_get_today_content_link = Post::select('*', 'posts.id as post_id')
         ->where('posts.operator_id', orange)
         ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
         ->orderBy("created_at", "desc")
         ->first();
-        //url('view_content/' . $post->video_id . '/?OpID=' . $post->operator_id);
-        $send_today_content = url('view_content/' . $send_today_content->video_id . '/?OpID=' . $send_today_content->operator_id);
-        return $send_today_content;
+        $orange_get_today_content_link = url('view_content/' . $orange_get_today_content_link->video_id . '/?OpID=' . $orange_get_today_content_link->operator_id);
+        return $orange_get_today_content_link;
 
     }
 

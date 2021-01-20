@@ -304,7 +304,7 @@ define('zain_kw',zain_kuwait());
 
 /*********end zain_kw******* */
 
-/***************send today content from post ****************** */
-Route::get('send_today_content', 'OrangeController@send_today_content');
+/***************orange_get_today_content_link ****************** */
+Route::get('orange_get_today_content_link', 'OrangeController@orange_get_today_content_link');
 
-/***************end today content from post ****************** */
+/***************end orange_get_today_content_link ****************** */
