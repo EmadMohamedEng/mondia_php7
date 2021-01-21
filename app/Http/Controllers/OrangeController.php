@@ -134,7 +134,7 @@ class OrangeController extends Controller
           $welcome_message = "تم الإشتراك فى باقة  أورانج الخير من أورانج تجدد ب 1 جنيه فى اليوم، جدد إيمانك واستمتع بأجدد الأدعية والإبتهالات وروائع الأناشيد الدينية مع باقة أورانج الخير. لالغاء الإشتراك ارسل unsub1 إلى 6124 مجانًا.";
           $welcome_message .= "  للدخول اضغط علي هذا الرابط ";
          }else{
-          $welcome_message = " You have subscribed to the Orange Al Khair package from Orange, renewed for 1 EGP per day, renew your faith and enjoy the latest prayers, invocations and masterpieces of religious songs with the Orange Al Khair package. To unsubscribe, text unsub1 to 6124 for free. ";
+          $welcome_message = " You have subscribed to the Orange Al Kheer package from Orange, renewed for 1 EGP per day, renew your faith and enjoy the latest prayers, invocations and masterpieces of religious songs with the Orange Al Kheer package. To unsubscribe, text unsub1 to 6124 for free. ";
           $welcome_message .= " To enter, click on this link ";
          }
 

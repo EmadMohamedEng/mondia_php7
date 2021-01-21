@@ -35,7 +35,7 @@
 
       <div class="strip text-dark">
       <h2>@lang('messages.orange_elker')</h2>
-        <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
+        {{--  <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>  --}}
       </div>
 
       <div class="shbka">
