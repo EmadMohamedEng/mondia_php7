@@ -253,6 +253,7 @@ return [
     'Day' => 'Day',
     'mbc_welcome_text' => 'welcome to Alkanz service',
     'mbc_welcome_subscribe_success' => 'Now you are subscribe success',
+    'orange_welcome_text_before_subscribe' => 'Renew your faith and enjoy the newest supplications, invocations and masterpieces of religious songs with the Orange Al Khair package for free for three days, then renew the service for 1 EGP per day, and Internet consumption will be deducted from your package',
 
 
 

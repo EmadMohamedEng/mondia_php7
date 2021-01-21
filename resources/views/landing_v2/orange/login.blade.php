@@ -54,7 +54,7 @@ if ($lang == 'ar') {
       <div class="landing_page">
         <div class="strip text-dark">
           <h2>@lang('messages.orange_elker')</h2>
-          <p class="best_features">@lang('messages.Mbc_Muslim_guide_landing')</p>
+          <p class="best_features">@lang('messages.orange_welcome_text_before_subscribe') </p>
         </div>
 
         <div class="shbka">
