@@ -533,7 +533,7 @@ class OrangeController extends Controller
 
     public function orange_get_today_content_link(Request $request)
     {
-
+      
       $orange_get_today_content_link = Post::select(
       'posts.id as post_id',
       'contents.title as content_title',
@@ -548,7 +548,7 @@ class OrangeController extends Controller
         ->orderBy("created_at", "desc")
         ->first();
         $url = url('view_content/' . $orange_get_today_content_link->video_id . '/?OpID=' . $orange_get_today_content_link->operator_id);
-        $orange_get_today_content_link = $orange_get_today_content_link->content_title ." ".url('view_content/' . $orange_get_today_content_link->video_id . '/?OpID=' . $orange_get_today_content_link->operator_id);
+        $orange_get_today_content_link = get_title_today_orange_link($orange_get_today_content_link->video_id) ." ". $url;
         return $orange_get_today_content_link ;
     }
 

@@ -84,6 +84,12 @@ function get_title($id)
     return $content->getTranslation('title', getCode());
 }
 
+function get_title_today_orange_link($id)
+{
+    $content = Video::find($id);
+    return $content->getTranslation('title', "ar");
+}
+
 function get_salah($value, $lang)
 {
     if (($lang == 'en' || $lang == '') && strpos($value, 'الظهر') !== false) {
