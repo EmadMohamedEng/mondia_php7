@@ -126,9 +126,6 @@ class FrontController extends Controller
           ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
           ->latest('posts.show_date')
           ->first();
-      if(!$today_video) {
-        $today_video = Video::latest('created_at')->first();
-      }
       return view('front.operator.zain_kw.home', compact('latest', 'health', 'today_video'));
     }
 
