@@ -4,6 +4,18 @@
 @php
 $count = (int)(count(provider_menu())/2);
 $menu = provider_menu();
+if($today_video) {
+  if($today_video->type == 1){
+    $src = $today_video->image_preview;
+  }elseif($today_video->type == 3){
+    $src = $today_video->video;
+  }elseif($today_video->type == 2){
+    $src = $today_video->image_preview;
+  }else{ // text default image
+    $src = url('front\images\Cutting\Contnent_Page\004.png');
+  }
+}
+
 @endphp
 
 <div class="col-md-12 col-lg-12 col-xl-8 col-12 padding_phones no_padding close_nav">
@@ -28,13 +40,30 @@ $menu = provider_menu();
     </div>
     @endif
 
+    @if($today_video)
     <section class="img_carousel">
-      <video class="rounded" width="100%" controls poster="{{ $today_video->image_preview }}">
-        <source src="{{ url($today_video->video) }}" type="video/mp4">
-        <source src="{{ url($today_video->video) }}" type="video/ogg">
-        Your browser does not support the video tag.
-      </video>
+      @if($today_video->type == 1)
+        <video style="object-fit: cover;width:100%" poster="{{$src}}" controls controlsList="nodownload">
+          <source src="{{url($today_video->video)}}" />
+        </video>
+        <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
+          <h4>{!!$today_video->getTranslation('title',getCode())!!}</h4>
+        </div>
+        @endif
+        @if($today_video->type == 2)
+            <img src="{{$src}}" alt="Video Cover">
+            <audio src="{{url($today_video->video)}}" controls controlsList="nodownload"></audio>
+        @endif
+        @if($today_video->type == 3)
+        <img src="{{url($today_video->video)}}" alt="Video Cover">
+        @endif
+        @if($today_video->type == 4)
+        <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
+          <h4>{!!$today_video->getTranslation('content_text',getCode())!!}</h4>
+        </div>
+      @endif
     </section>
+    @endif
     <!-- <section class="img_carousel">
       <div class="owl_one owl-carousel owl-theme">
         @foreach($latest as $content)
