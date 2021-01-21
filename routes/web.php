@@ -182,6 +182,7 @@ Route::get('get_country', 'MbcTwoController@get_country');
 Route::get('mbc_portal_landing', 'MbcTwoController@index');
 Route::get('mbc_portal_login', 'MbcTwoController@login');
 Route::get('mbc_portal_pin', 'MbcTwoController@pincode');
+Route::get('mbc_welcome_page', 'MbcTwoController@mbc_welcome_page');
 Route::get('mbc_portal_unsub', 'MbcTwoController@unsubscribe');
 Route::post('mbc_checkstatus', 'MbcTwoController@checkStatusLogin');
 Route::post('mbc_subscription/optin', 'MbcTwoController@subscriptionOptIn');

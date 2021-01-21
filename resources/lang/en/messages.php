@@ -251,5 +251,10 @@ return [
     'click_sub_landing' => 'By clicking on Subscribe now, you agree to the terms and conditions',
     'Choose_your_Operators' => 'Choose your Operators',
     'Day' => 'Day',
+    'mbc_welcome_text' => 'welcome to Alkanz service',
+    'mbc_welcome_subscribe_success' => 'Now you are subscribe success',
+
+
+
 
 ];

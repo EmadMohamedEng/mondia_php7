@@ -239,6 +239,9 @@ return [
     'click_sub_landing' => 'من خلال الضغط علي اشتراك الان فأنت توافق علي الشروط والاحكام',
     'Choose_your_Operators' => 'اختر الشبكة',
     'Day' => 'يوم',
+    'mbc_welcome_text' => 'أهلا بك في خدمة الكنز',
+    'mbc_welcome_subscribe_success' => 'انت الان مشترك بنجاح',
+
 
 
 ];

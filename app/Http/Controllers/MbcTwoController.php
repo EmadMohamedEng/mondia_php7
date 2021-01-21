@@ -193,6 +193,14 @@ class MbcTwoController extends Controller
     return view('landing_v2.mbcTwo.pinCode', compact("lang"));
   }
 
+
+  public function mbc_welcome_page()
+  {
+    $lang =  session::get('lang');
+    return view('landing_v2.mbcTwo.welcome_page', compact("lang"));
+  }
+
+
   public function unsubscribe()
   {
     $lang =  session::get('lang');
