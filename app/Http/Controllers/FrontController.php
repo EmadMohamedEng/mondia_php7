@@ -378,6 +378,7 @@ class FrontController extends Controller
 
 
     if($request->has('OpID') && $request->OpID == orange){  //mbc
+      Session::put('current_url', $request->fullUrl());
       if ($enable || (session()->get('orange_op_id') == orange && session()->get('status') == 'active' && session()->has('MSISDN'))) {
         return view('front.inner_enable_testing', compact('content','contents'));
       }
