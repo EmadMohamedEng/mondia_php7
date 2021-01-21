@@ -533,7 +533,7 @@ class OrangeController extends Controller
 
     public function orange_get_today_content_link(Request $request)
     {
-      
+
       $orange_get_today_content_link = Post::select(
       'posts.id as post_id',
       'contents.title as content_title',
