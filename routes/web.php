@@ -306,6 +306,7 @@ define('zain_kw',zain_kuwait());
 /*********end zain_kw******* */
 
 /***************orange_get_today_content_link api ****************** */
+Route::get('orange_today_link', 'OrangeController@orange_today_link');
 Route::get('orange_get_today_content_link', 'OrangeController@orange_get_today_content_link');
 
 /***************end orange_get_today_content_link ****************** */

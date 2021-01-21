@@ -553,4 +553,26 @@ class OrangeController extends Controller
     }
 
 
+    public function orange_today_link(Request $request)
+    {
+
+      $orange_get_today_content_link = Post::select(
+      'posts.id as post_id',
+      'contents.title as content_title',
+      'contents.id as video_id',
+      'posts.operator_id as operator_id'  ,
+      'posts.show_date as show_date' ,
+      'posts.active as active' ,
+      'posts.created_at as created_at')
+        ->join('contents', 'contents.id', '=', 'posts.video_id')
+        ->where('posts.operator_id', orange)
+        ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
+        ->orderBy("created_at", "desc")
+        ->first();
+        $url = url('view_content/' . $orange_get_today_content_link->video_id . '/?OpID=' . $orange_get_today_content_link->operator_id);
+        return redirect( $url) ;
+    }
+
+
+
 }
