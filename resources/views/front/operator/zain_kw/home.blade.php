@@ -29,6 +29,13 @@ $menu = provider_menu();
     @endif
 
     <section class="img_carousel">
+      <video class="rounded" width="100%" controls poster="{{ $today_video->image_preview }}">
+        <source src="{{ url($today_video->video) }}" type="video/mp4">
+        <source src="{{ url($today_video->video) }}" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+    <!-- <section class="img_carousel">
       <div class="owl_one owl-carousel owl-theme">
         @foreach($latest as $content)
         <div class="item">
@@ -73,7 +80,7 @@ $menu = provider_menu();
         </div>
         @endforeach
       </div>
-    </section>
+    </section> -->
 
     <section class="content_carousel">
       <div class="content_carousel_head text-capitalize">

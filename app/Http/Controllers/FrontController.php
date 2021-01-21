@@ -118,7 +118,18 @@ class FrontController extends Controller
     $health = $health->get();
 
     if(request()->get('OpID') == zain_kw){
-      return view('front.operator.zain_kw.home', compact('latest', 'health'));
+      $today_video = Video::select('*', 'contents.id as content_id')
+          ->join('posts', 'posts.video_id', '=', 'contents.id')
+          ->where('posts.operator_id', request()->get('OpID'))
+          ->join('services', 'services.id', '=', 'contents.service_id')
+          ->join('providers', 'providers.id', '=', 'services.provider_id')
+          ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
+          ->latest('posts.show_date')
+          ->first();
+      if(!$today_video) {
+        $today_video = Video::latest('created_at')->first();
+      }
+      return view('front.operator.zain_kw.home', compact('latest', 'health', 'today_video'));
     }
 
     return view('front.home', compact('latest', 'health'));
