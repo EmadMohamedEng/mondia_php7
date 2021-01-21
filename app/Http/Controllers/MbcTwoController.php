@@ -444,9 +444,9 @@ class MbcTwoController extends Controller
 
     if ($response == 'Success') {
       if ($lang == 'ar'){
-        return redirect('mbc_portal_pin')->with('success','تم الاشتراك بنجاح وارسال رابط الدخول لجوالك');
+        return redirect('mbc_welcome_page')->with('success','تم الاشتراك بنجاح وارسال رابط الدخول لجوالك');
       }
-      return redirect('mbc_portal_pin')->with('success','Subscribed successfully and login url is sent to your phone');
+      return redirect('mbc_welcome_page')->with('success','Subscribed successfully and login url is sent to your phone');
     }elseif($response = 'CodeHasExpired'){
       if ($lang == 'ar'){
         return redirect('mbc_portal_pin')->with('failed','يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');

@@ -66,9 +66,7 @@ if ($lang == 'ar') {
 
         <h3 style="margin-top: 10%">@lang('messages.mbc_welcome_subscribe_success')</h3>
 
-
-        <div class="zain_viva">
-          @if(Session::has('success'))
+          {{--  @if(Session::has('success'))
           <div class="alert alert-success alert-dismissible">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             {{ Session::get('success')}}
@@ -79,6 +77,8 @@ if ($lang == 'ar') {
             {{ Session::get('failed')}}
           </div>
           @endif
+
+            --}}
         </div>
       </div>
 
