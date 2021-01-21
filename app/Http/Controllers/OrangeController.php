@@ -48,6 +48,9 @@ class OrangeController extends Controller
 
  if($checkStatus != "0"){//msidn found and active = 1
       $this->orangeLoginSession($msisdn);
+      if(session()->has('current_url')){
+          return redirect(session()->get('current_url'));
+        }
       return redirect(url('?OpID=8'));
  }else{ // not found    or active = 0 (pending ) or active = 2 unsub
       $random = mt_rand(1000, 9999);
@@ -528,16 +531,25 @@ class OrangeController extends Controller
       $log->addInfo($URL, $parameters_arr);
     }
 
-    public function orange_get_today_content_link()
+    public function orange_get_today_content_link(Request $request)
     {
-      $orange_get_today_content_link = Post::select('*', 'posts.id as post_id')
+
+      $orange_get_today_content_link = Post::select(
+      'posts.id as post_id',
+      'contents.title as content_title',
+      'contents.id as video_id',
+      'posts.operator_id as operator_id'  ,
+      'posts.show_date as show_date' ,
+      'posts.active as active' ,
+      'posts.created_at as created_at')
+        ->join('contents', 'contents.id', '=', 'posts.video_id')
         ->where('posts.operator_id', orange)
         ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
         ->orderBy("created_at", "desc")
         ->first();
-        $orange_get_today_content_link = url('view_content/' . $orange_get_today_content_link->video_id . '/?OpID=' . $orange_get_today_content_link->operator_id);
-        return $orange_get_today_content_link;
-
+        $url = url('view_content/' . $orange_get_today_content_link->video_id . '/?OpID=' . $orange_get_today_content_link->operator_id);
+        $orange_get_today_content_link = $orange_get_today_content_link->content_title ." ".url('view_content/' . $orange_get_today_content_link->video_id . '/?OpID=' . $orange_get_today_content_link->operator_id);
+        return $orange_get_today_content_link ;
     }
 
 
