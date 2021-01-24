@@ -47,7 +47,7 @@ if($today_video) {
           <source src="{{url($today_video->video)}}" />
         </video>
         <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
-          <h4>{!!$today_video->getTranslation('title',getCode())!!}</h4>
+        <h4>{{get_title($today_video->content_id)}}</h4>
         </div>
         @endif
         @if($today_video->type == 2)

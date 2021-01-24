@@ -116,7 +116,7 @@ class FrontController extends Controller
     }
 
     $health = $health->get();
-    if(request()->get('OpID') == zain_kw){
+    if(request()->get('OpID') == zain_kw || request()->get('OpID') == ooredoo_kw || request()->get('OpID') == viva_kw){
       $today_video = Video::select('*', 'contents.id as content_id', 'contents.title as content_title')
           ->join('posts', 'posts.video_id', '=', 'contents.id')
           ->where('posts.operator_id', request()->get('OpID'))
@@ -127,19 +127,6 @@ class FrontController extends Controller
           ->first();
       return view('front.operator.zain_kw.home', compact('latest', 'health', 'today_video'));
     }
-    if(request()->get('OpID') == ooredoo_kw){
-      $today_video = Video::select('*', 'contents.id as content_id', 'contents.title as content_title')
-          ->join('posts', 'posts.video_id', '=', 'contents.id')
-          ->where('posts.operator_id', request()->get('OpID'))
-          ->join('services', 'services.id', '=', 'contents.service_id')
-          ->join('providers', 'providers.id', '=', 'services.provider_id')
-          ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
-          ->latest('posts.show_date')
-          ->first();
-          // dd($today_video);
-      return view('front.operator.ooredoo_kw.home', compact('latest', 'health', 'today_video'));
-    }
-
     return view('front.home', compact('latest', 'health'));
   }
 
