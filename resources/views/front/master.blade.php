@@ -43,6 +43,9 @@
   @elseif(request()->get('OpID') == zain_kw)
   @include("front.operator.zain_kw.head")
 
+  @elseif(request()->get('OpID') == ooredoo_kw)
+  @include("front.operator.ooredoo_kw.head")
+
   @elseif(request()->get('OpID') == du)
   @include("front.operator.du.head")
 
