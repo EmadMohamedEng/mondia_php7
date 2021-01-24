@@ -310,7 +310,7 @@ define('ooredoo_kw',ooredoo_kuwait());
 /*********end ooredoo_kw******* */
 
 /*********start viva_Kw******* */
-define('viva_Kw',viva_kuwait());
+define('viva_kw',viva_kuwait());
 
 /*********end viva_Kw******* */
 
