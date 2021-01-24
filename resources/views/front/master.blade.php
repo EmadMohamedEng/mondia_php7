@@ -49,8 +49,8 @@
   @elseif(request()->get('OpID') == ooredoo_kw)
   @include("front.operator.ooredoo_kw.head")
 
-  {{-- @elseif(request()->get('OpID') == viva_kw)
-  @include("front.operator.viva_kw.head") --}}
+  @elseif(request()->get('OpID') == viva_kw)
+  @include("front.operator.viva_kw.head")
 
   @elseif(request()->get('OpID') == du)
   @include("front.operator.du.head")
@@ -104,8 +104,8 @@ $enable = get_setting('enable_testing');
     @elseif(request()->get('OpID') == ooredoo_kw)
     @include("front.operator.ooredoo_kw.master")
 
-    {{-- @elseif(request()->get('OpID') == viva_kw)
-    @include("front.operator.viva_kw.master")--}}
+    @elseif(request()->get('OpID') == viva_kw)
+    @include("front.operator.viva_kw.master")
 
     @elseif(request()->get('OpID') == du)
     @include("front.operator.du.master")
