@@ -80,7 +80,7 @@ select:active {
   position: sticky;
   height: 4rem;
   padding: 1.1rem 1.75rem;
-  background: #6e337a;
+  background: #390065;
 }
 .main_container .header .header_logo {
   color: #FFF;
@@ -127,22 +127,22 @@ select:active {
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav_item_welc {
   margin-bottom: 0;
-  color: #d31b88;
+  color: #4f008c;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item {
   padding: 0.25rem 0.5rem;
-  color: #d31b88;
+  color: #4f008c;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .link_href {
-  color: #d31b88;
+  color: #4f008c;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link {
   cursor: pointer;
-  color: #d31b88;
+  color: #4f008c;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link svg {
   width: 15%;
-  fill: #d31b88;
+  fill: #4f008c;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .nav-link.nav-link2 {
   padding: 0;
@@ -172,7 +172,7 @@ select:active {
   width: 100%;
 }
 .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:active, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:focus, .main_container .menu_all_op .nav_nav .navbar_ul .nav-item .dropdown-menu .dropdown-item:hover {
-  background: #d31b88;
+  background: #4f008c;
   color: #FFF;
   margin-top: 0.5rem;
   border-radius: 8px;
@@ -200,7 +200,7 @@ select:active {
   border-bottom-right-radius: 10px;
 }
 .main_container .img_carousel .owl_one .item .btn_subscribe button {
-  background: #d31b88;
+  background: #4f008c;
   color: #FFF;
   width: 80%;
   white-space: nowrap;
@@ -224,7 +224,7 @@ select:active {
 }
 .main_container .img_carousel .owl-theme .owl-dots .owl-dot.active span,
 .main_container .img_carousel .owl-theme .owl-dots .owl-dot:hover span {
-  background: #d31b88;
+  background: #4f008c;
 }
 .main_container .img_carousel .owl-dots {
   display: block;
@@ -242,7 +242,7 @@ select:active {
   font-weight: bold;
 }
 .main_container .content_carousel .content_carousel_head .btn_more {
-  background: #d31b88;
+  background: #4f008c;
   color: #FFF;
   border: 0;
   float: right;
@@ -387,7 +387,7 @@ select:active {
 }
 .main_container .list_page .coming_soon {
   color: #FFF;
-  background: #d31b88;
+  background: #4f008c;
   width: 33%;
   cursor: not-allowed;
   border-radius: 8px;
@@ -461,7 +461,7 @@ select:active {
   width: 94%;
 }
 .main_container .inner_page .cover button {
-  background: #d31b88;
+  background: #4f008c;
   color: #FFF;
   border: 0;
   position: absolute;
@@ -577,7 +577,7 @@ select:active {
   margin-bottom: 0.5rem;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-body .modal_club .btn {
-  background: #d31b88;
+  background: #4f008c;
   color: #FFF;
   border: 0;
 }
@@ -592,7 +592,7 @@ select:active {
   justify-content: center;
 }
 .main_container .modal_cover .modal-dialog .modal-content .modal-footer .btn {
-  background: #d31b88;
+  background: #4f008c;
   color: #FFF;
   border: 0;
 }
@@ -604,10 +604,10 @@ select:active {
   box-shadow: 0 0 0 0.2rem #FFF;
 }
 .main_container #chooseAudio table {
-  border: 2px solid #d31b88;
+  border: 2px solid #4f008c;
 }
 .main_container #chooseAudio table th {
-  border-color: #d31b88;
+  border-color: #4f008c;
 }
 .main_container .azan_page {
   margin-top: 3rem;
@@ -620,7 +620,7 @@ select:active {
   margin: 0 auto 2rem;
 }
 .main_container .azan_page .input_text .azan_input {
-  border: 2px solid #d31b88;
+  border: 2px solid #4f008c;
   width: 100%;
   height: 3rem;
   text-align: center;
@@ -636,7 +636,7 @@ select:active {
   width: 50%;
 }
 .main_container .azan_page .azan_text .call_tone {
-  border: 2px solid #d31b88;
+  border: 2px solid #4f008c;
   background: #FFF;
   width: 100%;
   height: 3rem;
@@ -655,7 +655,7 @@ select:active {
   margin-bottom: 1.5rem;
 }
 .main_container .nearmosque_page .nearmosque_title #map {
-  border: 5px solid #d31b88;
+  border: 5px solid #4f008c;
   height: 66vh;
   width: 90%;
   margin: 0 auto;
@@ -670,7 +670,7 @@ select:active {
   margin-bottom: 2rem;
 }
 .main_container .salah_time_page .time_btn {
-  border: 2px solid #d31b88;
+  border: 2px solid #4f008c;
   width: 100%;
   text-align: center;
   margin-bottom: 3%;
@@ -707,7 +707,7 @@ select:active {
   color: #FFF;
 }
 .main_container .subscribe_page .subscribe_bg .subtitle {
-  background-color: #d31b88;
+  background-color: #4f008c;
   border-radius: 7px 7px 0px 0px;
 }
 .main_container .subscribe_page .subscribe_bg .form-signin .account-wall input {
@@ -736,7 +736,7 @@ select:active {
   float: right;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .field .field-value input {
-  border: solid 2px #d31b88;
+  border: solid 2px #4f008c;
   padding: 0.25rem 0.5rem;
   width: 100%;
   box-shadow: 2px 1000px 1px #FFF inset;
@@ -755,7 +755,7 @@ select:active {
   float: unset;
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .actions button.button {
-  border: solid 2px #d31b88;
+  border: solid 2px #4f008c;
   font-weight: bold;
   border-radius: 10px;
   padding: 7px 40px;
@@ -764,7 +764,7 @@ select:active {
 }
 .main_container .zakkah_page .zakah_zakah .form_zakah .actions button.button:hover {
   box-shadow: none;
-  background: #d31b88;
+  background: #4f008c;
   color: #FFF;
 }
 .main_container .merath_page {
@@ -779,7 +779,7 @@ select:active {
   margin-bottom: 1rem;
 }
 .main_container .merath_page .input_text .merath_input {
-  border: 2px solid #d31b88;
+  border: 2px solid #4f008c;
   float: right;
   width: 60%;
   text-align: center;
@@ -807,7 +807,7 @@ select:active {
 }
 .main_container .merath_page .button_merath .merath_btn {
   width: 50%;
-  background: #d31b88;
+  background: #4f008c;
   color: #FFF;
   font-size: 1rem;
   font-weight: bold;
@@ -855,14 +855,14 @@ select:active {
   margin-bottom: 20px;
   color: black;
   border-radius: 50%;
-  border: 2px solid #d31b88;
+  border: 2px solid #4f008c;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
 .main_container .sebha_page .display .btn-bar button {
-  border: 2px solid #d31b88;
+  border: 2px solid #4f008c;
   width: 65%;
   height: 4.5rem;
   display: block;
@@ -909,7 +909,7 @@ select:active {
   color: black;
 }
 .main_container .sebha_page .choose_sebha {
-  border: 2px solid #d31b88;
+  border: 2px solid #4f008c;
   display: block;
   color: black;
   text-align: center;
@@ -922,7 +922,7 @@ select:active {
   -o-border-radius: 10px;
 }
 .main_container .sebha_page a:hover {
-  color: #d31b88;
+  color: #4f008c;
 }
 .main_container .search_page {
   margin: 2.5rem auto;
@@ -945,7 +945,7 @@ select:active {
   text-align: center;
 }
 .main_container .search_page .form_search .textbox.input-middle + .bord {
-  background: #d31b88;
+  background: #4f008c;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -1019,7 +1019,7 @@ select:active {
 }
 .main_container .error_page .buttons-con .action-link-wrap .link-button {
   width: 100%;
-  background: #d31b88;
+  background: #4f008c;
   color: #FFF;
   padding: 0.5rem 0.75rem;
   cursor: pointer;
@@ -1107,8 +1107,8 @@ select:active {
   animation: spinner 1s linear infinite;
 }
 .loading-overlay .spinner-blue {
-  border-top-color: #d31b88;
-  border-left-color: #d31b88;
+  border-top-color: #4f008c;
+  border-left-color: #4f008c;
 }
 
 .alert .close {
@@ -1117,7 +1117,7 @@ select:active {
 
 .active_menu {
   margin-top: 0.25rem;
-  background: #d31b88;
+  background: #4f008c;
   color: #FFF;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -1203,12 +1203,12 @@ select:active {
     margin-bottom: 1rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    color: #d31b88;
+    color: #4f008c;
     font-size: 1rem;
     float: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
-    background-color: #6e337a;
+    background-color: #390065;
     padding: 1% 0;
     width: 50%;
     display: block;
@@ -1448,7 +1448,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #d31b88;
+    background: #4f008c;
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -1465,7 +1465,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #d31b88 solid;
+    border: 2px #4f008c solid;
     border-radius: 7px;
     direction: rtl;
   }
@@ -1576,12 +1576,12 @@ select:active {
     text-align: center;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    color: #d31b88;
+    color: #4f008c;
     font-size: 1rem;
     float: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
-    background-color: #6e337a;
+    background-color: #390065;
     padding: 1% 0;
     width: 60%;
     display: block;
@@ -1824,7 +1824,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #d31b88;
+    background: #4f008c;
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -1841,7 +1841,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #d31b88 solid;
+    border: 2px #4f008c solid;
     border-radius: 7px;
     direction: rtl;
   }
@@ -1954,12 +1954,12 @@ select:active {
     margin-bottom: 1rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    color: #d31b88;
+    color: #4f008c;
     font-size: 1rem;
     float: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
-    background-color: #6e337a;
+    background-color: #390065;
     padding: 1% 0;
     width: 60%;
     display: block;
@@ -2205,7 +2205,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #d31b88;
+    background: #4f008c;
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -2222,7 +2222,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #d31b88 solid;
+    border: 2px #4f008c solid;
     border-radius: 7px;
     direction: rtl;
   }
@@ -2333,12 +2333,12 @@ select:active {
     text-align: center;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    color: #d31b88;
+    color: #4f008c;
     font-size: 1rem;
     float: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
-    background-color: #6e337a;
+    background-color: #390065;
     padding: 1% 0;
     width: 60%;
     display: block;
@@ -2586,7 +2586,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #d31b88;
+    background: #4f008c;
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -2603,7 +2603,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #d31b88 solid;
+    border: 2px #4f008c solid;
     border-radius: 7px;
     direction: rtl;
   }
@@ -2729,12 +2729,12 @@ select:active {
     font-size: 1.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    color: #d31b88;
+    color: #4f008c;
     font-size: 1rem;
     float: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
-    background-color: #6e337a;
+    background-color: #390065;
     padding: 1% 0;
     width: 60%;
     display: block;
@@ -3014,7 +3014,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #d31b88;
+    background: #4f008c;
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -3031,7 +3031,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #d31b88 solid;
+    border: 2px #4f008c solid;
     border-radius: 7px;
     direction: rtl;
   }
@@ -3160,12 +3160,12 @@ select:active {
     font-size: 1.5rem;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo .arrow_back {
-    color: #d31b88;
+    color: #4f008c;
     font-size: 1.5rem;
     float: right;
   }
   .main_container .menu_all_op .nav_nav .navbar_ul .nav-item.nav_item_logo img {
-    background-color: #6e337a;
+    background-color: #390065;
     padding: 1% 0;
     width: 60%;
     display: block;
@@ -3450,7 +3450,7 @@ select:active {
     margin: 5% auto;
   }
   .main_container .merath_page .button_merath .merath_btn {
-    background: #d31b88;
+    background: #4f008c;
     color: #FFF;
     width: 70%;
     font-size: 1rem;
@@ -3467,7 +3467,7 @@ select:active {
     font-size: 1rem;
   }
   .main_container .merath_page .table_table .table {
-    border: 2px #d31b88 solid;
+    border: 2px #4f008c solid;
     border-radius: 7px;
     direction: rtl;
   }
