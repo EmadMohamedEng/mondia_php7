@@ -533,20 +533,11 @@ class OrangeController extends Controller
 
     public function orange_get_today_content_link(Request $request)
     {
-
-      $orange_get_today_content_link = Post::select(
-      'posts.id as post_id',
-      'contents.title as content_title',
-      'contents.id as video_id',
-      'posts.operator_id as operator_id'  ,
-      'posts.show_date as show_date' ,
-      'posts.active as active' ,
-      'posts.created_at as created_at')
-        ->join('contents', 'contents.id', '=', 'posts.video_id')
-        ->where('posts.operator_id', orange)
+        $orange_get_today_content_link =   Post::where('operator_id', orange)
         ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
-        ->orderBy("created_at", "desc")
+        ->orderBy("show_date", "desc")
         ->first();
+
         $url = url('view_content/' . $orange_get_today_content_link->video_id . '/?OpID=' . $orange_get_today_content_link->operator_id);
         $orange_get_today_content_link = get_title_today_orange_link($orange_get_today_content_link->video_id) ." ". $url;
         return $orange_get_today_content_link ;
@@ -556,19 +547,11 @@ class OrangeController extends Controller
     public function orange_today_link(Request $request)
     {
 
-      $orange_get_today_content_link = Post::select(
-      'posts.id as post_id',
-      'contents.title as content_title',
-      'contents.id as video_id',
-      'posts.operator_id as operator_id'  ,
-      'posts.show_date as show_date' ,
-      'posts.active as active' ,
-      'posts.created_at as created_at')
-        ->join('contents', 'contents.id', '=', 'posts.video_id')
-        ->where('posts.operator_id', orange)
+        $orange_get_today_content_link =   Post::where('operator_id', orange)
         ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
-        ->orderBy("created_at", "desc")
+        ->orderBy("show_date", "desc")
         ->first();
+
         $url = url('view_content/' . $orange_get_today_content_link->video_id . '/?OpID=' . $orange_get_today_content_link->operator_id);
         return redirect( $url) ;
     }
