@@ -17,6 +17,9 @@
   @elseif(request()->has('OpID') && request()->get('OpID') == zain_kw)
   <link rel="shortcut icon" href="{{asset('front/images/zain_kw.png')}}">
 
+  @elseif(request()->has('OpID') && request()->get('OpID') == ooredoo_kw)
+  <link rel="shortcut icon" href="{{asset('front/images/zain_kw.png')}}">
+
   @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
   <link rel="shortcut icon" href="{{asset('front/images/mbc_header - fav.png')}}">
 

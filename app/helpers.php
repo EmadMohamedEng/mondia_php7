@@ -76,10 +76,10 @@ function zain_kuwait(){
 function ooredoo_kuwait(){
   $country = Country::where('title', 'Kuwait')->first();
   if(!empty($country)){
-      $op = Operator::where('country_id', $country->id)->where('name', 'Ooredoo_kw')->first();
-      if(!empty($op)){
-          return $op->id;
-      }
+    $op = Operator::where('country_id', $country->id)->where('name', 'ooredoo')->first();
+    if(!empty($op)){
+      return $op->id;
+    }
   }
   return 24;
 }
@@ -87,7 +87,7 @@ function ooredoo_kuwait(){
 function viva_kuwait(){
   $country = Country::where('title', 'Kuwait')->first();
   if(!empty($country)){
-      $op = Operator::where('country_id', $country->id)->where('name', 'Viva_Kw')->first();
+      $op = Operator::where('country_id', $country->id)->where('name', 'viva')->first();
       if(!empty($op)){
           return $op->id;
       }
