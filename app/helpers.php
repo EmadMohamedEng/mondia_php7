@@ -73,6 +73,28 @@ function zain_kuwait(){
   return 23;
 }
 
+function ooredoo_kuwait(){
+  $country = Country::where('title', 'Kuwait')->first();
+  if(!empty($country)){
+      $op = Operator::where('country_id', $country->id)->where('name', 'Ooredoo_kw')->first();
+      if(!empty($op)){
+          return $op->id;
+      }
+  }
+  return 24;
+}
+
+function viva_kuwait(){
+  $country = Country::where('title', 'Kuwait')->first();
+  if(!empty($country)){
+      $op = Operator::where('country_id', $country->id)->where('name', 'Viva_Kw')->first();
+      if(!empty($op)){
+          return $op->id;
+      }
+  }
+  return 25;
+}
+
 function delete_multiselect(Request $request) // select many contract from index table and delete them
 {
     $selected_list =  explode(",",$request['selected_list']);

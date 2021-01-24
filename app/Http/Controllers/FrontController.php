@@ -116,8 +116,8 @@ class FrontController extends Controller
     }
 
     $health = $health->get();
-
-    if(request()->get('OpID') == zain_kw){
+// dd(request()->get('OpID'));
+    if(request()->get('OpID') == zain_kw || request()->get('OpID') == ooredoo_kw){
       $today_video = Video::select('*', 'contents.id as content_id')
           ->join('posts', 'posts.video_id', '=', 'contents.id')
           ->where('posts.operator_id', request()->get('OpID'))
