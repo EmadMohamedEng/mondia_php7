@@ -65,7 +65,7 @@ function stc_ksa(){
 function zain_kuwait(){
   $country = Country::where('title', 'Kuwait')->first();
   if(!empty($country)){
-      $op = Operator::where('country_id', $country->id)->where('name', 'zain')->first();
+      $op = Operator::where('country_id', $country->id)->where('name', 'zain_charity')->first();
       if(!empty($op)){
           return $op->id;
       }
@@ -76,7 +76,7 @@ function zain_kuwait(){
 function ooredoo_kuwait(){
   $country = Country::where('title', 'Kuwait')->first();
   if(!empty($country)){
-    $op = Operator::where('country_id', $country->id)->where('name', 'ooredoo')->first();
+    $op = Operator::where('country_id', $country->id)->where('name', 'ooredoo_charity')->first();
     if(!empty($op)){
       return $op->id;
     }
@@ -87,7 +87,7 @@ function ooredoo_kuwait(){
 function viva_kuwait(){
   $country = Country::where('title', 'Kuwait')->first();
   if(!empty($country)){
-      $op = Operator::where('country_id', $country->id)->where('name', 'viva')->first();
+      $op = Operator::where('country_id', $country->id)->where('name', 'viva_charity')->first();
       if(!empty($op)){
           return $op->id;
       }
