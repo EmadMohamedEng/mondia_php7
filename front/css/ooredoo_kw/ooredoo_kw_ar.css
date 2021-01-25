@@ -188,6 +188,16 @@ select:active {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
+.main_container .img_carousel .img_cover {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+.main_container .img_carousel .audio_cover {
+  width: 75%;
+  margin: -4% auto 0;
+  display: block;
+}
 .main_container .img_carousel .owl_one .item {
   position: relative;
 }
@@ -1229,6 +1239,13 @@ select:active {
   .main_container .img_carousel {
     margin-top: 0;
   }
+  .main_container .img_carousel .img_cover {
+    width: 100%;
+  }
+  .main_container .img_carousel .audio_cover {
+    width: 95%;
+    margin: -9% auto 0;
+  }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
     height: 20rem;
   }
@@ -1601,6 +1618,13 @@ select:active {
   }
   .main_container .img_carousel {
     margin-top: 0;
+  }
+  .main_container .img_carousel .img_cover {
+    width: 100%;
+  }
+  .main_container .img_carousel .audio_cover {
+    width: 95%;
+    margin: -9% auto 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
     height: 21.5rem;
@@ -1980,6 +2004,13 @@ select:active {
   .main_container .img_carousel {
     margin-top: 0;
   }
+  .main_container .img_carousel .img_cover {
+    width: 100%;
+  }
+  .main_container .img_carousel .audio_cover {
+    width: 95%;
+    margin: -9% auto 0;
+  }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
     height: 23.438rem;
   }
@@ -2358,6 +2389,13 @@ select:active {
   }
   .main_container .img_carousel {
     margin-top: 0;
+  }
+  .main_container .img_carousel .img_cover {
+    width: 100%;
+  }
+  .main_container .img_carousel .audio_cover {
+    width: 95%;
+    margin: -7% auto 0;
   }
   .main_container .img_carousel .owl_one .item .owl_one_img img {
     height: 24.688rem;
