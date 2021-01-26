@@ -87,11 +87,11 @@ if ($lang == 'ar') {
         </label>
       </div>
 
-      <div class="col-7 p-0">
+      <!-- <div class="col-7 p-0">
         <div class="img-fluid">
           <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="landing_page">

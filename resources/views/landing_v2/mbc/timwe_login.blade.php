@@ -42,7 +42,7 @@
 <body>
   <div class="main_container pt-5">
     <div class="img-fluid text-center p-3">
-      <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
+      <!-- <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'> -->
     </div>
 
     <div class="landing_page pt-5">

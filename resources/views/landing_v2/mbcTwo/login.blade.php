@@ -34,9 +34,9 @@ body {
 
 <body>
   <div class="main_container pt-5">
-    <div class="img-fluid">
+    <!-- <div class="img-fluid">
       <img class="bounce-top m-auto d-block" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
-    </div>
+    </div> -->
 
     <div class="landing_page">
       <div class="strip text-dark">

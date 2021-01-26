@@ -24,7 +24,7 @@
   <link rel="shortcut icon" href="{{asset('front/images/zain_kw.png')}}">
 
   @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
-  <link rel="shortcut icon" href="{{asset('front/images/mbc_header - fav.png')}}">
+  <!-- <link rel="shortcut icon" href="{{asset('front/images/mbc_header - fav.png')}}"> -->
 
   @elseif(request()->has('OpID') && request()->get('OpID') == orange)
   <link rel="shortcut icon" href="{{asset('front/images/orange.png')}}">

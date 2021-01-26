@@ -6,9 +6,9 @@
 
     <div class="col-md-6 col-lg-6 col-xl-4 col-6">
       <div class="header_logo">
-        <a href="{{route('front.index')}}" class="link_href">
+        <!-- <a href="{{route('front.index')}}" class="link_href">
           <img class="bounce-top logo_mbc" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
-        </a>
+        </a> -->
       </div>
     </div>
 
@@ -46,11 +46,11 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
                 </a>
               </div>
 
-              <div class="col-12 p-0">
+              <!-- <div class="col-12 p-0">
                 <a class="link_href" href="{{route('front.index')}}">
                   <img class="pulsate-bck" src="{{asset('front/images/mbc_header.png')}}" alt="Logo">
                 </a>
-              </div>
+              </div> -->
             </div>
           </li>
 
@@ -306,9 +306,9 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
                 </div>
 
                 <div class="col-12 p-0">
-                  <a class="link_href" href="{{route('front.index')}}">
+                  <!-- <a class="link_href" href="{{route('front.index')}}">
                     <img class="pulsate-bck" src="{{asset('front/images/mbc_header.png')}}" alt="Logo">
-                  </a>
+                  </a> -->
                 </div>
               </div>
             </li>

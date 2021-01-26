@@ -56,9 +56,9 @@ if ($lang == 'ar') {
       <span class="toggle--on toggle--option">EN</span>
       <span class="toggle--off toggle--option">AR</span>
     </label>
-    <div class="img-fluid text-center p-3">
+    <!-- <div class="img-fluid text-center p-3">
       <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
-    </div>
+    </div> -->
 
     <div class="landing_page">
       <div class="strip text-dark">

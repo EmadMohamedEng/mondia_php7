@@ -13,7 +13,7 @@
   @elseif(request()->has('OpID') && request()->get('OpID') == stc)
   <link rel="shortcut icon" href="{{asset('front/images/STC01.png')}}">
   @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
-  <link rel="shortcut icon" href="{{asset('front/images/mbc_header - fav.png')}}">
+  <!-- <link rel="shortcut icon" href="{{asset('front/images/mbc_header - fav.png')}}"> -->
   @elseif(request()->has('OpID') && request()->get('OpID') == orange)
   <link rel="shortcut icon" href="{{asset('front/images/orange.png')}}">
   @else
@@ -110,7 +110,7 @@ $enable = get_setting('enable_testing');
                   @elseif(request()->get('OpID') == du)
                   <img class="bounce-top" src='{{asset("front/images/Du_header.png")}}' alt='Logo'>
                   @elseif(request()->get('OpID') == mbc)
-                  <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
+                  <!-- <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'> -->
                   @elseif(request()->get('OpID') == orange)
 
                   <div class="row">
@@ -197,7 +197,7 @@ $enable = get_setting('enable_testing');
                       @elseif(request()->has('OpID') && request()->get('OpID') == du)
                       <img class="pulsate-bck" src="{{asset('front/images/du_logo.png')}}" alt="Logo">
                       @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
-                      <img class="pulsate-bck" src="{{asset('front/images/mbc_header.png')}}" alt="Logo">
+                      <!-- <img class="pulsate-bck" src="{{asset('front/images/mbc_header.png')}}" alt="Logo"> -->
                       @elseif(request()->has('OpID') && request()->get('OpID') == orange)
                       <img class="pulsate-bck" src="{{asset('front/images/orange.png')}}" alt="Logo">
                       @else
@@ -662,7 +662,7 @@ $enable = get_setting('enable_testing');
                           @elseif(request()->has('OpID') && request()->get('OpID') == du)
                           <img class="pulsate-bck" src="{{asset('front/images/du_logo.png')}}" alt="Logo">
                           @elseif(request()->has('OpID') && request()->get('OpID') == mbc)
-                          <img class="pulsate-bck" src="{{asset('front/images/mbc_header.png')}}" alt="Logo">
+                          <!-- <img class="pulsate-bck" src="{{asset('front/images/mbc_header.png')}}" alt="Logo"> -->
                           @elseif(request()->has('OpID') && request()->get('OpID') == orange)
                           <img class="" src="{{asset('front/images/orange.png')}}" alt="Logo">
                           @else

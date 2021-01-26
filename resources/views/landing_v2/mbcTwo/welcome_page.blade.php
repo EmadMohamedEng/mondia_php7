@@ -53,9 +53,9 @@ if ($lang == 'ar') {
 
 <body>
   <div class="main_container">
-    <div class="img-fluid text-center py-3 d-flex justify-content-center">
+    <!-- <div class="img-fluid text-center py-3 d-flex justify-content-center">
       <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
-    </div>
+    </div> -->
 
     <div class="landing_page py-3">
       <div class="strip text-dark">
