@@ -25,7 +25,7 @@
             </tr>
 
             <tr>
-              <td class="label-view font-weight-bold"> @lang('messages.users.date')</td>
+              <td class="label-view font-weight-bold"> @lang('messages.users.subscription_date')</td>
               <td class="label-view2">{{$date}}</td>
             </tr>
 

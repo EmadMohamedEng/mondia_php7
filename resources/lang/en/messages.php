@@ -187,6 +187,7 @@ return [
         'message_sent' => 'Message Sent',
         'role' => 'Role',
         'date' => 'Date',
+        'subscription_date' => 'Subscription Date',
         'phone' => 'Phone Number'
       ],
       'helps' => [
