@@ -82,6 +82,9 @@ if ($lang == 'ar') {
         </div>
       </div>
 
+      <div class="text-center">
+        <a href="{{url('?OpID=' . MBC_OP_ID)}}" class="btn btn-warning">@lang('front.home')</a>
+      </div>
 
       <div class="container py-3">
         <div class="form_content">

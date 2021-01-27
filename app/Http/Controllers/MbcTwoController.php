@@ -446,28 +446,61 @@ class MbcTwoController extends Controller
 
        // add new api
        /*
-        msisdn   = $msisdn   +
-         $operator =      DU   /     KwSTC  /       MOB  /  KsSTC  / KsZain
-         status  = 1
-          service_id  = 2
-          day = 0
-           subscribe_date  = today
-            country   =>  UAE   KSA    Kuwait
-             operator   =>       KSA(  MOB   STC    Zain  )   /   Du   /   Kuwait( STC )
-
-
-           /// mbc system
-             // cron = 0  (default )   / 1 = cron   /  2 =  pincode success
-
-
+       msisdn   = $msisdn   +
+       $operator =      DU   /     KwSTC  /       MOB  /  KsSTC  / KsZain
+        subscribe_date  = today
+        country   =>  UAE   KSA    Kuwait
+        operator   =>       KSA(  MOB   STC    Zain  )   /   Du   /   Kuwait( STC )
        */
 
+       switch ($operator) {
+         case 'DU':
+          $n_country = 'UAE';
+          $n_operator = 'Du';
+          break;
+         case 'KwSTC':
+          $n_country = 'Kuwait';
+          $n_operator = 'STC';
+           break;
+         case 'MOB':
+          $n_country = 'KSA';
+          $n_operator = 'MOB';
+           break;
+         case 'KsSTC':
+          $n_country = 'KSA';
+          $n_operator = 'STC';
+           break;
+         case 'KsZain':
+          $n_country = 'KSA';
+          $n_operator = 'Zain';
+           break;
+       }
 
+      $URL = MBC_CREATE_SUBSCRIBER_URL;
 
-      if ($lang == 'ar'){
-        return redirect('mbc_welcome_page')->with('success','تم الاشتراك بنجاح وارسال رابط الدخول لجوالك');
+      $JSON = new Request;
+      $JSON->msisdn = $msisdn;
+      $JSON->subscribe_date = date('Y-m-d');
+      $JSON->country = $n_country;
+      $JSON->operator = $n_operator;
+
+      $headers = '';
+
+      $create_subscriber_response = $this->SendRequest($URL, $JSON, $headers);
+
+      $actionName = 'Mbc Create Subscriber';
+      $result['response'] = $create_subscriber_response;
+
+      $this->log($actionName, $URL, $result);
+
+      if ($create_subscriber_response) {
+        session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+        if ($lang == 'ar'){
+          return redirect('mbc_welcome_page')->with('success','تم الاشتراك بنجاح وارسال رابط الدخول لجوالك');
+        }
+        return redirect('mbc_welcome_page')->with('success','Subscribed successfully and login url is sent to your phone');
       }
-      return redirect('mbc_welcome_page')->with('success','Subscribed successfully and login url is sent to your phone');
+
     }elseif($response = 'CodeHasExpired'){
       if ($lang == 'ar'){
         return redirect('mbc_portal_pin')->with('failed','يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');
