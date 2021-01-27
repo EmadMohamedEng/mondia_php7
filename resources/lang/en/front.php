@@ -1,6 +1,9 @@
 <?php
 return [
     'use_filter' => 'Use Filter',
+    'welcome_mbc' => '<li>You have subscribed successfully to Al Kenz Service</li>
+    <li>Enjoy your unique Islamic content</li>
+    <li>Your will be directed to your content shortly. If you are not directed within few second please click this button</li>',
     'islamic_filter' => 'Islamic Filters',
     'filters' => 'Filters',
     'home' => 'Home',
