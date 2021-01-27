@@ -116,6 +116,9 @@ class FrontController extends Controller
     }
 
     $health = $health->get();
+
+
+    // charity =  show today post on the home instead of slider
     if(request()->get('OpID') == zain_kw || request()->get('OpID') == ooredoo_kw || request()->get('OpID') == viva_kw){
       $today_video = Video::select('*', 'contents.id as content_id', 'contents.title as content_title')
           ->join('posts', 'posts.video_id', '=', 'contents.id')
@@ -127,6 +130,9 @@ class FrontController extends Controller
           ->first();
       return view('front.operator.zain_kw.home', compact('latest', 'health', 'today_video'));
     }
+
+
+
     return view('front.home', compact('latest', 'health'));
   }
 
@@ -320,12 +326,20 @@ class FrontController extends Controller
       // return redirect('landing_stc');
     }
 
-    if ($request->has('OpID') && $request->OpID == zain_kw) {  // enable testing from backend
-      // if ($enable || (session()->get('stc_op_id') == stc && session()->get('status') == 'active' && session()->has('MSISDN'))) {
+    // kuwait routes for charity
+    if ($request->has('OpID') && $request->OpID == zain_kw) {
         return view('front.operator.zain_kw.inner_enable_testing', compact('content', 'contents'));
-      // }
-      // return redirect('landing_stc');
     }
+
+    if ($request->has('OpID') && $request->OpID == ooredoo_kw) {
+      return view('front.operator.zain_kw.inner_enable_testing', compact('content', 'contents'));
+  }
+
+  if ($request->has('OpID') && $request->OpID == viva_kw) {
+    return view('front.operator.zain_kw.inner_enable_testing', compact('content', 'contents'));
+}
+
+
 
     if ($request->has('OpID') && $request->OpID == ooredoo) {  // enable testing from backend
       if ($enable || (session()->get('ooredoo_op_id') == ooredoo && session()->get('status') == 'active' && session()->has('MSISDN'))) {

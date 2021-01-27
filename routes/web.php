@@ -299,20 +299,13 @@ define('stc_ksa',stc_ksa());
 
 /*********end stc ksa******* */
 
-/*********start zain_kw******* */
-define('zain_kw',zain_kuwait());
 
-/*********end zain_kw******* */
+// charity kuwait routes
+define('zain_kw',zain_kuwait());  // OpID=23
+define('ooredoo_kw',ooredoo_kuwait()); // OpID=24
+define('viva_kw',viva_kuwait()); // OpID=25
 
-/*********start ooredoo_kw******* */
-define('ooredoo_kw',ooredoo_kuwait());
 
-/*********end ooredoo_kw******* */
-
-/*********start viva_Kw******* */
-define('viva_kw',viva_kuwait());
-
-/*********end viva_Kw******* */
 
 /***************orange_get_today_content_link api ****************** */
 Route::get('orange_today_link', 'OrangeController@orange_today_link');
