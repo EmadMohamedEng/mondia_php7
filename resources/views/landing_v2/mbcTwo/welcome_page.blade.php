@@ -13,23 +13,31 @@
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_mbc_two.css">
 </head>
+
 <style>
-  .landing_page .form_content form .form-group input {
-    border-bottom-right-radius: unset;
-    border-top-right-radius: unset;
-  }
-
-  .main_container .img-fluid img {
-    width: 20%;
-  }
-
-  .landing_page {
+  .welcome_page {
     margin-top: 0;
   }
 
-  .main_container .landing_page .strip h3 {
+  .main_container .welcome_page .strip h3 {
     font-size: 1.35rem;
     color: #e0c26c;
+  }
+
+  .main_container .welcome_page .strip h2 {
+    font-size: 1.35rem;
+    color: #e0c26c;
+  }
+
+  .main_container .welcome_page .welcome_ul {
+    text-align: left;
+    /* padding-left: 11%; */
+    font-size: 0.85rem;
+    color: #fff;
+  }
+
+  .main_container .welcome_page .welcome_ul li {
+    margin-bottom: 4%;
   }
 </style>
 
@@ -53,80 +61,31 @@ if ($lang == 'ar') {
 
 <body>
   <div class="main_container">
-    <!-- <div class="img-fluid text-center py-3 d-flex justify-content-center">
-      <img class="bounce-top" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
-    </div> -->
-
-    <div class="landing_page py-3">
-      <div class="strip text-dark">
+    <div class="welcome_page text-center py-3">
+      <div class="strip">
         <h2>@lang('messages.enjoy_time_landing')</h2>
+
         <p class="best_features">@lang('messages.mbc_welcome_text')</p>
 
-
-
         <h3 style="margin-top: 10%">@lang('messages.mbc_welcome_subscribe_success')</h3>
-
-          {{--  @if(Session::has('success'))
-          <div class="alert alert-success alert-dismissible">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            {{ Session::get('success')}}
-          </div>
-          @elseif(Session::has('failed'))
-          <div class="alert alert-danger alert-dismissible">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            {{ Session::get('failed')}}
-          </div>
-          @endif
-
-            --}}
-        </div>
       </div>
 
+      <ul class="welcome_ul">
+        <li>You have subscribed successfully to Al Kenz Service</li>
 
-      <div class="container py-3">
-        <div class="form_content">
+        <li>Enjoy your unique Islamic content</li>
 
-        </div>
-      </div>
-
-
-
-      <div class="cancel text-center py-4">
-
-      </div>
-    </div>
-
-    {{-- <div class="container">
-      <ul class="terms {{$text}}" dir="{{$left}}">
-        <li> @lang('messages.Subscription_renewal')</li>
-        <li> @lang('messages.stop_service')</li>
-        <li> @lang('messages.years_service')</li>
+        <li>Your will be directed to your content shortly. If you are not directed within few second please click <a href="#0">here</a></li>
       </ul>
-    </div> --}}
-
-    <!-- copyright -->
-    {{-- <div class="copy" style="{{$bottom}}">
-      <p>copyright @ <span>{{date('Y')}}</span> Digizone, all rights reserved.</p>
-    </div> --}}
-    <!-- copyright -->
+    </div>
   </div>
-  <!-- script -->
+
   <!-- script -->
   <script src="{{url('front/stc')}}/js/jquery-3.4.0.min.js"></script>
   <script src="{{url('front/stc')}}/js/bootstrap.min.js"></script>
 
   <script src="{{ url('front/stc')}}/js/popper.min.js"></script>
   <script src="{{ url('front/stc')}}/js/script_viva.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var msisdn = $("#phone").val();
-      if (msisdn != "") {
-        $('#form').submit()
-      }
-    });
-  </script>
-
 </body>
 
 </html>
