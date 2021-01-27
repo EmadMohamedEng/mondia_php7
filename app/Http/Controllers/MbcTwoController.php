@@ -442,7 +442,28 @@ class MbcTwoController extends Controller
 
     $lang =  session::get('lang');
 
-    if ($response == 'Success') {
+    if ($response == 'Success') {  // pincode is correct
+
+       // add new api
+       /*
+        msisdn   = $msisdn   +
+         $operator =      DU   /     KwSTC  /       MOB  /  KsSTC  / KsZain
+         status  = 1
+          service_id  = 2
+          day = 0
+           subscribe_date  = today
+            country   =>  UAE   KSA    Kuwait
+             operator   =>       KSA(  MOB   STC    Zain  )   /   Du   /   Kuwait( STC )
+
+
+           /// mbc system
+             // cron = 0  (default )   / 1 = cron   /  2 =  pincode success
+
+
+       */
+
+
+
       if ($lang == 'ar'){
         return redirect('mbc_welcome_page')->with('success','تم الاشتراك بنجاح وارسال رابط الدخول لجوالك');
       }
