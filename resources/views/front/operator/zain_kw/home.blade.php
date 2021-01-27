@@ -46,17 +46,21 @@ if($today_video) {
         <video style="object-fit: cover;width:100%" poster="{{$src}}" controls controlsList="nodownload">
           <source src="{{url($today_video->video)}}" />
         </video>
+
         <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
         <h4>{{get_title($today_video->content_id)}}</h4>
         </div>
         @endif
+
         @if($today_video->type == 2)
-            <img src="{{$src}}" alt="Video Cover">
-            <audio src="{{url($today_video->video)}}" controls controlsList="nodownload"></audio>
+          <img class="img_cover rounded" src="{{$src}}" alt="Video Cover">
+          <audio class="audio_cover" src="{{url($today_video->video)}}" controls controlsList="nodownload"></audio>
         @endif
+
         @if($today_video->type == 3)
-        <img src="{{url($today_video->video)}}" alt="Video Cover">
+        <img class="img_cover rounded" src="{{url($today_video->video)}}" alt="Video Cover">
         @endif
+
         @if($today_video->type == 4)
         <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
           <h4>{!!$today_video->getTranslation('content_text',getCode())!!}</h4>
@@ -64,52 +68,6 @@ if($today_video) {
       @endif
     </section>
     @endif
-    <!-- <section class="img_carousel">
-      <div class="owl_one owl-carousel owl-theme">
-        @foreach($latest as $content)
-        <div class="item">
-          <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
-            <img class="m-auto d-block" src="{{$content->type == 1 ? $content->image_preview : $content->video}}" alt="banner_slider">
-          </a>
-
-          @if(request()->get('OpID') == mbc)
-          @if ($content->free == 1)
-          @if( DB::table('settings')->where('key','like','%enable_free%')->first()->value == "1")
-          <div class="content_free text-center py-1">
-            <span class="text-capitalize">@lang('front.free')</span>
-          </div>
-          @endif
-          @endif
-          @endif
-
-          <div class="btn_subscribe w-100">
-            <button onclick="" class="btn btn-sm text-capitalize">
-              <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
-            </button>
-          </div>
-        </div>
-        @endforeach
-        @foreach($health as $content)
-        <div class="item">
-          <a class="owl_one_img w-100 link_href" href="{{route('front.inner',['id' => $content->content_id])}}">
-            <img class="m-auto d-block" src="{{url($content->service->image)}}" alt="banner_slider">
-          </a>
-
-          @if ($content->free == 1)
-          <div class="content_free text-center py-1">
-            <span class="text-capitalize">free</span>
-          </div>
-          @endif
-
-          <div class="btn_subscribe w-100">
-            <button onclick="" class="btn btn-sm text-capitalize">
-              <a class="link_href" href="{{route('front.inner',['id' => $content->content_id])}}">{{get_title($content->content_id)}}</a>
-            </button>
-          </div>
-        </div>
-        @endforeach
-      </div>
-    </section> -->
 
     <section class="content_carousel">
       <div class="content_carousel_head text-capitalize">

@@ -328,7 +328,6 @@ if($today_video) {
       }
       @endphp
 
-
       <div class="{{$owl_1}} owl-carousel owl-theme">
         @foreach ($item->services as $service)
         <div class="item">
