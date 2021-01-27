@@ -67,7 +67,7 @@ if ($lang == 'ar') {
 
         <p class="best_features">@lang('messages.mbc_welcome_text')</p>
 
-        <h3 style="margin-top: 10%">@lang('messages.mbc_welcome_subscribe_success')</h3>
+        <h3 style="margin-top: 10%"></h3>
       </div>
 
       @if ($lang == 'ar')

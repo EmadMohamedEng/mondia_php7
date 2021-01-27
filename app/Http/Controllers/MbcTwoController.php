@@ -488,7 +488,7 @@ class MbcTwoController extends Controller
 
       $create_subscriber_response = $this->SendRequest($URL, $JSON, $headers);
 
-      $actionName = 'Mbc Create Subscriber';
+      $actionName = 'Mbc Create Subscriber After Pincode Success';
       $result['response'] = $create_subscriber_response;
 
       $this->log($actionName, $URL, $result);

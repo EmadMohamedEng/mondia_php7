@@ -7,6 +7,7 @@ return [
     'islamic_filter' => 'Islamic Filters',
     'filters' => 'Filters',
     'home' => 'Home',
+    'enter' => 'Enter',
     'welcome' => 'welcome',
     'profile' => 'Profile',
     'more' => 'more',
