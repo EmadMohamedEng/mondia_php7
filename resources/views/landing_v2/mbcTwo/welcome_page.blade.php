@@ -12,6 +12,7 @@
   <link rel="stylesheet" href='{{url('front/stc')}}/css/all.min.css'>
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_urdu.css">
   <link rel="stylesheet" type="text/css" href="{{ url('front/stc/css/')}}/main-style_mbc_two.css">
+  <meta http-equiv="refresh" content="15; url = {{url('?OpID=' . MBC_OP_ID)}}" />
 </head>
 
 <style>
