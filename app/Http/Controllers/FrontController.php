@@ -285,9 +285,9 @@ class FrontController extends Controller
     $view_coming_post = get_setting('view_coming_post');
     $enable = get_setting('enable_testing');
     $content = Video::select('contents.*', 'contents.id as content_id');
-    // if ($view_coming_post) {
-    //   $content = $content->whereId($id)->first();
-    // } else {
+    if ($view_coming_post) {
+      $content = $content->whereId($id)->first();
+    } else {
     if ($request->has('OpID') && $request->OpID != '' && $request->OpID != mbc) {
       $content = Video::select('contents.*', 'contents.id as content_id', 'posts.free');
       $content = $content->join('posts', 'posts.video_id', '=', 'contents.id')
@@ -298,7 +298,7 @@ class FrontController extends Controller
     } else {
       $content = $content->whereId($id)->latest()->first();
     }
-    // }
+    }
     if (!$content) {
       return view('errors.404');
     }
