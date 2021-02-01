@@ -47,15 +47,21 @@ if($today_video) {
           <source src="{{url($today_video->video)}}" />
         </video>
         <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
-        <h4>{{get_title($today_video->content_id)}}</h4>
+        <h5>{{get_title($today_video->content_id)}}</h5>
         </div>
         @endif
         @if($today_video->type == 2)
             <img src="{{$src}}" alt="Video Cover">
             <audio src="{{url($today_video->video)}}" controls controlsList="nodownload"></audio>
+            <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
+        <h5>{{get_title($today_video->content_id)}}</h5>
+        </div>
         @endif
         @if($today_video->type == 3)
         <img src="{{url($today_video->video)}}" alt="Video Cover">
+        <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
+        <h5>{{get_title($today_video->content_id)}}</h5>
+        </div>
         @endif
         @if($today_video->type == 4)
         <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
