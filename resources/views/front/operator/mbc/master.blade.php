@@ -6,9 +6,9 @@
 
     <div class="col-md-6 col-lg-6 col-xl-4 col-6">
       <div class="header_logo">
-        <!-- <a href="{{route('front.index')}}" class="link_href">
-          <img class="bounce-top logo_mbc" src='{{asset("front/images/mbc_header.png")}}' alt='Logo'>
-        </a> -->
+        <a href="{{route('front.index')}}" class="link_href">
+          <img class="bounce-top logo_mbc" src='{{asset("front/images/mbc_landing/alkazn_logo.png")}}' alt='Logo'>
+        </a>
       </div>
     </div>
 
@@ -540,6 +540,14 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
             <?php
             $style = "background: transparent;";
             ?>
+
+            <li class="nav-item">
+              <a class="menuThree nav-link text-capitalize link_href" href="{{route('front.index')}}" style=" <?php echo $style ?>">
+                @lang('front.home')
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+
             @foreach($providers_mbc as $provider)
 
             <li class="nav-item dropdown">

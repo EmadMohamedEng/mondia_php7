@@ -169,13 +169,13 @@ $('.owl_content_four').owlCarousel({
 $('.owl_content_five').owlCarousel({
   rtl:window.lang == 'ar' ? true : false,
   loop: true,
-  margin: 0,
+  margin: 5,
   autoplay: true,
   autoplayTimeout: 3000,
   animateOut: 'fadeOut',
   nav: false,
-  dots: true,
-  center: true,
+  dots: false,
+  center: false,
   responsive: {
     0: {
       items: 2

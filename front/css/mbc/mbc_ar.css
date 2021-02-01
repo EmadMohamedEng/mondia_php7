@@ -113,8 +113,8 @@ select:active {
 .main_container .header .header_logo .link_href .logo_mbc {
   width: 30%;
   position: absolute;
-  top: -0.5rem;
-  left: 30%;
+  top: -0.85rem;
+  right: 30%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -1803,9 +1803,9 @@ select:active {
     z-index: 99999999999;
   }
   .main_container .header .header_logo .link_href .logo_mbc {
-    width: 50%;
+    width: 40%;
     top: -1rem;
-    right: 40%;
+    right: 50%;
   }
   .main_container .header .lang_mbc {
     margin-left: -18%;
@@ -2132,9 +2132,9 @@ select:active {
     z-index: 99999999999;
   }
   .main_container .header .header_logo .link_href .logo_mbc {
-    width: 50%;
-    top: -1rem;
-    right: 40%;
+    width: 40%;
+    top: -1.25rem;
+    right: 50%;
   }
   .main_container .header .lang_mbc {
     margin-left: -18%;
@@ -2490,9 +2490,9 @@ select:active {
     z-index: 99999999999;
   }
   .main_container .header .header_logo .link_href .logo_mbc {
-    width: 50%;
-    top: -1rem;
-    right: 40%;
+    width: 40%;
+    top: -1.25rem;
+    right: 50%;
   }
   .main_container .header .lang_mbc {
     margin-left: -18%;
@@ -2849,9 +2849,9 @@ select:active {
     z-index: 99999999999;
   }
   .main_container .header .header_logo .link_href .logo_mbc {
-    width: 50%;
-    top: -1rem;
-    right: 40%;
+    width: 35%;
+    top: -1.25rem;
+    right: 50%;
   }
   .main_container .header .lang_mbc {
     margin-left: -18%;
@@ -3209,8 +3209,8 @@ select:active {
     height: 5.5rem;
   }
   .main_container .header .header_logo .link_href .logo_mbc {
-    width: 35%;
-    top: -1rem;
+    width: 22%;
+    top: -0.75rem;
     right: 50%;
   }
   .main_container .header .lang_mbc {
@@ -3591,9 +3591,9 @@ select:active {
     height: 6rem;
   }
   .main_container .header .header_logo .link_href .logo_mbc {
-    width: 30%;
+    width: 22%;
     top: -1rem;
-    right: 50%;
+    right: 60%;
   }
   .main_container .header .lang_mbc {
     margin-left: 0%;

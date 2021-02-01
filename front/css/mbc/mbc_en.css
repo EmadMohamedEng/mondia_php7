@@ -112,7 +112,7 @@ select:active {
 .main_container .header .header_logo .link_href .logo_mbc {
   width: 30%;
   position: absolute;
-  top: -0.5rem;
+  top: -0.85rem;
   left: 30%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -1780,9 +1780,9 @@ select:active {
     z-index: 99999999999;
   }
   .main_container .header .header_logo .link_href .logo_mbc {
-    width: 50%;
+    width: 40%;
     top: -1rem;
-    left: 40%;
+    left: 50%;
   }
   .main_container .header .lang_mbc {
     margin-right: -18%;
@@ -2107,9 +2107,9 @@ select:active {
     z-index: 99999999999;
   }
   .main_container .header .header_logo .link_href .logo_mbc {
-    width: 50%;
-    top: -1rem;
-    left: 40%;
+    width: 40%;
+    top: -1.25rem;
+    left: 50%;
   }
   .main_container .header .lang_mbc {
     margin-right: -18%;
@@ -2463,9 +2463,9 @@ select:active {
     z-index: 99999999999;
   }
   .main_container .header .header_logo .link_href .logo_mbc {
-    width: 50%;
-    top: -1rem;
-    left: 40%;
+    width: 40%;
+    top: -1.25rem;
+    left: 50%;
   }
   .main_container .header .lang_mbc {
     margin-right: -18%;
@@ -2820,9 +2820,9 @@ select:active {
     z-index: 99999999999;
   }
   .main_container .header .header_logo .link_href .logo_mbc {
-    width: 50%;
-    top: -1rem;
-    left: 40%;
+    width: 35%;
+    top: -1.25rem;
+    left: 50%;
   }
   .main_container .header .lang_mbc {
     margin-right: -18%;
@@ -3178,9 +3178,9 @@ select:active {
     height: 5.5rem;
   }
   .main_container .header .header_logo .link_href .logo_mbc {
-    width: 35%;
-    top: -1rem;
-    left: 50%;
+    width: 22%;
+    top: -0.75rem;
+    left: 60%;
   }
   .main_container .header .lang_mbc {
     margin-right: -4%;
@@ -3555,9 +3555,9 @@ select:active {
     height: 6rem;
   }
   .main_container .header .header_logo .link_href .logo_mbc {
-    width: 30%;
+    width: 22%;
     top: -1rem;
-    left: 50%;
+    left: 55%;
   }
   .main_container .header .lang_mbc {
     margin-right: 0%;
