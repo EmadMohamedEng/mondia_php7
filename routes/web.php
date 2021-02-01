@@ -192,6 +192,7 @@ Route::get('mbc_welcome_page_test', 'MbcTwoController@mbc_welcome_page_test');  
 Route::post('mbc_subscription/optout/{partnerRoleId}', 'MbcTwoController@subscriptionOptOut');
 Route::post('mbc_subscription_resend_pincode/optin/{partnerRoleId}', 'MbcTwoController@resend_pincode');
 
+
 /***************end mbc 2****************** */
 
 /***************start mbc filter ****************** */
