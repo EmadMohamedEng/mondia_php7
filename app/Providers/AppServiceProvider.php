@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
     {
 
       if (request()->get('OpID') == mbc_op_id() || request()->get('OpID') == orange_op_id()
-      || request()->fullUrl() == url("orange_portal_login")  || request()->fullUrl() == url("mbc_portal_landing")
+      || request()->fullUrl() == url("orange_portal_login")  || request()->fullUrl() == url("elkenz_portal_landing")
       ||  request()->get('OpID') == zain_kuwait()   ) {
         $lang = 'ar';
         session()->put('applocale', $lang);

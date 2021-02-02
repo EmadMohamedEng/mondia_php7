@@ -118,7 +118,7 @@ if ($lang == 'ar') {
       </div>
 
       <div class="cancel text-center mt-3 text-white">
-        <p>@lang('messages.unsubscribelink') <a href="{{url('mbc_portal_unsub' )}}">@lang('messages.Link')</a></p>
+        <p>@lang('messages.unsubscribelink') <a href="{{url('elkenz_portal_unsub' )}}">@lang('messages.Link')</a></p>
       </div>
 
     </div>
@@ -148,9 +148,9 @@ if ($lang == 'ar') {
       const checkbox = document.getElementById("on-off");
       checkbox.addEventListener('change', (event) => {
         if (event.target.checked) {
-          location.href = "{{url('mbc_portal_landing/ar')}}";
+          location.href = "{{url('elkenz_portal_landing/ar')}}";
         } else {
-          location.href = "{{url('mbc_portal_landing/en')}}";
+          location.href = "{{url('elkenz_portal_landing/en')}}";
         }
       })
     }

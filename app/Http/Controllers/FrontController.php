@@ -60,7 +60,7 @@ class FrontController extends Controller
 
         return view('front.operator.mbc.home', compact('latest'));
       }else{
-        return redirect('mbc_portal_landing');
+        return redirect('elkenz_portal_landing');
       }
     }
 
@@ -154,7 +154,7 @@ class FrontController extends Controller
 
         return view('front.operator.mbc.service', compact('services', 'provider'));
       }else{
-        return redirect('mbc_portal_landing');
+        return redirect('elkenz_portal_landing');
       }
     }
     $services = Service::select('services.*', 'services.id as service_id');
@@ -209,7 +209,7 @@ class FrontController extends Controller
 
           return view('front.operator.mbc.list_content', compact('contents', 'service'));
         }else{
-          return redirect('mbc_portal_landing');
+          return redirect('elkenz_portal_landing');
         }
       }
 
@@ -393,7 +393,7 @@ class FrontController extends Controller
 
           }
         }
-      return redirect('mbc_portal_landing');
+      return redirect('elkenz_portal_landing');
     }
 
 
@@ -545,7 +545,7 @@ class FrontController extends Controller
 
       return view('front.mbc_today_link', compact('content' ,'contents'));
     }
-    return redirect('mbc_portal_landing');
+    return redirect('elkenz_portal_landing');
   }
 
   /**
@@ -663,7 +663,7 @@ class FrontController extends Controller
             return view('front.operator.mbc.search_result', compact('services', 'contents'));
 
         }else{
-            return redirect('mbc_portal_landing');
+            return redirect('elkenz_portal_landing');
         }
     }
 
@@ -1909,7 +1909,7 @@ class FrontController extends Controller
               return view('front.mbc_filter.inner', compact('filter'));
             }
           }
-        return redirect('mbc_portal_landing');
+        return redirect('elkenz_portal_landing');
       }
     }
 
@@ -1978,11 +1978,11 @@ class FrontController extends Controller
           $operators = Operator::whereIN('id',$operators_ids)->get();
           return view('front.operator.mbc.profile',compact('date', 'subscriber_content', 'subscriber_day', 'subscription_days', 'cost'));
         }else{
-          return redirect('mbc_portal_login');
+          return redirect('elkenz_portal_login');
         }
 
         }else{
-          return redirect('mbc_portal_login');
+          return redirect('elkenz_portal_login');
         }
 
     }

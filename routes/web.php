@@ -193,7 +193,19 @@ Route::post('mbc_subscription/optout/{partnerRoleId}', 'MbcTwoController@subscri
 Route::post('mbc_subscription_resend_pincode/optin/{partnerRoleId}', 'MbcTwoController@resend_pincode');
 
 
+
 /***************end mbc 2****************** */
+
+
+/***************start Alkenz 2****************** */
+Route::get('elkenz_portal_landing', 'MbcTwoController@index');
+Route::get('elkenz_portal_login', 'MbcTwoController@login');
+Route::get('elkenz_portal_pin', 'MbcTwoController@pincode');
+Route::get('elkenz_welcome_page', 'MbcTwoController@mbc_welcome_page');
+Route::get('elkenz_portal_unsub', 'MbcTwoController@unsubscribe');
+Route::get('elkenz_welcome_page_test', 'MbcTwoController@mbc_welcome_page_test');  // this for test mbc pincode verify success then make redirect
+
+/***************end Alkenz 2****************** */
 
 /***************start mbc filter ****************** */
 Route::get('filter_list', 'FrontController@filter_list');

@@ -377,17 +377,17 @@ class MbcController extends Controller
           if (true) {
             $lang =  session::get('lang');
             if ($request->has('prev_url'))
-              return redirect('mbc_portal_pin');
+              return redirect('elkenz_portal_pin');
             if ($lang == 'ar')
-              return redirect('mbc_portal_pin')->with('success', '!تم ارسال رمز التحقق');
+              return redirect('elkenz_portal_pin')->with('success', '!تم ارسال رمز التحقق');
 
-            return redirect('mbc_portal_pin')->with('success', 'Pincode Sent!');
+            return redirect('elkenz_portal_pin')->with('success', 'Pincode Sent!');
           } else {
             $lang =  session::get('lang');
             if ($lang == "ar") {
-              return redirect('mbc_portal_landing/' . $lang)->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
+              return redirect('elkenz_portal_landing/' . $lang)->with('failed', 'لقد حدث خطأ, برجاء المحاولة لاحقا');
             } else {
-              return redirect('mbc_portal_landing/' . $lang)->with('failed', 'An error has occurred, please try again later');
+              return redirect('elkenz_portal_landing/' . $lang)->with('failed', 'An error has occurred, please try again later');
             }
           }
         }
@@ -554,9 +554,9 @@ class MbcController extends Controller
       if ($ReqResponse['responseData']['subscriptionResult'] == 'OPTOUT_CANCELED_OK') {
         $this->checksub('unsubscribe', '966' . $request->number, $timewe->id);
 
-        return redirect('mbc_portal_unsub')->with('success', 'تم الغاء الاشتراك بنجاح');
+        return redirect('elkenz_portal_unsub')->with('success', 'تم الغاء الاشتراك بنجاح');
       } else {
-        return redirect('mbc_portal_unsub')->with('failed', 'هذا الرقم غير مشترك بالخدمة');
+        return redirect('elkenz_portal_unsub')->with('failed', 'هذا الرقم غير مشترك بالخدمة');
       }
     }
 
@@ -629,7 +629,7 @@ class MbcController extends Controller
           $message = 'you are not a subscriber Please subscribe Now';
         }
 
-        return redirect('mbc_portal_landing')->with(['failed' => $message]);
+        return redirect('elkenz_portal_landing')->with(['failed' => $message]);
       }
     }
 
@@ -642,7 +642,7 @@ class MbcController extends Controller
       session()->forget('MSISDN');
       session()->forget('mbc_op_id');
 
-      return redirect('mbc_portal_login');
+      return redirect('elkenz_portal_login');
     }
 
 
