@@ -49,7 +49,7 @@
 
       @if(request()->get('OpID') == mbc && $subscriber_content->count())
       <div class="profile_card">
-        <div class="row m-0">
+        <div class="row m-0" id="load_more">
           @foreach ($subscription_days as $day)
 
           <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-1">
@@ -108,5 +108,41 @@
         </div>
       </div>
       @endif
+
+      <h1 style="color:#efc049;text-align:center;" class="load">@lang('messages.Loading')</h1>
+
 </section>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script>
+  var start = 1;
+  var action = 'inactive';
+  $('.load').hide();
+  $(window).on("scroll", function() {
+
+    if ($(window).scrollTop() + $(window).height() > $("#load_more").height() && action == 'inactive') {
+      $('.load').show();
+      action = 'active';
+      start = start + 1;
+      setTimeout(function() {
+        load_content_data(start);
+      }, 500);
+    }
+  });
+
+  function load_content_data(start) {
+    $.ajax({
+      url: '{{url("profile/")}}?'+ 'OpID=' + "{{request()->get('OpID')}}" + '&page=' + start,
+      type: "get",
+      success: function(data) {
+        if (data.html == '') {
+          action = 'active';
+        } else {
+          $('#load_more').append(data.html);
+          action = 'inactive';
+        }
+        $('.load').hide();
+      },
+    });
+  }
+</script>
 @stop

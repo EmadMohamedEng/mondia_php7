@@ -1961,8 +1961,16 @@ class FrontController extends Controller
           }
 
           $subscriber_content = $contents->orderBy('subscription_day', 'DESC')->get();
-          $subscription_days = $contents->orderBy('subscription_day', 'DESC')->groupBy('subscription_day')->pluck('subscription_day');
-
+          $subscription_days = $contents->orderBy('subscription_day', 'DESC')->groupBy('subscription_day')->paginate(10)->pluck('subscription_day');
+          if($request->ajax()) {
+            if(count($subscription_days) > 0){
+              $html = view("front.operator.mbc.load_days", compact("subscription_days","subscriber_content"))->render();
+            }else{
+              $html = "";
+            }
+            return Response(array('html' => $html));
+        }
+          //dd($subscriber_content);
           if($sub && isset($sub->created_at)){
             $date = date('Y-m-d',strtotime($sub->created_at));
           }
@@ -2000,5 +2008,6 @@ class FrontController extends Controller
     }
 
   }
+
 
 }

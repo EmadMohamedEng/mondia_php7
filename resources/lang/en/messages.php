@@ -245,6 +245,7 @@ return [
     'select_image' => 'Select Image',
     'add_user' => 'Add User',
     'action' => 'Action',
+    'Loading' => 'Loading ...',
 
     'enjoy_time_landing' => 'Alkanz',
     'Mbc_Muslim_guide_landing' => 'Enlighten your day with Alkenz the Islamic bouquet',
