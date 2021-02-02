@@ -233,6 +233,7 @@ return [
     'select_image' => 'أختيار صوره',
     'add_user' => 'أضافة مستخدم جديد',
     'action' => 'إجراء',
+    'Loading' => 'تـحـمـيـل ...',
 
     'enjoy_time_landing' => 'الكنز',
     'Mbc_Muslim_guide_landing' => 'اجعل يومك أفضل مع باقة الكنز الإسلامية',
