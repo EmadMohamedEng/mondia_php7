@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!--Mobile Meta-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Elkanz</title>
+  <title>Alkanz</title>
   <link rel="stylesheet" href='{{url('front/stc')}}/css/bootstrap.min.css'>
   <link rel="stylesheet" href='{{url('front/stc')}}/css/all.min.css'>
 

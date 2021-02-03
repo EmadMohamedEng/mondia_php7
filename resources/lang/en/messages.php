@@ -36,7 +36,7 @@ return [
     'cancel' => 'Cancel',
     'enjoy_time' => 'Enjoy your time with the service',
     'Muslim_guide' => 'Muslim guide',
-    'Mbc_Muslim_guide' => 'Alkanz',
+    'Mbc_Muslim_guide' => 'Alkenz',
     'orange_Muslim_guide' => 'Orange Alkheer',
     'Subscribe_Now' => 'Subscribe',
     'Enter_your' => 'Enter your mobile phone',
