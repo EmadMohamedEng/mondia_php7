@@ -35,8 +35,8 @@ class FrontController extends Controller
         $vars["service_id"] = 2;
         $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
         $sub = json_decode($sub);
-        // $request->session()->put('subscription_day', 45);
-        $request->session()->put('subscription_day', $sub->day);
+        $request->session()->put('subscription_day', 45);
+        // $request->session()->put('subscription_day', $sub->day);
         $today_date_format = date('D');
         $occassion_date_format = date('Y-m-d');
 
