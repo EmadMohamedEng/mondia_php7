@@ -1,7 +1,6 @@
 <!-- @extends('front.master') -->
 @section('page_title') @lang('front.profile') @endsection
 @section('content')
-
 <section class="profile">
   @if(request()->get('OpID') == mbc)
   <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
@@ -108,19 +107,18 @@
         </div>
       </div>
       @endif
-
-      <h1 style="color:#efc049;text-align:center;" class="load">@lang('messages.Loading')</h1>
+      <div class="loader"></div>
 
 </section>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script>
   var start = 1;
   var action = 'inactive';
-  $('.load').hide();
+  $('.loader').hide();
   $(window).on("scroll", function() {
 
     if ($(window).scrollTop() + $(window).height() > $("#load_more").height() && action == 'inactive') {
-      $('.load').show();
+      $('.loader').show();
       action = 'active';
       start = start + 1;
       setTimeout(function() {
@@ -140,7 +138,7 @@
           $('#load_more').append(data.html);
           action = 'inactive';
         }
-        $('.load').hide();
+        $('.loader').hide();
       },
     });
   }

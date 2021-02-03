@@ -1,3 +1,4 @@
+<div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
 @if(request()->get('OpID') == mbc && $subscriber_content->count())
       <div class="profile_card">
         <div class="row m-0" id="load_more">
