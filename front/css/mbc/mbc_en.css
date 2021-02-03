@@ -2084,6 +2084,12 @@ select:active {
   .main_container .profile .profile_card .item .card .owl_content_img img {
     height: 8.875rem;
   }
+  .main_container .profile .loader {
+    width: 70px;
+    height: 70px;
+    left: 40%;
+    top: 50%;
+  }
   .main_container .list_filter .card .owl_content_img img {
     height: 9.375rem;
   }
@@ -2439,6 +2445,12 @@ select:active {
   }
   .main_container .profile .profile_card .item .card .owl_content_img img {
     height: 8.875rem;
+  }
+  .main_container .profile .loader {
+    width: 70px;
+    height: 70px;
+    left: 40%;
+    top: 50%;
   }
   .main_container .list_filter .card .owl_content_img img {
     height: 10.125rem;
@@ -2797,6 +2809,12 @@ select:active {
   .main_container .profile .profile_card .item .card .owl_content_img img {
     height: 8.875rem;
   }
+  .main_container .profile .loader {
+    width: 70px;
+    height: 70px;
+    left: 40%;
+    top: 50%;
+  }
   .main_container .list_filter .card .owl_content_img img {
     height: 11.438rem;
   }
@@ -3153,6 +3171,12 @@ select:active {
   }
   .main_container .profile .profile_card .item .card .owl_content_img img {
     height: 8.875rem;
+  }
+  .main_container .profile .loader {
+    width: 70px;
+    height: 70px;
+    left: 40%;
+    top: 50%;
   }
   .main_container .list_filter .card .owl_content_img img {
     height: 12.219rem;
@@ -3524,6 +3548,12 @@ select:active {
   }
   .main_container .profile .profile_card .item .card .owl_content_img img {
     height: 8.875rem;
+  }
+  .main_container .profile .loader {
+    width: 70px;
+    height: 70px;
+    left: 40%;
+    top: 50%;
   }
   .main_container .list_filter .card .owl_content_img img {
     height: 15.208rem;
@@ -3909,6 +3939,12 @@ select:active {
   }
   .main_container .profile .profile_card .item .card .owl_content_img img {
     height: 8.875rem;
+  }
+  .main_container .profile .loader {
+    width: 70px;
+    height: 70px;
+    left: 40%;
+    top: 50%;
   }
   .main_container .list_filter .card .owl_content_img img {
     height: 20.375rem;
