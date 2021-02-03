@@ -1,6 +1,13 @@
 <!-- @extends('front.master') -->
 @section('page_title') @lang('front.profile') @endsection
 @section('content')
+
+<style>
+  .loading-overlay {
+    display: none;
+  }
+</style>
+
 <section class="profile">
   @if(request()->get('OpID') == mbc)
   <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
@@ -53,11 +60,11 @@
 
           <div class="col-md-12 col-lg-12 col-xl-12 col-12 p-1">
             <div class="profile_card_title">
-                @if ($day == 0)
-                <h6 class="font-weight-bold">@lang('messages.FreeContent')</h6>
-                @else
-                <h6 class="font-weight-bold">@lang('messages.Day') {{$day}}</h6>
-                @endif
+              @if ($day == 0)
+              <h6 class="font-weight-bold">@lang('messages.FreeContent')</h6>
+              @else
+              <h6 class="font-weight-bold">@lang('messages.Day') {{$day}}</h6>
+              @endif
             </div>
           </div>
 
@@ -75,14 +82,14 @@
                   }elseif($item->content->type == 3) { //image
                   $src =url( $item->content->video );
                   }elseif($item->content->type == 2) { //audio
-                    $src = $item->content->image_preview;
+                  $src = $item->content->image_preview;
                   }else{
                   $src = url('front\images\Cutting\Contnent_Page\004.png');
                   }
                   @endphp
 
 
-                  <img class="w-100"  src="{{$src}}"  alt="{{get_title($item->content_id)}}">
+                  <img class="w-100" src="{{$src}}" alt="{{get_title($item->content_id)}}">
 
                   <a>
                     <div class="mask waves-effect waves-light rgba-white-slight"></div>
@@ -110,6 +117,7 @@
       <div class="loader"></div>
 
 </section>
+
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script>
   var start = 1;
