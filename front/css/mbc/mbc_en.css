@@ -1460,7 +1460,7 @@ select:active {
   width: 100px;
   height: 100px;
   position: fixed;
-  left: 35%;
+  left: 50%;
   top: 50%;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
