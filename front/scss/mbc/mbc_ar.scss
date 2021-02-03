@@ -1879,6 +1879,40 @@ select {
 
       }
     }
+
+    .loader {
+      border: 5px solid transparent;
+      border-radius: 50%;
+      border-top: 5px solid #efc049;
+      border-bottom: 5px solid #efc049;
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      right: 35%;
+      top: 50%;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
 
   /* End Profile Page */
@@ -6336,30 +6370,6 @@ select {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
-}
-
-.loader {
-  border: 5px solid transparent;
-  border-radius: 50%;
-  border-top: 5px solid #efc049;
-  border-bottom: 5px solid #efc049;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  left: 0;
-  right: 37%;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
 
 /* End Animation */

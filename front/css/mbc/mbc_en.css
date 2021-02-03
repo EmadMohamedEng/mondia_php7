@@ -1452,6 +1452,35 @@ select:active {
 .main_container .profile .profile_card .item .card .card-body .card-text i {
   color: #adadad;
 }
+.main_container .profile .loader {
+  border: 5px solid transparent;
+  border-radius: 50%;
+  border-top: 5px solid #efc049;
+  border-bottom: 5px solid #efc049;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  left: 35%;
+  top: 50%;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .main_container .terms_page {
   margin: 1.5rem auto;
 }
@@ -4115,36 +4144,6 @@ select:active {
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
-  }
-}
-.loader {
-  border: 5px solid transparent;
-  border-radius: 50%;
-  border-top: 5px solid #efc049;
-  border-bottom: 5px solid #efc049;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  left: 37%;
-  right: 0;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 /* End Animation */
