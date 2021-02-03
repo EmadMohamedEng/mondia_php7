@@ -110,7 +110,9 @@
       <div class="loader"></div>
 
 </section>
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+@stop
+
+@section("script")
 <script>
   var start = 1;
   var action = 'inactive';
@@ -136,11 +138,30 @@
           action = 'active';
         } else {
           $('#load_more').append(data.html);
+          setOpID()
           action = 'inactive';
         }
         $('.loader').hide();
       },
     });
+  }
+
+  function setOpID() {
+    op_id = {{ isset($_REQUEST['OpID']) ? 1 : 0 }}
+    if (op_id) {
+      var operator_id = {{ isset($_REQUEST['OpID']) ? $_REQUEST['OpID'] : '' }}
+      $('.link_href').each(function() {
+        var $this = $(this);
+        var _href = $this.attr("href");
+        if(!_href.includes('OpID')){
+          if (_href.includes('?')) {
+            $this.attr("href", _href + '&OpID=' + operator_id);
+          } else {
+            $this.attr("href", _href + '?OpID=' + operator_id);
+          }
+        }
+      });
+    }
   }
 </script>
 @stop
