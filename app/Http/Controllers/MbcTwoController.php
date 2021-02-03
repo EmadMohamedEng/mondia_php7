@@ -374,9 +374,9 @@ class MbcTwoController extends Controller
     $resend_pincode = ResendPincode::where('msisdn',$msisdn)->where('date',date('Y-m-d'))->first();
     if ($resend_pincode && $resend_pincode->count == 3) {
       if ($lang == 'ar'){
-        return redirect('elkenz_portal_landing')->with('failed', 'لقد تم تجاوز الحد الاقصي لمحاولات اعاده ارسال  كود التحقق');
+        return redirect('alkenz_portal_landing')->with('failed', 'لقد تم تجاوز الحد الاقصي لمحاولات اعاده ارسال  كود التحقق');
       }
-      return redirect('elkenz_portal_landing')->with('failed', 'The maximum number of retries to resend the verification code has been exceeded');
+      return redirect('alkenz_portal_landing')->with('failed', 'The maximum number of retries to resend the verification code has been exceeded');
     }elseif($resend_pincode && $resend_pincode->count < 3){
       $resend_pincode->count = $resend_pincode->count +1;
     }else{
@@ -399,14 +399,14 @@ class MbcTwoController extends Controller
 
     if ($response == "OK") {
       if ($lang == 'ar'){
-        return redirect('elkenz_portal_pin')->with('success', '!تم ارسال رمز التحقق');
+        return redirect('alkenz_portal_pin')->with('success', '!تم ارسال رمز التحقق');
       }
-      return redirect('elkenz_portal_pin')->with('success', 'Pincode Sent!');
+      return redirect('alkenz_portal_pin')->with('success', 'Pincode Sent!');
     } else {
       if ($lang == 'ar'){
-        return redirect('elkenz_portal_landing')->with('failed', 'يوجد خطأ');
+        return redirect('alkenz_portal_landing')->with('failed', 'يوجد خطأ');
       }
-      return redirect('elkenz_portal_landing')->with('failed', 'There is an error');
+      return redirect('alkenz_portal_landing')->with('failed', 'There is an error');
     }
   }
 
@@ -423,9 +423,9 @@ class MbcTwoController extends Controller
     $resend_pincode = ResendPincode::where('msisdn',$msisdn)->where('date',date('Y-m-d'))->first();
     if ($resend_pincode && $resend_pincode->count == 3) {
       if ($lang == 'ar'){
-        return redirect('elkenz_portal_landing')->with('failed', 'لقد تم تجاوز الحد الاقصي لمحاولات اعاده ارسال  كود التحقق');
+        return redirect('alkenz_portal_landing')->with('failed', 'لقد تم تجاوز الحد الاقصي لمحاولات اعاده ارسال  كود التحقق');
       }
-      return redirect('elkenz_portal_landing')->with('failed', 'The maximum number of retries to resend the verification code has been exceeded');
+      return redirect('alkenz_portal_landing')->with('failed', 'The maximum number of retries to resend the verification code has been exceeded');
     }
 
 
@@ -489,21 +489,21 @@ class MbcTwoController extends Controller
       if ($create_subscriber_response == "1") {
         session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
         if ($lang == 'ar'){
-          return redirect('elkenz_welcome_page')->with('success','تم الاشتراك بنجاح وارسال رابط الدخول لجوالك');
+          return redirect('alkenz_welcome_page')->with('success','تم الاشتراك بنجاح وارسال رابط الدخول لجوالك');
         }
-        return redirect('elkenz_welcome_page')->with('success','Subscribed successfully and login url is sent to your phone');
+        return redirect('alkenz_welcome_page')->with('success','Subscribed successfully and login url is sent to your phone');
       }
 
     }elseif($response = 'CodeHasExpired'){
       if ($lang == 'ar'){
-        return redirect('elkenz_portal_pin')->with('failed','يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');
+        return redirect('alkenz_portal_pin')->with('failed','يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');
       }
-      return redirect('elkenz_portal_pin')->with('failed','There is an error, please click to resend the pincode');
+      return redirect('alkenz_portal_pin')->with('failed','There is an error, please click to resend the pincode');
     }else{
       if ($lang == 'ar'){
-        return redirect('elkenz_portal_pin')->with('failed','خطأ في كود التفعيل برجاء ادخال كود التفعيل الصحيح');
+        return redirect('alkenz_portal_pin')->with('failed','خطأ في كود التفعيل برجاء ادخال كود التفعيل الصحيح');
       }
-      return redirect('elkenz_portal_pin')->with('failed','Activation error. Please enter the correct activation code');
+      return redirect('alkenz_portal_pin')->with('failed','Activation error. Please enter the correct activation code');
     }
 
   }
@@ -576,9 +576,9 @@ class MbcTwoController extends Controller
      if ($create_subscriber_response == "1") {
        session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
        if ($lang == 'ar'){
-         return redirect('elkenz_welcome_page')->with('success','تم الاشتراك بنجاح وارسال رابط الدخول لجوالك');
+         return redirect('alkenz_welcome_page')->with('success','تم الاشتراك بنجاح وارسال رابط الدخول لجوالك');
        }
-       return redirect('elkenz_welcome_page')->with('success','Subscribed successfully and login url is sent to your phone');
+       return redirect('alkenz_welcome_page')->with('success','Subscribed successfully and login url is sent to your phone');
      }
 
   }
@@ -687,7 +687,7 @@ class MbcTwoController extends Controller
         $message = 'you are not a subscriber Please subscribe Now';
       }
 
-      return redirect('elkenz_portal_landing')->with(['failed' => $message]);
+      return redirect('alkenz_portal_landing')->with(['failed' => $message]);
     }
   }
 
@@ -724,14 +724,14 @@ class MbcTwoController extends Controller
     $lang =  session::get('lang');
     if ($response == "OK") {
       if ($lang == 'ar'){
-        return redirect('elkenz_portal_pin')->with('success', '!تم ارسال رمز التحقق');
+        return redirect('alkenz_portal_pin')->with('success', '!تم ارسال رمز التحقق');
       }
-      return redirect('elkenz_portal_pin')->with('success', 'Pincode Sent!');
+      return redirect('alkenz_portal_pin')->with('success', 'Pincode Sent!');
     } else {
       if ($lang == 'ar'){
-        return redirect('elkenz_portal_pin')->with('failed', 'يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');
+        return redirect('alkenz_portal_pin')->with('failed', 'يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');
       }
-      return redirect('elkenz_portal_pin')->with('failed', 'There is an error, please click to resend the verification code');
+      return redirect('alkenz_portal_pin')->with('failed', 'There is an error, please click to resend the verification code');
     }
   }
 
@@ -743,9 +743,9 @@ class MbcTwoController extends Controller
   {
         $lang =  session::get('lang');
           if ($lang == "ar") {
-            return redirect('elkenz_portal_landing/' . $lang)->with('success', 'تم الغاء الاشتراك بنجاح');
+            return redirect('alkenz_portal_landing/' . $lang)->with('success', 'تم الغاء الاشتراك بنجاح');
           } else {
-            return redirect('elkenz_portal_landing/' . $lang)->with('success', 'The service has been canceled successfully');
+            return redirect('alkenz_portal_landing/' . $lang)->with('success', 'The service has been canceled successfully');
           }
   }
 
@@ -757,7 +757,7 @@ class MbcTwoController extends Controller
     session()->forget('status');
     session()->forget('ooredoo_op_id');
 
-    return redirect('elkenz_portal_landing');
+    return redirect('alkenz_portal_landing');
   }
 
 
@@ -785,7 +785,7 @@ class MbcTwoController extends Controller
       if ((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))) {
         return view('front.profile');
       }
-      return redirect('elkenz_portal_login');
+      return redirect('alkenz_portal_login');
     }
   }
 

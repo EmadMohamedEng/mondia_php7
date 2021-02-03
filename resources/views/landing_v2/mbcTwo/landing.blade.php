@@ -182,11 +182,11 @@ if ($lang == 'ar') {
       </div>
 
       <div class="cancel text-center mt-3 text-white">
-        <a href="{{url('elkenz_portal_login' )}}" class="Are_you_a_subscriber">
+        <a href="{{url('alkenz_portal_login' )}}" class="Are_you_a_subscriber">
           <p>@lang('messages.Are_you_a_subscriber')</p>
         </a>
         <!-- <p style="font-size: 9px;">@lang('messages.click_sub_landing')</p> -->
-        {{-- <p>@lang('messages.unsubscribelink') <a href="{{url('elkenz_portal_unsub' )}}">@lang('messages.Link')</a></p> --}}
+        {{-- <p>@lang('messages.unsubscribelink') <a href="{{url('alkenz_portal_unsub' )}}">@lang('messages.Link')</a></p> --}}
       </div>
     </div>
     <!-- script -->
