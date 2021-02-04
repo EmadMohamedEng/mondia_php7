@@ -525,20 +525,19 @@ class FrontController extends Controller
 
       // here we need to update day from GU Api  then update our system  => gu_day
       // https://mbc.digizone.com.kw/api/gu_fake_notification?msisdn=966123456789&action=RS&country=KSA&operator=MOB&day=3
-      // gu_today_links ( gu_request / gu_response / gu_day  / mbc_request / mbc_response )
 
-      // $day = 3;
+/*
+         $day = 45;
+         $url = IVAS_UPDATE_DAYS_AFTER_GU_UPDATE."?msisdn=$msisdn&day=$day";
 
-      // $url = "https://mbc.digizone.com.kw/api/gu_fake_notification?msisdn=$msisdn&action=RS&country=$sub->country&operator=$sub->operator&day=$day";
-      // $response = $this->SendRequestGet($url);
+        $update["msisdn"] = $msisdn;
+        $update["day"] = $day;
 
-      // $gu_today_links['gu_request'] = 'test request';
-      // $gu_today_links['gu_response'] = 'test response';
-      // $gu_today_links['gu_day'] = $day;
-      // $gu_today_links['mbc_request'] = $url;
-      // $gu_today_links['mbc_response'] = $response;
+       $this->ivas_update_by_gu($day, $url, $update) ;
+*/
 
-      // GuTodayLinks::create($gu_today_links);
+
+
 
       if($sub->country == 'KSA' && $sub->operator == 'STC'){
         $contents = MbcContent::StcAllContent($sub->day);
@@ -568,6 +567,23 @@ class FrontController extends Controller
     }
     return redirect('alkenz_portal_landing');
   }
+
+
+  public function ivas_update_by_gu($day, $url, $update)
+  {
+
+       $response = $this->SendRequestPost(IVAS_UPDATE_DAYS_AFTER_GU_UPDATE, $update, ["Accept: application/json"]);
+
+        $gu_today_links['gu_request'] = 'test request';
+        $gu_today_links['gu_response'] = 'test response';
+        $gu_today_links['gu_day'] = $day;
+        $gu_today_links['mbc_request'] = $url;
+        $gu_today_links['mbc_response'] = $response;
+
+       GuTodayLinks::create($gu_today_links);
+
+  }
+
 
   /**
    * Method decryptMobileNumber

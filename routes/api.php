@@ -25,6 +25,7 @@ Route::post('mbc_sent_mt_response','TestController@mbc_sent_mt_response');
 define('CHECKSUB_URL', "https://mbc.digizone.com.kw/api/checksub");
 define('MBC_CREATE_SUB', "https://mbc.digizone.com.kw/api/create_sub");
 define('MBC_GET_SUB', "https://mbc.digizone.com.kw/api/mbc_get_sub");
+define('IVAS_UPDATE_DAYS_AFTER_GU_UPDATE', "https://mbc.digizone.com.kw/api/change_subscriber_day");
 
 
 // define constants
