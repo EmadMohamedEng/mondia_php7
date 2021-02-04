@@ -15,6 +15,7 @@ use Monolog\Logger;
 
 use App\FilterPosts;
 use App\DuIntgration;
+use App\GuTodayLinks;
 use App\Http\Requests;
 use App\MondiaSubscriber;
 use App\MondiaUnsubscriber;
@@ -522,10 +523,22 @@ class FrontController extends Controller
       $occassion_date_format = date('Y-m-d');
 
 
-       // here we need to update day from GU Api  then update our system  => gu_day
-       // https://mbc.digizone.com.kw/api/gu_fake_notification?msisdn=966123456789&action=RS&country=KSA&operator=MOB&day=3
-       // gu_today_links ( gu_request / gu_response / gu_day  / mbc_request / mbc_response )
+      // here we need to update day from GU Api  then update our system  => gu_day
+      // https://mbc.digizone.com.kw/api/gu_fake_notification?msisdn=966123456789&action=RS&country=KSA&operator=MOB&day=3
+      // gu_today_links ( gu_request / gu_response / gu_day  / mbc_request / mbc_response )
 
+      // $day = 3;
+
+      // $url = "https://mbc.digizone.com.kw/api/gu_fake_notification?msisdn=$msisdn&action=RS&country=$sub->country&operator=$sub->operator&day=$day";
+      // $response = $this->SendRequestGet($url);
+
+      // $gu_today_links['gu_request'] = 'test request';
+      // $gu_today_links['gu_response'] = 'test response';
+      // $gu_today_links['gu_day'] = $day;
+      // $gu_today_links['mbc_request'] = $url;
+      // $gu_today_links['mbc_response'] = $response;
+
+      // GuTodayLinks::create($gu_today_links);
 
       if($sub->country == 'KSA' && $sub->operator == 'STC'){
         $contents = MbcContent::StcAllContent($sub->day);
