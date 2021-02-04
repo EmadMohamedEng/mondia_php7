@@ -40,6 +40,8 @@ class FrontController extends Controller
         $today_date_format = date('D');
         $occassion_date_format = date('Y-m-d');
 
+         // here we need to update day from GU Api
+
         if($sub->country == 'KSA' && $sub->operator == 'STC'){
           $contents = MbcContent::StcAllContent($sub->day);
           $sub_operator = 'ksa-stc';
@@ -518,6 +520,12 @@ class FrontController extends Controller
       $sub = json_decode($sub);
       $today_date_format = date('D');
       $occassion_date_format = date('Y-m-d');
+
+
+       // here we need to update day from GU Api  then update our system
+       // https://mbc.digizone.com.kw/api/gu_fake_notification?msisdn=966123456789&action=RS&country=KSA&operator=MOB&day=3
+
+
 
       if($sub->country == 'KSA' && $sub->operator == 'STC'){
         $contents = MbcContent::StcAllContent($sub->day);
@@ -1933,6 +1941,8 @@ class FrontController extends Controller
           $subscriber_day = $sub->day;
           $today_date_format = date('D');
           $occassion_date_format = date('Y-m-d');
+
+           // here we need to update day from GU Api
 
           if($sub->country == 'KSA' && $sub->operator == 'STC'){
             $contents = MbcContent::where('subscription_day', '<=',$sub->day)->where('operator', 'ksa-stc');
