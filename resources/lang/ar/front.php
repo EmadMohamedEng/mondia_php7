@@ -41,7 +41,7 @@ return [
     'the_value_of_the_estate' => 'قيمه التركه',
     'number_of_children' => 'عدد الاولاد',
     'number_of_girls' => 'عدد البنات ',
-    'feather' => 'الاب',
+    'feather' => 'الأب',
     'mother' => 'الأم',
     'Mbc' => 'MBC',
     'number_of_brother' => 'عدد الاخوه',
