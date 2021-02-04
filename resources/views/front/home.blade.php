@@ -287,7 +287,7 @@ $menu = provider_menu();
       @php
       $owl_1 = 'owl_content_one';
       if(count($item->services) == 1){
-      $owl_1 = 'owl_content_one';
+      $owl_1 = 'owl_content_two';
       }
 
       if(count($item->services) == 2){
