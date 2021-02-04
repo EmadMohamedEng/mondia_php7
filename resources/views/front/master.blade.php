@@ -168,7 +168,7 @@ $enable = get_setting('enable_testing');
   <script src="{{asset('front/js/js_PrayTimes.js')}}"></script>
 
   @yield('script')
-  
+
   <script>
     op_id = {{ isset($_REQUEST['OpID']) ? 1 : 0 }}
     if (op_id) {
