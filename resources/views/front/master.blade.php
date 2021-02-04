@@ -29,7 +29,7 @@
   @elseif(request()->has('OpID') && request()->get('OpID') == orange)
   <link rel="shortcut icon" href="{{asset('front/images/orange.png')}}">
 
-  @else
+  @elseif(request()->has('OpID') && request()->get('OpID') == du)
   <link rel="shortcut icon" href="{{asset('front/images/favicon.ico')}}">
   @endif
   <!-- End Favicon -->
@@ -168,7 +168,7 @@ $enable = get_setting('enable_testing');
   <script src="{{asset('front/js/js_PrayTimes.js')}}"></script>
 
   @yield('script')
-  
+
   <script>
     op_id = {{ isset($_REQUEST['OpID']) ? 1 : 0 }}
     if (op_id) {
