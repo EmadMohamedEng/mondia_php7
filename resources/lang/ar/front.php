@@ -79,7 +79,7 @@ return [
     'father_share' => "نصيب الأب",
     'girls_share' => 'نصيب البنات',
     'mother_share' => "نصيب الأم",
-    'the_first_wife_share' => 'نصيب الزوجة الاولى',
+    'the_first_wife_share' => 'نصيب الزوجة الأولى',
     'the_second_wife_share' => 'نصيب الزوجة الثانية',
     'the_third_wife_share' => 'نصيب الزوجة الثالثة',
     'the_four_wife_share' => 'نصيب الزوجة الرابعة',
