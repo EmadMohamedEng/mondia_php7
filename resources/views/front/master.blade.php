@@ -128,7 +128,7 @@ $enable = get_setting('enable_testing');
   </main>
 
   <!-- loading -->
-  <div class="loading-overlay">
+  <div class="loading-overlay ">
     <span class="spinner spinner-large spinner-blue spinner-slow"></span>
   </div>
   <!-- end loading -->
