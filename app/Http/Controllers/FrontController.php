@@ -522,9 +522,9 @@ class FrontController extends Controller
       $occassion_date_format = date('Y-m-d');
 
 
-       // here we need to update day from GU Api  then update our system
+       // here we need to update day from GU Api  then update our system  => gu_day
        // https://mbc.digizone.com.kw/api/gu_fake_notification?msisdn=966123456789&action=RS&country=KSA&operator=MOB&day=3
-
+       // gu_today_links ( gu_request / gu_response / gu_day  / mbc_request / mbc_response )
 
 
       if($sub->country == 'KSA' && $sub->operator == 'STC'){
