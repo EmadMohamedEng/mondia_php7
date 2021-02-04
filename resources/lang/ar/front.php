@@ -44,7 +44,7 @@ return [
     'feather' => 'الأب',
     'mother' => 'الأم',
     'Mbc' => 'MBC',
-    'number_of_brother' => 'عدد الاخوة',
+    'number_of_brother' => 'عدد الإخوة',
     'number_of_sister' => 'عدد الأخوات',
     'number_of_wife' => 'عدد الزوجات',
     'yes' => 'نعم',
