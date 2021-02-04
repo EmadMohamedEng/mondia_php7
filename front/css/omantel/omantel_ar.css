@@ -282,6 +282,7 @@ select:active {
   text-overflow: ellipsis;
   direction: rtl;
   margin-bottom: 0;
+  height: 23px;
 }
 .main_container .content_carousel .owl_content_two .item .card {
   border-radius: 10px;
@@ -307,6 +308,7 @@ select:active {
   text-overflow: ellipsis;
   direction: rtl;
   margin-bottom: 0;
+  height: 23px;
 }
 .main_container .content_carousel .owl_content_three .item .card {
   border-radius: 10px;
@@ -332,6 +334,7 @@ select:active {
   text-overflow: ellipsis;
   direction: rtl;
   margin-bottom: 0;
+  height: 23px;
 }
 .main_container .content_carousel .owl_content_four .item .card {
   border-radius: 10px;
@@ -357,6 +360,7 @@ select:active {
   text-overflow: ellipsis;
   direction: rtl;
   margin-bottom: 0;
+  height: 23px;
 }
 .main_container .content_carousel .owl_content_five .item .card {
   border-radius: 10px;
@@ -382,6 +386,7 @@ select:active {
   text-overflow: ellipsis;
   direction: rtl;
   margin-bottom: 0;
+  height: 23px;
 }
 .main_container .list_page {
   margin-top: 1.5rem;
@@ -436,6 +441,7 @@ select:active {
   text-overflow: ellipsis;
   direction: rtl;
   margin-bottom: 0;
+  height: 23px;
 }
 .main_container .inner_page {
   margin-top: 1.5rem;
