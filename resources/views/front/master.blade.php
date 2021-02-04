@@ -29,7 +29,7 @@
   @elseif(request()->has('OpID') && request()->get('OpID') == orange)
   <link rel="shortcut icon" href="{{asset('front/images/orange.png')}}">
 
-  @else
+  @elseif(request()->has('OpID') && request()->get('OpID') == du)
   <link rel="shortcut icon" href="{{asset('front/images/favicon.ico')}}">
   @endif
   <!-- End Favicon -->

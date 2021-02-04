@@ -15,6 +15,7 @@ use Monolog\Logger;
 
 use App\FilterPosts;
 use App\DuIntgration;
+use App\GuTodayLinks;
 use App\Http\Requests;
 use App\MondiaSubscriber;
 use App\MondiaUnsubscriber;
@@ -522,9 +523,20 @@ class FrontController extends Controller
       $occassion_date_format = date('Y-m-d');
 
 
-       // here we need to update day from GU Api  then update our system  => gu_day
-       // https://mbc.digizone.com.kw/api/gu_fake_notification?msisdn=966123456789&action=RS&country=KSA&operator=MOB&day=3
-       // gu_today_links ( gu_request / gu_response / gu_day  / mbc_request / mbc_response )
+      // here we need to update day from GU Api  then update our system  => gu_day
+      // https://mbc.digizone.com.kw/api/gu_fake_notification?msisdn=966123456789&action=RS&country=KSA&operator=MOB&day=3
+
+/*
+         $day = 45;
+         $url = IVAS_UPDATE_DAYS_AFTER_GU_UPDATE."?msisdn=$msisdn&day=$day";
+
+        $update["msisdn"] = $msisdn;
+        $update["day"] = $day;
+
+       $this->ivas_update_by_gu($day, $url, $update) ;
+*/
+
+
 
 
       if($sub->country == 'KSA' && $sub->operator == 'STC'){
@@ -555,6 +567,23 @@ class FrontController extends Controller
     }
     return redirect('alkenz_portal_landing');
   }
+
+
+  public function ivas_update_by_gu($day, $url, $update)
+  {
+
+       $response = $this->SendRequestPost(IVAS_UPDATE_DAYS_AFTER_GU_UPDATE, $update, ["Accept: application/json"]);
+
+        $gu_today_links['gu_request'] = 'test request';
+        $gu_today_links['gu_response'] = 'test response';
+        $gu_today_links['gu_day'] = $day;
+        $gu_today_links['mbc_request'] = $url;
+        $gu_today_links['mbc_response'] = $response;
+
+       GuTodayLinks::create($gu_today_links);
+
+  }
+
 
   /**
    * Method decryptMobileNumber
