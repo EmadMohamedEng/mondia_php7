@@ -83,7 +83,7 @@ return [
     'coming_soon' => 'Coming Soon...',
     "zakah_page2" => [
       "nisab" => 'النصاب',
-      'original' => 'الاصول',
+      'original' => 'الأصول',
       'money' => 'المال',
       'cash_money' => 'الاموال السائله',
       'cash_in_bank_accounts' => 'النقد فى الحسابات البنكية',
@@ -112,7 +112,7 @@ return [
       'religion_to_relatives' => 'الدين الاقارب',
       'religion_to_strangers' => 'الدين للغرباء',
       'total' => 'اجمالى',
-      'zakat_due' => 'الذكاه المستحقة',
+      'zakat_due' => 'الذكاة المستحقة',
       'enter_money' => 'أدخل المبلغ'
     ]
 ];
