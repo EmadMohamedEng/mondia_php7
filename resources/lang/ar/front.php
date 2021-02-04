@@ -39,7 +39,7 @@ return [
     'zakah_saved_money' => 'المال المدخر',
     'zakah_calculate' => 'احسب',
     'the_value_of_the_estate' => 'قيمه التركة',
-    'number_of_children' => 'عدد الإولاد',
+    'number_of_children' => 'عدد الأولاد',
     'number_of_girls' => 'عدد البنات ',
     'feather' => 'الأب',
     'mother' => 'الأم',
