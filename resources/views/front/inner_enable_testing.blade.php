@@ -25,7 +25,7 @@ $src = url('front\images\Cutting\Contnent_Page\004.png');
         <div class="cover">
 
           @if($content->type == 1)
-          <video style="object-fit: cover;width:100%" poster="{{$src}}" controls controlsList="nodownload">
+          <video style="object-fit: fill;width:100%" poster="{{$src}}" controls controlsList="nodownload">
             <source src="{{url($content->video)}}" />
           </video>
           @endif

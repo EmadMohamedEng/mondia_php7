@@ -43,7 +43,7 @@ if($today_video) {
     @if($today_video)
     <section class="img_carousel">
       @if($today_video->type == 1)
-        <video style="object-fit: cover;width:100%" poster="{{$src}}" controls controlsList="nodownload">
+        <video style="object-fit: fill;width:100%" poster="{{$src}}" controls controlsList="nodownload">
           <source src="{{url($today_video->video)}}" />
         </video>
         <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
