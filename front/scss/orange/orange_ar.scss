@@ -10,12 +10,20 @@ $grey_color: #adadad;
   src: url('../../font/DuCoHeadline200.ttf')
 }
 
+// @font-face {
+//   font-family: DroidKufi-Regular;
+//   src: url('../../font/DroidKufi-Regular.ttf')
+// }
+
+
+
 html {
   height: 100%;
 }
 
 body {
   font-family: DuCoHeadline200;
+  // font-family: "DroidKufi-Regular", Arial;
   background-color: $bg_color2;
   direction: rtl;
   width: 100%;
@@ -522,6 +530,7 @@ select {
               text-overflow: ellipsis;
               direction: rtl;
               margin-bottom: 0;
+              height: 23px;
             }
           }
         }
@@ -563,6 +572,7 @@ select {
               text-overflow: ellipsis;
               direction: rtl;
               margin-bottom: 0;
+              height: 23px;
             }
           }
         }
@@ -604,6 +614,7 @@ select {
               text-overflow: ellipsis;
               direction: rtl;
               margin-bottom: 0;
+              height: 23px;
             }
           }
         }
@@ -644,6 +655,7 @@ select {
               text-overflow: ellipsis;
               direction: rtl;
               margin-bottom: 0;
+              height: 23px;
             }
           }
         }
@@ -690,6 +702,7 @@ select {
               text-overflow: ellipsis;
               direction: rtl;
               margin-bottom: 0;
+              height: 23px;
             }
           }
         }
@@ -819,6 +832,7 @@ select {
             text-overflow: ellipsis;
             direction: rtl;
             margin-bottom: 0;
+            height: 23px;
           }
         }
       }
@@ -875,6 +889,7 @@ select {
           text-overflow: ellipsis;
           direction: rtl;
           margin-bottom: 0;
+          height: 23px;
         }
       }
     }
