@@ -31,6 +31,10 @@
 
   @elseif(request()->has('OpID') && request()->get('OpID') == du)
   <link rel="shortcut icon" href="{{asset('front/images/favicon.ico')}}">
+
+  @elseif(request()->has('OpID') && request()->get('OpID') == stc_ksa)
+  <link rel="shortcut icon" href="{{asset('front/images/stc_ksa2.jpg')}}">
+
   @endif
   <!-- End Favicon -->
   <title> @yield('page_title')</title>
