@@ -356,9 +356,9 @@ class MbcTwoController extends Controller
 
     // check user status
     $service_id = 2;
-    $check = checkStatus($msisdn);
+    $gu_sub = checkStatus($msisdn);
 
-    if ($check) {
+    if ($gu_sub['status']) {
       session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
       $lang =  session::get('lang');
       if ($lang == 'ar') {
@@ -443,63 +443,17 @@ class MbcTwoController extends Controller
     $lang =  session::get('lang');
 
     if ($response == 'Success') {  // pincode is correct
-
-       // add new api
-       /*
-       msisdn   = $msisdn   +
-       $operator =      DU   /     KwSTC  /       MOB  /  KsSTC  / KsZain
-        subscribe_date  = today
-        country   =>  UAE   KSA    Kuwait
-        operator   =>       KSA(  MOB   STC    Zain  )   /   Du   /   Kuwait( STC )
-       */
-
-       switch ($operator) {
-         case 'DU':
-          $n_country = 'UAE';
-          $n_operator = 'Du';
-          break;
-         case 'KwSTC':
-          $n_country = 'Kuwait';
-          $n_operator = 'STC';
-           break;
-         case 'MOB':
-          $n_country = 'KSA';
-          $n_operator = 'MOB';
-           break;
-         case 'KsSTC':
-          $n_country = 'KSA';
-          $n_operator = 'STC';
-           break;
-         case 'KsZain':
-          $n_country = 'KSA';
-          $n_operator = 'Zain';
-           break;
-       }
-
-      $URL = MBC_CREATE_SUBSCRIBER_URL;
-      $param = "msisdn=".$msisdn."&subscribe_date=". date('Y-m-d')."&country=". $n_country."&operator=".$n_operator;
-      $create_subscriber_response = $this->get_content_post($URL, $param);
-
-      // make log
-      $actionName = 'Mbc Create Subscriber After Pincode Success';
-      $result['response'] = $create_subscriber_response;
-      $this->log($actionName, $URL, $result);
-
-
-      if ($create_subscriber_response == "1") {
-        session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
-        if ($lang == 'ar'){
-          return redirect('alkenz_welcome_page')->with('success','تم الاشتراك بنجاح وارسال رابط الدخول لجوالك');
-        }
-        return redirect('alkenz_welcome_page')->with('success','Subscribed successfully and login url is sent to your phone');
+      session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+      if ($lang == 'ar'){
+        return redirect('alkenz_welcome_page')->with('success','تم الاشتراك بنجاح وارسال رابط الدخول لجوالك');
       }
-
-    }elseif($response = 'CodeHasExpired'){
+      return redirect('alkenz_welcome_page')->with('success','Subscribed successfully and login url is sent to your phone');
+    } elseif($response = 'CodeHasExpired'){
       if ($lang == 'ar'){
         return redirect('alkenz_portal_pin')->with('failed','يوجد خطأ يرجى الضغط علي اعاده ارسال كود التحقق');
       }
       return redirect('alkenz_portal_pin')->with('failed','There is an error, please click to resend the pincode');
-    }else{
+    } else{
       if ($lang == 'ar'){
         return redirect('alkenz_portal_pin')->with('failed','خطأ في كود التفعيل برجاء ادخال كود التفعيل الصحيح');
       }
@@ -666,9 +620,9 @@ class MbcTwoController extends Controller
     // $msisdn = str_replace("+0","",$msisdn);
     // $msisdn = trim($msisdn,"+");
 
-    $check = checkStatus($msisdn);
+    $gu_sub = checkStatus($msisdn);
 
-    if ($check) {
+    if ($gu_sub['status']) {
 
       session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
       $lang =  session::get('lang');

@@ -284,7 +284,7 @@ function filter_time($time){
   return $time;
 }
 
-/**
+  /**
    * Method checkStatus
    *
    * @param string $msisdn
@@ -302,17 +302,50 @@ function filter_time($time){
     $URL = GU_CHECKSUB_URL;
     $ReqResponse = SendRequestPost($URL, $vars, ["Accept: application/json"]);
     $ReqResponse = json_decode($ReqResponse, true);
+    $status = 0;
 
-    switch ($ReqResponse->status) {
-      case 'ACTIVE':
-        return 1;
-        break;
-      case 'NEW':
-        return 1;
-        break;
-      default:
-        return 0;
-        break;
+    if($msisdn && $ReqResponse) {
+      logGuInfo($ReqResponse, $URL, $msisdn);
+      switch ($ReqResponse->status) {
+        case 'ACTIVE':
+          $status = 1;
+          break;
+        case 'NEW':
+          $status =  1;
+          break;
+        default:
+          $status =  0;
+          break;
+      }
     }
+    return ['status' => $status , 'response' => $ReqResponse];
+  }
+
+  /**
+   * Method logGuInfo
+   *
+   * @param mixed  $response
+   * @param string $url
+   * @param string $msisdn
+   *
+   * @return void
+   */
+  function logGuInfo($response, $url, $msisdn)
+  {
+    // dd($response);
+    $data['url']      = $url;
+    $data['msisdn']   = $msisdn;
+    $data['response'] = $response;
+    $data['country']  = $response->country;
+    $data['operator'] = $response->operator;
+    $data['status']   = $response->status;
+    $data['day']      = $response->day;
+
+    $gu_status = \App\GuCheckStatus::create($data);
+
+    $data['gu_check_status_id'] = $gu_status->id;
+
+    \App\GuSubscriber::updateOrCreate($data['msisdn'] ,Arr::except($data, ['url', 'response']));
+
   }
 

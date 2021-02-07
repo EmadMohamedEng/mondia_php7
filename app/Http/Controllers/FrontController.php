@@ -31,13 +31,13 @@ class FrontController extends Controller
   public function index(Request $request)
   {
     if(request()->get('OpID') == MBC_OP_ID){
-      if( (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN')) ){
+      $gu_data = checkStatus(session()->get('MSISDN'));
+      if( (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN') && $gu_data['status']) ){
         $vars["msisdn"] = session()->get('MSISDN');
         // $vars["service_id"] = 2;
-        $sub = $this->SendRequestPost(GU_CHECKSUB_URL, $vars, ["Accept: application/json"]);
-        $sub = json_decode($sub);
+        $sub = $gu_data['response'];
        // $request->session()->put('subscription_day', 45);
-         $request->session()->put('subscription_day', $sub->content);
+        $request->session()->put('subscription_day', $sub->content);
         $today_date_format = date('D');
         $occassion_date_format = date('Y-m-d');
 
@@ -361,12 +361,12 @@ class FrontController extends Controller
     if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
       $enable_free = get_setting('enable_free');
         if($enable || $content->free || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
-          if($enable_free == "1" || (session()->has('MSISDN') && checkStatus(session()->get('MSISDN')))){
+          $gu_sub = checkStatus(session()->get('MSISDN'));
+          if($enable_free == "1" || (session()->has('MSISDN') && $gu_sub['status'])){
 
             $vars["msisdn"] = session()->get('MSISDN');
             // $vars["service_id"] = 2;
-            $sub = $this->SendRequestPost(GU_CHECKSUB_URL, $vars, ["Accept: application/json"]);
-            $sub = json_decode($sub);
+            $sub = $gu_sub['response'];
 
             $today_date_format = date('D');
             $occassion_date_format = date('Y-m-d');
@@ -514,11 +514,11 @@ class FrontController extends Controller
   public function mbcTodayLink($msisdn)
   {
     $msisdn = $this->decryptMobileNumber($msisdn);
-    if(checkStatus($msisdn)){
+    $gu_sub = checkStatus($msisdn);
+    if($gu_sub['status']){
       $vars["msisdn"] = $msisdn;
       // $vars["service_id"] = 2;
-      $sub = $this->SendRequestPost(GU_CHECKSUB_URL, $vars, ["Accept: application/json"]);
-      $sub = json_decode($sub);
+      $sub = $gu_sub['response'];
       $today_date_format = date('D');
       $occassion_date_format = date('Y-m-d');
 
@@ -1942,7 +1942,8 @@ class FrontController extends Controller
       if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
         $enable_free = get_setting('enable_free');
           if($enable || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
-            if($enable_free == "1" || (session()->has('MSISDN') && checkStatus(session()->get('MSISDN')))){
+            $gu_sub = checkStatus(session()->get('MSISDN'));
+            if($enable_free == "1" || (session()->has('MSISDN') && $gu_sub['status'])){
               return view('front.mbc_filter.inner', compact('filter'));
             }
           }
@@ -1961,11 +1962,11 @@ class FrontController extends Controller
     if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
       if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
         $msisdn = session()->get('MSISDN');
-        if(checkStatus($msisdn)){
+        $gu_sub = checkStatus($msisdn);
+        if($gu_sub['status']){
           $vars["msisdn"] = $msisdn ;
           // $vars["service_id"] = 2;
-          $sub = $this->SendRequestPost(GU_CHECKSUB_URL, $vars, ["Accept: application/json"]);
-          $sub = json_decode($sub);
+          $sub = $gu_sub['response'];
           $date = date('Y-m-d');
           $subscriber_day = $sub->content;
           $today_date_format = date('D');
