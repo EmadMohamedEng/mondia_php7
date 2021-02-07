@@ -191,7 +191,7 @@ function get_mbc_sub($msisdn)
 {
     $vars["msisdn"] = $msisdn;
     $vars["service_id"] = 2;
-    $sub = SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
+    $sub = SendRequestPost(GU_CHECKSUB_URL, $vars, ["Accept: application/json"]);
     $sub = json_decode($sub);
 
     return $sub;
@@ -283,4 +283,36 @@ function filter_time($time){
   }
   return $time;
 }
+
+/**
+   * Method checkStatus
+   *
+   * @param string $msisdn
+   *
+   * @return Boolean
+   */
+  function checkStatus($msisdn)
+  {
+    $vars["msisdn"] = $msisdn;
+
+    $JSON = json_encode($vars);
+
+    $actionName = "Gu Check Status";
+
+    $URL = GU_CHECKSUB_URL;
+    $ReqResponse = SendRequestPost($URL, $vars, ["Accept: application/json"]);
+    $ReqResponse = json_decode($ReqResponse, true);
+
+    switch ($ReqResponse->status) {
+      case 'ACTIVE':
+        return 1;
+        break;
+      case 'NEW':
+        return 1;
+        break;
+      default:
+        return 0;
+        break;
+    }
+  }
 

@@ -356,7 +356,7 @@ class MbcTwoController extends Controller
 
     // check user status
     $service_id = 2;
-    $check = $this->checkStatus($msisdn, $service_id);
+    $check = checkStatus($msisdn);
 
     if ($check) {
       session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
@@ -666,7 +666,7 @@ class MbcTwoController extends Controller
     // $msisdn = str_replace("+0","",$msisdn);
     // $msisdn = trim($msisdn,"+");
 
-    $check = $this->checkStatus($msisdn, $service_id);
+    $check = checkStatus($msisdn);
 
     if ($check) {
 
