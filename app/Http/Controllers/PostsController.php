@@ -36,7 +36,9 @@ class PostsController extends Controller
         if($request->has('video_id') && $request->video_id != ''){
             $posts = $posts->where('video_id',$request->video_id)->orderBy("created_at", "desc");
         }
-        $posts = $posts->get();
+              // $posts = $posts->get();
+
+              $posts=$posts->with(["operator", "video","operator.country"])->get();
 
         $video = null;
         $datatable = \DataTables::of($posts)
