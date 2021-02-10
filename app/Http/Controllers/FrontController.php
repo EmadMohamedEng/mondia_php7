@@ -135,6 +135,18 @@ class FrontController extends Controller
       return view('front.operator.zain_kw.home', compact('latest', 'health', 'today_video'));
     }
 
+    if(request()->get('OpID') == orange){
+      $today_video = Video::select('*', 'contents.id as content_id', 'contents.title as content_title')
+          ->join('posts', 'posts.video_id', '=', 'contents.id')
+          ->where('posts.operator_id', request()->get('OpID'))
+          ->join('services', 'services.id', '=', 'contents.service_id')
+          ->join('providers', 'providers.id', '=', 'services.provider_id')
+          ->where('posts.show_date', '<=', \Carbon\Carbon::now()->format('Y-m-d'))
+          ->latest('posts.show_date')
+          ->first();
+          return view('front.home', compact('latest', 'health','today_video'));
+        }
+
 
 
     return view('front.home', compact('latest', 'health'));

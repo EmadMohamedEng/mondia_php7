@@ -32,14 +32,32 @@ $menu = provider_menu();
     </div>
     @endif
 
+    @php
+        if($today_video) {
+          if($today_video->type == 1){
+            $src = $today_video->image_preview;
+          }elseif($today_video->type == 3){
+            $src = $today_video->video;
+          }elseif($today_video->type == 2){
+            $src = $today_video->image_preview;
+          }else{ // text default image
+            $src = url('front\images\Cutting\Contnent_Page\004.png');
+          }
+        }
+    @endphp
+
     @if(request()->get('OpID') == orange)
-    <section class="img_carousel">
-      <video class="rounded" width="100%" controls poster="{{url('orange_slider/Esm EL Nabi_1_snapshot.jpg')}}">
-        <source src="{{url('orange_slider/Esm EL Nabi_1.mp4')}}" type="video/mp4">
-        <source src="{{url('orange_slider/Esm EL Nabi_1.mp4')}}" type="video/ogg">
-        Your browser does not support the video tag.
-      </video>
-    </section>
+      @if($today_video)
+        <section class="img_carousel">
+        <a class="link_href" href="{{url('view_content/'.$today_video->content_id)}}">
+
+          <img src="{{url($today_video->image_preview)}}" alt="Video Cover" style="width: 100%;">
+            <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
+              <h5>{{get_title($today_video->content_id)}}</h5>
+            </div>
+        </a>
+        </section>
+    @endif
     @else
 
     <section class="img_carousel">
