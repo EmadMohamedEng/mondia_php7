@@ -33,7 +33,7 @@ $menu = provider_menu();
     @endif
 
     @php
-        if($today_video) {
+        if($today_video) {  // 1 = video /2 = audio /3 = image
           if($today_video->type == 1){
             $src = $today_video->image_preview;
           }elseif($today_video->type == 3){
@@ -46,12 +46,14 @@ $menu = provider_menu();
         }
     @endphp
 
+
+
     @if(request()->get('OpID') == orange)
       @if($today_video)
         <section class="img_carousel">
         <a class="link_href" href="{{url('view_content/'.$today_video->content_id)}}">
 
-          <img src="{{url($today_video->image_preview)}}" alt="Video Cover" style="width: 100%;">
+          <img src="{{url($src)}}" alt="Video Cover" style="width: 100%;">
             <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
               <h5>{{get_title($today_video->content_id)}}</h5>
             </div>
