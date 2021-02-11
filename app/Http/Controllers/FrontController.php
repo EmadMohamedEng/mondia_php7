@@ -150,7 +150,7 @@ class FrontController extends Controller
 
 
 
-    return view('front.home', compact('latest', 'health'));
+    return view('front.home', compact('latest', 'health','today_video'));
   }
 
   public function services(Request $request)
