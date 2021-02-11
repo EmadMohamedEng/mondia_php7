@@ -48,7 +48,7 @@ if($today_video) {
         </video>
 
         <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
-        <h5>{{get_title($today_video->content_id)}}</h5>
+        <h6>{{get_title($today_video->content_id)}}</h6>
         </div>
         @endif
 
@@ -56,20 +56,20 @@ if($today_video) {
           <img class="img_cover rounded" src="{{$src}}" alt="Video Cover">
           <audio class="audio_cover" src="{{url($today_video->video)}}" controls controlsList="nodownload"></audio>
           <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
-          <h5>{{get_title($today_video->content_id)}}</h5>
+          <h6>{{get_title($today_video->content_id)}}</h6>
           </div>
         @endif
 
         @if($today_video->type == 3)
         <img class="img_cover rounded" src="{{url($today_video->video)}}" alt="Video Cover">
         <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
-        <h5>{{get_title($today_video->content_id)}}</h5>
+        <h6>{{get_title($today_video->content_id)}}</h6>
         </div>
         @endif
 
         @if($today_video->type == 4)
         <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
-          <h4>{!!$today_video->getTranslation('content_text',getCode())!!}</h4>
+          <h6>{!!$today_video->getTranslation('content_text',getCode())!!}</h6>
         </div>
       @endif
     </section>

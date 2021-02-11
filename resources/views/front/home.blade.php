@@ -55,7 +55,7 @@ $menu = provider_menu();
 
           <img src="{{url($src)}}" alt="Video Cover" style="width: 100%;">
             <div class="col-md-12 w-100 m-1 text-center p-2 text-black">
-              <h5>{{get_title($today_video->content_id)}}</h5>
+              <h6>{{get_title($today_video->content_id)}}</h6>
             </div>
         </a>
         </section>
