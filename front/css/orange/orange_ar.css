@@ -82,6 +82,8 @@ select:active {
   /* End Profile Page */
   /* Start Terms Page */
   /* End Terms Page */
+  /* Start RBT Page */
+  /* End RBT Page */
 }
 .main_container .header {
   padding: 1.1rem 1.75rem;
@@ -1566,6 +1568,27 @@ select:active {
   font-size: 0.85rem !important;
   color: #FF6600 !important;
 }
+.main_container .rbt_orange {
+  width: 80%;
+  margin: 0 auto;
+  text-align: right;
+  margin-top: 8%;
+}
+.main_container .rbt_orange .rbt_strip {
+  border: 1px solid #fe66003d;
+  padding: 0.8rem 0.5rem;
+  color: #FFF;
+  border-radius: 8px;
+  margin-bottom: 2%;
+}
+.main_container .rbt_orange .rbt_strip a {
+  cursor: pointer;
+}
+.main_container .rbt_orange .rbt_strip .play_strip,
+.main_container .rbt_orange .rbt_strip .subscribe_strip {
+  color: #FF6600;
+  font-size: 1.25rem;
+}
 
 .loading-overlay {
   position: relative;
@@ -2087,6 +2110,9 @@ select:active {
     width: 60%;
     font-size: 0.75rem;
   }
+  .main_container .rbt_orange {
+    width: 100%;
+  }
 
   .loading-overlay .spinner-large {
     bottom: 30%;
@@ -2550,6 +2576,9 @@ select:active {
   .main_container .profile .profile_table table tbody tr .label-view2 {
     width: 60%;
     font-size: 0.85rem;
+  }
+  .main_container .rbt_orange {
+    width: 100%;
   }
 
   .loading-overlay .spinner-large {
@@ -3025,6 +3054,9 @@ select:active {
     width: 60%;
     font-size: 0.85rem;
   }
+  .main_container .rbt_orange {
+    width: 100%;
+  }
 
   .loading-overlay .spinner-large {
     bottom: 30%;
@@ -3493,6 +3525,9 @@ select:active {
   .main_container .profile .profile_table table tbody tr .label-view2 {
     width: 60%;
     font-size: 0.85rem;
+  }
+  .main_container .rbt_orange {
+    width: 100%;
   }
 
   .loading-overlay .spinner-large {

@@ -44,6 +44,7 @@ Route::get('mosque','FrontController@mosque')->name('front.mosque');
 Route::get('azan','FrontController@azan')->name('front.azan');
 Route::get('list_azan/{id}','FrontController@list_azan');
 Route::get('view_rbt/{id}','FrontController@view_rbt');
+//Route::get('rbts','FrontController@rbts');
 Route::get('rbts','FrontController@rbts');
 Route::get('test2','FrontController@test');
 Route::get('search','FrontController@search')->name('front.search');

@@ -1070,7 +1070,7 @@ class FrontController extends Controller
     return Response($data);
   }
 
-  public function rbts(Request $request)
+  public function rbts_old(Request $request)
   {
 
     if ($request->has('OpID')) {
@@ -1080,6 +1080,18 @@ class FrontController extends Controller
       $rbts = Audio::get();
     }
     return view('front.rbts', compact('rbts'));
+  }
+
+  public function rbts(Request $request)
+  {
+
+    if ($request->has('OpID')) {
+      $opID = $request->OpID;
+      $rbts = Audio::where('operator_id', $opID)->get();
+    } else {
+      $rbts = Audio::get();
+    }
+    return view('front.operator.orange.rbts', compact('rbts'));
   }
 
   public function view_rbt($id)

@@ -1970,6 +1970,33 @@ select {
   }
 
   /* End Terms Page */
+
+  /* Start RBT Page */
+  .rbt_orange {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 8%;
+
+    .rbt_strip {
+      border: 1px solid #fe66003d;
+      padding: 0.8rem 0.5rem;
+      color: $white_color;
+      border-radius: 8px;
+      margin-bottom: 2%;
+
+      a {
+        cursor: pointer;
+      }
+
+      .play_strip,
+      .subscribe_strip {
+        color: $text_color;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  /* End RBT Page */
 }
 
 .loading-overlay {
@@ -2703,6 +2730,10 @@ select {
         }
       }
     }
+
+    .rbt_orange {
+      width: 100%;
+    }
   }
 
   .loading-overlay {
@@ -3369,6 +3400,10 @@ select {
           }
         }
       }
+    }
+
+    .rbt_orange {
+      width: 100%;
     }
   }
 
@@ -4059,6 +4094,10 @@ select {
         }
       }
     }
+
+    .rbt_orange {
+      width: 100%;
+    }
   }
 
   .loading-overlay {
@@ -4737,6 +4776,10 @@ select {
           }
         }
       }
+    }
+
+    .rbt_orange {
+      width: 100%;
     }
   }
 
