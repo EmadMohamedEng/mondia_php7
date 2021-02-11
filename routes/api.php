@@ -55,10 +55,16 @@ define('ORANGE_ELKHEAR_SERVICE_ID',1000000577);
 
 /***********end orange*********** */
 
+
+
+
+// ==============  Gu Apis ===============//
+define('GU_CHECKSUB_URL', 'http://85.215.236.82:3001/status');
+//define('GU_CHECKSUB_URL', url('api/status'));
 Route::post("status",function(){
   return response()->json([
     'status' => 'NEW',
-    'content' => 0,
+    'content' =>45,
     'country' => "Egypt",
     'operator' => "Orange",
   ]);

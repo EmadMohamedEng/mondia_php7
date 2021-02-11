@@ -176,8 +176,7 @@ Route::get('orange_logout', 'OrangeController@logout');
 
 /***************start mbc 2****************** */
 define('MBC_CREATE_SUBSCRIBER_URL', 'https://mbc.digizone.com.kw/api/create_subscriber_after_pincode_verify_success');
-define('GU_CHECKSUB_URL', 'http://85.215.236.82:3001/status');
-// define('GU_CHECKSUB_URL', url('api/status'));
+
 
 Route::get('get_country', 'MbcTwoController@get_country');
 

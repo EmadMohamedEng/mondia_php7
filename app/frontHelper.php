@@ -304,8 +304,11 @@ function filter_time($time){
     $ReqResponse = json_decode($ReqResponse);
     $status = 0;
 
+
+
     if($msisdn && $ReqResponse) {
       logGuInfo($ReqResponse, $URL, $msisdn);
+
       switch ($ReqResponse->status) {
         case 'ACTIVE':
           $status = 1;
