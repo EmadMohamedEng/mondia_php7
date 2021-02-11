@@ -31,23 +31,23 @@ class FrontController extends Controller
   public function index(Request $request)
   {
     if(request()->get('OpID') == MBC_OP_ID){
-      if( (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN')) ){
+      $gu_data = checkStatus(session()->get('MSISDN'));
+      if( (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN') && $gu_data['status']) ){
         $vars["msisdn"] = session()->get('MSISDN');
-        $vars["service_id"] = 2;
-        $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
-        $sub = json_decode($sub);
+        // $vars["service_id"] = 2;
+        $sub = $gu_data['response'];
        // $request->session()->put('subscription_day', 45);
-         $request->session()->put('subscription_day', $sub->day);
+        $request->session()->put('subscription_day', $sub->content);
         $today_date_format = date('D');
         $occassion_date_format = date('Y-m-d');
 
          // here we need to update day from GU Api
 
         if($sub->country == 'KSA' && $sub->operator == 'STC'){
-          $contents = MbcContent::StcAllContent($sub->day);
+          $contents = MbcContent::StcAllContent($sub->content);
           $sub_operator = 'ksa-stc';
         }else{
-          $contents = MbcContent::MbcAllContent($sub->day);
+          $contents = MbcContent::MbcAllContent($sub->content);
           $sub_operator = 'all';
         }
 
@@ -373,24 +373,24 @@ class FrontController extends Controller
     if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
       $enable_free = get_setting('enable_free');
         if($enable || $content->free || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
-          if($enable_free == "1" || (session()->has('MSISDN') && $this->checkStatus(session()->get('MSISDN'),2))){
+          $gu_sub = checkStatus(session()->get('MSISDN'));
+          if($enable_free == "1" || (session()->has('MSISDN') && $gu_sub['status'])){
 
             $vars["msisdn"] = session()->get('MSISDN');
-            $vars["service_id"] = 2;
-            $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
-            $sub = json_decode($sub);
+            // $vars["service_id"] = 2;
+            $sub = $gu_sub['response'];
 
             $today_date_format = date('D');
             $occassion_date_format = date('Y-m-d');
 
             $content = $content->mbccontent;
-            if($content && $content->subscription_day <= $sub->day){
+            if($content && $content->subscription_day <= $sub->content){
 
               $contents = MbcContent::where('id', '!=', $content->id);
               if($sub->country == 'KSA' && $sub->operator == 'STC'){
-                $contents = $contents->where('subscription_day', '<=',$sub->day)->where('operator', 'ksa-stc');
+                $contents = $contents->where('subscription_day', '<=',$sub->content)->where('operator', 'ksa-stc');
               }else{
-                $contents = $contents->where('subscription_day', '<=', $sub->day)->where('operator', 'all');
+                $contents = $contents->where('subscription_day', '<=', $sub->content)->where('operator', 'all');
               }
 
               $contents = $contents->orWhereDate('occasion_date', $occassion_date_format);
@@ -526,11 +526,11 @@ class FrontController extends Controller
   public function mbcTodayLink($msisdn)
   {
     $msisdn = $this->decryptMobileNumber($msisdn);
-    if($this->checkStatus($msisdn,2)){
+    $gu_sub = checkStatus($msisdn);
+    if($gu_sub['status']){
       $vars["msisdn"] = $msisdn;
-      $vars["service_id"] = 2;
-      $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
-      $sub = json_decode($sub);
+      // $vars["service_id"] = 2;
+      $sub = $gu_sub['response'];
       $today_date_format = date('D');
       $occassion_date_format = date('Y-m-d');
 
@@ -552,10 +552,10 @@ class FrontController extends Controller
 
 
       if($sub->country == 'KSA' && $sub->operator == 'STC'){
-        $contents = MbcContent::StcAllContent($sub->day);
+        $contents = MbcContent::StcAllContent($sub->content);
         $sub_operator = 'ksa-stc';
       }else{
-        $contents = MbcContent::MbcAllContent($sub->day);
+        $contents = MbcContent::MbcAllContent($sub->content);
         $sub_operator = 'all';
       }
 
@@ -565,7 +565,7 @@ class FrontController extends Controller
         $contents = $contents->orWhere('type', 'friday');
       }
 
-      session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID, 'subscription_day' => $sub->day, 'sub_operator' => $sub_operator]);
+      session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID, 'subscription_day' => $sub->content, 'sub_operator' => $sub_operator]);
 
       if ($contents->count()) {
         $content = $contents->get()[0];
@@ -664,7 +664,7 @@ class FrontController extends Controller
             ->join('translatables', 'translatables.record_id', '=', 'services.id')
             ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
             ->where('mbc_contents.operator', $sub_operator)
-            ->where('mbc_contents.subscription_day', '<=', $sub->day)
+            ->where('mbc_contents.subscription_day', '<=', $sub->content)
             ->where('translatables.table_name', 'services')
             ->where('translatables.column_name', 'title')
             ->where(function ($q) use ($request) {
@@ -678,7 +678,7 @@ class FrontController extends Controller
             ->join('translatables', 'translatables.record_id', '=', 'contents.id')
             ->join('tans_bodies', 'tans_bodies.translatable_id', 'translatables.id')
             ->where('mbc_contents.operator', $sub_operator)
-            ->where('mbc_contents.subscription_day', '<=', $sub->day)
+            ->where('mbc_contents.subscription_day', '<=', $sub->content)
             ->where('translatables.table_name', 'contents')
             ->where('translatables.column_name', 'title')
             ->where(function ($q) use ($request) {
@@ -1954,7 +1954,8 @@ class FrontController extends Controller
       if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
         $enable_free = get_setting('enable_free');
           if($enable || (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
-            if($enable_free == "1" || (session()->has('MSISDN') && $this->checkStatus(session()->get('MSISDN'),2))){
+            $gu_sub = checkStatus(session()->get('MSISDN'));
+            if($enable_free == "1" || (session()->has('MSISDN') && $gu_sub['status'])){
               return view('front.mbc_filter.inner', compact('filter'));
             }
           }
@@ -1973,22 +1974,22 @@ class FrontController extends Controller
     if($request->has('OpID') && $request->OpID == MBC_OP_ID){  //mbc
       if((session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN'))){
         $msisdn = session()->get('MSISDN');
-        if($this->checkStatus($msisdn,2)){
+        $gu_sub = checkStatus($msisdn);
+        if($gu_sub['status']){
           $vars["msisdn"] = $msisdn ;
-          $vars["service_id"] = 2;
-          $sub = $this->SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
-          $sub = json_decode($sub);
+          // $vars["service_id"] = 2;
+          $sub = $gu_sub['response'];
           $date = date('Y-m-d');
-          $subscriber_day = $sub->day;
+          $subscriber_day = $sub->content;
           $today_date_format = date('D');
           $occassion_date_format = date('Y-m-d');
 
            // here we need to update day from GU Api
 
           if($sub->country == 'KSA' && $sub->operator == 'STC'){
-            $contents = MbcContent::where('subscription_day', '<=',$sub->day)->where('operator', 'ksa-stc');
+            $contents = MbcContent::where('subscription_day', '<=',$sub->content)->where('operator', 'ksa-stc');
           }else{
-            $contents = MbcContent::where('subscription_day', '<=', $sub->day)->where('operator', 'all');
+            $contents = MbcContent::where('subscription_day', '<=', $sub->content)->where('operator', 'all');
           }
 
           if($sub->country == 'UAE' && $sub->operator == 'Du'){

@@ -55,4 +55,12 @@ define('ORANGE_ELKHEAR_SERVICE_ID',1000000577);
 
 /***********end orange*********** */
 
+Route::post("status",function(){
+  return response()->json([
+    'status' => 'NEW',
+    'content' => 0,
+    'country' => "Egypt",
+    'operator' => "Orange",
+  ]);
+});
 

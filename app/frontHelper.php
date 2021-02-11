@@ -191,7 +191,7 @@ function get_mbc_sub($msisdn)
 {
     $vars["msisdn"] = $msisdn;
     $vars["service_id"] = 2;
-    $sub = SendRequestPost(MBC_GET_SUB, $vars, ["Accept: application/json"]);
+    $sub = SendRequestPost(GU_CHECKSUB_URL, $vars, ["Accept: application/json"]);
     $sub = json_decode($sub);
 
     return $sub;
@@ -209,7 +209,7 @@ function get_providers_mbc($sub)
         ->join('services', 'providers.id', 'services.provider_id')
         ->join('contents', 'services.id', 'contents.service_id')
         ->join('mbc_contents', 'contents.id', 'mbc_contents.content_id')
-        ->where('mbc_contents.subscription_day', '<=', $sub->day)
+        ->where('mbc_contents.subscription_day', '<=', $sub->content)
         ->where('mbc_contents.operator', $sub_operator)
         ->groupBy('providers.id')
         ->get();
@@ -229,7 +229,7 @@ function get_service_mbc($sub, $provider)
         ->join('providers', 'services.provider_id', 'providers.id')
         ->join('contents', 'services.id', 'contents.service_id')
         ->join('mbc_contents', 'contents.id', 'mbc_contents.content_id')
-        ->where('mbc_contents.subscription_day', '<=', $sub->day)
+        ->where('mbc_contents.subscription_day', '<=', $sub->content)
         ->where('mbc_contents.operator', $sub_operator)
         ->where('providers.id', $provider->id)
         ->groupBy('services.id')
@@ -249,7 +249,7 @@ function get_content_mbc($sub, $service)
     $mbcContent = MbcContent::select('mbc_contents.*')
         ->join('contents', 'contents.id', 'mbc_contents.content_id')
         ->join('services', 'services.id', 'contents.service_id')
-        ->where('mbc_contents.subscription_day', '<=', $sub->day)
+        ->where('mbc_contents.subscription_day', '<=', $sub->content)
         ->where('mbc_contents.operator', $sub_operator)
         ->where('services.id', $service->id)
         ->get();
@@ -283,4 +283,69 @@ function filter_time($time){
   }
   return $time;
 }
+
+  /**
+   * Method checkStatus
+   *
+   * @param string $msisdn
+   *
+   * @return Boolean
+   */
+  function checkStatus($msisdn)
+  {
+    $vars["msisdn"] = $msisdn;
+
+    $JSON = json_encode($vars);
+
+    $actionName = "Gu Check Status";
+
+    $URL = GU_CHECKSUB_URL;
+    $ReqResponse = SendRequestPost($URL, $vars, ["Accept: application/json"]);
+    $ReqResponse = json_decode($ReqResponse);
+    $status = 0;
+
+    if($msisdn && $ReqResponse) {
+      logGuInfo($ReqResponse, $URL, $msisdn);
+      switch ($ReqResponse->status) {
+        case 'ACTIVE':
+          $status = 1;
+          break;
+        case 'NEW':
+          $status =  1;
+          break;
+        default:
+          $status =  0;
+          break;
+      }
+    }
+    return ['status' => $status , 'response' => $ReqResponse];
+  }
+
+  /**
+   * Method logGuInfo
+   *
+   * @param mixed  $response
+   * @param string $url
+   * @param string $msisdn
+   *
+   * @return void
+   */
+  function logGuInfo($response, $url, $msisdn)
+  {
+    // dd($response);
+    $data['url']      = $url;
+    $data['msisdn']   = $msisdn;
+    $data['response'] = json_encode($response);
+    $data['country']  = $response->country;
+    $data['operator'] = $response->operator;
+    $data['status']   = $response->status;
+    $data['day']      = $response->content;
+
+    $gu_status = \App\GuCheckStatus::create($data);
+
+    $data['gu_check_status_id'] = $gu_status->id;
+
+    \App\GuSubscriber::updateOrCreate(['msisdn' => $data['msisdn']] ,Arr::except($data, ['url', 'response']));
+
+  }
 
