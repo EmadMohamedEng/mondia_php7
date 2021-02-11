@@ -30,6 +30,7 @@ class FrontController extends Controller
 
   public function index(Request $request)
   {
+    $today_video = false ;
     if(request()->get('OpID') == MBC_OP_ID){
       $gu_data = checkStatus(session()->get('MSISDN'));
       if( (session()->get('mbc_op_id') == MBC_OP_ID && session()->get('status') == 'active' && session()->has('MSISDN') && $gu_data['status']) ){
