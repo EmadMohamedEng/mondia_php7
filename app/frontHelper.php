@@ -352,7 +352,7 @@ function filter_time($time){
 
   }
 
-  function count_list()
+  function orange_rbt_count()
   {
       $count = Audio::where('operator_id', orange)->count();
       return $count ;
