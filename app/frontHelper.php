@@ -6,6 +6,7 @@ use App\Service;
 use App\Setting;
 use App\Provider;
 use App\MbcContent;
+use App\Audio;
 
 function get_setting($key)
 {
@@ -256,7 +257,6 @@ function get_content_mbc($sub, $service)
 
     return $mbcContent;
 }
-
 function get_friday_mbc()
 {
     $mbcContents = MbcContent::where('type', 'friday')->get();
@@ -350,5 +350,11 @@ function filter_time($time){
 
     \App\GuSubscriber::updateOrCreate(['msisdn' => $data['msisdn']] ,Arr::except($data, ['url', 'response']));
 
+  }
+
+  function count_list()
+  {
+      $count = Audio::count();
+      return $count ;
   }
 
