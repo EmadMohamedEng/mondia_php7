@@ -6,23 +6,24 @@ preg_match("/iPhone|iPad|iPod/", $_SERVER['HTTP_USER_AGENT'], $matches);
 $os = current($matches);
 
 switch ($os) {
-  case 'iPhone':
-    if (preg_match('/OS 8/', $_SERVER['HTTP_USER_AGENT']) || preg_match('/OS 9/', $_SERVER['HTTP_USER_AGENT'])) {
-      $Att = '&body=';
-    } else {
-      $Att = ';';
-    }
-    break;
-  case 'iPad':
-    $Att = '&body=';
-    break;
-  case 'iPod':
-    $Att = '&body=';
-    break;
-  default:
-    $Att = '?body=';
-    break;
-} ?>
+    case 'iPhone':
+        if (preg_match('/OS 8/', $_SERVER['HTTP_USER_AGENT']) || preg_match('/OS 9/', $_SERVER['HTTP_USER_AGENT'])) {
+            $Att = '&body=';
+        } else {
+            $Att = '&body=';
+        }
+        break;
+    case 'iPad':
+        $Att = '&body=';
+        break;
+    case 'iPod':
+        $Att = '&body=';
+        break;
+    default:
+        $Att = '?body=';
+        break;
+}
+?>
 
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav">
   @include('front.search')
@@ -30,105 +31,29 @@ switch ($os) {
   <section class="rbt_orange">
     <div class="row m-0">
       <div class="col-md-12 col-lg-12 col-xl-12 col-12">
+
+      @foreach($rbts as $rbt)
         <div class="rbt_strip">
-          <div class="row m-0">
-            <div class="col-md-10 col-lg-10 col-xl-10 col-8 p-0">
-              <p class="strip_title mb-0">اسم النغمة 1</p>
-            </div>
+            <div class="row m-0">
+              <div class="col-md-10 col-lg-10 col-xl-10 col-8 p-0">
+                <p class="strip_title mb-0"> {{$rbt->getTranslation('title',getCode())}} </p>
+              </div>
 
-            <div class="col-md-1 col-lg-1 col-xl-1 col-2 p-0 text-center">
-              <a data-src="front/track/1.mp3" class="play_pause">
-                <i class="play_strip far fa-play-circle"></i>
-              </a>
-            </div>
+              <div class="col-md-1 col-lg-1 col-xl-1 col-2 p-0 text-center">
+                <a data-src="{{ url($rbt->source) }}" class="play_pause">
+                  <i class="play_strip far fa-play-circle"></i>
+                </a>
+              </div>
 
-            <div class="col-md-1 col-lg-1 col-xl-1 col-2 p-0 text-center">
-              <a href="sms:<?php echo $Att ?>">
-                <i class="subscribe_strip circle fas fa-shopping-cart"></i>
-              </a>
+              <div class="col-md-1 col-lg-1 col-xl-1 col-2 p-0 text-center">
+                <a href="sms:{{ $op_id->code }}{{$Att}}{{$rbt->code}}">
+                  <i class="subscribe_strip circle fas fa-shopping-cart"></i>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+      @endforeach
 
-        <div class="rbt_strip">
-          <div class="row m-0">
-            <div class="col-md-10 col-lg-10 col-xl-10 col-8 p-0">
-              <p class="strip_title mb-0">اسم النغمة 2</p>
-            </div>
-
-            <div class="col-md-1 col-lg-1 col-xl-1 col-2 p-0 text-center">
-              <a data-src="front/track/2.mp3" class="play_pause">
-                <i class="play_strip far fa-play-circle"></i>
-              </a>
-            </div>
-
-            <div class="col-md-1 col-lg-1 col-xl-1 col-2 p-0 text-center">
-              <a href="sms:<?php echo $Att ?>">
-                <i class="subscribe_strip circle fas fa-shopping-cart"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="rbt_strip">
-          <div class="row m-0">
-            <div class="col-md-10 col-lg-10 col-xl-10 col-8 p-0">
-              <p class="strip_title mb-0">اسم النغمة 3</p>
-            </div>
-
-            <div class="col-md-1 col-lg-1 col-xl-1 col-2 p-0 text-center">
-              <a data-src="front/track/1.mp3" class="play_pause">
-                <i class="play_strip far fa-play-circle"></i>
-              </a>
-            </div>
-
-            <div class="col-md-1 col-lg-1 col-xl-1 col-2 p-0 text-center">
-              <a href="sms:<?php echo $Att ?>">
-                <i class="subscribe_strip circle fas fa-shopping-cart"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="rbt_strip">
-          <div class="row m-0">
-            <div class="col-md-10 col-lg-10 col-xl-10 col-8 p-0">
-              <p class="strip_title mb-0">اسم النغمة 4</p>
-            </div>
-
-            <div class="col-md-1 col-lg-1 col-xl-1 col-2 p-0 text-center">
-              <a data-src="front/track/2.mp3" class="play_pause">
-                <i class="play_strip far fa-play-circle"></i>
-              </a>
-            </div>
-
-            <div class="col-md-1 col-lg-1 col-xl-1 col-2 p-0 text-center">
-              <a href="sms:<?php echo $Att ?>">
-                <i class="subscribe_strip circle fas fa-shopping-cart"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="rbt_strip">
-          <div class="row m-0">
-            <div class="col-md-10 col-lg-10 col-xl-10 col-8 p-0">
-              <p class="strip_title mb-0">اسم النغمة 5</p>
-            </div>
-
-            <div class="col-md-1 col-lg-1 col-xl-1 col-2 p-0 text-center">
-              <a data-src="front/track/1.mp3" class="play_pause">
-                <i class="play_strip far fa-play-circle"></i>
-              </a>
-            </div>
-
-            <div class="col-md-1 col-lg-1 col-xl-1 col-2 p-0 text-center">
-              <a href="sms:<?php echo $Att ?>">
-                <i class="subscribe_strip circle fas fa-shopping-cart"></i>
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>

@@ -1084,14 +1084,15 @@ class FrontController extends Controller
 
   public function rbts(Request $request)
   {
-
+    $op_id = "";
     if ($request->has('OpID')) {
       $opID = $request->OpID;
       $rbts = Audio::where('operator_id', $opID)->get();
+      $op_id = Operator::where('id', $opID)->first();
     } else {
       $rbts = Audio::get();
     }
-    return view('front.operator.orange.rbts', compact('rbts'));
+    return view('front.operator.orange.rbts', compact('rbts','op_id'));
   }
 
   public function view_rbt($id)
