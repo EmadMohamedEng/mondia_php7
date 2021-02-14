@@ -354,7 +354,7 @@ function filter_time($time){
 
   function count_list()
   {
-      $count = Audio::count();
+      $count = Audio::where('operator_id', orange)->count();
       return $count ;
   }
 
