@@ -27,7 +27,7 @@
             <option value=""></option>
             @foreach ($operators as $value)
             <option value="{{ $value->id }}" @if($audio && $audio->operator_id == $value->id) selected @endif>
-                {{$value->name}}
+            {{ $value->country->title . ' - ' . $value->name }}
             </option>
             @endforeach
         </select>
