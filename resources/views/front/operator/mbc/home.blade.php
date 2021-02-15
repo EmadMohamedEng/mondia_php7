@@ -2,7 +2,7 @@
 @section('page_title') Home @endsection
 @section('content')
 @php
-$sub = get_mbc_sub(session()->get('MSISDN'));
+$sub =  session()->get('mbc_sub') ;
 @endphp
 <div class="col-md-12 col-lg-12 col-xl-12 col-12 padding_phones no_padding close_nav ">
 
@@ -105,6 +105,7 @@ $sub = get_mbc_sub(session()->get('MSISDN'));
     </div>
   </section>
   @endif
+
 
   @foreach (get_providers_mbc($sub) as $item)
   <section class="content_carousel">

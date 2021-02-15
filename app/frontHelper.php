@@ -7,6 +7,8 @@ use App\Setting;
 use App\Provider;
 use App\MbcContent;
 use App\Audio;
+use Illuminate\Support\Facades\Session ;
+
 
 function get_setting($key)
 {
@@ -186,6 +188,35 @@ function SendRequestPost($URL, $JSON, $headers)
     curl_close($ch);
 
     return $sOutput;
+
+
+/*
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => 'http://85.215.236.82:3001/status',
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'POST',
+      CURLOPT_POSTFIELDS =>'{
+        "msisdn":966504128637
+    }',
+      CURLOPT_HTTPHEADER => array(
+        'Content-Type: application/json'
+      ),
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+    echo $response;
+*/
+
+
 }
 
 function get_mbc_sub($msisdn)
@@ -200,6 +231,9 @@ function get_mbc_sub($msisdn)
 
 function get_providers_mbc($sub)
 {
+
+  $sub =  session()->get('mbc_sub') ;
+
     if($sub->country == 'KSA' && $sub->operator == 'STC'){
       $sub_operator = 'ksa-stc';
     }else{
@@ -214,12 +248,13 @@ function get_providers_mbc($sub)
         ->where('mbc_contents.operator', $sub_operator)
         ->groupBy('providers.id')
         ->get();
-
     return $providers;
 }
 
 function get_service_mbc($sub, $provider)
 {
+  $sub =  session()->get('mbc_sub') ;
+
     if($sub->country == 'KSA' && $sub->operator == 'STC'){
       $sub_operator = 'ksa-stc';
     }else{
@@ -241,6 +276,8 @@ function get_service_mbc($sub, $provider)
 
 function get_content_mbc($sub, $service)
 {
+  $sub =  session()->get('mbc_sub') ;
+
     if($sub->country == 'KSA' && $sub->operator == 'STC'){
       $sub_operator = 'ksa-stc';
     }else{
@@ -300,14 +337,21 @@ function filter_time($time){
     $actionName = "Gu Check Status";
 
     $URL = GU_CHECKSUB_URL;
-    $ReqResponse = SendRequestPost($URL, $vars, ["Accept: application/json"]);
+    $ReqResponse = SendRequestPost($URL,$JSON, ["Content-Type: application/json"]);
     $ReqResponse = json_decode($ReqResponse);
     $status = 0;
 
 
 
-    if($msisdn && $ReqResponse) {
+    if($msisdn && $ReqResponse && isset($ReqResponse->status)) {
       logGuInfo($ReqResponse, $URL, $msisdn);
+
+      session()->put('mbc_number',$msisdn);
+      session()->put('mbc_status',$ReqResponse->status);
+      session()->put('mbc_country',$ReqResponse->country);
+      session()->put('mbc_operator',$ReqResponse->operator);
+      session()->put('mbc_sub',$ReqResponse);
+
 
       switch ($ReqResponse->status) {
         case 'ACTIVE':
@@ -320,6 +364,8 @@ function filter_time($time){
           $status =  0;
           break;
       }
+    }else{
+      session()->forget(['mbc_sub','mbc_number','mbc_status','mbc_country','mbc_operator']);
     }
     return ['status' => $status , 'response' => $ReqResponse];
   }
@@ -339,10 +385,10 @@ function filter_time($time){
     $data['url']      = $url;
     $data['msisdn']   = $msisdn;
     $data['response'] = json_encode($response);
-    $data['country']  = $response->country;
-    $data['operator'] = $response->operator;
-    $data['status']   = $response->status;
-    $data['day']      = $response->content;
+    $data['country']  = $response->country  ??  "";
+    $data['operator'] = $response->operator ?? "";
+    $data['status']   = $response->status ?? "";
+    $data['day']      = $response->content ??"";
 
     $gu_status = \App\GuCheckStatus::create($data);
 

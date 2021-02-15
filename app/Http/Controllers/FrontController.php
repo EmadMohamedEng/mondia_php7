@@ -37,8 +37,12 @@ class FrontController extends Controller
         $vars["msisdn"] = session()->get('MSISDN');
         // $vars["service_id"] = 2;
         $sub = $gu_data['response'];
+        // print_r( $sub );
+        // echo  $sub->country ;  // operator
+        // die;
        // $request->session()->put('subscription_day', 45);
         $request->session()->put('subscription_day', $sub->content);
+
         $today_date_format = date('D');
         $occassion_date_format = date('Y-m-d');
 

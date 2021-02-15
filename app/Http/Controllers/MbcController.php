@@ -642,6 +642,9 @@ class MbcController extends Controller
       session()->forget('MSISDN');
       session()->forget('mbc_op_id');
 
+      session()->forget(['mbc_sub','mbc_number','mbc_status','mbc_country','mbc_operator']);  // Gu api
+
+
       return redirect('alkenz_portal_login');
     }
 
