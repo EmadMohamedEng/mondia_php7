@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
   <link rel="stylesheet" href="{{asset('front/css/all_op.css')}}">
 
-  @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur')
+  @if(app()->getLocale() == 'ar')
   <link rel="stylesheet" href="{{asset('front/css/style_ar.css')}}">
   @endif
   @if(request()->has('OpID') && request()->get('OpID') == omantel)
