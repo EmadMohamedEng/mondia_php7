@@ -81,7 +81,7 @@ if ($lang == 'ar') {
       <div class="container py-3">
         <div class="form_content">
           <!--<h5>ادخل رقم الهاتف</h5>-->
-          {!! Form::open(['url'=>'mbc_pin_code','method'=>'post','class'=>'form']) !!}
+          {!! Form::open(['url'=>'mbc_pin_code_login','method'=>'post','class'=>'form']) !!}
           <div class="form-group">
             <input type="tel" name="pincode" autocomplete="off" class="form-control text-center w-100 rounded" id="pincode" placeholder="@lang('messages.confirmation_code')">
           </div>

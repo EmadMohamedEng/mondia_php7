@@ -193,8 +193,8 @@ Route::post('mbc_subscription/confirm', 'MbcTwoController@subscriptionConfirm');
 Route::get('mbc_welcome_page_test', 'MbcTwoController@mbc_welcome_page_test');  // this for test mbc pincode verify success then make redirect
 Route::post('mbc_subscription/optout/{partnerRoleId}', 'MbcTwoController@subscriptionOptOut');
 Route::post('mbc_subscription_resend_pincode/optin/{partnerRoleId}', 'MbcTwoController@resend_pincode');
-Route::get('mbc_pin_code', 'MbcTwoController@getPinCodePage');
-Route::post('mbc_pin_code', 'MbcTwoController@checkPincode');
+Route::get('mbc_pin_code_login', 'MbcTwoController@getPinCodePageLogin');
+Route::post('mbc_pin_code_login', 'MbcTwoController@checkPincodeLogin');
 
 
 

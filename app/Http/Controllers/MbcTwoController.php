@@ -355,19 +355,19 @@ class MbcTwoController extends Controller
         'msisdn'           => $msisdn,
         'pincode'          => $pin,
         'expire_date_time' => date("Y-m-d", strtotime(date("Y-m-d")) . " + 1 year"),
-        'operator_id'      => 14
+        'operator_id'      => MBC_OP_ID
       ]);
       $mbcController = new MbcController;
       $status = $mbcController->MO_SMS_Posting($pincode->id, $msisdn, $country, $operator, $pin);
       return $status;
   }
 
-  public function getPinCodePage()
+  public function getPinCodePageLogin()
   {
-    return view("landing_v2.mbcTwo.alkenz_portal_pincode");
+    return view("landing_v2.mbcTwo.alkenz_portal_pincode_login");
   }
 
-  public function checkPincode(Request $request)
+  public function checkPincodeLogin(Request $request)
   {
     $lang =  session::get('lang');
     $pincode = Pincode::where("msisdn",session("mbc_number"))->last()->first();
@@ -382,6 +382,7 @@ class MbcTwoController extends Controller
 
       return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
     }
+
     if ($lang == 'ar') {
       $message = 'رمز التحقق غير صحيح';
     } else {
@@ -406,12 +407,12 @@ class MbcTwoController extends Controller
 
     if ($gu_sub['status']) {
       $lang =  session::get('lang');
-      $status = $this->sendPinCode($msisdn, $gu_sub['response']->country, $gu_sub['response']->operator);
-      if($status == "") {
+      $send_pin_code_status = $this->sendPinCode($msisdn, $gu_sub['response']->country, $gu_sub['response']->operator);
+      if($send_pin_code_status) {
         if ($lang == 'ar'){
-          return redirect('mbc_pin_code')->with('success', 'لقد تم ارسال رقم التحقق بنجاح');
+          return redirect('mbc_pin_code_login')->with('success', 'لقد تم ارسال رقم التحقق بنجاح');
         }
-        return redirect('mbc_pin_code')->with('success', 'pincode send successfully');
+        return redirect('mbc_pin_code_login')->with('success', 'pincode send successfully');
       } else {
         if ($lang == 'ar'){
           return redirect('alkenz_portal_landing')->with('failed', 'يوجد خطأ');
