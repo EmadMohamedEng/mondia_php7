@@ -111,8 +111,13 @@ class MbcController extends Controller
       $output = curl_exec($ch);
       curl_close($ch);
 
+
+
+      $xml=simplexml_load_string($output) ;
+
+
       $Xmldoc['Response'] = $output;
-      $Xmldoc['ResponseCode'] = $output;
+      $Xmldoc['ResponseCode'] = $xml->SMS->Code ?? "";
       $logAction = 'Mbc Send Mt';
 
       $this->log_action($logAction, $URL, $Xmldoc);
