@@ -126,8 +126,8 @@ class MbcTwoController extends Controller
 
     MbcSendMt::create($Xmldoc);
 
-    // return $output;
-
+     return $output;
+/*
     $soap = new SoapWrapper;
     $soap->add('mbc', function ($service) use ($URL) {
       $service->wsdl($URL)->trace(true);
@@ -154,6 +154,10 @@ class MbcTwoController extends Controller
     $soap->client('mbc', function ($service) use ($data) {
       dd($service->call('GetSmsIN', [$data]));
     });
+*/
+
+
+
   }
 
   public function index(Request $request)
