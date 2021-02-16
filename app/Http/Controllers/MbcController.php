@@ -68,10 +68,10 @@ class MbcController extends Controller
       $UserPass = '2015Source@SMS_mbc';
 
       $Xmldoc['SmsID'] = '3';
-      $Xmldoc['MobileNo'] = '962782777131';
-      $Xmldoc['Country'] = 'jordan';
-      $Xmldoc['Operator'] = 'umniah';
-      $Xmldoc['Shortcode'] = '94099';
+      $Xmldoc['MobileNo'] = '966540380854';
+      $Xmldoc['Country'] = 'KSA';
+      $Xmldoc['Operator'] = 'MOB';
+      $Xmldoc['Shortcode'] = '605599';
       $Xmldoc['Msgtxt'] = 'text 3';
       $Xmldoc['Lang'] = 'E';
       $Xmldoc['ServiceID'] = '2';

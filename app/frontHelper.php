@@ -398,6 +398,59 @@ function filter_time($time){
 
   }
 
+
+
+
+function mbc_get_short_code($county, $operator){
+  /*
+  Country	Operator	Short Code
+    Bahrain	VIVA	98665
+    KSA	MOB	605599
+    KSA	Zain	715517
+    Kuwait	VIVA	50216
+    UAE	DU	9044
+    KSA	STC	801162
+
+
+  */
+
+  switch ($county) {
+    case ($county == "KSA" && $operator == 'MOB' ):
+      $short_code =  605599  ;
+      break;
+
+      case ($county == "KSA" && $operator == 'Zain' ):
+        $short_code =  715517  ;
+        break;
+
+      case ($county == "KSA" && $operator == 'STC' ):
+        $short_code =  801162  ;
+        break;
+
+
+        case ($county == "Kuwait" && $operator == 'VIVA' ):
+          $short_code =  50216  ;
+          break;
+
+          case ($county == "UAE" && $operator == 'DU' ):
+            $short_code =  9044  ;
+            break;
+
+
+            case ($county == "Bahrain" && $operator == 'VIVA' ):
+              $short_code =  98665  ;
+              break;
+
+    default:
+    $short_code =  ""  ;
+      break;
+
+      return  $short_code ;
+  }
+
+
+}
+
   function orange_rbt_count()
   {
       $count = Audio::where('operator_id', orange)->count();
