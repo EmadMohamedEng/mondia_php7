@@ -370,6 +370,7 @@ class MbcTwoController extends Controller
       } else {
         $message = 'Login succesfully';
       }
+      // here we need to send Pincode by mbc api to veridy login
       return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
     }
 
