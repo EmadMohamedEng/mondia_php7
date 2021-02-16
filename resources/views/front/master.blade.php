@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.css')}}">
   <link rel="stylesheet" href="{{asset('/front/css/animate.css')}}">
 
-  @if(request()->get('OpID') == mbc)
+  @if(request()->get('OpID') == mbc )
   @include("front.operator.mbc.head")
 
   @elseif(request()->get('OpID') == orange)
