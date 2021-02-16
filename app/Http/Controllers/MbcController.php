@@ -164,7 +164,7 @@ class MbcController extends Controller
           'Code' => ['start' => '<Code>', 'end' => '</Code>']
       );
 
-      $string = $a;
+      $string = $xml;
 
       foreach ($request_array as $key => $value) {
           $start = $value['start'];
