@@ -119,7 +119,7 @@ class MbcController extends Controller
 
 
       $Xmldoc['Response'] =  $output;
-      $Xmldoc['ResponseCode'] = $xml_parse_as_array["Code"] ?? "";
+      $Xmldoc['ResponseCode'] = $xml_parse_as_array["Code"] ?? "";   // Success    = mean message is sent success
       $logAction = 'Mbc Send Mt';
 
       $this->log_action($logAction, $URL, $Xmldoc);
