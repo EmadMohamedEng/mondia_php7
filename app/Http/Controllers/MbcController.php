@@ -115,10 +115,11 @@ class MbcController extends Controller
       $output = str_replace("'", '"',    $output) ;
       $output= html_entity_decode($output);
      // $xml=simplexml_load_string($output) ;
+     $xml_parse_as_array =    $this->xml_parse_as_array( $output) ;
 
 
       $Xmldoc['Response'] =  $output;
-      $Xmldoc['ResponseCode'] =$output->SMS->Code ?? "";
+      $Xmldoc['ResponseCode'] = $xml_parse_as_array["Code"] ?? "";
       $logAction = 'Mbc Send Mt';
 
       $this->log_action($logAction, $URL, $Xmldoc);
@@ -156,6 +157,34 @@ class MbcController extends Controller
       */
 
     }
+    public function xml_parse_as_array($xml)
+    {
+
+        $request_array = array(
+          'Code' => ['start' => '<Code>', 'end' => '</Code>']
+      );
+
+      $string = $a;
+
+      foreach ($request_array as $key => $value) {
+          $start = $value['start'];
+          $end = $value['end'];
+
+          $startpos = strpos($string, $start) + strlen($start);
+          if (strpos($string, $start) !== false) {
+              $endpos = strpos($string, $end, $startpos);
+              if (strpos($string, $end, $startpos) !== false) {
+                  $post_array[$key] = substr($string, $startpos, $endpos - $startpos);
+              } else {
+                  $post_array[$key] = "";
+              }
+          }
+      }
+      $xml_as_array = $post_array ;
+      return $xml_as_array ;
+
+    }
+
 
     public function index(Request $request)
     {
