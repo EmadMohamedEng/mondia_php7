@@ -112,7 +112,7 @@ class MbcController extends Controller
       curl_close($ch);
 
 
-      $output = str_replace_all("'", '"',    $output) ;
+      $output = str_replace("'", '"',    $output) ;
       $xml=simplexml_load_string($output) ;
 
 
