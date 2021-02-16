@@ -114,11 +114,11 @@ class MbcController extends Controller
 
       $output = str_replace("'", '"',    $output) ;
       $output= html_entity_decode($output);
-      $xml=simplexml_load_string($output) ;
+     // $xml=simplexml_load_string($output) ;
 
 
-      $Xmldoc['Response'] =  $xml;
-      $Xmldoc['ResponseCode'] = $xml->SMS->Code ?? "";
+      $Xmldoc['Response'] =  $output;
+      $Xmldoc['ResponseCode'] =$output->SMS->Code ?? "";
       $logAction = 'Mbc Send Mt';
 
       $this->log_action($logAction, $URL, $Xmldoc);
