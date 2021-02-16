@@ -248,7 +248,7 @@ return [
     'Loading' => 'Loading ...',
 
     'enjoy_time_landing' => 'Alkanz',
-    'Mbc_Muslim_guide_landing' => 'Enlighten your day with Alkenz the Islamic bouquet',
+    'Mbc_Muslim_guide_landing' => 'Your gateway to Islamic knowledge',
     'Are_you_a_subscriber' => 'Existing subscriber? Login',
     'click_sub_landing' => 'By clicking on Subscribe now, you agree to the terms and conditions',
     'Choose_your_Operators' => 'Choose your Operators',
