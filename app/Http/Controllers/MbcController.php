@@ -60,20 +60,20 @@ class MbcController extends Controller
 
 
 
-    public function MO_SMS_Posting()
+    public function MO_SMS_Posting($smsId, $msisdn, $country, $operator, $pincode)
     {
       $URL = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL';
 
       $UserName ='webSourceOut';
       $UserPass = '2015Source@SMS_mbc';
 
-      $Xmldoc['SmsID'] = '3';
-      $Xmldoc['MobileNo'] = '966540380854';
-      $Xmldoc['Country'] = 'KSA';
-      $Xmldoc['Operator'] = 'MOB';
-      $Xmldoc['Shortcode'] = '605599';
-      $Xmldoc['Msgtxt'] = 'text 3';
-      $Xmldoc['Lang'] = 'E';
+      $Xmldoc['SmsID']     = $smsId;
+      $Xmldoc['MobileNo']  = $msisdn;
+      $Xmldoc['Country']   = $country;
+      $Xmldoc['Operator']  = $operator;
+      $Xmldoc['Shortcode'] = mbc_get_short_code($country, $operator);
+      $Xmldoc['Msgtxt']    = $pincode;
+      $Xmldoc['Lang']      = 'E';
       $Xmldoc['ServiceID'] = '2';
 
       $Xmldoc['Request'] = "<soap:Envelope xmlns:soap='http://www.w3.org/2003/05/soap-envelope' xmlns:tem='http://tempuri.org/'>

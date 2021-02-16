@@ -348,6 +348,48 @@ class MbcTwoController extends Controller
     return $ReqResponse;
   }
 
+  public function sendPinCode($msisdn, $country, $operator)
+  {
+      $pin = rand(1111,9999);
+      $pincode = Pincode::create([
+        'msisdn'           => $msisdn,
+        'pincode'          => $pin,
+        'expire_date_time' => date("Y-m-d", strtotime(date("Y-m-d")) . " + 1 year"),
+        'operator_id'      => 14
+      ]);
+      $mbcController = new MbcController;
+      $status = $mbcController->MO_SMS_Posting($pincode->id, $msisdn, $country, $operator, $pin);
+      return $status;
+  }
+
+  public function getPinCodePage()
+  {
+    return view("landing_v2.mbcTwo.alkenz_portal_pincode");
+  }
+
+  public function checkPincode(Request $request)
+  {
+    $lang =  session::get('lang');
+    $pincode = Pincode::where("msisdn",session("mbc_number"))->last()->first();
+    if($pincode && $pincode->pincode == $request->pincode) {
+      session(['MSISDN' => session("mbc_number"), 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
+      $lang =  session::get('lang');
+      if ($lang == 'ar') {
+        $message = 'تم تسجيل الدخول بنجاح';
+      } else {
+        $message = 'Login succesfully';
+      }
+
+      return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
+    }
+    if ($lang == 'ar') {
+      $message = 'رمز التحقق غير صحيح';
+    } else {
+      $message = 'You Enter Wrong PinCode';
+    }
+    return back()->with("faild", $message);
+  }
+
   public function subscriptionOptIn(Request $request) //register
   {
     date_default_timezone_set("Africa/Cairo");
@@ -363,15 +405,19 @@ class MbcTwoController extends Controller
     $gu_sub = checkStatus($msisdn);
 
     if ($gu_sub['status']) {
-      session(['MSISDN' => $msisdn, 'status' => 'active', 'mbc_op_id' => MBC_OP_ID]);
       $lang =  session::get('lang');
-      if ($lang == 'ar') {
-        $message = 'تم تسجيل الدخول بنجاح';
+      $status = $this->sendPinCode($msisdn, $gu_sub['response']->country, $gu_sub['response']->operator);
+      if($status == "") {
+        if ($lang == 'ar'){
+          return redirect('mbc_pin_code')->with('success', 'لقد تم ارسال رقم التحقق بنجاح');
+        }
+        return redirect('mbc_pin_code')->with('success', 'pincode send successfully');
       } else {
-        $message = 'Login succesfully';
+        if ($lang == 'ar'){
+          return redirect('alkenz_portal_landing')->with('failed', 'يوجد خطأ');
+        }
+        return redirect('alkenz_portal_landing')->with('failed', 'There is an error');
       }
-      // here we need to send Pincode by mbc api to veridy login
-      return redirect(url('?OpID=' . MBC_OP_ID))->with(['success' => $message]);
     }
 
     $lang =  session::get('lang');
