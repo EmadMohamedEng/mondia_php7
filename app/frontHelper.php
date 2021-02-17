@@ -447,49 +447,6 @@ function mbc_get_short_code($county, $operator){
 
       return  $short_code ;
   }
-
-
-
-  function mbc_get_cost($county, $operator){
-
-    $cost = "" ;
-    if($sub->country == 'UAE' ){
-      if(Session::get('applocale') == 'ar')
-      {
-        $cost = "1.05د/اليوم(شاملة الضريبة)";
-      }else{
-        $cost = "1.05 AED/Day (VAT inclusive)";
-      }
-    }elseif($sub->country == 'KSA'){
-      if(Session::get('applocale') == 'ar')
-      {
-        $cost = Operator::find(mbc)->cost_ar;
-      }else{
-        $cost = Operator::find(mbc)->cost_en;
-      }
-    }elseif($sub->country == 'Iraq' && $sub->operator == 'ASIACELL'){
-      if(Session::get('applocale') == 'ar')
-      {
-        $cost = "200 دينار/اليوم"  ;
-      }else{
-        $cost =  "200 IQD/Day" ;
-      }
-    }elseif($sub->country == 'Bahrain' && $sub->operator == 'STC'){
-      if(Session::get('applocale') == 'ar')
-      {
-        $cost = "130 فلس/اليوم"  ;
-      }else{
-        $cost =  "130 Fils/Day" ;
-      }
-    }else{
-      $cost  = "" ;
-    }
-
-    return $cost  ;
-
-  }
-
-
 }
 
   function orange_rbt_count()
@@ -497,4 +454,239 @@ function mbc_get_short_code($county, $operator){
       $count = Audio::where('operator_id', orange)->count();
       return $count ;
   }
+
+
+  function mbc_get_cost($county, $operator){
+
+    $cost = "" ;
+    if($county == 'Bahrain' && $operator == 'STC'){ //Bahrain
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "130 فلس/اليوم";
+      }else{
+        $cost = "130 Fils/Day";
+      }
+    }elseif($county == 'Bahrain' && $operator == 'ZAIN'){ //Bahrain
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Bahrain' && $operator == 'BATELCO'){ //Bahrain
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Egypt' && $operator == 'Vodafone'){ //Egypt
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Egypt' && $operator == 'ETISALAT'){ //Egypt
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Egypt' && $operator == 'ORANGE'){ //Egypt
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Egypt' && $operator == 'WE'){ //Egypt
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Iraq' && $operator == 'ASIACELL'){ //Iraq
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Iraq' && $operator == 'KOREK'){ //Iraq
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "200 دينار/اليوم";
+      }else{
+        $cost = "200 IQD/Day";
+      }
+    }elseif($county == 'Iraq' && $operator == 'ZAIN'){ //Iraq
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Jordan'){ //Jordan
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "15 قرش/اليوم";
+      }else{
+        $cost = "0.15 JOD/ Day";
+      }
+    }elseif($county == 'KSA'){ //KSA
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "1.15د/اليوم(شاملة الضريبة)";
+      }else{
+        $cost = "1.15 SAR/ Day (VAT inclusive)";
+      }
+    }elseif($county == 'Kuwait' && $operator == 'STC'){ //Kuwait
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "125 فلس/اليوم";
+      }else{
+        $cost = "125 Fils/Day";
+      }
+    }elseif($county == 'Kuwait' && $operator == 'ZAIN'){ //Kuwait
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Kuwait' && $operator == 'Ooredoo'){ //Kuwait
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Morocco' && $operator == 'MAROCTELECOM'){ //Morocco
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Morocco' && $operator == 'ORANGE'){ //Morocco
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Morocco' && $operator == 'INWI'){ //Morocco
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Oman' && $operator == 'OMANTEL'){ //Oman
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Oman' && $operator == 'Ooredoo'){ //Oman
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Palestine' && $operator == 'WATANIYA'){ //Palestine
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Palestine' && $operator == 'JAWWAL'){ //Palestine
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Syria' && $operator == 'MTN'){ //Syria
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Syria' && $operator == 'SYRIATEL'){ //Syria
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Tunisia' && $operator == 'OOREDOO'){ //Tunisia
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Tunisia' && $operator == 'ORANGE'){ //Tunisia
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Tunisia' && $operator == 'TUNISIETELECOM'){ //Tunisia
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'UAE'){ //UAE
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "1.05د/اليوم(شاملة الضريبة)";
+      }else{
+        $cost = "1.05 AED/Day (VAT inclusive)";
+      }
+    }elseif($county == 'Yemen' && $operator == 'MTN'){ //Yemen
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "30 ريال/اليوم";
+      }else{
+        $cost = "30 YR/Day";
+      }
+    }elseif($county == 'Yemen' && $operator == 'SABAFON'){ //Yemen
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "30 ريال/اليوم";
+      }else{
+        $cost = "30 YR/Day";
+      }
+    }elseif($county == 'Yemen' && $operator == 'YEMENMOBILE'){ //Yemen
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }elseif($county == 'Yemen' && $operator == 'MTN'){ //Yemen
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "";
+      }else{
+        $cost = "";
+      }
+    }else{
+      $cost = "";
+    }
+    return $cost  ;
+
+}
 
