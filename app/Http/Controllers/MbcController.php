@@ -60,20 +60,20 @@ class MbcController extends Controller
 
 
 
-    public function MO_SMS_Posting()
+    public function MO_SMS_Posting($smsId, $msisdn, $country, $operator, $pincode)
     {
       $URL = 'http://mbc.mobc.com:8030/SourceSmsOut/SmsIN.asmx?WSDL';
 
       $UserName ='webSourceOut';
       $UserPass = '2015Source@SMS_mbc';
 
-      $Xmldoc['SmsID'] = '3';
-      $Xmldoc['MobileNo'] = '966540380854';
-      $Xmldoc['Country'] = 'KSA';
-      $Xmldoc['Operator'] = 'MOB';
-      $Xmldoc['Shortcode'] = '605599';
-      $Xmldoc['Msgtxt'] = 'text 3';
-      $Xmldoc['Lang'] = 'E';
+      $Xmldoc['SmsID']     = $smsId;
+      $Xmldoc['MobileNo']  = $msisdn;
+      $Xmldoc['Country']   = $country;
+      $Xmldoc['Operator']  = $operator;
+      $Xmldoc['Shortcode'] = mbc_get_short_code($country, $operator);
+      $Xmldoc['Msgtxt']    = $pincode;
+      $Xmldoc['Lang']      = 'E';
       $Xmldoc['ServiceID'] = '2';
 
       $Xmldoc['Request'] = "<soap:Envelope xmlns:soap='http://www.w3.org/2003/05/soap-envelope' xmlns:tem='http://tempuri.org/'>
@@ -126,35 +126,10 @@ class MbcController extends Controller
 
       MbcSendMt::create($Xmldoc);
 
-     return $output;
-/*
-      $soap = new SoapWrapper;
-      $soap->add('mbc',function ($service) use($URL) {
-        $service->wsdl($URL)->trace(true);
-      });
-
-      $data = [
-        'UserName' => $UserName,
-        'UserPass' => $UserPass,
-        'Xmldoc'   => '<?xml version="1.0" encoding="utf-8"?>
-        <Packet>
-         <SMS>
-         <SmsID>2</SmsID>
-         <MobileNo>966535550107</MobileNo>
-         <Country>KSA</Country>
-         <Operator>STC</Operator>
-         <Shortcode>88888</Shortcode>
-         <Msgtxt>text 2</Msgtxt>
-         <Lang>E</Lang>
-         <ServiceID>1</ServiceID>
-         </SMS>
-        </Packet>'
-      ];
-      // Using the added service
-      $soap->client('mbc', function ($service) use ($data) {
-        dd($service->call('GetSmsIN', [$data]));
-      });
-      */
+      if($Xmldoc['ResponseCode'] == "Success") {
+        return 1;
+      }
+     return 0;
 
     }
     public function xml_parse_as_array($xml)
