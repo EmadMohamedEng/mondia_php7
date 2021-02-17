@@ -364,7 +364,8 @@ class MbcTwoController extends Controller
 
   public function getPinCodePageLogin()
   {
-    return view("landing_v2.mbcTwo.alkenz_portal_pincode_login");
+    $lang =  session::get('lang');
+    return view("landing_v2.mbcTwo.alkenz_portal_pincode_login",compact("lang"));
   }
 
   public function checkPincodeLogin(Request $request)
