@@ -449,6 +449,47 @@ function mbc_get_short_code($county, $operator){
   }
 
 
+
+  function mbc_get_cost($county, $operator){
+
+    $cost = "" ;
+    if($sub->country == 'UAE' ){
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "1.05د/اليوم(شاملة الضريبة)";
+      }else{
+        $cost = "1.05 AED/Day (VAT inclusive)";
+      }
+    }elseif($sub->country == 'KSA'){
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = Operator::find(mbc)->cost_ar;
+      }else{
+        $cost = Operator::find(mbc)->cost_en;
+      }
+    }elseif($sub->country == 'Iraq' && $sub->operator == 'ASIACELL'){
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "200 دينار/اليوم"  ;
+      }else{
+        $cost =  "200 IQD/Day" ;
+      }
+    }elseif($sub->country == 'Bahrain' && $sub->operator == 'STC'){
+      if(Session::get('applocale') == 'ar')
+      {
+        $cost = "130 فلس/اليوم"  ;
+      }else{
+        $cost =  "130 Fils/Day" ;
+      }
+    }else{
+      $cost  = "" ;
+    }
+
+    return $cost  ;
+
+  }
+
+
 }
 
   function orange_rbt_count()

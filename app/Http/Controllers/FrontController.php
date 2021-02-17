@@ -2010,6 +2010,22 @@ class FrontController extends Controller
             $contents = MbcContent::where('subscription_day', '<=', $sub->content)->where('operator', 'all');
           }
 
+                      /*
+              Country	Operator	Short Code
+                Bahrain	VIVA	98665   //
+                KSA	MOB	605599
+                KSA	Zain	715517  //
+                Kuwait	VIVA	50216
+                UAE	DU	9044    // du
+                KSA	STC	801162
+
+
+              */
+
+
+             $cost  =  mbc_get_cost($sub->country,  $sub->operator) ;
+
+/*
           if($sub->country == 'UAE' && $sub->operator == 'Du'){
             if(Session::get('applocale') == 'ar')
             {
@@ -2017,14 +2033,29 @@ class FrontController extends Controller
             }else{
               $cost = Operator::find(du)->cost_en;
             }
-          }elseif('KSA'){
+          }elseif($sub->country == 'KSA'){
             if(Session::get('applocale') == 'ar')
             {
               $cost = Operator::find(mbc)->cost_ar;
             }else{
               $cost = Operator::find(mbc)->cost_en;
             }
+          }elseif($sub->country == 'Iraq' && $sub->operator == 'ASIACELL'){
+            if(Session::get('applocale') == 'ar')
+            {
+              $cost = "200 دينار/اليوم"  ;
+            }else{
+              $cost =  "200 IQD/Day" ;
+            }
+          }elseif($sub->country == 'Bahrain' && $sub->operator == 'STC'){
+            if(Session::get('applocale') == 'ar')
+            {
+              $cost = "130 فلس/اليوم"  ;
+            }else{
+              $cost =  "130 Fils/Day" ;
+            }
           }
+          */
 
           if($today_date_format == 'Fri'){
             $contents = $contents->orWhere('type', 'friday');
