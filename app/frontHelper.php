@@ -414,35 +414,35 @@ function mbc_get_short_code($county, $operator){
 
   */
 
-  switch ($county) {
+  switch (true){
     case ($county == "KSA" && $operator == 'MOB' ):
-      $short_code =  605599  ;
+      return $short_code =  605599  ;
       break;
 
       case ($county == "KSA" && $operator == 'Zain' ):
-        $short_code =  715517  ;
+        return   $short_code =  715517  ;
         break;
 
-      case ($county == "KSA" && $operator == 'STC' ):
-        $short_code =  801162  ;
+      case ($county == "KSA" && $operator == "STC" ):
+        return   $short_code =  801162  ;
         break;
 
 
         case ($county == "Kuwait" && $operator == 'VIVA' ):
-          $short_code =  50216  ;
+          return   $short_code =  50216  ;
           break;
 
           case ($county == "UAE" && $operator == 'DU' ):
-            $short_code =  9044  ;
+            return   $short_code =  9044  ;
             break;
 
 
             case ($county == "Bahrain" && $operator == 'VIVA' ):
-              $short_code =  98665  ;
+              return  $short_code =  98665  ;
               break;
 
     default:
-    $short_code =  ""  ;
+     $short_code =  ""  ;
       break;
 
       return  $short_code ;

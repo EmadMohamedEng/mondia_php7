@@ -1159,8 +1159,11 @@ class FrontController extends Controller
 
   public function test()
   {
-    $current_url = session()->get('current_url');
-    return redirect(url("/omantel/redirect?redirect_url=" . $current_url));
+    // $current_url = session()->get('current_url');
+    // return redirect(url("/omantel/redirect?redirect_url=" . $current_url));
+
+
+    echo  mbc_get_short_code("KSA", "MOB") ; die;
   }
 
   public function check_status($userToken)
