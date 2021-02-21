@@ -446,7 +446,7 @@ class MbcTwoController extends Controller
     $service_id = 2;
     $gu_sub = checkStatus($msisdn);
 
-    if ($gu_sub['status']) {
+    if ($gu_sub['status']) {  // if users is active send unique link
 
       $lang =  session::get('lang');
       $send_pin_code_status = $this->sendMessage($msisdn, $gu_sub['response']->country, $gu_sub['response']->operator);
