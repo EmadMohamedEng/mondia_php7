@@ -348,19 +348,59 @@ class MbcTwoController extends Controller
     return $ReqResponse;
   }
 
-  public function sendPinCode($msisdn, $country, $operator)
+  public function sendMessage($msisdn, $country, $operator)
   {
+    $msisdn  = $this->encryptMobileNumber($msisdn);
+    $message = url("today_link/".$msisdn."?OpID=14"); // this is encrypted number
+    $ExURL   = url("alkenz_portal_landing");
+    $date    = Carbon::now()->format('Y-m-d');
+    $message = $this->ShortURL(trim($message), $date, $ExURL);
+
       $pin = rand(1111,9999);  // unique link for user
       $pincode = Pincode::create([
         'msisdn'           => $msisdn,
         'pincode'          => $pin,
         'expire_date_time' => date("Y-m-d", strtotime(date("Y-m-d")) . " + 1 year"),
-        'operator_id'      => MBC_OP_ID
+        'operator_id'      => MBC_OP_ID,
+        'message'          => $message
       ]);
       $mbcController = new MbcController;
-      $status = $mbcController->MO_SMS_Posting($pincode->id, $msisdn, $country, $operator, $pin);
+      $status = $mbcController->MO_SMS_Posting($pincode->id, $msisdn, $country, $operator, $message);
       return $status;
   }
+
+  public function ShortURL($URL, $date,$EURL)
+  {
+      $date= "2050-1-1";
+      $ToShortURL = "https://short.digizone.com.kw/API/C?URL=".urlencode($URL)."&ExDate=$date&ExURL=".urlencode($EURL);
+      $ShortnedURL = $this->GetPageData($ToShortURL);
+      return $ShortnedURL;
+  }
+
+  public function encryptMobileNumber($phone)
+    {
+        $key = 'arpuIvasKey' ;
+        $key = hash('md5', $key, true);  // here key not fixed
+        $iv = str_repeat(chr(0), 16);
+        $encrypted = openssl_encrypt($phone, 'aes-128-cbc', $key, 0, $iv);
+        return $encrypted ;
+    }
+
+
+  // public function sendPinCode($msisdn, $country, $operator)
+  // {
+
+  //     $pin = rand(1111,9999);  // unique link for user
+  //     $pincode = Pincode::create([
+  //       'msisdn'           => $msisdn,
+  //       'pincode'          => $pin,
+  //       'expire_date_time' => date("Y-m-d", strtotime(date("Y-m-d")) . " + 1 year"),
+  //       'operator_id'      => MBC_OP_ID
+  //     ]);
+  //     $mbcController = new MbcController;
+  //     $status = $mbcController->MO_SMS_Posting($pincode->id, $msisdn, $country, $operator, $pin);
+  //     return $status;
+  // }
 
   public function getPinCodePageLogin()
   {
@@ -409,42 +449,21 @@ class MbcTwoController extends Controller
     if ($gu_sub['status']) {
 
       $lang =  session::get('lang');
-
-       $send_pin_code_status = $this->sendPinCode($msisdn, $gu_sub['response']->country, $gu_sub['response']->operator);
-      // if($send_pin_code_status) {
-      //   if ($lang == 'ar'){
-      //     return redirect('mbc_pin_code_login')->with('success', 'لقد تم ارسال رقم التحقق بنجاح');
-      //   }
-      //   return redirect('mbc_pin_code_login')->with('success', 'pincode send successfully');
-      // } else {
-      //   if ($lang == 'ar'){
-      //     return redirect('alkenz_portal_landing')->with('failed', 'يوجد خطأ');
-      //   }
-      //   return redirect('alkenz_portal_landing')->with('failed', 'There is an error');
-      // }
-
-/*
+      $send_pin_code_status = $this->sendMessage($msisdn, $gu_sub['response']->country, $gu_sub['response']->operator);
       // send unique link for this user
-     if(sent true) {
-      if ($lang == 'ar'){
-             return redirect('alkenz_portal_landing')->with('success', 'تم ارسال رلبط الدخول لتليفونك');
-           }
-
-            return redirect('alkenz_portal_landing')->with('failed', 'Your login link is sent to your phone') ;
-
-
-          }else{
-
+      if($send_pin_code_status) {
+        if ($lang == 'ar'){
+          return redirect('alkenz_portal_landing')->with('success', 'تم ارسال رابط الدخول لتليفونك');
+        }
+        return redirect('alkenz_portal_landing')->with('failed', 'The login link has been sent to your phone');
+      }else{
+        if ($lang == 'ar'){
+              return redirect('alkenz_portal_landing')->with('failed', 'يوجد خطأ');
+            }
+            return redirect('alkenz_portal_landing')->with('failed', 'There is an error');
           }
-
-        */
-
-
-
     }
-
     $lang =  session::get('lang');
-
     $resend_pincode = ResendPincode::where('msisdn',$msisdn)->where('date',date('Y-m-d'))->first();
     if ($resend_pincode && $resend_pincode->count == 3) {
       if ($lang == 'ar'){
@@ -875,6 +894,4 @@ class MbcTwoController extends Controller
         curl_close($ch);
         return $data;
     }
-
-
 }
