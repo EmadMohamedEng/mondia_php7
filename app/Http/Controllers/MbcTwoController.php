@@ -350,8 +350,8 @@ class MbcTwoController extends Controller
 
   public function sendMessage($msisdn, $country, $operator)
   {
-    $msisdn  = $this->encryptMobileNumber($msisdn);
-    $message = url("today_link/".$msisdn."?OpID=14"); // this is encrypted number
+    $msisdn_encrypt  = $this->encryptMobileNumber($msisdn);
+    $message = url("today_link/".$msisdn_encrypt."?OpID=14"); // this is encrypted number
     $ExURL   = url("alkenz_portal_landing");
     $date    = Carbon::now()->format('Y-m-d');
     $message = $this->ShortURL(trim($message), $date, $ExURL);
@@ -360,8 +360,9 @@ class MbcTwoController extends Controller
       $pincode = Pincode::create([
         'msisdn'           => $msisdn,
         'pincode'          => $pin,
-        'expire_date_time' => date("Y-m-d", strtotime(date("Y-m-d")) . " + 1 year"),
+        'expire_date_time' => date("Y-m-d"),
         'operator_id'      => MBC_OP_ID,
+        'verified'          => 2  ,   // login from pc
         'message'          => $message
       ]);
       $mbcController = new MbcController;

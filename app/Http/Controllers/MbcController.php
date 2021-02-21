@@ -71,7 +71,7 @@ class MbcController extends Controller
       $Xmldoc['MobileNo']  = $msisdn;
       $Xmldoc['Country']   = $country;
       $Xmldoc['Operator']  = $operator;
-      $Xmldoc['Shortcode'] = mbc_get_short_code($country, $operator);
+      $Xmldoc['Shortcode'] = mbc_get_short_code($country, $operator)?? "";
       $Xmldoc['Msgtxt']    = $pincode;
       $Xmldoc['Lang']      = 'E';
       $Xmldoc['ServiceID'] = '2';
@@ -134,6 +134,7 @@ class MbcController extends Controller
     }
     public function xml_parse_as_array($xml)
     {
+      $post_array  = array() ;
 
         $request_array = array(
           'Code' => ['start' => '<Code>', 'end' => '</Code>']

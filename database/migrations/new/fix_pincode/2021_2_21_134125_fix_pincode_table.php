@@ -16,6 +16,12 @@ class FixPincodeTable extends Migration
 
       \DB::statement("ALTER TABLE `pincodes` ADD `message` TEXT NULL DEFAULT NULL AFTER `verified`;");
 
+      \DB::statement("ALTER TABLE `pincodes` CHANGE `verified` `verified` INT(10) NULL DEFAULT NULL COMMENT '2=login from pc ';");
+
+
+
+
+
     }
 
     /**
