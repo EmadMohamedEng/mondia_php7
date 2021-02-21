@@ -441,9 +441,7 @@ function mbc_get_short_code($county, $operator){
               return  $short_code =  98665  ;
               break;
 
-              case ($county == "Bahrain" && $operator == 'STC' ):
-                return  $short_code =  98665  ;
-                break;
+
 
     default:
      $short_code =  ""  ;

@@ -30,10 +30,10 @@
               <td class="label-view2">{{session()->get('MSISDN')}}</td>
             </tr>
 
-            <tr>
+            {{-- <tr>
               <td class="label-view font-weight-bold"> @lang('messages.users.subscription_date')</td>
               <td class="label-view2">{{$date}}</td>
-            </tr>
+            </tr> --}}
 
             <tr>
               <td class="label-view font-weight-bold">@lang('messages.service_name')</td>
