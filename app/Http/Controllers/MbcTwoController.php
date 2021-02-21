@@ -350,7 +350,7 @@ class MbcTwoController extends Controller
 
   public function sendPinCode($msisdn, $country, $operator)
   {
-      $pin = rand(1111,9999);
+      $pin = rand(1111,9999);  // unique link for user
       $pincode = Pincode::create([
         'msisdn'           => $msisdn,
         'pincode'          => $pin,
@@ -407,19 +407,40 @@ class MbcTwoController extends Controller
     $gu_sub = checkStatus($msisdn);
 
     if ($gu_sub['status']) {
+
       $lang =  session::get('lang');
-      $send_pin_code_status = $this->sendPinCode($msisdn, $gu_sub['response']->country, $gu_sub['response']->operator);
-      if($send_pin_code_status) {
-        if ($lang == 'ar'){
-          return redirect('mbc_pin_code_login')->with('success', 'لقد تم ارسال رقم التحقق بنجاح');
-        }
-        return redirect('mbc_pin_code_login')->with('success', 'pincode send successfully');
-      } else {
-        if ($lang == 'ar'){
-          return redirect('alkenz_portal_landing')->with('failed', 'يوجد خطأ');
-        }
-        return redirect('alkenz_portal_landing')->with('failed', 'There is an error');
-      }
+
+       $send_pin_code_status = $this->sendPinCode($msisdn, $gu_sub['response']->country, $gu_sub['response']->operator);
+      // if($send_pin_code_status) {
+      //   if ($lang == 'ar'){
+      //     return redirect('mbc_pin_code_login')->with('success', 'لقد تم ارسال رقم التحقق بنجاح');
+      //   }
+      //   return redirect('mbc_pin_code_login')->with('success', 'pincode send successfully');
+      // } else {
+      //   if ($lang == 'ar'){
+      //     return redirect('alkenz_portal_landing')->with('failed', 'يوجد خطأ');
+      //   }
+      //   return redirect('alkenz_portal_landing')->with('failed', 'There is an error');
+      // }
+
+/*
+      // send unique link for this user
+     if(sent true) {
+      if ($lang == 'ar'){
+             return redirect('alkenz_portal_landing')->with('success', 'تم ارسال رلبط الدخول لتليفونك');
+           }
+
+            return redirect('alkenz_portal_landing')->with('failed', 'Your login link is sent to your phone') ;
+
+
+          }else{
+
+          }
+
+        */
+
+
+
     }
 
     $lang =  session::get('lang');
