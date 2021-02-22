@@ -113,6 +113,11 @@ select:active {
   width: 60%;
   margin-top: 0rem;
 }
+.main_container .header .header_logo .link_href .gold_btc {
+  font-size: 0.8rem;
+  color: #FF6600;
+  direction: rtl;
+}
 .main_container .header .lang_mbc {
   color: #FF6600;
   cursor: pointer;
@@ -1664,7 +1669,7 @@ select:active {
   }
   .main_container .header {
     position: fixed !important;
-    height: 4rem !important;
+    height: 5rem !important;
     top: 0;
     z-index: 99999999999;
   }
@@ -2120,7 +2125,7 @@ select:active {
   }
   .main_container .header {
     position: fixed !important;
-    height: 4rem !important;
+    height: 5rem !important;
     top: 0;
     z-index: 99999999999;
   }
@@ -2584,7 +2589,7 @@ select:active {
   }
   .main_container .header {
     position: fixed !important;
-    height: 4rem !important;
+    height: 5rem !important;
     top: 0;
     z-index: 99999999999;
   }
@@ -3061,7 +3066,7 @@ select:active {
   }
   .main_container .header {
     position: fixed !important;
-    height: 4rem !important;
+    height: 5rem !important;
     top: 0;
     z-index: 99999999999;
   }
@@ -3532,23 +3537,27 @@ select:active {
   }
   .main_container .header {
     position: fixed;
-    height: 5rem;
+    height: 6.5rem;
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .logo_orange {
+  .main_container .header .header_logo .link_href .logo_orange {
     text-align: right;
   }
-  .main_container .header .header_logo .logo_orange img {
+  .main_container .header .header_logo .link_href .logo_orange img {
     width: 35% !important;
     margin-top: -0.85rem !important;
   }
-  .main_container .header .header_logo .img_khir {
+  .main_container .header .header_logo .link_href .img_khir {
     text-align: center !important;
   }
-  .main_container .header .header_logo .img_khir img {
+  .main_container .header .header_logo .link_href .img_khir img {
     width: 50% !important;
     margin-top: 0.05rem !important;
+  }
+  .main_container .header .header_logo .link_href .gold_btc {
+    margin-left: 30%;
+    font-size: 1rem;
   }
   .main_container .header .lang_mbc {
     margin-right: -3%;
@@ -4014,23 +4023,27 @@ select:active {
   }
   .main_container .header {
     position: fixed;
-    height: 7rem;
+    height: 8rem;
     top: 0;
     z-index: 99999999999;
   }
-  .main_container .header .header_logo .logo_orange {
+  .main_container .header .header_logo .link_href .logo_orange {
     text-align: right;
   }
-  .main_container .header .header_logo .logo_orange img {
+  .main_container .header .header_logo .link_href .logo_orange img {
     width: 35% !important;
     margin-top: -0.85rem !important;
   }
-  .main_container .header .header_logo .img_khir {
+  .main_container .header .header_logo .link_href .img_khir {
     text-align: center !important;
   }
-  .main_container .header .header_logo .img_khir img {
+  .main_container .header .header_logo .link_href .img_khir img {
     width: 50% !important;
     margin-top: 0.5rem !important;
+  }
+  .main_container .header .header_logo .link_href .gold_btc {
+    margin-left: 30%;
+    font-size: 1.25rem;
   }
   .main_container .header .lang_mbc {
     font-size: 1.75rem;

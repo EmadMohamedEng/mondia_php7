@@ -95,6 +95,11 @@ select {
             margin-top: 0rem;
           }
         }
+
+        .gold_btc {
+          font-size: 0.8rem;
+          color: $text_color;
+        }
       }
     }
 
@@ -2131,7 +2136,7 @@ select {
 
     .header {
       position: fixed !important;
-      height: 4rem !important;
+      height: 5rem !important;
       top: 0;
       z-index: 99999999999;
 
@@ -2801,7 +2806,7 @@ select {
 
     .header {
       position: fixed !important;
-      height: 4rem !important;
+      height: 5rem !important;
       top: 0;
       z-index: 99999999999;
 
@@ -3479,7 +3484,7 @@ select {
 
     .header {
       position: fixed !important;
-      height: 4rem !important;
+      height: 5rem !important;
       top: 0;
       z-index: 99999999999;
 
@@ -4179,7 +4184,7 @@ select {
 
     .header {
       position: fixed !important;
-      height: 4rem !important;
+      height: 5rem !important;
       top: 0;
       z-index: 99999999999;
 
@@ -4867,7 +4872,7 @@ select {
 
     .header {
       position: fixed !important;
-      height: 5.5rem;
+      height: 7rem;
       top: 0;
       z-index: 99999999999;
 
@@ -4889,6 +4894,11 @@ select {
               width: 50%;
               margin-top: 0.5rem;
             }
+          }
+
+          .gold_btc {
+            margin-right: 20%;
+            font-size: 0.95rem;
           }
         }
       }
@@ -5594,7 +5604,7 @@ select {
 
     .header {
       position: fixed !important;
-      height: 6rem;
+      height: 7rem;
       top: 0;
       z-index: 99999999999;
 
@@ -5617,6 +5627,11 @@ select {
               margin-top: 0.5rem;
             }
           }
+
+          .gold_btc {
+            margin-right: 20%;
+            font-size: 1rem;
+        }
         }
       }
 

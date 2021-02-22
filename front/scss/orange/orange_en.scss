@@ -95,6 +95,12 @@ select {
             margin-top: 0rem;
           }
         }
+
+        .gold_btc {
+          font-size: 0.8rem;
+          color: $text_color;
+          direction: rtl;
+        }
       }
     }
 
@@ -2109,7 +2115,7 @@ select {
 
     .header {
       position: fixed !important;
-      height: 4rem !important;
+      height: 5rem !important;
       top: 0;
       z-index: 99999999999;
 
@@ -2773,7 +2779,7 @@ select {
 
     .header {
       position: fixed !important;
-      height: 4rem !important;
+      height: 5rem !important;
       top: 0;
       z-index: 99999999999;
 
@@ -3444,7 +3450,7 @@ select {
 
     .header {
       position: fixed !important;
-      height: 4rem !important;
+      height: 5rem !important;
       top: 0;
       z-index: 99999999999;
 
@@ -4137,7 +4143,7 @@ select {
 
     .header {
       position: fixed !important;
-      height: 4rem !important;
+      height: 5rem !important;
       top: 0;
       z-index: 99999999999;
 
@@ -4820,11 +4826,12 @@ select {
 
     .header {
       position: fixed;
-      height: 5rem;
+      height: 6.5rem;
       top: 0;
       z-index: 99999999999;
 
       .header_logo {
+        .link_href  {
         .logo_orange {
           text-align: right;
 
@@ -4841,6 +4848,12 @@ select {
             width: 50% !important;
             margin-top: 0.05rem !important;
           }
+        }
+
+        .gold_btc {
+          margin-left: 30%;
+          font-size: 1rem;
+        }
         }
       }
 
@@ -5520,26 +5533,33 @@ select {
 
     .header {
       position: fixed;
-      height: 7rem;
+      height: 8rem;
       top: 0;
       z-index: 99999999999;
 
       .header_logo {
-        .logo_orange {
-          text-align: right;
+        .link_href {
+          .logo_orange {
+            text-align: right;
 
-          img {
-            width: 35% !important;
-            margin-top: -0.85rem !important;
+            img {
+              width: 35% !important;
+              margin-top: -0.85rem !important;
+            }
           }
-        }
 
-        .img_khir {
-          text-align: center !important;
+          .img_khir {
+            text-align: center !important;
 
-          img {
-            width: 50% !important;
-            margin-top: 0.5rem !important;
+            img {
+              width: 50% !important;
+              margin-top: 0.5rem !important;
+            }
+          }
+
+          .gold_btc {
+            margin-left: 30%;
+            font-size: 1.25rem;
           }
         }
       }

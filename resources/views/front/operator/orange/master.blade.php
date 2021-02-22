@@ -16,6 +16,10 @@
             <div class="col-md-6 col-6 img_khir p-0">
               <img class="bounce-top" src='{{asset("front/images/orange/el_kheer.png")}}' alt='Logo'>
             </div>
+
+            <div class="col-md-12 col-12 p-0">
+              <p class="gold_btc mb-0">كل يوم جنيه ذهب برعاية BTC</p>
+            </div>
           </div>
         </a>
       </div>

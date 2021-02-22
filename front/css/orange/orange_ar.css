@@ -113,6 +113,10 @@ select:active {
   width: 60%;
   margin-top: 0rem;
 }
+.main_container .header .header_logo .link_href .gold_btc {
+  font-size: 0.8rem;
+  color: #FF6600;
+}
 .main_container .header .lang_mbc {
   color: #FF6600;
   cursor: pointer;
@@ -1687,7 +1691,7 @@ select:active {
   }
   .main_container .header {
     position: fixed !important;
-    height: 4rem !important;
+    height: 5rem !important;
     top: 0;
     z-index: 99999999999;
   }
@@ -2148,7 +2152,7 @@ select:active {
   }
   .main_container .header {
     position: fixed !important;
-    height: 4rem !important;
+    height: 5rem !important;
     top: 0;
     z-index: 99999999999;
   }
@@ -2615,7 +2619,7 @@ select:active {
   }
   .main_container .header {
     position: fixed !important;
-    height: 4rem !important;
+    height: 5rem !important;
     top: 0;
     z-index: 99999999999;
   }
@@ -3092,7 +3096,7 @@ select:active {
   }
   .main_container .header {
     position: fixed !important;
-    height: 4rem !important;
+    height: 5rem !important;
     top: 0;
     z-index: 99999999999;
   }
@@ -3564,7 +3568,7 @@ select:active {
   }
   .main_container .header {
     position: fixed !important;
-    height: 5.5rem;
+    height: 7rem;
     top: 0;
     z-index: 99999999999;
   }
@@ -3581,6 +3585,10 @@ select:active {
   .main_container .header .header_logo .link_href .img_khir img {
     width: 50%;
     margin-top: 0.5rem;
+  }
+  .main_container .header .header_logo .link_href .gold_btc {
+    margin-right: 20%;
+    font-size: 0.95rem;
   }
   .main_container .header .lang_mbc {
     margin-left: 0;
@@ -4059,7 +4067,7 @@ select:active {
   }
   .main_container .header {
     position: fixed !important;
-    height: 6rem;
+    height: 7rem;
     top: 0;
     z-index: 99999999999;
   }
@@ -4076,6 +4084,10 @@ select:active {
   .main_container .header .header_logo .link_href .img_khir img {
     width: 40%;
     margin-top: 0.5rem;
+  }
+  .main_container .header .header_logo .link_href .gold_btc {
+    margin-right: 20%;
+    font-size: 1rem;
   }
   .main_container .header .lang_mbc {
     font-size: 1.6rem;
